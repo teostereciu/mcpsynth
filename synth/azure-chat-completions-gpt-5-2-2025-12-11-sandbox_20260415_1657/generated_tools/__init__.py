@@ -1,1 +1,0 @@
-# Generated Zendesk MCP tools
