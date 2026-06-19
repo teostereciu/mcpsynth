@@ -1,0 +1,78 @@
+{
+  "list_issues_assigned_to_authenticated_user": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /issues"
+  },
+  "list_labels_for_issue": {
+    "doc": "docs/api_issues-labels.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "add_labels_to_issue": {
+    "doc": "docs/api_issues-labels.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "set_labels_for_issue": {
+    "doc": "docs/api_issues-labels.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "remove_all_labels_from_issue": {
+    "doc": "docs/api_issues-labels.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "remove_label_from_issue": {
+    "doc": "docs/api_issues-labels.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}"
+  },
+  "list_issue_comments_for_repository": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/comments"
+  },
+  "get_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "update_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "delete_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "list_assignees": {
+    "doc": "docs/api_issues-assignees.md",
+    "endpoint": "GET /repos/{owner}/{repo}/assignees"
+  },
+  "check_if_user_can_be_assigned": {
+    "doc": "docs/api_issues-assignees.md",
+    "endpoint": "GET /repos/{owner}/{repo}/assignees/{assignee}"
+  },
+  "add_assignees_to_issue": {
+    "doc": "docs/api_issues-assignees.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/assignees"
+  },
+  "remove_assignees_from_issue": {
+    "doc": "docs/api_issues-assignees.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees"
+  },
+  "list_milestones": {
+    "doc": "docs/api_issues-milestones.md",
+    "endpoint": "GET /repos/{owner}/{repo}/milestones"
+  },
+  "create_milestone": {
+    "doc": "docs/api_issues-milestones.md",
+    "endpoint": "POST /repos/{owner}/{repo}/milestones"
+  },
+  "get_milestone": {
+    "doc": "docs/api_issues-milestones.md",
+    "endpoint": "GET /repos/{owner}/{repo}/milestones/{milestone_number}"
+  },
+  "update_milestone": {
+    "doc": "docs/api_issues-milestones.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/milestones/{milestone_number}"
+  },
+  "delete_milestone": {
+    "doc": "docs/api_issues-milestones.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/milestones/{milestone_number}"
+  }
+}

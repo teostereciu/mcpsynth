@@ -1,0 +1,12 @@
+{
+  "dataset": "ebay_commerce",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "docs",
+  "synthesis_time": 202.63124203681946,
+  "token_usage": {
+    "input_tokens": 409681,
+    "output_tokens": 6194
+  },
+  "cost_estimate": null,
+  "timestamp": "20260608_1126"
+}

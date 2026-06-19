@@ -1,0 +1,134 @@
+{
+  "jira_get_issue": {
+    "doc": "docs/issue.md",
+    "endpoint": "GET /issue/{issueIdOrKey}"
+  },
+  "jira_create_issue": {
+    "doc": "docs/issue.md",
+    "endpoint": "POST /issue"
+  },
+  "jira_update_issue": {
+    "doc": "docs/issue.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}"
+  },
+  "jira_delete_issue": {
+    "doc": "docs/issue.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}"
+  },
+  "jira_assign_issue": {
+    "doc": "docs/assignee.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}/assignee"
+  },
+  "jira_get_transitions": {
+    "doc": "docs/transitions.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/transitions"
+  },
+  "jira_transition_issue": {
+    "doc": "docs/transitions.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/transitions"
+  },
+  "jira_add_comment": {
+    "doc": "docs/comments.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/comment"
+  },
+  "jira_get_comments": {
+    "doc": "docs/comments.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/comment"
+  },
+  "jira_add_worklog": {
+    "doc": "docs/worklogs.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/worklog"
+  },
+  "jira_get_worklogs": {
+    "doc": "docs/worklogs.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/worklog"
+  },
+  "jira_add_watcher": {
+    "doc": "docs/watchers.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/watchers"
+  },
+  "jira_remove_watcher": {
+    "doc": "docs/watchers.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}/watchers"
+  },
+  "jira_create_issue_link": {
+    "doc": "docs/issue-links.md",
+    "endpoint": "POST /issueLink"
+  },
+  "jira_jql_search": {
+    "doc": "docs/search.md",
+    "endpoint": "POST /search"
+  },
+  "jira_list_projects": {
+    "doc": "docs/projects.md",
+    "endpoint": "GET /project"
+  },
+  "jira_get_project": {
+    "doc": "docs/projects.md",
+    "endpoint": "GET /project/{projectIdOrKey}"
+  },
+  "jira_create_project": {
+    "doc": "docs/projects.md",
+    "endpoint": "POST /project"
+  },
+  "jira_update_project": {
+    "doc": "docs/projects.md",
+    "endpoint": "PUT /project/{projectIdOrKey}"
+  },
+  "jira_delete_project": {
+    "doc": "docs/projects.md",
+    "endpoint": "DELETE /project/{projectIdOrKey}"
+  },
+  "jira_get_user": {
+    "doc": "docs/users.md",
+    "endpoint": "GET /user"
+  },
+  "jira_find_users": {
+    "doc": "docs/users.md",
+    "endpoint": "GET /user/search"
+  },
+  "jira_get_group_members": {
+    "doc": "docs/groups.md",
+    "endpoint": "GET /group/member"
+  },
+  "jira_list_issue_types": {
+    "doc": "docs/issue-types.md",
+    "endpoint": "GET /issuetype"
+  },
+  "jira_list_priorities": {
+    "doc": "docs/priorities.md",
+    "endpoint": "GET /priority"
+  },
+  "jira_list_statuses": {
+    "doc": "docs/statuses.md",
+    "endpoint": "GET /status"
+  },
+  "jira_list_fields": {
+    "doc": "docs/fields.md",
+    "endpoint": "GET /field"
+  },
+  "jira_get_create_meta": {
+    "doc": "docs/create-meta.md",
+    "endpoint": "GET /issue/createmeta"
+  },
+  "jira_get_filter": {
+    "doc": "docs/filters.md",
+    "endpoint": "GET /filter/{id}"
+  },
+  "jira_list_my_filters": {
+    "doc": "docs/filters.md",
+    "endpoint": "GET /filter/my"
+  },
+  "jira_create_filter": {
+    "doc": "docs/filters.md",
+    "endpoint": "POST /filter"
+  },
+  "jira_update_filter": {
+    "doc": "docs/filters.md",
+    "endpoint": "PUT /filter/{id}"
+  },
+  "jira_delete_filter": {
+    "doc": "docs/filters.md",
+    "endpoint": "DELETE /filter/{id}"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "github_list_my_issues": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /issues"
+  },
+  "github_list_pull_requests": {
+    "doc": "docs/api_pulls-pulls.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  },
+  "github_list_org_repos": {
+    "doc": "docs/api_repos-repos.md",
+    "endpoint": "GET /orgs/{org}/repos"
+  },
+  "github_create_org_repo": {
+    "doc": "docs/api_repos-repos.md",
+    "endpoint": "POST /orgs/{org}/repos"
+  }
+}

@@ -1,0 +1,287 @@
+# Agent evaluation tasks for GitHub REST API CLI tool.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring principles.
+#
+# Domain constraints:
+#   - $GITHUB_TEST_REPO must be a real repo the test token has access to (owner/repo format).
+#   - Write tasks use clearly namespaced titles ("Agent harness …") and the label "agent-eval"
+#     so artifacts are easy to clean up.
+#   - The GitHub API returns paginated results; prompts ask for the first 5 to avoid pagination.
+#   - Gists and labels created by write tasks are safe to delete after evaluation.
+#
+# Required env vars: GITHUB_TOKEN, GITHUB_TEST_REPO (owner/repo format)
+
+tasks:
+  # ---------- READ ----------
+  - id: get_authenticated_user
+    prompt: >
+      Retrieve the profile of the currently authenticated GitHub user.
+      Report the login (username), name, and public repository count.
+    expected: login
+    tags: [read]
+    # Discriminates: confirms the CLI tool exposes the /user endpoint and correctly
+    # surfaces the `login` field. Passes on any valid token; fails if auth is broken.
+
+  - id: get_repo_info
+    prompt: >
+      Retrieve the metadata for the repository $GITHUB_TEST_REPO. Report the
+      description, default branch name, star count, and whether it is private.
+    expected: default_branch
+    tags: [read]
+    # Discriminates: tests the get-repository endpoint and correct field extraction.
+    # `default_branch` only appears in a successful repo metadata response, not in
+    # list or search responses.
+
+  - id: list_repo_issues
+    prompt: >
+      List the open issues in the repository $GITHUB_TEST_REPO.
+      Report how many open issues exist and the titles of the first 5, or confirm
+      there are none.
+    expected: number
+    tags: [read]
+    # Discriminates: `number` is the GitHub issue number field; it only appears in a
+    # correctly structured issues response, not in a generic error or an empty list.
+
+  - id: list_repo_branches
+    prompt: >
+      List all branches in the repository $GITHUB_TEST_REPO.
+      Report the branch names and identify the default branch.
+    expected: main
+    tags: [read]
+    # Discriminates: confirms branch listing works and the default branch name is surfaced.
+    # Passes for repos whose default branch is "main"; adjust expected for other setups.
+
+  - id: list_pull_requests
+    prompt: >
+      List the open pull requests in $GITHUB_TEST_REPO. Report the titles and
+      numbers of the first 5 open pull requests, or confirm there are none.
+    expected: number
+    tags: [read]
+    # Discriminates: tests the pull-request list endpoint. The `number` field only
+    # appears in a correctly structured PR response, separating it from error responses.
+
+  - id: search_repositories
+    prompt: >
+      Search GitHub repositories for "CLI tool language:python stars:>100".
+      Report the names and star counts of the top 5 results.
+    expected: stargazers_count
+    tags: [read]
+    # Discriminates: `stargazers_count` is the exact field name returned by the GitHub
+    # search API. A weak implementation may return results without this field or use a
+    # different field name (e.g. "stars").
+
+  - id: list_releases
+    prompt: >
+      List all releases for the repository $GITHUB_TEST_REPO.
+      Report the tag names and release dates, or confirm there are none.
+    expected: tag_name
+    tags: [read]
+    # Discriminates: `tag_name` is the release-specific field. Its presence confirms the
+    # releases endpoint was called (not tags or commits). An empty list is a valid pass.
+
+  - id: list_workflow_runs
+    prompt: >
+      List the recent GitHub Actions workflow runs for $GITHUB_TEST_REPO.
+      Report the workflow names, statuses, and conclusions of the last 5 runs,
+      or confirm there are no workflow runs.
+    expected: conclusion
+    tags: [read]
+    # Discriminates: `conclusion` is a field specific to workflow run objects (values like
+    # "success", "failure", null). It does not appear in issues, PRs, or other responses.
+
+  - id: commit_status_check
+    prompt: >
+      Get the combined commit status for the latest commit on the default branch
+      of $GITHUB_TEST_REPO. Report the overall state and any individual check
+      statuses, or confirm there are no status checks configured.
+    expected: state
+    tags: [read, multi-step]
+    # Discriminates: requires two calls — first to get the latest commit SHA, then to
+    # fetch combined status. `state` (values: "success", "failure", "pending", "error")
+    # is specific to the commit status response.
+
+  # ---------- WRITE ----------
+  - id: create_issue
+    prompt: >
+      Create a new issue in $GITHUB_TEST_REPO with:
+      - Title: "Agent harness test issue"
+      - Body: "This issue was created by the CLI tool evaluation harness. Safe to close."
+      - Label: "test" (only if the label already exists; skip labels otherwise)
+      Report the issue number and URL.
+    expected: html_url
+    tags: [write]
+    # Discriminates: `html_url` is returned in a successful issue creation response.
+    # Tests that the create-issue tool handles optional labels without failing.
+
+  - id: create_and_label_issue
+    prompt: >
+      Create a new issue in $GITHUB_TEST_REPO titled "Agent test: label workflow"
+      with body "Created for label testing by agent harness."
+      Then add the label "bug" to that issue (create the label first if it does not
+      already exist). Report the issue number and the labels attached to it.
+    expected: bug
+    tags: [write, multi-step, workflow]
+    # Discriminates: 2-step workflow — create issue then add label. Tests that the
+    # agent can read the issue number from the first response and pass it to the
+    # label assignment call.
+
+  - id: create_gist
+    prompt: >
+      Create a public GitHub Gist containing a single file named "agent-eval-test.txt"
+      with the content "Agent harness test content". Report the Gist ID and URL.
+    expected: html_url
+    tags: [write]
+    # Discriminates: tests the Gist creation endpoint, which is separate from the
+    # repository API. `html_url` for a Gist has the form gist.github.com/<id>,
+    # distinguishing it from repo or issue URLs.
+
+  - id: label_management
+    prompt: >
+      List all labels in $GITHUB_TEST_REPO. Then create a new label called
+      "agent-eval" with color "0075ca" and description "Created by agent harness".
+      Report the total number of labels before and after creation.
+    expected: agent-eval
+    tags: [write, multi-step]
+    # Discriminates: 2-step read-then-write. Tests label listing and creation. The label
+    # name "agent-eval" only appears in the response if the creation succeeded.
+
+  # ---------- MULTI-STEP ----------
+  - id: issue_comment_workflow
+    prompt: >
+      Create a new issue in $GITHUB_TEST_REPO titled "Comment workflow test" with
+      body "Testing comment functionality via agent harness."
+      Then add a comment to that issue: "This is a test comment from the agent."
+      Report the issue number and the body of the comment as confirmed by the API.
+    expected: comment
+    tags: [write, multi-step, workflow]
+    # Discriminates: 2-step workflow that chains issue creation (extracting the issue
+    # number) into a comment creation call. `comment` in the response body confirms the
+    # comment endpoint was called, not just the issue endpoint.
+
+  - id: repo_contents_read
+    prompt: >
+      Read the contents of the README file (README.md or README) in the repository
+      $GITHUB_TEST_REPO. Report the first 200 characters of the file content and the
+      file's SHA.
+    expected: sha
+    tags: [read, multi-step]
+    # Discriminates: tests the repository contents endpoint. The `sha` field is specific
+    # to file content responses (not directory listings or commits).
+
+  - id: error_handling_invalid_repo
+    prompt: >
+      Try to list issues for the non-existent repository
+      "nonexistent-owner-xyz/nonexistent-repo-xyz". Report the error response received.
+    expected: "404"
+    tags: [read, error-handling]
+    # Discriminates: confirms the CLI tool surfaces HTTP error codes rather than
+    # swallowing them. "404" must appear in the agent's report of the error.
+
+  # ---------- PAGINATION ----------
+
+  - id: paginate_issues
+    prompt: >
+      List issues in $GITHUB_TEST_REPO using a page size of 2 (per_page=2). Fetch
+      the first page, then use the page parameter to fetch the second page. Report
+      the issue numbers from each page separately and confirm that the two pages
+      contain different issues. If the repo has 2 or fewer issues, report however
+      many exist and note that a second page was not needed.
+    expected: number
+    tags: [read, pagination, harder]
+    # Tests whether the list-issues tool exposes per_page and page parameters.
+    # Most synthesizers implement a single-call wrapper that defaults page size
+    # and hides pagination, making controlled per-page fetching impossible.
+    # The agent must report issue numbers from both pages to confirm pagination
+    # is actually working and not just returning the same data twice.
+    # TOOL_SCHEMA failure if per_page/page are not exposed.
+
+  - id: paginate_commits
+    prompt: >
+      Fetch commits from the default branch of $GITHUB_TEST_REPO in batches: request
+      the first 5 commits (per_page=5), then request the next 5 (page=2, per_page=5).
+      Report the SHA of the last commit in the first batch and the SHA of the first
+      commit in the second batch. Confirm they are different. If the repo has 5 or
+      fewer commits total, report all SHAs and note that a second page was not needed.
+    expected: sha
+    tags: [read, pagination, harder]
+    # Tests commit list pagination. The SHA field is specific to commit responses
+    # and its presence across two calls confirms the endpoint was called twice with
+    # different page parameters, not cached or re-used. Many synthesizers implement
+    # list-commits without pagination controls, making this impossible.
+    # TOOL_SCHEMA failure if per_page and page are not independently controllable.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: create_issue_missing_title
+    prompt: >
+      Attempt to create an issue in $GITHUB_TEST_REPO with an empty title (title="").
+      Do not retry. Report exactly what the GitHub API returns, including any error
+      message or validation failure.
+    expected: error
+    tags: [error-handling, harder]
+    # Tests whether the create-issue tool propagates GitHub validation errors.
+    # GitHub returns 422 Unprocessable Entity with a validation_failed code when
+    # the title is empty. A tool that raises an exception crashes the agent;
+    # one that returns the error body lets the agent report it and pass.
+    # TOOL_IMPLEMENTATION failure if exceptions are unhandled.
+
+  - id: update_file_wrong_sha
+    prompt: >
+      Read the contents of the README file in $GITHUB_TEST_REPO to get its current
+      SHA. Then attempt to update that file using a deliberately wrong SHA value of
+      "0000000000000000000000000000000000000000". Report what the GitHub API returns
+      for the failed update attempt.
+    expected: error
+    tags: [error-handling, multi-step, harder]
+    # Two-step: read file (get real SHA) then update with wrong SHA to trigger conflict.
+    # GitHub returns 409 Conflict when the provided SHA does not match the current file
+    # SHA. This tests that update-file correctly propagates conflict errors rather than
+    # swallowing them. Also discriminates tools that expose the sha parameter for updates.
+    # TOOL_SCHEMA failure if sha is not an exposed parameter for file updates.
+
+  # ---------- CROSS-ENDPOINT LINKAGE ----------
+
+  - id: read_then_update_file
+    prompt: >
+      Read the file "agent-eval-scratch.txt" in $GITHUB_TEST_REPO (create it first
+      with content "initial" if it does not exist). Capture its current SHA from the
+      response. Then update the file content to "updated by agent harness" using that
+      SHA. Report the new SHA returned by the update operation and confirm it differs
+      from the original.
+    expected: sha
+    tags: [write, multi-step, workflow, harder]
+    # Tests the full read→SHA capture→write pipeline for file updates. The GitHub
+    # Contents API requires the current SHA for any update to prevent conflicts.
+    # This forces the agent to (1) call get-file-contents, (2) extract the sha field,
+    # (3) pass it to update-file-contents. Many synthesizers implement file read and
+    # write as separate tools without documenting that the SHA from a read must be
+    # passed to a write. TOOL_DOCUMENTATION failure if the sha parameter is not
+    # described in the update tool. The differing SHAs confirm a real write occurred.
+
+  - id: issue_to_pr_search
+    prompt: >
+      Create an issue in $GITHUB_TEST_REPO titled "Agent cross-link test issue"
+      with body "Testing cross-endpoint linkage". Record its issue number. Then
+      search for pull requests in $GITHUB_TEST_REPO. Report the issue number you
+      created and how many open pull requests currently exist (may be zero).
+    expected: number
+    tags: [write, multi-step, harder]
+    # Tests the agent's ability to chain issue creation (extracting the number field)
+    # with a separate PR list call. Requires reading the number from the create-issue
+    # response and reporting it alongside PR data from a different endpoint.
+    # Discriminates tools that correctly expose number in create-issue responses.
+    # TOOL_IMPLEMENTATION failure if the issue number is absent from the create response.
+
+  - id: commit_sha_to_file_read
+    prompt: >
+      Get the latest commit on the default branch of $GITHUB_TEST_REPO. Extract the
+      commit SHA. Then use that SHA as the ref parameter to read the contents of
+      README.md at that specific commit. Report the commit SHA and the first 100
+      characters of the README content at that commit.
+    expected: sha
+    tags: [read, multi-step, workflow, harder]
+    # Three-step: list commits → extract SHA → read file at SHA ref.
+    # Tests whether the get-file-contents tool exposes a ref parameter that accepts
+    # a commit SHA (not just branch names). Many synthesizers implement file read with
+    # only a branch ref, omitting commit-SHA or tag refs. The commit SHA in the file
+    # read confirms the ref parameter was used correctly (not defaulting to HEAD).
+    # TOOL_SCHEMA failure if ref is not exposed or only accepts branch names.

@@ -1,0 +1,74 @@
+{
+  "pages_retrieve": {
+    "doc": "docs/pages/retrieve.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "pages_create": {
+    "doc": "docs/pages/create.md",
+    "endpoint": "POST /pages"
+  },
+  "pages_update": {
+    "doc": "docs/pages/update.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "databases_retrieve": {
+    "doc": "docs/databases/retrieve.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "databases_query": {
+    "doc": "docs/databases/query.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "databases_create": {
+    "doc": "docs/databases/create.md",
+    "endpoint": "POST /databases"
+  },
+  "databases_update": {
+    "doc": "docs/databases/update.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "blocks_retrieve": {
+    "doc": "docs/blocks/retrieve.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "blocks_update": {
+    "doc": "docs/blocks/update.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "blocks_delete": {
+    "doc": "docs/blocks/delete.md",
+    "endpoint": "DELETE /blocks/{block_id}"
+  },
+  "blocks_children_list": {
+    "doc": "docs/blocks/children_list.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "blocks_children_append": {
+    "doc": "docs/blocks/children_append.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "comments_list": {
+    "doc": "docs/comments/list.md",
+    "endpoint": "GET /comments"
+  },
+  "comments_create": {
+    "doc": "docs/comments/create.md",
+    "endpoint": "POST /comments"
+  },
+  "users_list": {
+    "doc": "docs/users/list.md",
+    "endpoint": "GET /users"
+  },
+  "users_retrieve": {
+    "doc": "docs/users/retrieve.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "users_me": {
+    "doc": "docs/users/me.md",
+    "endpoint": "GET /users/me"
+  },
+  "search": {
+    "doc": "docs/search/search.md",
+    "endpoint": "POST /search"
+  }
+}

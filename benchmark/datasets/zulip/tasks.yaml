@@ -1,0 +1,339 @@
+# Agent evaluation tasks for Zulip MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring principles.
+#
+# Dataset note: Tasks use stream "general" which must exist in the org.
+# Write tasks create resources prefixed "mcp-eval-". Alert words and
+# scheduled messages are scoped to the bot user and do not affect others.
+# Required env vars: ZULIP_SITE, ZULIP_EMAIL, ZULIP_API_KEY
+
+tasks:
+  # ---------- READ ----------
+
+  - id: list_streams
+    prompt: >
+      List all streams (channels) available in this Zulip organization.
+      Report the names of the first 5 streams you find.
+    expected: general
+    tags: [read]
+    # Smoke test: confirms stream-listing tool is present and returns real data.
+    # "general" is a default stream guaranteed to exist; its presence confirms
+    # the call succeeded and data was not fabricated.
+
+  - id: get_profile
+    prompt: >
+      Retrieve your own user profile from Zulip and report your full name
+      and the email address associated with the account.
+    expected: email
+    tags: [read]
+    # Discriminates tools that expose the /users/me endpoint vs. those that
+    # only expose the user-list endpoint. Email appears in the profile response
+    # and is specific enough to confirm the correct endpoint was called.
+
+  - id: list_users
+    prompt: >
+      List all users in this Zulip organization. Report the total count and
+      the full name of the first non-bot user you find.
+    expected: full_name
+    tags: [read]
+    # "full_name" is a field only present if the users list endpoint was called
+    # and the response parsed correctly. Stronger than checking for "users".
+
+  - id: get_server_settings
+    prompt: >
+      Fetch the server settings for this Zulip instance and report the
+      realm name (organization name).
+    expected: realm_name
+    tags: [read]
+    # Confirms the server-settings endpoint is covered. realm_name is a
+    # mandatory field in the response and is unique to this endpoint.
+
+  - id: get_stream_subscribers
+    prompt: >
+      Get the list of subscribers to the "general" stream. Report how many
+      subscribers it has and the email address of the first subscriber.
+    expected: email
+    tags: [read, multi-step]
+    # Discriminates tools that support subscriber lookup on a named stream.
+    # Requires the agent to resolve the stream name to an ID first, then
+    # fetch subscribers — tests parameter-passing between two calls.
+
+  - id: get_topics_in_stream
+    prompt: >
+      Retrieve all topics that have been used in the "general" stream.
+      Report the topic names.
+    expected: name
+    tags: [read, multi-step]
+    # Tests the get-topics endpoint which many naive synthesizers omit.
+    # "name" is the field key in each topic object; its presence confirms
+    # the correct endpoint was called and the response parsed correctly.
+
+  - id: get_messages_and_count_topics
+    prompt: >
+      Fetch the 20 most recent messages from the "general" stream. Count
+      how many distinct topics appear among those messages. Report the
+      count and list each distinct topic name.
+    expected: topic
+    tags: [read, multi-step]
+    # Synthesis task: requires parsing each message's topic field and
+    # deduplicating. Fails if the messages endpoint is absent or if the
+    # response schema differs from what the agent expects. More demanding
+    # than a simple summarize request.
+
+  # ---------- WRITE ----------
+
+  - id: send_stream_message
+    prompt: >
+      Send a message to the stream "general" with topic "agent-test" and
+      content "Hello from the MCP agent harness! (automated test)".
+      Report the message ID of the sent message.
+    expected: message_id
+    tags: [write]
+    # Smoke test for the send-message tool. message_id is the field name
+    # returned by the Zulip API; its presence confirms the correct field
+    # was extracted from the response rather than fabricated.
+
+  - id: send_direct_message
+    prompt: >
+      Look up the email address of the account you are operating as (your
+      own profile). Then send a direct message to yourself with the content
+      "Self-test ping from agent harness". Report the message ID.
+    expected: message_id
+    tags: [write, multi-step]
+    # Two-step workflow: profile lookup then DM. Tests that the agent can
+    # pass the email from the profile response into the DM recipient field.
+
+  - id: edit_message
+    prompt: >
+      Send a message to the stream "general" with topic "mcp-eval-edit-test"
+      and content "Original content". Then edit that message to say
+      "Edited content". Report the message ID and confirm the edit took effect.
+    expected: Edited content
+    tags: [write, multi-step, workflow]
+    # Tests the update/edit-message endpoint, which is separate from send.
+    # "Edited content" only appears if the agent both sent and then correctly
+    # edited the message, confirming the edit endpoint was called.
+
+  - id: add_scheduled_message
+    prompt: >
+      Schedule a message to the stream "general" with topic
+      "mcp-eval-scheduled-test" and content "Scheduled test from agent harness".
+      Deliver it 60 seconds from now. Report the scheduled message ID.
+    expected: scheduled_message_id
+    tags: [write]
+    # Niche endpoint that many synthesizers omit. scheduled_message_id is
+    # specific to the scheduled-messages API and cannot be confused with a
+    # regular message ID.
+
+  - id: add_alert_word
+    prompt: >
+      Add "agent-eval-keyword" as an alert word for the current user. Then
+      retrieve the current list of alert words to confirm it was added.
+      Report the full list of alert words.
+    expected: agent-eval-keyword
+    tags: [write, multi-step, workflow]
+    # Two-step write+read workflow. The expected value is the exact string
+    # that was added, so it only appears if both the add and the list call
+    # succeeded correctly. Tests a niche personal-settings endpoint.
+
+  - id: update_stream_description
+    prompt: >
+      Create a new stream called "mcp-eval-desc-test" with description
+      "Initial description". Then update the description of that stream to
+      "Updated by agent harness". Confirm the update by reporting the new
+      description.
+    expected: Updated by agent harness
+    tags: [write, multi-step, workflow]
+    # Three-step workflow: create stream, then update it, then verify.
+    # Tests the stream-update endpoint, which is distinct from stream creation.
+    # The expected string is only present if the update call succeeded.
+
+  # ---------- MULTI-STEP / WORKFLOW ----------
+
+  - id: send_and_react
+    prompt: >
+      Send a message to the stream "general" with topic "mcp-eval-reaction-test"
+      and content "Testing reactions". Then add the emoji reaction "thumbs_up"
+      to that message. Report the message ID and the name of the reaction added.
+    expected: thumbs_up
+    tags: [write, multi-step, workflow]
+    # Two-step: send then react. "thumbs_up" only appears if the reaction was
+    # actually added and the agent reports the reaction name correctly. Tests
+    # that the add-reaction tool accepts an emoji name string.
+
+  - id: create_stream_and_post
+    prompt: >
+      Create a new private stream called "mcp-eval-test" with description
+      "Temporary test stream created by agent". Then send a message to that
+      stream with topic "hello" and content "Stream created successfully".
+      Report the stream name and the message ID.
+    expected: message_id
+    tags: [write, multi-step, workflow]
+    # Two-step: create stream then post to it. Tests that the create-stream
+    # response provides enough information for the agent to post to the new
+    # stream by name. message_id confirms the post step also succeeded.
+
+  - id: search_messages
+    prompt: >
+      Fetch messages from the "general" stream. Count how many messages are
+      returned and report the total count and the sender email or ID of the
+      most recent message.
+    expected: sender_id
+    tags: [read, multi-step]
+    # Synthesis over echo: requires the agent to count results and extract a
+    # specific field from the most recent item. sender_id is a field unique
+    # to the messages endpoint response schema.
+
+  # ---------- PAGINATION ----------
+
+  - id: paginate_stream_messages
+    prompt: >
+      Fetch messages from the "general" stream in two separate batches using
+      anchor-based pagination: first request the oldest 10 messages (anchor
+      "oldest", num_after=10), then use the ID of the last message from that
+      batch as the anchor for a second request to get the next 10. Report the
+      message ID of the 10th message (last of the first batch) and the message
+      ID of the 11th message (first of the second batch). If the stream has
+      fewer than 11 messages, report however many exist and note that pagination
+      was not needed.
+    expected: message_id
+    tags: [read, pagination, edge-case]
+    # Tests whether the tool exposes anchor/num_before/num_after parameters and
+    # whether the agent can chain two paginated requests. Most naive synthesizers
+    # implement a single-call wrapper that hides pagination params, making this
+    # task impossible to complete correctly. found_newest/found_oldest in the
+    # response are the server-side signals that pagination is needed.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: send_to_nonexistent_stream
+    prompt: >
+      Attempt to send a message to a stream called
+      "zzz-this-stream-does-not-exist-xyz999". Do not retry. Report exactly
+      what the server returns, including the result and any error code or
+      message. The task is complete when you have reported the error response.
+    expected: error
+    tags: [error-handling, edge-case]
+    # Tests whether the tool surfaces API errors as structured data rather than
+    # raising an unhandled exception. Zulip returns {"result": "error",
+    # "code": "STREAM_DOES_NOT_EXIST"} for this case. A server that raises an
+    # exception crashes the agent immediately; a server that returns {"error":
+    # "..."} lets the agent report the result. Only one API call needed.
+
+  - id: delete_nonexistent_message
+    prompt: >
+      Attempt to delete the message with ID 1 (which either does not exist or
+      you do not have permission to delete). Report exactly what the server
+      returns. Do not retry on error. The task is complete when you have
+      reported the server response, whether success or error.
+    expected: error
+    tags: [error-handling, edge-case]
+    # Tests error propagation for the delete-message endpoint. Zulip returns
+    # {"code": "BAD_REQUEST", "msg": "Invalid message(s)", "result": "error"}
+    # for non-existent message IDs. A well-implemented tool returns this dict;
+    # a poorly-implemented one raises an HTTPError, crashing the trajectory.
+
+  - id: invalid_emoji_reaction
+    prompt: >
+      Send a message to the stream "general" with topic "mcp-eval-emoji-error"
+      and content "Testing invalid emoji error handling". Then attempt to add
+      an emoji reaction with the name "not_a_real_emoji_xyz999" to that message.
+      Report the message ID of the sent message and what the server returns for
+      the invalid emoji reaction attempt.
+    expected: error
+    tags: [error-handling, edge-case, multi-step]
+    # Two-step: send succeeds, reaction fails with an API error. Tests that the
+    # tool propagates the reaction error rather than swallowing it. Zulip returns
+    # result=error for unknown emoji names. Requires the agent to continue past
+    # the send step and attempt the reaction before reporting.
+
+  # ---------- HARDER: CROSS-ENDPOINT LINKAGE ----------
+
+  - id: message_edit_history
+    prompt: >
+      Send a message to the stream "general" with topic "mcp-eval-history-test"
+      and content "Original version". Edit that message twice: first to
+      "Second version", then to "Third version". Finally, retrieve the edit
+      history of that message and report: how many edits appear in the history
+      and what the previous content was for the most recent edit entry.
+    expected: Second version
+    tags: [write, multi-step, workflow, harder]
+    # Three-step pipeline: send → edit twice → get edit history. Tests
+    # GET /messages/{msg_id}/history, which is a niche endpoint separate from
+    # GET /messages and frequently omitted by synthesizers (TOOL_COVERAGE).
+    # The response contains a message_history array with prev_content fields;
+    # a tool that returns the raw history correctly enables the agent to answer.
+    # A tool that returns only {"result": "success"} or omits the history
+    # endpoint entirely makes the final verification step impossible.
+
+  - id: star_and_retrieve
+    prompt: >
+      Send a message to the stream "general" with topic "mcp-eval-star-test"
+      and content "Message to be starred". Star that message using the message
+      flags endpoint (flag: "starred", op: "add"). Then fetch your starred
+      messages using the get-messages endpoint with the narrow operator
+      {"operator": "is", "operand": "starred"}. Confirm that the message you
+      starred appears in the results and report its message ID.
+    expected: starred
+    tags: [write, multi-step, workflow, harder]
+    # Three-step pipeline: send → flag → narrow query. Tests two distinct
+    # capabilities: (1) the message flags endpoint (POST /messages/flags),
+    # which is separate from reactions and often omitted; (2) the "is"
+    # narrow operator with operand "starred", which is a non-obvious narrow
+    # format distinct from the "stream" or "sender" operators. A server
+    # missing the flags tool blocks at step 2 (TOOL_COVERAGE). A server with
+    # the flags tool but no "is:starred" narrow support blocks at step 3.
+
+  - id: move_message_topic
+    prompt: >
+      Send a message to the stream "general" with topic "mcp-eval-move-source"
+      and content "This message will be moved". Then move that message to topic
+      "mcp-eval-move-dest" in the same stream by editing the message's topic
+      (do not change its content). Verify the move succeeded by fetching
+      messages from "general" with the narrow filtered to topic
+      "mcp-eval-move-dest" and confirming the message appears there. Report
+      the message ID and the new topic name.
+    expected: mcp-eval-move-dest
+    tags: [write, multi-step, workflow, harder]
+    # Tests topic-move via PATCH /messages/{id} with a topic param (no content
+    # change). Many synthesizers implement "edit message" as content-only,
+    # wrapping only the "content" parameter and ignoring "topic" and "stream_id".
+    # This is a TOOL_SCHEMA failure: the tool exists but its schema doesn't
+    # expose the params needed for this task. The verification step (fetch by
+    # new topic narrow) additionally tests compound narrow construction.
+
+  - id: exhaust_pagination
+    prompt: >
+      Fetch ALL messages from the "general" stream by repeatedly calling the
+      get-messages endpoint with batches of 10, starting from the oldest anchor,
+      until the response indicates found_newest is true (no more messages).
+      Report the total number of messages found across all batches and how many
+      API calls were needed. If the stream has 10 or fewer messages, report
+      the count and note that a single batch sufficed.
+    expected: found_newest
+    tags: [read, pagination, harder]
+    # Harder than paginate_stream_messages: requires the agent to loop until
+    # found_newest=True rather than making exactly 2 fixed calls. This only
+    # works if the tool returns found_newest in its response — many synthesizers
+    # return only the messages array and drop the metadata fields (found_newest,
+    # found_oldest, anchor). Without found_newest, the agent cannot determine
+    # when pagination is complete (TOOL_IMPLEMENTATION). The task wording
+    # explicitly names found_newest so the agent knows what to look for.
+
+  # ---------- COMPOUND NARROW ----------
+
+  - id: narrow_by_sender
+    prompt: >
+      Fetch your own user profile to get your email address. Then fetch
+      messages from the "general" stream filtered to only those sent by you
+      (use both a channel narrow and a sender narrow together in a single
+      request). Report how many messages you have sent to that stream and the
+      content of the most recent one. If you have sent none, report 0 and
+      explain.
+    expected: sender_email
+    tags: [read, multi-step, edge-case]
+    # Tests compound narrow construction: [{"operator": "channel", "operand":
+    # "general"}, {"operator": "sender", "operand": "<email>"}]. Requires the
+    # agent to (1) get its own email, (2) construct a two-operator narrow, and
+    # (3) pass it correctly to the get-messages tool. Most synthesizers implement
+    # get-messages with a simple stream-only narrow or no narrow, making compound
+    # narrows unavailable or requiring creative parameter passing.

@@ -1,0 +1,14 @@
+{
+  "name": "options_data",
+  "description": "Options data wrapper (REALTIME_OPTIONS, HISTORICAL_OPTIONS, put-call ratios, etc.).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "function": {"type": "string"},
+      "ticker": {"type": "string"},
+      "params": {"type": "object", "additionalProperties": true},
+      "apikey": {"type": "string"}
+    },
+    "required": ["function", "ticker"]
+  }
+}

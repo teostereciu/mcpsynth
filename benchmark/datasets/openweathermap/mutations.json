@@ -1,0 +1,10 @@
+{
+  "description": "Parameter name mutations for the OpenWeatherMap API, covering common query params used in current weather, 5-day forecast, and geocoding endpoints.",
+  "mutations": [
+    {"original": "lat", "mutated": "latitude"},
+    {"original": "lon", "mutated": "longitude"},
+    {"original": "units", "mutated": "measurement_units"},
+    {"original": "lang", "mutated": "language"},
+    {"original": "cnt", "mutated": "count"}
+  ]
+}

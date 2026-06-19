@@ -1,0 +1,241 @@
+# Agent evaluation tasks for Zulip CLI tool.
+# Identical task set to zulip/ (MCP condition) — same operations, same expected
+# values — enabling direct comparison between the two synthesis conditions.
+#
+# Dataset note: Tasks use stream "general" which must exist in the org.
+# Write tasks create resources prefixed "cli-eval-". Alert words and
+# scheduled messages are scoped to the bot user and do not affect others.
+# Required env vars: ZULIP_SITE, ZULIP_EMAIL, ZULIP_API_KEY
+
+tasks:
+  # ---------- READ ----------
+
+  - id: list_streams
+    prompt: >
+      List all streams (channels) available in this Zulip organization.
+      Report the names of the first 5 streams you find.
+    expected: general
+    tags: [read]
+
+  - id: get_profile
+    prompt: >
+      Retrieve your own user profile from Zulip and report your full name
+      and the email address associated with the account.
+    expected: email
+    tags: [read]
+
+  - id: list_users
+    prompt: >
+      List all users in this Zulip organization. Report the total count and
+      the full name of the first non-bot user you find.
+    expected: full_name
+    tags: [read]
+
+  - id: get_server_settings
+    prompt: >
+      Fetch the server settings for this Zulip instance and report the
+      realm name (organization name).
+    expected: realm_name
+    tags: [read]
+
+  - id: get_stream_subscribers
+    prompt: >
+      Get the list of subscribers to the "general" stream. Report how many
+      subscribers it has and the email address of the first subscriber.
+    expected: email
+    tags: [read, multi-step]
+
+  - id: get_topics_in_stream
+    prompt: >
+      Retrieve all topics that have been used in the "general" stream.
+      Report the topic names.
+    expected: name
+    tags: [read, multi-step]
+
+  - id: get_messages_and_count_topics
+    prompt: >
+      Fetch the 20 most recent messages from the "general" stream. Count
+      how many distinct topics appear among those messages. Report the
+      count and list each distinct topic name.
+    expected: topic
+    tags: [read, multi-step]
+
+  # ---------- WRITE ----------
+
+  - id: send_stream_message
+    prompt: >
+      Send a message to the stream "general" with topic "agent-test" and
+      content "Hello from the CLI agent harness! (automated test)".
+      Report the message ID of the sent message.
+    expected: message_id
+    tags: [write]
+
+  - id: send_direct_message
+    prompt: >
+      Look up the email address of the account you are operating as (your
+      own profile). Then send a direct message to yourself with the content
+      "Self-test ping from agent harness". Report the message ID.
+    expected: message_id
+    tags: [write, multi-step]
+
+  - id: edit_message
+    prompt: >
+      Send a message to the stream "general" with topic "cli-eval-edit-test"
+      and content "Original content". Then edit that message to say
+      "Edited content". Report the message ID and confirm the edit took effect.
+    expected: Edited content
+    tags: [write, multi-step, workflow]
+
+  - id: add_scheduled_message
+    prompt: >
+      Schedule a message to the stream "general" with topic
+      "cli-eval-scheduled-test" and content "Scheduled test from agent harness".
+      Deliver it 60 seconds from now. Report the scheduled message ID.
+    expected: scheduled_message_id
+    tags: [write]
+
+  - id: add_alert_word
+    prompt: >
+      Add "agent-eval-keyword" as an alert word for the current user. Then
+      retrieve the current list of alert words to confirm it was added.
+      Report the full list of alert words.
+    expected: agent-eval-keyword
+    tags: [write, multi-step, workflow]
+
+  - id: update_stream_description
+    prompt: >
+      Create a new stream called "cli-eval-desc-test" with description
+      "Initial description". Then update the description of that stream to
+      "Updated by agent harness". Confirm the update by reporting the new
+      description.
+    expected: Updated by agent harness
+    tags: [write, multi-step, workflow]
+
+  # ---------- MULTI-STEP / WORKFLOW ----------
+
+  - id: send_and_react
+    prompt: >
+      Send a message to the stream "general" with topic "cli-eval-reaction-test"
+      and content "Testing reactions". Then add the emoji reaction "thumbs_up"
+      to that message. Report the message ID and the name of the reaction added.
+    expected: thumbs_up
+    tags: [write, multi-step, workflow]
+
+  - id: create_stream_and_post
+    prompt: >
+      Create a new private stream called "cli-eval-test" with description
+      "Temporary test stream created by agent". Then send a message to that
+      stream with topic "hello" and content "Stream created successfully".
+      Report the stream name and the message ID.
+    expected: message_id
+    tags: [write, multi-step, workflow]
+
+  - id: search_messages
+    prompt: >
+      Fetch messages from the "general" stream. Count how many messages are
+      returned and report the total count and the sender email or ID of the
+      most recent message.
+    expected: sender_id
+    tags: [read, multi-step]
+
+  # ---------- PAGINATION ----------
+
+  - id: paginate_stream_messages
+    prompt: >
+      Fetch messages from the "general" stream in two separate batches using
+      anchor-based pagination: first request the oldest 10 messages (anchor
+      "oldest", num_after=10), then use the ID of the last message from that
+      batch as the anchor for a second request to get the next 10. Report the
+      message ID of the 10th message (last of the first batch) and the message
+      ID of the 11th message (first of the second batch). If the stream has
+      fewer than 11 messages, report however many exist and note that pagination
+      was not needed.
+    expected: message_id
+    tags: [read, pagination, edge-case]
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: send_to_nonexistent_stream
+    prompt: >
+      Attempt to send a message to a stream called
+      "zzz-this-stream-does-not-exist-xyz999". Do not retry. Report exactly
+      what the server returns, including the result and any error code or
+      message. The task is complete when you have reported the error response.
+    expected: error
+    tags: [error-handling, edge-case]
+
+  - id: delete_nonexistent_message
+    prompt: >
+      Attempt to delete the message with ID 1 (which either does not exist or
+      you do not have permission to delete). Report exactly what the server
+      returns. Do not retry on error. The task is complete when you have
+      reported the server response, whether success or error.
+    expected: error
+    tags: [error-handling, edge-case]
+
+  - id: invalid_emoji_reaction
+    prompt: >
+      Send a message to the stream "general" with topic "cli-eval-emoji-error"
+      and content "Testing invalid emoji error handling". Then attempt to add
+      an emoji reaction with the name "not_a_real_emoji_xyz999" to that message.
+      Report the message ID of the sent message and what the server returns for
+      the invalid emoji reaction attempt.
+    expected: error
+    tags: [error-handling, edge-case, multi-step]
+
+  # ---------- HARDER: CROSS-ENDPOINT LINKAGE ----------
+
+  - id: message_edit_history
+    prompt: >
+      Send a message to the stream "general" with topic "cli-eval-history-test"
+      and content "Original version". Edit that message twice: first to
+      "Second version", then to "Third version". Finally, retrieve the edit
+      history of that message and report: how many edits appear in the history
+      and what the previous content was for the most recent edit entry.
+    expected: Second version
+    tags: [write, multi-step, workflow, harder]
+
+  - id: star_and_retrieve
+    prompt: >
+      Send a message to the stream "general" with topic "cli-eval-star-test"
+      and content "Message to be starred". Star that message using the message
+      flags endpoint (flag: "starred", op: "add"). Then fetch your starred
+      messages using the get-messages endpoint with the narrow operator
+      {"operator": "is", "operand": "starred"}. Confirm that the message you
+      starred appears in the results and report its message ID.
+    expected: starred
+    tags: [write, multi-step, workflow, harder]
+
+  - id: move_message_topic
+    prompt: >
+      Send a message to the stream "general" with topic "cli-eval-move-source"
+      and content "This message will be moved". Then move that message to topic
+      "cli-eval-move-dest" in the same stream by editing the message's topic
+      (do not change its content). Verify the move succeeded by fetching
+      messages from "general" with the narrow filtered to topic
+      "cli-eval-move-dest" and confirming the message appears there. Report
+      the message ID and the new topic name.
+    expected: cli-eval-move-dest
+    tags: [write, multi-step, workflow, harder]
+
+  - id: exhaust_pagination
+    prompt: >
+      Fetch ALL messages from the "general" stream by repeatedly calling the
+      get-messages endpoint with batches of 10, starting from the oldest anchor,
+      until the response indicates found_newest is true (no more messages).
+      Report the total number of messages found across all batches and how many
+      API calls were needed. If the stream has 10 or fewer messages, report
+      the count and note that a single batch sufficed.
+    expected: found_newest
+    tags: [read, pagination, harder]
+
+  - id: narrow_by_sender
+    prompt: >
+      Fetch your own user profile to get your email address. Then fetch
+      messages from the "general" stream filtered to only those sent by you
+      (use both a channel narrow and a sender narrow together in a single
+      request). Report how many messages you have sent to that stream and the
+      content of the most recent one. If you have sent none, report 0 and
+      explain.
+    expected: sender_email
+    tags: [read, multi-step, edge-case]

@@ -1,0 +1,6 @@
+{
+  "zulip_server_status": {
+    "doc": "TASK.md",
+    "endpoint": "GET /server_settings"
+  }
+}

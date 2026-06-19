@@ -1,0 +1,106 @@
+{
+  "retrieve_page": {
+    "doc": "docs/retrieve-a-page.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "create_page": {
+    "doc": "docs/post-page.md",
+    "endpoint": "POST /pages"
+  },
+  "update_page": {
+    "doc": "docs/patch-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "archive_page": {
+    "doc": "docs/archive-a-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "restore_page": {
+    "doc": "docs/archive-a-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "retrieve_page_property": {
+    "doc": "docs/retrieve-a-page-property.md",
+    "endpoint": "GET /pages/{page_id}/properties/{property_id}"
+  },
+  "move_page": {
+    "doc": "docs/move-page.md",
+    "endpoint": "POST /pages/{page_id}/move"
+  },
+  "retrieve_database": {
+    "doc": "docs/retrieve-a-database.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "query_database": {
+    "doc": "docs/post-database-query.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "create_database": {
+    "doc": "docs/create-a-database.md",
+    "endpoint": "POST /databases"
+  },
+  "update_database": {
+    "doc": "docs/update-a-database.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "retrieve_block": {
+    "doc": "docs/retrieve-a-block.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "update_block": {
+    "doc": "docs/update-a-block.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "delete_block": {
+    "doc": "docs/delete-a-block.md",
+    "endpoint": "DELETE /blocks/{block_id}"
+  },
+  "append_block_children": {
+    "doc": "docs/patch-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "retrieve_block_children": {
+    "doc": "docs/get-block-children.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "retrieve_comment": {
+    "doc": "docs/retrieve-comment.md",
+    "endpoint": "GET /comments/{comment_id}"
+  },
+  "create_comment": {
+    "doc": "docs/create-a-comment.md",
+    "endpoint": "POST /comments"
+  },
+  "list_comments": {
+    "doc": "docs/list-comments.md",
+    "endpoint": "GET /comments"
+  },
+  "list_users": {
+    "doc": "docs/get-users.md",
+    "endpoint": "GET /users"
+  },
+  "retrieve_user": {
+    "doc": "docs/get-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "retrieve_my_bot": {
+    "doc": "docs/get-user.md",
+    "endpoint": "GET /users/me"
+  },
+  "retrieve_view": {
+    "doc": "docs/retrieve-a-view.md",
+    "endpoint": "GET /views/{view_id}"
+  },
+  "list_views": {
+    "doc": "docs/list-views.md",
+    "endpoint": "GET /views"
+  },
+  "search": {
+    "doc": "docs/post-search.md",
+    "endpoint": "POST /search"
+  },
+  "get_databases": {
+    "doc": "docs/get-databases.md",
+    "endpoint": "GET /databases"
+  }
+}

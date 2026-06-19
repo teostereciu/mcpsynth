@@ -1,0 +1,162 @@
+{
+  "post_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "get_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/statuses/{id}"
+  },
+  "delete_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "DELETE /api/v1/statuses/{id}"
+  },
+  "reblog_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/statuses/{id}/reblog"
+  },
+  "unreblog_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "DELETE /api/v1/statuses/{id}/reblog"
+  },
+  "favourite_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/statuses/{id}/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "DELETE /api/v1/statuses/{id}/favourite"
+  },
+  "get_status_context": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/statuses/{id}/context"
+  },
+  "get_account": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/accounts/{id}"
+  },
+  "get_authenticated_account": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "follow_account": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/accounts/{id}/follow"
+  },
+  "unfollow_account": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/accounts/{id}/unfollow"
+  },
+  "get_account_followers": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/accounts/{id}/followers"
+  },
+  "get_account_following": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/accounts/{id}/following"
+  },
+  "get_home_timeline": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/timelines/tag/{tag}"
+  },
+  "get_list_timeline": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/timelines/list/{id}"
+  },
+  "list_notifications": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "get_notification": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/notifications/{id}"
+  },
+  "dismiss_notification": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/notifications/{id}/dismiss"
+  },
+  "clear_notifications": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "search_accounts": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/accounts/search"
+  },
+  "search_statuses": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/search (statuses)"
+  },
+  "search": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/search"
+  },
+  "create_list": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "get_lists": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "get_list": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/lists/{id}"
+  },
+  "update_list": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "PUT /api/v1/lists/{id}"
+  },
+  "delete_list": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "DELETE /api/v1/lists/{id}"
+  },
+  "add_accounts_to_list": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/lists/{id}/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "DELETE /api/v1/lists/{id}/accounts"
+  },
+  "get_list_accounts": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/lists/{id}/accounts"
+  },
+  "get_bookmarks": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "bookmark_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/statuses/{id}/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "DELETE /api/v1/statuses/{id}/bookmark"
+  },
+  "get_favourites": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "upload_media": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "POST /api/v1/media"
+  },
+  "get_instance_info": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/instance"
+  },
+  "get_instance_activity": {
+    "doc": "N/A - Implemented from general Mastodon API knowledge",
+    "endpoint": "GET /api/v1/instance/activity"
+  }
+}

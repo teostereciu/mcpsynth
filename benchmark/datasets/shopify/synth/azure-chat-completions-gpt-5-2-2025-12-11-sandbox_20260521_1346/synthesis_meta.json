@@ -1,0 +1,12 @@
+{
+  "dataset": "shopify",
+  "model": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox",
+  "condition": "docs",
+  "synthesis_time": 167.42078304290771,
+  "token_usage": {
+    "input_tokens": 876684,
+    "output_tokens": 9974
+  },
+  "cost_estimate": null,
+  "timestamp": "20260521_1346"
+}

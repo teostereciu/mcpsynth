@@ -1,0 +1,10 @@
+{
+  "description": "GitHub API parameter mutations for parametric contamination testing. Renames common request parameters to plausible-but-wrong alternatives. All mutated params are exercised by eval task scenarios (listing issues/PRs/branches, creating issues, commit status).",
+  "mutations": [
+    {"original": "per_page", "mutated": "page_limit"},
+    {"original": "labels",   "mutated": "label_filters"},
+    {"original": "state",    "mutated": "issue_state"},
+    {"original": "page",     "mutated": "page_number"},
+    {"original": "sha",      "mutated": "commit_sha"}
+  ]
+}

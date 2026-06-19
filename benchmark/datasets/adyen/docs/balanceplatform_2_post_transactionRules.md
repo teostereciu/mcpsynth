@@ -1,0 +1,282 @@
+# balanceplatform/2/post/transactionRules
+
+*Source: https://docs.adyen.com/api-explorer/balanceplatform/2/post/transactionRules*
+
+---
+
+# Create a transaction rule
+Creates atransaction rule. When your user makes a transaction with their Adyen-issued card, the transaction is allowed or declined based on the conditions and outcome defined in the transaction rule. You can apply the transaction rule to several cards, such as all the cards in your platform, or to a specific card. For use cases, seeexamples.
+The level at which data must be accumulated, used in rules withtypevelocityormaxUsage. The level must be thesame or lower in hierarchythan theentityKey.
+If not provided, by default, the rule will accumulate data at thepaymentInstrumentlevel.
+Possible values:paymentInstrument,paymentInstrumentGroup,balanceAccount,accountHolder,balancePlatform.
+Your description for the transaction rule.
+The date when the rule will stop being evaluated, in ISO 8601 extended offset date-time format. For example,2025-03-19T10:15:30+01:00.
+If not provided, the rule will be evaluated until the rule status is set toinactive.
+The type and unique identifier of the resource to which the rule applies.
+The unique identifier of the resource.
+The type of resource.
+Possible values:balancePlatform,paymentInstrumentGroup,accountHolder,balanceAccount, orpaymentInstrument.
+Thetime intervalwhen the rule conditions apply.
+The day of month, used when theduration.unitismonths. If not provided, by default, this is set to1, the first day of the month.
+The day of week, used when theduration.unitisweeks. If not provided, by default, this is set tomonday.
+Possible values:sunday,monday,tuesday,wednesday,thursday,friday.
+The duration, which you can specify in hours, days, weeks, or months. The maximum duration is 90 days or an equivalent in other units. Required when thetypeisrollingorsliding.
+The unit of time. You can only useminutesandhoursif theinterval.typeissliding.
+Possible values:minutes,hours,days,weeks, ormonths
+The length of time by the unit. For example, 5 days.
+The maximum duration is 90 days or an equivalent in other units. For example, 3 months.
+The time of day, inhh:mm:ssformat, used when theduration.unitishours. If not provided, by default, this is set to00:00:00.
+Thetime zone. For example,Europe/Amsterdam. By default, this is set toUTC.
+Thetype of intervalduring which the rule conditions and limits apply, and how often counters are reset.
+Possible values:
+- perTransaction: conditions are evaluated and the counters are reset for every transaction.
+- daily: the counters are reset daily at 00:00:00 CET.
+- weekly: the counters are reset every Monday at 00:00:00 CET.
+- monthly: the counters reset every first day of the month at 00:00:00 CET.
+- lifetime: conditions are applied to the lifetime of the payment instrument.
+- rolling: conditions are applied and the counters are reset based on aduration. If the reset date and time are not provided, Adyen applies the default reset time similar to fixed intervals. For example, if the duration is every two weeks, the counter resets every third Monday at 00:00:00 CET.
+- sliding: conditions are applied and the counters are reset based on the current time and adurationthat you specify.
+Theoutcomethat will be applied when a transaction meets the conditions of the rule.
+Possible values:
+- hardBlock(default): the transaction is declined.
+- scoreBased: the transaction is assigned thescoreyou specified. Adyen calculates the total score and if it exceeds 100, the transaction is declined. This value is not allowed whenrequestTypeisbankTransfer.
+- enforceSCA: your user is prompted to verify their identity using3D Secure authentication. If the authentication fails or times out, the transaction is declined. This value is only allowed whenrequestTypeisauthentication.
+Specifies the reason for creating the rule.
+Possible values:
+- fraud: the rule is created to regulate fraudulent activity.
+- policy: the rule is created to ensure that the transaction adheres to your business' policies. For example, if your business has policies about the Merchant Category Codes (MCCs) allowed on a transaction, you can create a rule to block transactions that have specific MCCs.
+Your reference for the transaction rule.
+Indicates the type of request to which the rule applies. If not provided, by default, this is set toauthorization.
+Possible values:authorization,authentication,tokenization,bankTransfer.
+Contains one or more objects that define therule conditions. Each object must have a value and an operation which determines how the values must be evaluated.
+For example, acountriesobject can have a list of country codes["US", "CA"]in thevaluefield andanyMatchin theoperationfield.
+The total number of tokens that a card can have across different kinds of digital wallets on the user's phones, watches, or other wearables.
+Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.
+Defines how the condition must be evaluated.
+The number of tokens.
+List of card brand variants and the operation.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+List of card brand variants.
+Possible values:
+- mc,mccredit,mccommercialcredit_b2b,mcdebit,mcbusinessdebit,mcbusinessworlddebit,mcprepaid,mcmaestro
+- visa,visacredit,visadebit,visaprepaid.
+You can specify a rule for a generic variant. For example, to create a rule for all Mastercard payment instruments, usemc. The rule is applied to all payment instruments undermc, such asmcbusinessdebitandmcdebit.
+Contains a list of counterparty financial institutions and how they must be evaluated.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+The list of counterparty bank institutions to be evaluated.
+Two-characterISO 3166-1 alpha-2country code.
+The bank identification code.
+The type of the identification.
+Possible values:iban,routingNumber,sortCode,bic.
+Contains a list of counterparty types and how they must be evaluated.
+Supported operations:anyMatch,noneMatch.
+Supported value inputs:
+- balanceAccount
+- bankAccount
+- card
+- transferInstrument
+Defines how the condition must be evaluated.
+The list of counterparty types to be evaluated.
+List of countries and the operation.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+List of two-characterISO 3166-1 alpha-2country codes.
+List of week days and the operation. Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+List of days of the week.
+Possible values:monday,tuesday,wednesday,thursday,friday,saturday,sunday.
+Compares the currency of the payment against the currency of the payment instrument, and specifies the operation.
+Supported operations:equals,notEquals.
+Defines how the condition must be evaluated.
+Checks the currency of the payment against the currency of the payment instrument.
+Possible values:
+- true: The currency of the payment is different from the currency of the payment instrument.
+- false: The currencies are the same.
+List of point-of-sale entry modes and the operation..
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+List of point-of-sale entry modes.
+Possible values:barcode,chip,cof,contactless,magstripe,manual,ocr,server.
+Indicates whether transaction is an international transaction and specifies the operation.
+Supported operations:equals,notEquals.
+Defines how the condition must be evaluated.
+Boolean indicating whether transaction is an international transaction.
+Possible values:
+- true: The transaction is an international transaction.
+- false: The transaction is a domestic transaction.
+The number of transactions and the operation.
+Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.
+Defines how the condition must be evaluated.
+The number of transactions.
+Checks if a user has recently made multiple transfers with the specified values.
+To use this restriction, you must:
+- Set the ruletypetovelocity.
+- Specify a timeinterval.
+- Specify a number ofmatchingTransactions.
+Supported operation:allMatch.
+Supported value inputs:
+- merchantIdandacquirerId
+- amountandcurrency
+- merchantName.
+Defines how the condition must be evaluated.
+List of merchant category codes (MCCs) and the operation.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+List of merchant category codes (MCCs).
+List of names that will be compared to the merchant name according to the matching type.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+The type of string matching operation. Possible values:startsWith,endsWith,isEqualTo,contains,
+The string to be matched.
+List of merchant ID and acquirer ID pairs, and the operation.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+List of merchant ID and acquirer ID pairs.
+The acquirer ID.
+The merchant identification number (MID).
+List of processing types and the operation.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+List of processing types.
+Possible values:atmWithdraw,balanceInquiry,ecommerce,moto,pos,recurring,token.
+Risk scores provided by specific sources. The same operation applies to all scores.
+Current sources available:visa,mastercard
+Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.
+Defines how the condition must be evaluated.
+Transaction risk score provided by Mastercard. Values provided by Mastercard range between 0 (lowest risk) to 998 (highest risk).
+Transaction risk score provided by Visa. Values provided by Visa range between 01 (lowest risk) to 99 (highest risk).
+Checks if a user has recently sent the same amount of funds in multiple transfers.
+To use this restriction, you must:
+- Set the ruletypetovelocity.
+- Specify a timeinterval.
+- Specify a number ofmatchingTransactions.
+Supported operation:equals.
+Defines how the condition must be evaluated.
+Checks if a user has recently made multiple transfers to the same counterparty.
+To use this restriction, you must:
+- Set the ruletypetovelocity.
+- Specify a timeinterval.
+- Specify a number ofmatchingTransactions.
+Supported operations:equals.
+Defines how the condition must be evaluated.
+Contains a list of source account types and how they must be evaluated.
+Supported operations:anyMatch,noneMatch.
+Supported value inputs:
+- balanceAccount
+- businessAccount.
+Defines how the condition must be evaluated.
+The list of source account types to be evaluated.
+A start and end time in a time-only ISO-8601 extended offset format. Supported operations:equals,notEquals.
+Defines how the condition must be evaluated.
+The end time in a time-only ISO-8601 extended offset format. For example:08:00:00+02:00,22:30:00-03:00.
+The start time in a time-only ISO-8601 extended offset format. For example:08:00:00+02:00,22:30:00-03:00.
+List of token requestor IDs and the operation.
+Supported operations:anyMatch,noneMatch.
+Defines how the condition must be evaluated.
+The total amount and the operation.
+Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.
+Defines how the condition must be evaluated.
+The amount value and currency.
+The three-characterISO currency codeof the amount.
+The numeric value of the amount, inminor units.
+Checks the wallet account score.
+Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.
+Defines how the condition must be evaluated.
+Wallet Provider Device Score and the operation.
+Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.
+Defines how the condition must be evaluated.
+Wallet Provider Device Type and the operation.
+Supported operations:anyMatch,noneMatch.
+Supported value inputs:
+- MOBILE_PHONE
+- TABLET_OR_EREADER
+- WATCH_OR_WRISTBAND
+- WEARABLE
+- CARD
+- PC
+- OTHER
+- UNKNOWN
+Defines how the condition must be evaluated.
+A positive or negative score applied to the transaction if it meets the conditions of the rule. Required whenoutcomeTypeisscoreBased.  The value must be between-100and100.
+The date when the rule will start to be evaluated, in ISO 8601 extended offset date-time format. For example,2025-03-19T10:15:30+01:00.
+If not provided when creating a transaction rule, thestartDateis set to the date when the rule status is set toactive.
+The status of the transaction rule. If you provide astartDatein the request, the rule is automatically created
+with anactivestatus.
+Possible values:active,inactive.
+Thetype of rule, which defines if a rule blocks transactions based on individual characteristics or accumulates data.
+Possible values:
+- blockList: decline a transaction when the conditions are met.
+- maxUsage: add the amount or number of transactions for the lifetime of a payment instrument, and then decline a transaction when the specified limits are met.
+- velocity: add the amount or number of transactions based on a specified time interval, and then decline a transaction when the specified limits are met.
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow lessaggregationLevelstringThe level at which data must be accumulated, used in rules withtypevelocityormaxUsage. The level must be thesame or lower in hierarchythan theentityKey.If not provided, by default, the rule will accumulate data at thepaymentInstrumentlevel.Possible values:paymentInstrument,paymentInstrumentGroup,balanceAccount,accountHolder,balancePlatform.descriptionstringMax length:300Your description for the transaction rule.endDatestringThe date when the rule will stop being evaluated, in ISO 8601 extended offset date-time format. For example,2025-03-19T10:15:30+01:00.If not provided, the rule will be evaluated until the rule status is set toinactive.entityKeyobjectThe type and unique identifier of the resource to which the rule applies.Show childrenHide childrenentityReferencestringThe unique identifier of the resource.entityTypestringThe type of resource.Possible values:balancePlatform,paymentInstrumentGroup,accountHolder,balanceAccount, orpaymentInstrument.idstringThe unique identifier of the transaction rule.intervalobjectThetime intervalwhen the rule conditions apply.Show childrenHide childrendayOfMonthintegerThe day of month, used when theduration.unitismonths. If not provided, by default, this is set to1, the first day of the month.dayOfWeekstringThe day of week, used when theduration.unitisweeks. If not provided, by default, this is set tomonday.Possible values:sunday,monday,tuesday,wednesday,thursday,friday.durationobjectThe duration, which you can specify in hours, days, weeks, or months. The maximum duration is 90 days or an equivalent in other units. Required when thetypeisrollingorsliding.Show childrenHide childrenunitstringThe unit of time. You can only useminutesandhoursif theinterval.typeissliding.Possible values:minutes,hours,days,weeks, ormonthsvalueintegerThe length of time by the unit. For example, 5 days.The maximum duration is 90 days or an equivalent in other units. For example, 3 months.timeOfDaystringThe time of day, inhh:mm:ssformat, used when theduration.unitishours. If not provided, by default, this is set to00:00:00.timeZonestringThetime zone. For example,Europe/Amsterdam. By default, this is set toUTC.typestringThetype of intervalduring which the rule conditions and limits apply, and how often counters are reset.Possible values:perTransaction: conditions are evaluated and the counters are reset for every transaction.daily: the counters are reset daily at 00:00:00 CET.weekly: the counters are reset every Monday at 00:00:00 CET.monthly: the counters reset every first day of the month at 00:00:00 CET.lifetime: conditions are applied to the lifetime of the payment instrument.rolling: conditions are applied and the counters are reset based on aduration. If the reset date and time are not provided, Adyen applies the default reset time similar to fixed intervals. For example, if the duration is every two weeks, the counter resets every third Monday at 00:00:00 CET.sliding: conditions are applied and the counters are reset based on the current time and adurationthat you specify.outcomeTypestringTheoutcomethat will be applied when a transaction meets the conditions of the rule.Possible values:hardBlock(default): the transaction is declined.scoreBased: the transaction is assigned thescoreyou specified. Adyen calculates the total score and if it exceeds 100, the transaction is declined. This value is not allowed whenrequestTypeisbankTransfer.enforceSCA: your user is prompted to verify their identity using3D Secure authentication. If the authentication fails or times out, the transaction is declined. This value is only allowed whenrequestTypeisauthentication.purposestringSpecifies the reason for creating the rule.Possible values:fraud: the rule is created to regulate fraudulent activity.policy: the rule is created to ensure that the transaction adheres to your business' policies. For example, if your business has policies about the Merchant Category Codes (MCCs) allowed on a transaction, you can create a rule to block transactions that have specific MCCs.referencestringMax length:150Your reference for the transaction rule.requestTypestringIndicates the type of request to which the rule applies. If not provided, by default, this is set toauthorization.Possible values:authorization,authentication,tokenization,bankTransfer.ruleRestrictionsobjectContains one or more objects that define therule conditions. Each object must have a value and an operation which determines how the values must be evaluated.For example, acountriesobject can have a list of country codes["US", "CA"]in thevaluefield andanyMatchin theoperationfield.Show childrenHide childrenactiveNetworkTokensobjectThe total number of tokens that a card can have across different kinds of digital wallets on the user's phones, watches, or other wearables.Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valueintegerThe number of tokens.brandVariantsobjectList of card brand variants and the operation.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]List of card brand variants.Possible values:mc,mccredit,mccommercialcredit_b2b,mcdebit,mcbusinessdebit,mcbusinessworlddebit,mcprepaid,mcmaestrovisa,visacredit,visadebit,visaprepaid.You can specify a rule for a generic variant. For example, to create a rule for all Mastercard payment instruments, usemc. The rule is applied to all payment instruments undermc, such asmcbusinessdebitandmcdebit.counterpartyBankobjectContains a list of counterparty financial institutions and how they must be evaluated.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[object]The list of counterparty bank institutions to be evaluated.Show childrenHide childrencountrystringTwo-characterISO 3166-1 alpha-2country code.identificationstringThe bank identification code.identificationTypestringThe type of the identification.Possible values:iban,routingNumber,sortCode,bic.counterpartyTypesobjectContains a list of counterparty types and how they must be evaluated.Supported operations:anyMatch,noneMatch.Supported value inputs:balanceAccountbankAccountcardtransferInstrumentShow childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]The list of counterparty types to be evaluated.countriesobjectList of countries and the operation.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]List of two-characterISO 3166-1 alpha-2country codes.dayOfWeekobjectList of week days and the operation. Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]List of days of the week.Possible values:monday,tuesday,wednesday,thursday,friday,saturday,sunday.differentCurrenciesobjectCompares the currency of the payment against the currency of the payment instrument, and specifies the operation.Supported operations:equals,notEquals.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuebooleanChecks the currency of the payment against the currency of the payment instrument.Possible values:true: The currency of the payment is different from the currency of the payment instrument.false: The currencies are the same.entryModesobjectList of point-of-sale entry modes and the operation..Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]List of point-of-sale entry modes.Possible values:barcode,chip,cof,contactless,magstripe,manual,ocr,server.internationalTransactionobjectIndicates whether transaction is an international transaction and specifies the operation.Supported operations:equals,notEquals.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuebooleanBoolean indicating whether transaction is an international transaction.Possible values:true: The transaction is an international transaction.false: The transaction is a domestic transaction.matchingTransactionsobjectThe number of transactions and the operation.Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valueintegerThe number of transactions.matchingValuesobjectChecks if a user has recently made multiple transfers with the specified values.To use this restriction, you must:Set the ruletypetovelocity.Specify a timeinterval.Specify a number ofmatchingTransactions.Supported operation:allMatch.Supported value inputs:merchantIdandacquirerIdamountandcurrencymerchantName.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]mccsobjectList of merchant category codes (MCCs) and the operation.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]List of merchant category codes (MCCs).merchantNamesobjectList of names that will be compared to the merchant name according to the matching type.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[object]Show childrenHide childrenoperationstringThe type of string matching operation. Possible values:startsWith,endsWith,isEqualTo,contains,valuestringThe string to be matched.merchantsobjectList of merchant ID and acquirer ID pairs, and the operation.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[object]List of merchant ID and acquirer ID pairs.Show childrenHide childrenacquirerIdstringThe acquirer ID.merchantIdstringThe merchant identification number (MID).processingTypesobjectList of processing types and the operation.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]List of processing types.Possible values:atmWithdraw,balanceInquiry,ecommerce,moto,pos,recurring,token.riskScoresobjectRisk scores provided by specific sources. The same operation applies to all scores.Current sources available:visa,mastercardSupported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valueobjectShow childrenHide childrenmastercardintegerTransaction risk score provided by Mastercard. Values provided by Mastercard range between 0 (lowest risk) to 998 (highest risk).visaintegerTransaction risk score provided by Visa. Values provided by Visa range between 01 (lowest risk) to 99 (highest risk).sameAmountRestrictionobjectChecks if a user has recently sent the same amount of funds in multiple transfers.To use this restriction, you must:Set the ruletypetovelocity.Specify a timeinterval.Specify a number ofmatchingTransactions.Supported operation:equals.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuebooleansameCounterpartyRestrictionobjectChecks if a user has recently made multiple transfers to the same counterparty.To use this restriction, you must:Set the ruletypetovelocity.Specify a timeinterval.Specify a number ofmatchingTransactions.Supported operations:equals.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuebooleansourceAccountTypesobjectContains a list of source account types and how they must be evaluated.Supported operations:anyMatch,noneMatch.Supported value inputs:balanceAccountbusinessAccount.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]The list of source account types to be evaluated.timeOfDayobjectA start and end time in a time-only ISO-8601 extended offset format. Supported operations:equals,notEquals.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valueobjectShow childrenHide childrenendTimestringThe end time in a time-only ISO-8601 extended offset format. For example:08:00:00+02:00,22:30:00-03:00.startTimestringThe start time in a time-only ISO-8601 extended offset format. For example:08:00:00+02:00,22:30:00-03:00.tokenRequestorsobjectList of token requestor IDs and the operation.Supported operations:anyMatch,noneMatch.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]totalAmountobjectThe total amount and the operation.Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valueobjectThe amount value and currency.Show childrenHide childrencurrencystringThe three-characterISO currency codeof the amount.valueintegerThe numeric value of the amount, inminor units.walletProviderAccountScoreobjectChecks the wallet account score.Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valueintegerwalletProviderDeviceScoreobjectWallet Provider Device Score and the operation.Supported operations:equals,notEquals,greaterThanOrEqualTo,greaterThan,lessThanOrEqualTo,lessThan.Show childrenHide childrenoperationstringDefines how the condition must be evaluated.valueintegerwalletProviderDeviceTypeobjectWallet Provider Device Type and the operation.Supported operations:anyMatch,noneMatch.Supported value inputs:MOBILE_PHONETABLET_OR_EREADERWATCH_OR_WRISTBANDWEARABLECARDPCOTHERUNKNOWNShow childrenHide childrenoperationstringDefines how the condition must be evaluated.valuearray[string]scoreintegerA positive or negative score applied to the transaction if it meets the conditions of the rule. Required whenoutcomeTypeisscoreBased.  The value must be between-100and100.startDatestringThe date when the rule will start to be evaluated, in ISO 8601 extended offset date-time format. For example,2025-03-19T10:15:30+01:00.If not provided when creating a transaction rule, thestartDateis set to the date when the rule status is set toactive.statusstringThe status of the transaction rule. If you provide astartDatein the request, the rule is automatically created
+with anactivestatus.Possible values:active,inactive.typestringThetype of rule, which defines if a rule blocks transactions based on individual characteristics or accumulates data.Possible values:blockList: decline a transaction when the conditions are met.maxUsage: add the amount or number of transactions for the lifetime of a payment instrument, and then decline a transaction when the specified limits are met.velocity: add the amount or number of transactions based on a specified time interval, and then decline a transaction when the specified limits are met.
+- 400 - Bad RequestA problem reading or understanding the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 401 - UnauthorizedAuthentication required.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 403 - ForbiddenInsufficient permissions to process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 500 - Internal Server ErrorThe server could not process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+
+#### 200 - OK
+- perTransaction: conditions are evaluated and the counters are reset for every transaction.
+- daily: the counters are reset daily at 00:00:00 CET.
+- weekly: the counters are reset every Monday at 00:00:00 CET.
+- monthly: the counters reset every first day of the month at 00:00:00 CET.
+- lifetime: conditions are applied to the lifetime of the payment instrument.
+- rolling: conditions are applied and the counters are reset based on aduration. If the reset date and time are not provided, Adyen applies the default reset time similar to fixed intervals. For example, if the duration is every two weeks, the counter resets every third Monday at 00:00:00 CET.
+- sliding: conditions are applied and the counters are reset based on the current time and adurationthat you specify.
+- hardBlock(default): the transaction is declined.
+- scoreBased: the transaction is assigned thescoreyou specified. Adyen calculates the total score and if it exceeds 100, the transaction is declined. This value is not allowed whenrequestTypeisbankTransfer.
+- enforceSCA: your user is prompted to verify their identity using3D Secure authentication. If the authentication fails or times out, the transaction is declined. This value is only allowed whenrequestTypeisauthentication.
+- fraud: the rule is created to regulate fraudulent activity.
+- policy: the rule is created to ensure that the transaction adheres to your business' policies. For example, if your business has policies about the Merchant Category Codes (MCCs) allowed on a transaction, you can create a rule to block transactions that have specific MCCs.
+- mc,mccredit,mccommercialcredit_b2b,mcdebit,mcbusinessdebit,mcbusinessworlddebit,mcprepaid,mcmaestro
+- visa,visacredit,visadebit,visaprepaid.
+- balanceAccount
+- bankAccount
+- card
+- transferInstrument
+- true: The currency of the payment is different from the currency of the payment instrument.
+- false: The currencies are the same.
+- true: The transaction is an international transaction.
+- false: The transaction is a domestic transaction.
+- Set the ruletypetovelocity.
+- Specify a timeinterval.
+- Specify a number ofmatchingTransactions.
+- merchantIdandacquirerId
+- amountandcurrency
+- merchantName.
+- Set the ruletypetovelocity.
+- Specify a timeinterval.
+- Specify a number ofmatchingTransactions.
+- Set the ruletypetovelocity.
+- Specify a timeinterval.
+- Specify a number ofmatchingTransactions.
+- balanceAccount
+- businessAccount.
+- MOBILE_PHONE
+- TABLET_OR_EREADER
+- WATCH_OR_WRISTBAND
+- WEARABLE
+- CARD
+- PC
+- OTHER
+- UNKNOWN
+- blockList: decline a transaction when the conditions are met.
+- maxUsage: add the amount or number of transactions for the lifetime of a payment instrument, and then decline a transaction when the specified limits are met.
+- velocity: add the amount or number of transactions based on a specified time interval, and then decline a transaction when the specified limits are met.
+
+#### 400 - Bad Request
+
+#### 401 - Unauthorized
+
+#### 403 - Forbidden
+
+#### 422 - Unprocessable Entity
+
+#### 500 - Internal Server Error

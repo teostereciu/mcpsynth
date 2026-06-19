@@ -1,0 +1,221 @@
+{
+  "dataset": "ebay_buy",
+  "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260518_1600_mutated",
+  "tool_count": 26,
+  "manifest_count": 26,
+  "coverage": 1.0,
+  "missing_from_manifest": [],
+  "extra_in_manifest": [],
+  "entries": [
+    {
+      "tool": "browse_search_items",
+      "doc": "docs/api_buy_browse_resources_item_summary_methods_search.md",
+      "endpoint": "GET /buy/browse/v1/item_summary/search",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the search method for the item_summary resource in the eBay Buy Browse API, matching the tool's name and endpoint."
+    },
+    {
+      "tool": "browse_get_item",
+      "doc": "docs/api_buy_browse_resources_item_methods_getItem.md",
+      "endpoint": "GET /buy/browse/v1/item/{item_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the `getItem` method for the eBay Buy Browse API, which matches the tool's name and endpoint for retrieving item details by ID."
+    },
+    {
+      "tool": "browse_search_items_by_image",
+      "doc": "docs/api_buy_browse_resources_item_summary_methods_searchByImage.md",
+      "endpoint": "POST /buy/browse/v1/item_summary/search_by_image",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the searchByImage method for the item_summary resource, which matches the tool name and the claimed POST endpoint."
+    },
+    {
+      "tool": "browse_get_items",
+      "doc": "docs/api_buy_browse_resources_item_methods_getItems.md",
+      "endpoint": "GET /buy/browse/v1/item/",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the `getItems` method for the eBay Browse API, which matches the tool name and the specified endpoint for retrieving item details."
+    },
+    {
+      "tool": "browse_get_item_by_legacy_id",
+      "doc": "docs/api_buy_browse_resources_item_methods_getItemByLegacyId.md",
+      "endpoint": "GET /buy/browse/v1/item/get_item_by_legacy_id",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the getItemByLegacyId method for the eBay Buy Browse API, which matches the tool name and endpoint."
+    },
+    {
+      "tool": "browse_get_items_by_item_group",
+      "doc": "docs/api_buy_browse_resources_item_methods_getItemsByItemGroup.md",
+      "endpoint": "GET /buy/browse/v1/item/get_items_by_item_group",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the `getItemsByItemGroup` method for the eBay Buy Browse API, which matches the tool name and endpoint."
+    },
+    {
+      "tool": "browse_check_compatibility",
+      "doc": "docs/api_buy_browse_resources_item_methods_checkCompatibility.md",
+      "endpoint": "POST /buy/browse/v1/item/{item_id}/check_compatibility",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the checkCompatibility method for the eBay Buy Browse API, which matches the tool's name and endpoint."
+    },
+    {
+      "tool": "deal_get_events",
+      "doc": "docs/api_buy_deal_resources_event_methods_getEvents.md",
+      "endpoint": "GET /buy/deal/v1/event",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the getEvents method for the /buy/deal/v1/event endpoint, matching the tool name and claimed endpoint."
+    },
+    {
+      "tool": "deal_get_event",
+      "doc": "docs/api_buy_deal_resources_event_methods_getEvent.md",
+      "endpoint": "GET /buy/deal/v1/event/{event_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the getEvent method for the eBay Buy Deal API, which matches the tool's name and endpoint."
+    },
+    {
+      "tool": "deal_get_deal_items",
+      "doc": "docs/api_buy_deal_resources_deal_item_methods_getDealItems.md",
+      "endpoint": "GET /buy/deal/v1/deal_item",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the getDealItems method for the deal_item resource, which matches the tool name and endpoint."
+    },
+    {
+      "tool": "deal_get_event_items",
+      "doc": "docs/api_buy_deal_resources_event_item_methods_getEventItems.md",
+      "endpoint": "GET /buy/deal/v1/event_item",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the getEventItems method for the /event_item resource, which matches the tool name and endpoint provided."
+    },
+    {
+      "tool": "feed_get_item_feed",
+      "doc": "docs/api_buy_feed_resources_item_methods_getItemFeed.md",
+      "endpoint": "GET /buy/feed/v1/item",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the getItemFeed method for the /buy/feed/v1/item endpoint, which matches the tool name and claimed endpoint."
+    },
+    {
+      "tool": "feed_get_item_group_feed",
+      "doc": "docs/api_buy_feed_resources_item_group_methods_getItemGroupFeed.md",
+      "endpoint": "GET /buy/feed/v1_beta/item_group",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the getItemGroupFeed method and the corresponding endpoint /buy/feed/v1_beta/item_group."
+    },
+    {
+      "tool": "feed_get_item_priority_feed",
+      "doc": "docs/api_buy_feed_resources_item_priority_methods_getItemPriorityFeed.md",
+      "endpoint": "GET /buy/feed/v1_beta/item_priority",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the getItemPriorityFeed method and the /buy/feed/v1_beta/item_priority endpoint, which matches the tool's name and claimed endpoint."
+    },
+    {
+      "tool": "feed_get_item_snapshot_feed",
+      "doc": "docs/api_buy_feed_resources_item_snapshot_methods_getItemSnapshotFeed.md",
+      "endpoint": "GET /buy/feed/v1_beta/item_snapshot",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the getItemSnapshotFeed method for the item_snapshot resource, which directly corresponds to the tool name and claimed endpoint."
+    },
+    {
+      "tool": "marketing_get_merchandised_products",
+      "doc": "docs/api_buy_marketing_resources_merchandised_product_methods_getMerchandisedProducts.md",
+      "endpoint": "GET /buy/marketing/v1_beta/merchandised_product",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the getMerchandisedProducts method and the /buy/marketing/v1_beta/merchandised_product endpoint."
+    },
+    {
+      "tool": "offer_get_bidding",
+      "doc": "docs/api_buy_offer_resources_bidding_methods_getBidding.md",
+      "endpoint": "GET /buy/offer/v1_beta/bidding/{item_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the getBidding method for the eBay Buy Offer API, which matches the tool's name and endpoint GET /buy/offer/v1_beta/bidding/{item_id}."
+    },
+    {
+      "tool": "offer_place_proxy_bid",
+      "doc": "docs/api_buy_offer_resources_bidding_methods_placeProxyBid.md",
+      "endpoint": "POST /buy/offer/v1_beta/bidding/{item_id}/place_proxy_bid",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the `placeProxyBid` method for the eBay Buy Offer API, which matches the tool's name and endpoint."
+    },
+    {
+      "tool": "order_initiate_guest_checkout_session",
+      "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_initiateGuestCheckoutSession.md",
+      "endpoint": "POST /buy/order/v2/guest_checkout_session/initiate",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the initiateGuestCheckoutSession method for the eBay Buy Order API, which matches the tool's name and endpoint."
+    },
+    {
+      "tool": "order_get_guest_checkout_session",
+      "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_getGuestCheckoutSession.md",
+      "endpoint": "GET /buy/order/v2/guest_checkout_session/{checkoutSessionId}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the getGuestCheckoutSession method and its associated endpoint for retrieving guest checkout session details."
+    },
+    {
+      "tool": "order_update_guest_shipping_address",
+      "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_updateGuestShippingAddress.md",
+      "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkoutSessionId}/update_shipping_address",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the updateGuestShippingAddress method for the guest checkout session resource, matching the tool's name and endpoint."
+    },
+    {
+      "tool": "order_update_guest_shipping_option",
+      "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_updateGuestShippingOption.md",
+      "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkoutSessionId}/update_shipping_option",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the updateGuestShippingOption method for the eBay Order API v2, which matches the tool name and endpoint provided."
+    },
+    {
+      "tool": "order_update_guest_quantity",
+      "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_updateGuestQuantity.md",
+      "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkoutSessionId}/update_quantity",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the updateGuestQuantity method for the guest checkout session resource, which directly corresponds to the tool's name and endpoint."
+    },
+    {
+      "tool": "order_apply_guest_coupon",
+      "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_applyGuestCoupon.md",
+      "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkoutSessionId}/apply_coupon",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the applyGuestCoupon method for the guest checkout session resource, which matches the tool name and the specified POST endpoint."
+    },
+    {
+      "tool": "order_remove_guest_coupon",
+      "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_removeGuestCoupon.md",
+      "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkoutSessionId}/remove_coupon",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the removeGuestCoupon method for the guest_checkout_session resource, which matches the tool's name and endpoint."
+    },
+    {
+      "tool": "order_get_guest_purchase_order",
+      "doc": "docs/api_buy_order_resources_guest_purchase_order_methods_getGuestPurchaseOrder.md",
+      "endpoint": "GET /buy/order/v2/guest_purchase_order/{purchaseOrderId}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the getGuestPurchaseOrder method for the guest_purchase_order resource, matching the tool's name and endpoint."
+    }
+  ],
+  "doc_exists_rate": 1.0,
+  "accuracy_rate": 1.0
+}

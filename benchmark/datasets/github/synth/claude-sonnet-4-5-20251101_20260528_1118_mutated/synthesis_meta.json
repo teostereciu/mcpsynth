@@ -1,0 +1,12 @@
+{
+  "dataset": "github",
+  "model": "claude-sonnet-4-5-20251101",
+  "condition": "mutated",
+  "synthesis_time": 185.74179410934448,
+  "token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "cost_estimate": null,
+  "timestamp": "20260528_1118"
+}

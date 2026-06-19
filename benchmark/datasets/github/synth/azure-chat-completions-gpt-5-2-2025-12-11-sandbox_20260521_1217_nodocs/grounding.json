@@ -1,0 +1,262 @@
+{
+  "github_get_repo": {
+    "doc": "docs/repos/get-repo.md",
+    "endpoint": "GET /repos/{owner}/{repo}"
+  },
+  "github_list_user_repos": {
+    "doc": "docs/repos/list-user-repos.md",
+    "endpoint": "GET /users/{username}/repos"
+  },
+  "github_list_org_repos": {
+    "doc": "docs/repos/list-org-repos.md",
+    "endpoint": "GET /orgs/{org}/repos"
+  },
+  "github_create_repo": {
+    "doc": "docs/repos/create-repo-for-authenticated-user.md",
+    "endpoint": "POST /user/repos"
+  },
+  "github_fork_repo": {
+    "doc": "docs/repos/create-a-fork.md",
+    "endpoint": "POST /repos/{owner}/{repo}/forks"
+  },
+  "github_list_branches": {
+    "doc": "docs/repos/list-branches.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches"
+  },
+  "github_get_branch": {
+    "doc": "docs/repos/get-branch.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}"
+  },
+  "github_get_commit": {
+    "doc": "docs/repos/get-a-commit.md",
+    "endpoint": "GET /repos/{owner}/{repo}/commits/{ref}"
+  },
+  "github_list_commits": {
+    "doc": "docs/repos/list-commits.md",
+    "endpoint": "GET /repos/{owner}/{repo}/commits"
+  },
+  "github_get_content": {
+    "doc": "docs/repos/get-repository-content.md",
+    "endpoint": "GET /repos/{owner}/{repo}/contents/{path}"
+  },
+  "github_create_or_update_file": {
+    "doc": "docs/repos/create-or-update-file-contents.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/contents/{path}"
+  },
+  "github_delete_file": {
+    "doc": "docs/repos/delete-a-file.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/contents/{path}"
+  },
+  "github_get_branch_protection": {
+    "doc": "docs/branches/get-branch-protection.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}/protection"
+  },
+  "github_update_branch_protection": {
+    "doc": "docs/branches/update-branch-protection.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/branches/{branch}/protection"
+  },
+  "github_delete_branch_protection": {
+    "doc": "docs/branches/delete-branch-protection.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/branches/{branch}/protection"
+  },
+  "github_list_repo_issues": {
+    "doc": "docs/issues/list-repository-issues.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues"
+  },
+  "github_get_issue": {
+    "doc": "docs/issues/get-an-issue.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "github_create_issue": {
+    "doc": "docs/issues/create-an-issue.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues"
+  },
+  "github_update_issue": {
+    "doc": "docs/issues/update-an-issue.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "github_lock_issue": {
+    "doc": "docs/issues/lock-an-issue.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/issues/{issue_number}/lock"
+  },
+  "github_unlock_issue": {
+    "doc": "docs/issues/unlock-an-issue.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock"
+  },
+  "github_list_issue_comments": {
+    "doc": "docs/issues/list-issue-comments.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "github_create_issue_comment": {
+    "doc": "docs/issues/create-an-issue-comment.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "github_update_issue_comment": {
+    "doc": "docs/issues/update-an-issue-comment.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "github_delete_issue_comment": {
+    "doc": "docs/issues/delete-an-issue-comment.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "github_add_labels": {
+    "doc": "docs/issues/add-labels-to-an-issue.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "github_set_labels": {
+    "doc": "docs/issues/set-labels-for-an-issue.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "github_remove_label_from_issue": {
+    "doc": "docs/issues/remove-a-label-from-an-issue.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}"
+  },
+  "github_list_labels": {
+    "doc": "docs/issues/list-labels-for-a-repository.md",
+    "endpoint": "GET /repos/{owner}/{repo}/labels"
+  },
+  "github_create_label": {
+    "doc": "docs/issues/create-a-label.md",
+    "endpoint": "POST /repos/{owner}/{repo}/labels"
+  },
+  "github_update_label": {
+    "doc": "docs/issues/update-a-label.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/labels/{name}"
+  },
+  "github_delete_label": {
+    "doc": "docs/issues/delete-a-label.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/labels/{name}"
+  },
+  "github_add_assignees": {
+    "doc": "docs/issues/add-assignees-to-an-issue.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/assignees"
+  },
+  "github_remove_assignees": {
+    "doc": "docs/issues/remove-assignees-from-an-issue.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees"
+  },
+  "github_list_pull_requests": {
+    "doc": "docs/pulls/list-pull-requests.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  },
+  "github_get_pull_request": {
+    "doc": "docs/pulls/get-a-pull-request.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "github_create_pull_request": {
+    "doc": "docs/pulls/create-a-pull-request.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls"
+  },
+  "github_update_pull_request": {
+    "doc": "docs/pulls/update-a-pull-request.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "github_list_pull_reviews": {
+    "doc": "docs/pulls/list-reviews-for-a-pull-request.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"
+  },
+  "github_create_pull_review": {
+    "doc": "docs/pulls/create-a-review-for-a-pull-request.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews"
+  },
+  "github_request_reviewers": {
+    "doc": "docs/pulls/request-reviewers-for-a-pull-request.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers"
+  },
+  "github_merge_pull_request": {
+    "doc": "docs/pulls/merge-a-pull-request.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"
+  },
+  "github_list_releases": {
+    "doc": "docs/releases/list-releases.md",
+    "endpoint": "GET /repos/{owner}/{repo}/releases"
+  },
+  "github_get_release": {
+    "doc": "docs/releases/get-a-release.md",
+    "endpoint": "GET /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "github_get_latest_release": {
+    "doc": "docs/releases/get-the-latest-release.md",
+    "endpoint": "GET /repos/{owner}/{repo}/releases/latest"
+  },
+  "github_create_release": {
+    "doc": "docs/releases/create-a-release.md",
+    "endpoint": "POST /repos/{owner}/{repo}/releases"
+  },
+  "github_update_release": {
+    "doc": "docs/releases/update-a-release.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "github_delete_release": {
+    "doc": "docs/releases/delete-a-release.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "github_list_workflows": {
+    "doc": "docs/actions/list-repository-workflows.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows"
+  },
+  "github_get_workflow": {
+    "doc": "docs/actions/get-a-workflow.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}"
+  },
+  "github_list_workflow_runs": {
+    "doc": "docs/actions/list-workflow-runs.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/runs OR GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs"
+  },
+  "github_get_workflow_run": {
+    "doc": "docs/actions/get-a-workflow-run.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/runs/{run_id}"
+  },
+  "github_rerun_workflow_run": {
+    "doc": "docs/actions/rerun-a-workflow.md",
+    "endpoint": "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun"
+  },
+  "github_cancel_workflow_run": {
+    "doc": "docs/actions/cancel-a-workflow-run.md",
+    "endpoint": "POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel"
+  },
+  "github_dispatch_workflow": {
+    "doc": "docs/actions/create-a-workflow-dispatch-event.md",
+    "endpoint": "POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches"
+  },
+  "github_search_code": {
+    "doc": "docs/search/search-code.md",
+    "endpoint": "GET /search/code"
+  },
+  "github_search_issues_and_prs": {
+    "doc": "docs/search/search-issues-and-pull-requests.md",
+    "endpoint": "GET /search/issues"
+  },
+  "github_search_repositories": {
+    "doc": "docs/search/search-repositories.md",
+    "endpoint": "GET /search/repositories"
+  },
+  "github_list_repo_webhooks": {
+    "doc": "docs/webhooks/list-repository-webhooks.md",
+    "endpoint": "GET /repos/{owner}/{repo}/hooks"
+  },
+  "github_get_repo_webhook": {
+    "doc": "docs/webhooks/get-a-repository-webhook.md",
+    "endpoint": "GET /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "github_create_repo_webhook": {
+    "doc": "docs/webhooks/create-a-repository-webhook.md",
+    "endpoint": "POST /repos/{owner}/{repo}/hooks"
+  },
+  "github_update_repo_webhook": {
+    "doc": "docs/webhooks/update-a-repository-webhook.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "github_delete_repo_webhook": {
+    "doc": "docs/webhooks/delete-a-repository-webhook.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "github_ping_repo_webhook": {
+    "doc": "docs/webhooks/ping-a-repository-webhook.md",
+    "endpoint": "POST /repos/{owner}/{repo}/hooks/{hook_id}/pings"
+  },
+  "github_get_test_repo": {
+    "doc": "docs/repos/get-repo.md",
+    "endpoint": "GET /repos/{owner}/{repo}"
+  }
+}

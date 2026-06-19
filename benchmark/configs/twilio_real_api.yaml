@@ -1,0 +1,85 @@
+# Twilio Real API Testing Configuration
+
+api_name: "Twilio"
+api_version: "2010-04-01 / Verify v2 / Conversations v1"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  TWILIO_ACCOUNT_SID:
+    description: "Twilio Account SID (starts with AC)"
+    how_to_get:
+      url: "https://console.twilio.com"
+      steps:
+        - "Log in to https://console.twilio.com"
+        - "Your Account SID is on the dashboard (starts with AC)"
+    example: "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+  TWILIO_AUTH_TOKEN:
+    description: "Twilio Auth Token"
+    how_to_get:
+      url: "https://console.twilio.com"
+      steps:
+        - "Log in to https://console.twilio.com"
+        - "Your Auth Token is on the dashboard (click to reveal)"
+    notes:
+      - "Treat the Auth Token like a password — do not commit it"
+      - "You can rotate it from the console if compromised"
+
+  TWILIO_PHONE_NUMBER:
+    description: "A Twilio phone number in E.164 format for sending messages"
+    how_to_get:
+      url: "https://console.twilio.com/us1/develop/phone-numbers/manage/incoming"
+      steps:
+        - "Go to Phone Numbers → Manage → Active Numbers in the Twilio Console"
+        - "Copy a number in E.164 format (e.g. +15551234567)"
+    notes:
+      - "Use a trial account number for testing — no charges for magic test numbers"
+      - "Magic test recipient +15005550006 always succeeds without sending real SMS"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_notes: |
+  Twilio provides magic test credentials and numbers for testing without charges:
+    - Use +15005550006 as the recipient to always succeed
+    - Use +15005550001 to simulate invalid number
+    - Trial accounts can only send to verified numbers unless using magic numbers
+    - Verify API test mode available on test credentials
+
+mock_mode:
+  available: false
+
+rate_limits:
+  notes: |
+    Twilio rate limits vary by product and account tier:
+      - Messaging: 1 message/second on trial; higher on paid plans
+      - Verify: 5 requests/second per service by default
+      - REST API: 100 concurrent requests
+    For testing, sequential calls are well within limits.
+
+authentication:
+  type: "HTTP Basic Auth"
+  username: "TWILIO_ACCOUNT_SID"
+  password: "TWILIO_AUTH_TOKEN"
+  notes: |
+    All Twilio REST API calls use HTTP Basic Auth.
+    Request bodies use application/x-www-form-urlencoded (not JSON).
+    Use data= (not json=) in Python requests calls.
+
+base_urls:
+  core: "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}"
+  verify: "https://verify.twilio.com/v2"
+  conversations: "https://conversations.twilio.com/v1"
+
+documentation:
+  messaging: "https://www.twilio.com/docs/sms/api/message-resource"
+  verify: "https://www.twilio.com/docs/verify/api"
+  conversations: "https://www.twilio.com/docs/conversations/api"
+  voice: "https://www.twilio.com/docs/voice/api/call-resource"
+  console: "https://console.twilio.com"

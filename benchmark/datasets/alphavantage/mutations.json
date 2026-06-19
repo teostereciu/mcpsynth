@@ -1,0 +1,10 @@
+{
+  "description": "Parameter name mutations for the Alpha Vantage financial data API, covering common query params used in time series, technical indicator, and forex endpoints.",
+  "mutations": [
+    {"original": "symbol", "mutated": "ticker"},
+    {"original": "interval", "mutated": "time_interval"},
+    {"original": "outputsize", "mutated": "output_size"},
+    {"original": "datatype", "mutated": "format"},
+    {"original": "series_type", "mutated": "price_type"}
+  ]
+}

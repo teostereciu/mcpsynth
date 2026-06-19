@@ -1,0 +1,10 @@
+{
+  "github_list_my_issues": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /issues"
+  },
+  "github_list_pull_requests": {
+    "doc": "docs/api_pulls-pulls.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  }
+}

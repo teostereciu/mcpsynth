@@ -1,0 +1,13 @@
+{
+  "name": "fx_exchange_rate",
+  "description": "Realtime FX exchange rate for a pair of fiat currencies (CURRENCY_EXCHANGE_RATE).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "from_currency": {"type": "string"},
+      "to_currency": {"type": "string"},
+      "apikey": {"type": "string"}
+    },
+    "required": ["from_currency", "to_currency"]
+  }
+}

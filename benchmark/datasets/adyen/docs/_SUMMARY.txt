@@ -1,0 +1,13 @@
+Auto-discovered and scraped 591 endpoints
+
+Total endpoints found: 597
+Successfully scraped: 591
+Not found: 6
+
+Missing:
+  - Webhooks/1/overview
+  - Webhooks/latest/overview
+  - acs-webhook/1/overview
+  - onboarding-on-invite-webhooks/1/overview
+  - relayed-authorisation-webhooks/4/overview
+  - static/api-diff-tool

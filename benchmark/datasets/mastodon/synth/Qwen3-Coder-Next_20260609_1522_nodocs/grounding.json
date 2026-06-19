@@ -1,0 +1,182 @@
+{
+  "post_status": {
+    "doc": "docs/statuses/create.md",
+    "endpoint": "POST /statuses"
+  },
+  "get_status": {
+    "doc": "docs/statuses/get.md",
+    "endpoint": "GET /statuses/{id}"
+  },
+  "delete_status": {
+    "doc": "docs/statuses/delete.md",
+    "endpoint": "DELETE /statuses/{id}"
+  },
+  "boost_status": {
+    "doc": "docs/statuses/reblog.md",
+    "endpoint": "POST /statuses/{id}/reblog"
+  },
+  "favourite_status": {
+    "doc": "docs/statuses/favourite.md",
+    "endpoint": "POST /statuses/{id}/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "docs/statuses/favourite.md",
+    "endpoint": "POST /statuses/{id}/unfavourite"
+  },
+  "get_status_context": {
+    "doc": "docs/statuses/context.md",
+    "endpoint": "GET /statuses/{id}/context"
+  },
+  "get_status_bookmarked": {
+    "doc": "docs/statuses/bookmarks.md",
+    "endpoint": "GET /statuses/{id}/bookmarked"
+  },
+  "bookmark_status": {
+    "doc": "docs/statuses/bookmarks.md",
+    "endpoint": "POST /statuses/{id}/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/statuses/bookmarks.md",
+    "endpoint": "POST /statuses/{id}/unbookmark"
+  },
+  "get_current_account": {
+    "doc": "docs/accounts/verify.md",
+    "endpoint": "GET /accounts/verify_credentials"
+  },
+  "get_account": {
+    "doc": "docs/accounts/get.md",
+    "endpoint": "GET /accounts/{id}"
+  },
+  "get_account_statuses": {
+    "doc": "docs/accounts/statuses.md",
+    "endpoint": "GET /accounts/{id}/statuses"
+  },
+  "follow_account": {
+    "doc": "docs/accounts/follow.md",
+    "endpoint": "POST /accounts/{id}/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/accounts/follow.md",
+    "endpoint": "POST /accounts/{id}/unfollow"
+  },
+  "get_account_relationships": {
+    "doc": "docs/accounts/relationships.md",
+    "endpoint": "GET /accounts/relationships"
+  },
+  "get_account_followers": {
+    "doc": "docs/accounts/followers.md",
+    "endpoint": "GET /accounts/{id}/followers"
+  },
+  "get_account_following": {
+    "doc": "docs/accounts/following.md",
+    "endpoint": "GET /accounts/{id}/following"
+  },
+  "search_accounts": {
+    "doc": "docs/accounts/search.md",
+    "endpoint": "GET /accounts/search"
+  },
+  "get_home_timeline": {
+    "doc": "docs/timelines/home.md",
+    "endpoint": "GET /timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/timelines/public.md",
+    "endpoint": "GET /timelines/public"
+  },
+  "get_tag_timeline": {
+    "doc": "docs/timelines/tag.md",
+    "endpoint": "GET /timelines/tag/{hashtag}"
+  },
+  "get_list_timeline": {
+    "doc": "docs/timelines/list.md",
+    "endpoint": "GET /timelines/list/{id}"
+  },
+  "list_notifications": {
+    "doc": "docs/notifications/list.md",
+    "endpoint": "GET /notifications"
+  },
+  "get_notification": {
+    "doc": "docs/notifications/get.md",
+    "endpoint": "GET /notifications/{id}"
+  },
+  "dismiss_notification": {
+    "doc": "docs/notifications/dismiss.md",
+    "endpoint": "POST /notifications/{id}/dismiss"
+  },
+  "clear_notifications": {
+    "doc": "docs/notifications/clear.md",
+    "endpoint": "POST /notifications/clear"
+  },
+  "search": {
+    "doc": "docs/search/search.md",
+    "endpoint": "GET /search"
+  },
+  "search_hashtags": {
+    "doc": "docs/search/hashtags.md",
+    "endpoint": "GET /tags/search"
+  },
+  "create_list": {
+    "doc": "docs/lists/create.md",
+    "endpoint": "POST /lists"
+  },
+  "get_lists": {
+    "doc": "docs/lists/list.md",
+    "endpoint": "GET /lists"
+  },
+  "get_list": {
+    "doc": "docs/lists/get.md",
+    "endpoint": "GET /lists/{id}"
+  },
+  "update_list": {
+    "doc": "docs/lists/update.md",
+    "endpoint": "PUT /lists/{id}"
+  },
+  "delete_list": {
+    "doc": "docs/lists/delete.md",
+    "endpoint": "DELETE /lists/{id}"
+  },
+  "get_list_accounts": {
+    "doc": "docs/lists/accounts.md",
+    "endpoint": "GET /lists/{id}/accounts"
+  },
+  "add_account_to_list": {
+    "doc": "docs/lists/accounts.md",
+    "endpoint": "POST /lists/{id}/accounts"
+  },
+  "remove_account_from_list": {
+    "doc": "docs/lists/accounts.md",
+    "endpoint": "DELETE /lists/{id}/accounts"
+  },
+  "get_bookmarks": {
+    "doc": "docs/bookmarks/list.md",
+    "endpoint": "GET /bookmarks"
+  },
+  "get_favourites": {
+    "doc": "docs/favourites/list.md",
+    "endpoint": "GET /favourites"
+  },
+  "upload_media": {
+    "doc": "docs/media/upload.md",
+    "endpoint": "POST /media"
+  },
+  "get_instance": {
+    "doc": "docs/instance/info.md",
+    "endpoint": "GET /instance"
+  },
+  "get_instance_activity": {
+    "doc": "docs/instance/activity.md",
+    "endpoint": "GET /instance/activity"
+  },
+  "get_instance_peers": {
+    "doc": "docs/instance/peers.md",
+    "endpoint": "GET /instance/peers"
+  },
+  "get_instance_version": {
+    "doc": "docs/instance/version.md",
+    "endpoint": "GET /instance/version"
+  },
+  "update_account": {
+    "doc": "docs/accounts/update.md",
+    "endpoint": "PATCH /accounts/update_credentials"
+  }
+}

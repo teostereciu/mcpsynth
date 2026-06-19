@@ -1,0 +1,22 @@
+{
+    "send_message": {
+        "doc": "docs/api_send-message.md",
+        "endpoint": "POST /messages"
+    },
+    "delete_message": {
+        "doc": "docs/api_delete-message.md",
+        "endpoint": "DELETE /messages/{message_id}"
+    },
+    "update_message": {
+        "doc": "docs/api_update-message.md",
+        "endpoint": "PATCH /messages/{message_id}"
+    },
+    "get_message": {
+        "doc": "docs/api_get-message.md",
+        "endpoint": "GET /messages/{message_id}"
+    },
+    "get_messages": {
+        "doc": "docs/api_get-messages.md",
+        "endpoint": "GET /messages"
+    }
+}

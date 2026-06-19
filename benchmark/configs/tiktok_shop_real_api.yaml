@@ -1,0 +1,247 @@
+# TikTok Shop Real API Testing Configuration
+#
+# This config defines what's needed to test the TikTok Shop MCP server against
+# the real TikTok Shop Partner Open API.
+
+api_name: "TikTok Shop"
+api_version: "TikTok Shop Partner Open API v202309+"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  TIKTOK_APP_KEY:
+    description: "App key from TikTok Shop Partner Platform"
+    how_to_get:
+      url: "https://partner.tiktokshop.com/docv2/page/650a06a3f1fd3102b9139c7a"
+      steps:
+        - "Register as a developer at https://partner.tiktokshop.com"
+        - "Create an app in the Partner Platform"
+        - "Navigate to your app settings"
+        - "Copy the 'App Key' value"
+      notes:
+        - "Required on every API request as a query parameter"
+        - "Used together with App Secret for signature generation"
+    example: "abc123xyz"
+
+  TIKTOK_APP_SECRET:
+    description: "App secret for HMAC-SHA256 signature generation"
+    how_to_get:
+      url: "https://partner.tiktokshop.com/docv2/page/650a06a3f1fd3102b9139c7a"
+      steps:
+        - "In the Partner Platform, go to your app settings"
+        - "Copy the 'App Secret' value"
+      notes:
+        - "Keep this secret — never commit to version control"
+        - "Used to sign all API requests via HMAC-SHA256"
+        - "The sign string format: {secret}{path}{sorted_kv_pairs}{body}{secret}"
+
+  TIKTOK_ACCESS_TOKEN:
+    description: "OAuth access token for the seller (obtained via OAuth 2.0 flow)"
+    how_to_get:
+      url: "https://partner.tiktokshop.com/docv2/page/6507ead7b99d5302be949ba9"
+      steps:
+        - "Implement OAuth 2.0 authorization flow for a seller"
+        - "Redirect seller to TikTok Shop authorization URL"
+        - "Exchange authorization code for access token"
+        - "Copy the resulting access_token"
+      notes:
+        - "Passed as 'x-tts-access-token' request header"
+        - "NOT included in signature calculation"
+        - "Has an expiry — use refresh_token to renew"
+    example: "TTP_xxxxxxxxxxxx"
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS
+# ==============================================================================
+
+optional_credentials:
+  TIKTOK_SHOP_CIPHER:
+    description: "Encrypted shop token required for shop-scoped operations"
+    required_for: "All shop-scoped endpoints (products, orders, fulfillment, etc.)"
+    how_to_get:
+      steps:
+        - "Call GET /authorization/202309/shops with valid access token"
+        - "Extract 'cipher' field from the shop object in the response"
+        - "Store as TIKTOK_SHOP_CIPHER environment variable"
+      notes:
+        - "Obtain this first (Scenario 1) before running shop-scoped tests"
+        - "Without it, only Seller-level endpoints will work"
+    example: "ROW_xxxxxxxxxxxx"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  TikTok Shop does not provide a public sandbox environment.
+  All API calls go to the production endpoints:
+    https://open-api.tiktokglobalshop.com
+
+  Sandbox alternatives:
+    - Use a test seller account registered through the Partner Platform
+    - TikTok may offer a test shop environment to approved partners
+    - Contact TikTok Shop Partner support for sandbox access
+
+  Important considerations:
+    - Product creation and promotions will affect real shop data
+    - Finance/payment endpoints return live financial data
+    - Test with a dedicated seller account, not a production shop
+
+rate_limits:
+  notes: |
+    - Rate limits vary by API domain and seller tier
+    - Standard apps: typically 10-100 QPS per endpoint
+    - Batch and list endpoints count as single calls
+    - Exceeded limits return HTTP 429 or code=4000000
+
+cleanup_notes: |
+  Write operations that may need cleanup after testing:
+    - Products created in Scenario 3 (use DELETE /products/202309/products/{id})
+    - Promotion activities created in Scenario 10 (deactivate or delete)
+  Read-only operations (no cleanup): orders, finance, analytics, conversations
+
+# ==============================================================================
+# AUTHENTICATION NOTES
+# ==============================================================================
+
+authentication:
+  method: "HMAC-SHA256 signature on every request"
+  signature_params:
+    required_query_params:
+      - "app_key: your app's unique key"
+      - "timestamp: Unix timestamp in seconds (UTC)"
+      - "sign: HMAC-SHA256 signature (see below)"
+    excluded_from_sign: ["sign", "access_token"]
+    algorithm: |
+      sorted_pairs = "".join(f"{k}{v}" for k, v in sorted(params.items()) if k not in exclude)
+      to_sign = f"{app_secret}{path}{sorted_pairs}{body}{app_secret}"
+      sign = hmac.new(app_secret.encode(), to_sign.encode(), hashlib.sha256).hexdigest()
+  required_header: "x-tts-access-token: <access_token>"
+  shop_scoped: "shop_cipher query parameter required for all shop-level endpoints"
+
+response_format:
+  envelope: |
+    {
+      "code": 0,
+      "message": "Success",
+      "request_id": "...",
+      "data": { ... }
+    }
+  success_code: 0
+  error_example: |
+    {
+      "code": 4000000,
+      "message": "Invalid parameter",
+      "request_id": "..."
+    }
+
+# ==============================================================================
+# TEST COVERAGE BY API DOMAIN
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 360
+
+  by_api:
+    seller:
+      endpoints: 4
+      description: "Shop discovery and permissions"
+      priority: "critical"
+      scenarios: [1]
+
+    products:
+      endpoints: 55
+      description: "Catalog management, local and global products, categories"
+      priority: "critical"
+      scenarios: [2, 3, 4, 5, 6, 15]
+
+    orders:
+      endpoints: 7
+      description: "Order retrieval and management"
+      priority: "critical"
+      scenarios: [7, 8]
+
+    fulfillment:
+      endpoints: 30
+      description: "Packages, shipping labels, warehouses"
+      priority: "high"
+      scenarios: [9]
+
+    return_refund_cancel:
+      endpoints: 15
+      description: "After-sales management, returns, refunds"
+      priority: "high"
+      scenarios: [13]
+
+    promotions:
+      endpoints: 9
+      description: "Activities, discounts, coupons"
+      priority: "high"
+      scenarios: [10]
+
+    finance:
+      endpoints: 7
+      description: "Payments, settlements, transactions"
+      priority: "medium"
+      scenarios: [11]
+
+    analytics:
+      endpoints: 11
+      description: "Shop and product performance metrics"
+      priority: "medium"
+      scenarios: [12]
+
+    customer_service:
+      endpoints: 17
+      description: "Conversations, messaging, buyer support"
+      priority: "medium"
+      scenarios: [14]
+
+    affiliate:
+      endpoints: 18
+      description: "Creator campaigns and partner management"
+      priority: "low"
+      scenarios: []
+
+    fbt:
+      endpoints: 12
+      description: "Fulfilled by TikTok warehouse operations"
+      priority: "low"
+      scenarios: []
+
+    webhooks:
+      endpoints: 40
+      description: "Webhook management and 37 event types"
+      priority: "low"
+      scenarios: []
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  credential_storage: |
+    - Store all credentials in .env file (gitignored)
+    - Never commit app_key, app_secret, or access_token to version control
+    - Rotate access tokens using refresh_token before expiry
+    - Use a test seller account to limit blast radius
+
+  safe_testing: |
+    - Read-only scenarios (7, 8, 11, 12, 13, 14) are safe to run repeatedly
+    - Write scenarios (3, 5, 6, 10) will modify real shop data
+    - Scenario 1 is read-only (lists authorized shops)
+    - Scenario 15 is read-only (error handling test)
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  partner_platform: "https://partner.tiktokshop.com"
+  api_reference: "https://partner.tiktokshop.com/docv2/page/650a06a3f1fd3102b9139c7a"
+  oauth_guide: "https://partner.tiktokshop.com/docv2/page/6507ead7b99d5302be949ba9"
+  signature_guide: "https://partner.tiktokshop.com/docv2/page/650a0632f1fd3102b9139c73"

@@ -1,0 +1,78 @@
+{
+  "oauth_get_app_token": {
+    "doc": "docs/identity/oauth-token.md",
+    "endpoint": "POST /identity/v1/oauth2/token"
+  },
+  "oauth_get_user_token": {
+    "doc": "docs/identity/oauth-token.md",
+    "endpoint": "POST /identity/v1/oauth2/token"
+  },
+  "identity_get_user": {
+    "doc": "docs/identity/get-user.md",
+    "endpoint": "GET /commerce/identity/v1/user/"
+  },
+  "catalog_search": {
+    "doc": "docs/catalog/search-product-summaries.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product_summary/search"
+  },
+  "catalog_get_product": {
+    "doc": "docs/catalog/get-product.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/{product_id}"
+  },
+  "catalog_get_product_by_gtin": {
+    "doc": "docs/catalog/get-product-by-gtin.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/get_product_by_gtin"
+  },
+  "taxonomy_get_default_category_tree": {
+    "doc": "docs/taxonomy/get-default-category-tree-id.md",
+    "endpoint": "GET /commerce/taxonomy/v1/get_default_category_tree_id"
+  },
+  "taxonomy_get_category_tree": {
+    "doc": "docs/taxonomy/get-category-tree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"
+  },
+  "taxonomy_get_category_subtree": {
+    "doc": "docs/taxonomy/get-category-subtree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_subtree"
+  },
+  "taxonomy_get_category_suggestions": {
+    "doc": "docs/taxonomy/get-category-suggestions.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_suggestions"
+  },
+  "taxonomy_get_item_aspects_for_category": {
+    "doc": "docs/taxonomy/get-item-aspects-for-category.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_item_aspects_for_category"
+  },
+  "charity_get_charity_org": {
+    "doc": "docs/charity/get-charity-org.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org/{charity_org_id}"
+  },
+  "charity_search_charity_orgs": {
+    "doc": "docs/charity/search-charity-orgs.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org/search"
+  },
+  "translation_translate": {
+    "doc": "docs/translation/translate.md",
+    "endpoint": "POST /commerce/translation/v1/translate"
+  },
+  "notification_get_public_keyset": {
+    "doc": "docs/notification/get-public-keyset.md",
+    "endpoint": "GET /commerce/notification/v1/public_keyset"
+  },
+  "notification_list_subscriptions": {
+    "doc": "docs/notification/list-subscriptions.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  },
+  "notification_create_subscription": {
+    "doc": "docs/notification/create-subscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "notification_delete_subscription": {
+    "doc": "docs/notification/delete-subscription.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "media_upload_image": {
+    "doc": "docs/media/upload-image.md",
+    "endpoint": "POST https://apim.{env}.ebay.com/commerce/media/v1_beta/image"
+  }
+}

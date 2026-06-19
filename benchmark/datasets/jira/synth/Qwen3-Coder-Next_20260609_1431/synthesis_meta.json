@@ -1,0 +1,14 @@
+{
+  "dataset": "jira",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "docs",
+  "synthesis_time": 521.9709072113037,
+  "token_usage": {
+    "input_tokens": 1229420,
+    "output_tokens": 35361
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1431",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 22
+}

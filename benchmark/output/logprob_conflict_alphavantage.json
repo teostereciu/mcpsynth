@@ -1,0 +1,1310 @@
+{
+  "dataset": "alphavantage",
+  "model": "azure-chat-completions-gpt-4-1-2025-04-14-sandbox",
+  "endpoint": "GET /query?function=TIME_SERIES_DAILY",
+  "mutations": [
+    {
+      "original": "symbol",
+      "mutated": "ticker"
+    },
+    {
+      "original": "interval",
+      "mutated": "time_interval"
+    },
+    {
+      "original": "outputsize",
+      "mutated": "output_size"
+    },
+    {
+      "original": "datatype",
+      "mutated": "format"
+    },
+    {
+      "original": "series_type",
+      "mutated": "price_type"
+    }
+  ],
+  "runs": [
+    {
+      "run": 1,
+      "output": "```python\nimport requests\nfrom mcp import tool\n\n@tool()\ndef TIME_SERIES_DAILY(function, ticker, apikey, output_size=None, format=None):\n    params = {\n        \"function\": function,\n        \"ticker\": ticker,\n        \"apikey\": apikey\n    }\n    if output_size is not None:\n        params[\"output_size\"] = output_size\n    if format is not None:\n        params[\"format\"] = format\n    r = requests.get(\"https://www.alphavantage.co/query\", params=params)\n    return r.json()\n```",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "symbol",
+            "mutated": "ticker"
+          },
+          "outcome": "doc",
+          "token_position": 23,
+          "winner": "ticker",
+          "loser": "symbol",
+          "chosen_token": " ticker",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " ticker",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": " ap",
+              "logprob": -24.1844,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "ticker",
+              "logprob": -26.4503,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": " ticket",
+              "logprob": -28.3258,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": " \n",
+              "logprob": -30.7608,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": " ",
+              "logprob": -31.7939,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": " tick",
+              "logprob": -32.8561,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": " tokenizer",
+              "logprob": -32.8801,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": " timer",
+              "logprob": -33.2056,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": " tic",
+              "logprob": -34.1087,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": " teller",
+              "logprob": -34.2085,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": " tracker",
+              "logprob": -34.2384,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": " tuner",
+              "logprob": -34.2755,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": " tanker",
+              "logprob": -34.537,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": " t",
+              "logprob": -34.7997,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": " picker",
+              "logprob": -35.0963,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": " tiki",
+              "logprob": -35.4845,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": " **",
+              "logprob": -35.5459,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": " sticker",
+              "logprob": -35.5552,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": " tik",
+              "logprob": -36.05,
+              "prob": 0.0
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "outputsize",
+            "mutated": "output_size"
+          },
+          "outcome": "doc",
+          "token_position": 29,
+          "winner": "output_size",
+          "loser": "outputsize",
+          "chosen_token": "_size",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_size",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": "_Size",
+              "logprob": -27.3373,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "__",
+              "logprob": -28.6679,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": "_SIZE",
+              "logprob": -28.8535,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": "\\",
+              "logprob": -29.3105,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": "_type",
+              "logprob": -31.6835,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": "_side",
+              "logprob": -31.792,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": "size",
+              "logprob": -31.972,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": "_",
+              "logprob": -31.9898,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": "_time",
+              "logprob": -32.3113,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": "Size",
+              "logprob": -32.4257,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": "_si",
+              "logprob": -33.5354,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": "_s",
+              "logprob": -33.5759,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": "-size",
+              "logprob": -33.707,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": " size",
+              "logprob": -34.0313,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": "_date",
+              "logprob": -34.1561,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": "\u2060",
+              "logprob": -34.2737,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": "_sz",
+              "logprob": -34.322,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": "_data",
+              "logprob": -34.3454,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": "_score",
+              "logprob": -34.3997,
+              "prob": 0.0
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "datatype",
+            "mutated": "format"
+          },
+          "outcome": "doc",
+          "token_position": 32,
+          "winner": "format",
+          "loser": "datatype",
+          "chosen_token": " format",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " format",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": " form",
+              "logprob": -31.8035,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "format",
+              "logprob": -35.2235,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": " **",
+              "logprob": -35.9233,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": " ",
+              "logprob": -37.3601,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": " fmt",
+              "logprob": -37.9792,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": "\tformat",
+              "logprob": -38.6705,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": " `",
+              "logprob": -40.6176,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": " formato",
+              "logprob": -40.6675,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": " _",
+              "logprob": -41.1603,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": " formatter",
+              "logprob": -41.2858,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": " f",
+              "logprob": -41.6357,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": " FORMAT",
+              "logprob": -41.6503,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": " Format",
+              "logprob": -41.7623,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": " formula",
+              "logprob": -41.7787,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": ".format",
+              "logprob": -42.2579,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": "  ",
+              "logprob": -42.3294,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": " forma",
+              "logprob": -42.5027,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": " \u0444\u043e\u0440\u043c\u0430\u0442",
+              "logprob": -42.8772,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": " for",
+              "logprob": -43.8126,
+              "prob": 0.0
+            }
+          ]
+        }
+      ],
+      "token_count": 118
+    },
+    {
+      "run": 2,
+      "output": "```python\nimport requests\nfrom mcp import tool\n\n@tool()\ndef TIME_SERIES_DAILY(function, ticker, apikey, output_size=None, format=None):\n    params = {\n        \"function\": function,\n        \"ticker\": ticker,\n        \"apikey\": apikey\n    }\n    if output_size is not None:\n        params[\"output_size\"] = output_size\n    if format is not None:\n        params[\"format\"] = format\n    resp = requests.get(\"https://www.alphavantage.co/query\", params=params)\n    return resp.json()\n```\n",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "symbol",
+            "mutated": "ticker"
+          },
+          "outcome": "doc",
+          "token_position": 23,
+          "winner": "ticker",
+          "loser": "symbol",
+          "chosen_token": " ticker",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " ticker",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": " ap",
+              "logprob": -24.5356,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "ticker",
+              "logprob": -25.7585,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": " ticket",
+              "logprob": -27.2469,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": " \n",
+              "logprob": -31.3534,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": " ",
+              "logprob": -31.6963,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": " tokenizer",
+              "logprob": -32.1287,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": " tick",
+              "logprob": -32.2762,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": " tic",
+              "logprob": -33.2739,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": " timer",
+              "logprob": -33.4877,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": " tracker",
+              "logprob": -33.5691,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": " tanker",
+              "logprob": -33.6657,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": " tuner",
+              "logprob": -33.6696,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": " t",
+              "logprob": -34.2795,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": " tiki",
+              "logprob": -34.5261,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": " teller",
+              "logprob": -34.6209,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": " picker",
+              "logprob": -34.8342,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": " sticker",
+              "logprob": -34.8779,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": " tik",
+              "logprob": -35.1601,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": " **",
+              "logprob": -35.1702,
+              "prob": 0.0
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "outputsize",
+            "mutated": "output_size"
+          },
+          "outcome": "doc",
+          "token_position": 29,
+          "winner": "output_size",
+          "loser": "outputsize",
+          "chosen_token": "_size",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_size",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": "_Size",
+              "logprob": -27.2858,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "__",
+              "logprob": -28.9052,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": "_SIZE",
+              "logprob": -28.9194,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": "\\",
+              "logprob": -29.8067,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": "_type",
+              "logprob": -32.0627,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": "size",
+              "logprob": -32.2222,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": "_side",
+              "logprob": -32.2767,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": "_",
+              "logprob": -32.4219,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": "Size",
+              "logprob": -32.4827,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": "_time",
+              "logprob": -32.7328,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": "_si",
+              "logprob": -33.8001,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": "_s",
+              "logprob": -33.8859,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": "-size",
+              "logprob": -33.9869,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": " size",
+              "logprob": -34.1892,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": "_sz",
+              "logprob": -34.4884,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": "_date",
+              "logprob": -34.6363,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": "_sizes",
+              "logprob": -34.6539,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": "_data",
+              "logprob": -34.6569,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": "_score",
+              "logprob": -34.8999,
+              "prob": 0.0
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "datatype",
+            "mutated": "format"
+          },
+          "outcome": "doc",
+          "token_position": 32,
+          "winner": "format",
+          "loser": "datatype",
+          "chosen_token": " format",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " format",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": " form",
+              "logprob": -32.7836,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "format",
+              "logprob": -35.1727,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": " **",
+              "logprob": -36.4458,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": " ",
+              "logprob": -37.2916,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": "\tformat",
+              "logprob": -38.5501,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": " fmt",
+              "logprob": -38.5693,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": " formato",
+              "logprob": -40.7209,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": " _",
+              "logprob": -41.6061,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": " Format",
+              "logprob": -41.6231,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": " f",
+              "logprob": -41.7774,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": " formatter",
+              "logprob": -41.7945,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": " FORMAT",
+              "logprob": -41.8024,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": "  ",
+              "logprob": -42.3657,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": ".format",
+              "logprob": -42.4772,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": " \u0444\u043e\u0440\u043c\u0430\u0442",
+              "logprob": -42.9803,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": " for",
+              "logprob": -43.0924,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": " formula",
+              "logprob": -43.19,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": " forma",
+              "logprob": -43.3131,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": " `",
+              "logprob": -43.6331,
+              "prob": 0.0
+            }
+          ]
+        }
+      ],
+      "token_count": 119
+    },
+    {
+      "run": 3,
+      "output": "```python\nimport requests\nfrom mcp import tool\n\n@tool()\ndef TIME_SERIES_DAILY(function, ticker, apikey, output_size=None, format=None):\n    params = {\n        \"function\": function,\n        \"ticker\": ticker,\n        \"apikey\": apikey\n    }\n    if output_size is not None:\n        params[\"output_size\"] = output_size\n    if format is not None:\n        params[\"format\"] = format\n    resp = requests.get(\"https://www.alphavantage.co/query\", params=params)\n    return resp.json()\n```",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "symbol",
+            "mutated": "ticker"
+          },
+          "outcome": "doc",
+          "token_position": 23,
+          "winner": "ticker",
+          "loser": "symbol",
+          "chosen_token": " ticker",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " ticker",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": " ap",
+              "logprob": -24.1655,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "ticker",
+              "logprob": -26.8108,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": " ticket",
+              "logprob": -27.1947,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": " \n",
+              "logprob": -30.902,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": " tokenizer",
+              "logprob": -31.0198,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": " ",
+              "logprob": -31.5854,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": " timer",
+              "logprob": -32.5078,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": " tick",
+              "logprob": -33.0111,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": " tanker",
+              "logprob": -33.4291,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": " tracker",
+              "logprob": -33.6673,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": " tuner",
+              "logprob": -33.6703,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": " tic",
+              "logprob": -33.7265,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": " t",
+              "logprob": -34.1161,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": " tiki",
+              "logprob": -34.6141,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": " token",
+              "logprob": -34.8168,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": " teller",
+              "logprob": -34.9217,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": " picker",
+              "logprob": -34.9348,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": " api",
+              "logprob": -35.0422,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": " tik",
+              "logprob": -35.2791,
+              "prob": 0.0
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "outputsize",
+            "mutated": "output_size"
+          },
+          "outcome": "doc",
+          "token_position": 29,
+          "winner": "output_size",
+          "loser": "outputsize",
+          "chosen_token": "_size",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_size",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": "_Size",
+              "logprob": -27.7411,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "__",
+              "logprob": -28.6255,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": "_SIZE",
+              "logprob": -28.8704,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": "\\",
+              "logprob": -29.4559,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": "size",
+              "logprob": -31.9268,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": "_type",
+              "logprob": -31.9985,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": "_",
+              "logprob": -32.0944,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": "_side",
+              "logprob": -32.3335,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": "_time",
+              "logprob": -32.6843,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": "Size",
+              "logprob": -32.6896,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": "_si",
+              "logprob": -33.4178,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": "_s",
+              "logprob": -33.7273,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": "-size",
+              "logprob": -33.9539,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": "_format",
+              "logprob": -34.1047,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": "_data",
+              "logprob": -34.1077,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": "_sz",
+              "logprob": -34.3423,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": "_date",
+              "logprob": -34.4179,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": "\u2060",
+              "logprob": -34.4405,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": "_output",
+              "logprob": -34.4531,
+              "prob": 0.0
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "datatype",
+            "mutated": "format"
+          },
+          "outcome": "doc",
+          "token_position": 32,
+          "winner": "format",
+          "loser": "datatype",
+          "chosen_token": " format",
+          "chosen_logprob": 0,
+          "chosen_prob": 1.0,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " format",
+              "logprob": 0,
+              "prob": 1.0
+            },
+            {
+              "rank": 1,
+              "token": " form",
+              "logprob": -31.2034,
+              "prob": 0.0
+            },
+            {
+              "rank": 2,
+              "token": "format",
+              "logprob": -34.0555,
+              "prob": 0.0
+            },
+            {
+              "rank": 3,
+              "token": " **",
+              "logprob": -35.1152,
+              "prob": 0.0
+            },
+            {
+              "rank": 4,
+              "token": " ",
+              "logprob": -36.3943,
+              "prob": 0.0
+            },
+            {
+              "rank": 5,
+              "token": "\tformat",
+              "logprob": -37.978,
+              "prob": 0.0
+            },
+            {
+              "rank": 6,
+              "token": " fmt",
+              "logprob": -38.5348,
+              "prob": 0.0
+            },
+            {
+              "rank": 7,
+              "token": " formatter",
+              "logprob": -40.384,
+              "prob": 0.0
+            },
+            {
+              "rank": 8,
+              "token": " formato",
+              "logprob": -40.5396,
+              "prob": 0.0
+            },
+            {
+              "rank": 9,
+              "token": " Format",
+              "logprob": -40.5675,
+              "prob": 0.0
+            },
+            {
+              "rank": 10,
+              "token": " FORMAT",
+              "logprob": -40.5728,
+              "prob": 0.0
+            },
+            {
+              "rank": 11,
+              "token": " f",
+              "logprob": -41.0132,
+              "prob": 0.0
+            },
+            {
+              "rank": 12,
+              "token": " _",
+              "logprob": -41.1854,
+              "prob": 0.0
+            },
+            {
+              "rank": 13,
+              "token": " forma",
+              "logprob": -41.7318,
+              "prob": 0.0
+            },
+            {
+              "rank": 14,
+              "token": " \u0444\u043e\u0440\u043c\u0430\u0442",
+              "logprob": -42.2622,
+              "prob": 0.0
+            },
+            {
+              "rank": 15,
+              "token": " formula",
+              "logprob": -42.3131,
+              "prob": 0.0
+            },
+            {
+              "rank": 16,
+              "token": "  ",
+              "logprob": -42.3392,
+              "prob": 0.0
+            },
+            {
+              "rank": 17,
+              "token": ".format",
+              "logprob": -42.3604,
+              "prob": 0.0
+            },
+            {
+              "rank": 18,
+              "token": "_format",
+              "logprob": -43.3602,
+              "prob": 0.0
+            },
+            {
+              "rank": 19,
+              "token": " for",
+              "logprob": -43.3693,
+              "prob": 0.0
+            }
+          ]
+        }
+      ],
+      "token_count": 118
+    }
+  ]
+}

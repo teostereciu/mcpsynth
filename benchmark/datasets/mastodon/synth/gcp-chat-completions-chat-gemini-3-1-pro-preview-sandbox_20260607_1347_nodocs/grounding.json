@@ -1,0 +1,142 @@
+{
+  "post_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /statuses"
+  },
+  "get_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "GET /statuses/{id}"
+  },
+  "delete_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "DELETE /statuses/{id}"
+  },
+  "boost_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /statuses/{id}/reblog"
+  },
+  "favourite_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /statuses/{id}/favourite"
+  },
+  "get_status_context": {
+    "doc": "docs/statuses.md",
+    "endpoint": "GET /statuses/{id}/context"
+  },
+  "get_authenticated_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /accounts/verify_credentials"
+  },
+  "get_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /accounts/{id}"
+  },
+  "follow_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /accounts/{id}/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /accounts/{id}/unfollow"
+  },
+  "get_account_followers": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /accounts/{id}/followers"
+  },
+  "get_account_following": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /accounts/{id}/following"
+  },
+  "get_home_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /timelines/tag/{hashtag}"
+  },
+  "get_list_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /timelines/list/{list_id}"
+  },
+  "get_notifications": {
+    "doc": "docs/notifications.md",
+    "endpoint": "GET /notifications"
+  },
+  "get_notification": {
+    "doc": "docs/notifications.md",
+    "endpoint": "GET /notifications/{id}"
+  },
+  "dismiss_notification": {
+    "doc": "docs/notifications.md",
+    "endpoint": "POST /notifications/{id}/dismiss"
+  },
+  "clear_notifications": {
+    "doc": "docs/notifications.md",
+    "endpoint": "POST /notifications/clear"
+  },
+  "search": {
+    "doc": "docs/search.md",
+    "endpoint": "GET /search"
+  },
+  "get_lists": {
+    "doc": "docs/lists.md",
+    "endpoint": "GET /lists"
+  },
+  "create_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "POST /lists"
+  },
+  "get_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "GET /lists/{id}"
+  },
+  "update_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "PUT /lists/{id}"
+  },
+  "delete_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "DELETE /lists/{id}"
+  },
+  "get_list_accounts": {
+    "doc": "docs/lists.md",
+    "endpoint": "GET /lists/{id}/accounts"
+  },
+  "add_accounts_to_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "POST /lists/{id}/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "DELETE /lists/{id}/accounts"
+  },
+  "get_bookmarks": {
+    "doc": "docs/bookmarks.md",
+    "endpoint": "GET /bookmarks"
+  },
+  "bookmark_status": {
+    "doc": "docs/bookmarks.md",
+    "endpoint": "POST /statuses/{id}/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/bookmarks.md",
+    "endpoint": "POST /statuses/{id}/unbookmark"
+  },
+  "get_favourites": {
+    "doc": "docs/favourites.md",
+    "endpoint": "GET /favourites"
+  },
+  "upload_media": {
+    "doc": "docs/media.md",
+    "endpoint": "POST /media"
+  },
+  "get_instance": {
+    "doc": "docs/instance.md",
+    "endpoint": "GET /instance"
+  }
+}

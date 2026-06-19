@@ -1,0 +1,88 @@
+# REST API endpoints for repositories
+
+*Source: https://docs.github.com/en/rest/repos*
+
+---
+
+# REST API endpoints for repositories
+Use the REST API to create, manage and control the workflow of public and private GitHub repositories.
+- REST API endpoints for repositoriesList organization repositoriesCreate an organization repositoryGet a repositoryUpdate a repositoryDelete a repositoryList repository activitiesCheck if Dependabot security updates are enabled for a repositoryEnable Dependabot security updatesDisable Dependabot security updatesList CODEOWNERS errorsList repository contributorsCreate a repository dispatch eventCheck if immutable releases are enabled for a repositoryEnable immutable releasesDisable immutable releasesList repository languagesCheck if private vulnerability reporting is enabled for a repositoryEnable private vulnerability reporting for a repositoryDisable private vulnerability reporting for a repositoryList repository tagsList repository teamsGet all repository topicsReplace all repository topicsTransfer a repositoryCheck if vulnerability alerts are enabled for a repositoryEnable vulnerability alertsDisable vulnerability alertsCreate a repository using a templateList public repositoriesList repositories for the authenticated userCreate a repository for the authenticated userList repositories for a user
+- REST API endpoints for repository attestationsCreate an attestationList attestations
+- REST API endpoints for repository autolinksGet all autolinks of a repositoryCreate an autolink reference for a repositoryGet an autolink reference of a repositoryDelete an autolink reference from a repository
+- REST API endpoints for repository contentsGet repository contentCreate or update file contentsDelete a fileGet a repository READMEGet a repository README for a directoryDownload a repository archive (tar)Download a repository archive (zip)
+- REST API endpoints for custom propertiesGet all custom property values for a repositoryCreate or update custom property values for a repository
+- REST API endpoints for forksList forksCreate a fork
+- REST API endpoints for rule suitesList repository rule suitesGet a repository rule suite
+- REST API endpoints for rulesGet rules for a branchGet all repository rulesetsCreate a repository rulesetGet a repository rulesetUpdate a repository rulesetDelete a repository rulesetGet repository ruleset historyGet repository ruleset version
+- REST API endpoints for repository webhooksList repository webhooksCreate a repository webhookGet a repository webhookUpdate a repository webhookDelete a repository webhookGet a webhook configuration for a repositoryUpdate a webhook configuration for a repositoryList deliveries for a repository webhookGet a delivery for a repository webhookRedeliver a delivery for a repository webhookPing a repository webhookTest the push repository webhook
+- List organization repositories
+- Create an organization repository
+- Get a repository
+- Update a repository
+- Delete a repository
+- List repository activities
+- Check if Dependabot security updates are enabled for a repository
+- Enable Dependabot security updates
+- Disable Dependabot security updates
+- List CODEOWNERS errors
+- List repository contributors
+- Create a repository dispatch event
+- Check if immutable releases are enabled for a repository
+- Enable immutable releases
+- Disable immutable releases
+- List repository languages
+- Check if private vulnerability reporting is enabled for a repository
+- Enable private vulnerability reporting for a repository
+- Disable private vulnerability reporting for a repository
+- List repository tags
+- List repository teams
+- Get all repository topics
+- Replace all repository topics
+- Transfer a repository
+- Check if vulnerability alerts are enabled for a repository
+- Enable vulnerability alerts
+- Disable vulnerability alerts
+- Create a repository using a template
+- List public repositories
+- List repositories for the authenticated user
+- Create a repository for the authenticated user
+- List repositories for a user
+- Create an attestation
+- List attestations
+- Get all autolinks of a repository
+- Create an autolink reference for a repository
+- Get an autolink reference of a repository
+- Delete an autolink reference from a repository
+- Get repository content
+- Create or update file contents
+- Delete a file
+- Get a repository README
+- Get a repository README for a directory
+- Download a repository archive (tar)
+- Download a repository archive (zip)
+- Get all custom property values for a repository
+- Create or update custom property values for a repository
+- List forks
+- Create a fork
+- List repository rule suites
+- Get a repository rule suite
+- Get rules for a branch
+- Get all repository rulesets
+- Create a repository ruleset
+- Get a repository ruleset
+- Update a repository ruleset
+- Delete a repository ruleset
+- Get repository ruleset history
+- Get repository ruleset version
+- List repository webhooks
+- Create a repository webhook
+- Get a repository webhook
+- Update a repository webhook
+- Delete a repository webhook
+- Get a webhook configuration for a repository
+- Update a webhook configuration for a repository
+- List deliveries for a repository webhook
+- Get a delivery for a repository webhook
+- Redeliver a delivery for a repository webhook
+- Ping a repository webhook
+- Test the push repository webhook

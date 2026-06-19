@@ -1,0 +1,222 @@
+{
+  "get_intraday_stock_data": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_INTRADAY"
+  },
+  "get_daily_stock_data": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY"
+  },
+  "get_daily_adjusted_stock_data": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY_ADJUSTED"
+  },
+  "get_weekly_stock_data": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_WEEKLY"
+  },
+  "get_weekly_adjusted_stock_data": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_WEEKLY_ADJUSTED"
+  },
+  "get_monthly_stock_data": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_MONTHLY"
+  },
+  "get_monthly_adjusted_stock_data": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_MONTHLY_ADJUSTED"
+  },
+  "get_stock_quote": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=GLOBAL_QUOTE"
+  },
+  "search_symbols": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=SYMBOL_SEARCH"
+  },
+  "get_forex_exchange_rate": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET /query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "get_forex_intraday": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET /query?function=FX_INTRADAY"
+  },
+  "get_forex_daily": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET /query?function=FX_DAILY"
+  },
+  "get_forex_weekly": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET /query?function=FX_WEEKLY"
+  },
+  "get_forex_monthly": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET /query?function=FX_MONTHLY"
+  },
+  "get_crypto_exchange_rate": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET /query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "get_crypto_intraday": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET /query?function=CRYPTO_INTRADAY"
+  },
+  "get_crypto_daily": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET /query?function=DIGITAL_CURRENCY_DAILY"
+  },
+  "get_crypto_weekly": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET /query?function=DIGITAL_CURRENCY_WEEKLY"
+  },
+  "get_crypto_monthly": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET /query?function=DIGITAL_CURRENCY_MONTHLY"
+  },
+  "get_sma": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=SMA"
+  },
+  "get_ema": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=EMA"
+  },
+  "get_wma": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=WMA"
+  },
+  "get_dema": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=DEMA"
+  },
+  "get_tema": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=TEMA"
+  },
+  "get_trima": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=TRIMA"
+  },
+  "get_kama": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=KAMA"
+  },
+  "get_mama": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=MAMA"
+  },
+  "get_rsi": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=RSI"
+  },
+  "get_macd": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=MACD"
+  },
+  "get_bbands": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET /query?function=BBANDS"
+  },
+  "get_company_overview": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=OVERVIEW"
+  },
+  "get_ETF_profile": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=ETF_PROFILE"
+  },
+  "get_dividends": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=DIVIDENDS"
+  },
+  "get_splits": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=SPLITS"
+  },
+  "get_real_gdp": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=REAL_GDP"
+  },
+  "get_real_gdp_per_capita": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=REAL_GDP_PER_CAPITA"
+  },
+  "get_treasury_yield": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=TREASURY_YIELD"
+  },
+  "get_federal_funds_rate": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=FEDERAL_FUNDS_RATE"
+  },
+  "get_cpi": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=CPI"
+  },
+  "get_inflation": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=INFLATION"
+  },
+  "get_retail_sales": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=RETAIL_SALES"
+  },
+  "get_durable_goods": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=DURABLES"
+  },
+  "get_unemployment": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=UNEMPLOYMENT"
+  },
+  "get_market_news_sentiment": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET /query?function=NEWS_SENTIMENT"
+  },
+  "get_earnings_call_transcript": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET /query?function=EARNINGS_CALL_TRANSCRIPT"
+  },
+  "get_top_gainers_losers": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET /query?function=TOP_GAINERS_LOSERS"
+  },
+  "get_insider_transactions": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET /query?function=INSIDER_TRANSACTIONS"
+  },
+  "get_gold_silver_spot_price": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET /query?function=GOLD_SILVER_SPOT"
+  },
+  "get_gold_silver_history": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET /query?function=GOLD_SILVER_HISTORY"
+  },
+  "get_wti_crude_oil": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET /query?function=WTI"
+  },
+  "get_brent_crude_oil": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET /query?function=BRENT"
+  },
+  "get_realtime_options": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET /query?function=REALTIME_OPTIONS"
+  },
+  "get_realtime_put_call_ratio": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET /query?function=REALTIME_PUT_CALL_RATIO"
+  },
+  "get_realtime_volume_open_interest_ratio": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET /query?function=REALTIME_VOLUME_OPEN_INTEREST_RATIO"
+  },
+  "get_historical_options": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET /query?function=HISTORICAL_OPTIONS"
+  }
+}

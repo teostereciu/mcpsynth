@@ -1,0 +1,193 @@
+# Agent evaluation tasks for HubSpot CRM MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring principles.
+#
+# Domain constraints:
+#   - All write tasks use email domain "@example-mcp-eval.com" and name prefix "Agent"
+#     so created records are easy to identify and clean up.
+#   - HubSpot deal close dates must be provided as Unix timestamps in milliseconds (UTC).
+#     The prompt expresses this as "90 days from today" so the agent must compute the value.
+#   - Association calls require both the object IDs and the association type; the pipeline
+#     and stage IDs for deals must be retrieved before use — they are not guessable.
+#   - Batch contact creation uses a separate endpoint from single-contact creation.
+#
+# Required env vars: HUBSPOT_ACCESS_TOKEN
+
+tasks:
+  # ---------- READ ----------
+  - id: list_contacts
+    prompt: >
+      List contacts in HubSpot. Report the first names, last names, and email
+      addresses of up to 5 contacts, or confirm there are none.
+    expected: email
+    tags: [read]
+    # Discriminates: `email` is a contact-specific property. Its presence confirms the
+    # contacts endpoint was called and properties were correctly requested. Fails if
+    # the server omits properties from the default response.
+
+  - id: list_deal_pipelines
+    prompt: >
+      List all deal pipelines in HubSpot. Report the pipeline names and their
+      stage names.
+    expected: label
+    tags: [read]
+    # Discriminates: `label` is the human-readable display name for pipeline stages.
+    # A weak implementation may return stage IDs only, without resolving labels.
+
+  - id: list_owners
+    prompt: >
+      List all owners (users) in HubSpot. Report their first names, last names,
+      and email addresses.
+    expected: email
+    tags: [read]
+    # Discriminates: confirms the owners endpoint is implemented and returns email,
+    # which requires the correct endpoint (/crm/v3/owners), not a generic users call.
+
+  - id: list_contact_properties
+    prompt: >
+      List the properties defined for contacts in HubSpot. Report the names and
+      labels of the first 10 properties.
+    expected: label
+    tags: [read]
+    # Discriminates: `label` is the field that holds the human-readable property name.
+    # Presence confirms the properties schema endpoint was called, not the contacts list.
+
+  - id: search_contacts
+    prompt: >
+      Search HubSpot contacts for any contact with email containing "test".
+      Report the email addresses of contacts found, or confirm none match.
+    expected: email
+    tags: [read]
+    # Discriminates: tests the CRM search endpoint (POST /crm/v3/objects/contacts/search)
+    # with a filter operator. A naive implementation may use list instead of search,
+    # missing the filter capability.
+
+  # ---------- WRITE ----------
+  - id: create_contact
+    prompt: >
+      Create a new HubSpot contact with:
+      - First name: "Agent"
+      - Last name: "TestUser"
+      - Email: "agent.testuser@example-mcp-eval.com"
+      Report the contact ID created.
+    expected: agent.testuser@example-mcp-eval.com
+    tags: [write]
+    # Discriminates: the expected value is the email address provided at creation.
+    # A correct implementation confirms the record via its properties; a failing one
+    # may return a generic ID object without the contact's email.
+
+  - id: create_company
+    prompt: >
+      Create a new HubSpot company with:
+      - Name: "Agent Eval Test Co"
+      - Domain: "agent-eval-test.example.com"
+      Report the company ID created.
+    expected: Agent Eval Test Co
+    tags: [write]
+    # Discriminates: the company name "Agent Eval Test Co" only appears in the response
+    # if the company was created and the name property returned. Weak servers return a
+    # bare ID object with no properties.
+
+  - id: create_deal
+    prompt: >
+      Create a new HubSpot deal with:
+      - Deal name: "Agent Eval Test Deal"
+      - Amount: 5000
+      - Close date: 90 days from today
+      Report the deal ID created.
+    expected: Agent Eval Test Deal
+    tags: [write]
+    # Discriminates: the deal name only appears in a correctly structured creation
+    # response. Tests that the deal creation tool accepts amount and close date
+    # without schema errors.
+
+  # ---------- MULTI-STEP ----------
+  - id: create_contact_and_update
+    prompt: >
+      Create a new HubSpot contact with first name "Temp", last name "Contact",
+      email "temp.contact.agenteval@example-mcp.com".
+      Then update that contact's phone number to "+1-555-000-0001".
+      Retrieve the updated contact and confirm the phone number was saved.
+      Report the contact ID and the confirmed phone number.
+    expected: +1-555-000-0001
+    tags: [write, multi-step, workflow]
+    # Discriminates: 3-step workflow (create → update → read). The exact phone string
+    # "+1-555-000-0001" only appears if the update was applied and the GET response
+    # includes the phone property.
+
+  - id: create_contact_and_company_then_associate
+    prompt: >
+      Create a contact with email "assoc.test@example-mcp-eval.com", first name "Assoc",
+      last name "Test". Create a company named "Assoc Test Corp". Then associate
+      the contact with the company. Report the contact ID, company ID, and confirm
+      the association was created.
+    expected: associations
+    tags: [write, multi-step, workflow]
+    # Discriminates: 3-step workflow. The `associations` field only appears in the
+    # confirmation response when an association endpoint is called; it does not appear
+    # in plain create responses.
+
+  - id: create_deal_with_contact
+    prompt: >
+      Create a contact with email "deal.contact@example-mcp-eval.com", first name "Deal",
+      last name "Contact". Then create a deal named "Agent Deal Association Test" worth
+      1000, and associate it with that contact. Report the deal ID and contact ID.
+    expected: associations
+    tags: [write, multi-step, workflow]
+    # Discriminates: similar to contact-company association but for the deal-contact
+    # relationship. Tests that the server exposes association endpoints for deals,
+    # not just contacts.
+
+  - id: batch_create_contacts
+    prompt: >
+      Use a single batch operation to create two contacts at once:
+      1. First name "Batch1", last name "User", email "batch1@example-mcp-eval.com"
+      2. First name "Batch2", last name "User", email "batch2@example-mcp-eval.com"
+      Report both contact IDs created.
+    expected: batch1@example-mcp-eval.com
+    tags: [write, multi-step]
+    # Discriminates: tests the batch contacts endpoint (POST /crm/v3/objects/contacts/batch/create).
+    # A naive server implementation may only expose single-record creation and lack the
+    # batch endpoint entirely, making this a strong coverage discriminator.
+
+  - id: search_deals_by_stage
+    prompt: >
+      Search HubSpot deals filtered to any deals in the "closedwon" stage.
+      Report the deal names and amounts found, or confirm there are none.
+    expected: closedwon
+    tags: [read, multi-step]
+    # Discriminates: tests search with enum filter value "closedwon". The filter value
+    # must appear in the response (either as a stage value or in the agent's summary),
+    # confirming the correct filter was applied rather than an unfiltered list.
+
+  - id: error_handling_invalid_id
+    prompt: >
+      Try to retrieve a HubSpot contact with ID "99999999999". Report the error
+      response received.
+    expected: "404"
+    tags: [read, error-handling]
+    # Discriminates: confirms the MCP server propagates HTTP 404 errors rather than
+    # returning an empty result or swallowing the error silently.
+
+  - id: create_note
+    prompt: >
+      Create a new HubSpot contact with email "note.contact@example-mcp-eval.com",
+      first name "Note", last name "Contact". Then create an engagement note with the
+      body text "Agent eval test note" and associate it with that contact. Report the
+      note ID and confirm it is associated with the contact.
+    expected: note
+    tags: [write, multi-step, workflow]
+    # Discriminates: tests the engagements/notes endpoint, which is separate from the
+    # contacts and deals CRM endpoints. Many synthesized servers omit engagements
+    # entirely, making this a strong coverage signal.
+
+  - id: update_deal_stage
+    prompt: >
+      Create a deal named "Agent Stage Test Deal". Retrieve the available deal
+      pipelines to find the stage ID for the "closedwon" stage. Update the deal
+      to set its stage to "closedwon". Retrieve the deal and confirm the stage.
+      Report the deal ID and confirmed stage.
+    expected: closedwon
+    tags: [write, multi-step, workflow]
+    # Discriminates: 4-step workflow (create deal → list pipelines → update deal stage →
+    # read deal). Requires the agent to parse pipeline stage IDs from the pipeline
+    # response before performing the update. Tests read-then-write chaining.

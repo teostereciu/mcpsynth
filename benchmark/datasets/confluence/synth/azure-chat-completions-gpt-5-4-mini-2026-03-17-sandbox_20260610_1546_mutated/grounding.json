@@ -1,0 +1,26 @@
+{
+  "list_tools": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /pages"
+  },
+  "get_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /pages/{id}"
+  },
+  "create_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "POST /pages"
+  },
+  "update_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "PUT /pages/{id}"
+  },
+  "delete_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "DELETE /pages/{id}"
+  },
+  "get_current_user": {
+    "doc": "docs/api_v1_users.md",
+    "endpoint": "GET /wiki/rest/api/user/current"
+  }
+}

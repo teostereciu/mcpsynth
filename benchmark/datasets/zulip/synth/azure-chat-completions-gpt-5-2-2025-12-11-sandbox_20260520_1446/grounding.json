@@ -1,0 +1,10 @@
+{
+  "zulip_send_message": {
+    "doc": "docs/api_send-message.md",
+    "endpoint": "POST /messages"
+  },
+  "zulip_get_messages": {
+    "doc": "docs/api_get-messages.md",
+    "endpoint": "GET /messages"
+  }
+}

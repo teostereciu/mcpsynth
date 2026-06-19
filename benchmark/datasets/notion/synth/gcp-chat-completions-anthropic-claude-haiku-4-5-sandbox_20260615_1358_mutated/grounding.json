@@ -1,0 +1,204 @@
+{
+  "tools": {
+    "create_page": {
+      "source": "docs/post-page.md",
+      "endpoint": "POST /pages",
+      "description": "Create a new page in Notion"
+    },
+    "retrieve_page": {
+      "source": "docs/retrieve-a-page.md",
+      "endpoint": "GET /pages/{page_id}",
+      "description": "Retrieve a page by ID"
+    },
+    "update_page": {
+      "source": "docs/patch-page.md",
+      "endpoint": "PATCH /pages/{page_id}",
+      "description": "Update a page's properties, icon, cover, or trash status"
+    },
+    "trash_page": {
+      "source": "docs/trash-page.md",
+      "endpoint": "PATCH /pages/{page_id}",
+      "description": "Move a page to trash"
+    },
+    "restore_page": {
+      "source": "docs/archive-a-page.md",
+      "endpoint": "PATCH /pages/{page_id}",
+      "description": "Restore a page from trash"
+    },
+    "move_page": {
+      "source": "docs/move-page.md",
+      "endpoint": "POST /pages/{page_id}/move",
+      "description": "Move a page to a new parent location"
+    },
+    "retrieve_page_property": {
+      "source": "docs/retrieve-a-page-property.md",
+      "endpoint": "GET /pages/{page_id}/properties/{property_id}",
+      "description": "Retrieve a specific property of a page"
+    },
+    "retrieve_page_markdown": {
+      "source": "docs/retrieve-page-markdown.md",
+      "endpoint": "GET /pages/{page_id}/markdown",
+      "description": "Retrieve a page's content as Notion-flavored Markdown"
+    },
+    "update_page_markdown": {
+      "source": "docs/update-page-markdown.md",
+      "endpoint": "PATCH /pages/{page_id}/markdown",
+      "description": "Update a page's content using Notion-flavored Markdown"
+    },
+    "create_database": {
+      "source": "docs/create-a-database.md",
+      "endpoint": "POST /databases",
+      "description": "Create a new database"
+    },
+    "retrieve_database": {
+      "source": "docs/retrieve-a-database.md",
+      "endpoint": "GET /databases/{database_id}",
+      "description": "Retrieve a database by ID"
+    },
+    "update_database": {
+      "source": "docs/update-a-database.md",
+      "endpoint": "PATCH /databases/{database_id}",
+      "description": "Update a database's properties"
+    },
+    "query_database": {
+      "source": "docs/post-database-query.md",
+      "endpoint": "POST /databases/{database_id}/query",
+      "description": "Query a database with optional filters and sorts"
+    },
+    "create_data_source": {
+      "source": "docs/create-a-data-source.md",
+      "endpoint": "POST /data_sources",
+      "description": "Create a new data source"
+    },
+    "retrieve_data_source": {
+      "source": "docs/retrieve-a-data-source.md",
+      "endpoint": "GET /data_sources/{data_source_id}",
+      "description": "Retrieve a data source by ID"
+    },
+    "update_data_source": {
+      "source": "docs/update-a-data-source.md",
+      "endpoint": "PATCH /data_sources/{data_source_id}",
+      "description": "Update a data source's properties"
+    },
+    "query_data_source": {
+      "source": "docs/query-a-data-source.md",
+      "endpoint": "POST /data_sources/{data_source_id}/query",
+      "description": "Query a data source with optional filters and sorts"
+    },
+    "retrieve_block": {
+      "source": "docs/retrieve-a-block.md",
+      "endpoint": "GET /blocks/{block_id}",
+      "description": "Retrieve a block by ID"
+    },
+    "get_block_children": {
+      "source": "docs/get-block-children.md",
+      "endpoint": "GET /blocks/{block_id}/children",
+      "description": "Retrieve the children of a block"
+    },
+    "append_block_children": {
+      "source": "docs/patch-block-children.md",
+      "endpoint": "PATCH /blocks/{block_id}/children",
+      "description": "Append child blocks to a block"
+    },
+    "update_block": {
+      "source": "docs/update-a-block.md",
+      "endpoint": "PATCH /blocks/{block_id}",
+      "description": "Update a block's content"
+    },
+    "delete_block": {
+      "source": "docs/delete-a-block.md",
+      "endpoint": "DELETE /blocks/{block_id}",
+      "description": "Delete a block"
+    },
+    "create_comment": {
+      "source": "docs/create-a-comment.md",
+      "endpoint": "POST /comments",
+      "description": "Create a comment on a page or block"
+    },
+    "retrieve_comment": {
+      "source": "docs/retrieve-comment.md",
+      "endpoint": "GET /comments/{comment_id}",
+      "description": "Retrieve a comment by ID"
+    },
+    "list_comments": {
+      "source": "docs/list-comments.md",
+      "endpoint": "GET /comments",
+      "description": "List comments on a block or page"
+    },
+    "list_users": {
+      "source": "docs/get-users.md",
+      "endpoint": "GET /users",
+      "description": "List all users in the workspace"
+    },
+    "retrieve_user": {
+      "source": "docs/get-user.md",
+      "endpoint": "GET /users/{user_id}",
+      "description": "Retrieve a user by ID"
+    },
+    "get_self": {
+      "source": "docs/get-self.md",
+      "endpoint": "GET /users/me",
+      "description": "Retrieve the bot user associated with the API token"
+    },
+    "create_view": {
+      "source": "docs/create-view.md",
+      "endpoint": "POST /views",
+      "description": "Create a new view in a database or dashboard"
+    },
+    "retrieve_view": {
+      "source": "docs/retrieve-a-view.md",
+      "endpoint": "GET /views/{view_id}",
+      "description": "Retrieve a view by ID"
+    },
+    "update_view": {
+      "source": "docs/update-a-view.md",
+      "endpoint": "PATCH /views/{view_id}",
+      "description": "Update a view's properties"
+    },
+    "delete_view": {
+      "source": "docs/delete-view.md",
+      "endpoint": "DELETE /views/{view_id}",
+      "description": "Delete a view"
+    },
+    "list_views": {
+      "source": "docs/list-views.md",
+      "endpoint": "GET /views",
+      "description": "List all views in a database"
+    },
+    "create_file_upload": {
+      "source": "docs/create-a-file-upload.md",
+      "endpoint": "POST /file_uploads",
+      "description": "Create a file upload session"
+    },
+    "retrieve_file_upload": {
+      "source": "docs/retrieve-a-file-upload.md",
+      "endpoint": "GET /file_uploads/{file_upload_id}",
+      "description": "Retrieve a file upload by ID"
+    },
+    "list_file_uploads": {
+      "source": "docs/list-file-uploads.md",
+      "endpoint": "GET /file_uploads",
+      "description": "List all file uploads"
+    },
+    "complete_file_upload": {
+      "source": "docs/complete-a-file-upload.md",
+      "endpoint": "POST /file_uploads/{file_upload_id}/complete",
+      "description": "Complete a file upload session"
+    },
+    "search": {
+      "source": "docs/post-search.md",
+      "endpoint": "POST /search",
+      "description": "Search for pages and databases"
+    }
+  },
+  "authentication": {
+    "type": "Bearer token",
+    "header": "Authorization",
+    "format": "Bearer <NOTION_API_KEY>",
+    "env_var": "NOTION_API_KEY",
+    "source": "docs/authentication.md"
+  },
+  "base_url": "https://api.notion.com/v1",
+  "api_version": "2026-03-11",
+  "version_header": "Notion-Version"
+}

@@ -1,0 +1,119 @@
+# shared_channel_invite_accepted
+
+*Source: https://docs.slack.dev/reference/events/shared_channel_invite_accepted*
+
+---
+
+## Facts
+
+**Required Scopes**
+
+No scopes required!
+
+**Compatible APIs**
+
+[`Events`](/apis/events-api)
+
+## Usage info​
+
+This example includes both the [event wrapper](/apis/events-api/#callback-field) and the [event structure](/apis/events-api/#event-type-structure) for the `shared_channel_invite_accepted` event.
+
+
+    {
+        "token": "XXYYZZ",
+        "team_id": "T123ABC456",
+        "api_app_id": "A123ABC456",
+        "event": {
+            "type": "shared_channel_invite_accepted",
+            "approval_required": false,
+            "invite": {
+                "id": "I028YDERZSQ",
+                "date_created": 1626876000,
+                "date_invalid": 1628085600,
+                "inviting_team": {
+                    "id": "T12345678",
+                    "name": "Corgis",
+                    "icon": {
+                        ...
+                    },
+                    "is_verified": false,
+                    "domain": "corgis",
+                    "date_created": 1480946400
+                },
+                "inviting_user": {
+                    "id": "U12345678",
+                    "team_id": "T12345678",
+                    "name": "crus",
+                    "updated": 1608081902,
+                    "profile": {
+                        "real_name": "Corgis Rus",
+                        "display_name": "Corgis Rus",
+                        "real_name_normalized": "Corgis Rus",
+                        "display_name_normalized": "Corgis Rus",
+                        "team": "T12345678",
+                        "avatar_hash": "gcfh83a4c72k",
+                        "email": "corgisrus@slack-corp.com",
+                        "image_24": "https://placekitten.com/24/24",
+                        "image_32": "https://placekitten.com/32/32",
+                        "image_48": "https://placekitten.com/48/48",
+                        "image_72": "https://placekitten.com/72/72",
+                        "image_192": "https://placekitten.com/192/192",
+                        "image_512": "https://placekitten.com/512/512"
+                    }
+                },
+                "recipient_email": "golden@doodle.com",
+                "recipient_user_id": "U87654321"
+            },
+            "channel": {
+                "id": "C12345678",
+                "is_private": false,
+                "is_im": false,
+                "name": "test-slack-connect"
+            },
+            "teams_in_channel": [
+                {
+                    "id": "T12345678",
+                    "name": "Corgis",
+                    "icon": {
+                        ...
+                    },
+                    "is_verified": false,
+                    "domain": "corgis",
+                    "date_created": 1626789600
+                }
+            ],
+            "accepting_user": {
+                "id": "U87654321",
+                "team_id": "T87654321",
+                "name": "golden",
+                "updated": 1624406113,
+                "profile": {
+                    "real_name": "Golden Doodle",
+                    "display_name": "Golden",
+                    "real_name_normalized": "Golden Doodle",
+                    "display_name_normalized": "Golden",
+                    "team": "T87654321",
+                    "avatar_hash": "g717728b118x",
+                    "email": "golden@doodle.com",
+                    "image_24": "https://placekitten.com/24/24",
+                    "image_32": "https://placekitten.com/32/32",
+                    "image_48": "https://placekitten.com/48/48",
+                    "image_72": "https://placekitten.com/72/72",
+                    "image_192": "https://placekitten.com/192/192",
+                    "image_512": "https://placekitten.com/512/512"
+                }
+            },
+            "event_ts": "1626877800.000000"
+        },
+        "type": "event_callback",
+        "authorizations": [
+            {
+                "team_id": "T123ABC456",
+                "user_id": "U12345678",
+                "is_bot": false,
+                "is_enterprise_install": false,
+            }
+        ],
+        "event_id": "Ev123ABC456",
+        "event_time": 123456789
+    }

@@ -1,0 +1,14 @@
+{
+  "dataset": "confluence",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "mutated",
+  "synthesis_time": 508.58252811431885,
+  "token_usage": {
+    "input_tokens": 10913123,
+    "output_tokens": 12190
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1513",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 100
+}

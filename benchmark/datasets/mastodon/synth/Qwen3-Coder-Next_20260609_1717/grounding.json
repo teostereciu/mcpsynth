@@ -1,0 +1,282 @@
+{
+  "upload_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "POST /api/v2/media"
+  },
+  "get_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "GET /api/v1/media/:id"
+  },
+  "update_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "PUT /api/v1/media/:id"
+  },
+  "delete_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "DELETE /api/v1/media/:id"
+  },
+  "post_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "get_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id"
+  },
+  "delete_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "DELETE /api/v1/statuses/:id"
+  },
+  "boost_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/reblog"
+  },
+  "unboost_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unreblog"
+  },
+  "favourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unfavourite"
+  },
+  "get_status_context": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id/context"
+  },
+  "get_status_reblogged_by": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id/reblogged_by"
+  },
+  "get_status_favourited_by": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id/favourited_by"
+  },
+  "bookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unbookmark"
+  },
+  "pin_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/pin"
+  },
+  "unpin_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unpin"
+  },
+  "mute_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/mute"
+  },
+  "unmute_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unmute"
+  },
+  "get_home_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/tag/:hashtag"
+  },
+  "get_list_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/list/:list_id"
+  },
+  "get_direct_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/direct"
+  },
+  "get_authenticated_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "get_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id"
+  },
+  "get_account_statuses": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/statuses"
+  },
+  "follow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unfollow"
+  },
+  "get_account_relationships": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/relationships"
+  },
+  "get_account_followers": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/followers"
+  },
+  "get_account_following": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/following"
+  },
+  "block_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/block"
+  },
+  "unblock_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unblock"
+  },
+  "mute_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/mute"
+  },
+  "unmute_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unmute"
+  },
+  "pin_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/pin"
+  },
+  "unpin_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unpin"
+  },
+  "update_account_note": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/note"
+  },
+  "search_accounts": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/search"
+  },
+  "lookup_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/lookup"
+  },
+  "list_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "get_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications/:id"
+  },
+  "dismiss_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/:id/dismiss"
+  },
+  "dismiss_all_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "dismiss_notifications_by_type": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/dismiss"
+  },
+  "get_unread_notification_count": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications/unread_count"
+  },
+  "search": {
+    "doc": "docs/api_search.md",
+    "endpoint": "GET /api/v1/search"
+  },
+  "create_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "get_lists": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "get_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id"
+  },
+  "update_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "PUT /api/v1/lists/:id"
+  },
+  "delete_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id"
+  },
+  "add_accounts_to_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists/:id/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id/accounts"
+  },
+  "get_list_accounts": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id/accounts"
+  },
+  "get_bookmarks": {
+    "doc": "docs/api_bookmarks.md",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "get_favourites": {
+    "doc": "docs/api_favourites.md",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "get_instance": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance"
+  },
+  "get_instance_activity": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance/activity"
+  },
+  "get_instance_peers": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance/peers"
+  },
+  "get_instance_rules": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance/rules"
+  },
+  "get_domain_blocks": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance/domain_blocks"
+  },
+  "get_extended_description": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance/extended_description"
+  },
+  "list_follow_requests": {
+    "doc": "docs/api_follow_requests.md",
+    "endpoint": "GET /api/v1/follow_requests"
+  },
+  "authorize_follow_request": {
+    "doc": "docs/api_follow_requests.md",
+    "endpoint": "POST /api/v1/follow_requests/:account_id/authorize"
+  },
+  "reject_follow_request": {
+    "doc": "docs/api_follow_requests.md",
+    "endpoint": "POST /api/v1/follow_requests/:account_id/reject"
+  },
+  "get_blocked_accounts": {
+    "doc": "docs/api_blocks.md",
+    "endpoint": "GET /api/v1/blocks"
+  },
+  "get_muted_accounts": {
+    "doc": "docs/api_mutes.md",
+    "endpoint": "GET /api/v1/mutes"
+  }
+}

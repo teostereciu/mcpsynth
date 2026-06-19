@@ -1,0 +1,278 @@
+{
+  "source": "Google Sheets API v4 (developers.google.com)",
+  "scraped_from": "https://developers.google.com/sheets/api/reference/rest",
+  "scrape_date": "2026-04-12T23:37:15.481496",
+  "total_pages": 54,
+  "files": [
+    {
+      "filename": "api_spreadsheets.developerMetadata_get.md",
+      "title": "Method: spreadsheets.developerMetadata.get",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.developerMetadata/get"
+    },
+    {
+      "filename": "api_spreadsheets.developerMetadata_search.md",
+      "title": "Method: spreadsheets.developerMetadata.search",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.developerMetadata/search"
+    },
+    {
+      "filename": "api_spreadsheets.sheets_copyTo.md",
+      "title": "Method: spreadsheets.sheets.copyTo",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.sheets/copyTo"
+    },
+    {
+      "filename": "api_spreadsheets.values_append.md",
+      "title": "Method: spreadsheets.values.append",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchClear.md",
+      "title": "Method: spreadsheets.values.batchClear",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchClear"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchClearByDataFilter.md",
+      "title": "Method: spreadsheets.values.batchClearByDataFilter",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchClearByDataFilter"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchGet.md",
+      "title": "Method: spreadsheets.values.batchGet",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchGet"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchGetByDataFilter.md",
+      "title": "Method: spreadsheets.values.batchGetByDataFilter",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchGetByDataFilter"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchUpdate.md",
+      "title": "Method: spreadsheets.values.batchUpdate",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchUpdateByDataFilter.md",
+      "title": "Method: spreadsheets.values.batchUpdateByDataFilter",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdateByDataFilter"
+    },
+    {
+      "filename": "api_spreadsheets.values_clear.md",
+      "title": "Method: spreadsheets.values.clear",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/clear"
+    },
+    {
+      "filename": "api_spreadsheets.values_get.md",
+      "title": "Method: spreadsheets.values.get",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get"
+    },
+    {
+      "filename": "api_spreadsheets.values_update.md",
+      "title": "Method: spreadsheets.values.update",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update"
+    },
+    {
+      "filename": "api_spreadsheets_batchUpdate.md",
+      "title": "Method: spreadsheets.batchUpdate",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/batchUpdate"
+    },
+    {
+      "filename": "api_spreadsheets_create.md",
+      "title": "Method: spreadsheets.create",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/create"
+    },
+    {
+      "filename": "api_spreadsheets_get.md",
+      "title": "Method: spreadsheets.get",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/get"
+    },
+    {
+      "filename": "api_spreadsheets_getByDataFilter.md",
+      "title": "Method: spreadsheets.getByDataFilter",
+      "url": "https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/getByDataFilter"
+    },
+    {
+      "filename": "api_DataFilter.md",
+      "title": "DataFilter",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/DataFilter"
+    },
+    {
+      "filename": "api_DateTimeRenderOption.md",
+      "title": "DateTimeRenderOption",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/DateTimeRenderOption"
+    },
+    {
+      "filename": "api_Dimension.md",
+      "title": "Dimension",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/Dimension"
+    },
+    {
+      "filename": "api_DimensionRange.md",
+      "title": "DimensionRange",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/DimensionRange"
+    },
+    {
+      "filename": "api_ErrorCode.md",
+      "title": "ErrorCode",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/ErrorCode"
+    },
+    {
+      "filename": "api_ErrorDetails.md",
+      "title": "ErrorDetails",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/ErrorDetails"
+    },
+    {
+      "filename": "api_UpdateValuesResponse.md",
+      "title": "UpdateValuesResponse",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/UpdateValuesResponse"
+    },
+    {
+      "filename": "api_ValueInputOption.md",
+      "title": "ValueInputOption",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueInputOption"
+    },
+    {
+      "filename": "api_ValueRenderOption.md",
+      "title": "ValueRenderOption",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/ValueRenderOption"
+    },
+    {
+      "filename": "api_spreadsheets.md",
+      "title": "REST Resource: spreadsheets",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets"
+    },
+    {
+      "filename": "api_spreadsheets.developerMetadata.md",
+      "title": "REST Resource: spreadsheets.developerMetadata",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata"
+    },
+    {
+      "filename": "api_spreadsheets.developerMetadata_get.md",
+      "title": "Method: spreadsheets.developerMetadata.get",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata/get"
+    },
+    {
+      "filename": "api_spreadsheets.developerMetadata_search.md",
+      "title": "Method: spreadsheets.developerMetadata.search",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.developerMetadata/search"
+    },
+    {
+      "filename": "api_spreadsheets.sheets.md",
+      "title": "REST Resource: spreadsheets.sheets",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.sheets"
+    },
+    {
+      "filename": "api_spreadsheets.sheets_copyTo.md",
+      "title": "Method: spreadsheets.sheets.copyTo",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.sheets/copyTo"
+    },
+    {
+      "filename": "api_spreadsheets.values.md",
+      "title": "REST Resource: spreadsheets.values",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values"
+    },
+    {
+      "filename": "api_spreadsheets.values_append.md",
+      "title": "Method: spreadsheets.values.append",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/append"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchClear.md",
+      "title": "Method: spreadsheets.values.batchClear",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchClear"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchClearByDataFilter.md",
+      "title": "Method: spreadsheets.values.batchClearByDataFilter",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchClearByDataFilter"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchGet.md",
+      "title": "Method: spreadsheets.values.batchGet",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGet"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchGetByDataFilter.md",
+      "title": "Method: spreadsheets.values.batchGetByDataFilter",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchGetByDataFilter"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchUpdate.md",
+      "title": "Method: spreadsheets.values.batchUpdate",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdate"
+    },
+    {
+      "filename": "api_spreadsheets.values_batchUpdateByDataFilter.md",
+      "title": "Method: spreadsheets.values.batchUpdateByDataFilter",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/batchUpdateByDataFilter"
+    },
+    {
+      "filename": "api_spreadsheets.values_clear.md",
+      "title": "Method: spreadsheets.values.clear",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/clear"
+    },
+    {
+      "filename": "api_spreadsheets.values_get.md",
+      "title": "Method: spreadsheets.values.get",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/get"
+    },
+    {
+      "filename": "api_spreadsheets.values_update.md",
+      "title": "Method: spreadsheets.values.update",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets.values/update"
+    },
+    {
+      "filename": "api_spreadsheets_batchUpdate.md",
+      "title": "Method: spreadsheets.batchUpdate",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/batchUpdate"
+    },
+    {
+      "filename": "api_spreadsheets_cells.md",
+      "title": "Cells",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/cells"
+    },
+    {
+      "filename": "api_spreadsheets_charts.md",
+      "title": "Charts",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/charts"
+    },
+    {
+      "filename": "api_spreadsheets_create.md",
+      "title": "Method: spreadsheets.create",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/create"
+    },
+    {
+      "filename": "api_spreadsheets_get.md",
+      "title": "Method: spreadsheets.get",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/get"
+    },
+    {
+      "filename": "api_spreadsheets_getByDataFilter.md",
+      "title": "Method: spreadsheets.getByDataFilter",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/getByDataFilter"
+    },
+    {
+      "filename": "api_spreadsheets_other.md",
+      "title": "Other",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/other"
+    },
+    {
+      "filename": "api_spreadsheets_pivot-tables.md",
+      "title": "Pivot Tables",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/pivot-tables"
+    },
+    {
+      "filename": "api_spreadsheets_request.md",
+      "title": "Requests",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/request"
+    },
+    {
+      "filename": "api_spreadsheets_response.md",
+      "title": "Responses",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/response"
+    },
+    {
+      "filename": "api_spreadsheets_sheets.md",
+      "title": "Google Sheets",
+      "url": "https://developers.google.com/workspace/sheets/api/reference/rest/v4/spreadsheets/sheets"
+    }
+  ]
+}

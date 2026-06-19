@@ -1,0 +1,18 @@
+{
+  "get_inventory_item": {
+    "doc": "docs/api_inventory_get-inventory-item.md",
+    "endpoint": "GET /inventory_item/{seller_sku}"
+  },
+  "get_offers": {
+    "doc": "docs/api_inventory_get-offers.md",
+    "endpoint": "GET /offer"
+  },
+  "get_fulfillment_policies": {
+    "doc": "docs/api_account_get-fulfillment-policies.md",
+    "endpoint": "GET /fulfillment_policy"
+  },
+  "get_tasks": {
+    "doc": "docs/api_feed_get-tasks.md",
+    "endpoint": "GET /task"
+  }
+}

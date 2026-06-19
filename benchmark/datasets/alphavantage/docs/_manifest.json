@@ -1,0 +1,53 @@
+{
+  "source": "Alpha Vantage API (alphavantage.co/documentation)",
+  "scraped_from": "https://www.alphavantage.co/documentation/",
+  "scrape_date": "2026-05-12T11:29:28.077748",
+  "total_pages": 9,
+  "files": [
+    {
+      "filename": "api_time_series_data.md",
+      "title": "Stock Time Series",
+      "url": "https://www.alphavantage.co/documentation/#time-series-data"
+    },
+    {
+      "filename": "api_fundamentals.md",
+      "title": "Fundamental Data",
+      "url": "https://www.alphavantage.co/documentation/#fundamentals"
+    },
+    {
+      "filename": "api_options.md",
+      "title": "Options Data",
+      "url": "https://www.alphavantage.co/documentation/#options"
+    },
+    {
+      "filename": "api_intelligence.md",
+      "title": "Alpha Intelligence",
+      "url": "https://www.alphavantage.co/documentation/#intelligence"
+    },
+    {
+      "filename": "api_fx.md",
+      "title": "Forex / FX",
+      "url": "https://www.alphavantage.co/documentation/#fx"
+    },
+    {
+      "filename": "api_digital_currency.md",
+      "title": "Digital / Crypto Currency",
+      "url": "https://www.alphavantage.co/documentation/#digital-currency"
+    },
+    {
+      "filename": "api_commodities.md",
+      "title": "Commodities",
+      "url": "https://www.alphavantage.co/documentation/#commodities"
+    },
+    {
+      "filename": "api_economic_indicators.md",
+      "title": "Economic Indicators",
+      "url": "https://www.alphavantage.co/documentation/#economic-indicators"
+    },
+    {
+      "filename": "api_technical_indicators.md",
+      "title": "Technical Indicators",
+      "url": "https://www.alphavantage.co/documentation/#technical-indicators"
+    }
+  ]
+}

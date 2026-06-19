@@ -1,0 +1,22 @@
+{
+  "send_message": {
+    "doc": "docs/missing.md",
+    "endpoint": "POST /messages"
+  },
+  "get_messages": {
+    "doc": "docs/missing.md",
+    "endpoint": "GET /messages"
+  },
+  "delete_message": {
+    "doc": "docs/missing.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "create_stream": {
+    "doc": "docs/missing.md",
+    "endpoint": "POST /streams"
+  },
+  "subscribe_streams": {
+    "doc": "docs/missing.md",
+    "endpoint": "POST /users/me/subscriptions"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "catalog_get_product": {
+    "doc": "docs/catalog/get-product.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/{epa_id}"
+  },
+  "catalog_search_products": {
+    "doc": "docs/catalog/search-products.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product_summary/search"
+  },
+  "catalog_search_by_compatibility": {
+    "doc": "docs/catalog/search-by-compatibility.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product_summary/search_by_compatibility"
+  },
+  "catalog_get_product_metadata": {
+    "doc": "docs/catalog/get-product-metadata.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/{epa_id}/metadata"
+  },
+  "taxonomy_get_default_category_tree_id": {
+    "doc": "docs/taxonomy/get-default-category-tree-id.md",
+    "endpoint": "GET /commerce/taxonomy/v1/get_default_category_tree_id"
+  },
+  "taxonomy_get_category_tree": {
+    "doc": "docs/taxonomy/get-category-tree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"
+  },
+  "taxonomy_get_category_subtree": {
+    "doc": "docs/taxonomy/get-category-subtree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_subtree"
+  },
+  "taxonomy_get_category_suggestions": {
+    "doc": "docs/taxonomy/get-category-suggestions.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_suggestions"
+  },
+  "taxonomy_get_item_aspects_for_category": {
+    "doc": "docs/taxonomy/get-item-aspects-for-category.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_item_aspects_for_category"
+  },
+  "taxonomy_get_compatibility_properties": {
+    "doc": "docs/taxonomy/get-compatibility-properties.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_compatibility_properties"
+  },
+  "taxonomy_get_compatibility_property_values": {
+    "doc": "docs/taxonomy/get-compatibility-property-values.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_compatibility_property_values"
+  },
+  "identity_get_user": {
+    "doc": "docs/identity/get-user.md",
+    "endpoint": "GET /commerce/identity/v1/user/"
+  },
+  "media_create_image_from_url": {
+    "doc": "docs/media/create-image-from-url.md",
+    "endpoint": "POST /commerce/media/v1_beta/image_from_url"
+  },
+  "media_get_image": {
+    "doc": "docs/media/get-image.md",
+    "endpoint": "GET /commerce/media/v1_beta/image/{image_id}"
+  },
+  "media_create_video": {
+    "doc": "docs/media/create-video.md",
+    "endpoint": "POST /commerce/media/v1_beta/video"
+  },
+  "media_get_video": {
+    "doc": "docs/media/get-video.md",
+    "endpoint": "GET /commerce/media/v1_beta/video/{video_id}"
+  },
+  "media_upload_video": {
+    "doc": "docs/media/upload-video.md",
+    "endpoint": "PUT /commerce/media/v1_beta/video/{video_id}/upload"
+  },
+  "notification_get_config": {
+    "doc": "docs/notification/get-config.md",
+    "endpoint": "GET /commerce/notification/v1/config"
+  },
+  "notification_update_config": {
+    "doc": "docs/notification/update-config.md",
+    "endpoint": "PUT /commerce/notification/v1/config"
+  },
+  "notification_create_destination": {
+    "doc": "docs/notification/create-destination.md",
+    "endpoint": "POST /commerce/notification/v1/destination"
+  },
+  "notification_get_destination": {
+    "doc": "docs/notification/get-destination.md",
+    "endpoint": "GET /commerce/notification/v1/destination/{destination_id}"
+  },
+  "notification_delete_destination": {
+    "doc": "docs/notification/delete-destination.md",
+    "endpoint": "DELETE /commerce/notification/v1/destination/{destination_id}"
+  },
+  "notification_get_destinations": {
+    "doc": "docs/notification/get-destinations.md",
+    "endpoint": "GET /commerce/notification/v1/destination"
+  },
+  "notification_create_subscription": {
+    "doc": "docs/notification/create-subscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "notification_get_subscription": {
+    "doc": "docs/notification/get-subscription.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "notification_update_subscription": {
+    "doc": "docs/notification/update-subscription.md",
+    "endpoint": "PUT /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "notification_delete_subscription": {
+    "doc": "docs/notification/delete-subscription.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "notification_get_subscriptions": {
+    "doc": "docs/notification/get-subscriptions.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  },
+  "notification_get_topics": {
+    "doc": "docs/notification/get-topics.md",
+    "endpoint": "GET /commerce/notification/v1/topic"
+  },
+  "notification_get_topic": {
+    "doc": "docs/notification/get-topic.md",
+    "endpoint": "GET /commerce/notification/v1/topic/{topic_id}"
+  },
+  "charity_get_org": {
+    "doc": "docs/charity/get-charity-org.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org/{charity_org_id}"
+  },
+  "charity_search_orgs": {
+    "doc": "docs/charity/get-charity-orgs.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org"
+  },
+  "translation_translate": {
+    "doc": "docs/translation/translate.md",
+    "endpoint": "POST /commerce/translation/v1_beta/translate"
+  }
+}

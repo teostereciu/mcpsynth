@@ -1,0 +1,12 @@
+{
+  "dataset": "confluence",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 952.4899799823761,
+  "token_usage": {
+    "input_tokens": 1428972,
+    "output_tokens": 19183
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1729"
+}

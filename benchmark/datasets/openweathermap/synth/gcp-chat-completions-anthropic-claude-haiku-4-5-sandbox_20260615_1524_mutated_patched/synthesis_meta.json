@@ -1,0 +1,12 @@
+{
+  "dataset": "openweathermap",
+  "model": "gcp-chat-completions-anthropic-claude-haiku-4.5-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 772.402105808258,
+  "token_usage": {
+    "input_tokens": 1280040,
+    "output_tokens": 32815
+  },
+  "cost_estimate": null,
+  "timestamp": "20260615_1524"
+}

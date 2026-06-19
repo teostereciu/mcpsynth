@@ -1,0 +1,70 @@
+{
+  "send_message": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "POST /messages"
+  },
+  "get_message_history": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "GET /messages"
+  },
+  "edit_message": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "update_message_flags": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "POST /messages/flags"
+  },
+  "create_stream": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "POST /streams"
+  },
+  "subscribe_to_stream": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "archive_stream": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "update_stream_settings": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "get_topics_in_stream": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "GET /users/me/{stream_id}/topics"
+  },
+  "rename_topic": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "get_user_profile": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "get_user_presence": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "GET /users/{user_id}/presence"
+  },
+  "add_reaction": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "schedule_message": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "upload_file": {
+    "doc": "No specific documentation file available. Implemented based on general Zulip API knowledge.",
+    "endpoint": "POST /user_uploads"
+  }
+}

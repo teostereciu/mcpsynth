@@ -1,0 +1,198 @@
+{
+  "get_issue": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}"
+  },
+  "update_issue": {
+    "doc": "internal",
+    "endpoint": "PUT /rest/api/3/issue/{issueIdOrKey}"
+  },
+  "delete_issue": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/issue/{issueIdOrKey}"
+  },
+  "create_issue": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issue"
+  },
+  "search_issues_jql": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/search"
+  },
+  "get_project": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/project/{projectIdOrKey}"
+  },
+  "list_projects": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/project"
+  },
+  "create_project": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/project"
+  },
+  "update_project": {
+    "doc": "internal",
+    "endpoint": "PUT /rest/api/3/project/{projectIdOrKey}"
+  },
+  "delete_project": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/project/{projectIdOrKey}"
+  },
+  "assign_issue": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/assignee"
+  },
+  "transition_issue": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/transitions"
+  },
+  "add_comment": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/comment"
+  },
+  "update_comment": {
+    "doc": "internal",
+    "endpoint": "PUT /rest/api/3/issue/{issueIdOrKey}/comment/{commentId}"
+  },
+  "delete_comment": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/issue/{issueIdOrKey}/comment/{commentId}"
+  },
+  "add_worklog": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/worklog"
+  },
+  "update_worklog": {
+    "doc": "internal",
+    "endpoint": "PUT /rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}"
+  },
+  "delete_worklog": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/issue/{issueIdOrKey}/worklog/{worklogId}"
+  },
+  "add_attachment": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/attachments"
+  },
+  "add_watcher": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/watchers"
+  },
+  "remove_watcher": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/issue/{issueIdOrKey}/watchers"
+  },
+  "get_users_by_project": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/project/{projectIdOrKey}/users"
+  },
+  "get_issue_types": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/issuetype"
+  },
+  "get_priorities": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/priority"
+  },
+  "get_statuses": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/status"
+  },
+  "get_issue_type": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/issuetype/{id}"
+  },
+  "get_priority": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/priority/{id}"
+  },
+  "get_status": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/status/{id}"
+  },
+  "get_version": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/version/{id}"
+  },
+  "create_version": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/version"
+  },
+  "update_version": {
+    "doc": "internal",
+    "endpoint": "PUT /rest/api/3/version/{id}"
+  },
+  "delete_version": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/version/{id}"
+  },
+  "get_components": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/project/{projectIdOrKey}/components"
+  },
+  "create_component": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/project/{projectIdOrKey}/components"
+  },
+  "update_component": {
+    "doc": "internal",
+    "endpoint": "PUT /rest/api/3/component/{id}"
+  },
+  "delete_component": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/component/{id}"
+  },
+  "create_filter": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/filter"
+  },
+  "get_filter": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/filter/{id}"
+  },
+  "update_filter": {
+    "doc": "internal",
+    "endpoint": "PUT /rest/api/3/filter/{id}"
+  },
+  "delete_filter": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/filter/{id}"
+  },
+  "get_groups": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/group"
+  },
+  "create_group": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/group"
+  },
+  "add_user_to_group": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/group/user"
+  },
+  "remove_user_from_group": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/group/user"
+  },
+  "get_user": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/user"
+  },
+  "search_users": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/user/search"
+  },
+  "create_issue_link": {
+    "doc": "internal",
+    "endpoint": "POST /rest/api/3/issueLink"
+  },
+  "get_issue_links": {
+    "doc": "internal",
+    "endpoint": "GET /rest/api/3/issueLink/{issueLinkId}"
+  },
+  "delete_issue_link": {
+    "doc": "internal",
+    "endpoint": "DELETE /rest/api/3/issueLink/{issueLinkId}"
+  }
+}

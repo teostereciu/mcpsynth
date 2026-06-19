@@ -1,0 +1,119 @@
+# Agent evaluation tasks for Clockify API MCP server.
+#
+# Required env vars: CLOCKIFY_API_KEY
+#
+# Most endpoints are workspace-scoped; the agent must discover the workspace
+# via the list-workspaces tool. This is an API constraint, not a mechanic hint.
+
+tasks:
+  # ---------- READ ----------
+
+  - id: get_current_user
+    prompt: >
+      Find out which Clockify account this API key belongs to.
+      Report the user's name and email.
+    expected: email
+    tags: [read]
+    # Tests: GET /user; "email" is a specific field that only appears in user responses.
+
+  - id: list_workspaces
+    prompt: >
+      List all workspaces accessible with this API key.
+      Report the name of each workspace.
+    expected: memberships
+    tags: [read]
+    # Tests: GET /workspaces; "memberships" is a field specific to workspace objects,
+    # not generic enough to appear in any response.
+
+  - id: list_projects
+    prompt: >
+      List all projects in this account's workspace.
+      Report the name and ID of each project, or confirm there are none.
+    expected: workspaceId
+    tags: [read, multi-step]
+    # Tests: workspace discovery + GET /workspaces/{id}/projects;
+    # "workspaceId" appears in project objects and verifies the correct endpoint was hit.
+
+  - id: list_users_in_workspace
+    prompt: >
+      List the users in this account's workspace.
+      Report each user's name and membership status.
+    expected: membershipStatus
+    tags: [read, multi-step]
+    # Tests: workspace discovery + list users; "membershipStatus" is a Clockify-specific
+    # field that only appears in workspace member responses.
+
+  - id: list_clients
+    prompt: >
+      List all clients in this account's workspace.
+      Report how many clients exist and their names, or confirm there are none.
+    expected: workspaceId
+    tags: [read, multi-step]
+    # Tests: clients endpoint; "workspaceId" appears in client objects.
+
+  - id: list_tags
+    prompt: >
+      List all tags in this account's workspace.
+      Report the names of the tags, or confirm there are none.
+    expected: workspaceId
+    tags: [read, multi-step]
+    # Tests: tags endpoint; "workspaceId" in tag objects confirms correct endpoint.
+
+  # ---------- WRITE ----------
+
+  - id: create_project
+    prompt: >
+      Create a new project named "agent-eval-test-project" in this account's workspace.
+      Report the project ID.
+    expected: agent-eval-test-project
+    tags: [write, multi-step]
+    # Tests: workspace discovery + POST /workspaces/{id}/projects;
+    # "agent-eval-test-project" must appear in the response confirming the name was stored.
+
+  - id: create_tag
+    prompt: >
+      Create a new tag named "agent-eval" in this account's workspace.
+      Report the tag ID and name.
+    expected: agent-eval
+    tags: [write, multi-step]
+    # Tests: create tag; "agent-eval" must appear in the response.
+
+  - id: create_time_entry
+    prompt: >
+      Create a time entry in this account's workspace with:
+      - Description: "agent-eval-time-entry"
+      - Start time: 2026-01-15T09:00:00Z
+      - End time: 2026-01-15T10:00:00Z
+      Report the time entry ID.
+    expected: agent-eval-time-entry
+    tags: [write, multi-step]
+    # Tests: create time entry; the description must appear in the response confirming
+    # it was stored correctly.
+
+  - id: create_project_and_task
+    prompt: >
+      Create a project named "agent-eval-task-project" in this account's workspace.
+      Then create a task within that project named "agent-eval-task-item".
+      Report the task ID.
+    expected: agent-eval-task-item
+    tags: [write, multi-step]
+    # Tests: create project + create task; task name confirms end-to-end success.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: get_nonexistent_project
+    prompt: >
+      In this account's workspace, try to get details of a project with ID
+      "000000000000000000000000" (which does not exist).
+      Report what error or response you receive.
+    expected: error
+    tags: [read, error-handling, multi-step]
+    # Tests: 404 error handling for invalid project ID.
+
+  - id: create_project_empty_name
+    prompt: >
+      In this account's workspace, try to create a project with an empty name "".
+      Report what error or response you receive.
+    expected: error
+    tags: [write, error-handling, multi-step]
+    # Tests: validation error handling on project creation.

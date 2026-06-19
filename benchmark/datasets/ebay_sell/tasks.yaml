@@ -1,0 +1,173 @@
+# Agent evaluation tasks for eBay Sell API MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for design principles.
+#
+# Required env vars: EBAY_APP_ID, EBAY_CERT_ID, EBAY_REFRESH_TOKEN
+# EBAY_ENVIRONMENT defaults to SANDBOX
+
+tasks:
+
+  # Discriminates: must call the standards profile endpoint and surface the standardsLevel field
+  - id: get_seller_standards
+    prompt: >
+      Retrieve the seller standards profile for the current seller account using the
+      analytics API. Report the standards level (e.g. TOP_RATED, ABOVE_STANDARD,
+      BELOW_STANDARD) and the program type from the most recent evaluation cycle.
+    expected: standardsLevel
+    tags: [read]
+    # Tests: sell/analytics/v1/seller_standards_profile endpoint.
+    # "standardsLevel" is specific to this endpoint and does not appear in orders or
+    # inventory responses. The recommendation engine (sell/recommendation) returns 404
+    # in the eBay sandbox and has been removed.
+
+
+  # Discriminates: must call the standards profile endpoint and surface the metrics array
+  - id: get_sales_analytics
+    prompt: >
+      Retrieve the seller standards profile for the current seller account using the
+      analytics API. Find the profile marked as the default program. Report its
+      standardsLevel and list the metric names from its metrics array.
+    expected: metrics
+    tags: [read]
+    # Tests: sell/analytics/v1/seller_standards_profile.
+    # "metrics" is an array inside each standards profile; it only appears if the
+    # agent calls the analytics endpoint and parses the nested profile structure.
+    # The sandbox has no salesReport or traffic_report endpoint — only
+    # seller_standards_profile is confirmed working.
+
+  # Discriminates: must list locations and surface merchantLocationKey, not just confirm the call
+  - id: list_inventory_locations
+    prompt: >
+      List all inventory locations configured for the current seller account. Report the
+      location names and merchant location keys found, or confirm there are none.
+    expected: merchantLocationKey
+    tags: [read]
+
+  # Discriminates: must list fulfillment policies and surface name field, not just policy count
+  - id: list_fulfillment_policies
+    prompt: >
+      List all fulfillment policies configured for the US marketplace on the current seller
+      account. Report the policy names and their handling times, or confirm there are none.
+    expected: name
+    tags: [read]
+
+  # Discriminates: write call must succeed and echo back the SKU to confirm correct item creation
+  - id: create_inventory_item
+    prompt: >
+      Create an inventory item with SKU "AGENT-TEST-SKU-001", product title "Agent Test
+      Widget", description "A test product created by the MCP agent harness", condition NEW,
+      and 10 units available. Report whether the item was created successfully.
+    expected: AGENT-TEST-SKU-001
+    tags: [write]
+
+  # Discriminates: write must produce a fulfillmentPolicyId in the response, not just a 200 status
+  - id: create_fulfillment_policy
+    prompt: >
+      Create a fulfillment policy for the US marketplace with name "Agent Harness Shipping
+      Policy 2", USPSPriority as the shipping service with a cost of 5.99 USD, and a
+      handling time of 1 day. Report the policy ID created.
+    expected: fulfillmentPolicyId
+    tags: [write]
+    # Policy name must be unique on the account. "Agent Harness Shipping Policy 2"
+    # avoids collisions with policies created by prior runs ("Agent Test Shipping Policy"
+    # already exists). If this task is run repeatedly, delete stale policies first.
+
+  # Discriminates: must create policy with returnsAccepted and payerResponsible correctly set
+  - id: create_return_policy
+    prompt: >
+      Create a return policy for the US marketplace with name "Agent Harness Return Policy
+      2", returns accepted, a return period of 30 days, and the return shipping cost paid
+      by the buyer. Report the return policy ID created.
+    expected: returnPolicyId
+    tags: [write]
+    # Policy name must be unique on the account. "Agent Harness Return Policy 2"
+    # avoids collisions with policies from prior runs. If this task is run repeatedly,
+    # delete stale policies first.
+
+  # Discriminates: must create payment policy and surface paymentPolicyId from the response
+  # Note: eBay uses managed payments — no paymentMethods field is needed or accepted
+  - id: create_payment_policy
+    prompt: >
+      Create a payment policy for the US marketplace with name "Agent Harness Payment
+      Policy 2". eBay uses managed payments, so no specific payment method needs to be
+      specified. Report the payment policy ID created.
+    expected: paymentPolicyId
+    tags: [write]
+    # Policy name must be unique on the account. "Agent Harness Payment Policy 2"
+    # avoids collisions with policies from prior runs. If this task is run repeatedly,
+    # delete stale policies first.
+
+  # Discriminates: inventory create then retrieve must prove the item was persisted correctly
+  - id: get_inventory_item
+    prompt: >
+      Create an inventory item with SKU "AGENT-RETRIEVE-TEST-001", title "Agent Retrieve
+      Test", condition NEW, and 1 unit available. Then retrieve that inventory item by SKU
+      and confirm the details match what was submitted. Report the SKU and condition from
+      the retrieved item.
+    expected: AGENT-RETRIEVE-TEST-001
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: create then delete then retrieve — must confirm 404 on the final retrieval
+  - id: delete_inventory_item
+    prompt: >
+      Create an inventory item with SKU "AGENT-DELETE-TEST-001" with condition NEW and
+      1 unit available. Then delete it. Finally, attempt to retrieve it by SKU and confirm
+      it no longer exists. Report the HTTP status or error received on the retrieval attempt.
+    expected: "404"
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: must create two SKUs and a group linking them — group key must appear in output
+  - id: inventory_item_group
+    prompt: >
+      Create two inventory items: SKU "AGENT-GROUP-SKU-A" (condition NEW, 5 units, title
+      "Agent Group Item A") and SKU "AGENT-GROUP-SKU-B" (condition NEW, 5 units, title
+      "Agent Group Item B"). Then create an inventory item group with key "AGENT-GROUP-001"
+      linking both SKUs, with a variesBy specification on the "Color" aspect (values "Red"
+      and "Blue" for SKU-A and SKU-B respectively). Report the group key.
+    expected: AGENT-GROUP-001
+    tags: [write, multi-step, workflow]
+    # The inventory_item_group PUT endpoint requires a variesBy.specifications array
+    # (in addition to variantSKUs) or it returns error 25002 "variationInformation missing".
+    # Inventory item PUT requires Content-Language: en-US header or returns error 25709.
+
+  # Discriminates: full listing workflow — inventory item must be created and offer attempted
+  - id: create_listing_workflow
+    prompt: >
+      Complete a listing workflow for a new product. First create an inventory item with
+      SKU "AGENT-LISTING-TEST-001", title "Agent Test Product", condition NEW, and 5 units
+      available. Confirm the inventory item was created by retrieving it. Then attempt to
+      create a fixed-price offer for that SKU at 29.99 USD in category 9355 on the EBAY_US
+      marketplace. Report the SKU confirmed from the retrieval, and the offer ID if created
+      or the exact API error text if the offer creation fails.
+    expected: AGENT-LISTING-TEST-001
+    tags: [write, multi-step, workflow]
+    # Expected is the SKU echoed from the inventory retrieval — this can only appear if
+    # the agent actually calls inventory_get_inventory_item and reads the response.
+    # Using the SKU (not offerId) avoids a false positive where the agent mentions
+    # "offerId" in explanatory text without ever calling the offer creation endpoint.
+
+  # Discriminates: list locations and surface merchantLocationKey, confirm a known key exists
+  - id: inventory_location_workflow
+    prompt: >
+      Using the inventory locations API, list all inventory locations configured for the
+      current seller account. Report the merchant location key and name of each location
+      found, and the total count. Then retrieve the details of the first location by its
+      merchant location key and report its address.
+    expected: merchantLocationKey
+    tags: [read, multi-step]
+    # Rewritten as a read task: the sandbox account already has locations including
+    # "WAREHOUSE_AGENT_TEST". Creating a new location with the same key returns error
+    # 25803 "merchantLocationKey already exists" on repeated runs.
+    # Tests: list locations → get location by key (two-call chain).
+    # "merchantLocationKey" only appears if the list endpoint is called and parsed.
+
+  # Discriminates: must surface the eBay error structure for a nonexistent SKU
+  - id: error_handling_invalid_sku
+    prompt: >
+      Attempt to retrieve an inventory item with SKU "AGENT-NONEXISTENT-SKU-999".
+      Report the full error response received, including any HTTP status code or
+      error message text.
+    expected: "404"
+    tags: [read, error-handling]
+    # Tests: inventory_get_inventory_item with a SKU that does not exist.
+    # eBay returns HTTP 404 with an errors array; "404" must appear in the report.
+    # Taxonomy error-handling is covered by ebay_commerce/error_handling_invalid_category.

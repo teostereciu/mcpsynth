@@ -1,0 +1,66 @@
+{
+  "get_current_weather_by_city": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /weather"
+  },
+  "get_current_weather_by_coords": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /weather"
+  },
+  "get_current_weather_by_city_id": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /weather"
+  },
+  "get_current_weather_by_zip": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /weather"
+  },
+  "get_5_day_forecast_by_city": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /forecast"
+  },
+  "get_5_day_forecast_by_coords": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /forecast"
+  },
+  "get_5_day_forecast_by_city_id": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /forecast"
+  },
+  "get_5_day_forecast_by_zip": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /forecast"
+  },
+  "get_air_pollution_by_coords": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /air_pollution"
+  },
+  "get_air_pollution_by_city": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /air_pollution"
+  },
+  "get_air_pollution_history": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /air_pollution/history"
+  },
+  "geocode_city_name": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /weather"
+  },
+  "reverse_geocode": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /weather"
+  },
+  "get_weather_by_city_id_with_details": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /weather"
+  },
+  "get_weather_alerts_by_coords": {
+    "doc": "docs/weather-alerts.md",
+    "endpoint": "GET /alerts"
+  },
+  "get_weather_alerts_by_city": {
+    "doc": "docs/weather-alerts.md",
+    "endpoint": "GET /alerts"
+  }
+}

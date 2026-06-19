@@ -1,0 +1,9 @@
+[submodule "zulipchat-mcp"]
+	path = zulipchat-mcp
+	url = https://github.com/akougkas/zulipchat-mcp
+[submodule "benchmark/datasets/github_comprehensive/reference/github-mcp-server-official"]
+	path = benchmark/datasets/github_comprehensive/reference/github-mcp-server-official
+	url = https://github.com/github/github-mcp-server.git
+[submodule "master_ai_thesis_template"]
+	path = master_ai_thesis_template
+	url = https://github.com/teostereciu/master_ai_thesis_template.git

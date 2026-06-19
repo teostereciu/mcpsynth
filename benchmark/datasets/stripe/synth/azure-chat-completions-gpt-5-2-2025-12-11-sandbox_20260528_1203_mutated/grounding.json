@@ -1,0 +1,26 @@
+{
+  "stripe_create_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "stripe_retrieve_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents/{payment_intent_id}"
+  },
+  "stripe_update_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}"
+  },
+  "stripe_create_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges"
+  },
+  "stripe_retrieve_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /v1/charges/{charge_id}"
+  },
+  "stripe_update_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges/{charge_id}"
+  }
+}

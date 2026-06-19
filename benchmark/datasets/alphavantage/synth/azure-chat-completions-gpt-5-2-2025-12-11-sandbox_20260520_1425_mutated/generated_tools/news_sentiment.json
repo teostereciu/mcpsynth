@@ -1,0 +1,17 @@
+{
+  "name": "news_sentiment",
+  "description": "Market News & Sentiment (NEWS_SENTIMENT).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "tickers": {"type": "string", "description": "Comma-separated tickers"},
+      "topics": {"type": "string", "description": "Comma-separated topics"},
+      "time_from": {"type": "string", "description": "YYYYMMDDTHHMM"},
+      "time_to": {"type": "string", "description": "YYYYMMDDTHHMM"},
+      "sort": {"type": "string", "description": "LATEST|EARLIEST|RELEVANCE"},
+      "limit": {"type": "integer"},
+      "apikey": {"type": "string"}
+    },
+    "required": []
+  }
+}

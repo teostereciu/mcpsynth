@@ -1,0 +1,12 @@
+{
+  "dataset": "ebay_sell",
+  "model": "claude-sonnet-4-5-20251101",
+  "condition": "mutated",
+  "synthesis_time": 185.66508388519287,
+  "token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "cost_estimate": null,
+  "timestamp": "20260521_1023"
+}

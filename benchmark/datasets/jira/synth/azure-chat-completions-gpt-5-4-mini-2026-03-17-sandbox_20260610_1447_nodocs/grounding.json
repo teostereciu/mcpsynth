@@ -1,0 +1,22 @@
+{
+  "get_myself": {"doc": "docs/none.md", "endpoint": "GET /myself"},
+  "search_issues": {"doc": "docs/none.md", "endpoint": "GET /search"},
+  "get_issue": {"doc": "docs/none.md", "endpoint": "GET /issue/{issueIdOrKey}"},
+  "create_issue": {"doc": "docs/none.md", "endpoint": "POST /issue"},
+  "update_issue": {"doc": "docs/none.md", "endpoint": "PUT /issue/{issueIdOrKey}"},
+  "delete_issue": {"doc": "docs/none.md", "endpoint": "DELETE /issue/{issueIdOrKey}"},
+  "add_comment": {"doc": "docs/none.md", "endpoint": "POST /issue/{issueIdOrKey}/comment"},
+  "list_comments": {"doc": "docs/none.md", "endpoint": "GET /issue/{issueIdOrKey}/comment"},
+  "add_worklog": {"doc": "docs/none.md", "endpoint": "POST /issue/{issueIdOrKey}/worklog"},
+  "transition_issue": {"doc": "docs/none.md", "endpoint": "POST /issue/{issueIdOrKey}/transitions"},
+  "assign_issue": {"doc": "docs/none.md", "endpoint": "PUT /issue/{issueIdOrKey}/assignee"},
+  "add_watcher": {"doc": "docs/none.md", "endpoint": "POST /issue/{issueIdOrKey}/watchers"},
+  "remove_watcher": {"doc": "docs/none.md", "endpoint": "DELETE /issue/{issueIdOrKey}/watchers"},
+  "list_projects": {"doc": "docs/none.md", "endpoint": "GET /project/search"},
+  "get_project": {"doc": "docs/none.md", "endpoint": "GET /project/{projectIdOrKey}"},
+  "list_issue_types": {"doc": "docs/none.md", "endpoint": "GET /issuetype"},
+  "list_priorities": {"doc": "docs/none.md", "endpoint": "GET /priority"},
+  "list_statuses": {"doc": "docs/none.md", "endpoint": "GET /status"},
+  "list_filters": {"doc": "docs/none.md", "endpoint": "GET /filter/search"},
+  "get_filter": {"doc": "docs/none.md", "endpoint": "GET /filter/{filterId}"}
+}

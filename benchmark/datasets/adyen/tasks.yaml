@@ -1,0 +1,147 @@
+# Agent evaluation tasks for Adyen MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for design principles.
+#
+# Required env vars: ADYEN_API_KEY, ADYEN_MERCHANT_ACCOUNT, ADYEN_COMPANY_ACCOUNT
+# ADYEN_ENVIRONMENT defaults to "test"
+
+tasks:
+  # Discriminates: can the agent retrieve and surface merchant list (not just call the endpoint)
+  - id: list_all_merchants
+    prompt: >
+      List all merchant accounts that belong to the company account $ADYEN_COMPANY_ACCOUNT.
+      Report how many merchant accounts exist and their names.
+    expected: merchantId
+    tags: [read]
+
+  # Discriminates: can the agent retrieve account-level details and expose structured fields
+  - id: get_merchant_account
+    prompt: >
+      Retrieve the details of the merchant account $ADYEN_MERCHANT_ACCOUNT.
+      Report the account code, status, and the company account it belongs to.
+    expected: status
+    tags: [read]
+
+  # Discriminates: can the agent list stores and surface location identifiers
+  - id: list_stores
+    prompt: >
+      List all stores for the merchant account $ADYEN_MERCHANT_ACCOUNT.
+      Report the store IDs and names found, or confirm there are none if the list is empty.
+    expected: storeId
+    tags: [read]
+
+  # Discriminates: can the agent list webhooks and surface configured endpoint URLs
+  - id: list_webhooks
+    prompt: >
+      List all webhooks configured for the merchant account $ADYEN_MERCHANT_ACCOUNT.
+      Report the webhook URLs and whether each one is active, or confirm there are none.
+    expected: url
+    tags: [read]
+
+  # Discriminates: knows iDEAL is NL-specific (validates country-aware payment method routing)
+  - id: payment_methods_netherlands
+    prompt: >
+      Fetch available payment methods for a customer in the Netherlands (countryCode "NL"),
+      with an amount of 2500 EUR, for the merchant $ADYEN_MERCHANT_ACCOUNT.
+      Which payment methods are available? Is iDEAL in the list?
+    expected: ideal
+    tags: [read]
+
+  # Discriminates: can the agent pass amount + countryCode together correctly
+  - id: list_payment_methods_with_amount
+    prompt: >
+      Fetch available payment methods for the merchant account $ADYEN_MERCHANT_ACCOUNT
+      for a customer in Germany (countryCode "DE"), with an amount of 5000 EUR.
+      Report the names of the payment methods returned.
+    expected: paymentMethods
+    tags: [read]
+
+  # Discriminates: can the agent retrieve API credential details at company level
+  - id: get_api_credentials
+    prompt: >
+      List the API credentials configured for the company account $ADYEN_COMPANY_ACCOUNT.
+      Report the client keys or credential IDs found, or confirm there are none.
+    expected: clientKey
+    tags: [read]
+
+  # Discriminates: can the agent retrieve allowed origins (CORS config) at company level
+  - id: list_allowed_origins
+    prompt: >
+      List the allowed origins configured for the company account $ADYEN_COMPANY_ACCOUNT.
+      Report the domain names found, or confirm there are none.
+    expected: domain
+    tags: [read]
+
+  # Discriminates: can the agent call the Checkout Sessions endpoint and surface the session ID
+  - id: create_payment_session
+    prompt: >
+      Create a payment session for merchant account $ADYEN_MERCHANT_ACCOUNT with
+      an amount of 1000 USD, countryCode "US", returnUrl "https://example.com/return",
+      and reference "agent-test-session-001". Report the session ID returned.
+    expected: sessionId
+    tags: [write]
+
+  # Discriminates: can the agent create a webhook with event filtering, not just a generic endpoint
+  - id: create_webhook
+    prompt: >
+      Create a standard webhook for merchant account $ADYEN_MERCHANT_ACCOUNT that posts
+      to "https://httpbin.org/post" and is configured to receive AUTHORISATION events.
+      Report the webhook ID that is created.
+    expected: webhookId
+    tags: [write]
+
+  # Discriminates: multi-country comparison requiring three separate calls then synthesis
+  - id: compare_payment_methods_multi_country
+    prompt: >
+      Fetch available payment methods for the merchant $ADYEN_MERCHANT_ACCOUNT across
+      three countries: US (USD, amount 1000), NL (EUR, amount 1000), and DE (EUR,
+      amount 1000). List which payment methods appear in all three countries versus
+      those that are country-specific.
+    expected: paymentMethods
+    tags: [read, multi-step]
+
+  # Discriminates: compare payment method counts across GB, US, and AU — requires ranking
+  - id: compare_payment_method_counts
+    prompt: >
+      Fetch available payment methods for merchant $ADYEN_MERCHANT_ACCOUNT in the US
+      (USD, 1000), GB (GBP, 1000), and AU (AUD, 1000). Report which country has the
+      most payment methods available and include the counts for each.
+    expected: paymentMethods
+    tags: [read, multi-step]
+
+  # Discriminates: chains merchant detail retrieval to a subsequent payment methods call
+  - id: merchant_config_and_payment_methods
+    prompt: >
+      Retrieve the merchant account details for $ADYEN_MERCHANT_ACCOUNT, then fetch
+      payment methods for that account using countryCode "GB", amount 500, currency GBP.
+      Report the merchant status and the list of payment method types available.
+    expected: status
+    tags: [read, multi-step, workflow]
+
+  # Discriminates: session create + retrieve in sequence; reference must survive the round-trip
+  - id: payment_session_and_retrieve
+    prompt: >
+      Create a payment session for merchant $ADYEN_MERCHANT_ACCOUNT with amount 500 USD,
+      countryCode "US", returnUrl "https://example.com/return", and reference
+      "agent-session-verify-001". Then retrieve the session details using the session ID
+      that is returned. Report the session ID and the amount from the retrieved session.
+    expected: agent-session-verify-001
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: must produce a structured error message from Adyen, not a generic "error"
+  - id: error_handling_invalid_merchant
+    prompt: >
+      Attempt to retrieve merchant account details for a non-existent merchant account
+      called "NONEXISTENT_MERCHANT_99999". Report the full error response received,
+      including any error code or message text.
+    expected: "403"
+    tags: [read, error-handling]
+
+  # Discriminates: agents should not hallucinate success on operations that require valid credentials
+  - id: error_handling_invalid_api_key
+    prompt: >
+      Attempt to list payment methods for merchant $ADYEN_MERCHANT_ACCOUNT using countryCode
+      "US" and amount 1000 USD, but expect the underlying system to reject an invalid key.
+      If the call succeeds, report the payment method names. If it fails, report the exact
+      error text including any HTTP status code or Adyen error code returned.
+    expected: paymentMethods
+    tags: [read, error-handling]

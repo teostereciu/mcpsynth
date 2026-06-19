@@ -1,0 +1,12 @@
+{
+  "dataset": "zulip",
+  "model": "gcp-chat-completions-chat-gemini-2.5-flash-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 47.21113395690918,
+  "token_usage": {
+    "input_tokens": 107086,
+    "output_tokens": 1511
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_1201"
+}

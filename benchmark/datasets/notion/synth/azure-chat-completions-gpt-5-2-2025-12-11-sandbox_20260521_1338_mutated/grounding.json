@@ -1,0 +1,122 @@
+{
+  "notion_pages_create": {
+    "doc": "docs/post-page.md",
+    "endpoint": "POST /v1/pages"
+  },
+  "notion_pages_retrieve": {
+    "doc": "docs/retrieve-a-page.md",
+    "endpoint": "GET /v1/pages/{page_id}"
+  },
+  "notion_pages_update": {
+    "doc": "docs/patch-page.md",
+    "endpoint": "PATCH /v1/pages/{page_id}"
+  },
+  "notion_pages_retrieve_property_item": {
+    "doc": "docs/retrieve-a-page-property.md",
+    "endpoint": "GET /v1/pages/{page_id}/properties/{property_id}"
+  },
+  "notion_pages_move": {
+    "doc": "docs/move-page.md",
+    "endpoint": "POST /v1/pages/{page_id}/move"
+  },
+  "notion_databases_create": {
+    "doc": "docs/create-a-database.md",
+    "endpoint": "POST /v1/databases"
+  },
+  "notion_databases_retrieve": {
+    "doc": "docs/retrieve-a-database.md",
+    "endpoint": "GET /v1/databases/{database_id}"
+  },
+  "notion_databases_update": {
+    "doc": "docs/update-a-database.md",
+    "endpoint": "PATCH /v1/databases/{database_id}"
+  },
+  "notion_databases_query": {
+    "doc": "docs/post-database-query.md",
+    "endpoint": "POST /v1/databases/{database_id}/query"
+  },
+  "notion_data_sources_create": {
+    "doc": "docs/create-a-data-source.md",
+    "endpoint": "POST /v1/data_sources"
+  },
+  "notion_data_sources_retrieve": {
+    "doc": "docs/retrieve-a-data-source.md",
+    "endpoint": "GET /v1/data_sources/{data_source_id}"
+  },
+  "notion_data_sources_update": {
+    "doc": "docs/update-a-data-source.md",
+    "endpoint": "PATCH /v1/data_sources/{data_source_id}"
+  },
+  "notion_data_sources_query": {
+    "doc": "docs/query-a-data-source.md",
+    "endpoint": "POST /v1/data_sources/{data_source_id}/query"
+  },
+  "notion_blocks_retrieve": {
+    "doc": "docs/retrieve-a-block.md",
+    "endpoint": "GET /v1/blocks/{block_id}"
+  },
+  "notion_blocks_children_list": {
+    "doc": "docs/get-block-children.md",
+    "endpoint": "GET /v1/blocks/{block_id}/children"
+  },
+  "notion_blocks_children_append": {
+    "doc": "docs/patch-block-children.md",
+    "endpoint": "PATCH /v1/blocks/{block_id}/children"
+  },
+  "notion_blocks_update": {
+    "doc": "docs/update-a-block.md",
+    "endpoint": "PATCH /v1/blocks/{block_id}"
+  },
+  "notion_blocks_delete": {
+    "doc": "docs/delete-a-block.md",
+    "endpoint": "DELETE /v1/blocks/{block_id}"
+  },
+  "notion_comments_create": {
+    "doc": "docs/create-a-comment.md",
+    "endpoint": "POST /v1/comments"
+  },
+  "notion_comments_retrieve": {
+    "doc": "docs/retrieve-comment.md",
+    "endpoint": "GET /v1/comments/{comment_id}"
+  },
+  "notion_comments_list": {
+    "doc": "docs/list-comments.md",
+    "endpoint": "GET /v1/comments"
+  },
+  "notion_users_list": {
+    "doc": "docs/get-users.md",
+    "endpoint": "GET /v1/users"
+  },
+  "notion_users_retrieve": {
+    "doc": "docs/get-user.md",
+    "endpoint": "GET /v1/users/{user_id}"
+  },
+  "notion_users_me": {
+    "doc": "docs/get-self.md",
+    "endpoint": "GET /v1/users/me"
+  },
+  "notion_search": {
+    "doc": "docs/post-search.md",
+    "endpoint": "POST /v1/search"
+  },
+  "notion_file_uploads_create": {
+    "doc": "docs/create-a-file-upload.md",
+    "endpoint": "POST /v1/file_uploads"
+  },
+  "notion_file_uploads_send": {
+    "doc": "docs/send-a-file-upload.md",
+    "endpoint": "POST /v1/file_uploads/{file_upload_id}/send"
+  },
+  "notion_file_uploads_complete": {
+    "doc": "docs/complete-a-file-upload.md",
+    "endpoint": "POST /v1/file_uploads/{file_upload_id}/complete"
+  },
+  "notion_file_uploads_retrieve": {
+    "doc": "docs/retrieve-a-file-upload.md",
+    "endpoint": "GET /v1/file_uploads/{file_upload_id}"
+  },
+  "notion_file_uploads_list": {
+    "doc": "docs/list-file-uploads.md",
+    "endpoint": "GET /v1/file_uploads"
+  }
+}

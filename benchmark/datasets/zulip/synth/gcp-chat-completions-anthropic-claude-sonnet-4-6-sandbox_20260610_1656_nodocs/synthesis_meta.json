@@ -1,0 +1,12 @@
+{
+  "dataset": "zulip",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 615.4423589706421,
+  "token_usage": {
+    "input_tokens": 440753,
+    "output_tokens": 29792
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1656"
+}

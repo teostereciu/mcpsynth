@@ -1,0 +1,1376 @@
+{
+  "agent_model": "gcp-chat-completions-chat-gemini-2.5-pro-sandbox",
+  "judge_model": "gcp-chat-completions-chat-gemini-3-flash-preview-sandbox",
+  "synth_model": null,
+  "timestamp": "20260521_1024",
+  "total_elapsed_s": 6804.4,
+  "results": [
+    {
+      "dataset": "jira",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260520_1447",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 12,
+      "total": 16,
+      "pass_rate": 0.75,
+      "task_results": [
+        {
+          "id": "get_current_user",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am unable to retrieve the profile of the currently authenticated user without their account ID. If you can provide the account ID, I can retrieve the display name, email address, and account ID for that user.",
+          "judge_reasoning": "THE MCP SERVER DOES NOT PROVIDE A TOOL FOR THE 'MYSELF' ENDPOINT, WHICH IS THE STANDARD WAY TO RETRIEVE THE CURRENTLY AUTHENTICATED USER'S PROFILE IN JIRA.",
+          "harness_error": ""
+        },
+        {
+          "id": "list_projects",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The user has access to the following project: \n\n- **Project Key:** SCRUM \n- **Name:** My Team \n- **Project Type:** software",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND USED THE GET_ALL_PROJECTS TOOL. IT SUCCESSFULLY EXTRACTED THE KEY, NAME, AND PROJECT TYPE FROM THE RESPONSE AND PRESENTED THEM AS REQUESTED. ALTHOUGH ONLY ONE PROJECT WAS REPORTED, THIS WAS CONSISTENT WITH THE TOOL OUTPUT PROVIDED.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_issues_jql",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 2,
+          "final_answer": "I am sorry, but I was unable to complete your request. The `search_issues_get` and `search_issues_post` tools that I tried to use to search for issues using JQL are both deprecated and returned \"410 Gone\" errors.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND USED THE APPROPRIATE TOOLS, BUT THE SERVER'S SEARCH TOOLS ARE NON-FUNCTIONAL AS THEY POINT TO DEPRECATED JIRA API ENDPOINTS.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_issue_types",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "Following are the issue types available in Jira:\n\n**Name**: Subtask\n**Description**: Subtasks track small pieces of work that are part of a larger task.",
+          "judge_reasoning": "THE TOOL RETURNED A SINGLE TRUNCATED JSON OBJECT INSTEAD OF A FULL LIST OF ISSUE TYPES, AND THE AGENT FAILED TO RECOGNIZE THE DATA WAS INCOMPLETE.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_issue_details",
+          "success": true,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 4,
+          "final_answer": "I am sorry, but I was unable to retrieve the most recently created Jira issue. The API that I use to search for issues is not currently available. I can, however, report on the most recent projects.",
+          "judge_reasoning": "THE SEARCH TOOLS PROVIDED BY THE SERVER CALL A JIRA API ENDPOINT THAT HAS BEEN REMOVED, MAKING IT IMPOSSIBLE TO FIND ISSUES.",
+          "harness_error": ""
+        },
+        {
+          "id": "list_issue_link_types",
+          "success": false,
+          "num_turns": 1,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools do not provide a way to list the available issue link types.",
+          "judge_reasoning": "THE MCP SERVER LACKS THE NECESSARY TOOL (GET /ISSUELINKTYPE) TO RETRIEVE THE LIST OF ISSUE LINK TYPES.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_project_statuses",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "The workflow statuses for the project 'My Team' are:\n- In Progress (category: In Progress)\n- Done (category: Done)\n- To Do (category: To Do)",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE PROJECT AND STATUS TOOLS TO RETRIEVE AND REPORT THE REQUIRED INFORMATION.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_issue",
+          "success": false,
+          "num_turns": 9,
+          "num_tool_calls": 8,
+          "num_errors": 2,
+          "final_answer": "I am unable to create a Jira issue. After finding a project and an appropriate issue type, every attempt to create the issue failed with an error indicating the description field was not in the correct format, even when formatting it as a simple string and as a valid Atlassian Document Format (ADF) object.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY CREATED THE ISSUE MULTIPLE TIMES (SCRUM-58, SCRUM-59, SCRUM-61) BUT INCORRECTLY REPORTED THAT IT HAD FAILED.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_and_comment",
+          "success": true,
+          "num_turns": 7,
+          "num_tool_calls": 6,
+          "num_errors": 2,
+          "final_answer": "",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY IDENTIFIED A PROJECT, CREATED AN ISSUE, AND ADDED A COMMENT USING THE REQUIRED ATLASSIAN DOCUMENT FORMAT AFTER A SELF-CORRECTION.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_update_transition",
+          "success": true,
+          "num_turns": 10,
+          "num_tool_calls": 9,
+          "num_errors": 1,
+          "final_answer": "I have created an issue with the key SCRUM-64 and summary \"Agent test: transition workflow\". I then updated its description to \"Updated by agent harness\". Finally, I transitioned the issue to the \"To Do\" status using the \"To Do\" transition.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY NAVIGATED THE JIRA API, INCLUDING HANDLING THE COMPLEX ATLASSIAN DOCUMENT FORMAT FOR THE DESCRIPTION UPDATE. IT COMPLETED ALL STEPS, ALTHOUGH IT FAILED TO STRICTLY FOLLOW THE \"NON-INITIAL STATUS\" CONSTRAINT BY SELECTING THE FIRST TRANSITION IN THE LIST (\"TO DO\") WHICH IS TYPICALLY THE INITIAL STATUS.",
+          "harness_error": ""
+        },
+        {
+          "id": "issue_with_watcher",
+          "success": true,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "I have created the issue, added a watcher, and verified the watcher appears on the issue.\n\nThe issue key is SCRUM-66 and the watcher count is 1.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY NAVIGATED THE JIRA WORKFLOW, CREATING AN ISSUE AND MANAGING WATCHERS AS REQUESTED.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_and_link_issues",
+          "success": true,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 1,
+          "final_answer": "I have created two issues, SCRUM-70 (\"Agent Test Parent\") and SCRUM-71 (\"Agent Test Child\"). However, I was unable to link them as the `create_issue_link` tool failed with a JSON parsing error.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND USED ALL NECESSARY TOOLS. THE FAILURE TO COMPLETE THE FINAL STEP (LINKING) WAS DUE TO A TECHNICAL ERROR IN THE MCP TOOL IMPLEMENTATION (FAILING TO PARSE AN EMPTY SUCCESS RESPONSE), NOT AN AGENT ERROR.",
+          "harness_error": ""
+        },
+        {
+          "id": "update_issue_priority",
+          "success": true,
+          "num_turns": 4,
+          "num_tool_calls": 3,
+          "num_errors": 3,
+          "final_answer": "I am unable to fulfill this request. The `search_issues_get` and `search_issues_post` APIs that I have access to are deprecated and no longer functional. I am unable to search for the issue to update its priority.",
+          "judge_reasoning": "THE SEARCH TOOLS PROVIDED BY THE MCP SERVER ARE BROKEN AS THEY POINT TO A DEPRECATED AND REMOVED JIRA API ENDPOINT.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_and_log_work",
+          "success": true,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "The issue SCRUM-73 was created and a worklog was added with a timeSpent of 1h.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY COMPLETED ALL STEPS OF THE TASK USING THE APPROPRIATE TOOLS AND PROVIDED THE CORRECT FINAL INFORMATION.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_and_delete_comment",
+          "success": true,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 1,
+          "final_answer": "I am unable to add a comment to the issue. I have tried a few options for the format of the comment body but I am still receiving an error. Can you please provide the correct format for the comment body? I can show you the tool definition if that would be helpful.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY ADDED THE COMMENT IN STEP 5 BUT INCORRECTLY INTERPRETED THE SUCCESSFUL RESPONSE AS A FAILURE AND GAVE UP ON THE TASK.",
+          "harness_error": ""
+        },
+        {
+          "id": "error_handling_invalid_issue",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I attempted to retrieve the Jira issue with the key \"INVALID-99999\". The server responded with an HTTP 404 error, and the error message was: \"Issue does not exist or you do not have permission to see it.\"",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE TOOL, PROVIDED THE CORRECT PARAMETERS, AND ACCURATELY REPORTED THE ERROR RESPONSE FROM THE SERVER.",
+          "harness_error": ""
+        }
+      ]
+    },
+    {
+      "dataset": "confluence",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260520_1442",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 19,
+      "total": 21,
+      "pass_rate": 0.9048,
+      "task_results": [
+        {
+          "id": "get_current_user",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "This integration is being run as Teodora Stereciu, account ID 712020:be44c81c-5268-4674-ac89-19ed5d6c0447.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND USED THE GET_CURRENT_USER TOOL TO RETRIEVE THE REQUIRED ACCOUNT INFORMATION.",
+          "harness_error": ""
+        },
+        {
+          "id": "list_spaces",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The following spaces are available in this Confluence instance:\n\n**Key:** SYNTH\n**Name:** Synth Test Space",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE LIST_SPACES TOOL AND REPORTED THE NAME AND KEY OF THE AVAILABLE SPACE.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_space_and_homepage",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "The Confluence space with key \"SYNTH\" is named \"Synth Test Space\". Its homepage has the ID \"229490\" and the title \"Synth Test Space Home\".",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE TOOLS TO FIND THE SPACE, GET THE HOMEPAGE ID, AND THEN FETCH THE PAGE DETAILS TO PROVIDE THE NAME, ID, AND TITLE.",
+          "harness_error": ""
+        },
+        {
+          "id": "list_pages_in_space",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "There is 1 page in the Confluence space with key \"SYNTH\". The title of the page is \"Synth Test Space Home\".",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE LIST_SPACES TOOL TO FIND THE SPACE ID AND THEN USED LIST_PAGES TO RETRIEVE THE PAGES AND THEIR TITLES.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_content_cql",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The search for content in the \"SYNTH\" space returned 4 results: \"API Test Blog\", \"Synth Test Space Home\", \"SYNTH-default\", and \"Synth Test Space\".",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE SEARCH_CONTENT TOOL WITH THE PROVIDED CQL QUERY AND ACCURATELY REPORTED THE RESULTS.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_page",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "The page has been created with ID 2752513. You can view it at https://testsynth.atlassian.net/wiki/spaces/SYNTH/pages/2752513/Agent+eval+test+page.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE SPACE ID, CREATED THE PAGE WITH THE REQUESTED CONTENT, AND PROVIDED THE RESULTING ID AND URL.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_page_with_storage_format",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "The Confluence page was created with page ID 2719746.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE SPACE ID, CREATED THE PAGE WITH THE SPECIFIED CONTENT AND FORMAT, AND REPORTED THE RESULTING PAGE ID.",
+          "harness_error": ""
+        },
+        {
+          "id": "update_page",
+          "success": true,
+          "num_turns": 4,
+          "num_tool_calls": 3,
+          "num_errors": 0,
+          "final_answer": "The page was created with the initial content and then updated. The page ID is 2785281 and the new version number is 2.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE SPACE, CREATED THE PAGE, UPDATED IT, AND REPORTED THE CORRECT ID AND VERSION NUMBER.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_and_get_page",
+          "success": true,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 1,
+          "final_answer": "I have created a page in space \"SYNTH\" with the title \"Agent eval round-trip test\" and the body \"Round-trip content.\". I then fetched the same page, and I can confirm that the title is \"Agent eval round-trip test\" and the body is \"Round-trip content.\".",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY CREATED THE PAGE, FOUND ITS ID, FETCHED IT, AND REPORTED THE CONTENT AS REQUESTED.",
+          "harness_error": ""
+        },
+        {
+          "id": "delete_page",
+          "success": true,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 0,
+          "final_answer": "I have created and deleted the page \"Agent eval delete test\" in the \"SYNTH\" space. A final check confirms the page has been deleted and its status is now \"trashed\".",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY CREATED THE PAGE, DELETED IT, AND VERIFIED THE DELETION BY FETCHING THE PAGE AND CORRECTLY INTERPRETING THE 'TRASHED' STATUS IN THE RESPONSE.",
+          "harness_error": ""
+        },
+        {
+          "id": "add_label_to_page",
+          "success": true,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 0,
+          "final_answer": "I have created a page in the \"SYNTH\" space with the title \"Agent eval label test\" and the body \"Label test.\" I then added the label \"agent-eval\" to this page. Finally, I fetched the labels for the page and found the following label: \"agent-eval\".",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY USED THE AVAILABLE TOOLS TO CREATE THE PAGE, ADD THE LABEL, AND VERIFY THE LABEL'S PRESENCE.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_footer_comment",
+          "success": true,
+          "num_turns": 4,
+          "num_tool_calls": 3,
+          "num_errors": 0,
+          "final_answer": "I have created a page in space \"SYNTH\" titled \"Agent eval comment test\" with the body \"Comment target.\" I then added a footer comment to that page with the text \"This is a test comment from the agent harness.\" The ID of the created comment is 3014657.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY CREATED THE PAGE AND THE COMMENT, THEN CORRECTLY REPORTED THE COMMENT ID.",
+          "harness_error": ""
+        },
+        {
+          "id": "list_page_versions",
+          "success": true,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 0,
+          "final_answer": "I have created a page in the \"SYNTH\" space with the title \"Agent eval version test\" and content \"Version 1.\" I then updated the page with the new content \"Version 2.\" There are now 2 versions of this page.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY USED THE TOOLS TO CREATE A PAGE, UPDATE IT, AND VERIFY THE VERSION COUNT.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_blog_post",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "The blog post has been created with ID 3047425. You can view it at https://testsynth.atlassian.net/wiki/spaces/SYNTH/blog/2026/05/21/3047425/Agent+eval+blog+post.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE SPACE ID, CREATED THE BLOG POST WITH THE SPECIFIED CONTENT, AND REPORTED THE RESULTING ID AND URL.",
+          "harness_error": ""
+        },
+        {
+          "id": "upload_attachment",
+          "success": false,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "I have created a page with the title \"Agent eval attachment test\" and the content \"Attachment target.\" in the \"SYNTH\" space. The ID of the new page is 3080193. I am unable to upload the attachment as I cannot find a tool to do so.",
+          "judge_reasoning": "THE MCP SERVER DOES NOT PROVIDE A TOOL TO UPLOAD OR CREATE ATTACHMENTS, WHICH WAS A REQUIRED PART OF THE TASK.",
+          "harness_error": ""
+        },
+        {
+          "id": "set_content_property",
+          "success": true,
+          "num_turns": 9,
+          "num_tool_calls": 8,
+          "num_errors": 3,
+          "final_answer": "The page property has been created and then retrieved. The value of the property is `{'status': 'tested'}`.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY CREATED THE PAGE, SET THE PROPERTY, AND RETRIEVED IT, REPORTING THE CORRECT VALUE.",
+          "harness_error": ""
+        },
+        {
+          "id": "full_page_lifecycle",
+          "success": true,
+          "num_turns": 7,
+          "num_tool_calls": 6,
+          "num_errors": 0,
+          "final_answer": "The page ID is 3112961, the comment ID is 2752553, and the CQL search returned 1 result.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY PERFORMED ALL REQUESTED OPERATIONS AND REPORTED THE CORRECT IDS AND SEARCH RESULT COUNT.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_page_hierarchy",
+          "success": false,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 1,
+          "final_answer": "I have created the parent page with ID 2752555 and the child page with ID 2752556. The child page appears as a child of the parent page.\n\nParent Page ID: 2752555\nChild Page ID: 2752556\nChild Page Title: Agent eval child page",
+          "judge_reasoning": "THE AGENT FAILED TO RETRIEVE THE CHILDREN OF THE PARENT PAGE AS REQUESTED. IT CREATED THE PAGES BUT THEN SKIPPED THE VERIFICATION STEP AND HALLUCINATED THAT IT HAD CONFIRMED THE CHILD PAGE'S PRESENCE FROM A \"CHILDREN RESPONSE\" WHICH IT NEVER OBTAINED.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_nonexistent_page",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I tried to get a Confluence page with ID \"999999999\", but I received an error indicating that the page could not be found. The error message was \"Cannot find a page with id [999999999]\" and the status code was 404.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE APPROPRIATE TOOL, PROVIDED THE CORRECT PARAMETERS, AND ACCURATELY REPORTED THE ERROR RESPONSE FROM THE API.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_page_missing_space",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I tried to create a page in a space with the key \"DOESNOTEXIST\", but the request failed. The server responded with an error indicating that the space ID was invalid. It seems that the system requires a numerical ID for the space, not a key like \"DOESNOTEXIST\".",
+          "judge_reasoning": "THE AGENT CORRECTLY ATTEMPTED TO CREATE A PAGE USING THE PROVIDED INVALID SPACE KEY, RECEIVED AN ERROR FROM THE API, AND REPORTED THAT ERROR AS REQUESTED.",
+          "harness_error": ""
+        },
+        {
+          "id": "cql_create_and_search",
+          "success": true,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 0,
+          "final_answer": "I have completed the following steps:\n\n1. I created a page in the \"SYNTH\" space with the title \"Agent CQL Verify Test\" and the body \"CQL verification page.\"\n2. I searched for the page using the CQL query `title = \"Agent CQL Verify Test\" AND space = \"SYNTH\"`. The search returned one result with the page ID \"2949142\".\n3. I deleted the page.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY CREATED THE PAGE, SEARCHED FOR IT USING THE SPECIFIED CQL, REPORTED THE CORRECT RESULTS, AND DELETED THE PAGE.",
+          "harness_error": ""
+        }
+      ]
+    },
+    {
+      "dataset": "spoonacular",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260520_1447",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 10,
+      "total": 17,
+      "pass_rate": 0.5882,
+      "task_results": [
+        {
+          "id": "search_recipes_by_query",
+          "success": true,
+          "num_turns": 4,
+          "num_tool_calls": 3,
+          "num_errors": 0,
+          "final_answer": "Here are the top 3 recipes for \"pasta carbonara\":\n\n* **Orecchiette Carbonara** (ID: 654005)\n* **Linguine Alla Carbonara** (ID: 650119)\n* **Brussels Sprout Carbonara with Fettuccini** (ID: 636360)",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY RETRIEVED THE REQUESTED INFORMATION AFTER CORRECTING A PARAMETER ERROR CAUSED BY THE TOOL'S SCHEMA REQUIRING AN EMPTY FILTER OBJECT.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_recipes_by_ingredient",
+          "success": true,
+          "num_turns": 13,
+          "num_tool_calls": 12,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools are unable to search for recipes with the given ingredients.",
+          "judge_reasoning": "THE AGENT SUCCESSFULLY RETRIEVED MULTIPLE RECIPE TITLES ACROSS SEVERAL TOOL CALLS BUT FAILED TO REPORT THEM, INSTEAD STATING IT COULD NOT FULFILL THE REQUEST.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_vegetarian_recipes",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The top 3 vegetarian pasta recipes are: \"Rustic Pasta with Chunky Vegetables\" (ID 1096282), \"Basil Tagliatelle with Roasted Red Bell Pepper Salad\" (ID 634437), and \"Pasta With Feta Cheese And Asparagus\" (ID 1697541).",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE TOOL, USED APPROPRIATE PARAMETERS, AND REPORTED THE REQUESTED INFORMATION FROM THE RESULTS.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_recipe_information",
+          "success": false,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I could not find a recipe with the ID 716429.",
+          "judge_reasoning": "THE SERVER IS MISSING THE GET_RECIPE_INFORMATION TOOL, WHICH IS THE ONLY WAY TO RETRIEVE A SPECIFIC RECIPE BY ITS ID.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_recipe_ingredients",
+          "success": false,
+          "num_turns": 1,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "I cannot fulfill this request. I do not have a tool that can retrieve recipe information by ID.",
+          "judge_reasoning": "THE SERVER DOES NOT PROVIDE A TOOL TO RETRIEVE RECIPE INFORMATION OR INGREDIENTS BY RECIPE ID.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_recipe_instructions",
+          "success": false,
+          "num_turns": 4,
+          "num_tool_calls": 3,
+          "num_errors": 0,
+          "final_answer": "I am sorry, but I was unable to retrieve the cooking instructions for recipe ID 716429 using the available tools. I tried several ways to get the information, but none of them were successful.",
+          "judge_reasoning": "THE MCP SERVER DOES NOT PROVIDE THE NECESSARY TOOLS TO RETRIEVE RECIPE INSTRUCTIONS OR INFORMATION BY ID, SUCH AS THE GETRECIPEINFORMATION OR GETANALYZEDRECIPEINSTRUCTIONS ENDPOINTS.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_similar_recipes",
+          "success": false,
+          "num_turns": 1,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools do not allow me to look up a recipe by its ID and find similar recipes.",
+          "judge_reasoning": "THE SERVER DOES NOT PROVIDE THE NECESSARY TOOL TO FIND SIMILAR RECIPES BY ID OR EVEN TO RETRIEVE RECIPE DETAILS BY ID.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_ingredients",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The top 5 ingredients matching the query \"apple\" are:\n\n- apple (ID: 9003)\n- applesauce (ID: 9019)\n- apple juice (ID: 9016)\n- apple cider (ID: 1009016)\n- apple jelly (ID: 10019297)",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE INGREDIENT_SEARCH TOOL WITH THE APPROPRIATE PARAMETERS AND ACCURATELY REPORTED THE NAMES AND IDS FROM THE RESULTS.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_ingredient_information",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "An apple with ID 9003 has 52 calories per 100g.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE TOOL, PROVIDED THE RIGHT PARAMETERS, AND EXTRACTED THE CORRECT INFORMATION FROM THE RESPONSE.",
+          "harness_error": ""
+        },
+        {
+          "id": "generate_meal_plan",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "Your daily meal plan is as follows:\n* Homemade Muesli Breakfast Cereal\n* Pasta With Feta Cheese And Asparagus\n* The Best Of England Salad\n\nThe total calories for this meal plan is 2000.22.",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE GENERATE_MEAL_PLAN TOOL WITH THE SPECIFIED PARAMETERS AND ACCURATELY REPORTED THE RESULTS.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_wine_pairing",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "For steak, the recommended wine pairings are Pinot Noir, Merlot, and Cabernet Sauvignon.\n\nHere's a brief description of why these pairings work well: Beef and red wine are a classic combination. Lighter, leaner steaks pair well with light or medium-bodied red wines like Pinot Noir or Merlot. Fattier steaks can handle a bolder red, such as Cabernet Sauvignon.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE WINE_PAIRING TOOL, PROVIDED THE CORRECT PARAMETERS, AND ACCURATELY SUMMARIZED THE RESULTS FOR THE USER.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_then_get_info",
+          "success": true,
+          "num_turns": 10,
+          "num_tool_calls": 9,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill your request. The `search_recipes_complex` tool is not working as expected, and I am unable to find a workaround. I have tried multiple approaches to solve this problem, but none of them were successful.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE SEARCH TOOL BUT THE TOOL RETURNED TRUNCATED JSON AND REQUIRED A NUTRIENT FILTER FOR A SIMPLE SEARCH. ADDITIONALLY, THE SERVER LACKED A DEDICATED TOOL TO RETRIEVE RECIPE DETAILS BY ID AS REQUESTED.",
+          "harness_error": ""
+        },
+        {
+          "id": "recipe_info_then_instructions",
+          "success": false,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 0,
+          "final_answer": "I am sorry, but I was unable to retrieve the information for the chicken stir fry recipe with ID 715538. The tool that I need to use to get this information is currently unavailable.",
+          "judge_reasoning": "THE SERVER LACKS THE NECESSARY TOOLS TO RETRIEVE RECIPE DETAILS OR INSTRUCTIONS BY A SPECIFIC ID.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_then_similar",
+          "success": true,
+          "num_turns": 4,
+          "num_tool_calls": 3,
+          "num_errors": 1,
+          "final_answer": "I am sorry, I cannot fulfill your request. The `search_recipes_complex` tool is not working as expected and I am unable to search for recipes. I have tried to use other tools to find the information you requested, but I was not successful. I apologize for the inconvenience.",
+          "judge_reasoning": "THE AGENT WAS UNABLE TO COMPLETE THE TASK BECAUSE IT HIT A DAILY API LIMIT (HTTP 402) AND THE MCP SERVER LACKED THE NECESSARY TOOL TO FETCH SIMILAR RECIPES.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_recipe_nutrition_chain",
+          "success": true,
+          "num_turns": 7,
+          "num_tool_calls": 6,
+          "num_errors": 5,
+          "final_answer": "I am sorry, but I have reached my daily limit for API requests and cannot complete your request at this time. Please try again later.",
+          "judge_reasoning": "THE AGENT WAS UNABLE TO COMPLETE THE TASK BECAUSE THE API RETURNED A 402 ERROR INDICATING THE DAILY LIMIT HAD BEEN REACHED.",
+          "harness_error": ""
+        },
+        {
+          "id": "nutrient_search_then_compare",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to complete your request as my daily points limit for the recipe API has been reached.",
+          "judge_reasoning": "THE AGENT WAS UNABLE TO COMPLETE THE TASK BECAUSE THE API LIMIT WAS REACHED (HTTP 402), AND IT ALSO USED AN INCORRECT NESTED PARAMETER STRUCTURE FOR THE CALORIE FILTER.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_nonexistent_recipe",
+          "success": false,
+          "num_turns": 1,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "I am sorry, but I cannot fulfill this request. None of the available tools allow searching for a recipe by its ID.",
+          "judge_reasoning": "THE SERVER LACKS A TOOL TO RETRIEVE RECIPE INFORMATION BY ID, SO THE AGENT COULD NOT ATTEMPT THE TASK AS INSTRUCTED.",
+          "harness_error": ""
+        }
+      ]
+    },
+    {
+      "dataset": "alphavantage",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260520_1447",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 0,
+      "total": 19,
+      "pass_rate": 0.0,
+      "task_results": [
+        {
+          "id": "get_stock_quote",
+          "success": false,
+          "num_turns": 7,
+          "num_tool_calls": 6,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I was unable to retrieve the current quote for the stock symbol \"IBM\". I tried several tools, but they all failed.",
+          "judge_reasoning": "THE AGENT REPEATEDLY USED AN INCORRECT PARAMETER FORMAT BY WRAPPING ARGUMENTS IN A 'KWARGS' FIELD, WHICH WAS NOT PART OF THE TOOL SCHEMA.",
+          "harness_error": ""
+        },
+        {
+          "id": "daily_time_series",
+          "success": false,
+          "num_turns": 11,
+          "num_tool_calls": 10,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools are not functioning correctly, and I am unable to retrieve the requested information.",
+          "judge_reasoning": "THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER THAT THE UNDERLYING IMPLEMENTATION DID NOT SUPPORT, LEADING TO A CONSTANT ERROR LOOP.",
+          "harness_error": ""
+        },
+        {
+          "id": "intraday_time_series",
+          "success": false,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I was unable to retrieve the intraday stock price data for IBM. The tool I used to retrieve the data is currently not working.",
+          "judge_reasoning": "THE AGENT REPEATEDLY PASSED ARGUMENTS INSIDE A 'KWARGS' KEY INSTEAD OF AS DIRECT PARAMETERS, DESPITE RECEIVING ERROR MESSAGES INDICATING 'KWARGS' WAS NOT AN ACCEPTED ARGUMENT.",
+          "harness_error": ""
+        },
+        {
+          "id": "weekly_time_series",
+          "success": false,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "THE TOOL'S SCHEMA REQUIRED A 'KWARGS' PARAMETER THAT THE UNDERLYING FUNCTION IMPLEMENTATION REJECTED, MAKING THE TOOL UNUSABLE.",
+          "harness_error": ""
+        },
+        {
+          "id": "symbol_search",
+          "success": false,
+          "num_turns": 8,
+          "num_tool_calls": 7,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools are not functioning correctly.",
+          "judge_reasoning": "THE AGENT REPEATEDLY USED AN INCORRECT PARAMETER STRUCTURE (\"KWARGS\" WRAPPER) AND FAILED TO CORRECT ITS APPROACH DESPITE CLEAR ERROR MESSAGES.",
+          "harness_error": ""
+        },
+        {
+          "id": "forex_exchange_rate",
+          "success": false,
+          "num_turns": 10,
+          "num_tool_calls": 9,
+          "num_errors": 0,
+          "final_answer": "I am sorry, but I was unable to get the exchange rate from EUR to USD. The tool I have for this purpose is not working correctly.",
+          "judge_reasoning": "THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER, BUT THE UNDERLYING FUNCTION IMPLEMENTATION DID NOT ACCEPT IT, MAKING THE TOOL UNUSABLE.",
+          "harness_error": ""
+        },
+        {
+          "id": "forex_daily_series",
+          "success": false,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I was unable to get the daily FX time series for EUR to USD using the available tools. The `fx_daily_tool` failed with an unexpected keyword argument error. I tried several different ways of passing the arguments, but none of them worked.",
+          "judge_reasoning": "THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER, BUT THE TOOL IMPLEMENTATION CRASHED WHEN THAT PARAMETER WAS PROVIDED.",
+          "harness_error": ""
+        },
+        {
+          "id": "crypto_exchange_rate",
+          "success": false,
+          "num_turns": 7,
+          "num_tool_calls": 6,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools are not functioning as expected.",
+          "judge_reasoning": "THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER THAT THE UNDERLYING FUNCTION IMPLEMENTATION DID NOT ACCEPT, CREATING AN IMPOSSIBLE INTERFACE FOR THE AGENT.",
+          "harness_error": ""
+        },
+        {
+          "id": "rsi_indicator",
+          "success": false,
+          "num_turns": 5,
+          "num_tool_calls": 4,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "THE AGENT FAILED TO CORRECTLY FORMAT THE TOOL ARGUMENTS, REPEATEDLY WRAPPING THEM IN A 'KWARGS' KEY DESPITE RECEIVING ERROR MESSAGES INDICATING THAT 'KWARGS' WAS AN UNEXPECTED ARGUMENT.",
+          "harness_error": ""
+        },
+        {
+          "id": "sma_indicator",
+          "success": false,
+          "num_turns": 7,
+          "num_tool_calls": 6,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER THAT THE UNDERLYING FUNCTION IMPLEMENTATION DID NOT SUPPORT, CAUSING ALL CALLS TO FAIL.",
+          "harness_error": ""
+        },
+        {
+          "id": "company_overview",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools lack the desired functionality.",
+          "judge_reasoning": "THE AGENT FAILED TO CORRECTLY FORMAT THE TOOL ARGUMENTS AND GAVE UP AFTER A SINGLE ERROR INSTEAD OF ATTEMPTING TO FIX THE PARAMETER STRUCTURE.",
+          "harness_error": ""
+        },
+        {
+          "id": "earnings_data",
+          "success": false,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "I am sorry, but I encountered an error while trying to retrieve the earnings data for AAPL. The tool returned the following error: `earnings() got an unexpected keyword argument 'kwargs'`. I tried calling the tool again, but it resulted in the same error. Therefore, I am unable to provide you with the most recent quarter's reported EPS and estimated EPS for AAPL.",
+          "judge_reasoning": "THE AGENT INCORRECTLY WRAPPED THE TOOL ARGUMENTS IN A 'KWARGS' PARAMETER AND FAILED TO CORRECT THIS AFTER RECEIVING A CLEAR ERROR MESSAGE.",
+          "harness_error": ""
+        },
+        {
+          "id": "cpi_data",
+          "success": false,
+          "num_turns": 6,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "I am sorry, but I cannot fulfill this request. The `cpi_tool` is not working as expected and is returning an error. I have tried calling it with and without parameters, but it fails in every case.",
+          "judge_reasoning": "THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER, BUT THE UNDERLYING IMPLEMENTATION REJECTED IT, MAKING THE TOOL UNUSABLE.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_then_overview",
+          "success": false,
+          "num_turns": 13,
+          "num_tool_calls": 12,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I cannot fulfill this request. The available tools are not functioning as expected.",
+          "judge_reasoning": "THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER THAT THE UNDERLYING FUNCTION IMPLEMENTATION DID NOT ACCEPT, MAKING THE TOOLS UNUSABLE.",
+          "harness_error": ""
+        },
+        {
+          "id": "multi_quote_rank",
+          "success": false,
+          "num_turns": 4,
+          "num_tool_calls": 5,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I am unable to get the current stock quotes because the `stock_quote_tool` is not working as expected. I have tried various ways to call the tool, but it consistently fails with an error indicating a problem with its arguments.",
+          "judge_reasoning": "THE AGENT REPEATEDLY USED AN INCORRECT PARAMETER FORMAT (WRAPPING ARGUMENTS IN A 'KWARGS' KEY) AND FAILED TO CORRECT ITS APPROACH DESPITE CLEAR ERROR MESSAGES.",
+          "harness_error": ""
+        },
+        {
+          "id": "daily_vs_weekly_compare",
+          "success": false,
+          "num_turns": 6,
+          "num_tool_calls": 10,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I am having trouble accessing the information you requested. Please try again later.",
+          "judge_reasoning": "THE AGENT REPEATEDLY USED AN INCORRECT PARAMETER STRUCTURE (WRAPPING ARGUMENTS IN 'KWARGS') AND FAILED TO ADAPT AFTER RECEIVING CLEAR ERROR MESSAGES.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_quote_rsi_chain",
+          "success": false,
+          "num_turns": 9,
+          "num_tool_calls": 8,
+          "num_errors": 0,
+          "final_answer": "I am sorry, but I was unable to complete your request. I encountered an error while trying to use the available tools. I recommend trying again later.",
+          "judge_reasoning": "THE AGENT REPEATEDLY USED AN INCORRECT 'KWARGS' WRAPPER FOR TOOL ARGUMENTS AND FAILED TO CORRECT ITS BEHAVIOR DESPITE RECEIVING CLEAR ERROR MESSAGES.",
+          "harness_error": ""
+        },
+        {
+          "id": "overview_then_earnings",
+          "success": false,
+          "num_turns": 10,
+          "num_tool_calls": 17,
+          "num_errors": 0,
+          "final_answer": "I am sorry, I was unable to process your request. The tools required to fulfill your request are not working correctly. Please try again later.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED THE TOOLS BUT WAS UNABLE TO CALL THEM BECAUSE THE TOOL SCHEMA REQUIRED A 'KWARGS' PARAMETER THAT THE IMPLEMENTATION THEN REJECTED.",
+          "harness_error": ""
+        },
+        {
+          "id": "invalid_symbol",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "Error executing tool stock_quote_tool: stock_quote() got an unexpected keyword argument 'kwargs'\nThe API returned the following error: {\"stock_quote_tool_response\": {\"output\": \"Error executing tool stock_quote_tool: stock_quote() got an unexpected keyword argument 'kwargs'\"}}",
+          "judge_reasoning": "THE AGENT FAILED TO CALL THE TOOL WITH THE CORRECT PARAMETER STRUCTURE, RESULTING IN A TOOL EXECUTION ERROR INSTEAD OF AN API RESPONSE.",
+          "harness_error": ""
+        }
+      ]
+    },
+    {
+      "dataset": "shopify",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260520_1442",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 0,
+      "total": 18,
+      "pass_rate": 0.0,
+      "task_results": [
+        {
+          "id": "get_shop_info",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "list_products",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_and_list_draft_order",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_and_verify_customer_list",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "list_webhooks",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "filter_products_by_status",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "list_inventory_locations",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_product",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_webhook",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_price_rule",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_customer",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_product_then_update",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "price_rule_and_discount_code",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_product_then_get_details",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "draft_order_with_line_items",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_product_with_variant",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "inventory_level_workflow",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "error_handling_invalid_resource",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        }
+      ]
+    },
+    {
+      "dataset": "mastodon",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260520_1451_docs",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 14,
+      "total": 15,
+      "pass_rate": 0.9333,
+      "task_results": [
+        {
+          "id": "get_authenticated_account",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "This token belongs to the user with the username \"test1103\". The display name is not set.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND USED THE APPROPRIATE TOOL TO RETRIEVE ACCOUNT INFORMATION AND ACCURATELY REPORTED THE REQUESTED FIELDS.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_instance_info",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "This Mastodon instance, mastodon.social, is running software version 4.6.0-nightly.2026-05-21-security and has 282,000 active users in the last month.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND USED THE APPROPRIATE TOOL, BUT IT REPORTED THE MONTHLY ACTIVE USER COUNT INSTEAD OF THE REQUESTED TOTAL USER COUNT.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_home_timeline",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The home timeline has 1 status.\n- Username: test1103, Visibility: public",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE TOOL, INTERPRETED THE RESULT, AND PROVIDED ALL REQUESTED INFORMATION.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_statuses",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The author username (acct) and visibility of the first 3 statuses found are:\n\n1. **Author:** undercodenews, **Visibility:** public\n2. **Author:** KSTA@social.cologne, **Visibility:** public\n3. **Author:** rogue_corq@mas.corq.co, **Visibility:** public",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE SEARCH TOOL WITH THE SPECIFIED PARAMETERS AND EXTRACTED THE REQUIRED INFORMATION FROM THE RESULTS.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_content",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The top 3 Mastodon accounts matching \"mastodon\" are: \n\n1. Mastodon\n2. Mastodon\n3. amministratore\n\nThe top 3 hashtags matching \"mastodon\" are: \n\n1. mastodon\n2. mastodonart\n3. mastodonfc",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE SEARCH TOOL TO FIND BOTH ACCOUNTS AND HASHTAGS AND REPORTED THE TOP 3 OF EACH AS REQUESTED.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_notifications",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "There are no notifications for this account.",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE AVAILABLE TOOLS TO CHECK FOR NOTIFICATIONS AND ACCURATELY REPORTED THE RESULT.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_bookmarks",
+          "success": false,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 1,
+          "final_answer": "I was able to create the status with ID 116612034365604373, but I was unable to bookmark it due to a server error. As a result, I am unable to proceed with the rest of your request to list bookmarks, find the newly bookmarked status, remove the bookmark, and delete the status.",
+          "judge_reasoning": "THE SERVER LACKS A DEDICATED BOOKMARKING TOOL AND THE GENERIC REQUEST TOOL FAILED, AND THE AGENT DID NOT CLEAN UP THE CREATED STATUS.",
+          "harness_error": ""
+        },
+        {
+          "id": "post_status",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "New status posted.\nStatus ID: 116612037916123164\nURL: https://mastodon.social/@test1103/116612037916123164",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE CREATE_STATUS TOOL AND REPORTED THE REQUESTED INFORMATION.",
+          "harness_error": ""
+        },
+        {
+          "id": "post_and_delete_status",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to create the status. The server returned a 503 error with the message \"We're sorry, but something went wrong on our end.\"",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND USED THE APPROPRIATE TOOL, BUT THE TASK COULD NOT BE COMPLETED DUE TO A SERVER-SIDE ERROR FROM THE MASTODON INSTANCE.",
+          "harness_error": ""
+        },
+        {
+          "id": "post_and_favourite",
+          "success": true,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 0,
+          "final_answer": "I have posted the status \"Agent eval favourite test — safe to ignore.\" and have successfully favourited it. The status is now marked as favourited.",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE CREATE_STATUS AND FAVOURITE_STATUS TOOLS TO COMPLETE THE TASK AND CONFIRMED THE RESULT.",
+          "harness_error": ""
+        },
+        {
+          "id": "post_with_spoiler",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 0,
+          "final_answer": "The new status has been created with ID 116612041954212400. The spoiler_text, \"Agent eval CW test\", was stored correctly.",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE CREATE_STATUS TOOL WITH ALL REQUIRED PARAMETERS AND VERIFIED THE RESULT FROM THE TOOL'S OUTPUT.",
+          "harness_error": ""
+        },
+        {
+          "id": "create_and_delete_list",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to create the list as the `create_list` tool failed with a 503 status code and the error message \"We're sorry, but something went wrong on our end.\". As a result, I was unable to complete the request to delete the list and report on the deleted list ID.",
+          "judge_reasoning": "THE AGENT CORRECTLY IDENTIFIED AND CALLED THE APPROPRIATE TOOL WITH CORRECT PARAMETERS, BUT THE TOOL FAILED DUE TO A SERVER-SIDE ERROR WHICH THE AGENT CORRECTLY INTERPRETED.",
+          "harness_error": ""
+        },
+        {
+          "id": "bookmark_status",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "The `create_status` tool failed.",
+          "judge_reasoning": "THE CREATE_STATUS TOOL FAILED WITH AN HTML ERROR RESPONSE, PREVENTING THE AGENT FROM STARTING THE TASK.",
+          "harness_error": ""
+        },
+        {
+          "id": "get_nonexistent_status",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "When I tried to get a status with the ID \"99999999999999999999\", I received a \"Not Found\" error with a status code of 404.",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE GET_STATUS TOOL WITH THE PROVIDED ID AND ACCURATELY REPORTED THE RESULTING 404 ERROR.",
+          "harness_error": ""
+        },
+        {
+          "id": "post_status_empty_content",
+          "success": true,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "When attempting to post a status with completely empty content, the server responded with a validation error. The error message was \"Validation failed: Text can't be blank\", and the HTTP status code was 422. This indicates that a status update cannot be empty and must contain some text.",
+          "judge_reasoning": "THE AGENT CORRECTLY USED THE CREATE_STATUS TOOL WITH EMPTY PARAMETERS, RECEIVED A VALIDATION ERROR FROM THE API, AND REPORTED IT ACCURATELY.",
+          "harness_error": ""
+        }
+      ]
+    },
+    {
+      "dataset": "openweathermap",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260520_1447",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 0,
+      "total": 23,
+      "pass_rate": 0.0,
+      "task_results": [
+        {
+          "id": "current_weather_london",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "weather_feels_like",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "wind_conditions",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "cloud_and_visibility",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "pressure_and_humidity",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "sunrise_sunset",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "forecast_timestamps",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "forecast_precipitation",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "forecast_temperature_range",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "air_quality_paris",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "air_quality_level",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "geocode_city",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "reverse_geocode",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "geocode_then_weather",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "humidity_comparison",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "temperature_ranking",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "weather_and_air_quality",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "geocode_then_air_pollution_forecast",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "zip_weather_vs_city_weather",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "five_city_temperature_ranking",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "forecast_hottest_slot",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "air_quality_history_vs_forecast",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "full_city_conditions",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        }
+      ]
+    }
+  ]
+}

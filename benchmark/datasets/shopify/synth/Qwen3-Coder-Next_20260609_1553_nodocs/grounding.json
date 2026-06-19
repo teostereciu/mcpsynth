@@ -1,0 +1,330 @@
+{
+  "get_products": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/products#list-products",
+    "endpoint": "GET /admin/api/2026-01/products.json"
+  },
+  "get_product": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/products#get-a-product",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}.json"
+  },
+  "create_product": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/products#create-a-product",
+    "endpoint": "POST /admin/api/2026-01/products.json"
+  },
+  "update_product": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/products#update-a-product",
+    "endpoint": "PUT /admin/api/2026-01/products/{product_id}.json"
+  },
+  "delete_product": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/products#delete-a-product",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}.json"
+  },
+  "get_product_variants": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-variants#list-product-variants",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/variants.json"
+  },
+  "get_product_variant": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-variants#get-a-product-variant",
+    "endpoint": "GET /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "create_product_variant": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-variants#create-a-product-variant",
+    "endpoint": "POST /admin/api/2026-01/products/{product_id}/variants.json"
+  },
+  "update_product_variant": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-variants#update-a-product-variant",
+    "endpoint": "PUT /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "delete_product_variant": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-variants#delete-a-product-variant",
+    "endpoint": "DELETE /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "get_product_images": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-images#list-product-images",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/images.json"
+  },
+  "create_product_image": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-images#create-a-product-image",
+    "endpoint": "POST /admin/api/2026-01/products/{product_id}/images.json"
+  },
+  "update_product_image": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-images#update-a-product-image",
+    "endpoint": "PUT /admin/api/2026-01/products/{product_id}/images/{image_id}.json"
+  },
+  "delete_product_image": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-images#delete-a-product-image",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}/images/{image_id}.json"
+  },
+  "get_collections": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collections#list-collections",
+    "endpoint": "GET /admin/api/2026-01/collections.json"
+  },
+  "get_collection": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collections#get-a-collection",
+    "endpoint": "GET /admin/api/2026-01/collections/{collection_id}.json"
+  },
+  "create_collection": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collections#create-a-collection",
+    "endpoint": "POST /admin/api/2026-01/collections.json"
+  },
+  "update_collection": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collections#update-a-collection",
+    "endpoint": "PUT /admin/api/2026-01/collections/{collection_id}.json"
+  },
+  "delete_collection": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collections#delete-a-collection",
+    "endpoint": "DELETE /admin/api/2026-01/collections/{collection_id}.json"
+  },
+  "add_product_to_collection": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collection-products#create-a-collection-product",
+    "endpoint": "POST /admin/api/2026-01/collections/{collection_id}/product_entries.json"
+  },
+  "remove_product_from_collection": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collection-products#delete-a-collection-product",
+    "endpoint": "DELETE /admin/api/2026-01/collections/{collection_id}/products/{product_id}.json"
+  },
+  "get_orders": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#list-orders",
+    "endpoint": "GET /admin/api/2026-01/orders.json"
+  },
+  "get_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#get-an-order",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "create_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#create-an-order",
+    "endpoint": "POST /admin/api/2026-01/orders.json"
+  },
+  "update_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#update-an-order",
+    "endpoint": "PUT /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "cancel_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#cancel-an-order",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/cancel.json"
+  },
+  "close_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#close-an-order",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/close.json"
+  },
+  "open_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#open-an-order",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/open.json"
+  },
+  "delete_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/orders#delete-an-order",
+    "endpoint": "DELETE /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "get_draft_orders": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/draft-orders#list-draft-orders",
+    "endpoint": "GET /admin/api/2026-01/draft_orders.json"
+  },
+  "get_draft_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/draft-orders#get-a-draft-order",
+    "endpoint": "GET /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "create_draft_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/draft-orders#create-a-draft-order",
+    "endpoint": "POST /admin/api/2026-01/draft_orders.json"
+  },
+  "update_draft_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/draft-orders#update-a-draft-order",
+    "endpoint": "PUT /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "delete_draft_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/draft-orders#delete-a-draft-order",
+    "endpoint": "DELETE /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "complete_draft_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/draft-orders#complete-a-draft-order",
+    "endpoint": "POST /admin/api/2026-01/draft_orders/{draft_order_id}/complete.json"
+  },
+  "get_customers": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customers#list-customers",
+    "endpoint": "GET /admin/api/2026-01/customers.json"
+  },
+  "get_customer": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customers#get-a-customer",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "create_customer": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customers#create-a-customer",
+    "endpoint": "POST /admin/api/2026-01/customers.json"
+  },
+  "update_customer": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customers#update-a-customer",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "delete_customer": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customers#delete-a-customer",
+    "endpoint": "DELETE /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "get_inventory_items": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventory-items#list-inventory-items",
+    "endpoint": "GET /admin/api/2026-01/inventory_items.json"
+  },
+  "update_inventory_item": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventory-items#update-an-inventory-item",
+    "endpoint": "PUT /admin/api/2026-01/inventory_items/{inventory_item_id}.json"
+  },
+  "get_inventory_levels": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventory-levels#list-inventory-levels",
+    "endpoint": "GET /admin/api/2026-01/inventory_levels.json"
+  },
+  "adjust_inventory_level": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventory-levels#adjust-inventory-level",
+    "endpoint": "POST /admin/api/2026-01/inventory_levels/adjust.json"
+  },
+  "set_inventory_level": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventory-levels#set-inventory-level",
+    "endpoint": "POST /admin/api/2026-01/inventory_levels/set.json"
+  },
+  "get_locations": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/locations#list-locations",
+    "endpoint": "GET /admin/api/2026-01/locations.json"
+  },
+  "get_location": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/locations#get-a-location",
+    "endpoint": "GET /admin/api/2026-01/locations/{location_id}.json"
+  },
+  "get_fulfillments": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillments#list-fulfillments",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/fulfillments.json"
+  },
+  "create_fulfillment": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillments#create-a-fulfillment",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/fulfillments.json"
+  },
+  "get_fulfillment": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillments#get-a-fulfillment",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/fulfillments/{fulfillment_id}.json"
+  },
+  "create_refund": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/refunds#create-a-refund",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/refunds.json"
+  },
+  "get_transactions": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/transactions#list-transactions",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/transactions.json"
+  },
+  "create_transaction": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/transactions#create-a-transaction",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/transactions.json"
+  },
+  "get_price_rules": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/price-rules#list-price-rules",
+    "endpoint": "GET /admin/api/2026-01/price_rules.json"
+  },
+  "get_price_rule": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/price-rules#get-a-price-rule",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "create_price_rule": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/price-rules#create-a-price-rule",
+    "endpoint": "POST /admin/api/2026-01/price_rules.json"
+  },
+  "update_price_rule": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/price-rules#update-a-price-rule",
+    "endpoint": "PUT /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "delete_price_rule": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/price-rules#delete-a-price-rule",
+    "endpoint": "DELETE /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "get_price_rule_codes": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/discount-codes#list-discount-codes",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes.json"
+  },
+  "get_metafields": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/metafields#list-metafields",
+    "endpoint": "GET /admin/api/2026-01/metafields.json"
+  },
+  "create_metafield": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/metafields#create-a-metafield",
+    "endpoint": "POST /admin/api/2026-01/metafields.json"
+  },
+  "get_metafield": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/metafields#get-a-metafield",
+    "endpoint": "GET /admin/api/2026-01/metafields/{metafield_id}.json"
+  },
+  "update_metafield": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/metafields#update-a-metafield",
+    "endpoint": "PUT /admin/api/2026-01/metafields/{metafield_id}.json"
+  },
+  "delete_metafield": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/metafields#delete-a-metafield",
+    "endpoint": "DELETE /admin/api/2026-01/metafields/{metafield_id}.json"
+  },
+  "get_webhooks": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/webhooks#list-webhooks",
+    "endpoint": "GET /admin/api/2026-01/webhooks.json"
+  },
+  "get_webhook": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/webhooks#get-a-webhook",
+    "endpoint": "GET /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "create_webhook": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/webhooks#create-a-webhook",
+    "endpoint": "POST /admin/api/2026-01/webhooks.json"
+  },
+  "update_webhook": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/webhooks#update-a-webhook",
+    "endpoint": "PUT /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "delete_webhook": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/webhooks#delete-a-webhook",
+    "endpoint": "DELETE /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "get_shop": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/shop#get-the-shop",
+    "endpoint": "GET /admin/api/2026-01/shop.json"
+  },
+  "get_order_transports": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/order-transports#list-order-transports",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/transports.json"
+  },
+  "create_order_transport": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/order-transports#create-an-order-transport",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/transports.json"
+  },
+  "get_customer_addresses": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customer-addresses#list-customer-addresses",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}/addresses.json"
+  },
+  "get_customer_address": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customer-addresses#get-a-customer-address",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "create_customer_address": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customer-addresses#create-a-customer-address",
+    "endpoint": "POST /admin/api/2026-01/customers/{customer_id}/addresses.json"
+  },
+  "update_customer_address": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customer-addresses#update-a-customer-address",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "delete_customer_address": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customer-addresses#delete-a-customer-address",
+    "endpoint": "DELETE /admin/api/2026-01/customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "get_fulfillment_orders": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillment-orders#list-fulfillment-orders",
+    "endpoint": "GET /admin/api/2026-01/fulfillment_orders.json"
+  },
+  "get_fulfillment_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillment-orders#get-a-fulfillment-order",
+    "endpoint": "GET /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}.json"
+  },
+  "fulfill_fulfillment_order": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillment-orders#fulfill-a-fulfillment-order",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/fulfillment.json"
+  },
+  "get_inventory_sets": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventory-sets#list-inventory-sets",
+    "endpoint": "GET /admin/api/2026-01/inventory_sets.json"
+  },
+  "create_inventory_set": {
+    "doc": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventory-sets#create-an-inventory-set",
+    "endpoint": "POST /admin/api/2026-01/inventory_sets.json"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "dataset": "shopify",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "probe_at": "pre",
+  "response_text": "```python\nfrom mcp import mcp_tool\nimport requests\n\n@mcp_tool\ndef create_order(api_version, cart_token=None, checkout_token=None, line_items=None, shipping_address=None, billing_address=None, inventory_behavior='bypass', send_receipt=False, send_fulfillment_receipt=False):\n    url = f\"https://your-shop-name.myshopify.com/admin/api/{api_version}/orders.json\"\n    headers = {\n        \"Content-Type\": \"application/json\",\n        \"X-Shopify-Access-Token\": \"your-access-token\"\n    }\n    \n    data = {\n        \"order\": {\n            \"cart_token\": cart_token,\n            \"checkout_token\": checkout_token,\n            \"line_items\": line_items,\n            \"shipping_address\": shipping_address,\n            \"billing_address\": billing_address,\n            \"inventory_management\": inventory_behavior,\n            \"send_receipt\": send_receipt,\n            \"send_fulfillment_receipt\": send_fulfillment_receipt\n        }\n    }\n    \n    response = requests.post(url, json=data, headers=headers)\n    return response.json()\n```\n\nMake sure to replace `\"https://your-shop-name.myshopify.com\"` and `\"your-access-token\"` with the actual shop name and access token respectively. Also, ensure that the `line_items`, `shipping_address`, and `billing_address` are provided in the correct format as per the documentation.",
+  "clean_pairs": 4,
+  "skipped_pairs": [
+    {
+      "original": "created_at_min",
+      "mutated": "created_after"
+    }
+  ],
+  "mutations": [
+    {
+      "original": "financial_status",
+      "mutated": "payment_status"
+    },
+    {
+      "original": "fulfillment_status",
+      "mutated": "shipping_status"
+    },
+    {
+      "original": "since_id",
+      "mutated": "after_id"
+    },
+    {
+      "original": "limit",
+      "mutated": "count"
+    }
+  ],
+  "results": []
+}

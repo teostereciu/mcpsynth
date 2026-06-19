@@ -1,0 +1,158 @@
+{
+  "create_page": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content"
+  },
+  "get_page": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}"
+  },
+  "update_page": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "PUT /content/{id}"
+  },
+  "delete_page": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "DELETE /content/{id}"
+  },
+  "get_page_children": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/child"
+  },
+  "get_page_ancestors": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/ancestors"
+  },
+  "move_page": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content/move"
+  },
+  "search_cql": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /search"
+  },
+  "list_spaces": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /space"
+  },
+  "get_space": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /space/{key}"
+  },
+  "create_space": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /space"
+  },
+  "delete_space": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "DELETE /space/{key}"
+  },
+  "add_label": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content/{id}/label"
+  },
+  "list_labels": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/label"
+  },
+  "delete_label": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "DELETE /content/{id}/label"
+  },
+  "list_attachments": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/child/attachment"
+  },
+  "upload_attachment": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content/{id}/child/attachment"
+  },
+  "download_attachment": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/data"
+  },
+  "create_comment": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content"
+  },
+  "list_comments": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/child/comment"
+  },
+  "get_comment": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}"
+  },
+  "update_comment": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "PUT /content/{id}"
+  },
+  "delete_comment": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "DELETE /content/{id}"
+  },
+  "create_inline_comment": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content"
+  },
+  "list_versions": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/version"
+  },
+  "get_version": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/version/{number}"
+  },
+  "restore_version": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content/{id}/version/{number}/restore"
+  },
+  "get_content_property": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/property/{key}"
+  },
+  "set_content_property": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "PUT /content/{id}/property"
+  },
+  "delete_content_property": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "DELETE /content/{id}/property/{key}"
+  },
+  "create_blog_post": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "POST /content"
+  },
+  "get_blog_post": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}"
+  },
+  "update_blog_post": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "PUT /content/{id}"
+  },
+  "delete_blog_post": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "DELETE /content/{id}"
+  },
+  "get_current_user": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /user/current"
+  },
+  "get_user_by_account_id": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /user"
+  },
+  "get_user_by_username": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /user"
+  },
+  "get_restrictions": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /content/{id}/restriction"
+  },
+  "list_templates": {
+    "doc": "N/A - No documentation available",
+    "endpoint": "GET /template"
+  }
+}

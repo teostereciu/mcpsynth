@@ -1,0 +1,60 @@
+# entity_details_requested
+
+*Source: https://docs.slack.dev/reference/events/entity_details_requested*
+
+---
+
+## Facts
+
+**Required Scopes**
+
+No scopes required!
+
+**Compatible APIs**
+
+[`Events`](/apis/events-api)
+
+## Usage info​
+
+This example includes both the [event wrapper](/apis/events-api/#callback-field) and the [event structure](/apis/events-api/#event-type-structure) for the `entity_details_requested` event.
+
+
+    {
+        "token": "XXYYZZ",
+        "team_id": "T123ABC456",
+        "api_app_id": "A123ABC456",
+        "event": {
+            "type": "entity_details_requested",
+            "user": "U0123456",
+            "external_ref": {
+                "id": "123",
+                "type": "my-type"
+            },
+            "entity_url": "https://example.com/document/123",
+            "link": {
+                "url": "https://example.com/document/123",
+                "domain": "example.com"
+            },
+            "app_unfurl_url": "https://example.com/document/123?myquery=param",
+            "event_ts": "123456789.1234566",
+            "trigger_id": "1234567890123.1234567890123.abcdef01234567890abcdef012345689",
+            "user_locale": "en-US",
+            "channel": "C123ABC456",
+            "message_ts": "1755035323.759739",
+            "thread_ts": "1755035323.759739"
+        },
+        "type": "event_callback",
+        "authorizations": [
+            {
+                "team_id": "T123ABC456",
+                "user_id": "U123ABC456",
+                "is_bot": false,
+                "is_enterprise_install": false,
+            }
+        ],
+        "event_id": "Ev123ABC456",
+        "event_time": 123456789
+    }
+
+
+This event is sent to your app when a user clicks on a [Work Objects](/messaging/work-objects-overview) unfurl or refreshes the flexpane.

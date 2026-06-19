@@ -1,0 +1,180 @@
+{
+  "agent_model": "gcp-chat-completions-chat-gemini-2.5-pro-sandbox",
+  "judge_model": "gcp-chat-completions-chat-gemini-3-flash-preview-sandbox",
+  "synth_model": null,
+  "timestamp": "20260521_1034",
+  "total_elapsed_s": 5.5,
+  "results": [
+    {
+      "dataset": "ebay_sell",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260521_1026",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 0,
+      "total": 16,
+      "pass_rate": 0.0,
+      "task_results": [
+        {
+          "id": "get_category_metadata",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "get_listing_recommendations",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "get_item_aspects_shoes",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "get_sales_analytics",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "list_inventory_locations",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "list_fulfillment_policies",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_inventory_item",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_fulfillment_policy",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_return_policy",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_payment_policy",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "get_inventory_item",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "delete_inventory_item",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "inventory_item_group",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "create_listing_workflow",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "inventory_location_workflow",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        },
+        {
+          "id": "error_handling_invalid_category",
+          "success": false,
+          "num_turns": 0,
+          "num_tool_calls": 0,
+          "num_errors": 0,
+          "final_answer": "",
+          "judge_reasoning": "",
+          "harness_error": "Connection closed"
+        }
+      ]
+    }
+  ]
+}

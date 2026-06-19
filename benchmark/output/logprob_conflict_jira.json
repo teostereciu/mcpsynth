@@ -1,0 +1,284 @@
+{
+  "dataset": "jira",
+  "model": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox",
+  "endpoint": "GET /rest/api/3/search",
+  "mutations": [
+    {
+      "original": "jql",
+      "mutated": "jql_query"
+    },
+    {
+      "original": "maxResults",
+      "mutated": "page_size"
+    },
+    {
+      "original": "startAt",
+      "mutated": "start_index"
+    },
+    {
+      "original": "fields",
+      "mutated": "include_fields"
+    },
+    {
+      "original": "accountId",
+      "mutated": "user_id"
+    }
+  ],
+  "runs": [
+    {
+      "run": 1,
+      "output": "```python\nimport os\nimport requests\nfrom mcp import tool as mcp\n\n@mcp.tool()\ndef search_for_issues_using_jql_enhanced_search_get(jql_query, nextPageToken=None, page_size=None, include_fields=None, expand=None, properties=None, fieldsByKeys=None, failFast=None, reconcileIssues=None):\n    params = {\n        \"jql_query\": jql_query,\n        \"nextPageToken\": nextPageToken,\n        \"page_size\": page_size,\n        \"include_fields\": include_fields,\n        \"expand\": expand,\n        \"properties\": properties,\n        \"fieldsByKeys\": fieldsByKeys,\n        \"failFast\": failFast,\n        \"reconcileIssues\": reconcileIssues,\n    }\n    params = {k: v for k, v in params.items() if v is not None}\n\n    base_url = os.environ[\"JIRA_BASE_URL\"].rstrip(\"/\")\n    url = f\"{base_url}/rest/api/3/search/jql_query\"\n\n    headers = {\"Accept\": \"application/json\"}\n    token = os.environ.get(\"JIRA_API_TOKEN\")\n    if token:\n        headers[\"Authorization\"] = f\"Bearer {token}\"\n\n    resp = requests.get(url, params=params, headers=headers)\n    resp.raise_for_status()\n    return resp.json()\n```",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "jql",
+            "mutated": "jql_query"
+          },
+          "outcome": "memory",
+          "token_position": 29,
+          "winner": "jql",
+          "loser": "jql_query",
+          "chosen_token": "ql",
+          "chosen_logprob": 0.0,
+          "chosen_prob": 1.000038,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "ql",
+              "logprob": 0.0,
+              "prob": 1.000038
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "maxResults",
+            "mutated": "page_size"
+          },
+          "outcome": "doc",
+          "token_position": 45,
+          "winner": "page_size",
+          "loser": "maxResults",
+          "chosen_token": "_size",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000084,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_size",
+              "logprob": 0.0001,
+              "prob": 1.000084
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "fields",
+            "mutated": "include_fields"
+          },
+          "outcome": "memory",
+          "token_position": 49,
+          "winner": "fields",
+          "loser": "include_fields",
+          "chosen_token": "_fields",
+          "chosen_logprob": 0.0,
+          "chosen_prob": 1.000023,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_fields",
+              "logprob": 0.0,
+              "prob": 1.000023
+            }
+          ]
+        }
+      ],
+      "token_count": 267
+    },
+    {
+      "run": 2,
+      "output": "```python\nimport os\nimport requests\nfrom mcp import tool as mcp\n\n@mcp.tool()\ndef search_for_issues_using_jql_enhanced_search_get(jql_query, nextPageToken, page_size, include_fields, expand, properties, fieldsByKeys, failFast, reconcileIssues):\n    params = {\n        \"jql_query\": jql_query,\n        \"nextPageToken\": nextPageToken,\n        \"page_size\": page_size,\n        \"include_fields\": include_fields,\n        \"expand\": expand,\n        \"properties\": properties,\n        \"fieldsByKeys\": fieldsByKeys,\n        \"failFast\": failFast,\n        \"reconcileIssues\": reconcileIssues,\n    }\n    base_url = os.environ[\"JIRA_BASE_URL\"].rstrip(\"/\")\n    headers = {\"Accept\": \"application/json\"}\n    if os.environ.get(\"JIRA_API_TOKEN\") and os.environ.get(\"JIRA_EMAIL\"):\n        auth = (os.environ[\"JIRA_EMAIL\"], os.environ[\"JIRA_API_TOKEN\"])\n    else:\n        auth = None\n        if os.environ.get(\"JIRA_BEARER_TOKEN\"):\n            headers[\"Authorization\"] = f\"Bearer {os.environ['JIRA_BEARER_TOKEN']}\"\n    r = requests.get(f\"{base_url}/rest/api/3/search/jql_query\", params=params, headers=headers, auth=auth)\n    r.raise_for_status()\n    return r.json()\n```",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "jql",
+            "mutated": "jql_query"
+          },
+          "outcome": "memory",
+          "token_position": 29,
+          "winner": "jql",
+          "loser": "jql_query",
+          "chosen_token": "ql",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000126,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "ql",
+              "logprob": 0.0001,
+              "prob": 1.000126
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "maxResults",
+            "mutated": "page_size"
+          },
+          "outcome": "doc",
+          "token_position": 44,
+          "winner": "page_size",
+          "loser": "maxResults",
+          "chosen_token": "_size",
+          "chosen_logprob": -0.0001,
+          "chosen_prob": 0.999947,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_size",
+              "logprob": -0.0001,
+              "prob": 0.999947
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "fields",
+            "mutated": "include_fields"
+          },
+          "outcome": "memory",
+          "token_position": 47,
+          "winner": "fields",
+          "loser": "include_fields",
+          "chosen_token": "_fields",
+          "chosen_logprob": -0.0001,
+          "chosen_prob": 0.999866,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_fields",
+              "logprob": -0.0001,
+              "prob": 0.999866
+            }
+          ]
+        }
+      ],
+      "token_count": 290
+    },
+    {
+      "run": 3,
+      "output": "```python\nimport os\nimport requests\nfrom mcp import tool as mcp\n\n@mcp.tool()\ndef search_for_issues_using_jql_enhanced_search_get(\n    jql_query,\n    nextPageToken=None,\n    page_size=None,\n    include_fields=None,\n    expand=None,\n    properties=None,\n    fieldsByKeys=None,\n    failFast=None,\n    reconcileIssues=None,\n):\n    params = {\n        \"jql_query\": jql_query,\n        \"nextPageToken\": nextPageToken,\n        \"page_size\": page_size,\n        \"include_fields\": include_fields,\n        \"expand\": expand,\n        \"properties\": properties,\n        \"fieldsByKeys\": fieldsByKeys,\n        \"failFast\": failFast,\n        \"reconcileIssues\": reconcileIssues,\n    }\n    params = {k: v for k, v in params.items() if v is not None}\n\n    base_url = os.environ[\"JIRA_BASE_URL\"].rstrip(\"/\")\n    url = f\"{base_url}/rest/api/3/search/jql_query\"\n\n    headers = {\"Accept\": \"application/json\"}\n    token = os.environ.get(\"JIRA_API_TOKEN\")\n    user = os.environ.get(\"JIRA_USER_EMAIL\")\n    auth = (user, token) if user and token else None\n\n    resp = requests.get(url, params=params, headers=headers, auth=auth)\n    resp.raise_for_status()\n    return resp.json()\n```",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "jql",
+            "mutated": "jql_query"
+          },
+          "outcome": "memory",
+          "token_position": 29,
+          "winner": "jql",
+          "loser": "jql_query",
+          "chosen_token": "ql",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.00008,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "ql",
+              "logprob": 0.0001,
+              "prob": 1.00008
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "maxResults",
+            "mutated": "page_size"
+          },
+          "outcome": "doc",
+          "token_position": 49,
+          "winner": "page_size",
+          "loser": "maxResults",
+          "chosen_token": "_size",
+          "chosen_logprob": -0.0001,
+          "chosen_prob": 0.999886,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_size",
+              "logprob": -0.0001,
+              "prob": 0.999886
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "fields",
+            "mutated": "include_fields"
+          },
+          "outcome": "memory",
+          "token_position": 54,
+          "winner": "fields",
+          "loser": "include_fields",
+          "chosen_token": "_fields",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000057,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_fields",
+              "logprob": 0.0001,
+              "prob": 1.000057
+            }
+          ]
+        }
+      ],
+      "token_count": 293
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+# HubSpot Real API Testing Configuration
+#
+# This config defines what's needed to test the HubSpot MCP server against
+# the real HubSpot CRM REST API.
+
+api_name: "HubSpot"
+api_version: "CRM v3 / 2026-03"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  HUBSPOT_ACCESS_TOKEN:
+    description: "Private App access token or OAuth 2.0 access token"
+    how_to_get:
+      url: "https://app.hubspot.com/private-apps"
+      steps:
+        - "In HubSpot, go to Settings → Integrations → Private Apps"
+        - "Click 'Create a private app'"
+        - "Give it a name (e.g. 'MCP Test App')"
+        - "Under the Scopes tab, add the required scopes (see permissions section)"
+        - "Click 'Create app', then copy the access token"
+      notes:
+        - "Private App tokens start with 'pat-na1-...' (or similar region prefix)"
+        - "Tokens do not expire unless regenerated"
+        - "The token grants access to data in the HubSpot account it belongs to"
+        - "Use a developer test account (free) to avoid affecting production CRM data"
+    validation: "^pat-.+-.+"
+    example: "pat-na1-00000000-0000-0000-0000-000000000000"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_notes: |
+  HubSpot offers free developer test accounts which act as isolated sandboxes:
+    - Go to https://app.hubspot.com/developer-portal and create a test account
+    - Each test account is a fully separate HubSpot portal
+    - Records created during tests stay in the test account only
+    - Recommended: use a dedicated developer test account for all MCP testing
+
+mock_mode:
+  available: true
+  activate: "pytest --mock  OR  HUBSPOT_MOCK=1 pytest"
+  how_it_works: |
+    Intercepts all HTTP calls to api.hubapi.com/* at the requests library level.
+    The full MCP server and tool code run for real (Authorization header
+    construction, request body assembly, JSON parsing). Only the network
+    hop is replaced with realistic pre-defined responses from tests/mock_api.py.
+  what_is_tested: |
+    - Correct Authorization: Bearer header is sent on every request
+    - Request payloads match HubSpot CRM API conventions (properties wrapper, etc.)
+    - Responses are parsed and returned correctly by tools
+    - Multi-step workflows chain correctly (create → get → update)
+    - Association calls route to the correct endpoints
+    - Error responses (404 for invalid IDs) are handled gracefully
+  what_is_not_tested: |
+    - Actual HubSpot validation of property names, pipeline stages, etc.
+    - Real CRM state changes or contact deduplication
+    - Rate limit headers or retry logic
+    - OAuth token refresh flows
+  credentials_needed: "None — fake pat-mock token is injected automatically"
+
+rate_limits:
+  notes: |
+    HubSpot enforces rate limits per portal and per app:
+      - Private apps: 110 requests / 10 seconds (burst)
+      - Search API: 4 requests / second
+      - Batch endpoints: up to 100 records per request
+      - 429 Too Many Requests responses include Retry-After header
+  search_limit: "4 requests/second"
+  burst_limit: "110 requests/10 seconds"
+  batch_max_records: 100
+
+cleanup_notes: |
+  If using a real HubSpot account (non-sandbox), test records will persist:
+    - Contacts, companies, deals, and tickets created during tests remain
+    - Use the HubSpot UI or API to archive/delete test records after testing
+    - Recommend using a dedicated developer test account (free) to isolate data
+
+# ==============================================================================
+# API PERMISSIONS REQUIRED
+# ==============================================================================
+
+permissions:
+  required_scopes:
+    - "crm.objects.contacts.read — read contact records (scenarios 1, 2, 3, 4)"
+    - "crm.objects.contacts.write — create and update contacts (scenarios 1, 3, 14)"
+    - "crm.objects.companies.read — read company records (scenarios 5, 13)"
+    - "crm.objects.companies.write — create companies (scenarios 5, 13)"
+    - "crm.objects.deals.read — read deal records (scenarios 6, 7, 11)"
+    - "crm.objects.deals.write — create deals (scenario 6)"
+    - "crm.objects.tickets.read — read tickets (scenario 8)"
+    - "crm.objects.tickets.write — create tickets (scenario 8)"
+    - "crm.schemas.contacts.read — read contact property definitions (scenario 12)"
+    - "crm.schemas.deals.read — read deal property definitions"
+    - "crm.objects.owners.read — list owners (scenario 9)"
+
+  notes: |
+    - All scopes are available on the free Private App tier
+    - Association endpoints use the same read/write scopes as the associated objects
+    - Pipeline and property endpoints are accessible with the schema read scopes
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+authentication:
+  type: "Bearer token"
+  header: "Authorization: Bearer {HUBSPOT_ACCESS_TOKEN}"
+  notes: |
+    - Private App tokens: pat-<region>-<uuid> format
+    - OAuth 2.0 access tokens also work (shorter-lived, require refresh)
+    - All HubSpot API calls use the same Authorization: Bearer pattern
+
+base_url: "https://api.hubapi.com"
+
+crm_base_url: "https://api.hubapi.com/crm/v3"
+
+response_format: |
+  CRM record responses:
+    { "id": "123", "properties": {...}, "createdAt": "...", "updatedAt": "...", "archived": false }
+
+  List/search responses:
+    { "results": [...], "paging": { "next": { "after": "...", "link": "..." } } }
+
+  Error responses (non-2xx):
+    { "status": "error", "message": "...", "error": "OBJECT_NOT_FOUND", "correlationId": "..." }
+
+  Note: HubSpot does NOT use an "ok" boolean envelope (unlike Slack).
+  Use HTTP status codes to determine success/failure.
+
+versioning_notes: |
+  HubSpot CRM has two versioning schemes:
+    - Legacy v3: /crm/v3/objects/{objectType}/...  (fully supported, recommended for stable integrations)
+    - Date-versioned: /crm/objects/2026-03/...  (new features appear here first)
+  Both are valid. The benchmark uses the v3 pattern unless a feature only exists in date-versioned.
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  crm_api: "https://developers.hubspot.com/docs/api/crm/contacts"
+  authentication: "https://developers.hubspot.com/docs/api/private-apps"
+  search_api: "https://developers.hubspot.com/docs/api/crm/search"
+  associations: "https://developers.hubspot.com/docs/api/crm/associations"
+  pipelines: "https://developers.hubspot.com/docs/api/crm/pipelines"
+  properties: "https://developers.hubspot.com/docs/api/crm/properties"
+  owners: "https://developers.hubspot.com/docs/api/crm/owners"
+  rate_limits: "https://developers.hubspot.com/docs/api/usage-details"
+  test_accounts: "https://developers.hubspot.com/docs/api/creating-test-accounts"

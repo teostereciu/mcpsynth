@@ -1,0 +1,178 @@
+{
+  "jira_create_issue": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /issue"
+  },
+  "jira_get_issue": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /issue/{issueIdOrKey}"
+  },
+  "jira_update_issue": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}"
+  },
+  "jira_delete_issue": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}"
+  },
+  "jira_assign_issue": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}/assignee"
+  },
+  "jira_get_transitions": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/transitions"
+  },
+  "jira_transition_issue": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/transitions"
+  },
+  "jira_add_comment": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/comment"
+  },
+  "jira_list_comments": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/comment"
+  },
+  "jira_update_comment": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}/comment/{commentId}"
+  },
+  "jira_delete_comment": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}/comment/{commentId}"
+  },
+  "jira_add_worklog": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/worklog"
+  },
+  "jira_list_worklogs": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/worklog"
+  },
+  "jira_add_watcher": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/watchers"
+  },
+  "jira_remove_watcher": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}/watchers"
+  },
+  "jira_create_issue_link": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /issueLink"
+  },
+  "jira_search_issues": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /search"
+  },
+  "jira_list_projects": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /project/search"
+  },
+  "jira_get_project": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /project/{projectIdOrKey}"
+  },
+  "jira_create_project": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /project"
+  },
+  "jira_update_project": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "PUT /project/{projectIdOrKey}"
+  },
+  "jira_delete_project": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "DELETE /project/{projectIdOrKey}"
+  },
+  "jira_list_project_components": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /project/{projectIdOrKey}/components"
+  },
+  "jira_list_project_versions": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /project/{projectIdOrKey}/versions"
+  },
+  "jira_list_project_issue_types": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /project/{projectIdOrKey}/statuses"
+  },
+  "jira_list_issue_types": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /issuetype"
+  },
+  "jira_list_priorities": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /priority"
+  },
+  "jira_list_statuses": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /status"
+  },
+  "jira_list_users": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /users/search"
+  },
+  "jira_get_user": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /user"
+  },
+  "jira_list_groups": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /groups/picker"
+  },
+  "jira_get_group_members": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /group/member"
+  },
+  "jira_list_filters": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /filter/search"
+  },
+  "jira_get_filter": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /filter/{id}"
+  },
+  "jira_create_filter": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /filter"
+  },
+  "jira_delete_filter": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "DELETE /filter/{id}"
+  },
+  "jira_create_component": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /component"
+  },
+  "jira_get_component": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /component/{id}"
+  },
+  "jira_update_component": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "PUT /component/{id}"
+  },
+  "jira_delete_component": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "DELETE /component/{id}"
+  },
+  "jira_create_version": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "POST /version"
+  },
+  "jira_get_version": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "GET /version/{id}"
+  },
+  "jira_update_version": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "PUT /version/{id}"
+  },
+  "jira_delete_version": {
+    "doc": "docs/unavailable.md",
+    "endpoint": "DELETE /version/{id}"
+  }
+}

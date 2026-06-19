@@ -1,0 +1,12 @@
+{
+  "dataset": "spoonacular",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 396.624253988266,
+  "token_usage": {
+    "input_tokens": 198682,
+    "output_tokens": 19619
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_2017"
+}

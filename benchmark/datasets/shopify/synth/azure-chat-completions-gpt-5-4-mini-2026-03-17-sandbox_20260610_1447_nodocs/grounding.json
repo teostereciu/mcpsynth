@@ -1,0 +1,70 @@
+{
+  "list_tools": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /"
+  },
+  "get_shop": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /shop.json"
+  },
+  "list_products": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /products.json"
+  },
+  "get_product": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /products/{id}.json"
+  },
+  "create_product": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /products.json"
+  },
+  "update_product": {
+    "doc": "docs/none.md",
+    "endpoint": "PUT /products/{id}.json"
+  },
+  "delete_product": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /products/{id}.json"
+  },
+  "list_customers": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /customers.json"
+  },
+  "get_customer": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /customers/{id}.json"
+  },
+  "create_customer": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /customers.json"
+  },
+  "update_customer": {
+    "doc": "docs/none.md",
+    "endpoint": "PUT /customers/{id}.json"
+  },
+  "delete_customer": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /customers/{id}.json"
+  },
+  "list_orders": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /orders.json"
+  },
+  "get_order": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /orders/{id}.json"
+  },
+  "create_order": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /orders.json"
+  },
+  "update_order": {
+    "doc": "docs/none.md",
+    "endpoint": "PUT /orders/{id}.json"
+  },
+  "delete_order": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /orders/{id}.json"
+  }
+}

@@ -1,0 +1,59 @@
+# transfers/4/post/transfers/(transferId)/returns
+
+*Source: https://docs.adyen.com/api-explorer/transfers/4/post/transfers/(transferId)/returns*
+
+---
+
+# Return a transfer
+Initiates the return of previously transferred funds without creating a newtransferId.
+A unique identifier for the message with a maximum of 64 characters (we recommend a UUID).
+The unique identifier of the transfer to be returned.
+Contains information about the amount to be returned.
+The three-characterISO currency codeof the amount.
+The numeric value of the amount, inminor units.
+Your internal reference for the return. If you don't provide this in the request, Adyen generates a unique reference. This reference is used in all communication with you about the instruction status.
+We recommend using a unique value per instruction.
+If you need to provide multiple references for a transaction, separate them with hyphens ("-").
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow lessidstringThe unique identifier of the return.referencestringYour internal reference for the return.statusstringThe resulting status of the return.Possible values:Authorised,Declined.transferIdstringThe unique identifier of the original transfer.
+- 401 - UnauthorizedAuthentication required.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.routingDetailsarray[object]Detailed explanation of each attempt to route the transfer with the priorities from the request.Show childrenHide childrendetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.prioritystringThe priority for the bank transfer. This sets the speed at which the transfer is sent and the fees that you have to pay. Required for transfers withcategorybank.Possible values:regular: For normal, low-value transactions.fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.instant: For instant funds transfers within the United States and inSEPA locations.crossBorder: For high-value transfers to a recipient in a different country.internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).titlestringA short, human-readable summary of the problem type.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 403 - ForbiddenInsufficient permissions to process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.routingDetailsarray[object]Detailed explanation of each attempt to route the transfer with the priorities from the request.Show childrenHide childrendetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.prioritystringThe priority for the bank transfer. This sets the speed at which the transfer is sent and the fees that you have to pay. Required for transfers withcategorybank.Possible values:regular: For normal, low-value transactions.fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.instant: For instant funds transfers within the United States and inSEPA locations.crossBorder: For high-value transfers to a recipient in a different country.internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).titlestringA short, human-readable summary of the problem type.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.routingDetailsarray[object]Detailed explanation of each attempt to route the transfer with the priorities from the request.Show childrenHide childrendetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.prioritystringThe priority for the bank transfer. This sets the speed at which the transfer is sent and the fees that you have to pay. Required for transfers withcategorybank.Possible values:regular: For normal, low-value transactions.fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.instant: For instant funds transfers within the United States and inSEPA locations.crossBorder: For high-value transfers to a recipient in a different country.internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).titlestringA short, human-readable summary of the problem type.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 500 - Internal Server ErrorThe server could not process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.routingDetailsarray[object]Detailed explanation of each attempt to route the transfer with the priorities from the request.Show childrenHide childrendetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.prioritystringThe priority for the bank transfer. This sets the speed at which the transfer is sent and the fees that you have to pay. Required for transfers withcategorybank.Possible values:regular: For normal, low-value transactions.fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.instant: For instant funds transfers within the United States and inSEPA locations.crossBorder: For high-value transfers to a recipient in a different country.internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).titlestringA short, human-readable summary of the problem type.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+
+#### 200 - OK
+
+#### 401 - Unauthorized
+- regular: For normal, low-value transactions.
+- fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.
+- wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.
+- instant: For instant funds transfers within the United States and inSEPA locations.
+- crossBorder: For high-value transfers to a recipient in a different country.
+- internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).
+
+#### 403 - Forbidden
+- regular: For normal, low-value transactions.
+- fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.
+- wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.
+- instant: For instant funds transfers within the United States and inSEPA locations.
+- crossBorder: For high-value transfers to a recipient in a different country.
+- internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).
+
+#### 422 - Unprocessable Entity
+- regular: For normal, low-value transactions.
+- fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.
+- wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.
+- instant: For instant funds transfers within the United States and inSEPA locations.
+- crossBorder: For high-value transfers to a recipient in a different country.
+- internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).
+
+#### 500 - Internal Server Error
+- regular: For normal, low-value transactions.
+- fast: A faster way to transfer funds, but the fees are higher. Recommended for high-priority, low-value transactions.
+- wire: The fastest way to transfer funds, but this has the highest fees. Recommended for high-priority, high-value transactions.
+- instant: For instant funds transfers within the United States and inSEPA locations.
+- crossBorder: For high-value transfers to a recipient in a different country.
+- internal: For transfers to an Adyen-issued business bank account (by bank account number/IBAN).

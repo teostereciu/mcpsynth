@@ -1,0 +1,82 @@
+{
+  "get_inventory_item": {
+    "doc": "docs/inventory/get-inventory-item.md",
+    "endpoint": "GET /sell/inventory/v1/inventory_item/{sku}"
+  },
+  "create_or_replace_inventory_item": {
+    "doc": "docs/inventory/create-or-replace-inventory-item.md",
+    "endpoint": "PUT /sell/inventory/v1/inventory_item/{sku}"
+  },
+  "delete_inventory_item": {
+    "doc": "docs/inventory/delete-inventory-item.md",
+    "endpoint": "DELETE /sell/inventory/v1/inventory_item/{sku}"
+  },
+  "get_inventory_items": {
+    "doc": "docs/inventory/get-inventory-items.md",
+    "endpoint": "GET /sell/inventory/v1/inventory_item"
+  },
+  "get_offer": {
+    "doc": "docs/inventory/get-offer.md",
+    "endpoint": "GET /sell/inventory/v1/offer/{offerId}"
+  },
+  "create_offer": {
+    "doc": "docs/inventory/create-offer.md",
+    "endpoint": "POST /sell/inventory/v1/offer"
+  },
+  "update_offer": {
+    "doc": "docs/inventory/update-offer.md",
+    "endpoint": "PUT /sell/inventory/v1/offer/{offerId}"
+  },
+  "publish_offer": {
+    "doc": "docs/inventory/publish-offer.md",
+    "endpoint": "POST /sell/inventory/v1/offer/{offerId}/publish"
+  },
+  "get_offers": {
+    "doc": "docs/inventory/get-offers.md",
+    "endpoint": "GET /sell/inventory/v1/offer"
+  },
+  "get_order": {
+    "doc": "docs/fulfillment/get-order.md",
+    "endpoint": "GET /sell/fulfillment/v1/order/{orderId}"
+  },
+  "get_orders": {
+    "doc": "docs/fulfillment/get-orders.md",
+    "endpoint": "GET /sell/fulfillment/v1/order"
+  },
+  "create_shipping_fulfillment": {
+    "doc": "docs/fulfillment/create-shipping-fulfillment.md",
+    "endpoint": "POST /sell/fulfillment/v1/order/{orderId}/shipping_fulfillment"
+  },
+  "get_shipping_fulfillments": {
+    "doc": "docs/fulfillment/get-shipping-fulfillments.md",
+    "endpoint": "GET /sell/fulfillment/v1/order/{orderId}/shipping_fulfillment"
+  },
+  "get_fulfillment_policies": {
+    "doc": "docs/account/get-fulfillment-policies.md",
+    "endpoint": "GET /sell/account/v1/fulfillment_policy"
+  },
+  "get_payment_policies": {
+    "doc": "docs/account/get-payment-policies.md",
+    "endpoint": "GET /sell/account/v1/payment_policy"
+  },
+  "get_return_policies": {
+    "doc": "docs/account/get-return-policies.md",
+    "endpoint": "GET /sell/account/v1/return_policy"
+  },
+  "get_transactions": {
+    "doc": "docs/finances/get-transactions.md",
+    "endpoint": "GET /sell/finances/v1/transaction"
+  },
+  "get_payouts": {
+    "doc": "docs/finances/get-payouts.md",
+    "endpoint": "GET /sell/finances/v1/payout"
+  },
+  "get_campaigns": {
+    "doc": "docs/marketing/get-campaigns.md",
+    "endpoint": "GET /sell/marketing/v1/campaign"
+  },
+  "create_campaign": {
+    "doc": "docs/marketing/create-campaign.md",
+    "endpoint": "POST /sell/marketing/v1/campaign"
+  }
+}

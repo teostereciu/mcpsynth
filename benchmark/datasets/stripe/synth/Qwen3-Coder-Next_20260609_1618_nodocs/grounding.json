@@ -1,0 +1,386 @@
+{
+  "get_payment_intent": {
+    "doc": "https://stripe.com/docs/api/payment_intents/retrieve",
+    "endpoint": "GET /v1/payment_intents/{id}"
+  },
+  "list_payment_intents": {
+    "doc": "https://stripe.com/docs/api/payment_intents/list",
+    "endpoint": "GET /v1/payment_intents"
+  },
+  "create_payment_intent": {
+    "doc": "https://stripe.com/docs/api/payment_intents/create",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "confirm_payment_intent": {
+    "doc": "https://stripe.com/docs/api/payment_intents/confirm",
+    "endpoint": "POST /v1/payment_intents/{id}/confirm"
+  },
+  "cancel_payment_intent": {
+    "doc": "https://stripe.com/docs/api/payment_intents/cancel",
+    "endpoint": "POST /v1/payment_intents/{id}/cancel"
+  },
+  "capture_payment_intent": {
+    "doc": "https://stripe.com/docs/api/payment_intents/capture",
+    "endpoint": "POST /v1/payment_intents/{id}/capture"
+  },
+  "update_payment_intent": {
+    "doc": "https://stripe.com/docs/api/payment_intents/update",
+    "endpoint": "POST /v1/payment_intents/{id}"
+  },
+  "get_charge": {
+    "doc": "https://stripe.com/docs/api/charges/retrieve",
+    "endpoint": "GET /v1/charges/{id}"
+  },
+  "list_charges": {
+    "doc": "https://stripe.com/docs/api/charges/list",
+    "endpoint": "GET /v1/charges"
+  },
+  "create_charge": {
+    "doc": "https://stripe.com/docs/api/charges/create",
+    "endpoint": "POST /v1/charges"
+  },
+  "capture_charge": {
+    "doc": "https://stripe.com/docs/api/charges/capture",
+    "endpoint": "POST /v1/charges/{id}/capture"
+  },
+  "refund_charge": {
+    "doc": "https://stripe.com/docs/api/charges/refund",
+    "endpoint": "POST /v1/charges/{id}/refunds"
+  },
+  "list_charge_refunds": {
+    "doc": "https://stripe.com/docs/api/charges/refund",
+    "endpoint": "GET /v1/charges/{id}/refunds"
+  },
+  "get_customer": {
+    "doc": "https://stripe.com/docs/api/customers/retrieve",
+    "endpoint": "GET /v1/customers/{id}"
+  },
+  "list_customers": {
+    "doc": "https://stripe.com/docs/api/customers/list",
+    "endpoint": "GET /v1/customers"
+  },
+  "create_customer": {
+    "doc": "https://stripe.com/docs/api/customers/create",
+    "endpoint": "POST /v1/customers"
+  },
+  "update_customer": {
+    "doc": "https://stripe.com/docs/api/customers/update",
+    "endpoint": "POST /v1/customers/{id}"
+  },
+  "delete_customer": {
+    "doc": "https://stripe.com/docs/api/customers/delete",
+    "endpoint": "DELETE /v1/customers/{id}"
+  },
+  "get_product": {
+    "doc": "https://stripe.com/docs/api/products/retrieve",
+    "endpoint": "GET /v1/products/{id}"
+  },
+  "list_products": {
+    "doc": "https://stripe.com/docs/api/products/list",
+    "endpoint": "GET /v1/products"
+  },
+  "create_product": {
+    "doc": "https://stripe.com/docs/api/products/create",
+    "endpoint": "POST /v1/products"
+  },
+  "update_product": {
+    "doc": "https://stripe.com/docs/api/products/update",
+    "endpoint": "POST /v1/products/{id}"
+  },
+  "delete_product": {
+    "doc": "https://stripe.com/docs/api/products/delete",
+    "endpoint": "DELETE /v1/products/{id}"
+  },
+  "get_price": {
+    "doc": "https://stripe.com/docs/api/prices/retrieve",
+    "endpoint": "GET /v1/prices/{id}"
+  },
+  "list_prices": {
+    "doc": "https://stripe.com/docs/api/prices/list",
+    "endpoint": "GET /v1/prices"
+  },
+  "create_price": {
+    "doc": "https://stripe.com/docs/api/prices/create",
+    "endpoint": "POST /v1/prices"
+  },
+  "update_price": {
+    "doc": "https://stripe.com/docs/api/prices/update",
+    "endpoint": "POST /v1/prices/{id}"
+  },
+  "get_subscription": {
+    "doc": "https://stripe.com/docs/api/subscriptions/retrieve",
+    "endpoint": "GET /v1/subscriptions/{id}"
+  },
+  "list_subscriptions": {
+    "doc": "https://stripe.com/docs/api/subscriptions/list",
+    "endpoint": "GET /v1/subscriptions"
+  },
+  "create_subscription": {
+    "doc": "https://stripe.com/docs/api/subscriptions/create",
+    "endpoint": "POST /v1/subscriptions"
+  },
+  "update_subscription": {
+    "doc": "https://stripe.com/docs/api/subscriptions/update",
+    "endpoint": "POST /v1/subscriptions/{id}"
+  },
+  "delete_subscription": {
+    "doc": "https://stripe.com/docs/api/subscriptions/delete",
+    "endpoint": "DELETE /v1/subscriptions/{id}"
+  },
+  "cancel_subscription": {
+    "doc": "https://stripe.com/docs/api/subscriptions/cancel",
+    "endpoint": "POST /v1/subscriptions/{id}/cancel"
+  },
+  "get_invoice": {
+    "doc": "https://stripe.com/docs/api/invoices/retrieve",
+    "endpoint": "GET /v1/invoices/{id}"
+  },
+  "list_invoices": {
+    "doc": "https://stripe.com/docs/api/invoices/list",
+    "endpoint": "GET /v1/invoices"
+  },
+  "create_invoice": {
+    "doc": "https://stripe.com/docs/api/invoices/create",
+    "endpoint": "POST /v1/invoices"
+  },
+  "update_invoice": {
+    "doc": "https://stripe.com/docs/api/invoices/update",
+    "endpoint": "POST /v1/invoices/{id}"
+  },
+  "pay_invoice": {
+    "doc": "https://stripe.com/docs/api/invoices/pay",
+    "endpoint": "POST /v1/invoices/{id}/pay"
+  },
+  "get_refund": {
+    "doc": "https://stripe.com/docs/api/refunds/retrieve",
+    "endpoint": "GET /v1/refunds/{id}"
+  },
+  "list_refunds": {
+    "doc": "https://stripe.com/docs/api/refunds/list",
+    "endpoint": "GET /v1/refunds"
+  },
+  "create_refund": {
+    "doc": "https://stripe.com/docs/api/refunds/create",
+    "endpoint": "POST /v1/refunds"
+  },
+  "update_refund": {
+    "doc": "https://stripe.com/docs/api/refunds/update",
+    "endpoint": "POST /v1/refunds/{id}"
+  },
+  "get_payment_method": {
+    "doc": "https://stripe.com/docs/api/payment_methods/retrieve",
+    "endpoint": "GET /v1/payment_methods/{id}"
+  },
+  "list_payment_methods": {
+    "doc": "https://stripe.com/docs/api/payment_methods/list",
+    "endpoint": "GET /v1/payment_methods"
+  },
+  "create_payment_method": {
+    "doc": "https://stripe.com/docs/api/payment_methods/create",
+    "endpoint": "POST /v1/payment_methods"
+  },
+  "attach_payment_method": {
+    "doc": "https://stripe.com/docs/api/payment_methods/attach",
+    "endpoint": "POST /v1/payment_methods/{id}/attach"
+  },
+  "detach_payment_method": {
+    "doc": "https://stripe.com/docs/api/payment_methods/detach",
+    "endpoint": "POST /v1/payment_methods/{id}/detach"
+  },
+  "update_payment_method": {
+    "doc": "https://stripe.com/docs/api/payment_methods/update",
+    "endpoint": "POST /v1/payment_methods/{id}"
+  },
+  "get_setup_intent": {
+    "doc": "https://stripe.com/docs/api/setup_intents/retrieve",
+    "endpoint": "GET /v1/setup_intents/{id}"
+  },
+  "list_setup_intents": {
+    "doc": "https://stripe.com/docs/api/setup_intents/list",
+    "endpoint": "GET /v1/setup_intents"
+  },
+  "create_setup_intent": {
+    "doc": "https://stripe.com/docs/api/setup_intents/create",
+    "endpoint": "POST /v1/setup_intents"
+  },
+  "confirm_setup_intent": {
+    "doc": "https://stripe.com/docs/api/setup_intents/confirm",
+    "endpoint": "POST /v1/setup_intents/{id}/confirm"
+  },
+  "cancel_setup_intent": {
+    "doc": "https://stripe.com/docs/api/setup_intents/cancel",
+    "endpoint": "POST /v1/setup_intents/{id}/cancel"
+  },
+  "get_coupon": {
+    "doc": "https://stripe.com/docs/api/coupons/retrieve",
+    "endpoint": "GET /v1/coupons/{id}"
+  },
+  "list_coupons": {
+    "doc": "https://stripe.com/docs/api/coupons/list",
+    "endpoint": "GET /v1/coupons"
+  },
+  "create_coupon": {
+    "doc": "https://stripe.com/docs/api/coupons/create",
+    "endpoint": "POST /v1/coupons"
+  },
+  "delete_coupon": {
+    "doc": "https://stripe.com/docs/api/coupons/delete",
+    "endpoint": "DELETE /v1/coupons/{id}"
+  },
+  "update_coupon": {
+    "doc": "https://stripe.com/docs/api/coupons/update",
+    "endpoint": "POST /v1/coupons/{id}"
+  },
+  "get_promotion_code": {
+    "doc": "https://stripe.com/docs/api/promotion_codes/retrieve",
+    "endpoint": "GET /v1/promotion_codes/{id}"
+  },
+  "list_promotion_codes": {
+    "doc": "https://stripe.com/docs/api/promotion_codes/list",
+    "endpoint": "GET /v1/promotion_codes"
+  },
+  "create_promotion_code": {
+    "doc": "https://stripe.com/docs/api/promotion_codes/create",
+    "endpoint": "POST /v1/promotion_codes"
+  },
+  "update_promotion_code": {
+    "doc": "https://stripe.com/docs/api/promotion_codes/update",
+    "endpoint": "POST /v1/promotion_codes/{id}"
+  },
+  "get_checkout_session": {
+    "doc": "https://stripe.com/docs/api/checkout/sessions/retrieve",
+    "endpoint": "GET /v1/checkout/sessions/{id}"
+  },
+  "create_checkout_session": {
+    "doc": "https://stripe.com/docs/api/checkout/sessions/create",
+    "endpoint": "POST /v1/checkout/sessions"
+  },
+  "get_payment_link": {
+    "doc": "https://stripe.com/docs/api/payment_links/retrieve",
+    "endpoint": "GET /v1/payment_links/{id}"
+  },
+  "list_payment_links": {
+    "doc": "https://stripe.com/docs/api/payment_links/list",
+    "endpoint": "GET /v1/payment_links"
+  },
+  "create_payment_link": {
+    "doc": "https://stripe.com/docs/api/payment_links/create",
+    "endpoint": "POST /v1/payment_links"
+  },
+  "update_payment_link": {
+    "doc": "https://stripe.com/docs/api/payment_links/update",
+    "endpoint": "POST /v1/payment_links/{id}"
+  },
+  "get_account": {
+    "doc": "https://stripe.com/docs/api/account/retrieve",
+    "endpoint": "GET /v1/account"
+  },
+  "get_connect_account": {
+    "doc": "https://stripe.com/docs/api/accounts/retrieve",
+    "endpoint": "GET /v1/accounts/{id}"
+  },
+  "list_connect_accounts": {
+    "doc": "https://stripe.com/docs/api/accounts/list",
+    "endpoint": "GET /v1/accounts"
+  },
+  "create_connect_account": {
+    "doc": "https://stripe.com/docs/api/accounts/create",
+    "endpoint": "POST /v1/accounts"
+  },
+  "update_connect_account": {
+    "doc": "https://stripe.com/docs/api/accounts/update",
+    "endpoint": "POST /v1/accounts/{id}"
+  },
+  "delete_connect_account": {
+    "doc": "https://stripe.com/docs/api/accounts/delete",
+    "endpoint": "DELETE /v1/accounts/{id}"
+  },
+  "get_balance": {
+    "doc": "https://stripe.com/docs/api/balance/retrieve",
+    "endpoint": "GET /v1/balance"
+  },
+  "get_balance_transaction": {
+    "doc": "https://stripe.com/docs/api/balance_transactions/retrieve",
+    "endpoint": "GET /v1/balance_transactions/{id}"
+  },
+  "list_balance_transactions": {
+    "doc": "https://stripe.com/docs/api/balance_transactions/list",
+    "endpoint": "GET /v1/balance_transactions"
+  },
+  "get_transfer": {
+    "doc": "https://stripe.com/docs/api/transfers/retrieve",
+    "endpoint": "GET /v1/transfers/{id}"
+  },
+  "list_transfers": {
+    "doc": "https://stripe.com/docs/api/transfers/list",
+    "endpoint": "GET /v1/transfers"
+  },
+  "create_transfer": {
+    "doc": "https://stripe.com/docs/api/transfers/create",
+    "endpoint": "POST /v1/transfers"
+  },
+  "cancel_transfer": {
+    "doc": "https://stripe.com/docs/api/transfers/cancel",
+    "endpoint": "POST /v1/transfers/{id}/cancel"
+  },
+  "get_payout": {
+    "doc": "https://stripe.com/docs/api/payouts/retrieve",
+    "endpoint": "GET /v1/payouts/{id}"
+  },
+  "list_payouts": {
+    "doc": "https://stripe.com/docs/api/payouts/list",
+    "endpoint": "GET /v1/payouts"
+  },
+  "create_payout": {
+    "doc": "https://stripe.com/docs/api/payouts/create",
+    "endpoint": "POST /v1/payouts"
+  },
+  "cancel_payout": {
+    "doc": "https://stripe.com/docs/api/payouts/cancel",
+    "endpoint": "POST /v1/payouts/{id}/cancel"
+  },
+  "get_event": {
+    "doc": "https://stripe.com/docs/api/events/retrieve",
+    "endpoint": "GET /v1/events/{id}"
+  },
+  "list_events": {
+    "doc": "https://stripe.com/docs/api/events/list",
+    "endpoint": "GET /v1/events"
+  },
+  "get_invoice_item": {
+    "doc": "https://stripe.com/docs/api/invoiceitems/retrieve",
+    "endpoint": "GET /v1/invoiceitems/{id}"
+  },
+  "list_invoice_items": {
+    "doc": "https://stripe.com/docs/api/invoiceitems/list",
+    "endpoint": "GET /v1/invoiceitems"
+  },
+  "create_invoice_item": {
+    "doc": "https://stripe.com/docs/api/invoiceitems/create",
+    "endpoint": "POST /v1/invoiceitems"
+  },
+  "delete_invoice_item": {
+    "doc": "https://stripe.com/docs/api/invoiceitems/delete",
+    "endpoint": "DELETE /v1/invoiceitems/{id}"
+  },
+  "get_subscription_item": {
+    "doc": "https://stripe.com/docs/api/subscription_items/retrieve",
+    "endpoint": "GET /v1/subscription_items/{id}"
+  },
+  "list_subscription_items": {
+    "doc": "https://stripe.com/docs/api/subscription_items/list",
+    "endpoint": "GET /v1/subscription_items"
+  },
+  "create_subscription_item": {
+    "doc": "https://stripe.com/docs/api/subscription_items/create",
+    "endpoint": "POST /v1/subscription_items"
+  },
+  "update_subscription_item": {
+    "doc": "https://stripe.com/docs/api/subscription_items/update",
+    "endpoint": "POST /v1/subscription_items/{id}"
+  },
+  "delete_subscription_item": {
+    "doc": "https://stripe.com/docs/api/subscription_items/delete",
+    "endpoint": "DELETE /v1/subscription_items/{id}"
+  }
+}

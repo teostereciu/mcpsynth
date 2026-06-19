@@ -1,0 +1,209 @@
+{
+  "agent_model": "gcp-chat-completions-chat-gemini-2.5-pro-sandbox",
+  "judge_model": "gcp-chat-completions-chat-gemini-3-flash-preview-sandbox",
+  "synth_model": null,
+  "timestamp": "20260521_1347",
+  "results": [
+    {
+      "dataset": "alphavantage",
+      "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260521_1210_mutated",
+      "skipped": false,
+      "skip_reason": null,
+      "passed": 0,
+      "total": 19,
+      "pass_rate": 0.0,
+      "task_results": [
+        {
+          "id": "get_stock_quote",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to retrieve the stock quote for IBM. The API has a daily limit of 25 requests, and that limit has been reached. Please try again tomorrow or subscribe to a premium plan to remove the daily limit.",
+          "judge_reasoning": "The agent attempted to use the correct tool, but the API returned a rate limit error, preventing the task from being completed.",
+          "harness_error": ""
+        },
+        {
+          "id": "daily_time_series",
+          "success": false,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 2,
+          "final_answer": "I am sorry, but I was unable to complete your request as the API has reached its rate limit.",
+          "judge_reasoning": "The agent was unable to retrieve the data because the Alpha Vantage API returned a rate limit error for the provided API key.",
+          "harness_error": ""
+        },
+        {
+          "id": "intraday_time_series",
+          "success": false,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 2,
+          "final_answer": "I am sorry, but I was unable to access the intraday price data for IBM as it is a premium feature. I then attempted to retrieve the most recent stock quote, but I have reached my daily API limit. Therefore, I cannot fulfill your request at this time.",
+          "judge_reasoning": "The agent used the correct tool, but the API key provided was restricted from accessing intraday data and hit a rate limit, preventing task completion.",
+          "harness_error": ""
+        },
+        {
+          "id": "weekly_time_series",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to retrieve the weekly time series data for MSFT due to the API rate limit.",
+          "judge_reasoning": "The agent was unable to complete the task because the API rate limit for the provided key was exceeded, which is an environmental constraint.",
+          "harness_error": ""
+        },
+        {
+          "id": "symbol_search",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to complete your request as the API key has reached its daily limit.",
+          "judge_reasoning": "The tool call failed because the API key reached its daily rate limit, which is an environmental constraint.",
+          "harness_error": ""
+        },
+        {
+          "id": "forex_exchange_rate",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to retrieve the exchange rate due to API limitations.",
+          "judge_reasoning": "The agent called the correct tool, but the tool returned an API rate limit error from the underlying service, preventing the task from being completed.",
+          "harness_error": ""
+        },
+        {
+          "id": "forex_daily_series",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to retrieve the daily FX time series for EUR to USD. The API key has reached its daily limit. Please try again later or subscribe to a premium plan to remove the daily rate limit.",
+          "judge_reasoning": "The agent was unable to retrieve the data because the API rate limit for the underlying service had been reached.",
+          "harness_error": ""
+        },
+        {
+          "id": "crypto_exchange_rate",
+          "success": false,
+          "num_turns": 3,
+          "num_tool_calls": 2,
+          "num_errors": 2,
+          "final_answer": "I am sorry, but I was unable to retrieve the current exchange rate for Bitcoin (BTC) to USD. The API has reached its daily limit, and the alternative endpoint is a premium one.",
+          "judge_reasoning": "The agent was unable to retrieve the data because the Alpha Vantage API key provided in the environment had reached its daily rate limit.",
+          "harness_error": ""
+        },
+        {
+          "id": "rsi_indicator",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to retrieve the Relative Strength Index for IBM. The API has a limit of 25 requests per day, which has been exceeded. Please try again later or subscribe to a premium plan to remove the daily rate limits.",
+          "judge_reasoning": "The agent correctly called the rsi tool, but the API returned a rate limit error, preventing the retrieval of the requested data.",
+          "harness_error": ""
+        },
+        {
+          "id": "sma_indicator",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to retrieve the simple moving average for \"AAPL\" due to the API rate limit.",
+          "judge_reasoning": "The agent correctly called the sma tool, but the API returned a rate limit error, preventing the task from being completed.",
+          "harness_error": ""
+        },
+        {
+          "id": "company_overview",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to access the fundamental data for the company with symbol \"IBM\" due to a limitation in the API.",
+          "judge_reasoning": "The agent was unable to retrieve the data because the underlying API returned a rate limit error.",
+          "harness_error": ""
+        },
+        {
+          "id": "earnings_data",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to retrieve the quarterly earnings data for AAPL. The following error message was returned: \"We have detected your API key as JPZNLO16T8MM7WAE and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\"",
+          "judge_reasoning": "The agent was unable to retrieve the data because the API key provided for the Alpha Vantage service had reached its daily rate limit.",
+          "harness_error": ""
+        },
+        {
+          "id": "cpi_data",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, I cannot fulfill this request. The API has a limit of 25 requests per day, which has been exceeded. Please try again later.",
+          "judge_reasoning": "The agent was unable to retrieve the data because the API rate limit for the provided key was exceeded.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_then_overview",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to complete your request. The API key I am using, JPZNLO16T8MM7WAE, has a limit of 25 requests per day, and that limit has been reached. Please try again later or subscribe to a premium plan to remove the daily rate limits.",
+          "judge_reasoning": "The agent could not complete the task because the Alpha Vantage API rate limit was reached, which is an environmental constraint.",
+          "harness_error": ""
+        },
+        {
+          "id": "multi_quote_rank",
+          "success": false,
+          "num_turns": 3,
+          "num_tool_calls": 4,
+          "num_errors": 4,
+          "final_answer": "I am sorry, but I was unable to retrieve the stock quotes for IBM, AAPL, and MSFT due to an issue with the API. Therefore, I cannot provide you with the current price and change percent for these stocks, nor can I identify which one has the highest absolute change percent today.",
+          "judge_reasoning": "The agent was unable to retrieve the stock data because the Alpha Vantage API key provided in the environment was rate-limited.",
+          "harness_error": ""
+        },
+        {
+          "id": "daily_vs_weekly_compare",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 2,
+          "num_errors": 2,
+          "final_answer": "I am sorry, but I was unable to retrieve the daily and weekly time series data for IBM due to an API key error. I would have used this data to provide the most recent 5 trading days and their closing prices from the daily series, the most recent week's closing price from the weekly series, and then compared the two closing prices to determine if they match.",
+          "judge_reasoning": "The agent was unable to retrieve the required data because the Alpha Vantage API returned rate limit errors for both tool calls.",
+          "harness_error": ""
+        },
+        {
+          "id": "search_quote_rsi_chain",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "I am sorry, but I was unable to complete your request as the API key has reached its daily limit. Please subscribe to a premium plan to continue using the service.",
+          "judge_reasoning": "The agent was unable to complete the task because the Alpha Vantage API key reached its daily rate limit during the first tool call.",
+          "harness_error": ""
+        },
+        {
+          "id": "overview_then_earnings",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 2,
+          "num_errors": 2,
+          "final_answer": "I am sorry, but I was unable to retrieve the information you requested. The API has a limit of 25 requests per day, and that limit has been exceeded.",
+          "judge_reasoning": "The agent was unable to retrieve the necessary data because the API calls were blocked by rate limits.",
+          "harness_error": ""
+        },
+        {
+          "id": "invalid_symbol",
+          "success": false,
+          "num_turns": 2,
+          "num_tool_calls": 1,
+          "num_errors": 1,
+          "final_answer": "The API returned the following error: {\"stock_quote_response\": {\"error\": \"We have detected your API key as JPZNLO16T8MM7WAE and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.\", \"raw\": {\"Information\": \"We have detected your API key as JPZNLO16T8MM7WAE and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.",
+          "judge_reasoning": "The agent reported the rate limit error returned by the API, but the task expected the standard \"Global Quote\" response which was blocked by the rate limit.",
+          "harness_error": ""
+        }
+      ]
+    }
+  ]
+}

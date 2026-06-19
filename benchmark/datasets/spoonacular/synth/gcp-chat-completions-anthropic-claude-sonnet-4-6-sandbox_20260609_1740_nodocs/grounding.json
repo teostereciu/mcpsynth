@@ -1,0 +1,238 @@
+{
+  "complex_recipe_search": {
+    "doc": "docs/recipes/complex-search.md",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "search_recipes_by_ingredients": {
+    "doc": "docs/recipes/find-by-ingredients.md",
+    "endpoint": "GET /recipes/findByIngredients"
+  },
+  "search_recipes_by_nutrients": {
+    "doc": "docs/recipes/find-by-nutrients.md",
+    "endpoint": "GET /recipes/findByNutrients"
+  },
+  "autocomplete_recipe_search": {
+    "doc": "docs/recipes/autocomplete.md",
+    "endpoint": "GET /recipes/autocomplete"
+  },
+  "get_recipe_information": {
+    "doc": "docs/recipes/get-information.md",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "get_recipe_information_bulk": {
+    "doc": "docs/recipes/get-information-bulk.md",
+    "endpoint": "GET /recipes/informationBulk"
+  },
+  "get_recipe_ingredients": {
+    "doc": "docs/recipes/get-ingredients.md",
+    "endpoint": "GET /recipes/{id}/ingredientWidget.json"
+  },
+  "get_recipe_nutrition": {
+    "doc": "docs/recipes/get-nutrition.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "get_recipe_instructions": {
+    "doc": "docs/recipes/get-instructions.md",
+    "endpoint": "GET /recipes/{id}/analyzedInstructions"
+  },
+  "get_similar_recipes": {
+    "doc": "docs/recipes/get-similar.md",
+    "endpoint": "GET /recipes/{id}/similar"
+  },
+  "get_random_recipes": {
+    "doc": "docs/recipes/get-random.md",
+    "endpoint": "GET /recipes/random"
+  },
+  "summarize_recipe": {
+    "doc": "docs/recipes/summarize.md",
+    "endpoint": "GET /recipes/{id}/summary"
+  },
+  "get_recipe_taste": {
+    "doc": "docs/recipes/get-taste.md",
+    "endpoint": "GET /recipes/{id}/tasteWidget.json"
+  },
+  "analyze_recipe_instructions": {
+    "doc": "docs/recipes/analyze-instructions.md",
+    "endpoint": "POST /recipes/analyzeInstructions"
+  },
+  "guess_nutrition_by_dish_name": {
+    "doc": "docs/recipes/guess-nutrition.md",
+    "endpoint": "GET /recipes/guessNutrition"
+  },
+  "classify_cuisine": {
+    "doc": "docs/recipes/classify-cuisine.md",
+    "endpoint": "POST /recipes/cuisine"
+  },
+  "search_ingredients": {
+    "doc": "docs/ingredients/search.md",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "get_ingredient_information": {
+    "doc": "docs/ingredients/get-information.md",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "get_ingredient_substitutes": {
+    "doc": "docs/ingredients/get-substitutes.md",
+    "endpoint": "GET /food/ingredients/substitutes"
+  },
+  "get_ingredient_substitutes_by_id": {
+    "doc": "docs/ingredients/get-substitutes-by-id.md",
+    "endpoint": "GET /food/ingredients/{id}/substitutes"
+  },
+  "autocomplete_ingredient_search": {
+    "doc": "docs/ingredients/autocomplete.md",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  },
+  "parse_ingredients": {
+    "doc": "docs/ingredients/parse.md",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "compute_ingredient_amount": {
+    "doc": "docs/ingredients/compute-amount.md",
+    "endpoint": "GET /food/ingredients/{id}/amount"
+  },
+  "get_ingredient_nutrition_by_id": {
+    "doc": "docs/ingredients/get-nutrition.md",
+    "endpoint": "GET /food/ingredients/{id}/nutritionWidget.json"
+  },
+  "generate_meal_plan_daily": {
+    "doc": "docs/meal-planning/generate.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "generate_meal_plan_weekly": {
+    "doc": "docs/meal-planning/generate.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "get_meal_plan_week": {
+    "doc": "docs/meal-planning/get-week.md",
+    "endpoint": "GET /mealplanner/{username}/week/{start-date}"
+  },
+  "get_meal_plan_day": {
+    "doc": "docs/meal-planning/get-day.md",
+    "endpoint": "GET /mealplanner/{username}/day/{date}"
+  },
+  "add_meal_plan_item": {
+    "doc": "docs/meal-planning/add-item.md",
+    "endpoint": "POST /mealplanner/{username}/items"
+  },
+  "delete_meal_plan_item": {
+    "doc": "docs/meal-planning/delete-item.md",
+    "endpoint": "DELETE /mealplanner/{username}/items/{id}"
+  },
+  "get_meal_plan_templates": {
+    "doc": "docs/meal-planning/get-templates.md",
+    "endpoint": "GET /mealplanner/{username}/templates"
+  },
+  "get_shopping_list": {
+    "doc": "docs/meal-planning/get-shopping-list.md",
+    "endpoint": "GET /mealplanner/{username}/shopping-list/{start-date}/{end-date}"
+  },
+  "add_to_shopping_list": {
+    "doc": "docs/meal-planning/add-to-shopping-list.md",
+    "endpoint": "POST /mealplanner/{username}/shopping-list/items"
+  },
+  "delete_from_shopping_list": {
+    "doc": "docs/meal-planning/delete-from-shopping-list.md",
+    "endpoint": "DELETE /mealplanner/{username}/shopping-list/items/{id}"
+  },
+  "get_recipe_nutrition_by_id": {
+    "doc": "docs/nutrition/get-recipe-nutrition.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "get_recipe_nutrition_label": {
+    "doc": "docs/nutrition/get-nutrition-label.md",
+    "endpoint": "GET /recipes/{id}/nutritionLabel"
+  },
+  "analyze_recipe_nutrition": {
+    "doc": "docs/nutrition/analyze-recipe.md",
+    "endpoint": "POST /recipes/analyze"
+  },
+  "compute_glycemic_load": {
+    "doc": "docs/nutrition/compute-glycemic-load.md",
+    "endpoint": "POST /food/ingredients/glycemicLoad"
+  },
+  "detect_food_in_text": {
+    "doc": "docs/nutrition/detect-food-in-text.md",
+    "endpoint": "POST /food/detect"
+  },
+  "search_food_videos": {
+    "doc": "docs/nutrition/search-food-videos.md",
+    "endpoint": "GET /food/videos/search"
+  },
+  "get_random_food_videos": {
+    "doc": "docs/nutrition/get-random-food-videos.md",
+    "endpoint": "GET /food/videos/random"
+  },
+  "get_conversation_suggests": {
+    "doc": "docs/nutrition/get-conversation-suggests.md",
+    "endpoint": "GET /food/converse/suggest"
+  },
+  "talk_to_chatbot": {
+    "doc": "docs/nutrition/talk-to-chatbot.md",
+    "endpoint": "GET /food/converse"
+  },
+  "get_dish_pairing_for_wine": {
+    "doc": "docs/wine/get-dish-pairing.md",
+    "endpoint": "GET /food/wine/dishes"
+  },
+  "get_wine_pairing_for_dish": {
+    "doc": "docs/wine/get-wine-pairing.md",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "get_wine_description": {
+    "doc": "docs/wine/get-description.md",
+    "endpoint": "GET /food/wine/description"
+  },
+  "get_wine_recommendation": {
+    "doc": "docs/wine/get-recommendation.md",
+    "endpoint": "GET /food/wine/recommendation"
+  },
+  "search_grocery_products": {
+    "doc": "docs/products/search.md",
+    "endpoint": "GET /food/products/search"
+  },
+  "get_product_information": {
+    "doc": "docs/products/get-information.md",
+    "endpoint": "GET /food/products/{id}"
+  },
+  "get_comparable_products": {
+    "doc": "docs/products/get-comparable.md",
+    "endpoint": "GET /food/products/upc/{upc}/comparable"
+  },
+  "search_grocery_products_by_upc": {
+    "doc": "docs/products/search-by-upc.md",
+    "endpoint": "GET /food/products/upc/{upc}"
+  },
+  "autocomplete_product_search": {
+    "doc": "docs/products/autocomplete.md",
+    "endpoint": "GET /food/products/suggest"
+  },
+  "classify_grocery_product": {
+    "doc": "docs/products/classify.md",
+    "endpoint": "POST /food/products/classify"
+  },
+  "classify_grocery_product_bulk": {
+    "doc": "docs/products/classify-batch.md",
+    "endpoint": "POST /food/products/classifyBatch"
+  },
+  "get_product_nutrition_by_id": {
+    "doc": "docs/products/get-nutrition.md",
+    "endpoint": "GET /food/products/{id}/nutritionWidget.json"
+  },
+  "search_menu_items": {
+    "doc": "docs/menu-items/search.md",
+    "endpoint": "GET /food/menuItems/search"
+  },
+  "get_menu_item_information": {
+    "doc": "docs/menu-items/get-information.md",
+    "endpoint": "GET /food/menuItems/{id}"
+  },
+  "autocomplete_menu_item_search": {
+    "doc": "docs/menu-items/autocomplete.md",
+    "endpoint": "GET /food/menuItems/suggest"
+  },
+  "get_menu_item_nutrition_by_id": {
+    "doc": "docs/menu-items/get-nutrition.md",
+    "endpoint": "GET /food/menuItems/{id}/nutritionWidget.json"
+  }
+}

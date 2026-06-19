@@ -1,0 +1,70 @@
+{
+  "github_get_repository": {
+    "doc": "docs/api_repos-repos.md",
+    "endpoint": "GET /repos/{owner}/{repo}"
+  },
+  "github_list_org_repositories": {
+    "doc": "docs/api_repos-repos.md",
+    "endpoint": "GET /orgs/{org}/repos"
+  },
+  "github_create_org_repository": {
+    "doc": "docs/api_repos-repos.md",
+    "endpoint": "POST /orgs/{org}/repos"
+  },
+  "github_create_user_repository": {
+    "doc": "docs/api_about-the-rest-api-breaking-changes.md",
+    "endpoint": "POST /user/repos"
+  },
+  "github_update_repository": {
+    "doc": "docs/api_about-the-rest-api-breaking-changes.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}"
+  },
+  "github_delete_repository": {
+    "doc": "docs/api_repos-repos.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}"
+  },
+  "github_fork_repository": {
+    "doc": "docs/api_about-the-rest-api-breaking-changes.md",
+    "endpoint": "POST /repos/{owner}/{repo}/forks"
+  },
+  "github_list_pull_requests": {
+    "doc": "docs/api_pulls-pulls.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  },
+  "github_get_pull_request": {
+    "doc": "docs/api_about-the-rest-api-breaking-changes.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "github_create_pull_request": {
+    "doc": "docs/api_about-the-rest-api-breaking-changes.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls"
+  },
+  "github_update_pull_request": {
+    "doc": "docs/api_about-the-rest-api-breaking-changes.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "github_merge_pull_request": {
+    "doc": "docs/api_pulls-pulls.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"
+  },
+  "github_search_code": {
+    "doc": "docs/api_search-search.md",
+    "endpoint": "GET /search/code"
+  },
+  "github_search_issues_and_pull_requests": {
+    "doc": "docs/api_about-the-rest-api-breaking-changes.md",
+    "endpoint": "GET /search/issues"
+  },
+  "github_search_repositories": {
+    "doc": "docs/api_search-search.md",
+    "endpoint": "GET /search/repositories"
+  },
+  "github_search_users": {
+    "doc": "docs/api_search-search.md",
+    "endpoint": "GET /search/users"
+  },
+  "github_search_commits": {
+    "doc": "docs/api_search-search.md",
+    "endpoint": "GET /search/commits"
+  }
+}

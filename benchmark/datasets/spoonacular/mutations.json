@@ -1,0 +1,9 @@
+{
+  "description": "Spoonacular Food API parameter mutations for parametric contamination testing. Renames Spoonacular-specific request parameters to plausible-but-wrong alternatives. All mutated params are exercised by eval task scenarios (recipe search, ingredient filter, diet filter, meal planning).",
+  "mutations": [
+    {"original": "query",             "mutated": "search_query"},
+    {"original": "includeIngredients","mutated": "ingredients"},
+    {"original": "diet",              "mutated": "diet_type"},
+    {"original": "targetCalories",    "mutated": "calorie_target"}
+  ]
+}

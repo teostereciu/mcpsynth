@@ -1,0 +1,50 @@
+{
+  "get_current_weather_by_city": {
+    "doc": "OpenWeatherMap API 2.5 - Current Weather Data",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_coordinates": {
+    "doc": "OpenWeatherMap API 2.5 - Current Weather Data",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_zip": {
+    "doc": "OpenWeatherMap API 2.5 - Current Weather Data",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_forecast_by_city": {
+    "doc": "OpenWeatherMap API 2.5 - 5-Day/3-Hour Forecast",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_coordinates": {
+    "doc": "OpenWeatherMap API 2.5 - 5-Day/3-Hour Forecast",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_zip": {
+    "doc": "OpenWeatherMap API 2.5 - 5-Day/3-Hour Forecast",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_air_pollution_current": {
+    "doc": "OpenWeatherMap API 3.0 - Air Pollution",
+    "endpoint": "GET /data/3.0/air_pollution"
+  },
+  "get_air_pollution_forecast": {
+    "doc": "OpenWeatherMap API 3.0 - Air Pollution Forecast",
+    "endpoint": "GET /data/3.0/air_pollution/forecast"
+  },
+  "get_air_pollution_history": {
+    "doc": "OpenWeatherMap API 3.0 - Air Pollution History",
+    "endpoint": "GET /data/3.0/air_pollution/history"
+  },
+  "geocode_direct": {
+    "doc": "OpenWeatherMap Geocoding API - Direct Geocoding",
+    "endpoint": "GET /geo/1.0/direct"
+  },
+  "geocode_reverse": {
+    "doc": "OpenWeatherMap Geocoding API - Reverse Geocoding",
+    "endpoint": "GET /geo/1.0/reverse"
+  },
+  "geocode_zip": {
+    "doc": "OpenWeatherMap Geocoding API - ZIP Code Geocoding",
+    "endpoint": "GET /geo/1.0/zip"
+  }
+}

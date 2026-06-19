@@ -1,0 +1,143 @@
+# Jira Real API Testing Configuration
+#
+# This config defines what's needed to test the Jira MCP server against
+# the real Jira Cloud REST API v3.
+
+api_name: "Jira"
+api_version: "Jira Cloud REST API v3"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  JIRA_BASE_URL:
+    description: "Your Jira Cloud instance URL"
+    how_to_get:
+      notes:
+        - "This is your Atlassian domain, e.g. https://yourcompany.atlassian.net"
+        - "Found in the URL bar when logged into Jira"
+    validation: "^https://.+\\.atlassian\\.net$"
+    example: "https://yourcompany.atlassian.net"
+
+  JIRA_EMAIL:
+    description: "Atlassian account email address"
+    how_to_get:
+      notes:
+        - "The email you use to log into Jira / Atlassian"
+    example: "you@yourcompany.com"
+
+  JIRA_API_TOKEN:
+    description: "Atlassian API token for authentication"
+    how_to_get:
+      url: "https://id.atlassian.com/manage-profile/security/api-tokens"
+      steps:
+        - "Go to https://id.atlassian.com/manage-profile/security/api-tokens"
+        - "Click 'Create API token'"
+        - "Give it a label (e.g. 'MCP Testing')"
+        - "Copy the token value immediately — it is only shown once"
+      notes:
+        - "API tokens are scoped to your Atlassian account"
+        - "The token is used as the password in HTTP Basic Auth with your email"
+        - "Tokens do not expire unless revoked manually"
+    example: "ATATT3xFfGF0..."
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  Jira Cloud has no sandbox environment. All API calls hit your real Jira instance.
+  Recommendations:
+    - Use a dedicated test project (e.g., key "TEST" or "MCP")
+    - Issues created during tests remain in your Jira instance
+    - Consider cleaning up test issues periodically
+
+mock_mode:
+  available: false
+  notes: |
+    Mock mode is not implemented for Jira tests.
+    Real credentials and a Jira Cloud instance are required.
+
+rate_limits:
+  notes: |
+    - Jira Cloud enforces rate limits per user token
+    - Standard limit: ~10 requests/second
+    - Burst: higher limits for short periods
+    - Rate limited requests return HTTP 429 with Retry-After header
+
+# ==============================================================================
+# AUTHENTICATION
+# ==============================================================================
+
+authentication:
+  type: "HTTP Basic Auth"
+  username: "JIRA_EMAIL (your Atlassian account email)"
+  password: "JIRA_API_TOKEN (API token, not your account password)"
+  notes: |
+    All requests use HTTPBasicAuth(email, api_token).
+    Example with requests library:
+      from requests.auth import HTTPBasicAuth
+      auth = HTTPBasicAuth(os.environ["JIRA_EMAIL"], os.environ["JIRA_API_TOKEN"])
+      requests.get(url, auth=auth, headers={"Accept": "application/json"})
+
+base_url: "{JIRA_BASE_URL}/rest/api/3"
+
+response_format: |
+  Issues are returned as:
+    {
+      "id": "10001",
+      "key": "PROJ-42",
+      "fields": {
+        "summary": "Issue title",
+        "status": {"name": "In Progress"},
+        "issuetype": {"name": "Bug"},
+        ...
+      }
+    }
+
+  Successful DELETEs and 204 responses should be returned as {"ok": true}.
+  Errors return {"errorMessages": [...], "errors": {...}}.
+
+adf_notes: |
+  Description and comment body fields use Atlassian Document Format (ADF), not plain text:
+    {
+      "version": 1,
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [{"type": "text", "text": "Your text here"}]
+        }
+      ]
+    }
+
+# ==============================================================================
+# PERMISSIONS REQUIRED
+# ==============================================================================
+
+permissions:
+  notes: |
+    The authenticated user needs:
+    - Browse Projects permission on the test project
+    - Create Issues permission (scenario 3)
+    - Edit Issues permission (scenario 5)
+    - Add Comments permission (scenario 6)
+    - Delete Comments permission (scenario 14)
+    - Transition Issues permission (scenario 10)
+    - Manage Watchers permission (scenario 11)
+
+    A project admin or Jira admin role covers all of these.
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  api_reference: "https://developer.atlassian.com/cloud/jira/platform/rest/v3/"
+  api_tokens: "https://id.atlassian.com/manage-profile/security/api-tokens"
+  jql_reference: "https://support.atlassian.com/jira-service-management-cloud/docs/use-advanced-search-with-jira-query-language-jql/"
+  adf_format: "https://developer.atlassian.com/cloud/jira/platform/apis/document/structure/"
+  permissions: "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/#permissions"

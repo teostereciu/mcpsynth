@@ -1,0 +1,12 @@
+{
+  "dataset": "ebay_commerce",
+  "model": "azure-chat-completions-gpt-5-4-mini-2026-03-17-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 124.71733403205872,
+  "token_usage": {
+    "input_tokens": 12698,
+    "output_tokens": 2555
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1448"
+}

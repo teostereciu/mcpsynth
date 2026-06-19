@@ -1,0 +1,61 @@
+% Main results table — 14 APIs × 3 conditions
+% Sorted by mean CURRENT descending.
+% Requires: booktabs, xcolor, colortbl
+\begin{table}[htbp]
+\centering
+\caption{Agent pass rates (CURRENT) across 14 APIs and three synthesis conditions.
+Bold = highest CURRENT in row. \colorbox{red!12}{Shaded} = CURRENT $<$ 50\%.
+Parenthetic values are SYNTH (synthesis sufficiency \%).
+GitHub mutated reflects corrected re-evaluation; original single-run score (76\%) was an artifact.}
+\label{tab:main-results}
+\small
+\begin{tabular}{l rrr r}
+\toprule
+\multirow{2}{*}{\textbf{API}} &
+  \multicolumn{3}{c}{\textbf{CURRENT (\%)}} &
+  \multirow{2}{*}{\textbf{Mean}} \\
+\cmidrule(lr){2-4}
+& With docs & No docs & Mutated params & \\
+\midrule
+Mastodon        & \textbf{100}    & 100             & 100             & 100.0 \\
+                & \textit{(93)}   & \textit{(100)}  & \textit{(100)}  & \\
+OpenWeatherMap  & \textbf{100}    & 86              & 100             &  95.3 \\
+                & \textit{(100)}  & \textit{(83)}   & \textit{(100)}  & \\
+Notion          & 78              & \textbf{100}    & 100             &  92.7 \\
+                & \textit{(91)}   & \textit{(100)}  & \textit{(100)}  & \\
+Confluence      & 92              & \textbf{93}     & 91              &  92.0 \\
+                & \textit{(95)}   & \textit{(95)}   & \textit{(95)}   & \\
+Alphavantage    & 86              & \textbf{90}     & 88              &  88.0 \\
+                & \textit{(84)}   & \textit{(89)}   & \textit{(89)}   & \\
+Spoonacular     & \textbf{100}    & 90              & 78              &  89.3 \\
+                & \textit{(75)}   & \textit{(75)}   & \textit{(75)}   & \\
+Shopify         & \textbf{87}     & 92              & 62              &  80.3 \\
+                & \textit{(89)}   & \textit{(94)}   & \textit{(61)}   & \\
+eBay Commerce   & \textbf{100}    & 89              & \cellcolor{red!12}55 & 81.3 \\
+                & \textit{(100)}  & \textit{(85)}   & \textit{(54)}   & \\
+eBay Buy        & 73              & 67              & \textbf{80}     &  73.3 \\
+                & \textit{(88)}   & \textit{(94)}   & \textit{(88)}   & \\
+Zulip           & \textbf{80}     & 60              & 62              &  67.3 \\
+                & \textit{(84)}   & \textit{(48)}   & \textit{(64)}   & \\
+Stripe          & \textbf{72}     & 62              & 57              &  63.7 \\
+                & \textit{(77)}   & \textit{(68)}   & \textit{(73)}   & \\
+\cellcolor{red!12}GitHub & \cellcolor{red!12}62 & \cellcolor{red!12}\textbf{83} & \cellcolor{red!12}\cellcolor{red!12}19 & \cellcolor{red!12}54.7 \\
+                & \textit{(61)}   & \textit{(87)}   & \textit{(22)}   & \\
+\cellcolor{red!12}eBay Sell & \cellcolor{red!12}\textbf{38} & \cellcolor{red!12}50 & \cellcolor{red!12}43 & \cellcolor{red!12}43.7 \\
+                & \textit{(43)}   & \textit{(50)}   & \textit{(43)}   & \\
+\cellcolor{red!12}Jira  & \cellcolor{red!12}\textbf{50} & \cellcolor{red!12}25 & \cellcolor{red!12}\textbf{50} & \cellcolor{red!12}41.7 \\
+                & \textit{(56)}   & \textit{(44)}   & \textit{(56)}   & \\
+\midrule
+\textit{Median} & \textit{80}     & \textit{85}     & \textit{70}     & \textit{76.7} \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\raggedright\footnotesize
+SYNTH = server synthesis sufficiency: proportion of synthesized
+tool stubs judged sufficient for the task by an LLM judge.
+CURRENT is computed as pass / (pass + fail), excluding ENVIRONMENT and AGENT\_REASONING errors from the denominator.\\
+GitHub mutated: original single-run score of 76\% was confirmed as an evaluation artifact (hot-start session state).
+Re-evaluation with four judges converges on 19\% CURRENT (22\% SYNTH); 100\% of seven additional synthesis
+runs produced degenerate servers (0--6 tools) under the mutated condition.
+\end{table}

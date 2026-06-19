@@ -1,0 +1,26 @@
+{
+  "list_repository_issues": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues"
+  },
+  "create_issue": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues"
+  },
+  "get_issue": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "update_issue": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "list_issue_comments": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "create_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  }
+}

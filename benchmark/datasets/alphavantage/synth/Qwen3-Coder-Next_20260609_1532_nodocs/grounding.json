@@ -1,0 +1,134 @@
+{
+  "get_intraday_stock_data": {
+    "doc": "docs/stock_time_series/intraday.md",
+    "endpoint": "GET /query?function=TIME_SERIES_INTRADAY"
+  },
+  "get_daily_stock_data": {
+    "doc": "docs/stock_time_series/daily.md",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY"
+  },
+  "get_daily_adjusted_stock_data": {
+    "doc": "docs/stock_time_series/daily_adjusted.md",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY_ADJUSTED"
+  },
+  "get_weekly_stock_data": {
+    "doc": "docs/stock_time_series/weekly.md",
+    "endpoint": "GET /query?function=TIME_SERIES_WEEKLY"
+  },
+  "get_weekly_adjusted_stock_data": {
+    "doc": "docs/stock_time_series/weekly_adjusted.md",
+    "endpoint": "GET /query?function=TIME_SERIES_WEEKLY_ADJUSTED"
+  },
+  "get_monthly_stock_data": {
+    "doc": "docs/stock_time_series/monthly.md",
+    "endpoint": "GET /query?function=TIME_SERIES_MONTHLY"
+  },
+  "get_monthly_adjusted_stock_data": {
+    "doc": "docs/stock_time_series/monthly_adjusted.md",
+    "endpoint": "GET /query?function=TIME_SERIES_MONTHLY_ADJUSTED"
+  },
+  "get_quote_endpoint": {
+    "doc": "docs/quote_endpoint/quote.md",
+    "endpoint": "GET /query?function=GLOBAL_QUOTE"
+  },
+  "search_symbols": {
+    "doc": "docs/search/search.md",
+    "endpoint": "GET /query?function=SYMBOL_SEARCH"
+  },
+  "get_fx_intraday": {
+    "doc": "docs/forex/intraday.md",
+    "endpoint": "GET /query?function=FX_INTRADAY"
+  },
+  "get_fx_daily": {
+    "doc": "docs/forex/daily.md",
+    "endpoint": "GET /query?function=FX_DAILY"
+  },
+  "get_fx_weekly": {
+    "doc": "docs/forex/weekly.md",
+    "endpoint": "GET /query?function=FX_WEEKLY"
+  },
+  "get_fx_monthly": {
+    "doc": "docs/forex/monthly.md",
+    "endpoint": "GET /query?function=FX_MONTHLY"
+  },
+  "get_crypto_intraday": {
+    "doc": "docs/cryptocurrency/intraday.md",
+    "endpoint": "GET /query?function=CRYPTO_INTRADAY"
+  },
+  "get_crypto_daily": {
+    "doc": "docs/cryptocurrency/daily.md",
+    "endpoint": "GET /query?function=CRYPTO_DAILY"
+  },
+  "get_crypto_weekly": {
+    "doc": "docs/cryptocurrency/weekly.md",
+    "endpoint": "GET /query?function=CRYPTO_WEEKLY"
+  },
+  "get_crypto_monthly": {
+    "doc": "docs/cryptocurrency/monthly.md",
+    "endpoint": "GET /query?function=CRYPTO_MONTHLY"
+  },
+  "get_sma": {
+    "doc": "docs/technical_indicators/sma.md",
+    "endpoint": "GET /query?function=SMA"
+  },
+  "get_ema": {
+    "doc": "docs/technical_indicators/ema.md",
+    "endpoint": "GET /query?function=EMA"
+  },
+  "get_rsi": {
+    "doc": "docs/technical_indicators/rsi.md",
+    "endpoint": "GET /query?function=RSI"
+  },
+  "get_macd": {
+    "doc": "docs/technical_indicators/macd.md",
+    "endpoint": "GET /query?function=MACD"
+  },
+  "get_bollinger_bands": {
+    "doc": "docs/technical_indicators/bollinger_bands.md",
+    "endpoint": "GET /query?function=BBANDS"
+  },
+  "get_company_overview": {
+    "doc": "docs/fundamental_data/overview.md",
+    "endpoint": "GET /query?function=OVERVIEW"
+  },
+  "get_income_statement": {
+    "doc": "docs/fundamental_data/income_statement.md",
+    "endpoint": "GET /query?function=INCOME_STATEMENT"
+  },
+  "get_balance_sheet": {
+    "doc": "docs/fundamental_data/balance_sheet.md",
+    "endpoint": "GET /query?function=BALANCE_SHEET"
+  },
+  "get_cash_flow": {
+    "doc": "docs/fundamental_data/cash_flow.md",
+    "endpoint": "GET /query?function=CASH_FLOW"
+  },
+  "get_earnings": {
+    "doc": "docs/fundamental_data/earnings.md",
+    "endpoint": "GET /query?function=EARNINGS"
+  },
+  "get_cpi": {
+    "doc": "docs/economic_indicators/cpi.md",
+    "endpoint": "GET /query?function=CPI"
+  },
+  "get_inflation": {
+    "doc": "docs/economic_indicators/inflation.md",
+    "endpoint": "GET /query?function=INFLATION"
+  },
+  "get_gdp": {
+    "doc": "docs/economic_indicators/gdp.md",
+    "endpoint": "GET /query?function=GDP"
+  },
+  "get_unemployment": {
+    "doc": "docs/economic_indicators/unemployment.md",
+    "endpoint": "GET /query?function=UNEMPLOYMENT"
+  },
+  "get_treasury_rates": {
+    "doc": "docs/economic_indicators/treasury_rates.md",
+    "endpoint": "GET /query?function=TREASURY_CONSTANT_MATURITY"
+  },
+  "get_sector_performance": {
+    "doc": "docs/sector_performance/sector.md",
+    "endpoint": "GET /query?function=SECTOR"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "source": "Confluence Cloud REST API (developer.atlassian.com)",
+  "scrape_date": "2026-05-12T12:24:02.943963",
+  "total_pages": 47,
+  "files": [
+    {
+      "filename": "api_v1_audit.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-audit/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-body.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-body/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-children-and-descendants.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-children-and-descendants/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-labels.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-labels/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-permissions.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-permissions/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-properties.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-properties/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-restrictions.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-restrictions/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-states.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-states/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-versions.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-versions/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-watches.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-watches/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-attachments.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-attachments/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_content-comments.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-content-comments/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_dynamic-modules.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-dynamic-modules/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_experimental.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-experimental/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_group.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-group/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_inline-tasks.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-inline-tasks/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_label.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-label/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_long-running-task.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-long-running-task/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_relation.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-relation/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_search.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-search/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_settings.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-settings/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_space.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-space/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_space-permissions.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-space-permissions/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_space-properties.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-space-properties/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_space-settings.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-space-settings/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_template.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-template/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_themes.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-themes/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_users.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-users/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v1_other-operations.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v1/api-group-other-operations/",
+      "version": "v1"
+    },
+    {
+      "filename": "api_v2_ancestor.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-ancestor/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_attachment.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-attachment/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_blog-post.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-blog-post/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_comment.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-comment/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_content-properties.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-content-properties/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_custom-content.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-custom-content/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_data-policies.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-data-policies/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_inline-comment.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-inline-comment/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_label.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-label/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_operation.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-operation/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_page.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-page/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_space.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-space/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_space-permissions.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-space-permissions/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_task.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-task/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_user.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-user/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_version.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-version/",
+      "version": "v2"
+    },
+    {
+      "filename": "api_v2_whiteboard.md",
+      "title": "Confluence Cloud",
+      "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/api-group-whiteboard/",
+      "version": "v2"
+    }
+  ]
+}

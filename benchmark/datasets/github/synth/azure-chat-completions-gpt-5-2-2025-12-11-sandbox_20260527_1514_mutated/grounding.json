@@ -1,0 +1,6 @@
+{
+  "github_list_issues_assigned_to_me": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /issues"
+  }
+}

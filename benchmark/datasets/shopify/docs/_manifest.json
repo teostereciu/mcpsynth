@@ -1,0 +1,293 @@
+{
+  "source": "Shopify Admin REST API Documentation (shopify.dev)",
+  "scraped_from": "https://shopify.dev/docs/api/admin-rest/2026-01/resources",
+  "scrape_date": "2026-04-13T11:01:55.982581",
+  "total_pages": 57,
+  "files": [
+    {
+      "filename": "api_abandoned-checkouts.md",
+      "title": "Abandoned checkouts",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/abandoned-checkouts"
+    },
+    {
+      "filename": "api_accessscope.md",
+      "title": "AccessScope",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/accessscope"
+    },
+    {
+      "filename": "api_applicationcharge.md",
+      "title": "ApplicationCharge",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/applicationcharge"
+    },
+    {
+      "filename": "api_applicationcredit.md",
+      "title": "ApplicationCredit",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/applicationcredit"
+    },
+    {
+      "filename": "api_article.md",
+      "title": "Article",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/article"
+    },
+    {
+      "filename": "api_asset.md",
+      "title": "Asset",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/asset"
+    },
+    {
+      "filename": "api_blog.md",
+      "title": "Blog",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/blog"
+    },
+    {
+      "filename": "api_cancellationrequest.md",
+      "title": "CancellationRequest",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/cancellationrequest"
+    },
+    {
+      "filename": "api_carrierservice.md",
+      "title": "CarrierService",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/carrierservice"
+    },
+    {
+      "filename": "api_checkout.md",
+      "title": "Checkout",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/checkout"
+    },
+    {
+      "filename": "api_collect.md",
+      "title": "Collect",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collect"
+    },
+    {
+      "filename": "api_collection.md",
+      "title": "Collection",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/collection"
+    },
+    {
+      "filename": "api_comment.md",
+      "title": "Comment",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/comment"
+    },
+    {
+      "filename": "api_country.md",
+      "title": "Country",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/country"
+    },
+    {
+      "filename": "api_currency.md",
+      "title": "Currency",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/currency"
+    },
+    {
+      "filename": "api_customcollection.md",
+      "title": "CustomCollection",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customcollection"
+    },
+    {
+      "filename": "api_customer.md",
+      "title": "Customer",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customer"
+    },
+    {
+      "filename": "api_customer-address.md",
+      "title": "Customer Address",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/customer-address"
+    },
+    {
+      "filename": "api_discountcode.md",
+      "title": "DiscountCode",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/discountcode"
+    },
+    {
+      "filename": "api_dispute.md",
+      "title": "Dispute",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/dispute"
+    },
+    {
+      "filename": "api_draftorder.md",
+      "title": "DraftOrder",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/draftorder"
+    },
+    {
+      "filename": "api_event.md",
+      "title": "Event",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/event"
+    },
+    {
+      "filename": "api_fulfillment.md",
+      "title": "Fulfillment",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillment"
+    },
+    {
+      "filename": "api_fulfillmentevent.md",
+      "title": "FulfillmentEvent",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillmentevent"
+    },
+    {
+      "filename": "api_fulfillmentorder.md",
+      "title": "FulfillmentOrder",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillmentorder"
+    },
+    {
+      "filename": "api_fulfillmentrequest.md",
+      "title": "FulfillmentRequest",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillmentrequest"
+    },
+    {
+      "filename": "api_fulfillmentservice.md",
+      "title": "FulfillmentService",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/fulfillmentservice"
+    },
+    {
+      "filename": "api_gift-card.md",
+      "title": "Gift Card",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/gift-card"
+    },
+    {
+      "filename": "api_inventoryitem.md",
+      "title": "InventoryItem",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventoryitem"
+    },
+    {
+      "filename": "api_inventorylevel.md",
+      "title": "InventoryLevel",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/inventorylevel"
+    },
+    {
+      "filename": "api_location.md",
+      "title": "Location",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/location"
+    },
+    {
+      "filename": "api_marketingevent.md",
+      "title": "MarketingEvent",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/marketingevent"
+    },
+    {
+      "filename": "api_metafield.md",
+      "title": "Metafield",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/metafield"
+    },
+    {
+      "filename": "api_order.md",
+      "title": "Order",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/order"
+    },
+    {
+      "filename": "api_order-risk.md",
+      "title": "Order Risk",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/order-risk"
+    },
+    {
+      "filename": "api_page.md",
+      "title": "Page",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/page"
+    },
+    {
+      "filename": "api_payment.md",
+      "title": "Payment",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/payment"
+    },
+    {
+      "filename": "api_payouts.md",
+      "title": "Payouts",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/payouts"
+    },
+    {
+      "filename": "api_policy.md",
+      "title": "Policy",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/policy"
+    },
+    {
+      "filename": "api_pricerule.md",
+      "title": "PriceRule",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/pricerule"
+    },
+    {
+      "filename": "api_product.md",
+      "title": "Product",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product"
+    },
+    {
+      "filename": "api_product-image.md",
+      "title": "Product Image",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-image"
+    },
+    {
+      "filename": "api_product-variant.md",
+      "title": "Product Variant",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/product-variant"
+    },
+    {
+      "filename": "api_productlisting.md",
+      "title": "ProductListing",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/productlisting"
+    },
+    {
+      "filename": "api_province.md",
+      "title": "Province",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/province"
+    },
+    {
+      "filename": "api_recurringapplicationcharge.md",
+      "title": "RecurringApplicationCharge",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/recurringapplicationcharge"
+    },
+    {
+      "filename": "api_redirect.md",
+      "title": "Redirect",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/redirect"
+    },
+    {
+      "filename": "api_refund.md",
+      "title": "Refund",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/refund"
+    },
+    {
+      "filename": "api_resourcefeedback.md",
+      "title": "ResourceFeedback",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/resourcefeedback"
+    },
+    {
+      "filename": "api_shippingzone.md",
+      "title": "ShippingZone",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/shippingzone"
+    },
+    {
+      "filename": "api_shop.md",
+      "title": "Shop",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/shop"
+    },
+    {
+      "filename": "api_smartcollection.md",
+      "title": "SmartCollection",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/smartcollection"
+    },
+    {
+      "filename": "api_theme.md",
+      "title": "Theme",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/theme"
+    },
+    {
+      "filename": "api_transaction.md",
+      "title": "Transaction",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/transaction"
+    },
+    {
+      "filename": "api_usagecharge.md",
+      "title": "UsageCharge",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/usagecharge"
+    },
+    {
+      "filename": "api_user.md",
+      "title": "User",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/user"
+    },
+    {
+      "filename": "api_webhook.md",
+      "title": "Webhook",
+      "url": "https://shopify.dev/docs/api/admin-rest/2026-01/resources/webhook"
+    }
+  ]
+}

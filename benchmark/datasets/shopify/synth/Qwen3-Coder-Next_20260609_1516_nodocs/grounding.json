@@ -1,0 +1,218 @@
+{
+  "get_product": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}.json"
+  },
+  "list_products": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/products.json"
+  },
+  "create_product": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/products.json"
+  },
+  "update_product": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "PUT /admin/api/2026-01/products/{product_id}.json"
+  },
+  "delete_product": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}.json"
+  },
+  "get_variant": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "list_variants": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/variants.json"
+  },
+  "update_variant": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "PUT /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "get_product_image": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/images/{image_id}.json"
+  },
+  "list_product_images": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/images.json"
+  },
+  "create_product_image": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/products/{product_id}/images.json"
+  },
+  "get_collection": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/custom_collections/{collection_id}.json"
+  },
+  "list_collections": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/custom_collections.json"
+  },
+  "create_collection": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/custom_collections.json"
+  },
+  "get_order": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "list_orders": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/orders.json"
+  },
+  "create_order": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/orders.json"
+  },
+  "get_draft_order": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "list_draft_orders": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/draft_orders.json"
+  },
+  "create_draft_order": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/draft_orders.json"
+  },
+  "update_draft_order": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "PUT /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "create_refund": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/refunds.json"
+  },
+  "list_transactions": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/transactions.json"
+  },
+  "create_transaction": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/transactions.json"
+  },
+  "get_customer": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "list_customers": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/customers.json"
+  },
+  "create_customer": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/customers.json"
+  },
+  "update_customer": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "get_inventory_item": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/inventory_items/{inventory_item_id}.json"
+  },
+  "list_inventory_items": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/inventory_items.json"
+  },
+  "update_inventory_item": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "PUT /admin/api/2026-01/inventory_items/{inventory_item_id}.json"
+  },
+  "get_inventory_level": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/inventory_levels.json"
+  },
+  "adjust_inventory_level": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/inventory_levels/adjust.json"
+  },
+  "set_inventory_level": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/inventory_levels/set.json"
+  },
+  "get_fulfillment_order": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}.json"
+  },
+  "list_fulfillment_orders": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/fulfillment_orders.json"
+  },
+  "cancel_fulfillment_order": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/cancel.json"
+  },
+  "get_location": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/locations/{location_id}.json"
+  },
+  "list_locations": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/locations.json"
+  },
+  "get_price_rule": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "list_price_rules": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/price_rules.json"
+  },
+  "create_price_rule": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/price_rules.json"
+  },
+  "update_price_rule": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "PUT /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "get_discount_code": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json"
+  },
+  "list_discount_codes": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes.json"
+  },
+  "create_discount_code": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes.json"
+  },
+  "get_webhook": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "list_webhooks": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/webhooks.json"
+  },
+  "create_webhook": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/webhooks.json"
+  },
+  "delete_webhook": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "DELETE /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "get_metafield": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/metafields/{metafield_id}.json"
+  },
+  "list_metafields": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/{resource}/{resource_id}/metafields.json"
+  },
+  "create_metafield": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "POST /admin/api/2026-01/{resource}/{resource_id}/metafields.json"
+  },
+  "get_api_usage": {
+    "doc": "N/A (General knowledge of Shopify Admin REST API)",
+    "endpoint": "GET /admin/api/2026-01/admin/api_usage.json"
+  }
+}

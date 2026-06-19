@@ -1,0 +1,58 @@
+{
+  "get_current_weather_by_city_tool": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_coordinates_tool": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_zip_tool": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_city_id_tool": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_forecast_by_city_tool": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_coordinates_tool": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_zip_tool": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_city_id_tool": {
+    "doc": "docs/forecast.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_air_pollution_current_tool": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution"
+  },
+  "get_air_pollution_forecast_tool": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/forecast"
+  },
+  "get_air_pollution_history_tool": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/history"
+  },
+  "geocode_direct_tool": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/direct"
+  },
+  "geocode_reverse_tool": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/reverse"
+  },
+  "geocode_zip_tool": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/zip"
+  }
+}

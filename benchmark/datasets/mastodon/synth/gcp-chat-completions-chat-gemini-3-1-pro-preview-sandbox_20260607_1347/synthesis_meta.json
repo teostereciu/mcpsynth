@@ -1,0 +1,12 @@
+{
+  "dataset": "mastodon",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "docs",
+  "synthesis_time": 305.8249490261078,
+  "token_usage": {
+    "input_tokens": 251346,
+    "output_tokens": 5775
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_1347"
+}

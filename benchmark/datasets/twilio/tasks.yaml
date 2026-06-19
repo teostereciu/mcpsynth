@@ -1,0 +1,182 @@
+# Agent evaluation tasks for Twilio REST APIs MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring principles.
+#
+# Dataset note: Write tasks create resources with names prefixed
+# "Agent Eval *" or "Agent * Test". +15005550006 is the Twilio magic test
+# number for Verify OTP; it always returns "pending" without sending a real SMS.
+# Sent SMS messages (verify_service_send_check) cannot be cleaned up — flagged
+# in that task's comment. Required env vars: TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN
+
+tasks:
+  # ---------- READ ----------
+
+  - id: fetch_account_details
+    prompt: >
+      Fetch the details of the Twilio account. Report the account friendly
+      name, status, and account type.
+    expected: friendly_name
+    tags: [read]
+    # Smoke test for accounts.fetch. friendly_name is a specific field in the
+    # account resource; its presence confirms the correct endpoint was called.
+
+  - id: list_messages
+    prompt: >
+      List the most recent 5 SMS messages in the Twilio account. Report the
+      SIDs, directions (inbound/outbound), and bodies of the messages.
+    expected: direction
+    tags: [read]
+    # Tests the messages.list endpoint. direction is a field specific to the
+    # Message resource and confirms the correct resource type was returned.
+
+  - id: list_available_numbers
+    prompt: >
+      Search for available local phone numbers in area code 415 (San Francisco,
+      USA). Report the first 5 phone numbers found and their capabilities.
+    expected: phone_number
+    tags: [read]
+    # Tests availablePhoneNumbers search. phone_number is the E.164 formatted
+    # number field, specific to this endpoint's response objects.
+
+  - id: list_verify_services
+    prompt: >
+      List all Twilio Verify services in the account. Report the service
+      names and SIDs, or confirm there are none.
+    expected: VA
+    tags: [read]
+    # VA is the SID prefix for Verify Services. Its presence confirms the
+    # correct Verify API endpoint was called, not the general services endpoint.
+
+  - id: list_conversations
+    prompt: >
+      List all Twilio Conversations in the account. Report the conversation
+      friendly names and SIDs of the first 5, or confirm there are none.
+    expected: CH
+    tags: [read]
+    # CH is the SID prefix for Conversations. Confirms the Conversations API
+    # endpoint was reached rather than another list endpoint.
+
+  - id: list_purchased_numbers
+    prompt: >
+      List all phone numbers purchased in the Twilio account. Report the
+      phone numbers and their capabilities (voice, SMS, MMS).
+    expected: phone_number
+    tags: [read]
+    # Tests incomingPhoneNumbers.list — different from availablePhoneNumbers.
+    # Discriminates tools that conflate searching available numbers with listing
+    # owned numbers. phone_number in the IncomingPhoneNumber resource confirms
+    # the correct endpoint was used.
+
+  - id: get_account_subaccounts
+    prompt: >
+      List any subaccounts associated with the main Twilio account. Report
+      their friendly names and SIDs, or confirm there are none.
+    expected: AC
+    tags: [read]
+    # AC is the SID prefix for all Twilio accounts (including subaccounts).
+    # Its presence confirms the accounts.list endpoint was called. Tests a
+    # niche endpoint that synthesizers often omit.
+
+  - id: compare_message_directions
+    prompt: >
+      List the last 10 messages in the account. Count how many are inbound
+      versus outbound. Report both counts.
+    expected: direction
+    tags: [read, multi-step]
+    # Synthesis task: requires fetching a message list and grouping by the
+    # direction field. Fails if the messages endpoint returns an unexpected
+    # schema or if direction values are not parsed correctly.
+
+  # ---------- WRITE ----------
+
+  - id: create_verify_service
+    prompt: >
+      Create a new Twilio Verify service with friendly name
+      "Agent Eval Test Service". Report the service SID created.
+    expected: VA
+    tags: [write]
+    # VA prefix confirms a Verify Service was created (not a generic resource).
+    # Tests the Verify services.create endpoint.
+
+  - id: create_conversation
+    prompt: >
+      Create a new Twilio Conversation with friendly name
+      "Agent Eval Test Conversation". Report the conversation SID.
+    expected: CH
+    tags: [write]
+    # CH prefix confirms a Conversation was created. Smoke test for the
+    # Conversations API create endpoint.
+
+  # ---------- MULTI-STEP / WORKFLOW ----------
+
+  - id: create_conversation_and_message
+    prompt: >
+      Create a Twilio Conversation named "Agent Message Test Conversation".
+      Then send a message in that conversation with author "agent-harness"
+      and body "Hello from the MCP agent evaluation harness!".
+      Report the conversation SID and message SID.
+    expected: IM
+    tags: [write, multi-step, workflow]
+    # IM is the SID prefix for Conversation Messages. It only appears if the
+    # message was created inside the conversation, confirming both the
+    # conversation create and message create calls succeeded.
+
+  - id: create_conversation_with_participant
+    prompt: >
+      Create a Twilio Conversation named "Agent Participant Test". Then add
+      a participant to it with identity "agent-test-user". Report the
+      conversation SID and participant SID.
+    expected: CH
+    tags: [write, multi-step, workflow]
+    # Two-step: create conversation then add participant. CH confirms the
+    # conversation was created. A full pass also requires the participant
+    # call to succeed (MB SID prefix in participant; agent may report either).
+
+  - id: fetch_conversation_messages
+    prompt: >
+      List all conversations in the account. If any exist, retrieve the
+      message history of the first conversation. Report the conversation SID
+      and the bodies of the messages found, or confirm it is empty.
+    expected: CH
+    tags: [read, multi-step]
+    # Two-step: list conversations then fetch messages from the first one.
+    # Tests that the agent can pass the conversation SID into the messages
+    # list call. CH confirms the conversation SID was present in the report.
+
+  - id: create_conversation_and_add_two_messages
+    prompt: >
+      Create a Conversation named "Agent List Test". Add two messages to it:
+      first with author "agent-user-1" and body "First message", then with
+      author "agent-user-2" and body "Second message". List the messages in
+      that conversation and report both message SIDs.
+    expected: IM
+    tags: [write, multi-step, workflow]
+    # Four-step workflow: create conversation, add message 1, add message 2,
+    # list messages. IM prefix confirms both message SIDs were retrieved from
+    # the list. Tests that the agent correctly scopes the message list to the
+    # created conversation rather than listing all conversations.
+
+  - id: verify_service_send_check
+    prompt: >
+      Create a Twilio Verify service named "Agent OTP Test Service". Then
+      send a verification (OTP) to the phone number "+15005550006" via SMS
+      using that service. Report the service SID and verification status.
+      Note: +15005550006 is the Twilio magic test number — it accepts
+      verifications without sending a real SMS.
+    expected: pending
+    tags: [write, multi-step, workflow]
+    # Two-step: create Verify service then send OTP. pending is the status
+    # returned by Twilio for all test-number verifications. Confirms the
+    # Verify send endpoint was called correctly with the service SID.
+    # Cleanup note: verification records cannot be deleted via API.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: error_handling_invalid_sid
+    prompt: >
+      Try to fetch a Twilio message with SID "MM00000000000000000000000000000000".
+      Report the error response received.
+    expected: "20404"
+    tags: [read, error-handling]
+    # 20404 is Twilio's specific error code for "resource not found" — stronger
+    # than the generic word "error". Tests that the MCP server propagates
+    # Twilio error codes rather than returning a generic failure message.

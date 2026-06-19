@@ -1,0 +1,106 @@
+{
+  "browse_search": {
+    "doc": "docs/api_buy_browse_resources_item_summary_methods_search.md",
+    "endpoint": "GET /buy/v1/item_summary/search"
+  },
+  "browse_search_by_image": {
+    "doc": "docs/api_buy_browse_resources_item_summary_methods_searchByImage.md",
+    "endpoint": "GET /buy/v1/item_summary/search_by_image"
+  },
+  "browse_get_item": {
+    "doc": "docs/api_buy_browse_resources_item_methods_getItem.md",
+    "endpoint": "GET /buy/v1/item/{item_id}"
+  },
+  "browse_get_item_by_legacy_id": {
+    "doc": "docs/api_buy_browse_resources_item_methods_getItemByLegacyId.md",
+    "endpoint": "GET /buy/v1/item/get_item_by_legacy_id"
+  },
+  "browse_get_items": {
+    "doc": "docs/api_buy_browse_resources_item_methods_getItems.md",
+    "endpoint": "GET /buy/v1/item/"
+  },
+  "browse_get_items_by_item_group": {
+    "doc": "docs/api_buy_browse_resources_item_methods_getItemsByItemGroup.md",
+    "endpoint": "GET /buy/v1/item/get_items_by_item_group"
+  },
+  "browse_check_compatibility": {
+    "doc": "docs/api_buy_browse_resources_item_methods_checkCompatibility.md",
+    "endpoint": "POST /buy/v1/item/{item_id}/check_compatibility"
+  },
+  "deal_get_events": {
+    "doc": "docs/api_buy_deal_resources_event_methods_getEvents.md",
+    "endpoint": "GET /buy/deal/v1/event"
+  },
+  "deal_get_event": {
+    "doc": "docs/api_buy_deal_resources_event_methods_getEvent.md",
+    "endpoint": "GET /buy/deal/v1/event/{event_id}"
+  },
+  "deal_get_event_items": {
+    "doc": "docs/api_buy_deal_resources_event_item_methods_getEventItems.md",
+    "endpoint": "GET /buy/deal/v1/event/{event_id}/item"
+  },
+  "deal_get_deal_items": {
+    "doc": "docs/api_buy_deal_resources_deal_item_methods_getDealItems.md",
+    "endpoint": "GET /buy/deal/v1/deal_item"
+  },
+  "feed_get_item_feed": {
+    "doc": "docs/api_buy_feed_resources_item_methods_getItemFeed.md",
+    "endpoint": "GET /buy/feed/v1/item"
+  },
+  "feed_get_item_group_feed": {
+    "doc": "docs/api_buy_feed_resources_item_group_methods_getItemGroupFeed.md",
+    "endpoint": "GET /buy/feed/v1/item_group"
+  },
+  "feed_get_item_priority_feed": {
+    "doc": "docs/api_buy_feed_resources_item_priority_methods_getItemPriorityFeed.md",
+    "endpoint": "GET /buy/feed/v1/item_priority"
+  },
+  "feed_get_item_snapshot_feed": {
+    "doc": "docs/api_buy_feed_resources_item_snapshot_methods_getItemSnapshotFeed.md",
+    "endpoint": "GET /buy/feed/v1/item_snapshot"
+  },
+  "marketing_get_merchandised_products": {
+    "doc": "docs/api_buy_marketing_resources_merchandised_product_methods_getMerchandisedProducts.md",
+    "endpoint": "GET /buy/marketing/v1_beta/merchandised_product"
+  },
+  "offer_get_bidding": {
+    "doc": "docs/api_buy_offer_resources_bidding_methods_getBidding.md",
+    "endpoint": "GET /buy/offer/v1_beta/bidding/{item_id}"
+  },
+  "offer_place_proxy_bid": {
+    "doc": "docs/api_buy_offer_resources_bidding_methods_placeProxyBid.md",
+    "endpoint": "POST /buy/offer/v1_beta/bidding/{item_id}/place_proxy_bid"
+  },
+  "order_initiate_guest_checkout_session": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_initiateGuestCheckoutSession.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/initiate"
+  },
+  "order_get_guest_checkout_session": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_getGuestCheckoutSession.md",
+    "endpoint": "GET /buy/order/v2/guest_checkout_session/{checkout_session_id}"
+  },
+  "order_update_guest_quantity": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_updateGuestQuantity.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/update_quantity"
+  },
+  "order_update_guest_shipping_address": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_updateGuestShippingAddress.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/update_shipping_address"
+  },
+  "order_update_guest_shipping_option": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_updateGuestShippingOption.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/update_shipping_option"
+  },
+  "order_apply_guest_coupon": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_applyGuestCoupon.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/apply_coupon"
+  },
+  "order_remove_guest_coupon": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_removeGuestCoupon.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/remove_coupon"
+  },
+  "order_get_guest_purchase_order": {
+    "doc": "docs/api_buy_order_resources_guest_purchase_order_methods_getGuestPurchaseOrder.md",
+    "endpoint": "GET /buy/order/v2/guest_purchase_order/{purchase_order_id}"
+  }
+}

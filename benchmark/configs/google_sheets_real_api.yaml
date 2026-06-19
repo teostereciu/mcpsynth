@@ -1,0 +1,104 @@
+# Google Sheets Real API Testing Configuration
+#
+# This config defines what's needed to test the Google Sheets MCP server
+# against the real Google Sheets API v4.
+
+api_name: "Google Sheets"
+api_version: "Sheets API v4"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS (one of the two options below)
+# ==============================================================================
+
+required_credentials:
+  GOOGLE_ACCESS_TOKEN:
+    description: "OAuth2 access token (simplest option for short-lived testing)"
+    how_to_get:
+      steps:
+        - "Install gcloud CLI: https://cloud.google.com/sdk/docs/install"
+        - "Run: gcloud auth application-default login"
+        - "Run: gcloud auth application-default print-access-token"
+        - "Export: export GOOGLE_ACCESS_TOKEN=$(gcloud auth application-default print-access-token)"
+      notes:
+        - "Access tokens expire after 1 hour — refresh before running tests"
+        - "Ensure the authenticated account has access to create/edit spreadsheets"
+    example: "ya29.a0AfH6SMB..."
+
+  GOOGLE_SHEETS_CREDENTIALS:
+    description: "Path to a Google service account JSON key file (recommended for CI)"
+    how_to_get:
+      url: "https://console.cloud.google.com/apis/credentials"
+      steps:
+        - "Go to Google Cloud Console > APIs & Services > Credentials"
+        - "Create a Service Account (or use existing)"
+        - "Under the service account, go to Keys > Add Key > Create new key (JSON)"
+        - "Download the JSON file and save it securely"
+        - "Enable the Google Sheets API for your project"
+        - "Set: export GOOGLE_SHEETS_CREDENTIALS=/path/to/service-account.json"
+      notes:
+        - "Service accounts need to own or be shared the spreadsheets they access"
+        - "For scenario tests that create spreadsheets, the service account will own them"
+        - "The service account email looks like: name@project-id.iam.gserviceaccount.com"
+    example: "/path/to/service-account-key.json"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  Google Sheets has no sandbox environment. All API calls hit real Google Drive/Sheets.
+  Recommendations:
+    - Use a dedicated Google account or service account for testing
+    - Spreadsheets created during tests accumulate in Google Drive
+    - Consider periodic cleanup of test spreadsheets (titled "MCP Test*")
+
+mock_mode:
+  available: false
+  notes: |
+    Mock mode is not implemented for Google Sheets tests.
+    Real credentials are required to run these tests.
+
+rate_limits:
+  read_requests: "300 requests per minute per project"
+  write_requests: "300 requests per minute per project"
+  notes: |
+    - Per-user limits: 60 read requests/minute, 60 write requests/minute
+    - Batch operations count as one request (use batchGet, batchUpdate to stay within limits)
+    - If rate limited, the API returns HTTP 429
+
+# ==============================================================================
+# API PERMISSIONS REQUIRED
+# ==============================================================================
+
+permissions:
+  oauth_scopes:
+    - "https://www.googleapis.com/auth/spreadsheets — read/write access (required)"
+    - "https://www.googleapis.com/auth/drive.file — create/open files (optional)"
+  notes: |
+    - Service accounts: grant scopes via the JSON key's token request
+    - User tokens: grant scopes during OAuth consent flow
+    - Read-only tests can use spreadsheets.readonly scope
+
+authentication:
+  type: "OAuth2 Bearer token"
+  header: "Authorization: Bearer {access_token}"
+  service_account_library: "google-auth>=2.0.0 (add to requirements.txt)"
+  notes: |
+    - Access tokens expire after 1 hour
+    - Service account credentials auto-refresh via google-auth library
+    - All Sheets API calls use Authorization: Bearer header
+
+base_url: "https://sheets.googleapis.com/v4/spreadsheets"
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  api_reference: "https://developers.google.com/sheets/api/reference/rest"
+  quickstart: "https://developers.google.com/sheets/api/quickstart/python"
+  service_accounts: "https://developers.google.com/workspace/guides/create-credentials#service-account"
+  oauth_scopes: "https://developers.google.com/sheets/api/scopes"
+  a1_notation: "https://developers.google.com/sheets/api/guides/concepts#cell"

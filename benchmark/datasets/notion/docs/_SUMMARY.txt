@@ -1,0 +1,6 @@
+Auto-discovered and scraped 93 resources
+
+Total resources found: 93
+Successfully scraped: 93
+Not found: 0
+

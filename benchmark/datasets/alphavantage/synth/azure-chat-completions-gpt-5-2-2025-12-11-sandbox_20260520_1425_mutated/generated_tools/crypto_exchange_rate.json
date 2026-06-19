@@ -1,0 +1,13 @@
+{
+  "name": "crypto_exchange_rate",
+  "description": "Realtime exchange rate between crypto and/or physical currencies (CURRENCY_EXCHANGE_RATE).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "from_currency": {"type": "string"},
+      "to_currency": {"type": "string"},
+      "apikey": {"type": "string"}
+    },
+    "required": ["from_currency", "to_currency"]
+  }
+}

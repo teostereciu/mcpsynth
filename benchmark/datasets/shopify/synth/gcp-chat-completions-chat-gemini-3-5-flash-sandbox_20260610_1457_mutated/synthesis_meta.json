@@ -1,0 +1,12 @@
+{
+  "dataset": "shopify",
+  "model": "gcp-chat-completions-chat-gemini-3.5-flash-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 221.00065517425537,
+  "token_usage": {
+    "input_tokens": 122111,
+    "output_tokens": 126
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1457"
+}

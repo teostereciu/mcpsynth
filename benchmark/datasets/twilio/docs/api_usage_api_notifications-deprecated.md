@@ -1,0 +1,1984 @@
+# REST API: Notifications [DEPRECATED]
+
+*Source: https://www.twilio.com/docs/usage/api/notifications-deprecated*
+
+---
+
+# REST API: Notifications [DEPRECATED]
+
+Positive FeedbackNegative Feedback
+
+* * *
+
+(error)
+
+## Danger
+
+The **Notifications resource** has been deprecated and replaced by **Alerts**. Notifications may be removed in future versions of the Twilio API. Since the [Alerts](/docs/usage/monitor-alert "Alerts") resource is a superset of Notifications, we recommend its use going forward.
+
+A Notification instance represents a single log entry made by Twilio during the handling of calls or use of the REST API. This resource is helpful for debugging issues with calls and the REST API.
+
+The Notifications list represents the set of notifications generated for an account. For convenience, a Notifications list resource is also available as a subresource of a [Call instance resource](/docs/voice/api/call-resource "Call instance resource"). This resource is scoped to an individual call so that you can navigate directly from a call to the notifications generated from that call.
+
+* * *
+
+## Notification Properties
+
+notification-properties page anchor
+
+Positive FeedbackNegative Feedback
+
+(error)
+
+## Danger
+
+Be aware that, unlike other areas of this REST API, the representation of a Notification instance is different from that of Notification representations within responses from the list resource.
+
+Due to the potentially voluminous amount of data in a notification, the full HTTP request and response data is only returned in the Notification instance resource representation.
+
+Property nameTypeRequiredPIIDescriptionChild properties
+
+accountSidSID<AC>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The SID of the [Account](/docs/iam/api/account "Account") that created the Notification resource.
+
+Pattern: `^AC[0-9a-fA-F]{32}$`Min length: `34`Max length: `34`
+
+* * *
+
+apiVersionstring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The API version used to generate the notification. Can be empty for events that don't have a specific API version, such as incoming phone calls.
+
+* * *
+
+callSidSID<CA>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The SID of the [Call](/docs/voice/api/call-resource "Call") the Notification resource is associated with.
+
+Pattern: `^CA[0-9a-fA-F]{32}$`Min length: `34`Max length: `34`
+
+* * *
+
+dateCreatedstring<date-time-rfc-2822>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The date and time in GMT that the resource was created specified in [RFC 2822(link takes you to an external page)](https://www.ietf.org/rfc/rfc2822.txt "RFC 2822") format.
+
+* * *
+
+dateUpdatedstring<date-time-rfc-2822>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The date and time in GMT that the resource was last updated specified in [RFC 2822(link takes you to an external page)](https://www.ietf.org/rfc/rfc2822.txt "RFC 2822") format.
+
+* * *
+
+errorCodestring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+A unique error code for the error condition that is described in our [Error Dictionary](/docs/api/errors "Error Dictionary").
+
+* * *
+
+logstring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+An integer log level that corresponds to the type of notification: `0` is ERROR, `1` is WARNING.
+
+* * *
+
+messageDatestring<date-time-rfc-2822>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The date the notification was actually generated in [RFC 2822(link takes you to an external page)](https://www.ietf.org/rfc/rfc2822.txt "RFC 2822") format. Message buffering can cause this value to differ from `date_created`.
+
+* * *
+
+messageTextstring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The text of the notification.
+
+* * *
+
+moreInfostring<uri>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The URL for more information about the error condition. This value is a page in our [Error Dictionary](/docs/api/errors "Error Dictionary").
+
+* * *
+
+requestMethodenum<http-method>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The HTTP method used to generate the notification. If the notification was generated during a phone call, this is the HTTP Method used to request the resource on your server. If the notification was generated by your use of our REST API, this is the HTTP method used to call the resource on our servers.
+
+Possible values:
+
+`GET``POST`
+
+* * *
+
+requestUrlstring<uri>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The URL of the resource that generated the notification. If the notification was generated during a phone call, this is the URL of the resource on your server that caused the notification. If the notification was generated by your use of our REST API, this is the URL of the resource you called.
+
+* * *
+
+sidSID<NO>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The unique string that that we created to identify the Notification resource.
+
+Pattern: `^NO[0-9a-fA-F]{32}$`Min length: `34`Max length: `34`
+
+* * *
+
+uristring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The URI of the resource, relative to `https://api.twilio.com`.
+
+* * *
+
+requestVariablesstring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The HTTP GET or POST variables we sent to your server. However, if the notification was generated by our REST API, this contains the HTTP POST or PUT variables you sent to our API.
+
+* * *
+
+responseBodystring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The HTTP body returned by your server.
+
+* * *
+
+responseHeadersstring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The HTTP headers returned by your server.
+
+* * *
+
+## Fetch a Notification resource
+
+fetch-a-notification-resource page anchor
+
+Positive FeedbackNegative Feedback
+
+`GET https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Notifications/{Sid}.json`
+
+### Path parameters
+
+path-parameters page anchor
+
+Positive FeedbackNegative Feedback
+
+Property nameTypeRequiredPIIDescription
+
+accountSidSID<AC>
+
+required
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The SID of the [Account](/docs/iam/api/account "Account") that created the Notification resource to fetch.
+
+Pattern: `^AC[0-9a-fA-F]{32}$`Min length: `34`Max length: `34`
+
+* * *
+
+sidSID<NO>
+
+required
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The Twilio-provided string that uniquely identifies the Notification resource to fetch.
+
+Pattern: `^NO[0-9a-fA-F]{32}$`Min length: `34`Max length: `34`
+
+Fetch NotificationLink to code sample: Fetch Notification
+
+Report code block
+
+Copy code block
+
+
+    1
+
+    // Download the helper library from https://www.twilio.com/docs/node/install
+
+
+    2
+
+    const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+
+
+    3
+
+
+
+
+    4
+
+    // Find your Account SID and Auth Token at twilio.com/console
+
+
+    5
+
+    // and set the environment variables. See http://twil.io/secure
+
+
+    6
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+
+
+    7
+
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+
+    8
+
+    const client = twilio(accountSid, authToken);
+
+
+    9
+
+
+
+
+    10
+
+    async function fetchNotification() {
+
+
+    11
+
+      const notification = await client
+
+
+    12
+
+        .notifications("NOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+
+
+    13
+
+        .fetch();
+
+
+    14
+
+
+
+
+    15
+
+      console.log(notification.accountSid);
+
+
+    16
+
+    }
+
+
+    17
+
+
+
+
+    18
+
+    fetchNotification();
+
+### Response
+
+Note about this response
+
+Copy response
+
+
+    1
+
+    {
+
+
+    2
+
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+
+
+    3
+
+      "api_version": "2008-08-01",
+
+
+    4
+
+      "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    5
+
+      "date_created": "Mon, 13 Sep 2010 20:02:01 +0000",
+
+
+    6
+
+      "date_updated": "Mon, 13 Sep 2010 20:02:01 +0000",
+
+
+    7
+
+      "error_code": "11200",
+
+
+    8
+
+      "log": "0",
+
+
+    9
+
+      "message_date": "Mon, 13 Sep 2010 20:02:00 +0000",
+
+
+    10
+
+      "message_text": "EmailNotification=false&LogLevel=ERROR&sourceComponent=12000&Msg=&httpResponse=500&ErrorCode=11200&url=http%3A%2F%2Fvoiceforms4000.appspot.com%2Ftwiml",
+
+
+    11
+
+      "more_info": "http://www.twilio.com/docs/errors/11200",
+
+
+    12
+
+      "request_method": "GET",
+
+
+    13
+
+      "request_url": "https://voiceforms4000.appspot.com/twiml/9436/question/0",
+
+
+    14
+
+      "request_variables": "AccountSid=ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&CallStatus=in-progress&ToZip=94937&ToCity=INVERNESS&ToState=CA&Called=%2B14156694923&To=%2B14156694923&ToCountry=US&CalledZip=94937&Direction=inbound&ApiVersion=2010-04-01&Caller=%2B17378742833&CalledCity=INVERNESS&CalledCountry=US&CallSid=CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&CalledState=CA&From=%2B17378742833",
+
+
+    15
+
+      "response_body": "Response body from your webhook URL as a string.",
+
+
+    16
+
+      "response_headers": "Date=Mon%2C+13+Sep+2010+20%3A02%3A00+GMT&Content-Length=466&Connection=close&Content-Type=text%2Fhtml%3B+charset%3DUTF-8&Server=Google+Frontend",
+
+
+    17
+
+      "sid": "NOXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+
+
+    18
+
+      "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications/NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+
+
+    19
+
+    }
+
+Fetch NotificationLink to code sample: Fetch Notification
+
+Report code block
+
+Copy code block
+
+
+    1
+
+    // Download the helper library from https://www.twilio.com/docs/node/install
+
+
+    2
+
+    const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+
+
+    3
+
+
+
+
+    4
+
+    // Find your Account SID and Auth Token at twilio.com/console
+
+
+    5
+
+    // and set the environment variables. See http://twil.io/secure
+
+
+    6
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+
+
+    7
+
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+
+    8
+
+    const client = twilio(accountSid, authToken);
+
+
+    9
+
+
+
+
+    10
+
+    async function fetchNotification() {
+
+
+    11
+
+      const notification = await client
+
+
+    12
+
+        .notifications("NO5a7a84730f529f0a76b3e30c01315d1a")
+
+
+    13
+
+        .fetch();
+
+
+    14
+
+
+
+
+    15
+
+      console.log(notification.accountSid);
+
+
+    16
+
+    }
+
+
+    17
+
+
+
+
+    18
+
+    fetchNotification();
+
+### Response
+
+Note about this response
+
+Copy response
+
+
+    1
+
+    {
+
+
+    2
+
+      "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+
+
+    3
+
+      "api_version": "2008-08-01",
+
+
+    4
+
+      "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    5
+
+      "date_created": "Mon, 13 Sep 2010 20:02:01 +0000",
+
+
+    6
+
+      "date_updated": "Mon, 13 Sep 2010 20:02:01 +0000",
+
+
+    7
+
+      "error_code": "11200",
+
+
+    8
+
+      "log": "0",
+
+
+    9
+
+      "message_date": "Mon, 13 Sep 2010 20:02:00 +0000",
+
+
+    10
+
+      "message_text": "EmailNotification=false&LogLevel=ERROR&sourceComponent=12000&Msg=&httpResponse=500&ErrorCode=11200&url=http%3A%2F%2Fvoiceforms4000.appspot.com%2Ftwiml",
+
+
+    11
+
+      "more_info": "http://www.twilio.com/docs/errors/11200",
+
+
+    12
+
+      "request_method": "GET",
+
+
+    13
+
+      "request_url": "https://voiceforms4000.appspot.com/twiml/9436/question/0",
+
+
+    14
+
+      "request_variables": "AccountSid=ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&CallStatus=in-progress&ToZip=94937&ToCity=INVERNESS&ToState=CA&Called=%2B14156694923&To=%2B14156694923&ToCountry=US&CalledZip=94937&Direction=inbound&ApiVersion=2010-04-01&Caller=%2B17378742833&CalledCity=INVERNESS&CalledCountry=US&CallSid=CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&CalledState=CA&From=%2B17378742833",
+
+
+    15
+
+      "response_body": "Response body from your webhook URL as a string.",
+
+
+    16
+
+      "response_headers": "Date=Mon%2C+13+Sep+2010+20%3A02%3A00+GMT&Content-Length=466&Connection=close&Content-Type=text%2Fhtml%3B+charset%3DUTF-8&Server=Google+Frontend",
+
+
+    17
+
+      "sid": "NO5a7a84730f529f0a76b3e30c01315d1a",
+
+
+    18
+
+      "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications/NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+
+
+    19
+
+    }
+
+* * *
+
+## Read multiple Notification resources
+
+read-multiple-notification-resources page anchor
+
+Positive FeedbackNegative Feedback
+
+`GET https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Notifications.json`
+
+### Path parameters
+
+path-parameters-1 page anchor
+
+Positive FeedbackNegative Feedback
+
+Property nameTypeRequiredPIIDescription
+
+accountSidSID<AC>
+
+required
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The SID of the [Account](/docs/iam/api/account "Account") that created the Notification resources to read.
+
+Pattern: `^AC[0-9a-fA-F]{32}$`Min length: `34`Max length: `34`
+
+### Query parameters
+
+query-parameters page anchor
+
+Positive FeedbackNegative Feedback
+
+Property nameTypeRequiredPIIDescription
+
+loginteger
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+Only read notifications of the specified log level. Can be: `0` to read only ERROR notifications or `1` to read only WARNING notifications. By default, all notifications are read.
+
+* * *
+
+messageDatestring<date>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `<=YYYY-MM-DD` for messages logged at or before midnight on a date, or `>=YYYY-MM-DD` for messages logged at or after midnight on a date.
+
+* * *
+
+messageDateBeforestring<date>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `<=YYYY-MM-DD` for messages logged at or before midnight on a date, or `>=YYYY-MM-DD` for messages logged at or after midnight on a date.
+
+* * *
+
+messageDateAfterstring<date>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `<=YYYY-MM-DD` for messages logged at or before midnight on a date, or `>=YYYY-MM-DD` for messages logged at or after midnight on a date.
+
+* * *
+
+pageSizeinteger<int64>
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+How many resources to return in each list page. The default is 50, and the maximum is 1000.
+
+Minimum: `1`Maximum: `1000`
+
+* * *
+
+pageinteger
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The page index. This value is simply for client state.
+
+Minimum: `0`
+
+* * *
+
+pageTokenstring
+
+Optional
+
+[Not PII](/docs/glossary/what-is-personally-identifiable-information-pii#fields-marked-not-pii)
+
+The page token. This is provided by the API.
+
+Read NotificationLink to code sample: Read Notification
+
+Report code block
+
+Copy code block
+
+
+    1
+
+    // Download the helper library from https://www.twilio.com/docs/node/install
+
+
+    2
+
+    const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+
+
+    3
+
+
+
+
+    4
+
+    // Find your Account SID and Auth Token at twilio.com/console
+
+
+    5
+
+    // and set the environment variables. See http://twil.io/secure
+
+
+    6
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+
+
+    7
+
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+
+    8
+
+    const client = twilio(accountSid, authToken);
+
+
+    9
+
+
+
+
+    10
+
+    async function listNotification() {
+
+
+    11
+
+      const notifications = await client.notifications.list({ limit: 20 });
+
+
+    12
+
+
+
+
+    13
+
+      notifications.forEach((n) => console.log(n.accountSid));
+
+
+    14
+
+    }
+
+
+    15
+
+
+
+
+    16
+
+    listNotification();
+
+### Response
+
+Note about this response
+
+Copy response
+
+
+    1
+
+    {
+
+
+    2
+
+      "end": 0,
+
+
+    3
+
+      "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0",
+
+
+    4
+
+      "previous_page_uri": null,
+
+
+    5
+
+      "next_page_uri": null,
+
+
+    6
+
+      "notifications": [
+
+
+    7
+
+        {
+
+
+    8
+
+          "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    9
+
+          "api_version": "2008-08-01",
+
+
+    10
+
+          "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    11
+
+          "date_created": "Thu, 30 Apr 2015 16:47:33 +0000",
+
+
+    12
+
+          "date_updated": "Thu, 30 Apr 2015 16:47:35 +0000",
+
+
+    13
+
+          "error_code": "21609",
+
+
+    14
+
+          "log": "1",
+
+
+    15
+
+          "message_date": "Thu, 30 Apr 2015 16:47:32 +0000",
+
+
+    16
+
+          "message_text": "LogLevel=WARN&invalidStatusCallbackUrl=&Msg=Invalid+Url+for+callSid%3A+CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa+invalid+statusCallbackUrl%3A+&ErrorCode=21609",
+
+
+    17
+
+          "more_info": "/docs/errors/21609",
+
+
+    18
+
+          "request_method": null,
+
+
+    19
+
+          "request_url": "",
+
+
+    20
+
+          "sid": "NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    21
+
+          "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications/NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+
+
+    22
+
+        }
+
+
+    23
+
+      ],
+
+
+    24
+
+      "page": 0,
+
+
+    25
+
+      "page_size": 50,
+
+
+    26
+
+      "start": 0,
+
+
+    27
+
+      "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0"
+
+
+    28
+
+    }
+
+Filter NotificationsLink to code sample: Filter Notifications
+
+Report code block
+
+Copy code block
+
+
+    1
+
+    // Download the helper library from https://www.twilio.com/docs/node/install
+
+
+    2
+
+    const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+
+
+    3
+
+
+
+
+    4
+
+    // Find your Account SID and Auth Token at twilio.com/console
+
+
+    5
+
+    // and set the environment variables. See http://twil.io/secure
+
+
+    6
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+
+
+    7
+
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+
+    8
+
+    const client = twilio(accountSid, authToken);
+
+
+    9
+
+
+
+
+    10
+
+    async function listNotification() {
+
+
+    11
+
+      const notifications = await client.notifications.list({ limit: 20 });
+
+
+    12
+
+
+
+
+    13
+
+      notifications.forEach((n) => console.log(n.accountSid));
+
+
+    14
+
+    }
+
+
+    15
+
+
+
+
+    16
+
+    listNotification();
+
+### Response
+
+Note about this response
+
+Copy response
+
+
+    1
+
+    {
+
+
+    2
+
+      "end": 0,
+
+
+    3
+
+      "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0",
+
+
+    4
+
+      "previous_page_uri": null,
+
+
+    5
+
+      "next_page_uri": null,
+
+
+    6
+
+      "notifications": [
+
+
+    7
+
+        {
+
+
+    8
+
+          "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    9
+
+          "api_version": "2008-08-01",
+
+
+    10
+
+          "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    11
+
+          "date_created": "Thu, 30 Apr 2015 16:47:33 +0000",
+
+
+    12
+
+          "date_updated": "Thu, 30 Apr 2015 16:47:35 +0000",
+
+
+    13
+
+          "error_code": "21609",
+
+
+    14
+
+          "log": "1",
+
+
+    15
+
+          "message_date": "Thu, 30 Apr 2015 16:47:32 +0000",
+
+
+    16
+
+          "message_text": "LogLevel=WARN&invalidStatusCallbackUrl=&Msg=Invalid+Url+for+callSid%3A+CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa+invalid+statusCallbackUrl%3A+&ErrorCode=21609",
+
+
+    17
+
+          "more_info": "/docs/errors/21609",
+
+
+    18
+
+          "request_method": null,
+
+
+    19
+
+          "request_url": "",
+
+
+    20
+
+          "sid": "NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    21
+
+          "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications/NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+
+
+    22
+
+        }
+
+
+    23
+
+      ],
+
+
+    24
+
+      "page": 0,
+
+
+    25
+
+      "page_size": 50,
+
+
+    26
+
+      "start": 0,
+
+
+    27
+
+      "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0"
+
+
+    28
+
+    }
+
+Filter Notifications using paramsLink to code sample: Filter Notifications using params
+
+Report code block
+
+Copy code block
+
+
+    1
+
+    // Download the helper library from https://www.twilio.com/docs/node/install
+
+
+    2
+
+    const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+
+
+    3
+
+
+
+
+    4
+
+    // Find your Account SID and Auth Token at twilio.com/console
+
+
+    5
+
+    // and set the environment variables. See http://twil.io/secure
+
+
+    6
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+
+
+    7
+
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+
+    8
+
+    const client = twilio(accountSid, authToken);
+
+
+    9
+
+
+
+
+    10
+
+    async function listNotification() {
+
+
+    11
+
+      const notifications = await client.notifications.list({
+
+
+    12
+
+        log: 1,
+
+
+    13
+
+        messageDate: "2009-07-06",
+
+
+    14
+
+        limit: 20,
+
+
+    15
+
+      });
+
+
+    16
+
+
+
+
+    17
+
+      notifications.forEach((n) => console.log(n.accountSid));
+
+
+    18
+
+    }
+
+
+    19
+
+
+
+
+    20
+
+    listNotification();
+
+### Response
+
+Note about this response
+
+Copy response
+
+
+    1
+
+    {
+
+
+    2
+
+      "end": 0,
+
+
+    3
+
+      "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0",
+
+
+    4
+
+      "previous_page_uri": null,
+
+
+    5
+
+      "next_page_uri": null,
+
+
+    6
+
+      "notifications": [
+
+
+    7
+
+        {
+
+
+    8
+
+          "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    9
+
+          "api_version": "2008-08-01",
+
+
+    10
+
+          "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    11
+
+          "date_created": "Thu, 30 Apr 2015 16:47:33 +0000",
+
+
+    12
+
+          "date_updated": "Thu, 30 Apr 2015 16:47:35 +0000",
+
+
+    13
+
+          "error_code": "21609",
+
+
+    14
+
+          "log": "1",
+
+
+    15
+
+          "message_date": "Thu, 30 Apr 2015 16:47:32 +0000",
+
+
+    16
+
+          "message_text": "LogLevel=WARN&invalidStatusCallbackUrl=&Msg=Invalid+Url+for+callSid%3A+CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa+invalid+statusCallbackUrl%3A+&ErrorCode=21609",
+
+
+    17
+
+          "more_info": "/docs/errors/21609",
+
+
+    18
+
+          "request_method": null,
+
+
+    19
+
+          "request_url": "",
+
+
+    20
+
+          "sid": "NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    21
+
+          "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications/NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+
+
+    22
+
+        }
+
+
+    23
+
+      ],
+
+
+    24
+
+      "page": 0,
+
+
+    25
+
+      "page_size": 50,
+
+
+    26
+
+      "start": 0,
+
+
+    27
+
+      "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0"
+
+
+    28
+
+    }
+
+Filter Notifications using limitsLink to code sample: Filter Notifications using limits
+
+Report code block
+
+Copy code block
+
+
+    1
+
+    // Download the helper library from https://www.twilio.com/docs/node/install
+
+
+    2
+
+    const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+
+
+    3
+
+
+
+
+    4
+
+    // Find your Account SID and Auth Token at twilio.com/console
+
+
+    5
+
+    // and set the environment variables. See http://twil.io/secure
+
+
+    6
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+
+
+    7
+
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+
+    8
+
+    const client = twilio(accountSid, authToken);
+
+
+    9
+
+
+
+
+    10
+
+    async function listNotification() {
+
+
+    11
+
+      const notifications = await client.notifications.list({
+
+
+    12
+
+        log: 1,
+
+
+    13
+
+        messageDateAfter: "2009-07-06",
+
+
+    14
+
+        limit: 20,
+
+
+    15
+
+      });
+
+
+    16
+
+
+
+
+    17
+
+      notifications.forEach((n) => console.log(n.accountSid));
+
+
+    18
+
+    }
+
+
+    19
+
+
+
+
+    20
+
+    listNotification();
+
+### Response
+
+Note about this response
+
+Copy response
+
+
+    1
+
+    {
+
+
+    2
+
+      "end": 0,
+
+
+    3
+
+      "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0",
+
+
+    4
+
+      "previous_page_uri": null,
+
+
+    5
+
+      "next_page_uri": null,
+
+
+    6
+
+      "notifications": [
+
+
+    7
+
+        {
+
+
+    8
+
+          "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    9
+
+          "api_version": "2008-08-01",
+
+
+    10
+
+          "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    11
+
+          "date_created": "Thu, 30 Apr 2015 16:47:33 +0000",
+
+
+    12
+
+          "date_updated": "Thu, 30 Apr 2015 16:47:35 +0000",
+
+
+    13
+
+          "error_code": "21609",
+
+
+    14
+
+          "log": "1",
+
+
+    15
+
+          "message_date": "Thu, 30 Apr 2015 16:47:32 +0000",
+
+
+    16
+
+          "message_text": "LogLevel=WARN&invalidStatusCallbackUrl=&Msg=Invalid+Url+for+callSid%3A+CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa+invalid+statusCallbackUrl%3A+&ErrorCode=21609",
+
+
+    17
+
+          "more_info": "/docs/errors/21609",
+
+
+    18
+
+          "request_method": null,
+
+
+    19
+
+          "request_url": "",
+
+
+    20
+
+          "sid": "NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    21
+
+          "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications/NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+
+
+    22
+
+        }
+
+
+    23
+
+      ],
+
+
+    24
+
+      "page": 0,
+
+
+    25
+
+      "page_size": 50,
+
+
+    26
+
+      "start": 0,
+
+
+    27
+
+      "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0"
+
+
+    28
+
+    }
+
+Filter Notifications by date rangeLink to code sample: Filter Notifications by date range
+
+Report code block
+
+Copy code block
+
+
+    1
+
+    // Download the helper library from https://www.twilio.com/docs/node/install
+
+
+    2
+
+    const twilio = require("twilio"); // Or, for ESM: import twilio from "twilio";
+
+
+    3
+
+
+
+
+    4
+
+    // Find your Account SID and Auth Token at twilio.com/console
+
+
+    5
+
+    // and set the environment variables. See http://twil.io/secure
+
+
+    6
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+
+
+    7
+
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
+
+    8
+
+    const client = twilio(accountSid, authToken);
+
+
+    9
+
+
+
+
+    10
+
+    async function listNotification() {
+
+
+    11
+
+      const notifications = await client.notifications.list({
+
+
+    12
+
+        log: 1,
+
+
+    13
+
+        messageDateBefore: "2009-07-08",
+
+
+    14
+
+        messageDateAfter: "2009-07-06",
+
+
+    15
+
+        limit: 20,
+
+
+    16
+
+      });
+
+
+    17
+
+
+
+
+    18
+
+      notifications.forEach((n) => console.log(n.accountSid));
+
+
+    19
+
+    }
+
+
+    20
+
+
+
+
+    21
+
+    listNotification();
+
+### Response
+
+Note about this response
+
+Copy response
+
+
+    1
+
+    {
+
+
+    2
+
+      "end": 0,
+
+
+    3
+
+      "first_page_uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0",
+
+
+    4
+
+      "previous_page_uri": null,
+
+
+    5
+
+      "next_page_uri": null,
+
+
+    6
+
+      "notifications": [
+
+
+    7
+
+        {
+
+
+    8
+
+          "account_sid": "ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    9
+
+          "api_version": "2008-08-01",
+
+
+    10
+
+          "call_sid": "CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    11
+
+          "date_created": "Thu, 30 Apr 2015 16:47:33 +0000",
+
+
+    12
+
+          "date_updated": "Thu, 30 Apr 2015 16:47:35 +0000",
+
+
+    13
+
+          "error_code": "21609",
+
+
+    14
+
+          "log": "1",
+
+
+    15
+
+          "message_date": "Thu, 30 Apr 2015 16:47:32 +0000",
+
+
+    16
+
+          "message_text": "LogLevel=WARN&invalidStatusCallbackUrl=&Msg=Invalid+Url+for+callSid%3A+CAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa+invalid+statusCallbackUrl%3A+&ErrorCode=21609",
+
+
+    17
+
+          "more_info": "/docs/errors/21609",
+
+
+    18
+
+          "request_method": null,
+
+
+    19
+
+          "request_url": "",
+
+
+    20
+
+          "sid": "NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+
+
+    21
+
+          "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications/NOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.json"
+
+
+    22
+
+        }
+
+
+    23
+
+      ],
+
+
+    24
+
+      "page": 0,
+
+
+    25
+
+      "page_size": 50,
+
+
+    26
+
+      "start": 0,
+
+
+    27
+
+      "uri": "/2010-04-01/Accounts/ACaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/Notifications.json?MessageDate=2008-01-02&Log=1&PageSize=50&Page=0"
+
+
+    28
+
+    }

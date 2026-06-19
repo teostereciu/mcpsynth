@@ -1,0 +1,6 @@
+{
+  "health_check": {
+    "doc": "TASK.md",
+    "endpoint": "N/A"
+  }
+}

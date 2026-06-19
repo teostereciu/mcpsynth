@@ -1,0 +1,229 @@
+# Agent evaluation tasks for Alpha Vantage API MCP server.
+#
+# Required env vars: ALPHAVANTAGE_API_KEY
+#
+# All tasks are read-only (market data). No test account state needed.
+# Tasks use well-known symbols (IBM, AAPL, EUR/USD) that always return data.
+#
+# WARNING: Free tier is limited to 25 requests/day and 5 req/min.
+# A full eval run consumes ~14 requests. Run at most once or twice per day.
+# Note: avoid tasks that require a specific live price as expected value —
+# use field names unique to the correct endpoint instead.
+
+tasks:
+  # ---------- STOCK QUOTES ----------
+
+  - id: get_stock_quote
+    prompt: >
+      Get the current quote for the stock symbol "IBM".
+      Report the price, volume, and latest trading day.
+    expected: "Global Quote"
+    tags: [read]
+    # Tests: GLOBAL_QUOTE endpoint; "Global Quote" is the top-level key in the
+    # response and only appears if the correct function was called.
+
+  - id: daily_time_series
+    prompt: >
+      Get the daily closing price time series for "AAPL".
+      Report the most recent date and its closing price.
+    expected: "Time Series (Daily)"
+    tags: [read]
+    # Tests: TIME_SERIES_DAILY; "Time Series (Daily)" is the exact key in the
+    # response and only appears if the correct function was called.
+
+  - id: intraday_time_series
+    prompt: >
+      Get intraday price data for "IBM" with a 60-minute interval.
+      Report the timestamp and closing price of the most recent data point.
+    expected: "Time Series (60min)"
+    tags: [read]
+    # Tests: TIME_SERIES_INTRADAY with interval=60min; the key name is specific
+    # to the correct interval value.
+
+  - id: weekly_time_series
+    prompt: >
+      Get the weekly time series for "MSFT".
+      Report how many weeks of data are returned and the most recent week's closing price.
+    expected: "Weekly Time Series"
+    tags: [read]
+    # Tests: TIME_SERIES_WEEKLY; "Weekly Time Series" is the exact response key.
+
+  - id: symbol_search
+    prompt: >
+      Search for stocks matching the keyword "Microsoft".
+      Report the top result's symbol and full company name.
+    expected: MSFT
+    tags: [read]
+    # Tests: SYMBOL_SEARCH endpoint; "MSFT" must appear in bestMatches results.
+
+  # ---------- FOREX ----------
+
+  - id: forex_exchange_rate
+    prompt: >
+      Get the current exchange rate from EUR to USD.
+      Report the exchange rate value and the last refresh time.
+    expected: "Realtime Currency Exchange Rate"
+    tags: [read]
+    # Tests: CURRENCY_EXCHANGE_RATE; the top-level key is specific to this function.
+
+  - id: forex_daily_series
+    prompt: >
+      Get the daily FX time series for EUR to USD.
+      Report the most recent date and its closing rate.
+    expected: "Time Series FX (Daily)"
+    tags: [read]
+    # Tests: FX_DAILY endpoint; exact key name distinguishes from stock time series.
+
+  # ---------- CRYPTOCURRENCY ----------
+
+  - id: crypto_exchange_rate
+    prompt: >
+      Get the current exchange rate for Bitcoin (BTC) to USD.
+      Report the exchange rate and the last refreshed timestamp.
+    expected: "Realtime Currency Exchange Rate"
+    tags: [read]
+    # Tests: CURRENCY_EXCHANGE_RATE with digital currency; same endpoint as FX
+    # but with a crypto symbol — tests that the tool accepts crypto symbols.
+
+  # ---------- TECHNICAL INDICATORS ----------
+
+  - id: rsi_indicator
+    prompt: >
+      Get the RSI (Relative Strength Index) for "IBM" using daily data
+      with a time period of 14. Report the most recent RSI value and its date.
+    expected: "Technical Analysis: RSI"
+    tags: [read]
+    # Tests: RSI endpoint; the metadata key is specific to this indicator.
+
+  - id: sma_indicator
+    prompt: >
+      Get the simple moving average (SMA) for "AAPL" using weekly data
+      with a 10-period window, applied to the closing price.
+      Report the most recent SMA value and its date.
+    expected: "Technical Analysis: SMA"
+    tags: [read]
+    # Tests: SMA endpoint; metadata key is indicator-specific.
+
+  # ---------- FUNDAMENTALS ----------
+
+  - id: company_overview
+    prompt: >
+      Get the fundamental data overview for the company with symbol "IBM".
+      Report the company name, sector, and market capitalization.
+    expected: MarketCapitalization
+    tags: [read]
+    # Tests: OVERVIEW endpoint; "MarketCapitalization" is a field specific to
+    # this endpoint and does not appear in time series responses.
+
+  - id: earnings_data
+    prompt: >
+      Get the quarterly earnings data for "AAPL".
+      Report the most recent quarter's reported EPS and estimated EPS.
+    expected: reportedEPS
+    tags: [read]
+    # Tests: EARNINGS endpoint; "reportedEPS" is a specific field name that
+    # only appears in correctly parsed earnings responses.
+
+  # ---------- ECONOMIC INDICATORS ----------
+
+  - id: cpi_data
+    prompt: >
+      Get the US Consumer Price Index (CPI) monthly data.
+      Report the most recent date and value, and the unit of the series.
+    expected: unit
+    tags: [read]
+    # Tests: CPI endpoint; "unit" appears in economic indicator responses but
+    # not in stock/FX responses, providing reasonable discrimination.
+
+  # ---------- MULTI-STEP ----------
+
+  # Discriminates: does the agent chain SYMBOL_SEARCH → OVERVIEW and surface
+  # company metadata that is not present in the search result alone?
+  - id: search_then_overview
+    prompt: >
+      Search for stocks matching the keyword "Tesla". Take the top result's
+      symbol and retrieve its full company overview. Report the symbol found,
+      the company sector, and the PERatio from the overview.
+    expected: PERatio
+    tags: [read, multi-step]
+    # Tests: SYMBOL_SEARCH → OVERVIEW chained on the returned symbol.
+    # "PERatio" only appears in OVERVIEW responses, not in search results.
+    # Discriminates agents that make both calls vs. returning only the search hit.
+
+  # Discriminates: does the agent fetch quotes for multiple symbols and rank them
+  # by change percent, surfacing the changePercent field from each quote?
+  - id: multi_quote_rank
+    prompt: >
+      Get the current stock quote for each of the following symbols: IBM, AAPL,
+      MSFT. For each, report the symbol, price, and change percent. Identify
+      which has the highest absolute change percent today.
+    expected: changePercent
+    tags: [read, multi-step]
+    # Tests: three sequential GLOBAL_QUOTE calls → comparison logic.
+    # "changePercent" is the field name in the response; quoting it tests
+    # correct field extraction across multiple calls.
+    # NOTE: costs 3 API requests — respect the 5 req/min free-tier limit.
+
+  # Discriminates: does the agent get both daily and weekly series for the same
+  # symbol and compare data across the two granularities?
+  - id: daily_vs_weekly_compare
+    prompt: >
+      Get both the daily and weekly time series for "IBM". From the daily
+      series, report the most recent 5 trading days and their closing prices.
+      From the weekly series, report the most recent week's closing price.
+      Compare whether the most recent daily close matches the weekly close for
+      the same week.
+    expected: "Weekly Time Series"
+    tags: [read, multi-step]
+    # Tests: TIME_SERIES_DAILY + TIME_SERIES_WEEKLY in sequence.
+    # "Weekly Time Series" only appears if the second call is made correctly.
+    # Discriminates agents that make both calls vs. returning only daily data.
+
+  # ---------- HARDER ----------
+
+  # Discriminates: must chain SYMBOL_SEARCH → GLOBAL_QUOTE → RSI and thread
+  # the symbol across three different endpoint categories.
+  - id: search_quote_rsi_chain
+    prompt: >
+      Search for stocks matching "Alphabet". Take the first result's symbol.
+      Get the current quote for that symbol and record the price. Then fetch
+      the daily RSI indicator for that symbol with a 14-period window. Report
+      the symbol, the current price from the quote, and the most recent RSI
+      value with its date.
+    expected: "Technical Analysis: RSI"
+    tags: [read, multi-step, harder]
+    # Tests: SYMBOL_SEARCH → GLOBAL_QUOTE → RSI chained on the discovered symbol.
+    # "Technical Analysis: RSI" only appears in RSI responses; the agent must
+    # complete all three calls and thread the symbol correctly.
+    # NOTE: costs 3 API requests — do not run this together with multi_quote_rank
+    # in the same minute to avoid hitting the 5 req/min free-tier cap.
+
+  # Discriminates: must chain OVERVIEW → EARNINGS and cross-reference
+  # fundamentals from two different endpoints for the same company.
+  - id: overview_then_earnings
+    prompt: >
+      Get the company overview for "AAPL". Note the EPS field from the
+      overview. Then get the quarterly earnings data for "AAPL". From the
+      earnings, report the most recent quarter's reportedEPS and estimated EPS.
+      Compare the overview EPS to the most recent reportedEPS and note whether
+      they match.
+    expected: reportedEPS
+    tags: [read, multi-step, harder]
+    # Tests: OVERVIEW → EARNINGS chained for the same ticker.
+    # "reportedEPS" only appears in the EARNINGS endpoint; the agent must make
+    # both calls and compare fields across responses.
+    # Discriminates agents that surface both endpoints vs. returning overview alone.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: invalid_symbol
+    prompt: >
+      Try to get a stock quote for the symbol "ZZZZINVALIDSYMBOL999".
+      Report exactly what the API returns.
+    expected: "Global Quote"
+    tags: [read, error-handling]
+    # Alpha Vantage returns {"Global Quote": {}} (empty object) for unknown symbols,
+    # not an HTTP error. Tests that the server surfaces this gracefully.
+    # Tests: empty/error response handling for nonexistent symbols.
+    # Alpha Vantage returns {"Information": "..."} or {"Note": "..."} for invalid
+    # or rate-limited calls — the agent must report this faithfully.

@@ -1,0 +1,74 @@
+{
+  "recipes_complex_search": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "recipes_find_by_ingredients": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/findByIngredients"
+  },
+  "recipes_search_by_nutrients": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/findByNutrients"
+  },
+  "recipes_autocomplete": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/autocomplete"
+  },
+  "recipes_get_information": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "recipes_get_analyzed_instructions": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/{id}/analyzedInstructions"
+  },
+  "recipes_get_similar": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/{id}/similar"
+  },
+  "recipes_get_ingredient_widget": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/{id}/ingredientWidget.json"
+  },
+  "recipes_get_nutrition_widget": {
+    "doc": "docs/recipes.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "ingredients_autocomplete": {
+    "doc": "docs/ingredients.md",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  },
+  "ingredients_search": {
+    "doc": "docs/ingredients.md",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "ingredients_get_information": {
+    "doc": "docs/ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "ingredients_parse": {
+    "doc": "docs/ingredients.md",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "mealplan_generate": {
+    "doc": "docs/meal-planning.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "nutrition_guess_by_dish_name": {
+    "doc": "docs/nutrition.md",
+    "endpoint": "GET /recipes/guessNutrition"
+  },
+  "nutrition_visualize_recipe_nutrition": {
+    "doc": "docs/nutrition.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget"
+  },
+  "wine_pairing": {
+    "doc": "docs/wine.md",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "wine_description": {
+    "doc": "docs/wine.md",
+    "endpoint": "GET /food/wine/description"
+  }
+}

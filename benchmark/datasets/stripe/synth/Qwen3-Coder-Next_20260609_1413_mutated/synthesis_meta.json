@@ -1,0 +1,14 @@
+{
+  "dataset": "stripe",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "mutated",
+  "synthesis_time": 1153.0478253364563,
+  "token_usage": {
+    "input_tokens": 6491710,
+    "output_tokens": 78800
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1413",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 79
+}

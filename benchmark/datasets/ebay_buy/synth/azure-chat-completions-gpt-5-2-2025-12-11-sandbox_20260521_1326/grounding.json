@@ -1,0 +1,46 @@
+{
+  "browse_search_tool": {
+    "doc": "docs/api_buy_browse_resources_item_summary_methods_search.md",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "get_item_tool": {
+    "doc": "docs/api_buy_browse_resources_item_methods_getItem.md",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}"
+  },
+  "get_item_by_legacy_id_tool": {
+    "doc": "docs/api_buy_browse_resources_item_methods_getItemByLegacyId.md",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_legacy_id"
+  },
+  "get_events_tool": {
+    "doc": "docs/api_buy_deal_resources_event_methods_getEvents.md",
+    "endpoint": "GET /buy/deal/v1/event"
+  },
+  "get_merchandised_products_tool": {
+    "doc": "docs/api_buy_marketing_resources_merchandised_product_methods_getMerchandisedProducts.md",
+    "endpoint": "GET /buy/marketing/v1_beta/merchandised_product"
+  },
+  "get_item_snapshot_feed_tool": {
+    "doc": "docs/api_buy_feed_resources_item_snapshot_methods_getItemSnapshotFeed.md",
+    "endpoint": "GET /buy/feed/v1_beta/item_snapshot"
+  },
+  "initiate_guest_checkout_session_tool": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_initiateGuestCheckoutSession.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/initiate"
+  },
+  "get_guest_checkout_session_tool": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_getGuestCheckoutSession.md",
+    "endpoint": "GET /buy/order/v2/guest_checkout_session/{checkoutSessionId}"
+  },
+  "apply_guest_coupon_tool": {
+    "doc": "docs/api_buy_order_resources_guest_checkout_session_methods_applyGuestCoupon.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkoutSessionId}/apply_coupon"
+  },
+  "get_bidding_tool": {
+    "doc": "docs/api_buy_offer_resources_bidding_methods_getBidding.md",
+    "endpoint": "GET /buy/offer/v1_beta/bidding/{item_id}"
+  },
+  "place_proxy_bid_tool": {
+    "doc": "docs/api_buy_offer_resources_bidding_methods_placeProxyBid.md",
+    "endpoint": "POST /buy/offer/v1_beta/bidding/{item_id}/place_proxy_bid"
+  }
+}

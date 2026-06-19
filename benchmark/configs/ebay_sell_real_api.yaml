@@ -1,0 +1,327 @@
+# eBay Sell API Real API Testing Configuration
+#
+# This config defines what's needed to test the eBay Sell MCP server against
+# the real eBay API (sandbox or production).
+
+api_name: "eBay Sell"
+api_version: "REST API v1"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  EBAY_APP_ID:
+    description: "eBay Application ID (Client ID)"
+    how_to_get:
+      url: "https://developer.ebay.com/my/keys"
+      steps:
+        - "Sign in to eBay Developers Program"
+        - "Navigate to 'My Account' > 'Application Keys'"
+        - "Create new application or use existing one"
+        - "Application Title: 'MCP Benchmark Testing' (or any name)"
+        - "Select 'Production' or 'Sandbox' keyset"
+        - "Copy the 'App ID (Client ID)'"
+      notes:
+        - "Sandbox keys recommended for testing"
+        - "Production keys require verified business account"
+        - "Different keys for sandbox vs production environment"
+    validation: "^[a-zA-Z0-9_-]{20,}$"
+    example: "MyAppNam-MCPBench-PRD-1a2b3c4d5"
+
+  EBAY_CERT_ID:
+    description: "eBay Cert ID (Client Secret)"
+    how_to_get:
+      url: "https://developer.ebay.com/my/keys"
+      notes:
+        - "On the Application Keys page, you'll see two separate keysets: 'Sandbox Keys' and 'Production Keys'"
+        - "Under your selected keyset, locate the 'Cert ID (Client Secret)' field"
+        - "The value is hidden by default - click 'Show' or the copy icon to reveal it"
+        - "Copy the entire value - it's typically 20-30 characters"
+        - "IMPORTANT: Keep this secret - never commit to version control or share publicly"
+    validation: "^[a-zA-Z0-9_-]{20,}$"
+
+  EBAY_DEV_ID:
+    description: "eBay Developer ID (for production only)"
+    how_to_get:
+      notes:
+        - "Found on same Application Keys page"
+        - "Only required for production environment"
+        - "Not needed for sandbox testing"
+    validation: "^[a-zA-Z0-9_-]{8,}$"
+    default: "SANDBOX_DEV_ID"  # Placeholder for sandbox
+
+  EBAY_ENVIRONMENT:
+    description: "Environment to use (SANDBOX or PRODUCTION)"
+    how_to_get:
+      notes:
+        - "SANDBOX: Recommended for testing - use test data"
+        - "PRODUCTION: Real eBay environment - affects live listings"
+    validation: "^(SANDBOX|PRODUCTION)$"
+    default: "SANDBOX"
+
+  EBAY_REFRESH_TOKEN:
+    description: "OAuth 2.0 Refresh Token (User Token)"
+    how_to_get:
+      url: "https://developer.ebay.com/my/auth/?env=sandbox&index=0"
+      steps:
+        - "Navigate to 'Get OAuth Application Token' page"
+        - "Select environment (Sandbox or Production)"
+        - "Select application from dropdown"
+        - "Click 'Get a Token From eBay via Your Application'"
+        - "Sign in with eBay test account (sandbox) or real account (production)"
+        - "Grant permissions when prompted"
+        - "Copy the 'User refresh token'"
+      notes:
+        - "For sandbox: Use eBay sandbox test user account"
+        - "For production: Use your real eBay seller account"
+        - "Token scopes needed: sell.inventory, sell.fulfillment, sell.account, sell.marketing, sell.analytics, sell.finances"
+        - "Refresh token is long-lived but can be revoked"
+    validation: "^v\\^1\\.[0-9]+#.+$"
+    example: "v^1.1#i^1#f^0#p^3#I^3#r^1#t^Ul8..."
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS (for extended testing)
+# ==============================================================================
+
+optional_credentials:
+  EBAY_MARKETPLACE_ID:
+    description: "Primary marketplace ID for testing (optional, defaults to EBAY_US)"
+    required_for: "Multi-marketplace testing"
+    how_to_get:
+      notes:
+        - "Common values: EBAY_US, EBAY_UK, EBAY_DE, EBAY_AU, EBAY_CA, etc."
+        - "See: https://developer.ebay.com/api-docs/static/rest-request-components.html#marketpl"
+        - "Tests will default to EBAY_US if not specified"
+    validation: "^EBAY_[A-Z]{2}$"
+    example: "EBAY_US"
+    default: "EBAY_US"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_url: "https://api.sandbox.ebay.com"
+sandbox_notes: |
+  eBay provides a comprehensive sandbox environment for testing:
+    ✅ Separate sandbox accounts and listings
+    ✅ No real financial transactions
+    ✅ Test buyer/seller workflows safely
+    ✅ Same API structure as production
+
+  Sandbox Setup:
+    1. Create sandbox test user: https://developer.ebay.com/sandbox/register
+    2. Use sandbox Application Keys (not production keys)
+    3. Generate OAuth token using sandbox credentials
+    4. All API calls go to api.sandbox.ebay.com
+
+  Sandbox Limitations:
+    - Some features may have limited data
+    - Payment processing is simulated
+    - Shipping carriers may be mocked
+    - Performance might differ from production
+
+  Recommended: Always test on SANDBOX first before using PRODUCTION keys.
+
+rate_limits:
+  default: "5,000 calls/day per application (sandbox & production)"
+  burst: "Varies by API and subscription level"
+  notes: |
+    - Rate limits vary by API endpoint
+    - Sandbox and Production have separate quotas
+    - Monitor usage in eBay Developer Dashboard
+    - Some APIs have lower limits (e.g., Feed API: 1,000/day)
+    - Upgrade to higher tier for increased limits
+
+cleanup_notes: |
+  Sandbox Testing:
+    - Sandbox data is isolated - safe to create test listings
+    - No real financial impact
+    - Test listings automatically expire after 30 days
+    - Can manually delete test items, orders, etc.
+
+  Production Testing (if used):
+    ⚠️  WARNING: Production affects real eBay account
+    - All created listings are REAL and VISIBLE to buyers
+    - Orders and transactions have real financial impact
+    - Created items should be ended/deleted manually
+    - Review all test code before running on production
+
+  Cleanup Steps:
+    1. End active listings created during testing
+    2. Archive/delete test offers and inventory items
+    3. Clear test orders (sandbox only)
+    4. Revoke OAuth tokens when done: https://developer.ebay.com/my/auth/
+
+# ==============================================================================
+# TEST COVERAGE BY API
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 190
+  total_apis: 13
+
+  by_api:
+    inventory:
+      endpoints: 36
+      description: "Inventory items, offers, listings, locations"
+      priority: "critical"
+      testable_in_sandbox: true
+
+    fulfillment:
+      endpoints: 15
+      description: "Orders, shipping, returns, disputes"
+      priority: "critical"
+      testable_in_sandbox: true
+
+    account:
+      endpoints: 35
+      description: "Business policies, payment, fulfillment, return policies"
+      priority: "high"
+      testable_in_sandbox: true
+
+    feed:
+      endpoints: 23
+      description: "Bulk listing operations (LMS)"
+      priority: "high"
+      testable_in_sandbox: true
+
+    marketing:
+      endpoints: 35
+      description: "Promoted listings, campaigns, ads"
+      priority: "medium"
+      testable_in_sandbox: true
+
+    finances:
+      endpoints: 8
+      description: "Transactions, payouts, seller funds"
+      priority: "medium"
+      testable_in_sandbox: false
+      notes: "Limited sandbox data for financial APIs"
+
+    metadata:
+      endpoints: 15
+      description: "Marketplace metadata, listing policies"
+      priority: "medium"
+      testable_in_sandbox: true
+
+    analytics:
+      endpoints: 4
+      description: "Selling metrics, traffic reports"
+      priority: "low"
+      testable_in_sandbox: false
+      notes: "Requires real selling history"
+
+    logistics:
+      endpoints: 6
+      description: "Shipping quotes, carrier integrations"
+      priority: "low"
+      testable_in_sandbox: true
+
+    compliance:
+      endpoints: 2
+      description: "Listing violations, compliance issues"
+      priority: "low"
+      testable_in_sandbox: true
+
+    negotiation:
+      endpoints: 2
+      description: "Best Offers management"
+      priority: "low"
+      testable_in_sandbox: true
+
+    recommendation:
+      endpoints: 1
+      description: "Listing optimization"
+      priority: "low"
+      testable_in_sandbox: false
+
+    stores:
+      endpoints: 8
+      description: "eBay Store category management"
+      priority: "low"
+      testable_in_sandbox: false
+      notes: "Requires eBay Store subscription"
+
+# ==============================================================================
+# OAUTH SCOPES REQUIRED
+# ==============================================================================
+
+oauth_scopes:
+  required:
+    - scope: "https://api.ebay.com/oauth/api_scope/sell.inventory"
+      description: "Inventory API access"
+      apis: ["Inventory", "Feed"]
+
+    - scope: "https://api.ebay.com/oauth/api_scope/sell.fulfillment"
+      description: "Fulfillment API access"
+      apis: ["Fulfillment"]
+
+    - scope: "https://api.ebay.com/oauth/api_scope/sell.account"
+      description: "Account API access"
+      apis: ["Account"]
+
+    - scope: "https://api.ebay.com/oauth/api_scope/sell.marketing"
+      description: "Marketing API access"
+      apis: ["Marketing"]
+
+    - scope: "https://api.ebay.com/oauth/api_scope/sell.analytics"
+      description: "Analytics API access"
+      apis: ["Analytics", "Recommendation"]
+
+    - scope: "https://api.ebay.com/oauth/api_scope/sell.finances"
+      description: "Finances API access"
+      apis: ["Finances"]
+
+  optional:
+    - scope: "https://api.ebay.com/oauth/api_scope/sell.inventory.readonly"
+      description: "Read-only inventory access"
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  credential_storage: |
+    - Store all credentials in .env file (gitignored)
+    - Never commit App ID, Cert ID, or tokens to version control
+    - Use different credentials for sandbox vs production
+    - Rotate refresh tokens periodically
+
+  oauth_best_practices: |
+    - Use OAuth 2.0 (not legacy Auth'n'Auth)
+    - Request minimum scopes needed for testing
+    - Refresh tokens expire after inactivity (check documentation)
+    - Revoke tokens when testing is complete
+
+  safe_testing: |
+    - ALWAYS use SANDBOX for initial testing
+    - Never test destructive operations on production
+    - Review all test code before running with production keys
+    - Use dedicated test eBay accounts (not your main seller account)
+    - Monitor API usage in Developer Dashboard
+    - Set EBAY_ENVIRONMENT=SANDBOX to prevent accidental production usage
+
+  production_warnings: |
+    ⚠️  PRODUCTION ENVIRONMENT IS REAL eBay:
+    - All listings are VISIBLE to real buyers
+    - All transactions have REAL financial consequences
+    - Inventory changes affect REAL stock
+    - Orders and shipments are REAL
+    - Use extreme caution when testing on production
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  developer_program: "https://developer.ebay.com/"
+  app_keys: "https://developer.ebay.com/my/keys"
+  oauth_guide: "https://developer.ebay.com/api-docs/static/oauth-tokens.html"
+  sandbox_guide: "https://developer.ebay.com/api-docs/static/gs_create-a-developer-account.html"
+  sell_apis: "https://developer.ebay.com/develop/selling-apps"
+  rate_limits: "https://developer.ebay.com/support/app-check"
+  scopes: "https://developer.ebay.com/api-docs/static/oauth-scopes.html"
+  getting_started: "https://developer.ebay.com/api-docs/static/gs_ebay-rest-getting-started-landing.html"

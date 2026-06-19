@@ -1,0 +1,94 @@
+{
+  "get_product": {
+    "doc": "docs/catalog.md",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}"
+  },
+  "search_products": {
+    "doc": "docs/catalog.md",
+    "endpoint": "GET /commerce/catalog/v1/product_summary"
+  },
+  "get_default_category_tree_id": {
+    "doc": "docs/taxonomy.md",
+    "endpoint": "GET /commerce/taxonomy/v1/get_default_category_tree_id"
+  },
+  "get_category_tree": {
+    "doc": "docs/taxonomy.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"
+  },
+  "get_category_suggestions": {
+    "doc": "docs/taxonomy.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_suggestions"
+  },
+  "get_item_aspects_for_category": {
+    "doc": "docs/taxonomy.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_item_aspects_for_category"
+  },
+  "get_user_profile": {
+    "doc": "docs/identity.md",
+    "endpoint": "GET /commerce/identity/v1/user"
+  },
+  "create_video": {
+    "doc": "docs/media.md",
+    "endpoint": "POST /commerce/media/v1/video"
+  },
+  "get_video": {
+    "doc": "docs/media.md",
+    "endpoint": "GET /commerce/media/v1/video/{video_id}"
+  },
+  "upload_video_document": {
+    "doc": "docs/media.md",
+    "endpoint": "POST /commerce/media/v1/video/{video_id}/upload_document"
+  },
+  "list_subscriptions": {
+    "doc": "docs/notification.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  },
+  "get_subscription": {
+    "doc": "docs/notification.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "create_subscription": {
+    "doc": "docs/notification.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "update_subscription": {
+    "doc": "docs/notification.md",
+    "endpoint": "PUT /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "delete_subscription": {
+    "doc": "docs/notification.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "list_destinations": {
+    "doc": "docs/notification.md",
+    "endpoint": "GET /commerce/notification/v1/destination"
+  },
+  "get_destination": {
+    "doc": "docs/notification.md",
+    "endpoint": "GET /commerce/notification/v1/destination/{destination_id}"
+  },
+  "create_destination": {
+    "doc": "docs/notification.md",
+    "endpoint": "POST /commerce/notification/v1/destination"
+  },
+  "update_destination": {
+    "doc": "docs/notification.md",
+    "endpoint": "PUT /commerce/notification/v1/destination/{destination_id}"
+  },
+  "delete_destination": {
+    "doc": "docs/notification.md",
+    "endpoint": "DELETE /commerce/notification/v1/destination/{destination_id}"
+  },
+  "get_charity_org": {
+    "doc": "docs/charity.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org/{charity_org_id}"
+  },
+  "search_charity_orgs": {
+    "doc": "docs/charity.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org"
+  },
+  "translate_text": {
+    "doc": "docs/translation.md",
+    "endpoint": "POST /commerce/translation/v1/translate"
+  }
+}

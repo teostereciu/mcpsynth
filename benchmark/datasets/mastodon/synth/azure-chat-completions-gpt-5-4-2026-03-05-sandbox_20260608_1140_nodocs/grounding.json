@@ -1,0 +1,150 @@
+{
+  "create_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "get_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "GET /api/v1/statuses/{id}"
+  },
+  "delete_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "DELETE /api/v1/statuses/{id}"
+  },
+  "reblog_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /api/v1/statuses/{id}/reblog"
+  },
+  "unreblog_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unreblog"
+  },
+  "favourite_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /api/v1/statuses/{id}/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "docs/statuses.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unfavourite"
+  },
+  "get_status_context": {
+    "doc": "docs/statuses.md",
+    "endpoint": "GET /api/v1/statuses/{id}/context"
+  },
+  "verify_credentials": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "get_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /api/v1/accounts/{id}"
+  },
+  "follow_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /api/v1/accounts/{id}/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /api/v1/accounts/{id}/unfollow"
+  },
+  "get_account_followers": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /api/v1/accounts/{id}/followers"
+  },
+  "get_account_following": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /api/v1/accounts/{id}/following"
+  },
+  "get_home_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /api/v1/timelines/tag/{hashtag}"
+  },
+  "get_list_timeline": {
+    "doc": "docs/timelines.md",
+    "endpoint": "GET /api/v1/timelines/list/{list_id}"
+  },
+  "list_notifications": {
+    "doc": "docs/notifications.md",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "get_notification": {
+    "doc": "docs/notifications.md",
+    "endpoint": "GET /api/v1/notifications/{id}"
+  },
+  "dismiss_notification": {
+    "doc": "docs/notifications.md",
+    "endpoint": "POST /api/v1/notifications/{id}/dismiss"
+  },
+  "clear_notifications": {
+    "doc": "docs/notifications.md",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "search": {
+    "doc": "docs/search.md",
+    "endpoint": "GET /api/v2/search"
+  },
+  "get_lists": {
+    "doc": "docs/lists.md",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "create_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "get_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "GET /api/v1/lists/{id}"
+  },
+  "update_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "PUT /api/v1/lists/{id}"
+  },
+  "delete_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "DELETE /api/v1/lists/{id}"
+  },
+  "add_accounts_to_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "POST /api/v1/lists/{id}/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "docs/lists.md",
+    "endpoint": "DELETE /api/v1/lists/{id}/accounts"
+  },
+  "list_bookmarks": {
+    "doc": "docs/bookmarks.md",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "bookmark_status": {
+    "doc": "docs/bookmarks.md",
+    "endpoint": "POST /api/v1/statuses/{id}/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/bookmarks.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unbookmark"
+  },
+  "list_favourites": {
+    "doc": "docs/favourites.md",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "upload_media": {
+    "doc": "docs/media.md",
+    "endpoint": "POST /api/v2/media"
+  },
+  "get_instance_info": {
+    "doc": "docs/instance.md",
+    "endpoint": "GET /api/v2/instance"
+  },
+  "get_instance_activity": {
+    "doc": "docs/instance.md",
+    "endpoint": "GET /api/v1/instance/activity"
+  }
+}

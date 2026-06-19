@@ -1,0 +1,129 @@
+# Agent evaluation tasks for Forgejo/Codeberg API MCP server.
+#
+# Required env vars:
+#   CODEBERG_TOKEN     — Forgejo API token
+#   CODEBERG_BASE_URL  — e.g. https://codeberg.org
+#   CODEBERG_USERNAME  — authenticated user's login (e.g. tstereciu)
+#
+# Tasks use the authenticated user's account and repositories.
+# Write tasks create resources under the authenticated user.
+
+tasks:
+  # ---------- READ ----------
+
+  - id: get_authenticated_user
+    prompt: >
+      Find out which Codeberg/Forgejo account this token belongs to.
+      Report the username and display name.
+    expected: login
+    tags: [read]
+    # Tests: GET /user endpoint; "login" only appears in a correctly parsed
+    # user response (Forgejo uses "login" not "username").
+
+  - id: list_user_repos
+    prompt: >
+      List the repositories owned by the authenticated user.
+      Report the name and visibility (public/private) of each repo,
+      or confirm there are none.
+    expected: name
+    tags: [read]
+    # Tests: GET /user/repos; "name" must appear in a correctly parsed response.
+
+  - id: search_repositories
+    prompt: >
+      Search for public repositories on Codeberg matching the keyword "forgejo".
+      Report the names and star counts of the top 3 results.
+    expected: stars
+    tags: [read]
+    # Tests: GET /repos/search; "stars" appears only if the response is
+    # correctly parsed (Forgejo uses "stars_count").
+
+  - id: get_user_by_username
+    prompt: >
+      Get the public profile information for the Codeberg user "Codeberg".
+      Report their display name and whether they are an organization.
+    expected: login
+    tags: [read]
+    # Tests: GET /users/$CODEBERG_USERNAME; "Codeberg" org exists on codeberg.org.
+
+  - id: list_org_repos
+    prompt: >
+      List the public repositories of the Codeberg organization "Codeberg".
+      Report the names of the first 5 repositories.
+    expected: name
+    tags: [read]
+    # Tests: GET /orgs/{org}/repos; well-known org on codeberg.org.
+
+  # ---------- WRITE ----------
+
+  - id: create_repo
+    prompt: >
+      Create a new public repository named "agent-eval-test" with description
+      "Created by the MCP agent evaluation harness. Safe to delete."
+      Report the repository's full name and clone URL.
+    expected: agent-eval-test
+    tags: [write]
+    # Tests: POST /user/repos; "agent-eval-test" must appear in the response.
+
+  - id: create_issue
+    prompt: >
+      First, find the authenticated user's username.
+      Then create an issue in the repository "$CODEBERG_USERNAME/agent-eval-test" with:
+      - Title: "Agent eval test issue"
+      - Body: "This issue was created by the agent harness. Safe to close."
+      Report the issue number.
+    expected: number
+    tags: [write, multi-step]
+    # Tests: user discovery + create issue; "number" only appears in a successful
+    # issue creation response.
+
+  - id: create_and_comment_issue
+    prompt: >
+      Find the authenticated user's username.
+      Create an issue in "$CODEBERG_USERNAME/agent-eval-test" titled "Agent comment test"
+      with body "Issue for comment testing."
+      Then add a comment to that issue: "This is a test comment from the agent harness."
+      Report the issue number and comment ID.
+    expected: id
+    tags: [write, multi-step]
+    # Tests: create issue + add comment; requires issue number from first call.
+
+  - id: list_repo_issues
+    prompt: >
+      Find the authenticated user's username.
+      List the open issues in "$CODEBERG_USERNAME/agent-eval-test".
+      Report how many there are and their titles.
+    expected: title
+    tags: [read, multi-step]
+    # Tests: user discovery + list issues; verifies issues created by write tests.
+
+  - id: create_release
+    prompt: >
+      Find the authenticated user's username.
+      Create a release in "$CODEBERG_USERNAME/agent-eval-test" with:
+      - Tag name: "v0.0.1-agent-eval"
+      - Release name: "Agent eval test release"
+      - Body: "Test release created by agent harness."
+      Report the release ID and URL.
+    expected: id
+    tags: [write, multi-step]
+    # Tests: release creation; "id" only appears in a successful response.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: get_nonexistent_repo
+    prompt: >
+      Try to get information about the repository "nonexistent-user-xyz/nonexistent-repo-xyz".
+      Report what error or response you receive.
+    expected: error
+    tags: [read, error-handling]
+    # Tests: 404 handling for a nonexistent repo.
+
+  - id: create_duplicate_repo
+    prompt: >
+      Find the authenticated user's username.
+      Try to create a repository named "agent-eval-test" again (it should already exist).
+      Report what error or response you receive.
+    expected: error
+    tags: [write, error-handling]
+    # Tests: 409 conflict handling for duplicate repo creation.

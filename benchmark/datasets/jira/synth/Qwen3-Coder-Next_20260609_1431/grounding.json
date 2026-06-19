@@ -1,0 +1,278 @@
+{
+  "get_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}"
+  },
+  "create_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "POST /rest/api/3/issue"
+  },
+  "update_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "PUT /rest/api/3/issue/{issueIdOrKey}"
+  },
+  "delete_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "DEL /rest/api/3/issue/{issueIdOrKey}"
+  },
+  "assign_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "PUT /rest/api/3/issue/{issueIdOrKey}/assignee"
+  },
+  "transition_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/transitions"
+  },
+  "get_issue_transitions": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/transitions"
+  },
+  "add_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/comment"
+  },
+  "get_comments": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/comment"
+  },
+  "update_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "PUT /rest/api/3/issue/{issueIdOrKey}/comment/{id}"
+  },
+  "delete_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "DEL /rest/api/3/issue/{issueIdOrKey}/comment/{id}"
+  },
+  "get_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/comment/{id}"
+  },
+  "add_attachment": {
+    "doc": "docs/api_issue-attachments.md",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/attachments"
+  },
+  "get_attachment": {
+    "doc": "docs/api_issue-attachments.md",
+    "endpoint": "GET /rest/api/3/attachment/{id}"
+  },
+  "delete_attachment": {
+    "doc": "docs/api_issue-attachments.md",
+    "endpoint": "DEL /rest/api/3/attachment/{id}"
+  },
+  "add_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/worklog"
+  },
+  "get_worklogs": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/worklog"
+  },
+  "update_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "PUT /rest/api/3/issue/{issueIdOrKey}/worklog/{id}"
+  },
+  "delete_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "DEL /rest/api/3/issue/{issueIdOrKey}/worklog/{id}"
+  },
+  "get_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/worklog/{id}"
+  },
+  "add_watcher": {
+    "doc": "docs/api_issue-watchers.md",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/watchers"
+  },
+  "remove_watcher": {
+    "doc": "docs/api_issue-watchers.md",
+    "endpoint": "DEL /rest/api/3/issue/{issueIdOrKey}/watchers"
+  },
+  "get_watchers": {
+    "doc": "docs/api_issue-watchers.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/watchers"
+  },
+  "create_issue_link": {
+    "doc": "docs/api_issue-links.md",
+    "endpoint": "POST /rest/api/3/issueLink"
+  },
+  "delete_issue_link": {
+    "doc": "docs/api_issue-links.md",
+    "endpoint": "DEL /rest/api/3/issueLink/{id}"
+  },
+  "search_issues": {
+    "doc": "docs/api_issue-search.md",
+    "endpoint": "POST /rest/api/3/search"
+  },
+  "search_issues_get": {
+    "doc": "docs/api_issue-search.md",
+    "endpoint": "GET /rest/api/3/search"
+  },
+  "get_issue_picker": {
+    "doc": "docs/api_issue-search.md",
+    "endpoint": "GET /rest/api/3/issue/picker"
+  },
+  "get_projects": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "GET /rest/api/3/project"
+  },
+  "get_project": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "GET /rest/api/3/project/{projectKeyOrId}"
+  },
+  "get_project_components": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "GET /rest/api/3/project/{projectKeyOrId}/components"
+  },
+  "create_project_component": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "POST /rest/api/3/project/{projectKeyOrId}/components"
+  },
+  "update_project_component": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "PUT /rest/api/3/component/{id}"
+  },
+  "delete_project_component": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "DEL /rest/api/3/component/{id}"
+  },
+  "get_project_versions": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "GET /rest/api/3/project/{projectKeyOrId}/versions"
+  },
+  "create_version": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "POST /rest/api/3/project/{projectKeyOrId}/version"
+  },
+  "update_version": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "PUT /rest/api/3/version/{id}"
+  },
+  "delete_version": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "DEL /rest/api/3/version/{id}"
+  },
+  "get_user": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /rest/api/3/user"
+  },
+  "search_users": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /rest/api/3/user/search"
+  },
+  "get_myself": {
+    "doc": "docs/api_myself.md",
+    "endpoint": "GET /rest/api/3/myself"
+  },
+  "get_groups": {
+    "doc": "docs/api_groups.md",
+    "endpoint": "GET /rest/api/3/group"
+  },
+  "get_group_members": {
+    "doc": "docs/api_groups.md",
+    "endpoint": "GET /rest/api/3/group/member"
+  },
+  "get_issue_types": {
+    "doc": "docs/api_issue-types.md",
+    "endpoint": "GET /rest/api/3/issuetype"
+  },
+  "get_priorities": {
+    "doc": "docs/api_issue-priorities.md",
+    "endpoint": "GET /rest/api/3/priority"
+  },
+  "get_statuses": {
+    "doc": "docs/api_status.md",
+    "endpoint": "GET /rest/api/3/status"
+  },
+  "get_filters": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "GET /rest/api/3/filter/my"
+  },
+  "get_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "GET /rest/api/3/filter/{id}"
+  },
+  "create_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "POST /rest/api/3/filter"
+  },
+  "update_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "PUT /rest/api/3/filter/{id}"
+  },
+  "delete_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "DEL /rest/api/3/filter/{id}"
+  },
+  "get_dashboards": {
+    "doc": "docs/api_dashboards.md",
+    "endpoint": "GET /rest/api/3/dashboard"
+  },
+  "get_dashboard": {
+    "doc": "docs/api_dashboards.md",
+    "endpoint": "GET /rest/api/3/dashboard/{id}"
+  },
+  "get_issue_create_metadata": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "GET /rest/api/3/issue/createmeta"
+  },
+  "get_issue_edit_metadata": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/editmeta"
+  },
+  "get_fields": {
+    "doc": "docs/api_issue-fields.md",
+    "endpoint": "GET /rest/api/3/field"
+  },
+  "get_field": {
+    "doc": "docs/api_issue-fields.md",
+    "endpoint": "GET /rest/api/3/field/{id}"
+  },
+  "get_server_info": {
+    "doc": "docs/api_server-info.md",
+    "endpoint": "GET /rest/api/3/serverInfo"
+  },
+  "get_application_roles": {
+    "doc": "docs/api_application-roles.md",
+    "endpoint": "GET /rest/api/3/applicationrole"
+  },
+  "get_workflow_statuses": {
+    "doc": "docs/api_workflow-status-categories.md",
+    "endpoint": "GET /rest/api/3/statuscategory"
+  },
+  "archive_issues": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "PUT /rest/api/3/issue/archive"
+  },
+  "unarchive_issues": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "PUT /rest/api/3/issue/unarchive"
+  },
+  "get_issue_changelog": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "GET /rest/api/3/issue/{issueIdOrKey}/changelog"
+  },
+  "bulk_fetch_changelogs": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "POST /rest/api/3/changelog/bulkfetch"
+  },
+  "send_issue_notification": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "POST /rest/api/3/issue/{issueIdOrKey}/notify"
+  },
+  "get_resolutions": {
+    "doc": "docs/api_issue-resolutions.md",
+    "endpoint": "GET /rest/api/3/resolution"
+  },
+  "get_issue_security_levels": {
+    "doc": "docs/api_issue-security-schemes.md",
+    "endpoint": "GET /rest/api/3/issuesecurityschemes/project"
+  },
+  "get_custom_fields": {
+    "doc": "docs/api_issue-fields.md",
+    "endpoint": "GET /rest/api/3/field"
+  },
+  "jql_match": {
+    "doc": "docs/api_issue-search.md",
+    "endpoint": "POST /rest/api/3/jql/match"
+  }
+}

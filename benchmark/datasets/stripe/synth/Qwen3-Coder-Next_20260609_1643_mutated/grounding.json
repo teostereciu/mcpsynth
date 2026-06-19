@@ -1,0 +1,146 @@
+{
+  "create_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /payment_intents"
+  },
+  "retrieve_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /payment_intents/{id}"
+  },
+  "update_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /payment_intents/{id}"
+  },
+  "create_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /refunds"
+  },
+  "retrieve_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /refunds/{id}"
+  },
+  "create_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /subscriptions"
+  },
+  "retrieve_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "GET /subscriptions/{id}"
+  },
+  "cancel_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "DELETE /subscriptions/{id}"
+  },
+  "create_preview_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /invoices/create_preview"
+  },
+  "retrieve_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "GET /invoices/{id}"
+  },
+  "create_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /products"
+  },
+  "retrieve_product": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /products/{id}"
+  },
+  "update_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /products/{id}"
+  },
+  "create_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /prices"
+  },
+  "retrieve_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "GET /prices/{id}"
+  },
+  "create_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /customers"
+  },
+  "retrieve_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /customers/{id}"
+  },
+  "update_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /customers/{id}"
+  },
+  "update_dispute": {
+    "doc": "docs/disputes.md",
+    "endpoint": "POST /disputes/{id}"
+  },
+  "retrieve_dispute": {
+    "doc": "docs/disputes.md",
+    "endpoint": "GET /disputes/{id}"
+  },
+  "create_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /setup_intents"
+  },
+  "retrieve_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "GET /setup_intents/{id}"
+  },
+  "create_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /charges"
+  },
+  "retrieve_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /charges/{id}"
+  },
+  "create_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "POST /coupons"
+  },
+  "retrieve_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "GET /coupons/{id}"
+  },
+  "create_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /payment_links"
+  },
+  "retrieve_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "GET /payment_links/{id}"
+  },
+  "create_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /transfers"
+  },
+  "retrieve_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "GET /transfers/{id}"
+  },
+  "create_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /accounts"
+  },
+  "retrieve_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /accounts/{id}"
+  },
+  "create_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "POST /payment_methods"
+  },
+  "retrieve_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "GET /payment_methods/{id}"
+  },
+  "create_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "POST /checkout/sessions"
+  },
+  "retrieve_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "GET /checkout/sessions/{id}"
+  }
+}

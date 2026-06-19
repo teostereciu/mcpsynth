@@ -1,0 +1,166 @@
+{
+  "verify_account_credentials": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "get_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/{id}"
+  },
+  "get_account_statuses": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/{id}/statuses"
+  },
+  "get_account_followers": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/{id}/followers"
+  },
+  "get_account_following": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/{id}/following"
+  },
+  "follow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/{id}/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/{id}/unfollow"
+  },
+  "post_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "get_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id"
+  },
+  "delete_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "DELETE /api/v1/statuses/:id"
+  },
+  "get_status_context": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id/context"
+  },
+  "reblog_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/reblog"
+  },
+  "unreblog_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unreblog"
+  },
+  "favourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unfavourite"
+  },
+  "bookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unbookmark"
+  },
+  "get_home_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/tag/:hashtag"
+  },
+  "get_list_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/list/:list_id"
+  },
+  "list_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "get_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications/:id"
+  },
+  "dismiss_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/:id/dismiss"
+  },
+  "clear_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "search": {
+    "doc": "docs/api_search.md",
+    "endpoint": "GET /api/v2/search"
+  },
+  "list_lists": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "get_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id"
+  },
+  "create_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "update_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "PUT /api/v1/lists/:id"
+  },
+  "delete_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id"
+  },
+  "get_list_accounts": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id/accounts"
+  },
+  "add_accounts_to_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists/:id/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id/accounts"
+  },
+  "list_bookmarks": {
+    "doc": "docs/api_bookmarks.md",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "list_favourites": {
+    "doc": "docs/api_favourites.md",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "upload_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "POST /api/v2/media"
+  },
+  "get_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "GET /api/v1/media/:id"
+  },
+  "update_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "PUT /api/v1/media/:id"
+  },
+  "delete_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "DELETE /api/v1/media/:id"
+  },
+  "get_instance": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v2/instance"
+  }
+}

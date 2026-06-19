@@ -1,0 +1,2963 @@
+{
+  "source": "Adyen API Explorer Documentation (Scraped)",
+  "scraped_from": "https://docs.adyen.com/api-explorer/",
+  "scrape_date": "2026-03-25T16:40:16.071309",
+  "total_pages": 591,
+  "files": [
+    {
+      "filename": "Account_6_overview.md",
+      "title": "Account/6/overview",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/overview"
+    },
+    {
+      "filename": "Account_6_post_checkAccountHolder.md",
+      "title": "Account/6/post/checkAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/checkAccountHolder"
+    },
+    {
+      "filename": "Account_6_post_closeAccount.md",
+      "title": "Account/6/post/closeAccount",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/closeAccount"
+    },
+    {
+      "filename": "Account_6_post_closeAccountHolder.md",
+      "title": "Account/6/post/closeAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/closeAccountHolder"
+    },
+    {
+      "filename": "Account_6_post_closeStores.md",
+      "title": "Account/6/post/closeStores",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/closeStores"
+    },
+    {
+      "filename": "Account_6_post_createAccount.md",
+      "title": "Account/6/post/createAccount",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/createAccount"
+    },
+    {
+      "filename": "Account_6_post_createAccountHolder.md",
+      "title": "Account/6/post/createAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/createAccountHolder"
+    },
+    {
+      "filename": "Account_6_post_deleteBankAccounts.md",
+      "title": "Account/6/post/deleteBankAccounts",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/deleteBankAccounts"
+    },
+    {
+      "filename": "Account_6_post_deleteLegalArrangements.md",
+      "title": "Account/6/post/deleteLegalArrangements",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/deleteLegalArrangements"
+    },
+    {
+      "filename": "Account_6_post_deletePayoutMethods.md",
+      "title": "Account/6/post/deletePayoutMethods",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/deletePayoutMethods"
+    },
+    {
+      "filename": "Account_6_post_deleteShareholders.md",
+      "title": "Account/6/post/deleteShareholders",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/deleteShareholders"
+    },
+    {
+      "filename": "Account_6_post_deleteSignatories.md",
+      "title": "Account/6/post/deleteSignatories",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/deleteSignatories"
+    },
+    {
+      "filename": "Account_6_post_getAccountHolder.md",
+      "title": "Account/6/post/getAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/getAccountHolder"
+    },
+    {
+      "filename": "Account_6_post_getTaxForm.md",
+      "title": "Account/6/post/getTaxForm",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/getTaxForm"
+    },
+    {
+      "filename": "Account_6_post_getUploadedDocuments.md",
+      "title": "Account/6/post/getUploadedDocuments",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/getUploadedDocuments"
+    },
+    {
+      "filename": "Account_6_post_suspendAccountHolder.md",
+      "title": "Account/6/post/suspendAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/suspendAccountHolder"
+    },
+    {
+      "filename": "Account_6_post_unSuspendAccountHolder.md",
+      "title": "Account/6/post/unSuspendAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/unSuspendAccountHolder"
+    },
+    {
+      "filename": "Account_6_post_updateAccount.md",
+      "title": "Account/6/post/updateAccount",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/updateAccount"
+    },
+    {
+      "filename": "Account_6_post_updateAccountHolder.md",
+      "title": "Account/6/post/updateAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/updateAccountHolder"
+    },
+    {
+      "filename": "Account_6_post_updateAccountHolderState.md",
+      "title": "Account/6/post/updateAccountHolderState",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/updateAccountHolderState"
+    },
+    {
+      "filename": "Account_6_post_uploadDocument.md",
+      "title": "Account/6/post/uploadDocument",
+      "url": "https://docs.adyen.com/api-explorer/Account/6/post/uploadDocument"
+    },
+    {
+      "filename": "Account_latest_overview.md",
+      "title": "Account/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Account/latest/overview"
+    },
+    {
+      "filename": "BalanceControl_2_get_balanceOverview_companies_(companyAccountCode)_balances.md",
+      "title": "BalanceControl/2/get/balanceOverview/companies/(companyAccountCode)/balances",
+      "url": "https://docs.adyen.com/api-explorer/BalanceControl/2/get/balanceOverview/companies/(companyAccountCode)/balances"
+    },
+    {
+      "filename": "BalanceControl_2_get_balanceOverview_merchants_(merchantAccountCode)_balances.md",
+      "title": "BalanceControl/2/get/balanceOverview/merchants/(merchantAccountCode)/balances",
+      "url": "https://docs.adyen.com/api-explorer/BalanceControl/2/get/balanceOverview/merchants/(merchantAccountCode)/balances"
+    },
+    {
+      "filename": "BalanceControl_2_overview.md",
+      "title": "BalanceControl/2/overview",
+      "url": "https://docs.adyen.com/api-explorer/BalanceControl/2/overview"
+    },
+    {
+      "filename": "BalanceControl_2_post_balanceTransfers.md",
+      "title": "BalanceControl/2/post/balanceTransfers",
+      "url": "https://docs.adyen.com/api-explorer/BalanceControl/2/post/balanceTransfers"
+    },
+    {
+      "filename": "BalanceControlv1_1_overview.md",
+      "title": "BalanceControlv1/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/BalanceControlv1/1/overview"
+    },
+    {
+      "filename": "BalanceControlv1_1_post_balanceTransfer.md",
+      "title": "BalanceControlv1/1/post/balanceTransfer",
+      "url": "https://docs.adyen.com/api-explorer/BalanceControlv1/1/post/balanceTransfer"
+    },
+    {
+      "filename": "BinLookup_54_overview.md",
+      "title": "BinLookup/54/overview",
+      "url": "https://docs.adyen.com/api-explorer/BinLookup/54/overview"
+    },
+    {
+      "filename": "BinLookup_54_post_get3dsAvailability.md",
+      "title": "BinLookup/54/post/get3dsAvailability",
+      "url": "https://docs.adyen.com/api-explorer/BinLookup/54/post/get3dsAvailability"
+    },
+    {
+      "filename": "BinLookup_54_post_getCostEstimate.md",
+      "title": "BinLookup/54/post/getCostEstimate",
+      "url": "https://docs.adyen.com/api-explorer/BinLookup/54/post/getCostEstimate"
+    },
+    {
+      "filename": "BinLookup_latest_overview.md",
+      "title": "BinLookup/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/BinLookup/latest/overview"
+    },
+    {
+      "filename": "Checkout_71_delete_storedPaymentMethods_(storedPaymentMethodId).md",
+      "title": "Checkout/71/delete/storedPaymentMethods/(storedPaymentMethodId)",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/delete/storedPaymentMethods/(storedPaymentMethodId)"
+    },
+    {
+      "filename": "Checkout_71_get_paymentLinks_(linkId).md",
+      "title": "Checkout/71/get/paymentLinks/(linkId)",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/get/paymentLinks/(linkId)"
+    },
+    {
+      "filename": "Checkout_71_get_sessions_(sessionId).md",
+      "title": "Checkout/71/get/sessions/(sessionId)",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/get/sessions/(sessionId)"
+    },
+    {
+      "filename": "Checkout_71_get_storedPaymentMethods.md",
+      "title": "Checkout/71/get/storedPaymentMethods",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/get/storedPaymentMethods"
+    },
+    {
+      "filename": "Checkout_71_overview.md",
+      "title": "Checkout/71/overview",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/overview"
+    },
+    {
+      "filename": "Checkout_71_patch_paymentLinks_(linkId).md",
+      "title": "Checkout/71/patch/paymentLinks/(linkId)",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/patch/paymentLinks/(linkId)"
+    },
+    {
+      "filename": "Checkout_71_post_applePay_sessions.md",
+      "title": "Checkout/71/post/applePay/sessions",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/applePay/sessions"
+    },
+    {
+      "filename": "Checkout_71_post_cancels.md",
+      "title": "Checkout/71/post/cancels",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/cancels"
+    },
+    {
+      "filename": "Checkout_71_post_cardDetails.md",
+      "title": "Checkout/71/post/cardDetails",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/cardDetails"
+    },
+    {
+      "filename": "Checkout_71_post_donationCampaigns.md",
+      "title": "Checkout/71/post/donationCampaigns",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/donationCampaigns"
+    },
+    {
+      "filename": "Checkout_71_post_donations.md",
+      "title": "Checkout/71/post/donations",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/donations"
+    },
+    {
+      "filename": "Checkout_71_post_forward.md",
+      "title": "Checkout/71/post/forward",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/forward"
+    },
+    {
+      "filename": "Checkout_71_post_orders.md",
+      "title": "Checkout/71/post/orders",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/orders"
+    },
+    {
+      "filename": "Checkout_71_post_orders_cancel.md",
+      "title": "Checkout/71/post/orders/cancel",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/orders/cancel"
+    },
+    {
+      "filename": "Checkout_71_post_originKeys.md",
+      "title": "Checkout/71/post/originKeys",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/originKeys"
+    },
+    {
+      "filename": "Checkout_71_post_paymentLinks.md",
+      "title": "Checkout/71/post/paymentLinks",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/paymentLinks"
+    },
+    {
+      "filename": "Checkout_71_post_paymentMethods.md",
+      "title": "Checkout/71/post/paymentMethods",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/paymentMethods"
+    },
+    {
+      "filename": "Checkout_71_post_paymentMethods_balance.md",
+      "title": "Checkout/71/post/paymentMethods/balance",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/paymentMethods/balance"
+    },
+    {
+      "filename": "Checkout_71_post_payments.md",
+      "title": "Checkout/71/post/payments",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/payments"
+    },
+    {
+      "filename": "Checkout_71_post_payments_(paymentPspReference)_amountUpdates.md",
+      "title": "Checkout/71/post/payments/(paymentPspReference)/amountUpdates",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/payments/(paymentPspReference)/amountUpdates"
+    },
+    {
+      "filename": "Checkout_71_post_payments_(paymentPspReference)_cancels.md",
+      "title": "Checkout/71/post/payments/(paymentPspReference)/cancels",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/payments/(paymentPspReference)/cancels"
+    },
+    {
+      "filename": "Checkout_71_post_payments_(paymentPspReference)_captures.md",
+      "title": "Checkout/71/post/payments/(paymentPspReference)/captures",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/payments/(paymentPspReference)/captures"
+    },
+    {
+      "filename": "Checkout_71_post_payments_(paymentPspReference)_refunds.md",
+      "title": "Checkout/71/post/payments/(paymentPspReference)/refunds",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/payments/(paymentPspReference)/refunds"
+    },
+    {
+      "filename": "Checkout_71_post_payments_(paymentPspReference)_reversals.md",
+      "title": "Checkout/71/post/payments/(paymentPspReference)/reversals",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/payments/(paymentPspReference)/reversals"
+    },
+    {
+      "filename": "Checkout_71_post_payments_details.md",
+      "title": "Checkout/71/post/payments/details",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/payments/details"
+    },
+    {
+      "filename": "Checkout_71_post_paypal_updateOrder.md",
+      "title": "Checkout/71/post/paypal/updateOrder",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/paypal/updateOrder"
+    },
+    {
+      "filename": "Checkout_71_post_sessions.md",
+      "title": "Checkout/71/post/sessions",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/sessions"
+    },
+    {
+      "filename": "Checkout_71_post_storedPaymentMethods.md",
+      "title": "Checkout/71/post/storedPaymentMethods",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/storedPaymentMethods"
+    },
+    {
+      "filename": "Checkout_71_post_validateShopperId.md",
+      "title": "Checkout/71/post/validateShopperId",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/71/post/validateShopperId"
+    },
+    {
+      "filename": "Checkout_latest_overview.md",
+      "title": "Checkout/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Checkout/latest/overview"
+    },
+    {
+      "filename": "Disputes_30_overview.md",
+      "title": "Disputes/30/overview",
+      "url": "https://docs.adyen.com/api-explorer/Disputes/30/overview"
+    },
+    {
+      "filename": "Disputes_30_post_acceptDispute.md",
+      "title": "Disputes/30/post/acceptDispute",
+      "url": "https://docs.adyen.com/api-explorer/Disputes/30/post/acceptDispute"
+    },
+    {
+      "filename": "Disputes_30_post_defendDispute.md",
+      "title": "Disputes/30/post/defendDispute",
+      "url": "https://docs.adyen.com/api-explorer/Disputes/30/post/defendDispute"
+    },
+    {
+      "filename": "Disputes_30_post_deleteDisputeDefenseDocument.md",
+      "title": "Disputes/30/post/deleteDisputeDefenseDocument",
+      "url": "https://docs.adyen.com/api-explorer/Disputes/30/post/deleteDisputeDefenseDocument"
+    },
+    {
+      "filename": "Disputes_30_post_retrieveApplicableDefenseReasons.md",
+      "title": "Disputes/30/post/retrieveApplicableDefenseReasons",
+      "url": "https://docs.adyen.com/api-explorer/Disputes/30/post/retrieveApplicableDefenseReasons"
+    },
+    {
+      "filename": "Disputes_30_post_supplyDefenseDocument.md",
+      "title": "Disputes/30/post/supplyDefenseDocument",
+      "url": "https://docs.adyen.com/api-explorer/Disputes/30/post/supplyDefenseDocument"
+    },
+    {
+      "filename": "Fund_6_overview.md",
+      "title": "Fund/6/overview",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/overview"
+    },
+    {
+      "filename": "Fund_6_post_accountHolderBalance.md",
+      "title": "Fund/6/post/accountHolderBalance",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/accountHolderBalance"
+    },
+    {
+      "filename": "Fund_6_post_accountHolderTransactionList.md",
+      "title": "Fund/6/post/accountHolderTransactionList",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/accountHolderTransactionList"
+    },
+    {
+      "filename": "Fund_6_post_debitAccountHolder.md",
+      "title": "Fund/6/post/debitAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/debitAccountHolder"
+    },
+    {
+      "filename": "Fund_6_post_payoutAccountHolder.md",
+      "title": "Fund/6/post/payoutAccountHolder",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/payoutAccountHolder"
+    },
+    {
+      "filename": "Fund_6_post_refundFundsTransfer.md",
+      "title": "Fund/6/post/refundFundsTransfer",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/refundFundsTransfer"
+    },
+    {
+      "filename": "Fund_6_post_refundNotPaidOutTransfers.md",
+      "title": "Fund/6/post/refundNotPaidOutTransfers",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/refundNotPaidOutTransfers"
+    },
+    {
+      "filename": "Fund_6_post_setupBeneficiary.md",
+      "title": "Fund/6/post/setupBeneficiary",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/setupBeneficiary"
+    },
+    {
+      "filename": "Fund_6_post_transferFunds.md",
+      "title": "Fund/6/post/transferFunds",
+      "url": "https://docs.adyen.com/api-explorer/Fund/6/post/transferFunds"
+    },
+    {
+      "filename": "Fund_latest_overview.md",
+      "title": "Fund/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Fund/latest/overview"
+    },
+    {
+      "filename": "Hop_6_overview.md",
+      "title": "Hop/6/overview",
+      "url": "https://docs.adyen.com/api-explorer/Hop/6/overview"
+    },
+    {
+      "filename": "Hop_6_post_getOnboardingUrl.md",
+      "title": "Hop/6/post/getOnboardingUrl",
+      "url": "https://docs.adyen.com/api-explorer/Hop/6/post/getOnboardingUrl"
+    },
+    {
+      "filename": "Hop_6_post_getPciQuestionnaireUrl.md",
+      "title": "Hop/6/post/getPciQuestionnaireUrl",
+      "url": "https://docs.adyen.com/api-explorer/Hop/6/post/getPciQuestionnaireUrl"
+    },
+    {
+      "filename": "Hop_latest_overview.md",
+      "title": "Hop/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Hop/latest/overview"
+    },
+    {
+      "filename": "Management_3_delete_companies_(companyId)_apiCredentials_(apiCredentialId)_allowedOrigins_(originId).md",
+      "title": "Management/3/delete/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)"
+    },
+    {
+      "filename": "Management_3_delete_companies_(companyId)_webhooks_(webhookId).md",
+      "title": "Management/3/delete/companies/(companyId)/webhooks/(webhookId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/companies/(companyId)/webhooks/(webhookId)"
+    },
+    {
+      "filename": "Management_3_delete_me_allowedOrigins_(originId).md",
+      "title": "Management/3/delete/me/allowedOrigins/(originId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/me/allowedOrigins/(originId)"
+    },
+    {
+      "filename": "Management_3_delete_merchants_(merchantId)_apiCredentials_(apiCredentialId)_allowedOrigins_(originId).md",
+      "title": "Management/3/delete/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)"
+    },
+    {
+      "filename": "Management_3_delete_merchants_(merchantId)_payoutSettings_(payoutSettingsId).md",
+      "title": "Management/3/delete/merchants/(merchantId)/payoutSettings/(payoutSettingsId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/merchants/(merchantId)/payoutSettings/(payoutSettingsId)"
+    },
+    {
+      "filename": "Management_3_delete_merchants_(merchantId)_splitConfigurations_(splitConfigurationId).md",
+      "title": "Management/3/delete/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)"
+    },
+    {
+      "filename": "Management_3_delete_merchants_(merchantId)_splitConfigurations_(splitConfigurationId)_rules_(ruleId).md",
+      "title": "Management/3/delete/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)/rules/(ruleId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)/rules/(ruleId)"
+    },
+    {
+      "filename": "Management_3_delete_merchants_(merchantId)_webhooks_(webhookId).md",
+      "title": "Management/3/delete/merchants/(merchantId)/webhooks/(webhookId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/delete/merchants/(merchantId)/webhooks/(webhookId)"
+    },
+    {
+      "filename": "Management_3_get_companies.md",
+      "title": "Management/3/get/companies",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId).md",
+      "title": "Management/3/get/companies/(companyId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_androidApps.md",
+      "title": "Management/3/get/companies/(companyId)/androidApps",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/androidApps"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_androidApps_(id).md",
+      "title": "Management/3/get/companies/(companyId)/androidApps/(id)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/androidApps/(id)"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_androidCertificates.md",
+      "title": "Management/3/get/companies/(companyId)/androidCertificates",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/androidCertificates"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_apiCredentials.md",
+      "title": "Management/3/get/companies/(companyId)/apiCredentials",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/apiCredentials"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_apiCredentials_(apiCredentialId).md",
+      "title": "Management/3/get/companies/(companyId)/apiCredentials/(apiCredentialId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/apiCredentials/(apiCredentialId)"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_apiCredentials_(apiCredentialId)_allowedOrigins.md",
+      "title": "Management/3/get/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_apiCredentials_(apiCredentialId)_allowedOrigins_(originId).md",
+      "title": "Management/3/get/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_billingEntities.md",
+      "title": "Management/3/get/companies/(companyId)/billingEntities",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/billingEntities"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_merchants.md",
+      "title": "Management/3/get/companies/(companyId)/merchants",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/merchants"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_shippingLocations.md",
+      "title": "Management/3/get/companies/(companyId)/shippingLocations",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/shippingLocations"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalActions.md",
+      "title": "Management/3/get/companies/(companyId)/terminalActions",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalActions"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalActions_(actionId).md",
+      "title": "Management/3/get/companies/(companyId)/terminalActions/(actionId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalActions/(actionId)"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalLogos.md",
+      "title": "Management/3/get/companies/(companyId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalModels.md",
+      "title": "Management/3/get/companies/(companyId)/terminalModels",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalModels"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalOrders.md",
+      "title": "Management/3/get/companies/(companyId)/terminalOrders",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalOrders"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalOrders_(orderId).md",
+      "title": "Management/3/get/companies/(companyId)/terminalOrders/(orderId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalOrders/(orderId)"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalProducts.md",
+      "title": "Management/3/get/companies/(companyId)/terminalProducts",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalProducts"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_terminalSettings.md",
+      "title": "Management/3/get/companies/(companyId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_users.md",
+      "title": "Management/3/get/companies/(companyId)/users",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/users"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_users_(userId).md",
+      "title": "Management/3/get/companies/(companyId)/users/(userId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/users/(userId)"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_webhooks.md",
+      "title": "Management/3/get/companies/(companyId)/webhooks",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/webhooks"
+    },
+    {
+      "filename": "Management_3_get_companies_(companyId)_webhooks_(webhookId).md",
+      "title": "Management/3/get/companies/(companyId)/webhooks/(webhookId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/webhooks/(webhookId)"
+    },
+    {
+      "filename": "Management_3_get_me.md",
+      "title": "Management/3/get/me",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/me"
+    },
+    {
+      "filename": "Management_3_get_me_allowedOrigins.md",
+      "title": "Management/3/get/me/allowedOrigins",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/me/allowedOrigins"
+    },
+    {
+      "filename": "Management_3_get_me_allowedOrigins_(originId).md",
+      "title": "Management/3/get/me/allowedOrigins/(originId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/me/allowedOrigins/(originId)"
+    },
+    {
+      "filename": "Management_3_get_merchants.md",
+      "title": "Management/3/get/merchants",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId).md",
+      "title": "Management/3/get/merchants/(merchantId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_apiCredentials.md",
+      "title": "Management/3/get/merchants/(merchantId)/apiCredentials",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/apiCredentials"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_apiCredentials_(apiCredentialId).md",
+      "title": "Management/3/get/merchants/(merchantId)/apiCredentials/(apiCredentialId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/apiCredentials/(apiCredentialId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_apiCredentials_(apiCredentialId)_allowedOrigins.md",
+      "title": "Management/3/get/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_apiCredentials_(apiCredentialId)_allowedOrigins_(originId).md",
+      "title": "Management/3/get/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins/(originId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_billingEntities.md",
+      "title": "Management/3/get/merchants/(merchantId)/billingEntities",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/billingEntities"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_paymentMethodSettings.md",
+      "title": "Management/3/get/merchants/(merchantId)/paymentMethodSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/paymentMethodSettings"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_paymentMethodSettings_(paymentMethodId).md",
+      "title": "Management/3/get/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_paymentMethodSettings_(paymentMethodId)_getApplePayDomains.md",
+      "title": "Management/3/get/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)/getApplePayDomains",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)/getApplePayDomains"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_payoutSettings.md",
+      "title": "Management/3/get/merchants/(merchantId)/payoutSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/payoutSettings"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_payoutSettings_(payoutSettingsId).md",
+      "title": "Management/3/get/merchants/(merchantId)/payoutSettings/(payoutSettingsId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/payoutSettings/(payoutSettingsId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_shippingLocations.md",
+      "title": "Management/3/get/merchants/(merchantId)/shippingLocations",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/shippingLocations"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_splitConfigurations.md",
+      "title": "Management/3/get/merchants/(merchantId)/splitConfigurations",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/splitConfigurations"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_splitConfigurations_(splitConfigurationId).md",
+      "title": "Management/3/get/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_stores.md",
+      "title": "Management/3/get/merchants/(merchantId)/stores",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/stores"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_stores_(reference)_terminalLogos.md",
+      "title": "Management/3/get/merchants/(merchantId)/stores/(reference)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/stores/(reference)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_stores_(reference)_terminalSettings.md",
+      "title": "Management/3/get/merchants/(merchantId)/stores/(reference)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/stores/(reference)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_stores_(storeId).md",
+      "title": "Management/3/get/merchants/(merchantId)/stores/(storeId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/stores/(storeId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_terminalLogos.md",
+      "title": "Management/3/get/merchants/(merchantId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_terminalModels.md",
+      "title": "Management/3/get/merchants/(merchantId)/terminalModels",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/terminalModels"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_terminalOrders.md",
+      "title": "Management/3/get/merchants/(merchantId)/terminalOrders",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/terminalOrders"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_terminalOrders_(orderId).md",
+      "title": "Management/3/get/merchants/(merchantId)/terminalOrders/(orderId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/terminalOrders/(orderId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_terminalProducts.md",
+      "title": "Management/3/get/merchants/(merchantId)/terminalProducts",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/terminalProducts"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_terminalSettings.md",
+      "title": "Management/3/get/merchants/(merchantId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_users.md",
+      "title": "Management/3/get/merchants/(merchantId)/users",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/users"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_users_(userId).md",
+      "title": "Management/3/get/merchants/(merchantId)/users/(userId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/users/(userId)"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_webhooks.md",
+      "title": "Management/3/get/merchants/(merchantId)/webhooks",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/webhooks"
+    },
+    {
+      "filename": "Management_3_get_merchants_(merchantId)_webhooks_(webhookId).md",
+      "title": "Management/3/get/merchants/(merchantId)/webhooks/(webhookId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/merchants/(merchantId)/webhooks/(webhookId)"
+    },
+    {
+      "filename": "Management_3_get_stores.md",
+      "title": "Management/3/get/stores",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/stores"
+    },
+    {
+      "filename": "Management_3_get_stores_(storeId).md",
+      "title": "Management/3/get/stores/(storeId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/stores/(storeId)"
+    },
+    {
+      "filename": "Management_3_get_stores_(storeId)_terminalLogos.md",
+      "title": "Management/3/get/stores/(storeId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/stores/(storeId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_get_stores_(storeId)_terminalSettings.md",
+      "title": "Management/3/get/stores/(storeId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/stores/(storeId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_get_terminals.md",
+      "title": "Management/3/get/terminals",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/terminals"
+    },
+    {
+      "filename": "Management_3_get_terminals_(terminalId)_terminalLogos.md",
+      "title": "Management/3/get/terminals/(terminalId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/terminals/(terminalId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_get_terminals_(terminalId)_terminalSettings.md",
+      "title": "Management/3/get/terminals/(terminalId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/get/terminals/(terminalId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_overview.md",
+      "title": "Management/3/overview",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/overview"
+    },
+    {
+      "filename": "Management_3_patch_companies_(companyId)_androidApps_(id).md",
+      "title": "Management/3/patch/companies/(companyId)/androidApps/(id)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/companies/(companyId)/androidApps/(id)"
+    },
+    {
+      "filename": "Management_3_patch_companies_(companyId)_apiCredentials_(apiCredentialId).md",
+      "title": "Management/3/patch/companies/(companyId)/apiCredentials/(apiCredentialId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/companies/(companyId)/apiCredentials/(apiCredentialId)"
+    },
+    {
+      "filename": "Management_3_patch_companies_(companyId)_terminalLogos.md",
+      "title": "Management/3/patch/companies/(companyId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/companies/(companyId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_patch_companies_(companyId)_terminalOrders_(orderId).md",
+      "title": "Management/3/patch/companies/(companyId)/terminalOrders/(orderId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/companies/(companyId)/terminalOrders/(orderId)"
+    },
+    {
+      "filename": "Management_3_patch_companies_(companyId)_terminalSettings.md",
+      "title": "Management/3/patch/companies/(companyId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/companies/(companyId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_patch_companies_(companyId)_users_(userId).md",
+      "title": "Management/3/patch/companies/(companyId)/users/(userId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/companies/(companyId)/users/(userId)"
+    },
+    {
+      "filename": "Management_3_patch_companies_(companyId)_webhooks_(webhookId).md",
+      "title": "Management/3/patch/companies/(companyId)/webhooks/(webhookId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/companies/(companyId)/webhooks/(webhookId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_apiCredentials_(apiCredentialId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/apiCredentials/(apiCredentialId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/apiCredentials/(apiCredentialId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_paymentMethodSettings_(paymentMethodId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_payoutSettings_(payoutSettingsId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/payoutSettings/(payoutSettingsId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/payoutSettings/(payoutSettingsId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_splitConfigurations_(splitConfigurationId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_splitConfigurations_(splitConfigurationId)_rules_(ruleId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)/rules/(ruleId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)/rules/(ruleId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_splitConfigurations_(splitConfigurationId)_rules_(ruleId)_splitLogic_(splitLogicId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)/rules/(ruleId)/splitLogic/(splitLogicId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)/rules/(ruleId)/splitLogic/(splitLogicId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_stores_(reference)_terminalLogos.md",
+      "title": "Management/3/patch/merchants/(merchantId)/stores/(reference)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/stores/(reference)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_stores_(reference)_terminalSettings.md",
+      "title": "Management/3/patch/merchants/(merchantId)/stores/(reference)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/stores/(reference)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_stores_(storeId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/stores/(storeId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/stores/(storeId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_terminalLogos.md",
+      "title": "Management/3/patch/merchants/(merchantId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_terminalOrders_(orderId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/terminalOrders/(orderId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/terminalOrders/(orderId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_terminalSettings.md",
+      "title": "Management/3/patch/merchants/(merchantId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_users_(userId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/users/(userId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/users/(userId)"
+    },
+    {
+      "filename": "Management_3_patch_merchants_(merchantId)_webhooks_(webhookId).md",
+      "title": "Management/3/patch/merchants/(merchantId)/webhooks/(webhookId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/webhooks/(webhookId)"
+    },
+    {
+      "filename": "Management_3_patch_stores_(storeId).md",
+      "title": "Management/3/patch/stores/(storeId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/stores/(storeId)"
+    },
+    {
+      "filename": "Management_3_patch_stores_(storeId)_terminalLogos.md",
+      "title": "Management/3/patch/stores/(storeId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/stores/(storeId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_patch_stores_(storeId)_terminalSettings.md",
+      "title": "Management/3/patch/stores/(storeId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/stores/(storeId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_patch_terminals_(terminalId)_terminalLogos.md",
+      "title": "Management/3/patch/terminals/(terminalId)/terminalLogos",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/terminals/(terminalId)/terminalLogos"
+    },
+    {
+      "filename": "Management_3_patch_terminals_(terminalId)_terminalSettings.md",
+      "title": "Management/3/patch/terminals/(terminalId)/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/patch/terminals/(terminalId)/terminalSettings"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_androidApps.md",
+      "title": "Management/3/post/companies/(companyId)/androidApps",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/androidApps"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_androidCertificates.md",
+      "title": "Management/3/post/companies/(companyId)/androidCertificates",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/androidCertificates"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_apiCredentials.md",
+      "title": "Management/3/post/companies/(companyId)/apiCredentials",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/apiCredentials"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_apiCredentials_(apiCredentialId)_allowedOrigins.md",
+      "title": "Management/3/post/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/apiCredentials/(apiCredentialId)/allowedOrigins"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_apiCredentials_(apiCredentialId)_generateApiKey.md",
+      "title": "Management/3/post/companies/(companyId)/apiCredentials/(apiCredentialId)/generateApiKey",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/apiCredentials/(apiCredentialId)/generateApiKey"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_apiCredentials_(apiCredentialId)_generateClientKey.md",
+      "title": "Management/3/post/companies/(companyId)/apiCredentials/(apiCredentialId)/generateClientKey",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/apiCredentials/(apiCredentialId)/generateClientKey"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_shippingLocations.md",
+      "title": "Management/3/post/companies/(companyId)/shippingLocations",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/shippingLocations"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_terminalOrders.md",
+      "title": "Management/3/post/companies/(companyId)/terminalOrders",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/terminalOrders"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_terminalOrders_(orderId)_cancel.md",
+      "title": "Management/3/post/companies/(companyId)/terminalOrders/(orderId)/cancel",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/terminalOrders/(orderId)/cancel"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_users.md",
+      "title": "Management/3/post/companies/(companyId)/users",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/users"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_webhooks.md",
+      "title": "Management/3/post/companies/(companyId)/webhooks",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/webhooks"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_webhooks_(webhookId)_generateHmac.md",
+      "title": "Management/3/post/companies/(companyId)/webhooks/(webhookId)/generateHmac",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/webhooks/(webhookId)/generateHmac"
+    },
+    {
+      "filename": "Management_3_post_companies_(companyId)_webhooks_(webhookId)_test.md",
+      "title": "Management/3/post/companies/(companyId)/webhooks/(webhookId)/test",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/companies/(companyId)/webhooks/(webhookId)/test"
+    },
+    {
+      "filename": "Management_3_post_me_allowedOrigins.md",
+      "title": "Management/3/post/me/allowedOrigins",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/me/allowedOrigins"
+    },
+    {
+      "filename": "Management_3_post_me_generateClientKey.md",
+      "title": "Management/3/post/me/generateClientKey",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/me/generateClientKey"
+    },
+    {
+      "filename": "Management_3_post_merchants.md",
+      "title": "Management/3/post/merchants",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_activate.md",
+      "title": "Management/3/post/merchants/(merchantId)/activate",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/activate"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_apiCredentials.md",
+      "title": "Management/3/post/merchants/(merchantId)/apiCredentials",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/apiCredentials"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_apiCredentials_(apiCredentialId)_allowedOrigins.md",
+      "title": "Management/3/post/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/apiCredentials/(apiCredentialId)/allowedOrigins"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_apiCredentials_(apiCredentialId)_generateApiKey.md",
+      "title": "Management/3/post/merchants/(merchantId)/apiCredentials/(apiCredentialId)/generateApiKey",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/apiCredentials/(apiCredentialId)/generateApiKey"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_apiCredentials_(apiCredentialId)_generateClientKey.md",
+      "title": "Management/3/post/merchants/(merchantId)/apiCredentials/(apiCredentialId)/generateClientKey",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/apiCredentials/(apiCredentialId)/generateClientKey"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_paymentMethodSettings.md",
+      "title": "Management/3/post/merchants/(merchantId)/paymentMethodSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/paymentMethodSettings"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_paymentMethodSettings_(paymentMethodId)_addApplePayDomains.md",
+      "title": "Management/3/post/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)/addApplePayDomains",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)/addApplePayDomains"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_payoutSettings.md",
+      "title": "Management/3/post/merchants/(merchantId)/payoutSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/payoutSettings"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_shippingLocations.md",
+      "title": "Management/3/post/merchants/(merchantId)/shippingLocations",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/shippingLocations"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_splitConfigurations.md",
+      "title": "Management/3/post/merchants/(merchantId)/splitConfigurations",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/splitConfigurations"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_splitConfigurations_(splitConfigurationId).md",
+      "title": "Management/3/post/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/splitConfigurations/(splitConfigurationId)"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_stores.md",
+      "title": "Management/3/post/merchants/(merchantId)/stores",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/stores"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_terminalOrders.md",
+      "title": "Management/3/post/merchants/(merchantId)/terminalOrders",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/terminalOrders"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_terminalOrders_(orderId)_cancel.md",
+      "title": "Management/3/post/merchants/(merchantId)/terminalOrders/(orderId)/cancel",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/terminalOrders/(orderId)/cancel"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_users.md",
+      "title": "Management/3/post/merchants/(merchantId)/users",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/users"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_webhooks.md",
+      "title": "Management/3/post/merchants/(merchantId)/webhooks",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/webhooks"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_webhooks_(webhookId)_generateHmac.md",
+      "title": "Management/3/post/merchants/(merchantId)/webhooks/(webhookId)/generateHmac",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/webhooks/(webhookId)/generateHmac"
+    },
+    {
+      "filename": "Management_3_post_merchants_(merchantId)_webhooks_(webhookId)_test.md",
+      "title": "Management/3/post/merchants/(merchantId)/webhooks/(webhookId)/test",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/merchants/(merchantId)/webhooks/(webhookId)/test"
+    },
+    {
+      "filename": "Management_3_post_stores.md",
+      "title": "Management/3/post/stores",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/stores"
+    },
+    {
+      "filename": "Management_3_post_terminals_(terminalId)_reassign.md",
+      "title": "Management/3/post/terminals/(terminalId)/reassign",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/terminals/(terminalId)/reassign"
+    },
+    {
+      "filename": "Management_3_post_terminals_scheduleActions.md",
+      "title": "Management/3/post/terminals/scheduleActions",
+      "url": "https://docs.adyen.com/api-explorer/Management/3/post/terminals/scheduleActions"
+    },
+    {
+      "filename": "Management_latest_patch_companies__companyId__terminalSettings.md",
+      "title": "Management/latest/patch/companies/_companyId_/terminalSettings",
+      "url": "https://docs.adyen.com/api-explorer/Management/latest/patch/companies/_companyId_/terminalSettings"
+    },
+    {
+      "filename": "Management_latest_post_companies__companyId__terminalOrders.md",
+      "title": "Management/latest/post/companies/_companyId_/terminalOrders",
+      "url": "https://docs.adyen.com/api-explorer/Management/latest/post/companies/_companyId_/terminalOrders"
+    },
+    {
+      "filename": "Management_latest_post_merchants__merchantId__stores.md",
+      "title": "Management/latest/post/merchants/_merchantId_/stores",
+      "url": "https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/stores"
+    },
+    {
+      "filename": "Management_latest_post_terminals__terminalId__reassign.md",
+      "title": "Management/latest/post/terminals/_terminalId_/reassign",
+      "url": "https://docs.adyen.com/api-explorer/Management/latest/post/terminals/_terminalId_/reassign"
+    },
+    {
+      "filename": "Management_latest_post_terminals_scheduleActions.md",
+      "title": "Management/latest/post/terminals/scheduleActions",
+      "url": "https://docs.adyen.com/api-explorer/Management/latest/post/terminals/scheduleActions"
+    },
+    {
+      "filename": "ManagementNotification_3_overview.md",
+      "title": "ManagementNotification/3/overview",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/overview"
+    },
+    {
+      "filename": "ManagementNotification_3_post_merchant.created.md",
+      "title": "ManagementNotification/3/post/merchant.created",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/merchant.created"
+    },
+    {
+      "filename": "ManagementNotification_3_post_merchant.updated.md",
+      "title": "ManagementNotification/3/post/merchant.updated",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/merchant.updated"
+    },
+    {
+      "filename": "ManagementNotification_3_post_paymentMethod.created.md",
+      "title": "ManagementNotification/3/post/paymentMethod.created",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/paymentMethod.created"
+    },
+    {
+      "filename": "ManagementNotification_3_post_paymentMethodRequest.removed.md",
+      "title": "ManagementNotification/3/post/paymentMethodRequest.removed",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/paymentMethodRequest.removed"
+    },
+    {
+      "filename": "ManagementNotification_3_post_paymentMethodRequest.scheduledForRemoval.md",
+      "title": "ManagementNotification/3/post/paymentMethodRequest.scheduledForRemoval",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/paymentMethodRequest.scheduledForRemoval"
+    },
+    {
+      "filename": "ManagementNotification_3_post_terminalAssignment.completed.md",
+      "title": "ManagementNotification/3/post/terminalAssignment.completed",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/terminalAssignment.completed"
+    },
+    {
+      "filename": "ManagementNotification_3_post_terminalBoarding.triggered.md",
+      "title": "ManagementNotification/3/post/terminalBoarding.triggered",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/terminalBoarding.triggered"
+    },
+    {
+      "filename": "ManagementNotification_3_post_terminalSettings.modified.md",
+      "title": "ManagementNotification/3/post/terminalSettings.modified",
+      "url": "https://docs.adyen.com/api-explorer/ManagementNotification/3/post/terminalSettings.modified"
+    },
+    {
+      "filename": "Notification_6_overview.md",
+      "title": "Notification/6/overview",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/overview"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_CLOSED.md",
+      "title": "Notification/6/post/ACCOUNT_CLOSED",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_CLOSED"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_CREATED.md",
+      "title": "Notification/6/post/ACCOUNT_CREATED",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_CREATED"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_FUNDS_BELOW_THRESHOLD.md",
+      "title": "Notification/6/post/ACCOUNT_FUNDS_BELOW_THRESHOLD",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_FUNDS_BELOW_THRESHOLD"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_HOLDER_CREATED.md",
+      "title": "Notification/6/post/ACCOUNT_HOLDER_CREATED",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_HOLDER_CREATED"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_HOLDER_PAYOUT.md",
+      "title": "Notification/6/post/ACCOUNT_HOLDER_PAYOUT",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_HOLDER_PAYOUT"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_HOLDER_STATUS_CHANGE.md",
+      "title": "Notification/6/post/ACCOUNT_HOLDER_STATUS_CHANGE",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_HOLDER_STATUS_CHANGE"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_HOLDER_STORE_STATUS_CHANGE.md",
+      "title": "Notification/6/post/ACCOUNT_HOLDER_STORE_STATUS_CHANGE",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_HOLDER_STORE_STATUS_CHANGE"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_HOLDER_UPCOMING_DEADLINE.md",
+      "title": "Notification/6/post/ACCOUNT_HOLDER_UPCOMING_DEADLINE",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_HOLDER_UPCOMING_DEADLINE"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_HOLDER_UPDATED.md",
+      "title": "Notification/6/post/ACCOUNT_HOLDER_UPDATED",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_HOLDER_UPDATED"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_HOLDER_VERIFICATION.md",
+      "title": "Notification/6/post/ACCOUNT_HOLDER_VERIFICATION",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_HOLDER_VERIFICATION"
+    },
+    {
+      "filename": "Notification_6_post_ACCOUNT_UPDATED.md",
+      "title": "Notification/6/post/ACCOUNT_UPDATED",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/ACCOUNT_UPDATED"
+    },
+    {
+      "filename": "Notification_6_post_BENEFICIARY_SETUP.md",
+      "title": "Notification/6/post/BENEFICIARY_SETUP",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/BENEFICIARY_SETUP"
+    },
+    {
+      "filename": "Notification_6_post_COMPENSATE_NEGATIVE_BALANCE.md",
+      "title": "Notification/6/post/COMPENSATE_NEGATIVE_BALANCE",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/COMPENSATE_NEGATIVE_BALANCE"
+    },
+    {
+      "filename": "Notification_6_post_DIRECT_DEBIT_INITIATED.md",
+      "title": "Notification/6/post/DIRECT_DEBIT_INITIATED",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/DIRECT_DEBIT_INITIATED"
+    },
+    {
+      "filename": "Notification_6_post_PAYMENT_FAILURE.md",
+      "title": "Notification/6/post/PAYMENT_FAILURE",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/PAYMENT_FAILURE"
+    },
+    {
+      "filename": "Notification_6_post_REFUND_FUNDS_TRANSFER.md",
+      "title": "Notification/6/post/REFUND_FUNDS_TRANSFER",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/REFUND_FUNDS_TRANSFER"
+    },
+    {
+      "filename": "Notification_6_post_REPORT_AVAILABLE.md",
+      "title": "Notification/6/post/REPORT_AVAILABLE",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/REPORT_AVAILABLE"
+    },
+    {
+      "filename": "Notification_6_post_SCHEDULED_REFUNDS.md",
+      "title": "Notification/6/post/SCHEDULED_REFUNDS",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/SCHEDULED_REFUNDS"
+    },
+    {
+      "filename": "Notification_6_post_TRANSFER_FUNDS.md",
+      "title": "Notification/6/post/TRANSFER_FUNDS",
+      "url": "https://docs.adyen.com/api-explorer/Notification/6/post/TRANSFER_FUNDS"
+    },
+    {
+      "filename": "Notification_latest_overview.md",
+      "title": "Notification/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Notification/latest/overview"
+    },
+    {
+      "filename": "NotificationConfiguration_6_overview.md",
+      "title": "NotificationConfiguration/6/overview",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/6/overview"
+    },
+    {
+      "filename": "NotificationConfiguration_6_post_createNotificationConfiguration.md",
+      "title": "NotificationConfiguration/6/post/createNotificationConfiguration",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/6/post/createNotificationConfiguration"
+    },
+    {
+      "filename": "NotificationConfiguration_6_post_deleteNotificationConfigurations.md",
+      "title": "NotificationConfiguration/6/post/deleteNotificationConfigurations",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/6/post/deleteNotificationConfigurations"
+    },
+    {
+      "filename": "NotificationConfiguration_6_post_getNotificationConfiguration.md",
+      "title": "NotificationConfiguration/6/post/getNotificationConfiguration",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/6/post/getNotificationConfiguration"
+    },
+    {
+      "filename": "NotificationConfiguration_6_post_getNotificationConfigurationList.md",
+      "title": "NotificationConfiguration/6/post/getNotificationConfigurationList",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/6/post/getNotificationConfigurationList"
+    },
+    {
+      "filename": "NotificationConfiguration_6_post_testNotificationConfiguration.md",
+      "title": "NotificationConfiguration/6/post/testNotificationConfiguration",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/6/post/testNotificationConfiguration"
+    },
+    {
+      "filename": "NotificationConfiguration_6_post_updateNotificationConfiguration.md",
+      "title": "NotificationConfiguration/6/post/updateNotificationConfiguration",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/6/post/updateNotificationConfiguration"
+    },
+    {
+      "filename": "NotificationConfiguration_latest_overview.md",
+      "title": "NotificationConfiguration/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/NotificationConfiguration/latest/overview"
+    },
+    {
+      "filename": "Payment_68_overview.md",
+      "title": "Payment/68/overview",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/overview"
+    },
+    {
+      "filename": "Payment_68_post_adjustAuthorisation.md",
+      "title": "Payment/68/post/adjustAuthorisation",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/adjustAuthorisation"
+    },
+    {
+      "filename": "Payment_68_post_authorise.md",
+      "title": "Payment/68/post/authorise",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/authorise"
+    },
+    {
+      "filename": "Payment_68_post_authorise3d.md",
+      "title": "Payment/68/post/authorise3d",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/authorise3d"
+    },
+    {
+      "filename": "Payment_68_post_authorise3ds2.md",
+      "title": "Payment/68/post/authorise3ds2",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/authorise3ds2"
+    },
+    {
+      "filename": "Payment_68_post_cancel.md",
+      "title": "Payment/68/post/cancel",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/cancel"
+    },
+    {
+      "filename": "Payment_68_post_cancelOrRefund.md",
+      "title": "Payment/68/post/cancelOrRefund",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/cancelOrRefund"
+    },
+    {
+      "filename": "Payment_68_post_capture.md",
+      "title": "Payment/68/post/capture",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/capture"
+    },
+    {
+      "filename": "Payment_68_post_donate.md",
+      "title": "Payment/68/post/donate",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/donate"
+    },
+    {
+      "filename": "Payment_68_post_getAuthenticationResult.md",
+      "title": "Payment/68/post/getAuthenticationResult",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/getAuthenticationResult"
+    },
+    {
+      "filename": "Payment_68_post_refund.md",
+      "title": "Payment/68/post/refund",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/refund"
+    },
+    {
+      "filename": "Payment_68_post_retrieve3ds2Result.md",
+      "title": "Payment/68/post/retrieve3ds2Result",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/retrieve3ds2Result"
+    },
+    {
+      "filename": "Payment_68_post_technicalCancel.md",
+      "title": "Payment/68/post/technicalCancel",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/technicalCancel"
+    },
+    {
+      "filename": "Payment_68_post_voidPendingRefund.md",
+      "title": "Payment/68/post/voidPendingRefund",
+      "url": "https://docs.adyen.com/api-explorer/Payment/68/post/voidPendingRefund"
+    },
+    {
+      "filename": "Payment_latest_overview.md",
+      "title": "Payment/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Payment/latest/overview"
+    },
+    {
+      "filename": "Payout_68_overview.md",
+      "title": "Payout/68/overview",
+      "url": "https://docs.adyen.com/api-explorer/Payout/68/overview"
+    },
+    {
+      "filename": "Payout_68_post_confirmThirdParty.md",
+      "title": "Payout/68/post/confirmThirdParty",
+      "url": "https://docs.adyen.com/api-explorer/Payout/68/post/confirmThirdParty"
+    },
+    {
+      "filename": "Payout_68_post_declineThirdParty.md",
+      "title": "Payout/68/post/declineThirdParty",
+      "url": "https://docs.adyen.com/api-explorer/Payout/68/post/declineThirdParty"
+    },
+    {
+      "filename": "Payout_68_post_payout.md",
+      "title": "Payout/68/post/payout",
+      "url": "https://docs.adyen.com/api-explorer/Payout/68/post/payout"
+    },
+    {
+      "filename": "Payout_68_post_storeDetail.md",
+      "title": "Payout/68/post/storeDetail",
+      "url": "https://docs.adyen.com/api-explorer/Payout/68/post/storeDetail"
+    },
+    {
+      "filename": "Payout_68_post_storeDetailAndSubmitThirdParty.md",
+      "title": "Payout/68/post/storeDetailAndSubmitThirdParty",
+      "url": "https://docs.adyen.com/api-explorer/Payout/68/post/storeDetailAndSubmitThirdParty"
+    },
+    {
+      "filename": "Payout_68_post_submitThirdParty.md",
+      "title": "Payout/68/post/submitThirdParty",
+      "url": "https://docs.adyen.com/api-explorer/Payout/68/post/submitThirdParty"
+    },
+    {
+      "filename": "Payout_latest_overview.md",
+      "title": "Payout/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Payout/latest/overview"
+    },
+    {
+      "filename": "Recurring_68_overview.md",
+      "title": "Recurring/68/overview",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/68/overview"
+    },
+    {
+      "filename": "Recurring_68_post_createPermit.md",
+      "title": "Recurring/68/post/createPermit",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/68/post/createPermit"
+    },
+    {
+      "filename": "Recurring_68_post_disable.md",
+      "title": "Recurring/68/post/disable",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/68/post/disable"
+    },
+    {
+      "filename": "Recurring_68_post_disablePermit.md",
+      "title": "Recurring/68/post/disablePermit",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/68/post/disablePermit"
+    },
+    {
+      "filename": "Recurring_68_post_listRecurringDetails.md",
+      "title": "Recurring/68/post/listRecurringDetails",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/68/post/listRecurringDetails"
+    },
+    {
+      "filename": "Recurring_68_post_notifyShopper.md",
+      "title": "Recurring/68/post/notifyShopper",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/68/post/notifyShopper"
+    },
+    {
+      "filename": "Recurring_68_post_scheduleAccountUpdater.md",
+      "title": "Recurring/68/post/scheduleAccountUpdater",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/68/post/scheduleAccountUpdater"
+    },
+    {
+      "filename": "Recurring_latest_overview.md",
+      "title": "Recurring/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/Recurring/latest/overview"
+    },
+    {
+      "filename": "Tokenization-webhooks_1_overview.md",
+      "title": "Tokenization-webhooks/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/Tokenization-webhooks/1/overview"
+    },
+    {
+      "filename": "Tokenization-webhooks_1_post_recurring.token.alreadyExisting.md",
+      "title": "Tokenization-webhooks/1/post/recurring.token.alreadyExisting",
+      "url": "https://docs.adyen.com/api-explorer/Tokenization-webhooks/1/post/recurring.token.alreadyExisting"
+    },
+    {
+      "filename": "Tokenization-webhooks_1_post_recurring.token.created.md",
+      "title": "Tokenization-webhooks/1/post/recurring.token.created",
+      "url": "https://docs.adyen.com/api-explorer/Tokenization-webhooks/1/post/recurring.token.created"
+    },
+    {
+      "filename": "Tokenization-webhooks_1_post_recurring.token.disabled.md",
+      "title": "Tokenization-webhooks/1/post/recurring.token.disabled",
+      "url": "https://docs.adyen.com/api-explorer/Tokenization-webhooks/1/post/recurring.token.disabled"
+    },
+    {
+      "filename": "Tokenization-webhooks_1_post_recurring.token.updated.md",
+      "title": "Tokenization-webhooks/1/post/recurring.token.updated",
+      "url": "https://docs.adyen.com/api-explorer/Tokenization-webhooks/1/post/recurring.token.updated"
+    },
+    {
+      "filename": "Webhooks_1_post_ACH_NOTIFICATION_OF_CHANGE.md",
+      "title": "Webhooks/1/post/ACH_NOTIFICATION_OF_CHANGE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/ACH_NOTIFICATION_OF_CHANGE"
+    },
+    {
+      "filename": "Webhooks_1_post_AUTHORISATION.md",
+      "title": "Webhooks/1/post/AUTHORISATION",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/AUTHORISATION"
+    },
+    {
+      "filename": "Webhooks_1_post_AUTHORISATION_ADJUSTMENT.md",
+      "title": "Webhooks/1/post/AUTHORISATION_ADJUSTMENT",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/AUTHORISATION_ADJUSTMENT"
+    },
+    {
+      "filename": "Webhooks_1_post_AUTORESCUE.md",
+      "title": "Webhooks/1/post/AUTORESCUE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/AUTORESCUE"
+    },
+    {
+      "filename": "Webhooks_1_post_CANCELLATION.md",
+      "title": "Webhooks/1/post/CANCELLATION",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/CANCELLATION"
+    },
+    {
+      "filename": "Webhooks_1_post_CANCEL_AUTORESCUE.md",
+      "title": "Webhooks/1/post/CANCEL_AUTORESCUE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/CANCEL_AUTORESCUE"
+    },
+    {
+      "filename": "Webhooks_1_post_CANCEL_OR_REFUND.md",
+      "title": "Webhooks/1/post/CANCEL_OR_REFUND",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/CANCEL_OR_REFUND"
+    },
+    {
+      "filename": "Webhooks_1_post_CAPTURE.md",
+      "title": "Webhooks/1/post/CAPTURE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/CAPTURE"
+    },
+    {
+      "filename": "Webhooks_1_post_CAPTURE_FAILED.md",
+      "title": "Webhooks/1/post/CAPTURE_FAILED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/CAPTURE_FAILED"
+    },
+    {
+      "filename": "Webhooks_1_post_CHARGEBACK.md",
+      "title": "Webhooks/1/post/CHARGEBACK",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/CHARGEBACK"
+    },
+    {
+      "filename": "Webhooks_1_post_CHARGEBACK_REVERSED.md",
+      "title": "Webhooks/1/post/CHARGEBACK_REVERSED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/CHARGEBACK_REVERSED"
+    },
+    {
+      "filename": "Webhooks_1_post_DIRECT_DEBIT_NOTICE_OF_CHANGE_NOTIFICATION.md",
+      "title": "Webhooks/1/post/DIRECT_DEBIT_NOTICE_OF_CHANGE_NOTIFICATION",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/DIRECT_DEBIT_NOTICE_OF_CHANGE_NOTIFICATION"
+    },
+    {
+      "filename": "Webhooks_1_post_DISPUTE_DEFENSE_PERIOD_ENDED.md",
+      "title": "Webhooks/1/post/DISPUTE_DEFENSE_PERIOD_ENDED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/DISPUTE_DEFENSE_PERIOD_ENDED"
+    },
+    {
+      "filename": "Webhooks_1_post_EXPIRE.md",
+      "title": "Webhooks/1/post/EXPIRE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/EXPIRE"
+    },
+    {
+      "filename": "Webhooks_1_post_INFORMATION_SUPPLIED.md",
+      "title": "Webhooks/1/post/INFORMATION_SUPPLIED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/INFORMATION_SUPPLIED"
+    },
+    {
+      "filename": "Webhooks_1_post_ISSUER_COMMENTS.md",
+      "title": "Webhooks/1/post/ISSUER_COMMENTS",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/ISSUER_COMMENTS"
+    },
+    {
+      "filename": "Webhooks_1_post_ISSUER_RESPONSE_TIMEFRAME_EXPIRED.md",
+      "title": "Webhooks/1/post/ISSUER_RESPONSE_TIMEFRAME_EXPIRED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/ISSUER_RESPONSE_TIMEFRAME_EXPIRED"
+    },
+    {
+      "filename": "Webhooks_1_post_MANUAL_REVIEW_ACCEPT.md",
+      "title": "Webhooks/1/post/MANUAL_REVIEW_ACCEPT",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/MANUAL_REVIEW_ACCEPT"
+    },
+    {
+      "filename": "Webhooks_1_post_MANUAL_REVIEW_REJECT.md",
+      "title": "Webhooks/1/post/MANUAL_REVIEW_REJECT",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/MANUAL_REVIEW_REJECT"
+    },
+    {
+      "filename": "Webhooks_1_post_NOTIFICATION_OF_CHARGEBACK.md",
+      "title": "Webhooks/1/post/NOTIFICATION_OF_CHARGEBACK",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/NOTIFICATION_OF_CHARGEBACK"
+    },
+    {
+      "filename": "Webhooks_1_post_NOTIFICATION_OF_FRAUD.md",
+      "title": "Webhooks/1/post/NOTIFICATION_OF_FRAUD",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/NOTIFICATION_OF_FRAUD"
+    },
+    {
+      "filename": "Webhooks_1_post_OFFER_CLOSED.md",
+      "title": "Webhooks/1/post/OFFER_CLOSED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/OFFER_CLOSED"
+    },
+    {
+      "filename": "Webhooks_1_post_ORDER_CLOSED.md",
+      "title": "Webhooks/1/post/ORDER_CLOSED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/ORDER_CLOSED"
+    },
+    {
+      "filename": "Webhooks_1_post_ORDER_OPENED.md",
+      "title": "Webhooks/1/post/ORDER_OPENED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/ORDER_OPENED"
+    },
+    {
+      "filename": "Webhooks_1_post_PAIDOUT_REVERSED.md",
+      "title": "Webhooks/1/post/PAIDOUT_REVERSED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PAIDOUT_REVERSED"
+    },
+    {
+      "filename": "Webhooks_1_post_PAYOUT_DECLINE.md",
+      "title": "Webhooks/1/post/PAYOUT_DECLINE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PAYOUT_DECLINE"
+    },
+    {
+      "filename": "Webhooks_1_post_PAYOUT_EXPIRE.md",
+      "title": "Webhooks/1/post/PAYOUT_EXPIRE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PAYOUT_EXPIRE"
+    },
+    {
+      "filename": "Webhooks_1_post_PAYOUT_THIRDPARTY.md",
+      "title": "Webhooks/1/post/PAYOUT_THIRDPARTY",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PAYOUT_THIRDPARTY"
+    },
+    {
+      "filename": "Webhooks_1_post_POSTPONED_REFUND.md",
+      "title": "Webhooks/1/post/POSTPONED_REFUND",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/POSTPONED_REFUND"
+    },
+    {
+      "filename": "Webhooks_1_post_PREARBITRATION_ACCEPTED.md",
+      "title": "Webhooks/1/post/PREARBITRATION_ACCEPTED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PREARBITRATION_ACCEPTED"
+    },
+    {
+      "filename": "Webhooks_1_post_PREARBITRATION_DECLINED.md",
+      "title": "Webhooks/1/post/PREARBITRATION_DECLINED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PREARBITRATION_DECLINED"
+    },
+    {
+      "filename": "Webhooks_1_post_PREARBITRATION_ISSUER_WITHDRAWN.md",
+      "title": "Webhooks/1/post/PREARBITRATION_ISSUER_WITHDRAWN",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PREARBITRATION_ISSUER_WITHDRAWN"
+    },
+    {
+      "filename": "Webhooks_1_post_PREARBITRATION_LOST.md",
+      "title": "Webhooks/1/post/PREARBITRATION_LOST",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PREARBITRATION_LOST"
+    },
+    {
+      "filename": "Webhooks_1_post_PREARBITRATION_OPEN.md",
+      "title": "Webhooks/1/post/PREARBITRATION_OPEN",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PREARBITRATION_OPEN"
+    },
+    {
+      "filename": "Webhooks_1_post_PREARBITRATION_WON.md",
+      "title": "Webhooks/1/post/PREARBITRATION_WON",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/PREARBITRATION_WON"
+    },
+    {
+      "filename": "Webhooks_1_post_RECURRING_CONTRACT.md",
+      "title": "Webhooks/1/post/RECURRING_CONTRACT",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/RECURRING_CONTRACT"
+    },
+    {
+      "filename": "Webhooks_1_post_REFUND.md",
+      "title": "Webhooks/1/post/REFUND",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/REFUND"
+    },
+    {
+      "filename": "Webhooks_1_post_REFUNDED_REVERSED.md",
+      "title": "Webhooks/1/post/REFUNDED_REVERSED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/REFUNDED_REVERSED"
+    },
+    {
+      "filename": "Webhooks_1_post_REFUND_FAILED.md",
+      "title": "Webhooks/1/post/REFUND_FAILED",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/REFUND_FAILED"
+    },
+    {
+      "filename": "Webhooks_1_post_REFUND_WITH_DATA.md",
+      "title": "Webhooks/1/post/REFUND_WITH_DATA",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/REFUND_WITH_DATA"
+    },
+    {
+      "filename": "Webhooks_1_post_REPORT_AVAILABLE.md",
+      "title": "Webhooks/1/post/REPORT_AVAILABLE",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/REPORT_AVAILABLE"
+    },
+    {
+      "filename": "Webhooks_1_post_REQUEST_FOR_INFORMATION.md",
+      "title": "Webhooks/1/post/REQUEST_FOR_INFORMATION",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/REQUEST_FOR_INFORMATION"
+    },
+    {
+      "filename": "Webhooks_1_post_SCHEME_ARBITRATION.md",
+      "title": "Webhooks/1/post/SCHEME_ARBITRATION",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/SCHEME_ARBITRATION"
+    },
+    {
+      "filename": "Webhooks_1_post_SECOND_CHARGEBACK.md",
+      "title": "Webhooks/1/post/SECOND_CHARGEBACK",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/SECOND_CHARGEBACK"
+    },
+    {
+      "filename": "Webhooks_1_post_TECHNICAL_CANCEL.md",
+      "title": "Webhooks/1/post/TECHNICAL_CANCEL",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/TECHNICAL_CANCEL"
+    },
+    {
+      "filename": "Webhooks_1_post_VOID_PENDING_REFUND.md",
+      "title": "Webhooks/1/post/VOID_PENDING_REFUND",
+      "url": "https://docs.adyen.com/api-explorer/Webhooks/1/post/VOID_PENDING_REFUND"
+    },
+    {
+      "filename": "acs-webhook_1_post_balancePlatform.authentication.created.md",
+      "title": "acs-webhook/1/post/balancePlatform.authentication.created",
+      "url": "https://docs.adyen.com/api-explorer/acs-webhook/1/post/balancePlatform.authentication.created"
+    },
+    {
+      "filename": "acs-webhook_1_post_balancePlatform.authentication.relayed.md",
+      "title": "acs-webhook/1/post/balancePlatform.authentication.relayed",
+      "url": "https://docs.adyen.com/api-explorer/acs-webhook/1/post/balancePlatform.authentication.relayed"
+    },
+    {
+      "filename": "balance-webhooks_1_overview.md",
+      "title": "balance-webhooks/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/balance-webhooks/1/overview"
+    },
+    {
+      "filename": "balance-webhooks_1_post_balanceAccount.balance.updated.md",
+      "title": "balance-webhooks/1/post/balanceAccount.balance.updated",
+      "url": "https://docs.adyen.com/api-explorer/balance-webhooks/1/post/balanceAccount.balance.updated"
+    },
+    {
+      "filename": "balance-webhooks_1_post_balancePlatform.balanceAccount.balance.block.released.md",
+      "title": "balance-webhooks/1/post/balancePlatform.balanceAccount.balance.block.released",
+      "url": "https://docs.adyen.com/api-explorer/balance-webhooks/1/post/balancePlatform.balanceAccount.balance.block.released"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_overview.md",
+      "title": "balanceplatform-webhooks/2/overview",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/overview"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.accountHolder.created.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.accountHolder.created",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.accountHolder.created"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.accountHolder.updated.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.accountHolder.updated",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.accountHolder.updated"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.balanceAccount.created.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.balanceAccount.created",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.balanceAccount.created"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.balanceAccount.updated.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.balanceAccount.updated",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.balanceAccount.updated"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.balanceAccountSweep.created.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.balanceAccountSweep.created",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.balanceAccountSweep.created"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.balanceAccountSweep.deleted.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.balanceAccountSweep.deleted",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.balanceAccountSweep.deleted"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.balanceAccountSweep.updated.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.balanceAccountSweep.updated",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.balanceAccountSweep.updated"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.cardorder.created.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.cardorder.created",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.cardorder.created"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.cardorder.updated.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.cardorder.updated",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.cardorder.updated"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.mandate.created.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.mandate.created",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.mandate.created"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.mandate.updated.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.mandate.updated",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.mandate.updated"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.networkToken.created.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.networkToken.created",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.networkToken.created"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.networkToken.updated.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.networkToken.updated",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.networkToken.updated"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.paymentInstrument.created.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.paymentInstrument.created",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.paymentInstrument.created"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.paymentInstrument.updated.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.paymentInstrument.updated",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.paymentInstrument.updated"
+    },
+    {
+      "filename": "balanceplatform-webhooks_2_post_balancePlatform.score.triggered.md",
+      "title": "balanceplatform-webhooks/2/post/balancePlatform.score.triggered",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/2/post/balancePlatform.score.triggered"
+    },
+    {
+      "filename": "balanceplatform-webhooks_latest_overview.md",
+      "title": "balanceplatform-webhooks/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform-webhooks/latest/overview"
+    },
+    {
+      "filename": "balanceplatform_2_delete_balanceAccounts_(balanceAccountId)_sweeps_(sweepId).md",
+      "title": "balanceplatform/2/delete/balanceAccounts/(balanceAccountId)/sweeps/(sweepId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/balanceAccounts/(balanceAccountId)/sweeps/(sweepId)"
+    },
+    {
+      "filename": "balanceplatform_2_delete_balanceAccounts_(id)_transferLimits_(transferLimitId).md",
+      "title": "balanceplatform/2/delete/balanceAccounts/(id)/transferLimits/(transferLimitId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/balanceAccounts/(id)/transferLimits/(transferLimitId)"
+    },
+    {
+      "filename": "balanceplatform_2_delete_balancePlatforms_(balancePlatformId)_webhooks_(webhookId)_settings_(settingId).md",
+      "title": "balanceplatform/2/delete/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings/(settingId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings/(settingId)"
+    },
+    {
+      "filename": "balanceplatform_2_delete_balancePlatforms_(id)_transferLimits_(transferLimitId).md",
+      "title": "balanceplatform/2/delete/balancePlatforms/(id)/transferLimits/(transferLimitId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/balancePlatforms/(id)/transferLimits/(transferLimitId)"
+    },
+    {
+      "filename": "balanceplatform_2_delete_paymentInstruments_(paymentInstrumentId)_authorisedCardUsers.md",
+      "title": "balanceplatform/2/delete/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers"
+    },
+    {
+      "filename": "balanceplatform_2_delete_registeredDevices_(id).md",
+      "title": "balanceplatform/2/delete/registeredDevices/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/registeredDevices/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_delete_scaAssociations.md",
+      "title": "balanceplatform/2/delete/scaAssociations",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/scaAssociations"
+    },
+    {
+      "filename": "balanceplatform_2_delete_transactionRules_(transactionRuleId).md",
+      "title": "balanceplatform/2/delete/transactionRules/(transactionRuleId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/delete/transactionRules/(transactionRuleId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_accountHolders_(id).md",
+      "title": "balanceplatform/2/get/accountHolders/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/accountHolders/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_get_accountHolders_(id)_balanceAccounts.md",
+      "title": "balanceplatform/2/get/accountHolders/(id)/balanceAccounts",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/accountHolders/(id)/balanceAccounts"
+    },
+    {
+      "filename": "balanceplatform_2_get_accountHolders_(id)_taxFormSummary.md",
+      "title": "balanceplatform/2/get/accountHolders/(id)/taxFormSummary",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/accountHolders/(id)/taxFormSummary"
+    },
+    {
+      "filename": "balanceplatform_2_get_accountHolders_(id)_taxForms.md",
+      "title": "balanceplatform/2/get/accountHolders/(id)/taxForms",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/accountHolders/(id)/taxForms"
+    },
+    {
+      "filename": "balanceplatform_2_get_accountHolders_(id)_transactionRules.md",
+      "title": "balanceplatform/2/get/accountHolders/(id)/transactionRules",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/accountHolders/(id)/transactionRules"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(balanceAccountId)_sweeps.md",
+      "title": "balanceplatform/2/get/balanceAccounts/(balanceAccountId)/sweeps",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(balanceAccountId)/sweeps"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(balanceAccountId)_sweeps_(sweepId).md",
+      "title": "balanceplatform/2/get/balanceAccounts/(balanceAccountId)/sweeps/(sweepId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(balanceAccountId)/sweeps/(sweepId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(id).md",
+      "title": "balanceplatform/2/get/balanceAccounts/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(id)_paymentInstruments.md",
+      "title": "balanceplatform/2/get/balanceAccounts/(id)/paymentInstruments",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(id)/paymentInstruments"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(id)_transactionRules.md",
+      "title": "balanceplatform/2/get/balanceAccounts/(id)/transactionRules",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(id)/transactionRules"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(id)_transferLimits.md",
+      "title": "balanceplatform/2/get/balanceAccounts/(id)/transferLimits",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(id)/transferLimits"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(id)_transferLimits_(transferLimitId).md",
+      "title": "balanceplatform/2/get/balanceAccounts/(id)/transferLimits/(transferLimitId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(id)/transferLimits/(transferLimitId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_balanceAccounts_(id)_transferLimits_current.md",
+      "title": "balanceplatform/2/get/balanceAccounts/(id)/transferLimits/current",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balanceAccounts/(id)/transferLimits/current"
+    },
+    {
+      "filename": "balanceplatform_2_get_balancePlatforms_(balancePlatformId)_webhooks_(webhookId)_settings.md",
+      "title": "balanceplatform/2/get/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings"
+    },
+    {
+      "filename": "balanceplatform_2_get_balancePlatforms_(balancePlatformId)_webhooks_(webhookId)_settings_(settingId).md",
+      "title": "balanceplatform/2/get/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings/(settingId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings/(settingId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_balancePlatforms_(id).md",
+      "title": "balanceplatform/2/get/balancePlatforms/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balancePlatforms/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_get_balancePlatforms_(id)_accountHolders.md",
+      "title": "balanceplatform/2/get/balancePlatforms/(id)/accountHolders",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balancePlatforms/(id)/accountHolders"
+    },
+    {
+      "filename": "balanceplatform_2_get_balancePlatforms_(id)_transactionRules.md",
+      "title": "balanceplatform/2/get/balancePlatforms/(id)/transactionRules",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balancePlatforms/(id)/transactionRules"
+    },
+    {
+      "filename": "balanceplatform_2_get_balancePlatforms_(id)_transferLimits.md",
+      "title": "balanceplatform/2/get/balancePlatforms/(id)/transferLimits",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balancePlatforms/(id)/transferLimits"
+    },
+    {
+      "filename": "balanceplatform_2_get_balancePlatforms_(id)_transferLimits_(transferLimitId).md",
+      "title": "balanceplatform/2/get/balancePlatforms/(id)/transferLimits/(transferLimitId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/balancePlatforms/(id)/transferLimits/(transferLimitId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_cardorders.md",
+      "title": "balanceplatform/2/get/cardorders",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/cardorders"
+    },
+    {
+      "filename": "balanceplatform_2_get_cardorders_(id)_items.md",
+      "title": "balanceplatform/2/get/cardorders/(id)/items",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/cardorders/(id)/items"
+    },
+    {
+      "filename": "balanceplatform_2_get_grantAccounts_(id).md",
+      "title": "balanceplatform/2/get/grantAccounts/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/grantAccounts/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_get_grantOffers.md",
+      "title": "balanceplatform/2/get/grantOffers",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/grantOffers"
+    },
+    {
+      "filename": "balanceplatform_2_get_grantOffers_(grantOfferId).md",
+      "title": "balanceplatform/2/get/grantOffers/(grantOfferId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/grantOffers/(grantOfferId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_mandates.md",
+      "title": "balanceplatform/2/get/mandates",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/mandates"
+    },
+    {
+      "filename": "balanceplatform_2_get_mandates_(mandateId).md",
+      "title": "balanceplatform/2/get/mandates/(mandateId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/mandates/(mandateId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_networkTokens_(networkTokenId).md",
+      "title": "balanceplatform/2/get/networkTokens/(networkTokenId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/networkTokens/(networkTokenId)"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstrumentGroups_(id).md",
+      "title": "balanceplatform/2/get/paymentInstrumentGroups/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstrumentGroups/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstrumentGroups_(id)_transactionRules.md",
+      "title": "balanceplatform/2/get/paymentInstrumentGroups/(id)/transactionRules",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstrumentGroups/(id)/transactionRules"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstruments_(id).md",
+      "title": "balanceplatform/2/get/paymentInstruments/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstruments/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstruments_(id)_networkTokenActivationData.md",
+      "title": "balanceplatform/2/get/paymentInstruments/(id)/networkTokenActivationData",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstruments/(id)/networkTokenActivationData"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstruments_(id)_networkTokens.md",
+      "title": "balanceplatform/2/get/paymentInstruments/(id)/networkTokens",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstruments/(id)/networkTokens"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstruments_(id)_reveal.md",
+      "title": "balanceplatform/2/get/paymentInstruments/(id)/reveal",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstruments/(id)/reveal"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstruments_(id)_transactionRules.md",
+      "title": "balanceplatform/2/get/paymentInstruments/(id)/transactionRules",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstruments/(id)/transactionRules"
+    },
+    {
+      "filename": "balanceplatform_2_get_paymentInstruments_(paymentInstrumentId)_authorisedCardUsers.md",
+      "title": "balanceplatform/2/get/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers"
+    },
+    {
+      "filename": "balanceplatform_2_get_publicKey.md",
+      "title": "balanceplatform/2/get/publicKey",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/publicKey"
+    },
+    {
+      "filename": "balanceplatform_2_get_registeredDevices.md",
+      "title": "balanceplatform/2/get/registeredDevices",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/registeredDevices"
+    },
+    {
+      "filename": "balanceplatform_2_get_scaAssociations.md",
+      "title": "balanceplatform/2/get/scaAssociations",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/scaAssociations"
+    },
+    {
+      "filename": "balanceplatform_2_get_transactionRules_(transactionRuleId).md",
+      "title": "balanceplatform/2/get/transactionRules/(transactionRuleId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/get/transactionRules/(transactionRuleId)"
+    },
+    {
+      "filename": "balanceplatform_2_overview.md",
+      "title": "balanceplatform/2/overview",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/overview"
+    },
+    {
+      "filename": "balanceplatform_2_patch_accountHolders_(id).md",
+      "title": "balanceplatform/2/patch/accountHolders/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/accountHolders/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_balanceAccounts_(balanceAccountId)_sweeps_(sweepId).md",
+      "title": "balanceplatform/2/patch/balanceAccounts/(balanceAccountId)/sweeps/(sweepId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/balanceAccounts/(balanceAccountId)/sweeps/(sweepId)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_balanceAccounts_(id).md",
+      "title": "balanceplatform/2/patch/balanceAccounts/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/balanceAccounts/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_balancePlatforms_(balancePlatformId)_webhooks_(webhookId)_settings_(settingId).md",
+      "title": "balanceplatform/2/patch/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings/(settingId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings/(settingId)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_mandates_(mandateId).md",
+      "title": "balanceplatform/2/patch/mandates/(mandateId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/mandates/(mandateId)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_networkTokens_(networkTokenId).md",
+      "title": "balanceplatform/2/patch/networkTokens/(networkTokenId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/networkTokens/(networkTokenId)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_paymentInstruments_(id).md",
+      "title": "balanceplatform/2/patch/paymentInstruments/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/paymentInstruments/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_paymentInstruments_(paymentInstrumentId)_authorisedCardUsers.md",
+      "title": "balanceplatform/2/patch/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers"
+    },
+    {
+      "filename": "balanceplatform_2_patch_registeredDevices_(deviceId)_associations.md",
+      "title": "balanceplatform/2/patch/registeredDevices/(deviceId)/associations",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/registeredDevices/(deviceId)/associations"
+    },
+    {
+      "filename": "balanceplatform_2_patch_registeredDevices_(id).md",
+      "title": "balanceplatform/2/patch/registeredDevices/(id)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/registeredDevices/(id)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_scaAssociations.md",
+      "title": "balanceplatform/2/patch/scaAssociations",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/scaAssociations"
+    },
+    {
+      "filename": "balanceplatform_2_patch_scaDevices_(deviceId).md",
+      "title": "balanceplatform/2/patch/scaDevices/(deviceId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/scaDevices/(deviceId)"
+    },
+    {
+      "filename": "balanceplatform_2_patch_transactionRules_(transactionRuleId).md",
+      "title": "balanceplatform/2/patch/transactionRules/(transactionRuleId)",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/patch/transactionRules/(transactionRuleId)"
+    },
+    {
+      "filename": "balanceplatform_2_post_accountHolders.md",
+      "title": "balanceplatform/2/post/accountHolders",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/accountHolders"
+    },
+    {
+      "filename": "balanceplatform_2_post_balanceAccounts.md",
+      "title": "balanceplatform/2/post/balanceAccounts",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/balanceAccounts"
+    },
+    {
+      "filename": "balanceplatform_2_post_balanceAccounts_(balanceAccountId)_sweeps.md",
+      "title": "balanceplatform/2/post/balanceAccounts/(balanceAccountId)/sweeps",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/balanceAccounts/(balanceAccountId)/sweeps"
+    },
+    {
+      "filename": "balanceplatform_2_post_balanceAccounts_(id)_transferLimits.md",
+      "title": "balanceplatform/2/post/balanceAccounts/(id)/transferLimits",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/balanceAccounts/(id)/transferLimits"
+    },
+    {
+      "filename": "balanceplatform_2_post_balanceAccounts_(id)_transferLimits_approve.md",
+      "title": "balanceplatform/2/post/balanceAccounts/(id)/transferLimits/approve",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/balanceAccounts/(id)/transferLimits/approve"
+    },
+    {
+      "filename": "balanceplatform_2_post_balancePlatforms_(balancePlatformId)_webhooks_(webhookId)_settings.md",
+      "title": "balanceplatform/2/post/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/balancePlatforms/(balancePlatformId)/webhooks/(webhookId)/settings"
+    },
+    {
+      "filename": "balanceplatform_2_post_balancePlatforms_(id)_transferLimits.md",
+      "title": "balanceplatform/2/post/balancePlatforms/(id)/transferLimits",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/balancePlatforms/(id)/transferLimits"
+    },
+    {
+      "filename": "balanceplatform_2_post_mandates_(mandateId)_cancel.md",
+      "title": "balanceplatform/2/post/mandates/(mandateId)/cancel",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/mandates/(mandateId)/cancel"
+    },
+    {
+      "filename": "balanceplatform_2_post_paymentInstrumentGroups.md",
+      "title": "balanceplatform/2/post/paymentInstrumentGroups",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/paymentInstrumentGroups"
+    },
+    {
+      "filename": "balanceplatform_2_post_paymentInstruments.md",
+      "title": "balanceplatform/2/post/paymentInstruments",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/paymentInstruments"
+    },
+    {
+      "filename": "balanceplatform_2_post_paymentInstruments_(id)_networkTokenActivationData.md",
+      "title": "balanceplatform/2/post/paymentInstruments/(id)/networkTokenActivationData",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/paymentInstruments/(id)/networkTokenActivationData"
+    },
+    {
+      "filename": "balanceplatform_2_post_paymentInstruments_(paymentInstrumentId)_authorisedCardUsers.md",
+      "title": "balanceplatform/2/post/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/paymentInstruments/(paymentInstrumentId)/authorisedCardUsers"
+    },
+    {
+      "filename": "balanceplatform_2_post_paymentInstruments_reveal.md",
+      "title": "balanceplatform/2/post/paymentInstruments/reveal",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/paymentInstruments/reveal"
+    },
+    {
+      "filename": "balanceplatform_2_post_pins_change.md",
+      "title": "balanceplatform/2/post/pins/change",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/pins/change"
+    },
+    {
+      "filename": "balanceplatform_2_post_pins_reveal.md",
+      "title": "balanceplatform/2/post/pins/reveal",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/pins/reveal"
+    },
+    {
+      "filename": "balanceplatform_2_post_registeredDevices.md",
+      "title": "balanceplatform/2/post/registeredDevices",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/registeredDevices"
+    },
+    {
+      "filename": "balanceplatform_2_post_registeredDevices_(deviceId)_associations.md",
+      "title": "balanceplatform/2/post/registeredDevices/(deviceId)/associations",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/registeredDevices/(deviceId)/associations"
+    },
+    {
+      "filename": "balanceplatform_2_post_scaDevices.md",
+      "title": "balanceplatform/2/post/scaDevices",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/scaDevices"
+    },
+    {
+      "filename": "balanceplatform_2_post_scaDevices_(deviceId)_scaAssociations.md",
+      "title": "balanceplatform/2/post/scaDevices/(deviceId)/scaAssociations",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/scaDevices/(deviceId)/scaAssociations"
+    },
+    {
+      "filename": "balanceplatform_2_post_transactionRules.md",
+      "title": "balanceplatform/2/post/transactionRules",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/transactionRules"
+    },
+    {
+      "filename": "balanceplatform_2_post_transferRoutes_calculate.md",
+      "title": "balanceplatform/2/post/transferRoutes/calculate",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/transferRoutes/calculate"
+    },
+    {
+      "filename": "balanceplatform_2_post_validateBankAccountIdentification.md",
+      "title": "balanceplatform/2/post/validateBankAccountIdentification",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/2/post/validateBankAccountIdentification"
+    },
+    {
+      "filename": "balanceplatform_latest_overview.md",
+      "title": "balanceplatform/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/balanceplatform/latest/overview"
+    },
+    {
+      "filename": "capital-webhooks_1_overview.md",
+      "title": "capital-webhooks/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/capital-webhooks/1/overview"
+    },
+    {
+      "filename": "capital-webhooks_1_post_balancePlatform.balanceAccountHolder.capitalOffer.created.md",
+      "title": "capital-webhooks/1/post/balancePlatform.balanceAccountHolder.capitalOffer.created",
+      "url": "https://docs.adyen.com/api-explorer/capital-webhooks/1/post/balancePlatform.balanceAccountHolder.capitalOffer.created"
+    },
+    {
+      "filename": "capital-webhooks_1_post_balancePlatform.capital.dynamicOffer.created.md",
+      "title": "capital-webhooks/1/post/balancePlatform.capital.dynamicOffer.created",
+      "url": "https://docs.adyen.com/api-explorer/capital-webhooks/1/post/balancePlatform.capital.dynamicOffer.created"
+    },
+    {
+      "filename": "capital-webhooks_1_post_balancePlatform.grants.created.md",
+      "title": "capital-webhooks/1/post/balancePlatform.grants.created",
+      "url": "https://docs.adyen.com/api-explorer/capital-webhooks/1/post/balancePlatform.grants.created"
+    },
+    {
+      "filename": "capital-webhooks_1_post_balancePlatform.grants.updated.md",
+      "title": "capital-webhooks/1/post/balancePlatform.grants.updated",
+      "url": "https://docs.adyen.com/api-explorer/capital-webhooks/1/post/balancePlatform.grants.updated"
+    },
+    {
+      "filename": "capital_1_get_dynamicOffers.md",
+      "title": "capital/1/get/dynamicOffers",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/dynamicOffers"
+    },
+    {
+      "filename": "capital_1_get_grantAccounts_(id).md",
+      "title": "capital/1/get/grantAccounts/(id)",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/grantAccounts/(id)"
+    },
+    {
+      "filename": "capital_1_get_grantOffers.md",
+      "title": "capital/1/get/grantOffers",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/grantOffers"
+    },
+    {
+      "filename": "capital_1_get_grantOffers_(id).md",
+      "title": "capital/1/get/grantOffers/(id)",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/grantOffers/(id)"
+    },
+    {
+      "filename": "capital_1_get_grants.md",
+      "title": "capital/1/get/grants",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/grants"
+    },
+    {
+      "filename": "capital_1_get_grants_(grantId).md",
+      "title": "capital/1/get/grants/(grantId)",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/grants/(grantId)"
+    },
+    {
+      "filename": "capital_1_get_grants_(grantId)_disbursements.md",
+      "title": "capital/1/get/grants/(grantId)/disbursements",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/grants/(grantId)/disbursements"
+    },
+    {
+      "filename": "capital_1_get_grants_(grantId)_disbursements_(disbursementId).md",
+      "title": "capital/1/get/grants/(grantId)/disbursements/(disbursementId)",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/get/grants/(grantId)/disbursements/(disbursementId)"
+    },
+    {
+      "filename": "capital_1_overview.md",
+      "title": "capital/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/overview"
+    },
+    {
+      "filename": "capital_1_patch_grants_(grantId)_disbursements_(disbursementId).md",
+      "title": "capital/1/patch/grants/(grantId)/disbursements/(disbursementId)",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/patch/grants/(grantId)/disbursements/(disbursementId)"
+    },
+    {
+      "filename": "capital_1_post_dynamicOffers_(id)_calculate.md",
+      "title": "capital/1/post/dynamicOffers/(id)/calculate",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/post/dynamicOffers/(id)/calculate"
+    },
+    {
+      "filename": "capital_1_post_dynamicOffers_(id)_grantOffer.md",
+      "title": "capital/1/post/dynamicOffers/(id)/grantOffer",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/post/dynamicOffers/(id)/grantOffer"
+    },
+    {
+      "filename": "capital_1_post_grants.md",
+      "title": "capital/1/post/grants",
+      "url": "https://docs.adyen.com/api-explorer/capital/1/post/grants"
+    },
+    {
+      "filename": "cloud-device-api_1_get_merchants_(merchantAccount)_connectedDevices.md",
+      "title": "cloud-device-api/1/get/merchants/(merchantAccount)/connectedDevices",
+      "url": "https://docs.adyen.com/api-explorer/cloud-device-api/1/get/merchants/(merchantAccount)/connectedDevices"
+    },
+    {
+      "filename": "cloud-device-api_1_get_merchants_(merchantAccount)_devices_(deviceId)_status.md",
+      "title": "cloud-device-api/1/get/merchants/(merchantAccount)/devices/(deviceId)/status",
+      "url": "https://docs.adyen.com/api-explorer/cloud-device-api/1/get/merchants/(merchantAccount)/devices/(deviceId)/status"
+    },
+    {
+      "filename": "cloud-device-api_1_overview.md",
+      "title": "cloud-device-api/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/cloud-device-api/1/overview"
+    },
+    {
+      "filename": "cloud-device-api_1_post_merchants_(merchantAccount)_devices_(deviceId)_async.md",
+      "title": "cloud-device-api/1/post/merchants/(merchantAccount)/devices/(deviceId)/async",
+      "url": "https://docs.adyen.com/api-explorer/cloud-device-api/1/post/merchants/(merchantAccount)/devices/(deviceId)/async"
+    },
+    {
+      "filename": "cloud-device-api_1_post_merchants_(merchantAccount)_devices_(deviceId)_sync.md",
+      "title": "cloud-device-api/1/post/merchants/(merchantAccount)/devices/(deviceId)/sync",
+      "url": "https://docs.adyen.com/api-explorer/cloud-device-api/1/post/merchants/(merchantAccount)/devices/(deviceId)/sync"
+    },
+    {
+      "filename": "dispute-webhooks_4_overview.md",
+      "title": "dispute-webhooks/4/overview",
+      "url": "https://docs.adyen.com/api-explorer/dispute-webhooks/4/overview"
+    },
+    {
+      "filename": "dispute-webhooks_4_post_balancePlatform.dispute.created.md",
+      "title": "dispute-webhooks/4/post/balancePlatform.dispute.created",
+      "url": "https://docs.adyen.com/api-explorer/dispute-webhooks/4/post/balancePlatform.dispute.created"
+    },
+    {
+      "filename": "dispute-webhooks_4_post_balancePlatform.dispute.updated.md",
+      "title": "dispute-webhooks/4/post/balancePlatform.dispute.updated",
+      "url": "https://docs.adyen.com/api-explorer/dispute-webhooks/4/post/balancePlatform.dispute.updated"
+    },
+    {
+      "filename": "foreignexchange_1_overview.md",
+      "title": "foreignexchange/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/foreignexchange/1/overview"
+    },
+    {
+      "filename": "foreignexchange_1_post_rates_calculate.md",
+      "title": "foreignexchange/1/post/rates/calculate",
+      "url": "https://docs.adyen.com/api-explorer/foreignexchange/1/post/rates/calculate"
+    },
+    {
+      "filename": "legalentity_4_delete_businessLines_(id).md",
+      "title": "legalentity/4/delete/businessLines/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/delete/businessLines/(id)"
+    },
+    {
+      "filename": "legalentity_4_delete_documents_(id).md",
+      "title": "legalentity/4/delete/documents/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/delete/documents/(id)"
+    },
+    {
+      "filename": "legalentity_4_delete_transferInstruments_(id).md",
+      "title": "legalentity/4/delete/transferInstruments/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/delete/transferInstruments/(id)"
+    },
+    {
+      "filename": "legalentity_4_get_businessLines_(id).md",
+      "title": "legalentity/4/get/businessLines/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/businessLines/(id)"
+    },
+    {
+      "filename": "legalentity_4_get_documents_(id).md",
+      "title": "legalentity/4/get/documents/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/documents/(id)"
+    },
+    {
+      "filename": "legalentity_4_get_legalEntities_(id).md",
+      "title": "legalentity/4/get/legalEntities/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/legalEntities/(id)"
+    },
+    {
+      "filename": "legalentity_4_get_legalEntities_(id)_acceptedTermsOfServiceDocument_(termsofserviceacceptancereference).md",
+      "title": "legalentity/4/get/legalEntities/(id)/acceptedTermsOfServiceDocument/(termsofserviceacceptancereference)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/legalEntities/(id)/acceptedTermsOfServiceDocument/(termsofserviceacceptancereference)"
+    },
+    {
+      "filename": "legalentity_4_get_legalEntities_(id)_businessLines.md",
+      "title": "legalentity/4/get/legalEntities/(id)/businessLines",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/legalEntities/(id)/businessLines"
+    },
+    {
+      "filename": "legalentity_4_get_legalEntities_(id)_pciQuestionnaires.md",
+      "title": "legalentity/4/get/legalEntities/(id)/pciQuestionnaires",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/legalEntities/(id)/pciQuestionnaires"
+    },
+    {
+      "filename": "legalentity_4_get_legalEntities_(id)_pciQuestionnaires_(pciid).md",
+      "title": "legalentity/4/get/legalEntities/(id)/pciQuestionnaires/(pciid)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/legalEntities/(id)/pciQuestionnaires/(pciid)"
+    },
+    {
+      "filename": "legalentity_4_get_legalEntities_(id)_termsOfServiceAcceptanceInfos.md",
+      "title": "legalentity/4/get/legalEntities/(id)/termsOfServiceAcceptanceInfos",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/legalEntities/(id)/termsOfServiceAcceptanceInfos"
+    },
+    {
+      "filename": "legalentity_4_get_legalEntities_(id)_termsOfServiceStatus.md",
+      "title": "legalentity/4/get/legalEntities/(id)/termsOfServiceStatus",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/legalEntities/(id)/termsOfServiceStatus"
+    },
+    {
+      "filename": "legalentity_4_get_themes.md",
+      "title": "legalentity/4/get/themes",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/themes"
+    },
+    {
+      "filename": "legalentity_4_get_themes_(id).md",
+      "title": "legalentity/4/get/themes/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/themes/(id)"
+    },
+    {
+      "filename": "legalentity_4_get_transferInstruments_(id).md",
+      "title": "legalentity/4/get/transferInstruments/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/get/transferInstruments/(id)"
+    },
+    {
+      "filename": "legalentity_4_overview.md",
+      "title": "legalentity/4/overview",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/overview"
+    },
+    {
+      "filename": "legalentity_4_patch_businessLines_(id).md",
+      "title": "legalentity/4/patch/businessLines/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/patch/businessLines/(id)"
+    },
+    {
+      "filename": "legalentity_4_patch_documents_(id).md",
+      "title": "legalentity/4/patch/documents/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/patch/documents/(id)"
+    },
+    {
+      "filename": "legalentity_4_patch_legalEntities_(id).md",
+      "title": "legalentity/4/patch/legalEntities/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/patch/legalEntities/(id)"
+    },
+    {
+      "filename": "legalentity_4_patch_legalEntities_(id)_termsOfService_(termsofservicedocumentid).md",
+      "title": "legalentity/4/patch/legalEntities/(id)/termsOfService/(termsofservicedocumentid)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/patch/legalEntities/(id)/termsOfService/(termsofservicedocumentid)"
+    },
+    {
+      "filename": "legalentity_4_patch_transferInstruments_(id).md",
+      "title": "legalentity/4/patch/transferInstruments/(id)",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/patch/transferInstruments/(id)"
+    },
+    {
+      "filename": "legalentity_4_post_businessLines.md",
+      "title": "legalentity/4/post/businessLines",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/businessLines"
+    },
+    {
+      "filename": "legalentity_4_post_documents.md",
+      "title": "legalentity/4/post/documents",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/documents"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities.md",
+      "title": "legalentity/4/post/legalEntities",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_checkTaxElectronicDeliveryConsent.md",
+      "title": "legalentity/4/post/legalEntities/(id)/checkTaxElectronicDeliveryConsent",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/checkTaxElectronicDeliveryConsent"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_checkVerificationErrors.md",
+      "title": "legalentity/4/post/legalEntities/(id)/checkVerificationErrors",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/checkVerificationErrors"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_confirmDataReview.md",
+      "title": "legalentity/4/post/legalEntities/(id)/confirmDataReview",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/confirmDataReview"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_onboardingLinks.md",
+      "title": "legalentity/4/post/legalEntities/(id)/onboardingLinks",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/onboardingLinks"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_pciQuestionnaires_generatePciTemplates.md",
+      "title": "legalentity/4/post/legalEntities/(id)/pciQuestionnaires/generatePciTemplates",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/pciQuestionnaires/generatePciTemplates"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_pciQuestionnaires_signPciTemplates.md",
+      "title": "legalentity/4/post/legalEntities/(id)/pciQuestionnaires/signPciTemplates",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/pciQuestionnaires/signPciTemplates"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_pciQuestionnaires_signingRequired.md",
+      "title": "legalentity/4/post/legalEntities/(id)/pciQuestionnaires/signingRequired",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/pciQuestionnaires/signingRequired"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_requestPeriodicReview.md",
+      "title": "legalentity/4/post/legalEntities/(id)/requestPeriodicReview",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/requestPeriodicReview"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_setTaxElectronicDeliveryConsent.md",
+      "title": "legalentity/4/post/legalEntities/(id)/setTaxElectronicDeliveryConsent",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/setTaxElectronicDeliveryConsent"
+    },
+    {
+      "filename": "legalentity_4_post_legalEntities_(id)_termsOfService.md",
+      "title": "legalentity/4/post/legalEntities/(id)/termsOfService",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/legalEntities/(id)/termsOfService"
+    },
+    {
+      "filename": "legalentity_4_post_transferInstruments.md",
+      "title": "legalentity/4/post/transferInstruments",
+      "url": "https://docs.adyen.com/api-explorer/legalentity/4/post/transferInstruments"
+    },
+    {
+      "filename": "negative-balance-compensation-warning-webhooks_1_overview.md",
+      "title": "negative-balance-compensation-warning-webhooks/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/negative-balance-compensation-warning-webhooks/1/overview"
+    },
+    {
+      "filename": "negative-balance-compensation-warning-webhooks_1_post_balancePlatform.negativeBalanceCompensationWarning.scheduled.md",
+      "title": "negative-balance-compensation-warning-webhooks/1/post/balancePlatform.negativeBalanceCompensationWarning.scheduled",
+      "url": "https://docs.adyen.com/api-explorer/negative-balance-compensation-warning-webhooks/1/post/balancePlatform.negativeBalanceCompensationWarning.scheduled"
+    },
+    {
+      "filename": "onboarding-on-invite-webhooks_1_post_balancePlatform.accountHolder.onboarded.md",
+      "title": "onboarding-on-invite-webhooks/1/post/balancePlatform.accountHolder.onboarded",
+      "url": "https://docs.adyen.com/api-explorer/onboarding-on-invite-webhooks/1/post/balancePlatform.accountHolder.onboarded"
+    },
+    {
+      "filename": "open-banking_1_get_accountVerification_reports_(code).md",
+      "title": "open-banking/1/get/accountVerification/reports/(code)",
+      "url": "https://docs.adyen.com/api-explorer/open-banking/1/get/accountVerification/reports/(code)"
+    },
+    {
+      "filename": "open-banking_1_overview.md",
+      "title": "open-banking/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/open-banking/1/overview"
+    },
+    {
+      "filename": "open-banking_1_post_accountVerification_routes.md",
+      "title": "open-banking/1/post/accountVerification/routes",
+      "url": "https://docs.adyen.com/api-explorer/open-banking/1/post/accountVerification/routes"
+    },
+    {
+      "filename": "payment-webhooks_1_overview.md",
+      "title": "payment-webhooks/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/payment-webhooks/1/overview"
+    },
+    {
+      "filename": "payment-webhooks_1_post_balancePlatform.incomingTransfer.created.md",
+      "title": "payment-webhooks/1/post/balancePlatform.incomingTransfer.created",
+      "url": "https://docs.adyen.com/api-explorer/payment-webhooks/1/post/balancePlatform.incomingTransfer.created"
+    },
+    {
+      "filename": "payment-webhooks_1_post_balancePlatform.incomingTransfer.updated.md",
+      "title": "payment-webhooks/1/post/balancePlatform.incomingTransfer.updated",
+      "url": "https://docs.adyen.com/api-explorer/payment-webhooks/1/post/balancePlatform.incomingTransfer.updated"
+    },
+    {
+      "filename": "payment-webhooks_1_post_balancePlatform.outgoingTransfer.created.md",
+      "title": "payment-webhooks/1/post/balancePlatform.outgoingTransfer.created",
+      "url": "https://docs.adyen.com/api-explorer/payment-webhooks/1/post/balancePlatform.outgoingTransfer.created"
+    },
+    {
+      "filename": "payment-webhooks_1_post_balancePlatform.outgoingTransfer.updated.md",
+      "title": "payment-webhooks/1/post/balancePlatform.outgoingTransfer.updated",
+      "url": "https://docs.adyen.com/api-explorer/payment-webhooks/1/post/balancePlatform.outgoingTransfer.updated"
+    },
+    {
+      "filename": "payment-webhooks_1_post_balancePlatform.payment.created.md",
+      "title": "payment-webhooks/1/post/balancePlatform.payment.created",
+      "url": "https://docs.adyen.com/api-explorer/payment-webhooks/1/post/balancePlatform.payment.created"
+    },
+    {
+      "filename": "payment-webhooks_1_post_balancePlatform.payment.updated.md",
+      "title": "payment-webhooks/1/post/balancePlatform.payment.updated",
+      "url": "https://docs.adyen.com/api-explorer/payment-webhooks/1/post/balancePlatform.payment.updated"
+    },
+    {
+      "filename": "payments-app_1_get_merchants_(merchantId)_paymentsApps.md",
+      "title": "payments-app/1/get/merchants/(merchantId)/paymentsApps",
+      "url": "https://docs.adyen.com/api-explorer/payments-app/1/get/merchants/(merchantId)/paymentsApps"
+    },
+    {
+      "filename": "payments-app_1_get_merchants_(merchantId)_stores_(storeId)_paymentsApps.md",
+      "title": "payments-app/1/get/merchants/(merchantId)/stores/(storeId)/paymentsApps",
+      "url": "https://docs.adyen.com/api-explorer/payments-app/1/get/merchants/(merchantId)/stores/(storeId)/paymentsApps"
+    },
+    {
+      "filename": "payments-app_1_overview.md",
+      "title": "payments-app/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/payments-app/1/overview"
+    },
+    {
+      "filename": "payments-app_1_post_merchants_(merchantId)_generatePaymentsAppBoardingToken.md",
+      "title": "payments-app/1/post/merchants/(merchantId)/generatePaymentsAppBoardingToken",
+      "url": "https://docs.adyen.com/api-explorer/payments-app/1/post/merchants/(merchantId)/generatePaymentsAppBoardingToken"
+    },
+    {
+      "filename": "payments-app_1_post_merchants_(merchantId)_paymentsApps_(installationId)_revoke.md",
+      "title": "payments-app/1/post/merchants/(merchantId)/paymentsApps/(installationId)/revoke",
+      "url": "https://docs.adyen.com/api-explorer/payments-app/1/post/merchants/(merchantId)/paymentsApps/(installationId)/revoke"
+    },
+    {
+      "filename": "payments-app_1_post_merchants_(merchantId)_stores_(storeId)_generatePaymentsAppBoardingToken.md",
+      "title": "payments-app/1/post/merchants/(merchantId)/stores/(storeId)/generatePaymentsAppBoardingToken",
+      "url": "https://docs.adyen.com/api-explorer/payments-app/1/post/merchants/(merchantId)/stores/(storeId)/generatePaymentsAppBoardingToken"
+    },
+    {
+      "filename": "possdk_68_overview.md",
+      "title": "possdk/68/overview",
+      "url": "https://docs.adyen.com/api-explorer/possdk/68/overview"
+    },
+    {
+      "filename": "possdk_68_post_sessions.md",
+      "title": "possdk/68/post/sessions",
+      "url": "https://docs.adyen.com/api-explorer/possdk/68/post/sessions"
+    },
+    {
+      "filename": "postfmapi_1_overview.md",
+      "title": "postfmapi/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/postfmapi/1/overview"
+    },
+    {
+      "filename": "postfmapi_1_post_assignTerminals.md",
+      "title": "postfmapi/1/post/assignTerminals",
+      "url": "https://docs.adyen.com/api-explorer/postfmapi/1/post/assignTerminals"
+    },
+    {
+      "filename": "postfmapi_1_post_findTerminal.md",
+      "title": "postfmapi/1/post/findTerminal",
+      "url": "https://docs.adyen.com/api-explorer/postfmapi/1/post/findTerminal"
+    },
+    {
+      "filename": "postfmapi_1_post_getStoresUnderAccount.md",
+      "title": "postfmapi/1/post/getStoresUnderAccount",
+      "url": "https://docs.adyen.com/api-explorer/postfmapi/1/post/getStoresUnderAccount"
+    },
+    {
+      "filename": "postfmapi_1_post_getTerminalDetails.md",
+      "title": "postfmapi/1/post/getTerminalDetails",
+      "url": "https://docs.adyen.com/api-explorer/postfmapi/1/post/getTerminalDetails"
+    },
+    {
+      "filename": "postfmapi_1_post_getTerminalsUnderAccount.md",
+      "title": "postfmapi/1/post/getTerminalsUnderAccount",
+      "url": "https://docs.adyen.com/api-explorer/postfmapi/1/post/getTerminalsUnderAccount"
+    },
+    {
+      "filename": "relayed-authorisation-webhooks_4_post_balancePlatform.authorisation.relayed.md",
+      "title": "relayed-authorisation-webhooks/4/post/balancePlatform.authorisation.relayed",
+      "url": "https://docs.adyen.com/api-explorer/relayed-authorisation-webhooks/4/post/balancePlatform.authorisation.relayed"
+    },
+    {
+      "filename": "report-webhooks_1_overview.md",
+      "title": "report-webhooks/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/report-webhooks/1/overview"
+    },
+    {
+      "filename": "report-webhooks_1_post_balancePlatform.report.created.md",
+      "title": "report-webhooks/1/post/balancePlatform.report.created",
+      "url": "https://docs.adyen.com/api-explorer/report-webhooks/1/post/balancePlatform.report.created"
+    },
+    {
+      "filename": "sessionauthentication_1_overview.md",
+      "title": "sessionauthentication/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/sessionauthentication/1/overview"
+    },
+    {
+      "filename": "sessionauthentication_1_post_sessions.md",
+      "title": "sessionauthentication/1/post/sessions",
+      "url": "https://docs.adyen.com/api-explorer/sessionauthentication/1/post/sessions"
+    },
+    {
+      "filename": "terminal-api_1_overview.md",
+      "title": "terminal-api/1/overview",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/overview"
+    },
+    {
+      "filename": "terminal-api_1_post_abort.md",
+      "title": "terminal-api/1/post/abort",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/abort"
+    },
+    {
+      "filename": "terminal-api_1_post_admin.md",
+      "title": "terminal-api/1/post/admin",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/admin"
+    },
+    {
+      "filename": "terminal-api_1_post_balanceinquiry.md",
+      "title": "terminal-api/1/post/balanceinquiry",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/balanceinquiry"
+    },
+    {
+      "filename": "terminal-api_1_post_cardacquisition.md",
+      "title": "terminal-api/1/post/cardacquisition",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/cardacquisition"
+    },
+    {
+      "filename": "terminal-api_1_post_cardreaderapdu.md",
+      "title": "terminal-api/1/post/cardreaderapdu",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/cardreaderapdu"
+    },
+    {
+      "filename": "terminal-api_1_post_diagnosis.md",
+      "title": "terminal-api/1/post/diagnosis",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/diagnosis"
+    },
+    {
+      "filename": "terminal-api_1_post_display.md",
+      "title": "terminal-api/1/post/display",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/display"
+    },
+    {
+      "filename": "terminal-api_1_post_enableservice.md",
+      "title": "terminal-api/1/post/enableservice",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/enableservice"
+    },
+    {
+      "filename": "terminal-api_1_post_gettotals.md",
+      "title": "terminal-api/1/post/gettotals",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/gettotals"
+    },
+    {
+      "filename": "terminal-api_1_post_input.md",
+      "title": "terminal-api/1/post/input",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/input"
+    },
+    {
+      "filename": "terminal-api_1_post_login.md",
+      "title": "terminal-api/1/post/login",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/login"
+    },
+    {
+      "filename": "terminal-api_1_post_logout.md",
+      "title": "terminal-api/1/post/logout",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/logout"
+    },
+    {
+      "filename": "terminal-api_1_post_payment.md",
+      "title": "terminal-api/1/post/payment",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/payment"
+    },
+    {
+      "filename": "terminal-api_1_post_print.md",
+      "title": "terminal-api/1/post/print",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/print"
+    },
+    {
+      "filename": "terminal-api_1_post_reconciliation.md",
+      "title": "terminal-api/1/post/reconciliation",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/reconciliation"
+    },
+    {
+      "filename": "terminal-api_1_post_reversal.md",
+      "title": "terminal-api/1/post/reversal",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/reversal"
+    },
+    {
+      "filename": "terminal-api_1_post_storedvalue.md",
+      "title": "terminal-api/1/post/storedvalue",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/storedvalue"
+    },
+    {
+      "filename": "terminal-api_1_post_transactionstatus.md",
+      "title": "terminal-api/1/post/transactionstatus",
+      "url": "https://docs.adyen.com/api-explorer/terminal-api/1/post/transactionstatus"
+    },
+    {
+      "filename": "transaction-webhooks_4_overview.md",
+      "title": "transaction-webhooks/4/overview",
+      "url": "https://docs.adyen.com/api-explorer/transaction-webhooks/4/overview"
+    },
+    {
+      "filename": "transaction-webhooks_4_post_balancePlatform.transaction.created.md",
+      "title": "transaction-webhooks/4/post/balancePlatform.transaction.created",
+      "url": "https://docs.adyen.com/api-explorer/transaction-webhooks/4/post/balancePlatform.transaction.created"
+    },
+    {
+      "filename": "transfer-webhooks_4_overview.md",
+      "title": "transfer-webhooks/4/overview",
+      "url": "https://docs.adyen.com/api-explorer/transfer-webhooks/4/overview"
+    },
+    {
+      "filename": "transfer-webhooks_4_post_balancePlatform.transfer.created.md",
+      "title": "transfer-webhooks/4/post/balancePlatform.transfer.created",
+      "url": "https://docs.adyen.com/api-explorer/transfer-webhooks/4/post/balancePlatform.transfer.created"
+    },
+    {
+      "filename": "transfer-webhooks_4_post_balancePlatform.transfer.updated.md",
+      "title": "transfer-webhooks/4/post/balancePlatform.transfer.updated",
+      "url": "https://docs.adyen.com/api-explorer/transfer-webhooks/4/post/balancePlatform.transfer.updated"
+    },
+    {
+      "filename": "transfers-api_4_delete_disputes_(disputeId)_attachments_(attachmentId).md",
+      "title": "transfers-api/4/delete/disputes/(disputeId)/attachments/(attachmentId)",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/delete/disputes/(disputeId)/attachments/(attachmentId)"
+    },
+    {
+      "filename": "transfers-api_4_get_disputes.md",
+      "title": "transfers-api/4/get/disputes",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/get/disputes"
+    },
+    {
+      "filename": "transfers-api_4_get_disputes_(disputeId)_attachments.md",
+      "title": "transfers-api/4/get/disputes/(disputeId)/attachments",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/get/disputes/(disputeId)/attachments"
+    },
+    {
+      "filename": "transfers-api_4_get_disputes_(disputeId)_attachments_(attachmentId).md",
+      "title": "transfers-api/4/get/disputes/(disputeId)/attachments/(attachmentId)",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/get/disputes/(disputeId)/attachments/(attachmentId)"
+    },
+    {
+      "filename": "transfers-api_4_get_disputes_(id).md",
+      "title": "transfers-api/4/get/disputes/(id)",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/get/disputes/(id)"
+    },
+    {
+      "filename": "transfers-api_4_overview.md",
+      "title": "transfers-api/4/overview",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/overview"
+    },
+    {
+      "filename": "transfers-api_4_patch_disputes_(id).md",
+      "title": "transfers-api/4/patch/disputes/(id)",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/patch/disputes/(id)"
+    },
+    {
+      "filename": "transfers-api_4_post_disputes.md",
+      "title": "transfers-api/4/post/disputes",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/post/disputes"
+    },
+    {
+      "filename": "transfers-api_4_post_disputes_(disputeId)_attachments.md",
+      "title": "transfers-api/4/post/disputes/(disputeId)/attachments",
+      "url": "https://docs.adyen.com/api-explorer/transfers-api/4/post/disputes/(disputeId)/attachments"
+    },
+    {
+      "filename": "transfers_4_get_grants.md",
+      "title": "transfers/4/get/grants",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/get/grants"
+    },
+    {
+      "filename": "transfers_4_get_grants_(id).md",
+      "title": "transfers/4/get/grants/(id)",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/get/grants/(id)"
+    },
+    {
+      "filename": "transfers_4_get_transactions.md",
+      "title": "transfers/4/get/transactions",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/get/transactions"
+    },
+    {
+      "filename": "transfers_4_get_transactions_(id).md",
+      "title": "transfers/4/get/transactions/(id)",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/get/transactions/(id)"
+    },
+    {
+      "filename": "transfers_4_get_transfers.md",
+      "title": "transfers/4/get/transfers",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/get/transfers"
+    },
+    {
+      "filename": "transfers_4_get_transfers_(id).md",
+      "title": "transfers/4/get/transfers/(id)",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/get/transfers/(id)"
+    },
+    {
+      "filename": "transfers_4_overview.md",
+      "title": "transfers/4/overview",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/overview"
+    },
+    {
+      "filename": "transfers_4_post_grants.md",
+      "title": "transfers/4/post/grants",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/post/grants"
+    },
+    {
+      "filename": "transfers_4_post_transfers.md",
+      "title": "transfers/4/post/transfers",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/post/transfers"
+    },
+    {
+      "filename": "transfers_4_post_transfers_(transferId)_returns.md",
+      "title": "transfers/4/post/transfers/(transferId)/returns",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/post/transfers/(transferId)/returns"
+    },
+    {
+      "filename": "transfers_4_post_transfers_approve.md",
+      "title": "transfers/4/post/transfers/approve",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/post/transfers/approve"
+    },
+    {
+      "filename": "transfers_4_post_transfers_cancel.md",
+      "title": "transfers/4/post/transfers/cancel",
+      "url": "https://docs.adyen.com/api-explorer/transfers/4/post/transfers/cancel"
+    },
+    {
+      "filename": "transfers_latest_overview.md",
+      "title": "transfers/latest/overview",
+      "url": "https://docs.adyen.com/api-explorer/transfers/latest/overview"
+    }
+  ]
+}

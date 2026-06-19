@@ -1,0 +1,30 @@
+{
+  "list_tools": {
+    "doc": "docs/",
+    "endpoint": "N/A"
+  },
+  "search_recipes": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "get_recipe_information": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "search_ingredients": {
+    "doc": "docs/",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "generate_meal_plan": {
+    "doc": "docs/",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "get_wine_pairing": {
+    "doc": "docs/",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "autocomplete_search": {
+    "doc": "docs/",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  }
+}

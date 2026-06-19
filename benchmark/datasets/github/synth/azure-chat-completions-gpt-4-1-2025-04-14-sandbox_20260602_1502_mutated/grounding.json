@@ -1,0 +1,26 @@
+{
+  "list_issues_assigned_to_authenticated_user": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /issues"
+  },
+  "list_issue_comments_for_repository": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/comments"
+  },
+  "get_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "update_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "delete_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "pin_issue_comment": {
+    "doc": "docs/api_issues-comments.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/issues/comments/{comment_id}/pin"
+  }
+}

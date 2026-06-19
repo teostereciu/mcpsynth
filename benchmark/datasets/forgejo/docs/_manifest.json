@@ -1,0 +1,50 @@
+{
+  "source": "Forgejo API v15.0.0-99-734f073f+gitea-1.22.0 (OpenAPI spec)",
+  "scraped_from": "https://codeberg.org/swagger.v1.json",
+  "scrape_date": "2026-05-12T11:29:28.656999",
+  "total_pages": 7,
+  "files": [
+    {
+      "filename": "api_notification.md",
+      "title": "Notification",
+      "url": "https://codeberg.org/swagger.v1.json",
+      "endpoint_count": 7
+    },
+    {
+      "filename": "api_user.md",
+      "title": "User",
+      "url": "https://codeberg.org/swagger.v1.json",
+      "endpoint_count": 79
+    },
+    {
+      "filename": "api_package.md",
+      "title": "Package",
+      "url": "https://codeberg.org/swagger.v1.json",
+      "endpoint_count": 6
+    },
+    {
+      "filename": "api_repository.md",
+      "title": "Repository",
+      "url": "https://codeberg.org/swagger.v1.json",
+      "endpoint_count": 188
+    },
+    {
+      "filename": "api_organization.md",
+      "title": "Organization",
+      "url": "https://codeberg.org/swagger.v1.json",
+      "endpoint_count": 69
+    },
+    {
+      "filename": "api_miscellaneous.md",
+      "title": "Miscellaneous",
+      "url": "https://codeberg.org/swagger.v1.json",
+      "endpoint_count": 13
+    },
+    {
+      "filename": "api_issue.md",
+      "title": "Issue",
+      "url": "https://codeberg.org/swagger.v1.json",
+      "endpoint_count": 67
+    }
+  ]
+}

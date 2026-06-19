@@ -1,0 +1,12 @@
+{
+  "dataset": "jira",
+  "model": "gcp-chat-completions-chat-gemini-3-5-flash-sandbox",
+  "condition": "docs",
+  "synthesis_time": 187.85762000083923,
+  "token_usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1547"
+}

@@ -1,0 +1,90 @@
+{
+  "create_or_replace_inventory_item": {
+    "doc": "docs/api_inventory_create-or-replace-inventory-item.md",
+    "endpoint": "PUT /inventory_item/{sku}"
+  },
+  "get_inventory_item": {
+    "doc": "docs/api_inventory_get-inventory-item.md",
+    "endpoint": "GET /inventory_item/{sku}"
+  },
+  "get_inventory_items": {
+    "doc": "docs/api_inventory_get-inventory-items.md",
+    "endpoint": "GET /inventory_item"
+  },
+  "delete_inventory_item": {
+    "doc": "docs/api_inventory_delete-inventory-item.md",
+    "endpoint": "DELETE /inventory_item/{sku}"
+  },
+  "create_offer": {
+    "doc": "docs/api_inventory_create-offer.md",
+    "endpoint": "POST /offer"
+  },
+  "get_offer": {
+    "doc": "docs/api_inventory_get-offer.md",
+    "endpoint": "GET /offer/{offerId}"
+  },
+  "get_offers": {
+    "doc": "docs/api_inventory_get-offers.md",
+    "endpoint": "GET /offer"
+  },
+  "update_offer": {
+    "doc": "docs/api_inventory_update-offer.md",
+    "endpoint": "PUT /offer/{offerId}"
+  },
+  "publish_offer": {
+    "doc": "docs/api_inventory_publish-offer.md",
+    "endpoint": "POST /offer/{offerId}/publish"
+  },
+  "withdraw_offer": {
+    "doc": "docs/api_inventory_withdraw-offer.md",
+    "endpoint": "POST /offer/{offerId}/withdraw"
+  },
+  "get_orders": {
+    "doc": "docs/api_fulfillment_get-orders.md",
+    "endpoint": "GET /order"
+  },
+  "get_order": {
+    "doc": "docs/api_fulfillment_get-order.md",
+    "endpoint": "GET /order/{orderId}"
+  },
+  "create_shipping_fulfillment": {
+    "doc": "docs/api_fulfillment_create-shipping-fulfillment.md",
+    "endpoint": "POST /order/{orderId}/shipping_fulfillment"
+  },
+  "get_payment_policies": {
+    "doc": "docs/api_account_get-payment-policies.md",
+    "endpoint": "GET /payment_policy"
+  },
+  "get_payment_policy": {
+    "doc": "docs/api_account_get-payment-policy.md",
+    "endpoint": "GET /payment_policy/{payment_policy_id}"
+  },
+  "create_payment_policy": {
+    "doc": "docs/api_account_create-payment-policy.md",
+    "endpoint": "POST /payment_policy"
+  },
+  "update_payment_policy": {
+    "doc": "docs/api_account_update-payment-policy.md",
+    "endpoint": "PUT /payment_policy/{payment_policy_id}"
+  },
+  "delete_payment_policy": {
+    "doc": "docs/api_account_delete-payment-policy.md",
+    "endpoint": "DELETE /payment_policy/{payment_policy_id}"
+  },
+  "create_inventory_task": {
+    "doc": "docs/api_feed_create-inventory-task.md",
+    "endpoint": "POST /inventory_task"
+  },
+  "get_inventory_task": {
+    "doc": "docs/api_feed_get-inventory-task.md",
+    "endpoint": "GET /inventory_task/{task_id}"
+  },
+  "get_result_file": {
+    "doc": "docs/api_feed_get-result-file.md",
+    "endpoint": "GET /task/{task_id}/download_result_file"
+  },
+  "get_transactions": {
+    "doc": "docs/api_finances_get-transactions.md",
+    "endpoint": "GET /transaction"
+  }
+}

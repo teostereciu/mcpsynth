@@ -1,0 +1,326 @@
+{
+  "stripe_create_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "stripe_retrieve_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents/{payment_intent_id}"
+  },
+  "stripe_update_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}"
+  },
+  "stripe_confirm_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/confirm"
+  },
+  "stripe_capture_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/capture"
+  },
+  "stripe_cancel_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/cancel"
+  },
+  "stripe_list_payment_intents": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents"
+  },
+  "stripe_retrieve_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /v1/charges/{charge_id}"
+  },
+  "stripe_update_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges/{charge_id}"
+  },
+  "stripe_list_charges": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /v1/charges"
+  },
+  "stripe_create_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds"
+  },
+  "stripe_retrieve_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /v1/refunds/{refund_id}"
+  },
+  "stripe_update_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds/{refund_id}"
+  },
+  "stripe_list_refunds": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /v1/refunds"
+  },
+  "stripe_create_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers"
+  },
+  "stripe_retrieve_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers/{customer_id}"
+  },
+  "stripe_update_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers/{customer_id}"
+  },
+  "stripe_delete_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "DELETE /v1/customers/{customer_id}"
+  },
+  "stripe_list_customers": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers"
+  },
+  "stripe_create_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products"
+  },
+  "stripe_retrieve_product": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /v1/products/{product_id}"
+  },
+  "stripe_update_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products/{product_id}"
+  },
+  "stripe_delete_product": {
+    "doc": "docs/products.md",
+    "endpoint": "DELETE /v1/products/{product_id}"
+  },
+  "stripe_list_products": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /v1/products"
+  },
+  "stripe_create_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /v1/prices"
+  },
+  "stripe_retrieve_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "GET /v1/prices/{price_id}"
+  },
+  "stripe_update_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /v1/prices/{price_id}"
+  },
+  "stripe_list_prices": {
+    "doc": "docs/prices.md",
+    "endpoint": "GET /v1/prices"
+  },
+  "stripe_create_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions"
+  },
+  "stripe_retrieve_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "GET /v1/subscriptions/{subscription_id}"
+  },
+  "stripe_update_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions/{subscription_id}"
+  },
+  "stripe_cancel_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "DELETE /v1/subscriptions/{subscription_id}"
+  },
+  "stripe_list_subscriptions": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "GET /v1/subscriptions"
+  },
+  "stripe_create_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices"
+  },
+  "stripe_retrieve_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "GET /v1/invoices/{invoice_id}"
+  },
+  "stripe_update_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}"
+  },
+  "stripe_finalize_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/finalize"
+  },
+  "stripe_pay_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/pay"
+  },
+  "stripe_void_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/void"
+  },
+  "stripe_list_invoices": {
+    "doc": "docs/invoices.md",
+    "endpoint": "GET /v1/invoices"
+  },
+  "stripe_create_preview_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/create_preview"
+  },
+  "stripe_create_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "POST /v1/checkout/sessions"
+  },
+  "stripe_retrieve_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "GET /v1/checkout/sessions/{session_id}"
+  },
+  "stripe_expire_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "POST /v1/checkout/sessions/{session_id}/expire"
+  },
+  "stripe_list_checkout_sessions": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "GET /v1/checkout/sessions"
+  },
+  "stripe_create_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /v1/payment_links"
+  },
+  "stripe_retrieve_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "GET /v1/payment_links/{payment_link_id}"
+  },
+  "stripe_update_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /v1/payment_links/{payment_link_id}"
+  },
+  "stripe_list_payment_links": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "GET /v1/payment_links"
+  },
+  "stripe_list_payment_link_line_items": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "GET /v1/payment_links/{payment_link_id}/line_items"
+  },
+  "stripe_create_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents"
+  },
+  "stripe_retrieve_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "GET /v1/setup_intents/{setup_intent_id}"
+  },
+  "stripe_update_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}"
+  },
+  "stripe_confirm_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}/confirm"
+  },
+  "stripe_cancel_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}/cancel"
+  },
+  "stripe_list_setup_intents": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "GET /v1/setup_intents"
+  },
+  "stripe_create_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "POST /v1/coupons"
+  },
+  "stripe_retrieve_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "GET /v1/coupons/{coupon_id}"
+  },
+  "stripe_update_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "POST /v1/coupons/{coupon_id}"
+  },
+  "stripe_delete_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "DELETE /v1/coupons/{coupon_id}"
+  },
+  "stripe_list_coupons": {
+    "doc": "docs/coupons.md",
+    "endpoint": "GET /v1/coupons"
+  },
+  "stripe_create_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "POST /v1/promotion_codes"
+  },
+  "stripe_retrieve_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "GET /v1/promotion_codes/{promotion_code_id}"
+  },
+  "stripe_update_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "POST /v1/promotion_codes/{promotion_code_id}"
+  },
+  "stripe_list_promotion_codes": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "GET /v1/promotion_codes"
+  },
+  "stripe_create_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers"
+  },
+  "stripe_retrieve_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "GET /v1/transfers/{transfer_id}"
+  },
+  "stripe_update_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers/{transfer_id}"
+  },
+  "stripe_list_transfers": {
+    "doc": "docs/transfers.md",
+    "endpoint": "GET /v1/transfers"
+  },
+  "stripe_create_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts"
+  },
+  "stripe_retrieve_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "GET /v1/payouts/{payout_id}"
+  },
+  "stripe_update_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts/{payout_id}"
+  },
+  "stripe_cancel_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts/{payout_id}/cancel"
+  },
+  "stripe_reverse_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts/{payout_id}/reverse"
+  },
+  "stripe_list_payouts": {
+    "doc": "docs/payouts.md",
+    "endpoint": "GET /v1/payouts"
+  },
+  "stripe_create_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts"
+  },
+  "stripe_retrieve_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /v1/accounts/{account_id}"
+  },
+  "stripe_update_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts/{account_id}"
+  },
+  "stripe_delete_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "DELETE /v1/accounts/{account_id}"
+  },
+  "stripe_list_accounts": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /v1/accounts"
+  },
+  "stripe_create_account_link": {
+    "doc": "docs/account_links.md",
+    "endpoint": "POST /v1/account_links"
+  }
+}

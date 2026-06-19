@@ -1,0 +1,6 @@
+{
+  "get_products": {
+    "doc": "general knowledge",
+    "endpoint": "GET /products.json"
+  }
+}

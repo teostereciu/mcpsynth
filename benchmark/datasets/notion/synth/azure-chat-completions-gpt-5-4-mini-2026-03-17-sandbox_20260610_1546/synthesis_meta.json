@@ -1,0 +1,12 @@
+{
+  "dataset": "notion",
+  "model": "azure-chat-completions-gpt-5-4-mini-2026-03-17-sandbox",
+  "condition": "docs",
+  "synthesis_time": 141.84694409370422,
+  "token_usage": {
+    "input_tokens": 133481,
+    "output_tokens": 2280
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1546"
+}

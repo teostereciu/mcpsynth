@@ -1,0 +1,162 @@
+{
+  "send_message": {
+    "doc": null,
+    "endpoint": "POST /messages"
+  },
+  "get_messages": {
+    "doc": null,
+    "endpoint": "GET /messages"
+  },
+  "get_message_history": {
+    "doc": null,
+    "endpoint": "GET /messages/{message_id}/history"
+  },
+  "update_message": {
+    "doc": null,
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": null,
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "add_reaction": {
+    "doc": null,
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": null,
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "create_stream": {
+    "doc": null,
+    "endpoint": "POST /streams"
+  },
+  "update_stream": {
+    "doc": null,
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "delete_stream": {
+    "doc": null,
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "archive_stream": {
+    "doc": null,
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "subscribe": {
+    "doc": null,
+    "endpoint": "POST /users/me/memberships"
+  },
+  "unsubscribe": {
+    "doc": null,
+    "endpoint": "DELETE /users/memberships"
+  },
+  "get_stream_id": {
+    "doc": null,
+    "endpoint": "GET /streams/{stream_name}/id"
+  },
+  "get_stream_topics": {
+    "doc": null,
+    "endpoint": "GET /streams/{stream_id}/topics"
+  },
+  "update_message_flags": {
+    "doc": null,
+    "endpoint": "POST /messages/flags"
+  },
+  "get_user_by_email": {
+    "doc": null,
+    "endpoint": "GET /users/{email}"
+  },
+  "get_user_profile": {
+    "doc": null,
+    "endpoint": "GET /users/{user_id}"
+  },
+  "get_users": {
+    "doc": null,
+    "endpoint": "GET /users"
+  },
+  "get_user_presence": {
+    "doc": null,
+    "endpoint": "GET /users/{email}/presence"
+  },
+  "get_presences": {
+    "doc": null,
+    "endpoint": "GET /presence"
+  },
+  "update_presence": {
+    "doc": null,
+    "endpoint": "POST /settings/presence"
+  },
+  "upload_file": {
+    "doc": null,
+    "endpoint": "POST /user_uploads"
+  },
+  "get_user_groups": {
+    "doc": null,
+    "endpoint": "GET /user_groups"
+  },
+  "create_user_group": {
+    "doc": null,
+    "endpoint": "POST /user_groups"
+  },
+  "update_user_group": {
+    "doc": null,
+    "endpoint": "PATCH /user_groups/{group_id}"
+  },
+  "delete_user_group": {
+    "doc": null,
+    "endpoint": "DELETE /user_groups/{group_id}"
+  },
+  "get_scheduled_messages": {
+    "doc": null,
+    "endpoint": "GET /scheduled_messages"
+  },
+  "create_scheduled_message": {
+    "doc": null,
+    "endpoint": "POST /scheduled_messages"
+  },
+  "delete_scheduled_message": {
+    "doc": null,
+    "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"
+  },
+  "get_drafts": {
+    "doc": null,
+    "endpoint": "GET /drafts"
+  },
+  "create_draft": {
+    "doc": null,
+    "endpoint": "POST /drafts"
+  },
+  "update_draft": {
+    "doc": null,
+    "endpoint": "PATCH /drafts/{draft_id}"
+  },
+  "delete_draft": {
+    "doc": null,
+    "endpoint": "DELETE /drafts/{draft_id}"
+  },
+  "get_stream_settings": {
+    "doc": null,
+    "endpoint": "GET /streams/{stream_id}"
+  },
+  "update_stream_settings": {
+    "doc": null,
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "get_subscribers": {
+    "doc": null,
+    "endpoint": "GET /streams/{stream_id}/members"
+  },
+  "get_stream_subscribers": {
+    "doc": null,
+    "endpoint": "GET /streams/{stream_id}/members"
+  },
+  "add_subscribers": {
+    "doc": null,
+    "endpoint": "POST /streams/{stream_id}/members"
+  },
+  "remove_subscribers": {
+    "doc": null,
+    "endpoint": "DELETE /streams/{stream_id}/members"
+  }
+}

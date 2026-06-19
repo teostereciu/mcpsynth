@@ -1,0 +1,14 @@
+{
+  "dataset": "zulip",
+  "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "condition": "docs",
+  "synthesis_time": 126.68831014633179,
+  "token_usage": {
+    "input_tokens": 322620,
+    "output_tokens": 19333
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1216",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 24
+}

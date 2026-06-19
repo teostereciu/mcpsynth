@@ -1,0 +1,170 @@
+# Slack Real API Testing Configuration
+#
+# This config defines what's needed to test the Slack MCP server against
+# the real Slack Web API.
+
+api_name: "Slack"
+api_version: "Slack Web API (current)"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  SLACK_BOT_TOKEN:
+    description: "Bot token for your Slack app (xoxb-...)"
+    how_to_get:
+      url: "https://api.slack.com/apps"
+      steps:
+        - "Go to https://api.slack.com/apps and create a new app (or use existing)"
+        - "Under 'OAuth & Permissions', add the required bot token scopes (see permissions section)"
+        - "Install the app to your workspace"
+        - "Copy the 'Bot User OAuth Token' (starts with xoxb-)"
+      notes:
+        - "The bot must be invited to any channels it needs to read/write"
+        - "search.messages requires a user token (xoxp-) with search:read — bot tokens cannot search"
+        - "For scenario 11 (search), the test accepts a graceful missing_scope error"
+    validation: "^xoxb-.+"
+    example: "xoxb-1234567890-1234567890123-abcdefghijklmnopqrstuvwx"
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS
+# ==============================================================================
+
+optional_credentials:
+  SLACK_USER_TOKEN:
+    description: "User token (xoxp-...) for search and user-scoped operations"
+    required_for: "Scenario 11 (search.messages) — bot tokens lack search:read"
+    how_to_get:
+      steps:
+        - "Under 'OAuth & Permissions', add user token scopes including search:read"
+        - "Use the 'User OAuth Token' instead of the Bot User OAuth Token"
+    validation: "^xoxp-.+"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  Slack does not have a sandbox/test environment. All API calls hit real
+  workspaces. Recommendations:
+    - Create a dedicated test workspace (free Slack plan is sufficient)
+    - Use a test channel (e.g., #bot-testing) to contain test messages
+    - Bot tokens are scoped — your app can only access what it's been granted
+    - Messages, reactions, pins created during tests persist in your workspace
+
+mock_mode:
+  available: true
+  activate: "pytest --mock  OR  SLACK_MOCK=1 pytest"
+  how_it_works: |
+    Intercepts all HTTP calls to slack.com/api/* and files.slack.com/upload/*
+    at the requests library level. The full MCP server and tool code run for
+    real (Authorization header construction, request body assembly, response
+    parsing). Only the network hop is replaced with realistic pre-defined
+    responses from tests/mock_api.py.
+  what_is_tested: |
+    - Correct Authorization: Bearer header is sent on every request
+    - Request parameters match Slack Web API conventions
+    - Responses are parsed correctly and returned by tools
+    - Two-step file upload flow (getUploadURLExternal + completeUploadExternal)
+    - Error responses (channel_not_found, missing_scope) are handled gracefully
+  what_is_not_tested: |
+    - Actual Slack validation of channel IDs, user IDs, timestamps
+    - Real message delivery or workspace state changes
+    - Rate limit headers or retry logic
+  credentials_needed: "None — fake xoxb-MOCK-TOKEN is injected automatically"
+
+rate_limits:
+  tiers:
+    tier1: "~1 request/minute (deprecated methods)"
+    tier2: "~20 requests/minute"
+    tier3: "~50 requests/minute"
+    tier4: "100+ requests/minute"
+  notes: |
+    - Most commonly used methods (chat.postMessage, conversations.list) are Tier 3/4
+    - search.messages is Tier 2
+    - files.getUploadURLExternal is Tier 4
+    - Rate limit errors return HTTP 429 with Retry-After header
+
+cleanup_notes: |
+  Since there's no sandbox, test artifacts accumulate in your workspace:
+    - Messages posted during tests remain in channels
+    - Files uploaded remain in your workspace storage
+    - Pins added during tests remain pinned
+  Recommendations:
+    - Use a dedicated test channel (#bot-testing) to isolate test messages
+    - Periodically archive the test channel to clean up history
+
+# ==============================================================================
+# API PERMISSIONS REQUIRED
+# ==============================================================================
+
+permissions:
+  bot_token_scopes:
+    - "chat:write — post, update messages (scenarios 4, 5, 8, 15)"
+    - "channels:read — list public channels (scenario 2)"
+    - "channels:history — read channel history (scenario 3)"
+    - "groups:read — list private channels"
+    - "groups:history — read private channel history"
+    - "im:read — list DMs"
+    - "im:history — read DM history"
+    - "users:read — list workspace users (scenario 9)"
+    - "users:read.email — access email field in user objects (scenario 10)"
+    - "reactions:read — get reactions on messages (scenario 7)"
+    - "reactions:write — add reactions (scenario 6)"
+    - "files:write — upload files (scenario 12)"
+    - "files:read — list/info on files"
+    - "pins:read — list pinned items (scenario 14)"
+    - "pins:write — pin messages (scenario 13)"
+
+  user_token_scopes:
+    - "search:read — search messages (scenario 11 only)"
+
+  notes: |
+    - Invite the bot to channels it needs to post in
+    - Bot tokens cannot use search.messages — use user token for that scenario
+    - auth:test works with any valid token
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+authentication:
+  type: "Bearer token"
+  header: "Authorization: Bearer {token}"
+  notes: |
+    - Bot tokens: xoxb-... (scoped per app, per workspace)
+    - User tokens: xoxp-... (scoped per user)
+    - All Slack Web API calls use the same Authorization header pattern
+    - No request signing required (unlike TikTok or Amazon SP-API)
+
+base_url: "https://slack.com/api"
+
+response_format: |
+  All Slack API responses follow a standard envelope:
+    {"ok": true, ...response fields...}
+    {"ok": false, "error": "error_code"}
+
+  Always check ok=true before using response data.
+
+file_upload_notes: |
+  files.upload is deprecated (sunset November 2025).
+  The modern two-step upload flow must be used:
+    1. files.getUploadURLExternal — get a presigned upload URL
+    2. PUT to the returned upload_url with file content
+    3. files.completeUploadExternal — finalize and share to channel
+  Scenario 12 tests this exact flow and requires min 2 tool calls.
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  api_methods: "https://docs.slack.dev/reference/methods"
+  authentication: "https://docs.slack.dev/authentication"
+  rate_limits: "https://docs.slack.dev/apis/web-api/rate-limits"
+  file_uploads: "https://docs.slack.dev/apis/web-api/files"
+  block_kit: "https://docs.slack.dev/block-kit"
+  app_creation: "https://api.slack.com/apps"

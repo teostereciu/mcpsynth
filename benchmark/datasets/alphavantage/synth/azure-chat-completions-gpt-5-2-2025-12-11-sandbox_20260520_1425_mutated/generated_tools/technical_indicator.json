@@ -1,0 +1,28 @@
+{
+  "name": "technical_indicator",
+  "description": "Technical indicator wrapper for Alpha Vantage technical indicator endpoints (SMA, EMA, RSI, MACD, BBANDS, etc.).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "function": {"type": "string"},
+      "ticker": {"type": "string"},
+      "time_interval": {"type": "string", "description": "1min,5min,15min,30min,60min,daily,weekly,monthly"},
+      "time_period": {"type": "integer"},
+      "price_type": {"type": "string", "description": "close|open|high|low"},
+      "series_type": {"type": "string", "description": "close|open|high|low (used by many indicators)"},
+      "month": {"type": "string", "description": "YYYY-MM"},
+      "fastperiod": {"type": "integer"},
+      "slowperiod": {"type": "integer"},
+      "signalperiod": {"type": "integer"},
+      "nbdevup": {"type": "integer"},
+      "nbdevdn": {"type": "integer"},
+      "matype": {"type": "integer"},
+      "acceleration": {"type": "number"},
+      "maximum": {"type": "number"},
+      "format": {"type": "string", "description": "json|csv"},
+      "entitlement": {"type": "string", "description": "realtime|delayed"},
+      "apikey": {"type": "string"}
+    },
+    "required": ["function", "ticker", "time_interval"]
+  }
+}

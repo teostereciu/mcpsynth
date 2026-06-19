@@ -1,0 +1,181 @@
+# Agent evaluation tasks for Jira Cloud REST API MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring guidelines.
+#
+# Required env vars: JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN
+
+tasks:
+  # ---------- READ ----------
+
+  # Discriminates: does the agent call get_current_user and surface the
+  # human-readable display name rather than raw accountId?
+  - id: get_current_user
+    prompt: >
+      Retrieve the profile of the currently authenticated Jira user. Report
+      the display name, email address, and account ID.
+    expected: displayName
+    tags: [read]
+
+  # Discriminates: does the agent use list/get-projects and return the
+  # short project key (e.g. "PROJ") rather than just the name?
+  - id: list_projects
+    prompt: >
+      List all Jira projects accessible to the current user. Report the project
+      keys, names, and project types of the first 5.
+    expected: key
+    tags: [read]
+
+  # Discriminates: does the agent issue a JQL search and surface issue keys
+  # (e.g. "PROJ-1") rather than internal IDs?
+  - id: search_issues_jql
+    prompt: >
+      Search for issues in Jira using JQL: "project is not EMPTY ORDER BY created DESC".
+      Return the keys, summaries, and statuses of the first 5 issues found.
+    expected: key
+    tags: [read]
+
+  # Discriminates: does the agent call get_issue_types and surface the
+  # human-readable name field rather than raw type IDs?
+  - id: get_issue_types
+    prompt: >
+      List all issue types available in Jira. Report the names and descriptions
+      of the issue types found.
+    expected: name
+    tags: [read]
+
+  # Discriminates: does the agent resolve the full issue details including
+  # description and comments, not just the summary?
+  - id: get_issue_details
+    prompt: >
+      Find the most recently created Jira issue across all projects. Retrieve
+      its full details including description and any comments. Report the issue
+      key, summary, and assignee display name (or "Unassigned" if none).
+    expected: summary
+    tags: [read, multi-step]
+
+  # Discriminates: does the agent call the link-types endpoint and surface
+  # the inward description (e.g. "is blocked by") rather than just the name?
+  - id: list_issue_link_types
+    prompt: >
+      List the available issue link types in Jira (such as "blocks" or
+      "relates to"). Report the name, inward description, and outward
+      description for each type.
+    expected: inward
+    tags: [read]
+
+  # Discriminates: does the agent surface workflow status categories
+  # ("To Do", "In Progress", "Done") rather than raw status IDs?
+  - id: get_project_statuses
+    prompt: >
+      List the available workflow statuses for the first accessible Jira
+      project. Report the status names and their categories.
+    expected: statusCategory
+    tags: [read, multi-step]
+
+  # ---------- WRITE ----------
+
+  # Discriminates: does the agent discover a project key first, then call
+  # create_issue with the correct project and return the generated key?
+  - id: create_issue
+    prompt: >
+      Find the first available Jira project by listing projects. Create a new
+      issue in that project with issue type Bug (or Task if Bug is unavailable),
+      summary "Agent harness test issue - safe to delete", and description
+      "This issue was created by the MCP agent evaluation harness."
+      Report the issue key and URL.
+    expected: "Agent harness test issue"
+    tags: [write, multi-step]
+
+  # Discriminates: does the agent thread create → comment and return the
+  # comment body rather than the comment ID alone?
+  - id: create_and_comment
+    prompt: >
+      Find the first available Jira project by listing projects. Create an
+      issue in it with summary "Agent test: comment workflow". Add a comment
+      to that issue with the text "Test comment from agent harness - this issue
+      can be deleted." Report the issue key and confirm the comment was posted.
+    expected: body
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: does the agent correctly chain create → update → transition
+  # and surface the transition name rather than just a status string?
+  - id: create_update_transition
+    prompt: >
+      Find the first available Jira project by listing projects. Create an
+      issue with summary "Agent test: transition workflow". Update its
+      description to "Updated by agent harness". Get the available transitions
+      for the issue and move it to the first non-initial status available.
+      Report the issue key, the transition name used, and the resulting status.
+    expected: name
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: does the agent add a watcher and confirm the watchers
+  # field is populated rather than just reporting success?
+  - id: issue_with_watcher
+    prompt: >
+      Find the first available Jira project by listing projects. Create an
+      issue with summary "Agent test: watcher workflow". Add the currently
+      authenticated user as a watcher on the issue. Retrieve the watchers list
+      and confirm the current user appears there. Report the issue key and
+      watcher count.
+    expected: watchers
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: does the agent call create_issue twice, then issue-link,
+  # and confirm the "relates to" relationship in the response?
+  - id: create_and_link_issues
+    prompt: >
+      Find the first available Jira project by listing projects. Create two
+      issues: one with summary "Agent Test Parent" and one with summary
+      "Agent Test Child". Link the Child issue to the Parent issue using a
+      "relates to" relationship. Report both issue keys and confirm the link
+      was created.
+    expected: relates
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: does the agent retrieve and confirm the priority field
+  # after an update rather than relying solely on the update response?
+  - id: update_issue_priority
+    prompt: >
+      Find the first issue returned by JQL "project is not EMPTY ORDER BY
+      created DESC". Update its priority to "Low". Retrieve the issue again
+      and confirm the priority change. Report the issue key and the new
+      priority value.
+    expected: Low
+    tags: [write, multi-step]
+
+  # ---------- MULTI-STEP ----------
+
+  # Discriminates: does the agent log work and surface timeSpent from the
+  # worklog resource rather than the issue's aggregateTimeSpent field?
+  - id: create_and_log_work
+    prompt: >
+      Find the first available Jira project by listing projects. Create an
+      issue in it with summary "Agent test: worklog workflow". Add a worklog
+      entry to that issue with time spent "1h" and a comment "Logged by agent
+      harness". Retrieve the worklogs for that issue and confirm the entry
+      appears. Report the issue key and the timeSpent value from the worklog.
+    expected: timeSpent
+    tags: [write, multi-step, workflow]
+    # Tests: create issue → add worklog → retrieve worklogs → surface timeSpent.
+    # timeSpent in the worklog response (e.g. "1h") is the discrimination field.
+    # A fresh account has no worklogs, so this must create its own data.
+
+  # Discriminates: does the agent verify deletion by fetching comments and
+  # reporting zero remaining rather than trusting the delete response alone?
+  - id: create_and_delete_comment
+    prompt: >
+      Find the first available Jira project by listing projects. Create an
+      issue with summary "Agent test: delete comment". Add a comment with text
+      "Comment to be deleted". Delete that comment. Confirm deletion by
+      retrieving the comments on the issue and reporting how many remain.
+    expected: "0"
+    tags: [write, multi-step]
+
+  # Discriminates: does the agent handle a 404 from Jira and surface the
+  # requested key from the error message rather than swallowing the error?
+  - id: error_handling_invalid_issue
+    prompt: >
+      Attempt to retrieve a Jira issue with key "INVALID-99999". Report the
+      exact error response received, including any error message or status code.
+    expected: INVALID-99999
+    tags: [read, error-handling]

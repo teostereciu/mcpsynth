@@ -1,0 +1,518 @@
+{
+  "get_inventory_items": {
+    "doc": "docs/api_inventory_get-inventory-items.md",
+    "endpoint": "GET /inventory_item"
+  },
+  "get_inventory_item": {
+    "doc": "docs/api_inventory_get-inventory-item.md",
+    "endpoint": "GET /inventory_item/{seller_sku}"
+  },
+  "create_or_replace_inventory_item": {
+    "doc": "docs/api_inventory_create-or-replace-inventory-item.md",
+    "endpoint": "PUT /inventory_item/{seller_sku}"
+  },
+  "bulk_update_price_quantity": {
+    "doc": "docs/api_inventory_bulk-update-price-quantity.md",
+    "endpoint": "POST /bulk_update_price_quantity"
+  },
+  "get_offers": {
+    "doc": "docs/api_inventory_get-offers.md",
+    "endpoint": "GET /offer"
+  },
+  "create_offer": {
+    "doc": "docs/api_inventory_create-offer.md",
+    "endpoint": "POST /offer"
+  },
+  "update_offer": {
+    "doc": "docs/api_inventory_update-offer.md",
+    "endpoint": "PUT /offer/{offer_id}"
+  },
+  "publish_offer": {
+    "doc": "docs/api_inventory_publish-offer.md",
+    "endpoint": "POST /offer/{offer_id}/publish"
+  },
+  "withdraw_offer": {
+    "doc": "docs/api_inventory_withdraw-offer.md",
+    "endpoint": "POST /offer/{offer_id}/withdraw"
+  },
+  "get_inventory_locations": {
+    "doc": "docs/api_inventory_get-inventory-locations.md",
+    "endpoint": "GET /location"
+  },
+  "get_inventory_location": {
+    "doc": "docs/api_inventory_get-inventory-location.md",
+    "endpoint": "GET /location/{merchant_location_key}"
+  },
+  "create_inventory_location": {
+    "doc": "docs/api_inventory_create-inventory-location.md",
+    "endpoint": "POST /location/{merchant_location_key}"
+  },
+  "update_inventory_location": {
+    "doc": "docs/api_inventory_update-inventory-location.md",
+    "endpoint": "PUT /location/{merchant_location_key}"
+  },
+  "disable_inventory_location": {
+    "doc": "docs/api_inventory_disable-inventory-location.md",
+    "endpoint": "POST /location/{merchant_location_key}/disable"
+  },
+  "enable_inventory_location": {
+    "doc": "docs/api_inventory_enable-inventory-location.md",
+    "endpoint": "POST /location/{merchant_location_key}/enable"
+  },
+  "delete_inventory_location": {
+    "doc": "docs/api_inventory_delete-inventory-location.md",
+    "endpoint": "DELETE /location/{merchant_location_key}"
+  },
+  "get_orders": {
+    "doc": "docs/api_fulfillment_get-orders.md",
+    "endpoint": "GET /order"
+  },
+  "get_order": {
+    "doc": "docs/api_fulfillment_get-order.md",
+    "endpoint": "GET /order/{orderId}"
+  },
+  "create_shipping_fulfillment": {
+    "doc": "docs/api_fulfillment_create-shipping-fulfillment.md",
+    "endpoint": "POST /order/{orderId}/shipping_fulfillment"
+  },
+  "get_shipping_fulfillments": {
+    "doc": "docs/api_fulfillment_get-shipping-fulfillments.md",
+    "endpoint": "GET /order/{orderId}/shipping_fulfillment"
+  },
+  "get_shipping_fulfillment": {
+    "doc": "docs/api_fulfillment_get-shipping-fulfillment.md",
+    "endpoint": "GET /order/{orderId}/shipping_fulfillment/{fulfillmentId}"
+  },
+  "issue_refund": {
+    "doc": "docs/api_fulfillment_issue-refund.md",
+    "endpoint": "POST /order/{order_id}/issue_refund"
+  },
+  "get_fulfillment_policies": {
+    "doc": "docs/api_account_get-fulfillment-policies.md",
+    "endpoint": "GET /fulfillment_policy"
+  },
+  "get_fulfillment_policy": {
+    "doc": "docs/api_account_get-fulfillment-policy.md",
+    "endpoint": "GET /fulfillment_policy/{fulfillmentPolicyId}"
+  },
+  "create_fulfillment_policy": {
+    "doc": "docs/api_account_create-fulfillment-policy.md",
+    "endpoint": "POST /fulfillment_policy"
+  },
+  "update_fulfillment_policy": {
+    "doc": "docs/api_account_update-fulfillment-policy.md",
+    "endpoint": "PUT /fulfillment_policy/{fulfillmentPolicyId}"
+  },
+  "delete_fulfillment_policy": {
+    "doc": "docs/api_account_delete-fulfillment-policy.md",
+    "endpoint": "DELETE /fulfillment_policy/{fulfillmentPolicyId}"
+  },
+  "get_payment_policies": {
+    "doc": "docs/api_account_get-payment-policies.md",
+    "endpoint": "GET /payment_policy"
+  },
+  "get_payment_policy": {
+    "doc": "docs/api_account_get-payment-policy.md",
+    "endpoint": "GET /payment_policy/{payment_policy_id}"
+  },
+  "create_payment_policy": {
+    "doc": "docs/api_account_create-payment-policy.md",
+    "endpoint": "POST /payment_policy"
+  },
+  "update_payment_policy": {
+    "doc": "docs/api_account_update-payment-policy.md",
+    "endpoint": "PUT /payment_policy/{payment_policy_id}"
+  },
+  "delete_payment_policy": {
+    "doc": "docs/api_account_delete-payment-policy.md",
+    "endpoint": "DELETE /payment_policy/{payment_policy_id}"
+  },
+  "get_return_policies": {
+    "doc": "docs/api_account_get-return-policies.md",
+    "endpoint": "GET /return_policy"
+  },
+  "get_return_policy": {
+    "doc": "docs/api_account_get-return-policy.md",
+    "endpoint": "GET /return_policy/{return_policy_id}"
+  },
+  "create_return_policy": {
+    "doc": "docs/api_account_create-return-policy.md",
+    "endpoint": "POST /return_policy"
+  },
+  "update_return_policy": {
+    "doc": "docs/api_account_update-return-policy.md",
+    "endpoint": "PUT /return_policy/{return_policy_id}"
+  },
+  "delete_return_policy": {
+    "doc": "docs/api_account_delete-return-policy.md",
+    "endpoint": "DELETE /return_policy/{return_policy_id}"
+  },
+  "get_opted_in_programs": {
+    "doc": "docs/api_account_get-opted-in-programs.md",
+    "endpoint": "GET /program/get_opted_in_programs"
+  },
+  "opt_in_to_program": {
+    "doc": "docs/api_account_opt-in-to-program.md",
+    "endpoint": "POST /program/opt_in"
+  },
+  "opt_out_of_program": {
+    "doc": "docs/api_account_opt-out-of-program.md",
+    "endpoint": "POST /program/opt_out"
+  },
+  "get_privileges": {
+    "doc": "docs/api_account_get-privileges.md",
+    "endpoint": "GET /privilege"
+  },
+  "get_campaigns": {
+    "doc": "docs/api_marketing_get-campaigns.md",
+    "endpoint": "GET /ad_campaign"
+  },
+  "get_campaign": {
+    "doc": "docs/api_marketing_get-campaign.md",
+    "endpoint": "GET /ad_campaign/{campaign_id}"
+  },
+  "create_ad_group": {
+    "doc": "docs/api_marketing_create-ad-group.md",
+    "endpoint": "POST /ad_campaign/{campaign_id}/ad_group"
+  },
+  "get_ad_groups": {
+    "doc": "docs/api_marketing_get-ad-groups.md",
+    "endpoint": "GET /ad_campaign/{campaign_id}/ad_group"
+  },
+  "get_ad_group": {
+    "doc": "docs/api_marketing_get-ad-group.md",
+    "endpoint": "GET /ad_campaign/{campaign_id}/ad_group/{ad_group_id}"
+  },
+  "update_ad_group": {
+    "doc": "docs/api_marketing_update-ad-group.md",
+    "endpoint": "PUT /ad_campaign/{campaign_id}/ad_group/{ad_group_id}"
+  },
+  "get_ads": {
+    "doc": "docs/api_marketing_get-ads.md",
+    "endpoint": "GET /ad"
+  },
+  "get_ad": {
+    "doc": "docs/api_marketing_get-ad.md",
+    "endpoint": "GET /ad/{ad_id}"
+  },
+  "create_ad_by_listing_id": {
+    "doc": "docs/api_marketing_create-ad-by-listing-id.md",
+    "endpoint": "POST /ad_campaign/{campaign_id}/ad"
+  },
+  "update_bid": {
+    "doc": "docs/api_marketing_update-bid.md",
+    "endpoint": "PUT /ad/{ad_id}/bid"
+  },
+  "delete_ad": {
+    "doc": "docs/api_marketing_delete-ad.md",
+    "endpoint": "DELETE /ad/{ad_id}"
+  },
+  "bulk_update_ads_status": {
+    "doc": "docs/api_marketing_bulk-update-ads-status-by-listing-id.md",
+    "endpoint": "POST /bulk_update_ads_status"
+  },
+  "bulk_create_ads_by_listing_id": {
+    "doc": "docs/api_marketing_bulk-create-ads-by-listing-id.md",
+    "endpoint": "POST /bulk_create_ads_by_listing_id"
+  },
+  "bulk_delete_ads_by_listing_id": {
+    "doc": "docs/api_marketing_bulk-delete-ads-by-listing-id.md",
+    "endpoint": "POST /bulk_delete_ads_by_listing_id"
+  },
+  "suggest_keywords": {
+    "doc": "docs/api_marketing_suggest-keywords.md",
+    "endpoint": "POST /suggest_keywords"
+  },
+  "suggest_budget": {
+    "doc": "docs/api_marketing_suggest-budget.md",
+    "endpoint": "POST /ad_campaign/{campaign_id}/suggest_budget"
+  },
+  "suggest_bids": {
+    "doc": "docs/api_marketing_suggest-bids.md",
+    "endpoint": "POST /ad_campaign/{campaign_id}/suggest_bids"
+  },
+  "get_payouts": {
+    "doc": "docs/api_finances_get-payouts.md",
+    "endpoint": "GET /payout"
+  },
+  "get_payout": {
+    "doc": "docs/api_finances_get-payout.md",
+    "endpoint": "GET /payout/{payout_Id}"
+  },
+  "get_transactions": {
+    "doc": "docs/api_finances_get-transactions.md",
+    "endpoint": "GET /transaction"
+  },
+  "get_transaction_summary": {
+    "doc": "docs/api_finances_get-transaction-summary.md",
+    "endpoint": "GET /transaction_summary"
+  },
+  "get_billing_activities": {
+    "doc": "docs/api_finances_get-billing-activities.md",
+    "endpoint": "GET /billing_activity"
+  },
+  "get_seller_funds_summary": {
+    "doc": "docs/api_finances_get-seller-funds-summary.md",
+    "endpoint": "GET /seller_funds_summary"
+  },
+  "get_payout_summary": {
+    "doc": "docs/api_finances_get-payout-summary.md",
+    "endpoint": "GET /payout_summary"
+  },
+  "get_tasks": {
+    "doc": "docs/api_feed_get-tasks.md",
+    "endpoint": "GET /task"
+  },
+  "get_task": {
+    "doc": "docs/api_feed_get-task.md",
+    "endpoint": "GET /task/{task_id}"
+  },
+  "get_inventory_tasks": {
+    "doc": "docs/api_feed_get-inventory-tasks.md",
+    "endpoint": "GET /inventory_task"
+  },
+  "get_inventory_task": {
+    "doc": "docs/api_feed_get-inventory-task.md",
+    "endpoint": "GET /inventory_task/{task_id}"
+  },
+  "get_order_tasks": {
+    "doc": "docs/api_feed_get-order-tasks.md",
+    "endpoint": "GET /order_task"
+  },
+  "get_order_task": {
+    "doc": "docs/api_feed_get-order-task.md",
+    "endpoint": "GET /order_task/{task_id}"
+  },
+  "create_inventory_task": {
+    "doc": "docs/api_feed_create-inventory-task.md",
+    "endpoint": "POST /inventory_task"
+  },
+  "create_order_task": {
+    "doc": "docs/api_feed_create-order-task.md",
+    "endpoint": "POST /order_task"
+  },
+  "create_schedule": {
+    "doc": "docs/api_feed_create-schedule.md",
+    "endpoint": "POST /schedule"
+  },
+  "get_schedules": {
+    "doc": "docs/api_feed_get-schedules.md",
+    "endpoint": "GET /schedule"
+  },
+  "get_schedule": {
+    "doc": "docs/api_feed_get-schedule.md",
+    "endpoint": "GET /schedule/{schedule_id}"
+  },
+  "update_schedule": {
+    "doc": "docs/api_feed_update-schedule.md",
+    "endpoint": "PUT /schedule/{schedule_id}"
+  },
+  "delete_schedule": {
+    "doc": "docs/api_feed_delete-schedule.md",
+    "endpoint": "DELETE /schedule/{schedule_id}"
+  },
+  "get_schedule_templates": {
+    "doc": "docs/api_feed_get-schedule-templates.md",
+    "endpoint": "GET /schedule_template"
+  },
+  "get_schedule_template": {
+    "doc": "docs/api_feed_get-schedule-template.md",
+    "endpoint": "GET /schedule_template/{schedule_template_id}"
+  },
+  "get_task_input_file": {
+    "doc": "docs/api_feed_get-input-file.md",
+    "endpoint": "GET /task/{task_id}/download_input_file"
+  },
+  "get_task_result_file": {
+    "doc": "docs/api_feed_get-result-file.md",
+    "endpoint": "GET /task/{task_id}/download_result_file"
+  },
+  "upload_task_file": {
+    "doc": "docs/api_feed_upload-file.md",
+    "endpoint": "POST /task/{task_id}/upload_file"
+  },
+  "create_shipping_quote": {
+    "doc": "docs/api_logistics_create-shipping-quote.md",
+    "endpoint": "POST /shipping_quote"
+  },
+  "get_shipping_quote": {
+    "doc": "docs/api_logistics_get-shipping-quote.md",
+    "endpoint": "GET /shipping_quote/{quote_id}"
+  },
+  "create_from_shipping_quote": {
+    "doc": "docs/api_logistics_create-from-shipping-quote.md",
+    "endpoint": "POST /shipping_quote/{quote_id}/create_shipment"
+  },
+  "get_shipment": {
+    "doc": "docs/api_logistics_get-shipment.md",
+    "endpoint": "GET /shipment/{shipment_id}"
+  },
+  "cancel_shipment": {
+    "doc": "docs/api_logistics_cancel-shipment.md",
+    "endpoint": "POST /shipment/{shipment_id}/cancel"
+  },
+  "download_label_file": {
+    "doc": "docs/api_logistics_download-label-file.md",
+    "endpoint": "GET /label/{label_id}/download"
+  },
+  "get_listing_violations": {
+    "doc": "docs/api_compliance_get-listing-violations.md",
+    "endpoint": "GET /listing_violation"
+  },
+  "get_listing_violations_summary": {
+    "doc": "docs/api_compliance_get-listing-violations-summary.md",
+    "endpoint": "GET /listing_violation_summary"
+  },
+  "get_traffic_report": {
+    "doc": "docs/api_analytics_get-traffic-report.md",
+    "endpoint": "GET /traffic_report"
+  },
+  "get_seller_standards_profile": {
+    "doc": "docs/api_analytics_get-seller-standards-profile.md",
+    "endpoint": "GET /seller_standards_profile/{program}/{cycle}"
+  },
+  "find_seller_standards_profiles": {
+    "doc": "docs/api_analytics_find-seller-standards-profiles.md",
+    "endpoint": "GET /seller_standards_profile"
+  },
+  "get_customer_service_metric": {
+    "doc": "docs/api_analytics_get-customer-service-metric.md",
+    "endpoint": "GET /customer_service_metric/{customer_service_metric_type}/{evaluation_type}"
+  },
+  "get_store": {
+    "doc": "docs/api_stores_get-store.md",
+    "endpoint": "GET /store"
+  },
+  "get_store_categories": {
+    "doc": "docs/api_stores_get-store-categories.md",
+    "endpoint": "GET /store/category"
+  },
+  "add_store_category": {
+    "doc": "docs/api_stores_add-store-category.md",
+    "endpoint": "POST /store/category"
+  },
+  "update_store_category": {
+    "doc": "docs/api_stores_rename-store-category.md",
+    "endpoint": "PUT /store/category/{category_id}"
+  },
+  "delete_store_category": {
+    "doc": "docs/api_stores_delete-store-category.md",
+    "endpoint": "DELETE /store/category/{category_id}"
+  },
+  "move_store_category": {
+    "doc": "docs/api_stores_move-store-category.md",
+    "endpoint": "POST /store/category/{category_id}/move"
+  },
+  "rename_store_category": {
+    "doc": "docs/api_stores_rename-store-category.md",
+    "endpoint": "POST /store/category/{category_id}/rename"
+  },
+  "get_store_tasks": {
+    "doc": "docs/api_stores_get-store-tasks.md",
+    "endpoint": "GET /store/task"
+  },
+  "get_store_task": {
+    "doc": "docs/api_stores_get-store-task.md",
+    "endpoint": "GET /store/task/{task_id}"
+  },
+  "get_payment_disputes": {
+    "doc": "docs/api_fulfillment_get-payment-dispute-summaries.md",
+    "endpoint": "GET /payment_dispute_summary"
+  },
+  "get_payment_dispute": {
+    "doc": "docs/api_fulfillment_get-payment-dispute.md",
+    "endpoint": "GET /payment_dispute/{payment_dispute_id}"
+  },
+  "accept_payment_dispute": {
+    "doc": "docs/api_fulfillment_accept-payment-dispute.md",
+    "endpoint": "POST /payment_dispute/{payment_dispute_id}/accept"
+  },
+  "contest_payment_dispute": {
+    "doc": "docs/api_fulfillment_contest-payment-dispute.md",
+    "endpoint": "POST /payment_dispute/{payment_dispute_id}/contest"
+  },
+  "add_evidence": {
+    "doc": "docs/api_fulfillment_add-evidence.md",
+    "endpoint": "POST /payment_dispute/{payment_dispute_id}/add_evidence"
+  },
+  "update_evidence": {
+    "doc": "docs/api_fulfillment_update-evidence.md",
+    "endpoint": "POST /payment_dispute/{payment_dispute_id}/update_evidence/{evidence_id}"
+  },
+  "get_evidence_content": {
+    "doc": "docs/api_fulfillment_fetch-evidence-content.md",
+    "endpoint": "GET /payment_dispute/{payment_dispute_id}/fetch_evidence_content/{evidence_id}"
+  },
+  "upload_evidence_file": {
+    "doc": "docs/api_fulfillment_upload-evidence-file.md",
+    "endpoint": "POST /payment_dispute/{payment_dispute_id}/upload_evidence_file"
+  },
+  "get_dispute_activities": {
+    "doc": "docs/api_fulfillment_get-activities.md",
+    "endpoint": "GET /payment_dispute/{payment_dispute_id}/activity"
+  },
+  "get_transfer": {
+    "doc": "docs/api_finances_get-transfer.md",
+    "endpoint": "GET /transfer/{transfer_Id}"
+  },
+  "find_eligible_items": {
+    "doc": "docs/api_negotiation_find-eligible-items.md",
+    "endpoint": "GET /eligible_items"
+  },
+  "send_offer_to_interested_buyers": {
+    "doc": "docs/api_negotiation_send-offer-to-interested-buyers.md",
+    "endpoint": "POST /item/{item_id}/send_offer"
+  },
+  "find_listing_recommendations": {
+    "doc": "docs/api_recommendation_find-listing-recommendations.md",
+    "endpoint": "GET /listing_recommendations"
+  },
+  "get_currencies": {
+    "doc": "docs/api_metadata_get-currencies.md",
+    "endpoint": "GET /currency"
+  },
+  "get_category_policies": {
+    "doc": "docs/api_metadata_get-category-policies.md",
+    "endpoint": "GET /category_policy"
+  },
+  "get_listing_structure_policies": {
+    "doc": "docs/api_metadata_get-listing-structure-policies.md",
+    "endpoint": "GET /listing_structure_policy"
+  },
+  "get_item_condition_policies": {
+    "doc": "docs/api_metadata_get-item-condition-policies.md",
+    "endpoint": "GET /item_condition_policy"
+  },
+  "get_product_compatibilities": {
+    "doc": "docs/api_inventory_get-product-compatibility.md",
+    "endpoint": "GET /inventory_item/{seller_sku}/product_compatibility"
+  },
+  "create_or_replace_product_compatibility": {
+    "doc": "docs/api_inventory_create-or-replace-product-compatibility.md",
+    "endpoint": "PUT /inventory_item/{seller_sku}/product_compatibility"
+  },
+  "delete_product_compatibility": {
+    "doc": "docs/api_inventory_delete-product-compatibility.md",
+    "endpoint": "DELETE /inventory_item/{seller_sku}/product_compatibility/{compatibility_id}"
+  },
+  "get_automotive_parts_compatibility_policies": {
+    "doc": "docs/api_metadata_get-automotive-parts-compatibility-policies.md",
+    "endpoint": "GET /automotive_parts_compatibility_policy"
+  },
+  "get_compatibilities_by_specification": {
+    "doc": "docs/api_metadata_get-compatibilities-by-specification.md",
+    "endpoint": "POST /compatibilities_by_specification"
+  },
+  "get_compatibility_property_names": {
+    "doc": "docs/api_metadata_get-compatibility-property-names.md",
+    "endpoint": "GET /compatibility_property_names/{category_id}"
+  },
+  "get_compatibility_property_values": {
+    "doc": "docs/api_metadata_get-compatibility-property-values.md",
+    "endpoint": "GET /compatibility_property_values/{category_id}/{property_name}"
+  },
+  "get_multi_compatibility_property_values": {
+    "doc": "docs/api_metadata_get-multi-compatibility-property-values.md",
+    "endpoint": "POST /multi_compatibility_property_values/{category_id}"
+  }
+}

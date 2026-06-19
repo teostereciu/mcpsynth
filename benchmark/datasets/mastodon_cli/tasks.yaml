@@ -1,0 +1,153 @@
+# Agent evaluation tasks for Mastodon CLI tool (source-code condition).
+#
+# Required env vars:
+#   MASTODON_ACCESS_TOKEN — OAuth access token
+#   MASTODON_BASE_URL     — e.g. https://mastodon.social
+#
+# Write tasks use clearly test-namespaced content. Status posts are public
+# but use #agenteval tag for easy filtering/cleanup.
+
+tasks:
+  # ---------- READ ----------
+
+  - id: get_authenticated_account
+    prompt: >
+      Find out which Mastodon account this token belongs to.
+      Report the username (acct field) and display name.
+    expected: acct
+    tags: [read]
+    # Tests: GET /api/v1/accounts/verify_credentials; "acct" is the username
+    # field in Mastodon's account object, distinct from "username".
+
+  - id: get_instance_info
+    prompt: >
+      Get information about this Mastodon instance.
+      Report the instance domain, software version, and total user count.
+    expected: stats
+    tags: [read]
+    # Tests: GET /api/v1/instance; "stats" is a nested object containing
+    # user_count, status_count, domain_count — specific to this endpoint.
+
+  - id: get_home_timeline
+    prompt: >
+      Fetch the home timeline for this account, limited to 5 statuses.
+      Report the account usernames and visibility of each status.
+    expected: visibility
+    tags: [read]
+    # Tests: GET /api/v1/timelines/home; "visibility" appears in status objects
+    # and only if the timeline endpoint (not the account endpoint) was called.
+
+  - id: get_public_timeline
+    prompt: >
+      Fetch the local public timeline, limited to 5 statuses.
+      Report the username of each author and a snippet of each status content.
+    expected: reblog
+    tags: [read]
+    # Tests: GET /api/v1/timelines/public; "reblog" is a field in status objects
+    # that appears only in correctly parsed timeline responses.
+
+  - id: search_content
+    prompt: >
+      Search Mastodon for accounts and hashtags matching "mastodon".
+      Report the top 3 account usernames and top 3 hashtag names found.
+    expected: hashtags
+    tags: [read]
+    # Tests: GET /api/v2/search; "hashtags" is a top-level key in the v2 search
+    # response, distinct from the v1 search response structure.
+
+  - id: get_notifications
+    prompt: >
+      Fetch the notifications for this account, up to 10.
+      Report how many there are and the type of each, or confirm there are none.
+    expected: type
+    tags: [read]
+    # Tests: GET /api/v1/notifications; "type" in notification objects
+    # (mention, follow, favourite, reblog, etc.).
+
+  - id: get_bookmarks
+    prompt: >
+      Fetch the statuses this account has bookmarked.
+      Report how many there are, or confirm there are none.
+    expected: bookmarked
+    tags: [read]
+    # Tests: GET /api/v1/bookmarks; "bookmarked" is a field in status objects
+    # returned by this endpoint, confirming the correct endpoint was called.
+
+  # ---------- WRITE ----------
+
+  - id: post_status
+    prompt: >
+      Post a new public status with the text:
+      "Agent eval test post — safe to ignore. #agenteval"
+      Report the status ID and URL.
+    expected: uri
+    tags: [write]
+    # Tests: POST /api/v1/statuses; "uri" is a field in the status response that
+    # contains the fediverse URI, distinct from the web "url" field.
+
+  - id: post_and_delete_status
+    prompt: >
+      Post a new status with the text "Agent eval delete test — safe to ignore."
+      Then delete that status. Confirm by reporting the ID of the deleted status.
+    expected: text
+    tags: [write, multi-step]
+    # Tests: post + delete; Mastodon's delete response returns the status text,
+    # so "text" confirms the deletion response was correctly parsed.
+
+  - id: post_and_favourite
+    prompt: >
+      Post a new status with the text "Agent eval favourite test — safe to ignore."
+      Then favourite that status.
+      Report whether the status is now marked as favourited.
+    expected: favourited
+    tags: [write, multi-step]
+    # Tests: post + favourite; "favourited": true must appear in the response.
+
+  - id: post_with_spoiler
+    prompt: >
+      Post a new status with:
+      - Spoiler text (content warning): "Agent eval CW test"
+      - Status content: "This is behind a content warning. #agenteval"
+      - Visibility: unlisted
+      Report the status ID and confirm the spoiler_text was stored.
+    expected: spoiler_text
+    tags: [write]
+    # Tests: POST /api/v1/statuses with spoiler_text and visibility params;
+    # "spoiler_text" in the response confirms optional params were passed correctly.
+
+  - id: create_and_delete_list
+    prompt: >
+      Create a Mastodon list named "Agent Eval Test List".
+      Then delete that list.
+      Report the list ID that was created and deleted.
+    expected: Agent Eval Test List
+    tags: [write, multi-step]
+    # Tests: create + delete list; the list title must appear in the create response.
+
+  - id: bookmark_status
+    prompt: >
+      Post a new status with the text "Agent eval bookmark test — safe to ignore."
+      Bookmark that status, then remove the bookmark.
+      Report whether the status is bookmarked after the removal.
+    expected: bookmarked
+    tags: [write, multi-step]
+    # Tests: post + bookmark + unbookmark; "bookmarked" field should be false after removal.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: get_nonexistent_status
+    prompt: >
+      Try to get a status with ID "99999999999999999999" (which does not exist).
+      Report what error or response you receive.
+    expected: error
+    tags: [read, error-handling]
+    # Tests: 404 handling for a nonexistent status ID.
+
+  - id: post_status_empty_content
+    prompt: >
+      Try to post a status with completely empty content (no text, no media attachment).
+      Report what error or response you receive.
+    expected: error
+    tags: [write, error-handling]
+    # Tests: validation error for empty status; Mastodon returns a 422 with an
+    # error field describing the validation failure.

@@ -1,0 +1,6 @@
+{
+  "get_github_rate_limit": {
+    "doc": "N/A - read_file tool malfunction",
+    "endpoint": "GET /rate_limit"
+  }
+}

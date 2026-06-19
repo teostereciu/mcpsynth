@@ -1,0 +1,828 @@
+{
+  "source": "Zulip REST API Documentation (Scraped)",
+  "scraped_from": "https://zulip.com/api",
+  "scrape_date": "2026-03-25T14:51:24.457333",
+  "total_pages": 164,
+  "files": [
+    {
+      "filename": "api_https:__zulip.com_api.md",
+      "title": "Zulip API documentation",
+      "url": "https://zulip.com/api"
+    },
+    {
+      "filename": "api_index.md",
+      "title": "Zulip API documentation",
+      "url": "https://zulip.com/api/"
+    },
+    {
+      "filename": "api_add-alert-words.md",
+      "title": "Add alert words | Zulip API documentation",
+      "url": "https://zulip.com/api/add-alert-words"
+    },
+    {
+      "filename": "api_add-apns-token.md",
+      "title": "Add an APNs device token | Zulip API documentation",
+      "url": "https://zulip.com/api/add-apns-token"
+    },
+    {
+      "filename": "api_add-code-playground.md",
+      "title": "Add a code playground | Zulip API documentation",
+      "url": "https://zulip.com/api/add-code-playground"
+    },
+    {
+      "filename": "api_add-default-stream.md",
+      "title": "Add a default channel | Zulip API documentation",
+      "url": "https://zulip.com/api/add-default-stream"
+    },
+    {
+      "filename": "api_add-fcm-token.md",
+      "title": "Add an FCM registration token | Zulip API documentation",
+      "url": "https://zulip.com/api/add-fcm-token"
+    },
+    {
+      "filename": "api_add-linkifier.md",
+      "title": "Add a linkifier | Zulip API documentation",
+      "url": "https://zulip.com/api/add-linkifier"
+    },
+    {
+      "filename": "api_add-navigation-view.md",
+      "title": "Add a navigation view | Zulip API documentation",
+      "url": "https://zulip.com/api/add-navigation-view"
+    },
+    {
+      "filename": "api_add-reaction.md",
+      "title": "Add an emoji reaction | Zulip API documentation",
+      "url": "https://zulip.com/api/add-reaction"
+    },
+    {
+      "filename": "api_api-keys.md",
+      "title": "API keys | Zulip API documentation",
+      "url": "https://zulip.com/api/api-keys"
+    },
+    {
+      "filename": "api_archive-stream.md",
+      "title": "Archive a channel | Zulip API documentation",
+      "url": "https://zulip.com/api/archive-stream"
+    },
+    {
+      "filename": "api_changelog.md",
+      "title": "API changelog | Zulip API documentation",
+      "url": "https://zulip.com/api/changelog"
+    },
+    {
+      "filename": "api_check-messages-match-narrow.md",
+      "title": "Check if messages match a narrow | Zulip API documentation",
+      "url": "https://zulip.com/api/check-messages-match-narrow"
+    },
+    {
+      "filename": "api_client-libraries.md",
+      "title": "Client libraries | Zulip API documentation",
+      "url": "https://zulip.com/api/client-libraries"
+    },
+    {
+      "filename": "api_configuring-python-bindings.md",
+      "title": "Configuring the Python bindings | Zulip API documentation",
+      "url": "https://zulip.com/api/configuring-python-bindings"
+    },
+    {
+      "filename": "api_construct-narrow.md",
+      "title": "Construct a narrow | Zulip API documentation",
+      "url": "https://zulip.com/api/construct-narrow"
+    },
+    {
+      "filename": "api_create-big-blue-button-video-call.md",
+      "title": "Create BigBlueButton video call | Zulip API documentation",
+      "url": "https://zulip.com/api/create-big-blue-button-video-call"
+    },
+    {
+      "filename": "api_create-channel.md",
+      "title": "Create a channel | Zulip API documentation",
+      "url": "https://zulip.com/api/create-channel"
+    },
+    {
+      "filename": "api_create-channel-folder.md",
+      "title": "Create a channel folder | Zulip API documentation",
+      "url": "https://zulip.com/api/create-channel-folder"
+    },
+    {
+      "filename": "api_create-constructor-groups-video-call.md",
+      "title": "Create Constructor Groups video call | Zulip API documentation",
+      "url": "https://zulip.com/api/create-constructor-groups-video-call"
+    },
+    {
+      "filename": "api_create-custom-profile-field.md",
+      "title": "Create a custom profile field | Zulip API documentation",
+      "url": "https://zulip.com/api/create-custom-profile-field"
+    },
+    {
+      "filename": "api_create-drafts.md",
+      "title": "Create drafts | Zulip API documentation",
+      "url": "https://zulip.com/api/create-drafts"
+    },
+    {
+      "filename": "api_create-invite-link.md",
+      "title": "Create a reusable invitation link | Zulip API documentation",
+      "url": "https://zulip.com/api/create-invite-link"
+    },
+    {
+      "filename": "api_create-message-reminder.md",
+      "title": "Create a message reminder | Zulip API documentation",
+      "url": "https://zulip.com/api/create-message-reminder"
+    },
+    {
+      "filename": "api_create-nextcloud-talk-video-call.md",
+      "title": "Create Nextcloud Talk video call | Zulip API documentation",
+      "url": "https://zulip.com/api/create-nextcloud-talk-video-call"
+    },
+    {
+      "filename": "api_create-saved-snippet.md",
+      "title": "Create a saved snippet | Zulip API documentation",
+      "url": "https://zulip.com/api/create-saved-snippet"
+    },
+    {
+      "filename": "api_create-scheduled-message.md",
+      "title": "Create a scheduled message | Zulip API documentation",
+      "url": "https://zulip.com/api/create-scheduled-message"
+    },
+    {
+      "filename": "api_create-stream.md",
+      "title": "Create a channel | Zulip API documentation",
+      "url": "https://zulip.com/api/create-stream"
+    },
+    {
+      "filename": "api_create-user.md",
+      "title": "Create a user | Zulip API documentation",
+      "url": "https://zulip.com/api/create-user"
+    },
+    {
+      "filename": "api_create-user-group.md",
+      "title": "Create a user group | Zulip API documentation",
+      "url": "https://zulip.com/api/create-user-group"
+    },
+    {
+      "filename": "api_deactivate-custom-emoji.md",
+      "title": "Deactivate custom emoji | Zulip API documentation",
+      "url": "https://zulip.com/api/deactivate-custom-emoji"
+    },
+    {
+      "filename": "api_deactivate-own-user.md",
+      "title": "Deactivate own user | Zulip API documentation",
+      "url": "https://zulip.com/api/deactivate-own-user"
+    },
+    {
+      "filename": "api_deactivate-user.md",
+      "title": "Deactivate a user | Zulip API documentation",
+      "url": "https://zulip.com/api/deactivate-user"
+    },
+    {
+      "filename": "api_deactivate-user-group.md",
+      "title": "Deactivate a user group | Zulip API documentation",
+      "url": "https://zulip.com/api/deactivate-user-group"
+    },
+    {
+      "filename": "api_delete-draft.md",
+      "title": "Delete a draft | Zulip API documentation",
+      "url": "https://zulip.com/api/delete-draft"
+    },
+    {
+      "filename": "api_delete-message.md",
+      "title": "Delete a message | Zulip API documentation",
+      "url": "https://zulip.com/api/delete-message"
+    },
+    {
+      "filename": "api_delete-queue.md",
+      "title": "Delete an event queue | Zulip API documentation",
+      "url": "https://zulip.com/api/delete-queue"
+    },
+    {
+      "filename": "api_delete-reminder.md",
+      "title": "Delete a reminder | Zulip API documentation",
+      "url": "https://zulip.com/api/delete-reminder"
+    },
+    {
+      "filename": "api_delete-saved-snippet.md",
+      "title": "Delete a saved snippet | Zulip API documentation",
+      "url": "https://zulip.com/api/delete-saved-snippet"
+    },
+    {
+      "filename": "api_delete-scheduled-message.md",
+      "title": "Delete a scheduled message | Zulip API documentation",
+      "url": "https://zulip.com/api/delete-scheduled-message"
+    },
+    {
+      "filename": "api_delete-topic.md",
+      "title": "Delete a topic | Zulip API documentation",
+      "url": "https://zulip.com/api/delete-topic"
+    },
+    {
+      "filename": "api_dev-fetch-api-key.md",
+      "title": "Fetch an API key (development only) | Zulip API documentation",
+      "url": "https://zulip.com/api/dev-fetch-api-key"
+    },
+    {
+      "filename": "api_e2ee-test-notify.md",
+      "title": "Send an E2EE test notification to mobile device(s) | Zulip API documentation",
+      "url": "https://zulip.com/api/e2ee-test-notify"
+    },
+    {
+      "filename": "api_edit-draft.md",
+      "title": "Edit a draft | Zulip API documentation",
+      "url": "https://zulip.com/api/edit-draft"
+    },
+    {
+      "filename": "api_edit-navigation-view.md",
+      "title": "Update the navigation view | Zulip API documentation",
+      "url": "https://zulip.com/api/edit-navigation-view"
+    },
+    {
+      "filename": "api_edit-saved-snippet.md",
+      "title": "Edit a saved snippet | Zulip API documentation",
+      "url": "https://zulip.com/api/edit-saved-snippet"
+    },
+    {
+      "filename": "api_export-realm.md",
+      "title": "Create a data export | Zulip API documentation",
+      "url": "https://zulip.com/api/export-realm"
+    },
+    {
+      "filename": "api_fetch-api-key.md",
+      "title": "Fetch an API key (production) | Zulip API documentation",
+      "url": "https://zulip.com/api/fetch-api-key"
+    },
+    {
+      "filename": "api_get-alert-words.md",
+      "title": "Get all alert words | Zulip API documentation",
+      "url": "https://zulip.com/api/get-alert-words"
+    },
+    {
+      "filename": "api_get-attachments.md",
+      "title": "Get attachments | Zulip API documentation",
+      "url": "https://zulip.com/api/get-attachments"
+    },
+    {
+      "filename": "api_get-bot-api-key.md",
+      "title": "Get a bot's API key | Zulip API documentation",
+      "url": "https://zulip.com/api/get-bot-api-key"
+    },
+    {
+      "filename": "api_get-channel-folders.md",
+      "title": "Get channel folders | Zulip API documentation",
+      "url": "https://zulip.com/api/get-channel-folders"
+    },
+    {
+      "filename": "api_get-custom-emoji.md",
+      "title": "Get all custom emoji | Zulip API documentation",
+      "url": "https://zulip.com/api/get-custom-emoji"
+    },
+    {
+      "filename": "api_get-custom-profile-fields.md",
+      "title": "Get all custom profile fields | Zulip API documentation",
+      "url": "https://zulip.com/api/get-custom-profile-fields"
+    },
+    {
+      "filename": "api_get-drafts.md",
+      "title": "Get drafts | Zulip API documentation",
+      "url": "https://zulip.com/api/get-drafts"
+    },
+    {
+      "filename": "api_get-events.md",
+      "title": "Get events from an event queue | Zulip API documentation",
+      "url": "https://zulip.com/api/get-events"
+    },
+    {
+      "filename": "api_get-file-temporary-url.md",
+      "title": "Get public temporary URL for an uploaded file | Zulip API documentation",
+      "url": "https://zulip.com/api/get-file-temporary-url"
+    },
+    {
+      "filename": "api_get-invites.md",
+      "title": "Get all invitations | Zulip API documentation",
+      "url": "https://zulip.com/api/get-invites"
+    },
+    {
+      "filename": "api_get-is-user-group-member.md",
+      "title": "Get user group membership status | Zulip API documentation",
+      "url": "https://zulip.com/api/get-is-user-group-member"
+    },
+    {
+      "filename": "api_get-linkifiers.md",
+      "title": "Get linkifiers | Zulip API documentation",
+      "url": "https://zulip.com/api/get-linkifiers"
+    },
+    {
+      "filename": "api_get-message.md",
+      "title": "Fetch a single message | Zulip API documentation",
+      "url": "https://zulip.com/api/get-message"
+    },
+    {
+      "filename": "api_get-message-history.md",
+      "title": "Get a message's edit history | Zulip API documentation",
+      "url": "https://zulip.com/api/get-message-history"
+    },
+    {
+      "filename": "api_get-messages.md",
+      "title": "Get messages | Zulip API documentation",
+      "url": "https://zulip.com/api/get-messages"
+    },
+    {
+      "filename": "api_get-navigation-views.md",
+      "title": "Get all navigation views | Zulip API documentation",
+      "url": "https://zulip.com/api/get-navigation-views"
+    },
+    {
+      "filename": "api_get-own-user.md",
+      "title": "Get own user | Zulip API documentation",
+      "url": "https://zulip.com/api/get-own-user"
+    },
+    {
+      "filename": "api_get-presence.md",
+      "title": "Get presence of all users | Zulip API documentation",
+      "url": "https://zulip.com/api/get-presence"
+    },
+    {
+      "filename": "api_get-read-receipts.md",
+      "title": "Get a message's read receipts | Zulip API documentation",
+      "url": "https://zulip.com/api/get-read-receipts"
+    },
+    {
+      "filename": "api_get-realm-export-consents.md",
+      "title": "Get data export consent state | Zulip API documentation",
+      "url": "https://zulip.com/api/get-realm-export-consents"
+    },
+    {
+      "filename": "api_get-realm-exports.md",
+      "title": "Get all data exports | Zulip API documentation",
+      "url": "https://zulip.com/api/get-realm-exports"
+    },
+    {
+      "filename": "api_get-reminders.md",
+      "title": "Get reminders | Zulip API documentation",
+      "url": "https://zulip.com/api/get-reminders"
+    },
+    {
+      "filename": "api_get-saved-snippets.md",
+      "title": "Get all saved snippets | Zulip API documentation",
+      "url": "https://zulip.com/api/get-saved-snippets"
+    },
+    {
+      "filename": "api_get-scheduled-messages.md",
+      "title": "Get scheduled messages | Zulip API documentation",
+      "url": "https://zulip.com/api/get-scheduled-messages"
+    },
+    {
+      "filename": "api_get-server-settings.md",
+      "title": "Get server settings | Zulip API documentation",
+      "url": "https://zulip.com/api/get-server-settings"
+    },
+    {
+      "filename": "api_get-stream-by-id.md",
+      "title": "Get a channel by ID | Zulip API documentation",
+      "url": "https://zulip.com/api/get-stream-by-id"
+    },
+    {
+      "filename": "api_get-stream-email-address.md",
+      "title": "Get channel's email address | Zulip API documentation",
+      "url": "https://zulip.com/api/get-stream-email-address"
+    },
+    {
+      "filename": "api_get-stream-id.md",
+      "title": "Get channel ID | Zulip API documentation",
+      "url": "https://zulip.com/api/get-stream-id"
+    },
+    {
+      "filename": "api_get-stream-topics.md",
+      "title": "Get topics in a channel | Zulip API documentation",
+      "url": "https://zulip.com/api/get-stream-topics"
+    },
+    {
+      "filename": "api_get-streams.md",
+      "title": "Get all channels | Zulip API documentation",
+      "url": "https://zulip.com/api/get-streams"
+    },
+    {
+      "filename": "api_get-subscribers.md",
+      "title": "Get channel subscribers | Zulip API documentation",
+      "url": "https://zulip.com/api/get-subscribers"
+    },
+    {
+      "filename": "api_get-subscription-status.md",
+      "title": "Get subscription status | Zulip API documentation",
+      "url": "https://zulip.com/api/get-subscription-status"
+    },
+    {
+      "filename": "api_get-subscriptions.md",
+      "title": "Get subscribed channels | Zulip API documentation",
+      "url": "https://zulip.com/api/get-subscriptions"
+    },
+    {
+      "filename": "api_get-user.md",
+      "title": "Get a user | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user"
+    },
+    {
+      "filename": "api_get-user-by-email.md",
+      "title": "Get a user by email | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user-by-email"
+    },
+    {
+      "filename": "api_get-user-channels.md",
+      "title": "Get a user's subscribed channels | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user-channels"
+    },
+    {
+      "filename": "api_get-user-group-members.md",
+      "title": "Get user group members | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user-group-members"
+    },
+    {
+      "filename": "api_get-user-group-subgroups.md",
+      "title": "Get subgroups of a user group | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user-group-subgroups"
+    },
+    {
+      "filename": "api_get-user-groups.md",
+      "title": "Get user groups | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user-groups"
+    },
+    {
+      "filename": "api_get-user-presence.md",
+      "title": "Get a user's presence | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user-presence"
+    },
+    {
+      "filename": "api_get-user-status.md",
+      "title": "Get a user's status | Zulip API documentation",
+      "url": "https://zulip.com/api/get-user-status"
+    },
+    {
+      "filename": "api_get-users.md",
+      "title": "Get users | Zulip API documentation",
+      "url": "https://zulip.com/api/get-users"
+    },
+    {
+      "filename": "api_group-setting-values.md",
+      "title": "Group-setting values | Zulip API documentation",
+      "url": "https://zulip.com/api/group-setting-values"
+    },
+    {
+      "filename": "api_http-headers.md",
+      "title": "HTTP headers | Zulip API documentation",
+      "url": "https://zulip.com/api/http-headers"
+    },
+    {
+      "filename": "api_installation-instructions.md",
+      "title": "Installation instructions | Zulip API documentation",
+      "url": "https://zulip.com/api/installation-instructions"
+    },
+    {
+      "filename": "api_jwt-fetch-api-key.md",
+      "title": "Fetch an API key (JWT) | Zulip API documentation",
+      "url": "https://zulip.com/api/jwt-fetch-api-key"
+    },
+    {
+      "filename": "api_mark-all-as-read.md",
+      "title": "Mark all messages as read | Zulip API documentation",
+      "url": "https://zulip.com/api/mark-all-as-read"
+    },
+    {
+      "filename": "api_mark-stream-as-read.md",
+      "title": "Mark messages in a channel as read | Zulip API documentation",
+      "url": "https://zulip.com/api/mark-stream-as-read"
+    },
+    {
+      "filename": "api_mark-topic-as-read.md",
+      "title": "Mark messages in a topic as read | Zulip API documentation",
+      "url": "https://zulip.com/api/mark-topic-as-read"
+    },
+    {
+      "filename": "api_message-formatting.md",
+      "title": "Message formatting | Zulip API documentation",
+      "url": "https://zulip.com/api/message-formatting"
+    },
+    {
+      "filename": "api_mobile-notifications.md",
+      "title": "Mobile notifications | Zulip API documentation",
+      "url": "https://zulip.com/api/mobile-notifications"
+    },
+    {
+      "filename": "api_mute-topic.md",
+      "title": "Topic muting | Zulip API documentation",
+      "url": "https://zulip.com/api/mute-topic"
+    },
+    {
+      "filename": "api_mute-user.md",
+      "title": "Mute a user | Zulip API documentation",
+      "url": "https://zulip.com/api/mute-user"
+    },
+    {
+      "filename": "api_outgoing-webhook-payload.md",
+      "title": "Outgoing webhook payloads | Zulip API documentation",
+      "url": "https://zulip.com/api/outgoing-webhook-payload"
+    },
+    {
+      "filename": "api_patch-channel-folders.md",
+      "title": "Reorder channel folders | Zulip API documentation",
+      "url": "https://zulip.com/api/patch-channel-folders"
+    },
+    {
+      "filename": "api_reactivate-user.md",
+      "title": "Reactivate a user | Zulip API documentation",
+      "url": "https://zulip.com/api/reactivate-user"
+    },
+    {
+      "filename": "api_real-time-events.md",
+      "title": "Real-time events API | Zulip API documentation",
+      "url": "https://zulip.com/api/real-time-events"
+    },
+    {
+      "filename": "api_regenerate-api-key.md",
+      "title": "Regenerate your API key | Zulip API documentation",
+      "url": "https://zulip.com/api/regenerate-api-key"
+    },
+    {
+      "filename": "api_regenerate-bot-api-key.md",
+      "title": "Regenerate a bot's API key | Zulip API documentation",
+      "url": "https://zulip.com/api/regenerate-bot-api-key"
+    },
+    {
+      "filename": "api_register-client-device.md",
+      "title": "Register a logged-in device | Zulip API documentation",
+      "url": "https://zulip.com/api/register-client-device"
+    },
+    {
+      "filename": "api_register-push-device.md",
+      "title": "Register E2EE push device | Zulip API documentation",
+      "url": "https://zulip.com/api/register-push-device"
+    },
+    {
+      "filename": "api_register-queue.md",
+      "title": "Register an event queue | Zulip API documentation",
+      "url": "https://zulip.com/api/register-queue"
+    },
+    {
+      "filename": "api_register-remote-push-device.md",
+      "title": "Register E2EE push device to bouncer | Zulip API documentation",
+      "url": "https://zulip.com/api/register-remote-push-device"
+    },
+    {
+      "filename": "api_remove-alert-words.md",
+      "title": "Remove alert words | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-alert-words"
+    },
+    {
+      "filename": "api_remove-apns-token.md",
+      "title": "Remove an APNs device token | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-apns-token"
+    },
+    {
+      "filename": "api_remove-attachment.md",
+      "title": "Delete an attachment | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-attachment"
+    },
+    {
+      "filename": "api_remove-client-device.md",
+      "title": "Remove a registered device | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-client-device"
+    },
+    {
+      "filename": "api_remove-code-playground.md",
+      "title": "Remove a code playground | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-code-playground"
+    },
+    {
+      "filename": "api_remove-default-stream.md",
+      "title": "Remove a default channel | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-default-stream"
+    },
+    {
+      "filename": "api_remove-fcm-token.md",
+      "title": "Remove an FCM registration token | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-fcm-token"
+    },
+    {
+      "filename": "api_remove-linkifier.md",
+      "title": "Remove a linkifier | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-linkifier"
+    },
+    {
+      "filename": "api_remove-navigation-view.md",
+      "title": "Remove a navigation view | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-navigation-view"
+    },
+    {
+      "filename": "api_remove-reaction.md",
+      "title": "Remove an emoji reaction | Zulip API documentation",
+      "url": "https://zulip.com/api/remove-reaction"
+    },
+    {
+      "filename": "api_render-message.md",
+      "title": "Render a message | Zulip API documentation",
+      "url": "https://zulip.com/api/render-message"
+    },
+    {
+      "filename": "api_reorder-custom-profile-fields.md",
+      "title": "Reorder custom profile fields | Zulip API documentation",
+      "url": "https://zulip.com/api/reorder-custom-profile-fields"
+    },
+    {
+      "filename": "api_reorder-linkifiers.md",
+      "title": "Reorder linkifiers | Zulip API documentation",
+      "url": "https://zulip.com/api/reorder-linkifiers"
+    },
+    {
+      "filename": "api_report-message.md",
+      "title": "Report a message | Zulip API documentation",
+      "url": "https://zulip.com/api/report-message"
+    },
+    {
+      "filename": "api_resend-email-invite.md",
+      "title": "Resend an email invitation | Zulip API documentation",
+      "url": "https://zulip.com/api/resend-email-invite"
+    },
+    {
+      "filename": "api_rest.md",
+      "title": "The Zulip REST API | Zulip API documentation",
+      "url": "https://zulip.com/api/rest"
+    },
+    {
+      "filename": "api_rest-error-handling.md",
+      "title": "Error handling | Zulip API documentation",
+      "url": "https://zulip.com/api/rest-error-handling"
+    },
+    {
+      "filename": "api_revoke-email-invite.md",
+      "title": "Revoke an email invitation | Zulip API documentation",
+      "url": "https://zulip.com/api/revoke-email-invite"
+    },
+    {
+      "filename": "api_revoke-invite-link.md",
+      "title": "Revoke a reusable invitation link | Zulip API documentation",
+      "url": "https://zulip.com/api/revoke-invite-link"
+    },
+    {
+      "filename": "api_roles-and-permissions.md",
+      "title": "Roles and permissions | Zulip API documentation",
+      "url": "https://zulip.com/api/roles-and-permissions"
+    },
+    {
+      "filename": "api_send-invites.md",
+      "title": "Send invitations | Zulip API documentation",
+      "url": "https://zulip.com/api/send-invites"
+    },
+    {
+      "filename": "api_send-message.md",
+      "title": "Send a message | Zulip API documentation",
+      "url": "https://zulip.com/api/send-message"
+    },
+    {
+      "filename": "api_set-typing-status.md",
+      "title": "Set \"typing\" status | Zulip API documentation",
+      "url": "https://zulip.com/api/set-typing-status"
+    },
+    {
+      "filename": "api_set-typing-status-for-message-edit.md",
+      "title": "Set \"typing\" status for message editing | Zulip API documentation",
+      "url": "https://zulip.com/api/set-typing-status-for-message-edit"
+    },
+    {
+      "filename": "api_subscribe.md",
+      "title": "Subscribe to a channel | Zulip API documentation",
+      "url": "https://zulip.com/api/subscribe"
+    },
+    {
+      "filename": "api_test-notify.md",
+      "title": "Send a test notification to mobile device(s) | Zulip API documentation",
+      "url": "https://zulip.com/api/test-notify"
+    },
+    {
+      "filename": "api_test-welcome-bot-custom-message.md",
+      "title": "Test welcome bot custom message | Zulip API documentation",
+      "url": "https://zulip.com/api/test-welcome-bot-custom-message"
+    },
+    {
+      "filename": "api_unmute-user.md",
+      "title": "Unmute a user | Zulip API documentation",
+      "url": "https://zulip.com/api/unmute-user"
+    },
+    {
+      "filename": "api_unsubscribe.md",
+      "title": "Unsubscribe from a channel | Zulip API documentation",
+      "url": "https://zulip.com/api/unsubscribe"
+    },
+    {
+      "filename": "api_update-channel-folder.md",
+      "title": "Update a channel folder | Zulip API documentation",
+      "url": "https://zulip.com/api/update-channel-folder"
+    },
+    {
+      "filename": "api_update-linkifier.md",
+      "title": "Update a linkifier | Zulip API documentation",
+      "url": "https://zulip.com/api/update-linkifier"
+    },
+    {
+      "filename": "api_update-message.md",
+      "title": "Edit a message | Zulip API documentation",
+      "url": "https://zulip.com/api/update-message"
+    },
+    {
+      "filename": "api_update-message-flags.md",
+      "title": "Update personal message flags | Zulip API documentation",
+      "url": "https://zulip.com/api/update-message-flags"
+    },
+    {
+      "filename": "api_update-message-flags-for-narrow.md",
+      "title": "Update personal message flags for narrow | Zulip API documentation",
+      "url": "https://zulip.com/api/update-message-flags-for-narrow"
+    },
+    {
+      "filename": "api_update-presence.md",
+      "title": "Update your presence | Zulip API documentation",
+      "url": "https://zulip.com/api/update-presence"
+    },
+    {
+      "filename": "api_update-realm-user-settings-defaults.md",
+      "title": "Update realm-level defaults of user settings | Zulip API documentation",
+      "url": "https://zulip.com/api/update-realm-user-settings-defaults"
+    },
+    {
+      "filename": "api_update-scheduled-message.md",
+      "title": "Edit a scheduled message | Zulip API documentation",
+      "url": "https://zulip.com/api/update-scheduled-message"
+    },
+    {
+      "filename": "api_update-settings.md",
+      "title": "Update settings | Zulip API documentation",
+      "url": "https://zulip.com/api/update-settings"
+    },
+    {
+      "filename": "api_update-status.md",
+      "title": "Update your status | Zulip API documentation",
+      "url": "https://zulip.com/api/update-status"
+    },
+    {
+      "filename": "api_update-status-for-user.md",
+      "title": "Update user status | Zulip API documentation",
+      "url": "https://zulip.com/api/update-status-for-user"
+    },
+    {
+      "filename": "api_update-stream.md",
+      "title": "Update a channel | Zulip API documentation",
+      "url": "https://zulip.com/api/update-stream"
+    },
+    {
+      "filename": "api_update-subscription-property.md",
+      "title": "Update a subscription setting | Zulip API documentation",
+      "url": "https://zulip.com/api/update-subscription-property"
+    },
+    {
+      "filename": "api_update-subscription-settings.md",
+      "title": "Bulk update subscription settings | Zulip API documentation",
+      "url": "https://zulip.com/api/update-subscription-settings"
+    },
+    {
+      "filename": "api_update-user.md",
+      "title": "Update a user | Zulip API documentation",
+      "url": "https://zulip.com/api/update-user"
+    },
+    {
+      "filename": "api_update-user-by-email.md",
+      "title": "Update a user by email | Zulip API documentation",
+      "url": "https://zulip.com/api/update-user-by-email"
+    },
+    {
+      "filename": "api_update-user-group.md",
+      "title": "Update a user group | Zulip API documentation",
+      "url": "https://zulip.com/api/update-user-group"
+    },
+    {
+      "filename": "api_update-user-group-members.md",
+      "title": "Update user group members | Zulip API documentation",
+      "url": "https://zulip.com/api/update-user-group-members"
+    },
+    {
+      "filename": "api_update-user-group-subgroups.md",
+      "title": "Update subgroups of a user group | Zulip API documentation",
+      "url": "https://zulip.com/api/update-user-group-subgroups"
+    },
+    {
+      "filename": "api_update-user-topic.md",
+      "title": "Update personal preferences for a topic | Zulip API documentation",
+      "url": "https://zulip.com/api/update-user-topic"
+    },
+    {
+      "filename": "api_upload-custom-emoji.md",
+      "title": "Upload custom emoji | Zulip API documentation",
+      "url": "https://zulip.com/api/upload-custom-emoji"
+    },
+    {
+      "filename": "api_upload-file.md",
+      "title": "Upload a file | Zulip API documentation",
+      "url": "https://zulip.com/api/upload-file"
+    },
+    {
+      "filename": "api_zulip-urls.md",
+      "title": "Zulip URLs | Zulip API documentation",
+      "url": "https://zulip.com/api/zulip-urls"
+    }
+  ]
+}

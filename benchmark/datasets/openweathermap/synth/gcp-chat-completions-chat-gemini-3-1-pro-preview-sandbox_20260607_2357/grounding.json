@@ -1,0 +1,22 @@
+{
+  "get_current_weather": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_5day_forecast": {
+    "doc": "docs/api_5day_forecast.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_air_pollution": {
+    "doc": "docs/api_air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution"
+  },
+  "geocode_direct": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/direct"
+  },
+  "geocode_reverse": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/reverse"
+  }
+}

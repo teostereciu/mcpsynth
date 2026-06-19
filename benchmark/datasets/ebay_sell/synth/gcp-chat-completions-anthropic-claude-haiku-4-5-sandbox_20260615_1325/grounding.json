@@ -1,0 +1,844 @@
+{
+  "tools": [
+    {
+      "name": "create_inventory_item",
+      "description": "Create or replace an inventory item",
+      "endpoint": "PUT /inventory_item/{sku}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_create-or-replace-inventory-item.md"
+    },
+    {
+      "name": "get_inventory_item",
+      "description": "Retrieve details of a specific inventory item by SKU",
+      "endpoint": "GET /inventory_item/{sku}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_get-inventory-item.md"
+    },
+    {
+      "name": "get_inventory_items",
+      "description": "Retrieve a list of inventory items",
+      "endpoint": "GET /inventory_item",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_get-inventory-items.md"
+    },
+    {
+      "name": "delete_inventory_item",
+      "description": "Delete an inventory item by SKU",
+      "endpoint": "DELETE /inventory_item/{sku}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_delete-inventory-item.md"
+    },
+    {
+      "name": "create_offer",
+      "description": "Create an offer for an inventory item",
+      "endpoint": "POST /offer",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_create-offer.md"
+    },
+    {
+      "name": "get_offer",
+      "description": "Retrieve details of a specific offer by offer ID",
+      "endpoint": "GET /offer/{offerId}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_get-offer.md"
+    },
+    {
+      "name": "get_offers",
+      "description": "Retrieve a list of offers",
+      "endpoint": "GET /offer",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_get-offers.md"
+    },
+    {
+      "name": "update_offer",
+      "description": "Update an existing offer",
+      "endpoint": "PUT /offer/{offerId}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_update-offer.md"
+    },
+    {
+      "name": "delete_offer",
+      "description": "Delete an offer by offer ID",
+      "endpoint": "DELETE /offer/{offerId}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_delete-offer.md"
+    },
+    {
+      "name": "publish_offer",
+      "description": "Publish an offer to create an active eBay listing",
+      "endpoint": "POST /offer/{offerId}/publish",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_publish-offer.md"
+    },
+    {
+      "name": "withdraw_offer",
+      "description": "Withdraw an offer to end the active eBay listing",
+      "endpoint": "POST /offer/{offerId}/withdraw",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_withdraw-offer.md"
+    },
+    {
+      "name": "get_listing_fees",
+      "description": "Get estimated fees for publishing offers",
+      "endpoint": "POST /offer/get_listing_fees",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_get-listing-fees.md"
+    },
+    {
+      "name": "create_inventory_location",
+      "description": "Create an inventory location",
+      "endpoint": "POST /location/{merchantLocationKey}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_create-inventory-location.md"
+    },
+    {
+      "name": "get_inventory_location",
+      "description": "Retrieve details of a specific inventory location",
+      "endpoint": "GET /location/{merchantLocationKey}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_get-inventory-location.md"
+    },
+    {
+      "name": "get_inventory_locations",
+      "description": "Retrieve all inventory locations",
+      "endpoint": "GET /location",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_get-inventory-locations.md"
+    },
+    {
+      "name": "update_inventory_location",
+      "description": "Update an inventory location",
+      "endpoint": "PUT /location/{merchantLocationKey}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_update-inventory-location.md"
+    },
+    {
+      "name": "delete_inventory_location",
+      "description": "Delete an inventory location",
+      "endpoint": "DELETE /location/{merchantLocationKey}",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_delete-inventory-location.md"
+    },
+    {
+      "name": "enable_inventory_location",
+      "description": "Enable an inventory location",
+      "endpoint": "POST /location/{merchantLocationKey}/enable",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_enable-inventory-location.md"
+    },
+    {
+      "name": "disable_inventory_location",
+      "description": "Disable an inventory location",
+      "endpoint": "POST /location/{merchantLocationKey}/disable",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_disable-inventory-location.md"
+    },
+    {
+      "name": "bulk_create_offer",
+      "description": "Create multiple offers in a single call (up to 25)",
+      "endpoint": "POST /bulk_offer",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_bulk-create-offer.md"
+    },
+    {
+      "name": "bulk_publish_offer",
+      "description": "Publish multiple offers in a single call (up to 25)",
+      "endpoint": "POST /bulk_publish_offer",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_bulk-publish-offer.md"
+    },
+    {
+      "name": "bulk_update_price_quantity",
+      "description": "Update price and quantity for multiple offers in a single call",
+      "endpoint": "POST /bulk_update_price_quantity",
+      "api": "Inventory API (v1)",
+      "source": "docs/api_inventory_bulk-update-price-quantity.md"
+    },
+    {
+      "name": "get_orders",
+      "description": "Retrieve a list of orders",
+      "endpoint": "GET /order",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_get-orders.md"
+    },
+    {
+      "name": "get_order",
+      "description": "Retrieve details of a specific order by order ID",
+      "endpoint": "GET /order/{orderId}",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_get-order.md"
+    },
+    {
+      "name": "create_shipping_fulfillment",
+      "description": "Create a shipping fulfillment for an order",
+      "endpoint": "POST /order/{orderId}/shipping_fulfillment",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_create-shipping-fulfillment.md"
+    },
+    {
+      "name": "get_shipping_fulfillments",
+      "description": "Retrieve all shipping fulfillments for an order",
+      "endpoint": "GET /order/{orderId}/shipping_fulfillment",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_get-shipping-fulfillments.md"
+    },
+    {
+      "name": "get_shipping_fulfillment",
+      "description": "Retrieve details of a specific shipping fulfillment",
+      "endpoint": "GET /order/{orderId}/shipping_fulfillment/{fulfillmentId}",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_get-shipping-fulfillment.md"
+    },
+    {
+      "name": "issue_refund",
+      "description": "Issue a refund for an order or line item",
+      "endpoint": "POST /order/{order_id}/issue_refund",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_issue-refund.md"
+    },
+    {
+      "name": "get_payment_disputes",
+      "description": "Retrieve payment dispute summaries",
+      "endpoint": "GET /payment_dispute_summary",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_get-payment-disputes.md"
+    },
+    {
+      "name": "get_payment_dispute",
+      "description": "Retrieve details of a specific payment dispute",
+      "endpoint": "GET /payment_dispute/{dispute_id}",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_get-payment-dispute.md"
+    },
+    {
+      "name": "accept_payment_dispute",
+      "description": "Accept a payment dispute",
+      "endpoint": "POST /payment_dispute/{dispute_id}/accept",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_accept-payment-dispute.md"
+    },
+    {
+      "name": "contest_payment_dispute",
+      "description": "Contest a payment dispute",
+      "endpoint": "POST /payment_dispute/{dispute_id}/contest",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_contest-payment-dispute.md"
+    },
+    {
+      "name": "add_evidence",
+      "description": "Add evidence to a payment dispute",
+      "endpoint": "POST /payment_dispute/{dispute_id}/add_evidence",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_add-evidence.md"
+    },
+    {
+      "name": "update_evidence",
+      "description": "Update evidence in a payment dispute",
+      "endpoint": "PUT /payment_dispute/{dispute_id}/evidence/{evidence_id}",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_update-evidence.md"
+    },
+    {
+      "name": "get_fulfillment_activities",
+      "description": "Retrieve fulfillment activities for an order",
+      "endpoint": "GET /order/{orderId}/activities",
+      "api": "Fulfillment API (v1)",
+      "source": "docs/api_fulfillment_get-fulfillment-activities.md"
+    },
+    {
+      "name": "create_fulfillment_policy",
+      "description": "Create a fulfillment policy",
+      "endpoint": "POST /fulfillment_policy/",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_create-fulfillment-policy.md"
+    },
+    {
+      "name": "get_fulfillment_policy",
+      "description": "Retrieve details of a specific fulfillment policy",
+      "endpoint": "GET /fulfillment_policy/{fulfillmentPolicyId}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-fulfillment-policy.md"
+    },
+    {
+      "name": "get_fulfillment_policies",
+      "description": "Retrieve all fulfillment policies",
+      "endpoint": "GET /fulfillment_policy",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-fulfillment-policies.md"
+    },
+    {
+      "name": "get_fulfillment_policy_by_name",
+      "description": "Retrieve a fulfillment policy by name",
+      "endpoint": "GET /fulfillment_policy_by_name",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-fulfillment-policy-by-name.md"
+    },
+    {
+      "name": "update_fulfillment_policy",
+      "description": "Update a fulfillment policy",
+      "endpoint": "PUT /fulfillment_policy/{fulfillmentPolicyId}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_update-fulfillment-policy.md"
+    },
+    {
+      "name": "delete_fulfillment_policy",
+      "description": "Delete a fulfillment policy",
+      "endpoint": "DELETE /fulfillment_policy/{fulfillmentPolicyId}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_delete-fulfillment-policy.md"
+    },
+    {
+      "name": "create_payment_policy",
+      "description": "Create a payment policy",
+      "endpoint": "POST /payment_policy",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_create-payment-policy.md"
+    },
+    {
+      "name": "get_payment_policy",
+      "description": "Retrieve details of a specific payment policy",
+      "endpoint": "GET /payment_policy/{payment_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-payment-policy.md"
+    },
+    {
+      "name": "get_payment_policies",
+      "description": "Retrieve all payment policies",
+      "endpoint": "GET /payment_policy",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-payment-policies.md"
+    },
+    {
+      "name": "get_payment_policy_by_name",
+      "description": "Retrieve a payment policy by name",
+      "endpoint": "GET /payment_policy_by_name",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-payment-policy-by-name.md"
+    },
+    {
+      "name": "update_payment_policy",
+      "description": "Update a payment policy",
+      "endpoint": "PUT /payment_policy/{payment_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_update-payment-policy.md"
+    },
+    {
+      "name": "delete_payment_policy",
+      "description": "Delete a payment policy",
+      "endpoint": "DELETE /payment_policy/{payment_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_delete-payment-policy.md"
+    },
+    {
+      "name": "create_return_policy",
+      "description": "Create a return policy",
+      "endpoint": "POST /return_policy",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_create-return-policy.md"
+    },
+    {
+      "name": "get_return_policy",
+      "description": "Retrieve details of a specific return policy",
+      "endpoint": "GET /return_policy/{return_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-return-policy.md"
+    },
+    {
+      "name": "get_return_policies",
+      "description": "Retrieve all return policies",
+      "endpoint": "GET /return_policy",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-return-policies.md"
+    },
+    {
+      "name": "get_return_policy_by_name",
+      "description": "Retrieve a return policy by name",
+      "endpoint": "GET /return_policy_by_name",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-return-policy-by-name.md"
+    },
+    {
+      "name": "update_return_policy",
+      "description": "Update a return policy",
+      "endpoint": "PUT /return_policy/{return_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_update-return-policy.md"
+    },
+    {
+      "name": "delete_return_policy",
+      "description": "Delete a return policy",
+      "endpoint": "DELETE /return_policy/{return_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_delete-return-policy.md"
+    },
+    {
+      "name": "create_custom_policy",
+      "description": "Create a custom policy",
+      "endpoint": "POST /custom_policy",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_create-custom-policy.md"
+    },
+    {
+      "name": "get_custom_policy",
+      "description": "Retrieve details of a specific custom policy",
+      "endpoint": "GET /custom_policy/{custom_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-custom-policy.md"
+    },
+    {
+      "name": "get_custom_policies",
+      "description": "Retrieve all custom policies",
+      "endpoint": "GET /custom_policy",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-custom-policies.md"
+    },
+    {
+      "name": "update_custom_policy",
+      "description": "Update a custom policy",
+      "endpoint": "PUT /custom_policy/{custom_policy_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_update-custom-policy.md"
+    },
+    {
+      "name": "get_sales_tax",
+      "description": "Retrieve sales tax information",
+      "endpoint": "GET /sales_tax",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-sales-tax.md"
+    },
+    {
+      "name": "get_sales_taxes",
+      "description": "Retrieve all sales tax information",
+      "endpoint": "GET /sales_tax",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-sales-taxes.md"
+    },
+    {
+      "name": "create_or_replace_sales_tax",
+      "description": "Create or replace sales tax information",
+      "endpoint": "PUT /sales_tax/{country_code}/{jurisdiction_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_create-or-replace-sales-tax.md"
+    },
+    {
+      "name": "delete_sales_tax",
+      "description": "Delete sales tax information",
+      "endpoint": "DELETE /sales_tax/{country_code}/{jurisdiction_id}",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_delete-sales-tax.md"
+    },
+    {
+      "name": "get_privileges",
+      "description": "Retrieve seller privileges",
+      "endpoint": "GET /privilege",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-privileges.md"
+    },
+    {
+      "name": "get_opted_in_programs",
+      "description": "Retrieve programs the seller has opted into",
+      "endpoint": "GET /program/opted_in",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-opted-in-programs.md"
+    },
+    {
+      "name": "opt_in_to_program",
+      "description": "Opt into a seller program",
+      "endpoint": "POST /program/opt_in",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_opt-in-to-program.md"
+    },
+    {
+      "name": "opt_out_of_program",
+      "description": "Opt out of a seller program",
+      "endpoint": "POST /program/opt_out",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_opt-out-of-program.md"
+    },
+    {
+      "name": "get_rate_tables",
+      "description": "Retrieve shipping rate tables",
+      "endpoint": "GET /rate_table",
+      "api": "Account API (v1)",
+      "source": "docs/api_account_get-rate-tables.md"
+    },
+    {
+      "name": "create_campaign",
+      "description": "Create an advertising campaign",
+      "endpoint": "POST /ad_campaign",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_create-ad-campaign.md"
+    },
+    {
+      "name": "get_campaign",
+      "description": "Retrieve details of a specific campaign",
+      "endpoint": "GET /ad_campaign/{campaign_id}",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_get-ad-campaign.md"
+    },
+    {
+      "name": "get_campaigns",
+      "description": "Retrieve a list of campaigns",
+      "endpoint": "GET /ad_campaign",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_get-ad-campaigns.md"
+    },
+    {
+      "name": "update_campaign",
+      "description": "Update an advertising campaign",
+      "endpoint": "PUT /ad_campaign/{campaign_id}",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_update-ad-campaign.md"
+    },
+    {
+      "name": "delete_campaign",
+      "description": "Delete an advertising campaign",
+      "endpoint": "DELETE /ad_campaign/{campaign_id}",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_delete-ad-campaign.md"
+    },
+    {
+      "name": "clone_campaign",
+      "description": "Clone an existing campaign",
+      "endpoint": "POST /ad_campaign/{campaign_id}/clone",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_clone-ad-campaign.md"
+    },
+    {
+      "name": "create_ad",
+      "description": "Create an ad",
+      "endpoint": "POST /ad",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_create-ad-by-listing-id.md"
+    },
+    {
+      "name": "get_ad",
+      "description": "Retrieve details of a specific ad",
+      "endpoint": "GET /ad/{ad_id}",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_get-ad.md"
+    },
+    {
+      "name": "get_ads",
+      "description": "Retrieve a list of ads",
+      "endpoint": "GET /ad",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_get-ads.md"
+    },
+    {
+      "name": "update_ad",
+      "description": "Update an ad",
+      "endpoint": "PUT /ad/{ad_id}",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_update-ad.md"
+    },
+    {
+      "name": "delete_ad",
+      "description": "Delete an ad",
+      "endpoint": "DELETE /ad/{ad_id}",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_delete-ad.md"
+    },
+    {
+      "name": "update_bid",
+      "description": "Update the bid for an ad",
+      "endpoint": "PUT /ad/{ad_id}/bid",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_update-bid.md"
+    },
+    {
+      "name": "suggest_bids",
+      "description": "Get suggested bids for keywords",
+      "endpoint": "POST /suggest_bids",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_suggest-bids.md"
+    },
+    {
+      "name": "suggest_keywords",
+      "description": "Get suggested keywords for a campaign",
+      "endpoint": "POST /suggest_keywords",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_suggest-keywords.md"
+    },
+    {
+      "name": "suggest_budget",
+      "description": "Get suggested budget for a campaign",
+      "endpoint": "POST /suggest_budget",
+      "api": "Marketing API (v1)",
+      "source": "docs/api_marketing_suggest-budget.md"
+    },
+    {
+      "name": "get_transactions",
+      "description": "Retrieve seller transactions",
+      "endpoint": "GET /transaction",
+      "api": "Finances API (v1)",
+      "source": "docs/api_finances_get-transactions.md"
+    },
+    {
+      "name": "get_transaction_summary",
+      "description": "Retrieve a summary of seller transactions",
+      "endpoint": "GET /transaction_summary",
+      "api": "Finances API (v1)",
+      "source": "docs/api_finances_get-transaction-summary.md"
+    },
+    {
+      "name": "get_payouts",
+      "description": "Retrieve seller payouts",
+      "endpoint": "GET /payout",
+      "api": "Finances API (v1)",
+      "source": "docs/api_finances_get-payouts.md"
+    },
+    {
+      "name": "get_payout",
+      "description": "Retrieve details of a specific payout",
+      "endpoint": "GET /payout/{payout_id}",
+      "api": "Finances API (v1)",
+      "source": "docs/api_finances_get-payout.md"
+    },
+    {
+      "name": "get_payout_summary",
+      "description": "Retrieve a summary of seller payouts",
+      "endpoint": "GET /payout_summary",
+      "api": "Finances API (v1)",
+      "source": "docs/api_finances_get-payout-summary.md"
+    },
+    {
+      "name": "get_seller_funds_summary",
+      "description": "Retrieve seller funds summary",
+      "endpoint": "GET /seller_funds_summary",
+      "api": "Finances API (v1)",
+      "source": "docs/api_finances_get-seller-funds-summary.md"
+    },
+    {
+      "name": "get_billing_activities",
+      "description": "Retrieve seller billing activities",
+      "endpoint": "GET /billing_activity",
+      "api": "Finances API (v1)",
+      "source": "docs/api_finances_get-billing-activities.md"
+    },
+    {
+      "name": "create_task",
+      "description": "Create a feed task",
+      "endpoint": "POST /task",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_create-task.md"
+    },
+    {
+      "name": "get_task",
+      "description": "Retrieve details of a specific task",
+      "endpoint": "GET /task/{task_id}",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-task.md"
+    },
+    {
+      "name": "get_tasks",
+      "description": "Retrieve a list of tasks",
+      "endpoint": "GET /task",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-tasks.md"
+    },
+    {
+      "name": "create_inventory_task",
+      "description": "Create an inventory feed task",
+      "endpoint": "POST /inventory_task",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_create-inventory-task.md"
+    },
+    {
+      "name": "get_inventory_task",
+      "description": "Retrieve details of an inventory task",
+      "endpoint": "GET /inventory_task/{task_id}",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-inventory-task.md"
+    },
+    {
+      "name": "get_inventory_tasks",
+      "description": "Retrieve a list of inventory tasks",
+      "endpoint": "GET /inventory_task",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-inventory-tasks.md"
+    },
+    {
+      "name": "create_order_task",
+      "description": "Create an order feed task",
+      "endpoint": "POST /order_task",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_create-order-task.md"
+    },
+    {
+      "name": "get_order_task",
+      "description": "Retrieve details of an order task",
+      "endpoint": "GET /order_task/{task_id}",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-order-task.md"
+    },
+    {
+      "name": "get_order_tasks",
+      "description": "Retrieve a list of order tasks",
+      "endpoint": "GET /order_task",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-order-tasks.md"
+    },
+    {
+      "name": "create_schedule",
+      "description": "Create a feed schedule",
+      "endpoint": "POST /schedule",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_create-schedule.md"
+    },
+    {
+      "name": "get_schedule",
+      "description": "Retrieve details of a specific schedule",
+      "endpoint": "GET /schedule/{schedule_id}",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-schedule.md"
+    },
+    {
+      "name": "get_schedules",
+      "description": "Retrieve a list of schedules",
+      "endpoint": "GET /schedule",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_get-schedules.md"
+    },
+    {
+      "name": "update_schedule",
+      "description": "Update a feed schedule",
+      "endpoint": "PUT /schedule/{schedule_id}",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_update-schedule.md"
+    },
+    {
+      "name": "delete_schedule",
+      "description": "Delete a feed schedule",
+      "endpoint": "DELETE /schedule/{schedule_id}",
+      "api": "Feed API (v1)",
+      "source": "docs/api_feed_delete-schedule.md"
+    },
+    {
+      "name": "get_category_policies",
+      "description": "Retrieve category policies",
+      "endpoint": "GET /category_policy",
+      "api": "Metadata API (v1)",
+      "source": "docs/api_metadata_get-category-policies.md"
+    },
+    {
+      "name": "get_item_condition_policies",
+      "description": "Retrieve item condition policies",
+      "endpoint": "GET /item_condition_policy",
+      "api": "Metadata API (v1)",
+      "source": "docs/api_metadata_get-item-condition-policies.md"
+    },
+    {
+      "name": "get_listing_type_policies",
+      "description": "Retrieve listing type policies",
+      "endpoint": "GET /listing_type_policy",
+      "api": "Metadata API (v1)",
+      "source": "docs/api_metadata_get-listing-type-policies.md"
+    },
+    {
+      "name": "get_currencies",
+      "description": "Retrieve supported currencies",
+      "endpoint": "GET /currency",
+      "api": "Metadata API (v1)",
+      "source": "docs/api_metadata_get-currencies.md"
+    },
+    {
+      "name": "get_listing_violations",
+      "description": "Retrieve listing violations",
+      "endpoint": "GET /listing_violation",
+      "api": "Compliance API (v1)",
+      "source": "docs/api_compliance_get-listing-violations.md"
+    },
+    {
+      "name": "get_listing_violations_summary",
+      "description": "Retrieve a summary of listing violations",
+      "endpoint": "GET /listing_violation_summary",
+      "api": "Compliance API (v1)",
+      "source": "docs/api_compliance_get-listing-violations-summary.md"
+    },
+    {
+      "name": "get_traffic_report",
+      "description": "Retrieve traffic report data",
+      "endpoint": "GET /traffic_report",
+      "api": "Analytics API (v1)",
+      "source": "docs/api_analytics_get-traffic-report.md"
+    },
+    {
+      "name": "get_seller_standards_profile",
+      "description": "Retrieve seller standards profile",
+      "endpoint": "GET /seller_standards_profile",
+      "api": "Analytics API (v1)",
+      "source": "docs/api_analytics_get-seller-standards-profile.md"
+    },
+    {
+      "name": "find_seller_standards_profiles",
+      "description": "Find seller standards profiles",
+      "endpoint": "GET /seller_standards_profile_find",
+      "api": "Analytics API (v1)",
+      "source": "docs/api_analytics_find-seller-standards-profiles.md"
+    },
+    {
+      "name": "get_store",
+      "description": "Retrieve store information",
+      "endpoint": "GET /store",
+      "api": "Stores API (v1)",
+      "source": "docs/api_stores_get-store.md"
+    },
+    {
+      "name": "get_store_categories",
+      "description": "Retrieve store categories",
+      "endpoint": "GET /store_category",
+      "api": "Stores API (v1)",
+      "source": "docs/api_stores_get-store-categories.md"
+    },
+    {
+      "name": "add_store_category",
+      "description": "Add a store category",
+      "endpoint": "POST /store_category",
+      "api": "Stores API (v1)",
+      "source": "docs/api_stores_add-store-category.md"
+    },
+    {
+      "name": "rename_store_category",
+      "description": "Rename a store category",
+      "endpoint": "PUT /store_category/{category_id}",
+      "api": "Stores API (v1)",
+      "source": "docs/api_stores_rename-store-category.md"
+    },
+    {
+      "name": "delete_store_category",
+      "description": "Delete a store category",
+      "endpoint": "DELETE /store_category/{category_id}",
+      "api": "Stores API (v1)",
+      "source": "docs/api_stores_delete-store-category.md"
+    },
+    {
+      "name": "move_store_category",
+      "description": "Move a store category",
+      "endpoint": "PUT /store_category/{category_id}/move",
+      "api": "Stores API (v1)",
+      "source": "docs/api_stores_move-store-category.md"
+    },
+    {
+      "name": "find_eligible_items",
+      "description": "Find items eligible for best offer",
+      "endpoint": "GET /find_eligible_items",
+      "api": "Negotiation API (v1)",
+      "source": "docs/api_negotiation_find-eligible-items.md"
+    },
+    {
+      "name": "send_offer_to_interested_buyers",
+      "description": "Send an offer to interested buyers",
+      "endpoint": "POST /send_offer_to_interested_buyers",
+      "api": "Negotiation API (v1)",
+      "source": "docs/api_negotiation_send-offer-to-interested-buyers.md"
+    },
+    {
+      "name": "find_listing_recommendations",
+      "description": "Find listing recommendations",
+      "endpoint": "GET /find_listing_recommendations",
+      "api": "Recommendation API (v1)",
+      "source": "docs/api_recommendation_find-listing-recommendations.md"
+    }
+  ]
+}

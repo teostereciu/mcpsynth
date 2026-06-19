@@ -1,0 +1,170 @@
+{
+  "retrieve_page": {
+    "doc": "docs/retrieve-a-page.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "create_page": {
+    "doc": "docs/post-page.md",
+    "endpoint": "POST /pages"
+  },
+  "update_page": {
+    "doc": "docs/patch-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "trash_page": {
+    "doc": "docs/trash-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "restore_page": {
+    "doc": "docs/archive-a-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "move_page": {
+    "doc": "docs/move-page.md",
+    "endpoint": "POST /pages/{page_id}/move"
+  },
+  "retrieve_page_property": {
+    "doc": "docs/retrieve-a-page-property.md",
+    "endpoint": "GET /pages/{page_id}/properties/{property_id}"
+  },
+  "retrieve_page_markdown": {
+    "doc": "docs/retrieve-page-markdown.md",
+    "endpoint": "GET /pages/{page_id}/markdown"
+  },
+  "update_page_markdown": {
+    "doc": "docs/update-page-markdown.md",
+    "endpoint": "PATCH /pages/{page_id}/markdown"
+  },
+  "retrieve_database": {
+    "doc": "docs/retrieve-a-database.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "create_database": {
+    "doc": "docs/create-a-database.md",
+    "endpoint": "POST /databases"
+  },
+  "update_database": {
+    "doc": "docs/update-a-database.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "query_database": {
+    "doc": "docs/post-database-query.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "retrieve_block": {
+    "doc": "docs/retrieve-a-block.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "get_block_children": {
+    "doc": "docs/get-block-children.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "append_block_children": {
+    "doc": "docs/patch-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "update_block": {
+    "doc": "docs/update-a-block.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "delete_block": {
+    "doc": "docs/delete-a-block.md",
+    "endpoint": "DELETE /blocks/{block_id}"
+  },
+  "list_users": {
+    "doc": "docs/get-users.md",
+    "endpoint": "GET /users"
+  },
+  "retrieve_user": {
+    "doc": "docs/get-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "get_bot_user": {
+    "doc": "docs/get-self.md",
+    "endpoint": "GET /users/me"
+  },
+  "create_comment": {
+    "doc": "docs/create-a-comment.md",
+    "endpoint": "POST /comments"
+  },
+  "retrieve_comment": {
+    "doc": "docs/retrieve-comment.md",
+    "endpoint": "GET /comments/{comment_id}"
+  },
+  "list_comments": {
+    "doc": "docs/list-comments.md",
+    "endpoint": "GET /comments"
+  },
+  "search": {
+    "doc": "docs/post-search.md",
+    "endpoint": "POST /search"
+  },
+  "create_data_source": {
+    "doc": "docs/create-a-data-source.md",
+    "endpoint": "POST /data_sources"
+  },
+  "retrieve_data_source": {
+    "doc": "docs/retrieve-a-data-source.md",
+    "endpoint": "GET /data_sources/{data_source_id}"
+  },
+  "update_data_source": {
+    "doc": "docs/update-a-data-source.md",
+    "endpoint": "PATCH /data_sources/{data_source_id}"
+  },
+  "query_data_source": {
+    "doc": "docs/query-a-data-source.md",
+    "endpoint": "POST /data_sources/{data_source_id}/query"
+  },
+  "list_data_source_templates": {
+    "doc": "docs/list-data-source-templates.md",
+    "endpoint": "GET /data_sources/{data_source_id}/templates"
+  },
+  "list_views": {
+    "doc": "docs/list-views.md",
+    "endpoint": "GET /views"
+  },
+  "retrieve_view": {
+    "doc": "docs/retrieve-a-view.md",
+    "endpoint": "GET /views/{view_id}"
+  },
+  "create_view": {
+    "doc": "docs/create-view.md",
+    "endpoint": "POST /views"
+  },
+  "update_view": {
+    "doc": "docs/update-a-view.md",
+    "endpoint": "PATCH /views/{view_id}"
+  },
+  "delete_view": {
+    "doc": "docs/delete-view.md",
+    "endpoint": "DELETE /views/{view_id}"
+  },
+  "create_view_query": {
+    "doc": "docs/create-view-query.md",
+    "endpoint": "POST /views/{view_id}/queries"
+  },
+  "get_view_query_results": {
+    "doc": "docs/get-view-query-results.md",
+    "endpoint": "GET /views/{view_id}/queries/{query_id}"
+  },
+  "delete_view_query": {
+    "doc": "docs/delete-view-query.md",
+    "endpoint": "DELETE /views/{view_id}/queries/{query_id}"
+  },
+  "create_file_upload": {
+    "doc": "docs/create-a-file-upload.md",
+    "endpoint": "POST /file_uploads"
+  },
+  "retrieve_file_upload": {
+    "doc": "docs/retrieve-a-file-upload.md",
+    "endpoint": "GET /file_uploads/{file_upload_id}"
+  },
+  "complete_file_upload": {
+    "doc": "docs/complete-a-file-upload.md",
+    "endpoint": "POST /file_uploads/{file_upload_id}/complete"
+  },
+  "list_file_uploads": {
+    "doc": "docs/list-file-uploads.md",
+    "endpoint": "GET /file_uploads"
+  }
+}

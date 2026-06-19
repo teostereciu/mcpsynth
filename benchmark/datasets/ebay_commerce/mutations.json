@@ -1,0 +1,10 @@
+{
+  "description": "Parameter name mutations for the eBay Commerce API, covering common query params used in catalog product search, taxonomy, and notification endpoints.",
+  "mutations": [
+    {"original": "q", "mutated": "query"},
+    {"original": "category_ids", "mutated": "category_id"},
+    {"original": "aspect_filter", "mutated": "aspects"},
+    {"original": "fieldgroups", "mutated": "field_groups"},
+    {"original": "limit", "mutated": "page_size"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "mastodon-mcp-server",
+  "version": "1.0.0",
+  "description": "Mastodon MCP Server - Comprehensive MCP server for the Mastodon API",
+  "main": "server.py",
+  "scripts": {
+    "start": "python server.py"
+  },
+  "dependencies": {
+    "fastmcp": "3.2.4",
+    "requests": "2.32.3"
+  }
+}

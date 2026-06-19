@@ -1,0 +1,174 @@
+# eBay Commerce API Real API Testing Configuration
+#
+# This config defines what's needed to test the eBay Commerce MCP server against
+# the real eBay API (sandbox environment).
+
+api_name: "eBay Commerce"
+api_version: "REST API v1"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  EBAY_APP_ID:
+    description: "eBay Application ID (Client ID)"
+    how_to_get:
+      url: "https://developer.ebay.com/my/keys"
+      steps:
+        - "Sign in to eBay Developers Program"
+        - "Navigate to 'My Account' > 'Application Keys'"
+        - "Create new application or use existing one"
+        - "Select 'Sandbox' keyset for testing"
+        - "Copy the 'App ID (Client ID)'"
+      notes:
+        - "Sandbox keys recommended for testing"
+        - "Most Commerce APIs use application token (Client Credentials flow)"
+        - "Some APIs (Identity, Media, Notification) require a user token"
+    validation: "^[a-zA-Z0-9_-]{20,}$"
+    example: "MyAppNam-MCPBench-SBX-1a2b3c4d5"
+
+  EBAY_CERT_ID:
+    description: "eBay Cert ID (Client Secret)"
+    how_to_get:
+      url: "https://developer.ebay.com/my/keys"
+      notes:
+        - "Found on the Application Keys page under your selected keyset"
+        - "Keep this secret — never commit to version control"
+    validation: "^[a-zA-Z0-9_-]{20,}$"
+
+  EBAY_ENVIRONMENT:
+    description: "Environment to use (SANDBOX or PRODUCTION)"
+    validation: "^(SANDBOX|PRODUCTION)$"
+    default: "SANDBOX"
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS (for user-authenticated APIs)
+# ==============================================================================
+
+optional_credentials:
+  EBAY_REFRESH_TOKEN:
+    description: "OAuth 2.0 Refresh Token (required for Identity, Media, Notification APIs)"
+    required_for: "Scenarios 8, 9 (Media upload), Identity, Notification APIs"
+    how_to_get:
+      url: "https://developer.ebay.com/my/auth/?env=sandbox&index=0"
+      steps:
+        - "Navigate to 'Get a User Token' on the eBay Developer site"
+        - "Select Sandbox environment"
+        - "Click 'Get a Token From eBay via Your Application'"
+        - "Sign in with eBay sandbox test user"
+        - "Copy the 'User refresh token'"
+      notes:
+        - "Required scopes: https://api.ebay.com/oauth/api_scope"
+        - "Token is long-lived but can be revoked"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_url: "https://api.sandbox.ebay.com"
+sandbox_notes: |
+  eBay Sandbox for Commerce APIs:
+    ✅ Taxonomy, Catalog, Charity, Translation — application token only
+    ✅ Identity, Media, Notification — require user token (refresh token)
+    ⚠️  Media API uses different domain: apim.sandbox.ebay.com
+    ⚠️  Translation API may have limited language pairs in sandbox
+
+  Authentication split:
+    - Application token (Client Credentials): Taxonomy, Catalog, Charity, Translation
+    - User token (Refresh Token flow): Identity, Media, Notification
+
+rate_limits:
+  default: "5,000 calls/day per application"
+  notes: |
+    - Media API uploads are counted separately
+    - Translation API has per-character limits
+
+cleanup_notes: |
+  Media API:
+    - Uploaded images/videos/documents expire automatically
+    - No manual cleanup needed
+  Notification API:
+    - Destinations and subscriptions created during tests should be deleted
+  Other Commerce APIs:
+    - Read-only, no cleanup needed
+
+# ==============================================================================
+# TEST COVERAGE BY API
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 47
+
+  by_api:
+    taxonomy:
+      description: "Category trees, item aspects, compatibility"
+      auth: "application token"
+      priority: "critical"
+      scenarios: [1, 2, 3, 4, 5, 6, 11]
+
+    charity:
+      description: "Charitable organizations search and details"
+      auth: "application token"
+      priority: "high"
+      scenarios: [7]
+
+    media:
+      description: "Image, video, document upload and management"
+      auth: "user token"
+      priority: "high"
+      scenarios: [8, 9]
+      notes: "Uses apim.sandbox.ebay.com domain"
+
+    translation:
+      description: "Text translation between languages"
+      auth: "application token"
+      priority: "medium"
+      scenarios: [10]
+
+    identity:
+      description: "User information"
+      auth: "user token"
+      priority: "low"
+      scenarios: []
+
+    notification:
+      description: "Webhook subscriptions, destinations, topics"
+      auth: "user token"
+      priority: "low"
+      scenarios: []
+
+    catalog:
+      description: "Product search and metadata"
+      auth: "application token"
+      priority: "low"
+      scenarios: []
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  credential_storage: |
+    - Store App ID, Cert ID, and refresh token in .env file (gitignored)
+    - Never commit credentials to version control
+    - Use sandbox credentials for testing
+
+  safe_testing: |
+    - Most Commerce APIs are read-only
+    - Media uploads expire automatically
+    - Safe to test repeatedly in sandbox
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  developer_program: "https://developer.ebay.com/"
+  app_keys: "https://developer.ebay.com/my/keys"
+  taxonomy_api: "https://developer.ebay.com/api-docs/commerce/taxonomy/overview.html"
+  media_api: "https://developer.ebay.com/api-docs/commerce/media/overview.html"
+  translation_api: "https://developer.ebay.com/api-docs/commerce/translation/overview.html"
+  charity_api: "https://developer.ebay.com/api-docs/commerce/charity/overview.html"

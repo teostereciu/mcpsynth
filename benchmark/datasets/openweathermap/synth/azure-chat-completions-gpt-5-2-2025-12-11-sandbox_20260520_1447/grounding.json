@@ -1,0 +1,58 @@
+{
+  "geocode_direct_tool": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/direct"
+  },
+  "geocode_zip_tool": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/zip"
+  },
+  "geocode_reverse_tool": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/reverse"
+  },
+  "get_current_weather_by_coords_tool": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_city_name_tool": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather?q={city name}[,{state code}][,{country code}]"
+  },
+  "get_current_weather_by_city_id_tool": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather?id={city id}"
+  },
+  "get_current_weather_by_zip_tool": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather?zip={zip code},{country code}"
+  },
+  "get_5day_forecast_by_coords_tool": {
+    "doc": "docs/api_5day_forecast.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_5day_forecast_by_city_name_tool": {
+    "doc": "docs/api_5day_forecast.md",
+    "endpoint": "GET /data/2.5/forecast?q={city name}[,{state code}][,{country code}]"
+  },
+  "get_5day_forecast_by_city_id_tool": {
+    "doc": "docs/api_5day_forecast.md",
+    "endpoint": "GET /data/2.5/forecast?id={city ID}"
+  },
+  "get_5day_forecast_by_zip_tool": {
+    "doc": "docs/api_5day_forecast.md",
+    "endpoint": "GET /data/2.5/forecast?zip={zip code},{country code}"
+  },
+  "get_current_air_pollution_tool": {
+    "doc": "docs/api_air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution"
+  },
+  "get_air_pollution_forecast_tool": {
+    "doc": "docs/api_air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/forecast"
+  },
+  "get_air_pollution_history_tool": {
+    "doc": "docs/api_air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/history"
+  }
+}

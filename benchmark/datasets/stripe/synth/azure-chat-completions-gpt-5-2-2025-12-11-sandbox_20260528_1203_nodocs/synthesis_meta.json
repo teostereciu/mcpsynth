@@ -1,0 +1,12 @@
+{
+  "dataset": "stripe",
+  "model": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 307.75504302978516,
+  "token_usage": {
+    "input_tokens": 34053,
+    "output_tokens": 19583
+  },
+  "cost_estimate": null,
+  "timestamp": "20260528_1203"
+}

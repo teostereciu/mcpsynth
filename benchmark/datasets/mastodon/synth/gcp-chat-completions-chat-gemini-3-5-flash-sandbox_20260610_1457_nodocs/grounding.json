@@ -1,0 +1,146 @@
+{
+  "post_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "get_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/statuses/{id}"
+  },
+  "delete_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "DELETE /api/v1/statuses/{id}"
+  },
+  "boost_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/statuses/{id}/reblog"
+  },
+  "unboost_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unreblog"
+  },
+  "favourite_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/statuses/{id}/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unfavourite"
+  },
+  "get_status_context": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/statuses/{id}/context"
+  },
+  "get_authenticated_account": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "get_account": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/accounts/{id}"
+  },
+  "follow_account": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/accounts/{id}/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/accounts/{id}/unfollow"
+  },
+  "get_followers": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/accounts/{id}/followers"
+  },
+  "get_following": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/accounts/{id}/following"
+  },
+  "get_home_timeline": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/timelines/tag/{hashtag}"
+  },
+  "get_list_timeline": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/timelines/list/{list_id}"
+  },
+  "list_notifications": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "get_notification": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/notifications/{id}"
+  },
+  "dismiss_notification": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/notifications/{id}/dismiss"
+  },
+  "clear_notifications": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "search": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v2/search"
+  },
+  "create_list": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "get_lists": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "get_list": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/lists/{id}"
+  },
+  "update_list": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "PUT /api/v1/lists/{id}"
+  },
+  "delete_list": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "DELETE /api/v1/lists/{id}"
+  },
+  "add_accounts_to_list": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/lists/{id}/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "DELETE /api/v1/lists/{id}/accounts"
+  },
+  "list_bookmarks": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "bookmark_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/statuses/{id}/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unbookmark"
+  },
+  "list_favourites": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "upload_media_attachment": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "POST /api/v1/media"
+  },
+  "get_instance_info": {
+    "doc": "docs/mastodon_api.md",
+    "endpoint": "GET /api/v1/instance"
+  }
+}

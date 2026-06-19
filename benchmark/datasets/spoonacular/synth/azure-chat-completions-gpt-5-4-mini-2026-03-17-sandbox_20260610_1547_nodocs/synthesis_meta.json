@@ -1,0 +1,12 @@
+{
+  "dataset": "spoonacular",
+  "model": "azure-chat-completions-gpt-5-4-mini-2026-03-17-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 118.25485897064209,
+  "token_usage": {
+    "input_tokens": 9349,
+    "output_tokens": 1754
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1547"
+}

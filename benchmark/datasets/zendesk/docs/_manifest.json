@@ -1,0 +1,753 @@
+{
+  "source": "Zendesk API Reference (developer.zendesk.com)",
+  "scraped_from": "https://developer.zendesk.com/api-reference/",
+  "scrape_date": "2026-04-13T11:04:30.776452",
+  "total_pages": 149,
+  "files": [
+    {
+      "filename": "api_ticketing_tickets_tickets.md",
+      "title": "Tickets",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/tickets/"
+    },
+    {
+      "filename": "api_ticketing_users_users.md",
+      "title": "Users",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/users/users/"
+    },
+    {
+      "filename": "api_ticketing_organizations_organizations.md",
+      "title": "Organizations",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/organizations/organizations/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket-attachments.md",
+      "title": "Attachments",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket-attachments/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_comments.md",
+      "title": "Ticket Comments",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_comments/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_forms.md",
+      "title": "Ticket Forms",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_forms/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_fields.md",
+      "title": "Ticket Fields",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_fields/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket-requests.md",
+      "title": "Requests",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket-requests/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_import.md",
+      "title": "Ticket Import",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_import/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_audits.md",
+      "title": "Ticket Audits",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_audits/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_metrics.md",
+      "title": "Ticket Metrics",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_metrics/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_metric_events.md",
+      "title": "Ticket Metric Events",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_metric_events/"
+    },
+    {
+      "filename": "api_ticketing_tickets_activity_stream.md",
+      "title": "Ticket Activities",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/activity_stream/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_skips.md",
+      "title": "Ticket Skips",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_skips/"
+    },
+    {
+      "filename": "api_ticketing_tickets_suspended_tickets.md",
+      "title": "Suspended Tickets",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/suspended_tickets/"
+    },
+    {
+      "filename": "api_ticketing_tickets_email_notifications.md",
+      "title": "Email Notifications",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/email_notifications/"
+    },
+    {
+      "filename": "api_ticketing_tickets_custom_ticket_statuses.md",
+      "title": "Custom Ticket Statuses",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/custom_ticket_statuses/"
+    },
+    {
+      "filename": "api_ticketing_tickets_sharing_agreements.md",
+      "title": "Sharing Agreements",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/sharing_agreements/"
+    },
+    {
+      "filename": "api_ticketing_tickets_ticket_form_statuses.md",
+      "title": "Ticket Form Statuses",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/ticket_form_statuses/"
+    },
+    {
+      "filename": "api_ticketing_tickets_conversation_log.md",
+      "title": "Conversation Log",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tickets/conversation_log/"
+    },
+    {
+      "filename": "api_ticketing_users_user_identities.md",
+      "title": "User Identities",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/users/user_identities/"
+    },
+    {
+      "filename": "api_ticketing_users_profiles_api_profiles_api.md",
+      "title": "Profiles API",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/"
+    },
+    {
+      "filename": "api_ticketing_users_events-api_events-api.md",
+      "title": "Events API",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/"
+    },
+    {
+      "filename": "api_ticketing_users_user_fields.md",
+      "title": "User Fields",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/users/user_fields/"
+    },
+    {
+      "filename": "api_ticketing_users_user_passwords.md",
+      "title": "User Passwords",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/users/user_passwords/"
+    },
+    {
+      "filename": "api_ticketing_users_events-api_zendesk_events.md",
+      "title": "Zendesk events",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/users/events-api/zendesk_events/"
+    },
+    {
+      "filename": "api_ticketing_organizations_organization_memberships.md",
+      "title": "Organization Memberships",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/organizations/organization_memberships/"
+    },
+    {
+      "filename": "api_ticketing_organizations_organization_fields.md",
+      "title": "Organization Fields",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/organizations/organization_fields/"
+    },
+    {
+      "filename": "api_ticketing_organizations_organization_subscriptions.md",
+      "title": "Organization Subscriptions",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/organizations/organization_subscriptions/"
+    },
+    {
+      "filename": "api_ticketing_lookup_relationships_lookup_relationships.md",
+      "title": "Lookup Relationships",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/lookup_relationships/lookup_relationships/"
+    },
+    {
+      "filename": "api_ticketing_groups_groups.md",
+      "title": "Groups",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/groups/groups/"
+    },
+    {
+      "filename": "api_ticketing_groups_group_memberships.md",
+      "title": "Group Memberships",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/groups/group_memberships/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_search.md",
+      "title": "Search",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_incremental_exports.md",
+      "title": "Incremental Exports",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/incremental_exports/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_tags.md",
+      "title": "Tags",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/tags/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_csat_survey_responses.md",
+      "title": "CSAT Survey Responses",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/csat_survey_responses/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_csat_surveys.md",
+      "title": "CSAT Surveys",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/csat_surveys/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_satisfaction_ratings.md",
+      "title": "Satisfaction Ratings",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/satisfaction_ratings/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_satisfaction_reasons.md",
+      "title": "Satisfaction Reasons",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/satisfaction_reasons/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_job_statuses.md",
+      "title": "Job Statuses",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/job_statuses/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_dynamic_content.md",
+      "title": "Dynamic Content Items",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/dynamic_content/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_dynamic_content_item_variants.md",
+      "title": "Dynamic Content Item Variants",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/dynamic_content_item_variants/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_schedules.md",
+      "title": "Schedules",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/schedules/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_skill_based_routing.md",
+      "title": "Skill-based Routing",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/skill_based_routing/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_incremental_skill_based_routing.md",
+      "title": "Incremental Skill-based Routing",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/incremental_skill_based_routing/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_resource_collections.md",
+      "title": "Resource Collections",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/resource_collections/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_workspaces.md",
+      "title": "Workspaces",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/workspaces/"
+    },
+    {
+      "filename": "api_ticketing_ticket-management_bookmarks.md",
+      "title": "Bookmarks",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/ticket-management/bookmarks/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_views.md",
+      "title": "Views",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/views/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_triggers.md",
+      "title": "Triggers",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/triggers/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_trigger_categories.md",
+      "title": "Trigger Categories",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/trigger_categories/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_macros.md",
+      "title": "Macros",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/macros/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_automations.md",
+      "title": "Automations",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/automations/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_sla_policies.md",
+      "title": "SLA Policies",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/sla_policies/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_group_sla_policies.md",
+      "title": "Group SLA Policies",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/group_sla_policies/"
+    },
+    {
+      "filename": "api_ticketing_business-rules_deletion_schedules.md",
+      "title": "Deletion Schedules",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/business-rules/deletion_schedules/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_custom_roles.md",
+      "title": "Custom Agent Roles",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/custom_roles/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_account_settings.md",
+      "title": "Account Settings",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/account_settings/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_support_addresses.md",
+      "title": "Support Addresses",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/support_addresses/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_sessions.md",
+      "title": "Sessions",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/sessions/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_brand_agents.md",
+      "title": "Brand Agents",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/brand_agents/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_brands.md",
+      "title": "Brands",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/brands/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_locales.md",
+      "title": "Locales",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/locales/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_audit_logs.md",
+      "title": "Audit Logs",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/audit_logs/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_access_logs.md",
+      "title": "Access Logs",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/access_logs/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_push_notification_devices.md",
+      "title": "Push Notification Devices",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/push_notification_devices/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_channel_framework.md",
+      "title": "Channel Framework",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/channel_framework/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_x_channel.md",
+      "title": "zendev_horizontal",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/x_channel/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_public_ips.md",
+      "title": "Zendesk Public IPs",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/public_ips/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_remote_authentications.md",
+      "title": "Remote Authentications",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/remote_authentications/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_security_settings.md",
+      "title": "Security Settings",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/security_settings/"
+    },
+    {
+      "filename": "api_ticketing_oauth_oauth_tokens.md",
+      "title": "OAuth Tokens",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_tokens/"
+    },
+    {
+      "filename": "api_ticketing_oauth_grant_type_tokens.md",
+      "title": "OAuth Tokens for Grant Types",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/oauth/grant_type_tokens/"
+    },
+    {
+      "filename": "api_ticketing_oauth_oauth_clients.md",
+      "title": "OAuth Clients",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/oauth/oauth_clients/"
+    },
+    {
+      "filename": "api_ticketing_oauth_global_clients.md",
+      "title": "Global OAuth Clients",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/oauth/global_clients/"
+    },
+    {
+      "filename": "api_ticketing_apps_apps.md",
+      "title": "Apps",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/apps/apps/"
+    },
+    {
+      "filename": "api_ticketing_apps_app_location_installations.md",
+      "title": "App Location Installations",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/apps/app_location_installations/"
+    },
+    {
+      "filename": "api_ticketing_apps_app_locations.md",
+      "title": "App Locations",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/apps/app_locations/"
+    },
+    {
+      "filename": "api_ticketing_targets_targets.md",
+      "title": "Targets",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/targets/targets/"
+    },
+    {
+      "filename": "api_ticketing_targets_target_failures.md",
+      "title": "Target Failures",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/targets/target_failures/"
+    },
+    {
+      "filename": "api_ticketing_side_conversation_side_conversation.md",
+      "title": "Side Conversations",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/side_conversation/side_conversation/"
+    },
+    {
+      "filename": "api_ticketing_side_conversation_side_conversation_event.md",
+      "title": "Side Conversation Events",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/side_conversation/side_conversation_event/"
+    },
+    {
+      "filename": "api_ticketing_side_conversation_side_conversation_attachment.md",
+      "title": "Side Conversation Attachment",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/side_conversation/side_conversation_attachment/"
+    },
+    {
+      "filename": "api_ticketing_jira_v2_jira_integration_links.md",
+      "title": "JIRA Integration Links",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/jira_v2/jira_integration_links/"
+    },
+    {
+      "filename": "api_ticketing_jira_jira_links_legacy.md",
+      "title": "JIRA Links (Legacy)",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/jira/jira_links_legacy/"
+    },
+    {
+      "filename": "api_ticketing_jira_jira.md",
+      "title": "Jira Integration API",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/jira/jira/"
+    },
+    {
+      "filename": "api_ticketing_approvals_approval_requests.md",
+      "title": "Approval Requests",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/approvals/approval_requests/"
+    },
+    {
+      "filename": "api_ticketing_tasks_task_list_templates.md",
+      "title": "Task List Templates",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tasks/task_list_templates/"
+    },
+    {
+      "filename": "api_ticketing_tasks_task_lists.md",
+      "title": "Task Lists",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/tasks/task_lists/"
+    },
+    {
+      "filename": "api_ticketing_account-configuration_usage_limits.md",
+      "title": "Rate limits",
+      "url": "https://developer.zendesk.com/api-reference/ticketing/account-configuration/usage_limits/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_articles.md",
+      "title": "Articles",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/articles/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_article_comments.md",
+      "title": "Article Comments",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/article_comments/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_posts.md",
+      "title": "Posts",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/posts/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_post_comments.md",
+      "title": "Post Comments",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/post_comments/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_article_attachments.md",
+      "title": "Article Attachments",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/article_attachments/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_search.md",
+      "title": "Search",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/search/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_article_labels.md",
+      "title": "Article Labels",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/article_labels/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_categories.md",
+      "title": "Categories",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/categories/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_help_center_search.md",
+      "title": "Help Center Search",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/help_center_search/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_sections.md",
+      "title": "Sections",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/sections/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_sessions.md",
+      "title": "Sessions",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/sessions/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_help_center_sessions.md",
+      "title": "Help Center Sessions",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/help_center_sessions/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_permission_groups.md",
+      "title": "Management Permission Groups",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/permission_groups/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_translations.md",
+      "title": "Translations",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/translations/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_theming.md",
+      "title": "Themes",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/theming/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_topics.md",
+      "title": "Topics",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/topics/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_content_subscriptions.md",
+      "title": "Content Subscriptions",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/content_subscriptions/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_user_subscriptions.md",
+      "title": "User Subscriptions",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/user_subscriptions/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_user_segments.md",
+      "title": "User Segments",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/user_segments/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_votes.md",
+      "title": "Votes",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/votes/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_badges.md",
+      "title": "Badges",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/badges/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_badge_assignments.md",
+      "title": "Badge Assignments",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/badge_assignments/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_badge_categories.md",
+      "title": "Badge Categories",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/badge_categories/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_user_images.md",
+      "title": "User Images",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/user_images/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_guide_medias.md",
+      "title": "Guide Medias",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/guide_medias/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_content_tags.md",
+      "title": "Content Tags",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/content_tags/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_help_center_jwts.md",
+      "title": "Help Center JWTs",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/help_center_jwts/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_account_custom_claims.md",
+      "title": "Account Custom Claims",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/account_custom_claims/"
+    },
+    {
+      "filename": "api_help_center_help-center-api_redirect_rules.md",
+      "title": "Redirect Rules",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-api/redirect_rules/"
+    },
+    {
+      "filename": "api_help_center_federated-search_external_content_records.md",
+      "title": "External Content Records",
+      "url": "https://developer.zendesk.com/api-reference/help_center/federated-search/external_content_records/"
+    },
+    {
+      "filename": "api_help_center_federated-search_external_content_sources.md",
+      "title": "External Content Sources",
+      "url": "https://developer.zendesk.com/api-reference/help_center/federated-search/external_content_sources/"
+    },
+    {
+      "filename": "api_help_center_federated-search_external_content_types.md",
+      "title": "External Content Types",
+      "url": "https://developer.zendesk.com/api-reference/help_center/federated-search/external_content_types/"
+    },
+    {
+      "filename": "api_help_center_employee-services_service_catalog_items.md",
+      "title": "Service Catalog Items",
+      "url": "https://developer.zendesk.com/api-reference/help_center/employee-services/service_catalog_items/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_helpers.md",
+      "title": "Helpers",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/helpers/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_advanced_helpers.md",
+      "title": "Advanced helpers",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/advanced_helpers/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_objects.md",
+      "title": "Objects",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/objects/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_header_page.md",
+      "title": "Header",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/header_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_footer_page.md",
+      "title": "Footer",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/footer_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_home_page.md",
+      "title": "Home page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/home_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_category_page.md",
+      "title": "Category page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/category_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_section_page.md",
+      "title": "Section page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/section_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_article_page.md",
+      "title": "Article page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/article_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_contributions_page.md",
+      "title": "Contributions page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/contributions_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_following_page.md",
+      "title": "Following page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/following_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_request_list_page.md",
+      "title": "Request List page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/request_list_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_request_page.md",
+      "title": "Request page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/request_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_new_request_page.md",
+      "title": "New Request page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/new_request_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_search_results_page.md",
+      "title": "Search Results page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/search_results_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_service_catalog.md",
+      "title": "Service catalog page templates",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/service_catalog/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_approval_requests.md",
+      "title": "Approval request page templates",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/approval_requests/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_error_page.md",
+      "title": "Error page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/error_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_new_community_post_page.md",
+      "title": "New Community Post page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/new_community_post_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_community_post_page.md",
+      "title": "Community Post page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/community_post_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_community_post_list_page.md",
+      "title": "Community Post List page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/community_post_list_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_community_topic_page.md",
+      "title": "Community Topic page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/community_topic_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_community_topic_list_page.md",
+      "title": "Community Topic List page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/community_topic_list_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_user_profile_page.md",
+      "title": "User Profile page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/user_profile_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_custom_page.md",
+      "title": "Custom Page",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/custom_page/"
+    },
+    {
+      "filename": "api_help_center_help-center-templates_v1.md",
+      "title": "Upgrading from Templating API v1",
+      "url": "https://developer.zendesk.com/api-reference/help_center/help-center-templates/v1/"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "dataset": "mastodon",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "mutated",
+  "synthesis_time": 135.32104587554932,
+  "token_usage": {
+    "input_tokens": 840250,
+    "output_tokens": 11628
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1457",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 16
+}

@@ -1,0 +1,7 @@
+{
+  "search_products": {"doc": "docs/api_commerce_catalog_resources_product_summary_methods_search.md", "endpoint": "GET /commerce/catalog/v1_beta/product_summary/search"},
+  "get_product": {"doc": "docs/api_commerce_catalog_resources_product_methods_getProduct.md", "endpoint": "GET /commerce/catalog/v1_beta/product/{epid}"},
+  "get_user": {"doc": "docs/api_commerce_identity_resources_user_methods_getUser.md", "endpoint": "GET /commerce/identity/v1/user"},
+  "get_charity_org": {"doc": "docs/api_commerce_charity_resources_charity_org_methods_getCharityOrg.md", "endpoint": "GET /commerce/charity/v1/charity_org/{org_id}"},
+  "get_charity_orgs": {"doc": "docs/api_commerce_charity_resources_charity_org_methods_getCharityOrgs.md", "endpoint": "GET /commerce/charity/v1/charity_org"}
+}

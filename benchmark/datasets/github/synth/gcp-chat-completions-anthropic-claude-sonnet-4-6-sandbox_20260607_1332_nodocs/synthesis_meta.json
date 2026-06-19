@@ -1,0 +1,12 @@
+{
+  "dataset": "github",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 1232.4955232143402,
+  "token_usage": {
+    "input_tokens": 418412,
+    "output_tokens": 35663
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_1332"
+}

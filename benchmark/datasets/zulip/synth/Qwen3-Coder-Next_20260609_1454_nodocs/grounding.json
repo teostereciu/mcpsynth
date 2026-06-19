@@ -1,0 +1,202 @@
+{
+  "send_message": {
+    "doc": "https://zulip.com/api/send-message",
+    "endpoint": "POST /api/v1/messages"
+  },
+  "get_messages": {
+    "doc": "https://zulip.com/api/get-messages",
+    "endpoint": "GET /api/v1/messages"
+  },
+  "get_message_history": {
+    "doc": "https://zulip.com/api/get-message-history",
+    "endpoint": "GET /api/v1/messages/{message_id}/history"
+  },
+  "update_message": {
+    "doc": "https://zulip.com/api/update-message",
+    "endpoint": "PATCH /api/v1/messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "https://zulip.com/api/delete-message",
+    "endpoint": "DELETE /api/v1/messages/{message_id}"
+  },
+  "get_raw_message": {
+    "doc": "https://zulip.com/api/get-raw-message",
+    "endpoint": "GET /api/v1/messages/{message_id}"
+  },
+  "add_reaction": {
+    "doc": "https://zulip.com/api/add-reaction",
+    "endpoint": "POST /api/v1/messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "https://zulip.com/api/remove-reaction",
+    "endpoint": "DELETE /api/v1/messages/{message_id}/reactions"
+  },
+  "update_message_flags": {
+    "doc": "https://zulip.com/api/update-message-flags",
+    "endpoint": "POST /api/v1/messages/flags"
+  },
+  "get_user_messages": {
+    "doc": "https://zulip.com/api/get-user-messages",
+    "endpoint": "GET /api/v1/users/{user_id}/messages"
+  },
+  "create_stream": {
+    "doc": "https://zulip.com/api/create-stream",
+    "endpoint": "POST /api/v1/streams"
+  },
+  "get_streams": {
+    "doc": "https://zulip.com/api/get-streams",
+    "endpoint": "GET /api/v1/streams"
+  },
+  "get_stream_id": {
+    "doc": "https://zulip.com/api/get-stream-id",
+    "endpoint": "GET /api/v1/streams/get_id"
+  },
+  "update_stream": {
+    "doc": "https://zulip.com/api/update-stream",
+    "endpoint": "PATCH /api/v1/streams/{stream_id}"
+  },
+  "delete_stream": {
+    "doc": "https://zulip.com/api/delete-stream",
+    "endpoint": "DELETE /api/v1/streams/{stream_id}"
+  },
+  "archive_stream": {
+    "doc": "https://zulip.com/api/archive-stream",
+    "endpoint": "POST /api/v1/streams/{stream_id}/delete"
+  },
+  "subscribe": {
+    "doc": "https://zulip.com/api/subscribe",
+    "endpoint": "POST /api/v1/users/me/subscriptions"
+  },
+  "unsubscribe": {
+    "doc": "https://zulip.com/api/unsubscribe",
+    "endpoint": "DELETE /api/v1/users/me/subscriptions"
+  },
+  "get_subscribers": {
+    "doc": "https://zulip.com/api/get-subscribers",
+    "endpoint": "GET /api/v1/streams/{stream_id}/members"
+  },
+  "list_topics": {
+    "doc": "https://zulip.com/api/list-topics",
+    "endpoint": "GET /api/v1/streams/{stream_id}/topics"
+  },
+  "rename_topic": {
+    "doc": "https://zulip.com/api/rename-topic",
+    "endpoint": "POST /api/v1/streams/{stream_id}/rename_topic"
+  },
+  "delete_topic": {
+    "doc": "https://zulip.com/api/delete-topic",
+    "endpoint": "DELETE /api/v1/streams/{stream_id}/topics"
+  },
+  "resolve_topic": {
+    "doc": "https://zulip.com/api/resolve-topic",
+    "endpoint": "POST /api/v1/streams/{stream_id}/resolve_topic"
+  },
+  "get_user_by_id": {
+    "doc": "https://zulip.com/api/get-user-by-id",
+    "endpoint": "GET /api/v1/users/{user_id}"
+  },
+  "get_user_profile": {
+    "doc": "https://zulip.com/api/get-user-profile",
+    "endpoint": "GET /api/v1/users/{user_id}"
+  },
+  "list_users": {
+    "doc": "https://zulip.com/api/list-users",
+    "endpoint": "GET /api/v1/users"
+  },
+  "update_user_profile": {
+    "doc": "https://zulip.com/api/update-user-profile",
+    "endpoint": "PATCH /api/v1/users/me"
+  },
+  "get_user_presence": {
+    "doc": "https://zulip.com/api/get-user-presence",
+    "endpoint": "GET /api/v1/users/{user_id}/presence"
+  },
+  "get_presences": {
+    "doc": "https://zulip.com/api/get-presences",
+    "endpoint": "GET /api/v1/users/me/presence"
+  },
+  "create_scheduled_message": {
+    "doc": "https://zulip.com/api/create-scheduled-message",
+    "endpoint": "POST /api/v1/scheduled_messages"
+  },
+  "list_scheduled_messages": {
+    "doc": "https://zulip.com/api/list-scheduled-messages",
+    "endpoint": "GET /api/v1/scheduled_messages"
+  },
+  "get_scheduled_message": {
+    "doc": "https://zulip.com/api/get-scheduled-message",
+    "endpoint": "GET /api/v1/scheduled_messages/{scheduled_message_id}"
+  },
+  "update_scheduled_message": {
+    "doc": "https://zulip.com/api/update-scheduled-message",
+    "endpoint": "PATCH /api/v1/scheduled_messages/{scheduled_message_id}"
+  },
+  "delete_scheduled_message": {
+    "doc": "https://zulip.com/api/delete-scheduled-message",
+    "endpoint": "DELETE /api/v1/scheduled_messages/{scheduled_message_id}"
+  },
+  "get_drafts": {
+    "doc": "https://zulip.com/api/get-drafts",
+    "endpoint": "GET /api/v1/drafts"
+  },
+  "create_draft": {
+    "doc": "https://zulip.com/api/create-draft",
+    "endpoint": "POST /api/v1/drafts"
+  },
+  "update_draft": {
+    "doc": "https://zulip.com/api/update-draft",
+    "endpoint": "PATCH /api/v1/drafts/{draft_id}"
+  },
+  "delete_draft": {
+    "doc": "https://zulip.com/api/delete-draft",
+    "endpoint": "DELETE /api/v1/drafts/{draft_id}"
+  },
+  "upload_file": {
+    "doc": "https://zulip.com/api/upload-file",
+    "endpoint": "POST /api/v1/user_uploads"
+  },
+  "get_file_url": {
+    "doc": "https://zulip.com/api/get-file-url",
+    "endpoint": "GET /api/v1/user_uploads"
+  },
+  "get_reactions": {
+    "doc": "https://zulip.com/api/get-reactions",
+    "endpoint": "GET /api/v1/messages/{message_id}/reactions"
+  },
+  "get_notifications": {
+    "doc": "https://zulip.com/api/get-notifications",
+    "endpoint": "GET /api/v1/settings/notifications"
+  },
+  "update_notification_settings": {
+    "doc": "https://zulip.com/api/update-notification-settings",
+    "endpoint": "PATCH /api/v1/settings/notifications"
+  },
+  "list_custom_profile_fields": {
+    "doc": "https://zulip.com/api/list-custom-profile-fields",
+    "endpoint": "GET /api/v1/custom_profile_fields"
+  },
+  "create_custom_profile_field": {
+    "doc": "https://zulip.com/api/create-custom-profile-field",
+    "endpoint": "POST /api/v1/custom_profile_fields"
+  },
+  "get_realm": {
+    "doc": "https://zulip.com/api/get-realm",
+    "endpoint": "GET /api/v1/realm"
+  },
+  "list_bot_members": {
+    "doc": "https://zulip.com/api/list-bot-members",
+    "endpoint": "GET /api/v1/bots"
+  },
+  "create_bot": {
+    "doc": "https://zulip.com/api/create-bot",
+    "endpoint": "POST /api/v1/bots"
+  },
+  "update_subscription_settings": {
+    "doc": "https://zulip.com/api/update-subscription-settings",
+    "endpoint": "PATCH /api/v1/users/me/subscriptions/{stream_id}"
+  },
+  "send_messages": {
+    "doc": "https://zulip.com/api/send-messages",
+    "endpoint": "POST /api/v1/messages"
+  }
+}

@@ -1,0 +1,54 @@
+# Management/3/get/companies/(companyId)/terminalOrders
+
+*Source: https://docs.adyen.com/api-explorer/Management/3/get/companies/(companyId)/terminalOrders*
+
+---
+
+# Get a list of orders
+Returns a lists of terminal products orders for the company identified in the path.
+To filter the list, use one or more of the query parameters.
+To make this request, your API credential must have one of the followingroles:
+- Management API—Terminal ordering read
+- Management API—Terminal ordering read and write
+In the live environment, requests to this endpoint are subject torate limits.
+The number of orders to return.
+The number of orders to skip.
+The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered.
+Your purchase order number.
+The unique identifier of the company account.
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow lessdataarray[object]List of orders for payment terminal packages and parts.Show childrenHide childrenbillingEntityobjectThe details of the entity that the order is billed to.Show childrenHide childrenaddressobjectThe address details of the billing entity.Show childrenHide childrencitystringThe name of the city.companyNamestringThe name of the company.countrystringThe two-letter country code, inISO 3166-1 alpha-2format.postalCodestringThe postal code.stateOrProvincestringThe state or province as defined inISO 3166-2. For example,ONfor Ontario, Canada.Applicable for the following countries:AustraliaBrazilCanadaIndiaMexicoNew ZealandUnited StatesstreetAddressstringThe name of the street, and the house or building number.streetAddress2stringAdditional address details, if any.emailstringThe email address of the billing entity.idstringThe unique identifier of the billing entity, for use asbillingEntityIdwhen creating an order.namestringThe unique name of the billing entity.taxIdstringThe tax number of the billing entity.customerOrderReferencestringThe merchant-defined purchase order number. This will be printed on the packing list.idstringThe unique identifier of the order.itemsarray[object]The products included in the order.Show childrenHide childrenidstringThe unique identifier of the product.installmentsintegerThe number of installments for the specified productid.namestringThe name of the product.quantityintegerThe number of items with the specified productidincluded in the order.orderDatestringThe date and time that the order was placed, in UTC ISO 8601 format. For example, "2011-12-03T10:15:30Z".shippingLocationobjectThe details of the location where the order is shipped to.Show childrenHide childrenaddressobjectThe address details of the shipping location.Show childrenHide childrencitystringThe name of the city.companyNamestringThe name of the company.countrystringThe two-letter country code, inISO 3166-1 alpha-2format.postalCodestringThe postal code.stateOrProvincestringThe state or province as defined inISO 3166-2. For example,ONfor Ontario, Canada.Applicable for the following countries:AustraliaBrazilCanadaIndiaMexicoNew ZealandUnited StatesstreetAddressstringThe name of the street, and the house or building number.streetAddress2stringAdditional address details, if any.contactobjectThe contact details for the shipping location.Show childrenHide childrenemailstringThe individual's email address.firstNamestringThe individual's first name.infixstringThe infix in the individual's name, if any.lastNamestringThe individual's last name.phoneNumberstringThe individual's phone number, specified as 10-14 digits with an optional+prefix.idstringThe unique identifier of the shipping location, for use asshippingLocationIdwhen creating an order.namestringThe unique name of the shipping location.statusstringThe processing status of the order.trackingUrlstringThe URL, provided by the carrier company, where the shipment can be tracked.
+- 400 - Bad RequestA problem reading or understanding the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 401 - UnauthorizedAuthentication required.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 403 - ForbiddenInsufficient permissions to process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 500 - Internal Server ErrorThe server could not process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+
+#### 200 - OK
+- Australia
+- Brazil
+- Canada
+- India
+- Mexico
+- New Zealand
+- United States
+- Australia
+- Brazil
+- Canada
+- India
+- Mexico
+- New Zealand
+- United States
+
+#### 400 - Bad Request
+
+#### 401 - Unauthorized
+
+#### 403 - Forbidden
+
+#### 422 - Unprocessable Entity
+
+#### 500 - Internal Server Error

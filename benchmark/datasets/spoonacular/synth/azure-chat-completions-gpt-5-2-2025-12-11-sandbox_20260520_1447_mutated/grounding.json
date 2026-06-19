@@ -1,0 +1,102 @@
+{
+  "search_recipes_complex_tool": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "ingredient_search_tool": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "get_ingredient_information_tool": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "compute_ingredient_amount_tool": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/amount"
+  },
+  "convert_amounts_tool": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /recipes/convert"
+  },
+  "parse_ingredients_tool": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "get_meal_plan_week_tool": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/week/{start-date}"
+  },
+  "get_meal_plan_day_tool": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/day/{date}"
+  },
+  "generate_meal_plan_tool": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "connect_user_tool": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /users/connect"
+  },
+  "search_menu_items_tool": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/search"
+  },
+  "get_menu_item_information_tool": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/{id}"
+  },
+  "autocomplete_menu_item_search_tool": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/suggest"
+  },
+  "search_grocery_products_tool": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/search"
+  },
+  "search_grocery_products_by_upc_tool": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/upc/{upc}"
+  },
+  "get_product_information_tool": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/{id}"
+  },
+  "search_all_food_tool": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/search"
+  },
+  "search_food_videos_tool": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/videos/search"
+  },
+  "quick_answer_tool": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /recipes/quickAnswer"
+  },
+  "detect_food_in_text_tool": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "POST /food/detect"
+  },
+  "search_site_content_tool": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/site/search"
+  },
+  "wine_dish_pairing_tool": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/dishes"
+  },
+  "wine_pairing_tool": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "wine_description_tool": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/description"
+  },
+  "wine_recommendation_tool": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/recommendation"
+  }
+}

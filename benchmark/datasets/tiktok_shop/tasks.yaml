@@ -1,0 +1,165 @@
+# Agent evaluation tasks for TikTok Shop Partner Open API MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring guidelines.
+#
+# Required env vars: TIKTOK_APP_KEY, TIKTOK_APP_SECRET,
+#                    TIKTOK_ACCESS_TOKEN, TIKTOK_SHOP_CIPHER
+
+tasks:
+  # ---------- READ ----------
+
+  # Discriminates: does the agent call get_authorized_shops and surface the
+  # human-readable shop_name rather than just the cipher or ID?
+  - id: get_authorized_shops
+    prompt: >
+      Retrieve the list of shops authorized for the current TikTok Shop
+      access token. Report the shop names, IDs, and ciphers.
+    expected: shop_name
+    tags: [read]
+
+  # Discriminates: does the agent call the category browse endpoint and
+  # surface category names rather than numeric IDs alone?
+  - id: browse_categories
+    prompt: >
+      Browse the top-level product categories available in TikTok Shop.
+      Report the names and IDs of the first 5 categories returned.
+    expected: category_name
+    tags: [read]
+
+  # Discriminates: does the agent query brands for category 600003 and
+  # surface brand_name rather than just brand IDs?
+  - id: get_brand_list
+    prompt: >
+      Get the list of available brands for category 600003 in TikTok Shop.
+      Report the brand names and IDs of the first 5 brands.
+    expected: brand_name
+    tags: [read]
+
+  # Discriminates: does the agent call get_category_attributes and surface
+  # attribute_name plus whether each attribute is required?
+  - id: get_category_attributes
+    prompt: >
+      Get the product attributes required for category 600003 in TikTok Shop.
+      Report the attribute names and whether each one is required.
+    expected: attribute_name
+    tags: [read]
+
+  # Discriminates: does the agent filter orders by status and surface
+  # order_id rather than a generic list count?
+  - id: get_order_list
+    prompt: >
+      Retrieve the list of orders with status "AWAITING_SHIPMENT". Report how
+      many orders are in this status and the order IDs of the first 3.
+    expected: order_id
+    tags: [read]
+
+  # Discriminates: does the agent call the finance settlement endpoint and
+  # surface statement_id rather than just aggregate amounts?
+  - id: get_finance_settlements
+    prompt: >
+      Retrieve the finance settlement statements for the shop. Report the
+      settlement IDs and amounts of the first 3, or confirm there are none.
+    expected: statement_id
+    tags: [read]
+
+  # Discriminates: does the agent call get_seller_shop and surface shop_name
+  # alongside region and seller type rather than returning raw config?
+  - id: get_seller_shop_info
+    prompt: >
+      Retrieve the seller's shop information from TikTok Shop. Report the
+      shop name, region, and seller type.
+    expected: shop_name
+    tags: [read]
+
+  # Discriminates: does the agent call get_category_rules for the given
+  # category and surface a rule field rather than an empty response?
+  - id: get_category_rules
+    prompt: >
+      Get the listing rules and requirements for category 600003 in TikTok
+      Shop. Report any key constraints found (such as shipping requirements
+      or prohibited item restrictions), or confirm there are none.
+    expected: rule
+    tags: [read]
+
+  # ---------- WRITE ----------
+
+  # Discriminates: does the agent call create_product with all required
+  # fields and surface the generated product_id from the response?
+  - id: create_product_listing
+    prompt: >
+      Create a TikTok Shop product listing with title "Agent Eval Test
+      Product", description "Test product from agent harness", in category
+      600003, priced at 9.99 USD with 10 units in stock. Report the product
+      ID created.
+    expected: product_id
+    tags: [write, multi-step]
+
+  # ---------- MULTI-STEP ----------
+
+  # Discriminates: does the agent search products then call get_product_detail
+  # and surface product_name rather than just copying the search result?
+  - id: search_product_then_get_details
+    prompt: >
+      Search for products in the TikTok Shop. Retrieve the full details of
+      the first product found. Report the product title, price, stock
+      quantity, and status.
+    expected: product_name
+    tags: [read, multi-step, workflow]
+
+  # Discriminates: does the agent list orders then call get_order_detail and
+  # surface line item names rather than just the order ID and status?
+  - id: get_order_then_detail
+    prompt: >
+      Get the list of orders for the shop across any status. Retrieve the
+      full details of the first order found, including its line items. Report
+      the order ID, status, and the names of items ordered.
+    expected: line_items
+    tags: [read, multi-step, workflow]
+
+  # Discriminates: does the agent call the category recommendation endpoint
+  # and surface a category_name rather than just a numeric ID?
+  - id: category_then_recommend
+    prompt: >
+      Use the category recommendation feature to suggest the best TikTok Shop
+      category for a new product titled "Wireless Bluetooth Earbuds with Noise
+      Cancellation". Report the recommended category name and ID.
+    expected: category_name
+    tags: [read, multi-step]
+
+  # Discriminates: does the agent query each status separately and synthesise
+  # per-status counts rather than returning a single unfiltered list?
+  - id: count_orders_by_status
+    prompt: >
+      Retrieve orders in each of the following statuses: AWAITING_SHIPMENT
+      and COMPLETED. Report the count of orders found in each status.
+    expected: AWAITING_SHIPMENT
+    tags: [read, multi-step]
+
+  # Discriminates: does the agent call the conversations endpoint and surface
+  # conversation_id rather than just confirming the call succeeded?
+  - id: customer_service_conversations
+    prompt: >
+      Retrieve the list of customer service conversations for the shop. Report
+      the conversation IDs and any buyer information visible, or confirm there
+      are no active conversations.
+    expected: conversation_id
+    tags: [read]
+
+  # Discriminates: does the agent call the returns/refunds endpoint and
+  # surface return_id rather than a generic count or empty message?
+  - id: search_returns_refunds
+    prompt: >
+      Search for return and refund requests in the shop. Report how many are
+      found and the return ID and status of the first one, or confirm there
+      are none.
+    expected: return_id
+    tags: [read]
+
+  # Discriminates: does the agent surface the API error detail for an
+  # invalid product ID rather than swallowing the error silently?
+  - id: error_handling_invalid_product
+    prompt: >
+      Attempt to retrieve product details for an invalid product ID
+      "INVALID_PRODUCT_ID_999". Report the exact error response received,
+      including any error code or message.
+    expected: invalid
+    tags: [read, error-handling]

@@ -1,0 +1,250 @@
+{
+  "create_issue": {
+    "doc": "Jira Cloud REST API v3 - Issue Creation",
+    "endpoint": "POST /rest/api/3/issue"
+  },
+  "get_issue": {
+    "doc": "Jira Cloud REST API v3 - Get Issue",
+    "endpoint": "GET /rest/api/3/issue/{issueKey}"
+  },
+  "update_issue": {
+    "doc": "Jira Cloud REST API v3 - Update Issue",
+    "endpoint": "PUT /rest/api/3/issue/{issueKey}"
+  },
+  "delete_issue": {
+    "doc": "Jira Cloud REST API v3 - Delete Issue",
+    "endpoint": "DELETE /rest/api/3/issue/{issueKey}"
+  },
+  "search_issues": {
+    "doc": "Jira Cloud REST API v3 - Search Issues (JQL)",
+    "endpoint": "GET /rest/api/3/search"
+  },
+  "assign_issue": {
+    "doc": "Jira Cloud REST API v3 - Assign Issue",
+    "endpoint": "PUT /rest/api/3/issue/{issueKey}/assignee"
+  },
+  "unassign_issue": {
+    "doc": "Jira Cloud REST API v3 - Unassign Issue",
+    "endpoint": "PUT /rest/api/3/issue/{issueKey}/assignee"
+  },
+  "transition_issue": {
+    "doc": "Jira Cloud REST API v3 - Transition Issue",
+    "endpoint": "POST /rest/api/3/issue/{issueKey}/transitions"
+  },
+  "get_issue_transitions": {
+    "doc": "Jira Cloud REST API v3 - Get Issue Transitions",
+    "endpoint": "GET /rest/api/3/issue/{issueKey}/transitions"
+  },
+  "add_comment": {
+    "doc": "Jira Cloud REST API v3 - Add Comment",
+    "endpoint": "POST /rest/api/3/issue/{issueKey}/comments"
+  },
+  "get_issue_comments": {
+    "doc": "Jira Cloud REST API v3 - Get Issue Comments",
+    "endpoint": "GET /rest/api/3/issue/{issueKey}/comments"
+  },
+  "update_comment": {
+    "doc": "Jira Cloud REST API v3 - Update Comment",
+    "endpoint": "PUT /rest/api/3/issue/{issueKey}/comments/{commentId}"
+  },
+  "delete_comment": {
+    "doc": "Jira Cloud REST API v3 - Delete Comment",
+    "endpoint": "DELETE /rest/api/3/issue/{issueKey}/comments/{commentId}"
+  },
+  "add_worklog": {
+    "doc": "Jira Cloud REST API v3 - Add Worklog",
+    "endpoint": "POST /rest/api/3/issue/{issueKey}/worklog"
+  },
+  "get_issue_worklogs": {
+    "doc": "Jira Cloud REST API v3 - Get Issue Worklogs",
+    "endpoint": "GET /rest/api/3/issue/{issueKey}/worklog"
+  },
+  "delete_worklog": {
+    "doc": "Jira Cloud REST API v3 - Delete Worklog",
+    "endpoint": "DELETE /rest/api/3/issue/{issueKey}/worklog/{worklogId}"
+  },
+  "add_attachment": {
+    "doc": "Jira Cloud REST API v3 - Add Attachment",
+    "endpoint": "POST /rest/api/3/issue/{issueKey}/attachments"
+  },
+  "get_issue_attachments": {
+    "doc": "Jira Cloud REST API v3 - Get Issue Attachments",
+    "endpoint": "GET /rest/api/3/issue/{issueKey}"
+  },
+  "delete_attachment": {
+    "doc": "Jira Cloud REST API v3 - Delete Attachment",
+    "endpoint": "DELETE /rest/api/3/attachment/{attachmentId}"
+  },
+  "add_watcher": {
+    "doc": "Jira Cloud REST API v3 - Add Watcher",
+    "endpoint": "POST /rest/api/3/issue/{issueKey}/watchers"
+  },
+  "remove_watcher": {
+    "doc": "Jira Cloud REST API v3 - Remove Watcher",
+    "endpoint": "DELETE /rest/api/3/issue/{issueKey}/watchers"
+  },
+  "get_issue_watchers": {
+    "doc": "Jira Cloud REST API v3 - Get Issue Watchers",
+    "endpoint": "GET /rest/api/3/issue/{issueKey}/watchers"
+  },
+  "link_issues": {
+    "doc": "Jira Cloud REST API v3 - Link Issues",
+    "endpoint": "POST /rest/api/3/issueLink"
+  },
+  "delete_issue_link": {
+    "doc": "Jira Cloud REST API v3 - Delete Issue Link",
+    "endpoint": "DELETE /rest/api/3/issueLink/{linkId}"
+  },
+  "get_issue_links": {
+    "doc": "Jira Cloud REST API v3 - Get Issue Links",
+    "endpoint": "GET /rest/api/3/issue/{issueKey}"
+  },
+  "get_project": {
+    "doc": "Jira Cloud REST API v3 - Get Project",
+    "endpoint": "GET /rest/api/3/project/{projectKey}"
+  },
+  "list_projects": {
+    "doc": "Jira Cloud REST API v3 - List Projects",
+    "endpoint": "GET /rest/api/3/project"
+  },
+  "create_project": {
+    "doc": "Jira Cloud REST API v3 - Create Project",
+    "endpoint": "POST /rest/api/3/project"
+  },
+  "get_project_components": {
+    "doc": "Jira Cloud REST API v3 - Get Project Components",
+    "endpoint": "GET /rest/api/3/project/{projectKey}/components"
+  },
+  "create_component": {
+    "doc": "Jira Cloud REST API v3 - Create Component",
+    "endpoint": "POST /rest/api/3/component"
+  },
+  "update_component": {
+    "doc": "Jira Cloud REST API v3 - Update Component",
+    "endpoint": "PUT /rest/api/3/component/{componentId}"
+  },
+  "delete_component": {
+    "doc": "Jira Cloud REST API v3 - Delete Component",
+    "endpoint": "DELETE /rest/api/3/component/{componentId}"
+  },
+  "get_project_versions": {
+    "doc": "Jira Cloud REST API v3 - Get Project Versions",
+    "endpoint": "GET /rest/api/3/project/{projectKey}/versions"
+  },
+  "create_version": {
+    "doc": "Jira Cloud REST API v3 - Create Version",
+    "endpoint": "POST /rest/api/3/version"
+  },
+  "update_version": {
+    "doc": "Jira Cloud REST API v3 - Update Version",
+    "endpoint": "PUT /rest/api/3/version/{versionId}"
+  },
+  "delete_version": {
+    "doc": "Jira Cloud REST API v3 - Delete Version",
+    "endpoint": "DELETE /rest/api/3/version/{versionId}"
+  },
+  "get_user": {
+    "doc": "Jira Cloud REST API v3 - Get User",
+    "endpoint": "GET /rest/api/3/user"
+  },
+  "search_users": {
+    "doc": "Jira Cloud REST API v3 - Search Users",
+    "endpoint": "GET /rest/api/3/user/search"
+  },
+  "get_project_users": {
+    "doc": "Jira Cloud REST API v3 - Get Project Users",
+    "endpoint": "GET /rest/api/3/project/{projectKey}/users"
+  },
+  "get_group": {
+    "doc": "Jira Cloud REST API v3 - Get Group",
+    "endpoint": "GET /rest/api/3/group"
+  },
+  "search_groups": {
+    "doc": "Jira Cloud REST API v3 - Search Groups",
+    "endpoint": "GET /rest/api/3/groups/picker"
+  },
+  "add_user_to_group": {
+    "doc": "Jira Cloud REST API v3 - Add User to Group",
+    "endpoint": "POST /rest/api/3/group/user"
+  },
+  "remove_user_from_group": {
+    "doc": "Jira Cloud REST API v3 - Remove User from Group",
+    "endpoint": "DELETE /rest/api/3/group/user"
+  },
+  "get_filter": {
+    "doc": "Jira Cloud REST API v3 - Get Filter",
+    "endpoint": "GET /rest/api/3/filter/{filterId}"
+  },
+  "list_filters": {
+    "doc": "Jira Cloud REST API v3 - List Filters",
+    "endpoint": "GET /rest/api/3/filter/{filterType}"
+  },
+  "create_filter": {
+    "doc": "Jira Cloud REST API v3 - Create Filter",
+    "endpoint": "POST /rest/api/3/filter"
+  },
+  "update_filter": {
+    "doc": "Jira Cloud REST API v3 - Update Filter",
+    "endpoint": "PUT /rest/api/3/filter/{filterId}"
+  },
+  "delete_filter": {
+    "doc": "Jira Cloud REST API v3 - Delete Filter",
+    "endpoint": "DELETE /rest/api/3/filter/{filterId}"
+  },
+  "list_issue_types": {
+    "doc": "Jira Cloud REST API v3 - List Issue Types",
+    "endpoint": "GET /rest/api/3/issuetype"
+  },
+  "get_issue_type": {
+    "doc": "Jira Cloud REST API v3 - Get Issue Type",
+    "endpoint": "GET /rest/api/3/issuetype/{issueTypeId}"
+  },
+  "list_priorities": {
+    "doc": "Jira Cloud REST API v3 - List Priorities",
+    "endpoint": "GET /rest/api/3/priority"
+  },
+  "get_priority": {
+    "doc": "Jira Cloud REST API v3 - Get Priority",
+    "endpoint": "GET /rest/api/3/priority/{priorityId}"
+  },
+  "list_statuses": {
+    "doc": "Jira Cloud REST API v3 - List Statuses",
+    "endpoint": "GET /rest/api/3/status"
+  },
+  "get_status": {
+    "doc": "Jira Cloud REST API v3 - Get Status",
+    "endpoint": "GET /rest/api/3/status/{statusId}"
+  },
+  "list_fields": {
+    "doc": "Jira Cloud REST API v3 - List Fields",
+    "endpoint": "GET /rest/api/3/field"
+  },
+  "search_field": {
+    "doc": "Jira Cloud REST API v3 - Search Fields",
+    "endpoint": "GET /rest/api/3/field"
+  },
+  "list_dashboards": {
+    "doc": "Jira Cloud REST API v3 - List Dashboards",
+    "endpoint": "GET /rest/api/3/dashboard"
+  },
+  "get_dashboard": {
+    "doc": "Jira Cloud REST API v3 - Get Dashboard",
+    "endpoint": "GET /rest/api/3/dashboard/{dashboardId}"
+  },
+  "list_resolutions": {
+    "doc": "Jira Cloud REST API v3 - List Resolutions",
+    "endpoint": "GET /rest/api/3/resolution"
+  },
+  "get_resolution": {
+    "doc": "Jira Cloud REST API v3 - Get Resolution",
+    "endpoint": "GET /rest/api/3/resolution/{resolutionId}"
+  },
+  "get_server_info": {
+    "doc": "Jira Cloud REST API v3 - Get Server Info",
+    "endpoint": "GET /rest/api/3/serverInfo"
+  },
+  "get_myself": {
+    "doc": "Jira Cloud REST API v3 - Get Current User",
+    "endpoint": "GET /rest/api/3/myself"
+  }
+}

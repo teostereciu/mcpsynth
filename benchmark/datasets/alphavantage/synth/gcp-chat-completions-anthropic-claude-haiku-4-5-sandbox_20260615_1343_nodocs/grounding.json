@@ -1,0 +1,170 @@
+{
+  "get_intraday_stock": {
+    "doc": "Alpha Vantage API - Stock Time Series",
+    "endpoint": "GET /query?function=TIME_SERIES_INTRADAY"
+  },
+  "get_daily_stock": {
+    "doc": "Alpha Vantage API - Stock Time Series",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY"
+  },
+  "get_weekly_stock": {
+    "doc": "Alpha Vantage API - Stock Time Series",
+    "endpoint": "GET /query?function=TIME_SERIES_WEEKLY"
+  },
+  "get_monthly_stock": {
+    "doc": "Alpha Vantage API - Stock Time Series",
+    "endpoint": "GET /query?function=TIME_SERIES_MONTHLY"
+  },
+  "get_quote": {
+    "doc": "Alpha Vantage API - Global Quote",
+    "endpoint": "GET /query?function=GLOBAL_QUOTE"
+  },
+  "search_symbol": {
+    "doc": "Alpha Vantage API - Symbol Search",
+    "endpoint": "GET /query?function=SYMBOL_SEARCH"
+  },
+  "get_fx_intraday": {
+    "doc": "Alpha Vantage API - Forex Time Series",
+    "endpoint": "GET /query?function=FX_INTRADAY"
+  },
+  "get_fx_daily": {
+    "doc": "Alpha Vantage API - Forex Time Series",
+    "endpoint": "GET /query?function=FX_DAILY"
+  },
+  "get_fx_weekly": {
+    "doc": "Alpha Vantage API - Forex Time Series",
+    "endpoint": "GET /query?function=FX_WEEKLY"
+  },
+  "get_fx_monthly": {
+    "doc": "Alpha Vantage API - Forex Time Series",
+    "endpoint": "GET /query?function=FX_MONTHLY"
+  },
+  "get_currency_exchange_rate": {
+    "doc": "Alpha Vantage API - Currency Exchange Rate",
+    "endpoint": "GET /query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "get_crypto_intraday": {
+    "doc": "Alpha Vantage API - Cryptocurrency Time Series",
+    "endpoint": "GET /query?function=CRYPTO_INTRADAY"
+  },
+  "get_crypto_daily": {
+    "doc": "Alpha Vantage API - Cryptocurrency Time Series",
+    "endpoint": "GET /query?function=CRYPTO_DAILY"
+  },
+  "get_crypto_weekly": {
+    "doc": "Alpha Vantage API - Cryptocurrency Time Series",
+    "endpoint": "GET /query?function=CRYPTO_WEEKLY"
+  },
+  "get_crypto_monthly": {
+    "doc": "Alpha Vantage API - Cryptocurrency Time Series",
+    "endpoint": "GET /query?function=CRYPTO_MONTHLY"
+  },
+  "get_crypto_rating": {
+    "doc": "Alpha Vantage API - Cryptocurrency Rating",
+    "endpoint": "GET /query?function=CRYPTO_RATING"
+  },
+  "get_sma": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=SMA"
+  },
+  "get_ema": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=EMA"
+  },
+  "get_rsi": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=RSI"
+  },
+  "get_macd": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=MACD"
+  },
+  "get_bbands": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=BBANDS"
+  },
+  "get_stoch": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=STOCH"
+  },
+  "get_adx": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=ADX"
+  },
+  "get_atr": {
+    "doc": "Alpha Vantage API - Technical Indicators",
+    "endpoint": "GET /query?function=ATR"
+  },
+  "get_company_overview": {
+    "doc": "Alpha Vantage API - Fundamental Data",
+    "endpoint": "GET /query?function=OVERVIEW"
+  },
+  "get_income_statement": {
+    "doc": "Alpha Vantage API - Fundamental Data",
+    "endpoint": "GET /query?function=INCOME_STATEMENT"
+  },
+  "get_balance_sheet": {
+    "doc": "Alpha Vantage API - Fundamental Data",
+    "endpoint": "GET /query?function=BALANCE_SHEET"
+  },
+  "get_cash_flow": {
+    "doc": "Alpha Vantage API - Fundamental Data",
+    "endpoint": "GET /query?function=CASH_FLOW"
+  },
+  "get_earnings": {
+    "doc": "Alpha Vantage API - Fundamental Data",
+    "endpoint": "GET /query?function=EARNINGS"
+  },
+  "get_cpi": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=CPI"
+  },
+  "get_inflation": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=INFLATION"
+  },
+  "get_inflation_expectation": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=INFLATION_EXPECTATION"
+  },
+  "get_consumer_sentiment": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=CONSUMER_SENTIMENT"
+  },
+  "get_retail_sales": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=RETAIL_SALES"
+  },
+  "get_durables": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=DURABLES"
+  },
+  "get_unemployment": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=UNEMPLOYMENT"
+  },
+  "get_nonfarm_payroll": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=NONFARM_PAYROLL"
+  },
+  "get_treasury_yield": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=TREASURY_YIELD"
+  },
+  "get_federal_funds_rate": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=FEDERAL_FUNDS_RATE"
+  },
+  "get_real_gdp": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=REAL_GDP"
+  },
+  "get_real_gdp_per_capita": {
+    "doc": "Alpha Vantage API - Economic Indicators",
+    "endpoint": "GET /query?function=REAL_GDP_PER_CAPITA"
+  },
+  "get_sector_performance": {
+    "doc": "Alpha Vantage API - Sector Performance",
+    "endpoint": "GET /query?function=SECTOR"
+  }
+}

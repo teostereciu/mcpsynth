@@ -1,0 +1,222 @@
+{
+  "create_customer": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /customers"
+  },
+  "get_customer": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /customers/{customer_id}"
+  },
+  "update_customer": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /customers/{customer_id}"
+  },
+  "delete_customer": {
+    "doc": "no_doc_available.md",
+    "endpoint": "DELETE /customers/{customer_id}"
+  },
+  "list_customers": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /customers"
+  },
+  "create_payment_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /payment_intents"
+  },
+  "get_payment_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /payment_intents/{pi_id}"
+  },
+  "confirm_payment_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /payment_intents/{pi_id}/confirm"
+  },
+  "cancel_payment_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /payment_intents/{pi_id}/cancel"
+  },
+  "list_payment_intents": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /payment_intents"
+  },
+  "create_charge": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /charges"
+  },
+  "get_charge": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /charges/{charge_id}"
+  },
+  "refund_charge": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /charges/{charge_id}/refund"
+  },
+  "list_charges": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /charges"
+  },
+  "get_refund": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /refunds/{refund_id}"
+  },
+  "list_refunds": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /refunds"
+  },
+  "create_product": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /products"
+  },
+  "get_product": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /products/{product_id}"
+  },
+  "update_product": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /products/{product_id}"
+  },
+  "list_products": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /products"
+  },
+  "create_price": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /prices"
+  },
+  "get_price": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /prices/{price_id}"
+  },
+  "list_prices": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /prices"
+  },
+  "create_subscription": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /subscriptions"
+  },
+  "get_subscription": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /subscriptions/{subscription_id}"
+  },
+  "update_subscription": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /subscriptions/{subscription_id}"
+  },
+  "cancel_subscription": {
+    "doc": "no_doc_available.md",
+    "endpoint": "DELETE /subscriptions/{subscription_id}"
+  },
+  "list_subscriptions": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /subscriptions"
+  },
+  "get_invoice": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /invoices/{invoice_id}"
+  },
+  "list_invoices": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /invoices"
+  },
+  "create_checkout_session": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /checkout/sessions"
+  },
+  "get_checkout_session": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /checkout/sessions/{session_id}"
+  },
+  "create_payment_link": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /payment_links"
+  },
+  "get_payment_link": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /payment_links/{payment_link_id}"
+  },
+  "list_payment_links": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /payment_links"
+  },
+  "create_connect_account": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /accounts"
+  },
+  "get_connect_account": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /accounts/{account_id}"
+  },
+  "list_connect_accounts": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /accounts"
+  },
+  "create_transfer": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /transfers"
+  },
+  "get_transfer": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /transfers/{transfer_id}"
+  },
+  "list_transfers": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /transfers"
+  },
+  "create_payout": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /payouts"
+  },
+  "get_payout": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /payouts/{payout_id}"
+  },
+  "list_payouts": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /payouts"
+  },
+  "create_setup_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /setup_intents"
+  },
+  "get_setup_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /setup_intents/{si_id}"
+  },
+  "confirm_setup_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /setup_intents/{si_id}/confirm"
+  },
+  "cancel_setup_intent": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /setup_intents/{si_id}/cancel"
+  },
+  "create_coupon": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /coupons"
+  },
+  "get_coupon": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /coupons/{coupon_id}"
+  },
+  "delete_coupon": {
+    "doc": "no_doc_available.md",
+    "endpoint": "DELETE /coupons/{coupon_id}"
+  },
+  "list_coupons": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /coupons"
+  },
+  "create_promotion_code": {
+    "doc": "no_doc_available.md",
+    "endpoint": "POST /promotion_codes"
+  },
+  "get_promotion_code": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /promotion_codes/{promo_code_id}"
+  },
+  "list_promotion_codes": {
+    "doc": "no_doc_available.md",
+    "endpoint": "GET /promotion_codes"
+  }
+}

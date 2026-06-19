@@ -1,0 +1,259 @@
+# Agent evaluation tasks for Notion API MCP server.
+#
+# Required env vars: NOTION_API_KEY
+# Note: The integration must be connected to a Notion workspace with at least
+# one parent page shared with the integration.
+#
+# See benchmark/TASK_CREATION_GUIDE.md for prompt writing principles,
+# difficulty calibration, and the full checklist.
+
+tasks:
+  # ---------- READ ----------
+
+  - id: list_workspace_users
+    prompt: >
+      List the users in this Notion workspace. Report each user's name and
+      whether they are a person or a bot.
+    expected: person
+    tags: [read]
+    # Tests: user list tool coverage; "person" only appears if response is
+    # correctly parsed and the type field is reported.
+
+  - id: get_integration_identity
+    prompt: >
+      Find out which account this integration is running as. Report its name
+      and the workspace it belongs to.
+    expected: workspace_name
+    tags: [read]
+    # Tests: "get me" / current-user tool; workspace_name only appears in
+    # bot user responses, verifying the correct endpoint was called.
+
+  - id: search_all_content
+    prompt: >
+      Find all pages and databases this integration can access. Report the
+      title and type of each result.
+    expected: database
+    tags: [read]
+    # Tests: search tool with no filters; "database" only appears if at least
+    # one database is returned and the type field is correctly reported.
+
+  - id: count_pages_vs_databases
+    prompt: >
+      Search for all content accessible to this integration. Report separately
+      how many pages and how many databases are found.
+    expected: database
+    tags: [read]
+    # Tests: search + type filtering/counting; requires the agent to
+    # distinguish object types rather than just listing results.
+
+  - id: find_database_by_title
+    prompt: >
+      Search for a database titled "Agent Sort Test" accessible to this
+      integration. Report its ID, or say it does not exist.
+    expected: database
+    tags: [read]
+    # Tests: search with a title filter; exercises query parameter handling.
+
+  # ---------- WRITE ----------
+
+  - id: create_titled_page
+    prompt: >
+      Create a Notion page titled "Agent Eval Test Page" under an accessible
+      parent page. Report its ID.
+    expected: Agent Eval Test Page
+    tags: [write, multi-step]
+    # Parent requirement stated (Notion API constraint, not tool-specific).
+    # HOW to find a parent and HOW to pass it are left to tool docs.
+
+  - id: create_database_with_select
+    prompt: >
+      Under an accessible parent page, create a database titled "Agent Status
+      Tracker" with a Name field and a Status field with options: Backlog,
+      Active, Done. Report the database ID.
+    expected: Agent Status Tracker
+    tags: [write, multi-step]
+    # Tests: create_database with property schema; requires the tool to clearly
+    # document how to define select property options.
+
+  - id: create_and_rename_page
+    prompt: >
+      Under an accessible parent page, create a page titled "Temp Draft".
+      Rename it to "Published Page". Confirm the title change and report the
+      page ID.
+    expected: Published Page
+    tags: [write, multi-step]
+    # Tests: create + update page; agent must use the title update mechanism
+    # correctly without being told the parameter structure.
+
+  - id: archive_and_confirm
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Disposable
+      Page". Archive it. Confirm that the page is archived and report its ID.
+    expected: archived
+    tags: [write, multi-step]
+    # Tests: the archive/delete mechanism; many tools expose this poorly or
+    # through an unexpected parameter (e.g. archived: true vs. a delete call).
+
+  - id: create_page_with_blocks
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Content
+      Page". Add a heading and a paragraph of body text to it. Retrieve the
+      page content and report the block types present.
+    expected: heading
+    tags: [write, multi-step]
+    # Tests: block append tool; agent must discover block type schema from
+    # tool docs. No block type names are given in the prompt.
+
+  - id: add_comment_to_page
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Comment
+      Page". Add a comment with the text "Evaluation comment". Report the
+      comment ID.
+    expected: Evaluation comment
+    tags: [write, multi-step]
+    # Tests: comment API coverage; frequently missing or poorly documented
+    # in MCP servers since it is a separate Notion API surface.
+
+  # ---------- MULTI-STEP / WORKFLOW ----------
+
+  - id: populate_and_filter_database
+    prompt: >
+      Under an accessible parent page, create a database titled "Agent Priority
+      DB" with Name and Priority (select: High, Medium, Low) fields. Add three
+      entries with different priorities. Query the database for only High
+      priority entries and report which entries are returned.
+    expected: High
+    tags: [write, multi-step, workflow]
+    # Tests: create DB + add rows + filtered query, each requiring correct
+    # parameter construction. The filter step is the discriminating one.
+
+  - id: sorted_database_query
+    prompt: >
+      Under an accessible parent page, create a database titled "Agent
+      Leaderboard" with Name and Score (number) fields. Add entries:
+      Zara=15, Kai=88, Priya=42. Query the database sorted by Score
+      descending. Report the names in the order returned.
+    expected: Kai
+    tags: [write, multi-step, workflow]
+    # Tests: sort parameter in query_database; "Kai" verifies correct sort order.
+
+  - id: database_number_filter
+    prompt: >
+      Under an accessible parent page, create a database titled "Agent Score
+      Filter" with Name and Score (number) fields. Add: Alpha=10, Beta=75,
+      Gamma=30, Delta=90. Query for entries where Score is greater than 50.
+      Report how many match and their names.
+    expected: Beta
+    tags: [write, multi-step, workflow]
+    # Tests: numeric filter condition in query_database; requires the tool to
+    # document the filter schema for number properties.
+
+  - id: mixed_block_types
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Block
+      Variety". Add three blocks of different types: a heading, a bulleted list
+      item, and a to-do item. Retrieve the blocks and report each block type.
+    expected: to_do
+    tags: [write, multi-step]
+    # Tests: multiple block type schemas; "to_do" only appears if that specific
+    # block type was successfully appended and retrieved.
+
+  - id: rich_text_formatting
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Formatting
+      Test". Append a paragraph that contains both bold and italic text.
+      Retrieve the block and confirm both formatting styles are present.
+    expected: bold
+    tags: [write, multi-step]
+    # Tests: rich_text annotation schema; requires the tool to document the
+    # annotations object structure for bold/italic.
+
+  - id: nested_page_creation
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Parent
+      Page". Then create a child page titled "Agent Child Page" inside it.
+      Report both page IDs.
+    expected: Agent Child Page
+    tags: [write, multi-step]
+    # Tests: using a newly created page as a parent for another create call.
+    # The nested parent relationship is the difficulty, not the parent discovery.
+
+  # ---------- PAGINATION ----------
+
+  - id: paginate_block_children
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Pagination
+      Test". Append 5 paragraph blocks to it with content "Block 1" through
+      "Block 5". Then fetch the block children using a page_size of 3 to get
+      the first batch. Use the next_cursor from that response to fetch the
+      remaining blocks in a second request. Report the total number of blocks
+      retrieved across both requests and confirm it is 5.
+    expected: next_cursor
+    tags: [read, write, pagination, harder]
+    # Tests whether get-block-children exposes page_size and start_cursor params
+    # and whether the response includes next_cursor and has_more. Most synthesizers
+    # wrap this as a simple "get all children" call without pagination controls.
+    # Without next_cursor in the response, the agent cannot chain the second request.
+    # TOOL_IMPLEMENTATION failure if metadata fields are stripped.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: retrieve_nonexistent_page
+    prompt: >
+      Attempt to retrieve a Notion page with ID
+      "00000000-0000-0000-0000-000000000000". Do not retry. Report exactly
+      what the server returns, including any error code or message.
+    expected: error
+    tags: [error-handling, harder]
+    # Tests whether the retrieve-page tool propagates API errors as structured
+    # data rather than raising unhandled exceptions. Notion returns a 404 with
+    # {"object": "error", "status": 404, "code": "object_not_found"} for
+    # non-existent page IDs. A tool that raises HTTPError crashes the agent;
+    # one that returns the error dict lets the agent report it and pass.
+
+  - id: invalid_property_filter
+    prompt: >
+      Under an accessible parent page, create a database titled "Agent Filter
+      Error Test" with a Name (title) field only. Then attempt to query it with
+      a filter on a property called "NonExistentProperty" with condition
+      equals "test". Report what the API returns for the invalid filter.
+    expected: error
+    tags: [error-handling, write, multi-step, harder]
+    # Two-step: create succeeds, query with invalid filter fails. Tests whether
+    # the query-database tool propagates validation errors from the Notion API.
+    # Notion returns {"code": "validation_error"} for filters referencing
+    # non-existent properties. A tool that swallows this returns empty results;
+    # one that propagates it lets the agent report the error.
+
+  # ---------- CROSS-RESOURCE / STRESS ----------
+
+  - id: update_existing_block
+    prompt: >
+      Under an accessible parent page, create a page titled "Agent Block
+      Update Test". Append a paragraph block with content "Original text".
+      Retrieve the block children to get the block ID. Update that block's
+      content to "Updated text". Retrieve the block children again and confirm
+      the content has changed. Report the block ID and the final content.
+    expected: Updated text
+    tags: [write, multi-step, workflow, harder]
+    # Tests the update-block endpoint (PATCH /blocks/{id}), which is separate
+    # from append-block-children and frequently omitted. Many synthesizers
+    # implement append but not update, making in-place edits impossible.
+    # The round-trip (append → retrieve ID → update → verify) tests both
+    # TOOL_COVERAGE and whether the update response reflects the new content.
+
+  - id: compound_filter_and_or
+    prompt: >
+      Under an accessible parent page, create a database titled "Agent Compound
+      Filter" with Name (title) and Score (number) and Tag (select: A, B)
+      fields. Add four entries: Alpha Score=10 Tag=A, Beta Score=80 Tag=B,
+      Gamma Score=50 Tag=A, Delta Score=90 Tag=B. Query the database with a
+      compound filter: Score greater than 60 AND Tag equals B. Report which
+      entries are returned. Only Beta and Delta should match.
+    expected: Delta
+    tags: [write, multi-step, workflow, harder]
+    # Tests compound (AND) filter construction in query-database. Requires the
+    # tool to document the nested filter schema: {"and": [condition1, condition2]}.
+    # A tool that only supports single-property filters cannot satisfy this task.
+    # TOOL_SCHEMA failure if the filter parameter doesn't expose compound logic.
+    # "Delta" appears only if both conditions are applied correctly.

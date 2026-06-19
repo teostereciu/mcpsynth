@@ -1,0 +1,110 @@
+{
+  "zulip_send_message": {
+    "doc": "docs/messages/send-message.md",
+    "endpoint": "POST /messages"
+  },
+  "zulip_get_messages": {
+    "doc": "docs/messages/get-messages.md",
+    "endpoint": "GET /messages"
+  },
+  "zulip_update_message": {
+    "doc": "docs/messages/edit-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "zulip_delete_message": {
+    "doc": "docs/messages/delete-message.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "zulip_add_reaction": {
+    "doc": "docs/reactions/add-reaction.md",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "zulip_remove_reaction": {
+    "doc": "docs/reactions/remove-reaction.md",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "zulip_update_message_flags": {
+    "doc": "docs/messages/update-message-flags.md",
+    "endpoint": "POST /messages/flags"
+  },
+  "zulip_get_streams": {
+    "doc": "docs/streams/get-streams.md",
+    "endpoint": "GET /streams"
+  },
+  "zulip_create_stream": {
+    "doc": "docs/streams/create-stream.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "zulip_update_stream": {
+    "doc": "docs/streams/update-stream.md",
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "zulip_archive_stream": {
+    "doc": "docs/streams/archive-stream.md",
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "zulip_subscribe": {
+    "doc": "docs/streams/subscribe.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "zulip_unsubscribe": {
+    "doc": "docs/streams/unsubscribe.md",
+    "endpoint": "DELETE /users/me/subscriptions"
+  },
+  "zulip_get_topics": {
+    "doc": "docs/topics/get-topics.md",
+    "endpoint": "GET /users/me/{stream_id}/topics"
+  },
+  "zulip_update_topic": {
+    "doc": "docs/topics/update-topic.md",
+    "endpoint": "POST /streams/{stream_id}/topics"
+  },
+  "zulip_get_own_profile": {
+    "doc": "docs/users/get-own-profile.md",
+    "endpoint": "GET /users/me"
+  },
+  "zulip_get_user": {
+    "doc": "docs/users/get-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "zulip_get_users": {
+    "doc": "docs/users/get-users.md",
+    "endpoint": "GET /users"
+  },
+  "zulip_get_presence": {
+    "doc": "docs/users/get-presence.md",
+    "endpoint": "GET /users/{user_id_or_email}/presence"
+  },
+  "zulip_update_own_status": {
+    "doc": "docs/users/update-status.md",
+    "endpoint": "POST /users/me/status"
+  },
+  "zulip_create_scheduled_message": {
+    "doc": "docs/scheduled-messages/create-scheduled-message.md",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "zulip_get_scheduled_messages": {
+    "doc": "docs/scheduled-messages/get-scheduled-messages.md",
+    "endpoint": "GET /scheduled_messages"
+  },
+  "zulip_delete_scheduled_message": {
+    "doc": "docs/scheduled-messages/delete-scheduled-message.md",
+    "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"
+  },
+  "zulip_get_drafts": {
+    "doc": "docs/drafts/get-drafts.md",
+    "endpoint": "GET /drafts"
+  },
+  "zulip_create_drafts": {
+    "doc": "docs/drafts/create-drafts.md",
+    "endpoint": "POST /drafts"
+  },
+  "zulip_delete_draft": {
+    "doc": "docs/drafts/delete-draft.md",
+    "endpoint": "DELETE /drafts/{draft_id}"
+  },
+  "zulip_upload_file": {
+    "doc": "docs/files/upload-file.md",
+    "endpoint": "POST /user_uploads"
+  }
+}

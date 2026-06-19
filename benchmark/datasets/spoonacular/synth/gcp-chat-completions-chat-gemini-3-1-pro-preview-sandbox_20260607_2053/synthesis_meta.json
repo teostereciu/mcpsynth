@@ -1,0 +1,12 @@
+{
+  "dataset": "spoonacular",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "docs",
+  "synthesis_time": 286.31819915771484,
+  "token_usage": {
+    "input_tokens": 849175,
+    "output_tokens": 3456
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_2053"
+}

@@ -1,0 +1,26 @@
+{
+  "send_message": {
+    "doc": "docs/api_send-message.md",
+    "endpoint": "POST /messages"
+  ,
+  "delete_message": {
+    "doc": "docs/api_delete-message.md",
+    "endpoint": "DELETE /messages/{message_id,
+  "update_message": {
+    "doc": "docs/api_update-message.md",
+    "endpoint": "PATCH /messages/{message_id,
+  "get_messages": {
+    "doc": "docs/api_get-messages.md",
+    "endpoint": "GET /messages"
+  ,
+  "subscribe_to_stream": {
+    "doc": "docs/api_subscribe-to-stream.md",
+    "endpoint": "POST /users/me/subscriptions"
+  }
+}
+}"
+  }
+}"
+  }
+}
+}

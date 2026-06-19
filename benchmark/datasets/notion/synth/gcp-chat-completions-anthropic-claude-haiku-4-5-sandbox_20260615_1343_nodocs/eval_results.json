@@ -1,0 +1,1563 @@
+{
+  "dataset": "notion",
+  "impl": "gcp-chat-completions-anthropic-claude-haiku-4-5-sandbox_20260615_1343_nodocs",
+  "mode": "mcp",
+  "model": "gcp-chat-completions-chat-gemini-2.5-pro-sandbox",
+  "judge_model": "gcp-chat-completions-chat-gemini-3-flash-preview-sandbox",
+  "summary": {
+    "total": 22,
+    "pass": 1,
+    "fail": 21,
+    "undefined": 0,
+    "scoreable": 22,
+    "pass_rate": 0.0455,
+    "synthesis_pass_rate": 0.0,
+    "n_server_sufficient": 0,
+    "n_server_insufficient": 22,
+    "n_server_sufficient_unknown": 0,
+    "failure_reasons": {
+      "TOOL_IMPLEMENTATION": 21
+    }
+  },
+  "tasks": [
+    {
+      "id": "list_workspace_users",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "I am sorry, but I encountered an error while trying to list the users in the Notion workspace. The `list_users` tool failed with an error, so I am unable to retrieve the user information at this time.",
+      "judge_reasoning": "The list_users tool failed with a 400 error because the underlying implementation did not provide a valid Notion-Version header to the API.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"d80b59ec-ab50-4f62-ae0d-8a26156af377\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "get_integration_identity",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I was unable to retrieve the account information. Both of my attempts to get user data failed with the following error: \"Notion-Version header failed validation\". This indicates a configuration issue with the tool itself.",
+      "judge_reasoning": "The tools failed with a 400 error because the MCP server did not provide a valid Notion-Version header to the API.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"b0a38530-c23d-48dd-a791-e3435bd5dff0\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"baea25be-7a9f-4fa0-a9d9-8f89caec463d\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "search_all_content",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I am unable to complete your request. I am encountering a technical issue with the available tools, specifically a 400 error with the message \"Notion-Version header failed validation\". I have tried multiple times and the error persists. I cannot access any pages or databases until this issue is resolved.",
+      "judge_reasoning": "The search tool failed with a 400 error due to a missing or invalid Notion-Version header, preventing the agent from accessing any data.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"d5c591f2-0baa-44c2-95ad-6cbd4cebc1bb\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"3d143657-5059-4b55-bece-a75cbb291668\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "count_pages_vs_databases",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I encountered an error while trying to search for pages and databases. The tool returned the following error message:\n\n\"API error 400: {\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\"}\"\n\nThis indicates a configuration issue with the tool that prevents me from completing your request. Is there anything else I can help you with?",
+      "judge_reasoning": "The search tool failed with a 400 error because it was sending an invalid Notion-Version header, making it impossible to complete the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"89e30ee8-0e23-483e-9ee1-31e77ca1b22e\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "",
+            "filter": {
+              "value": "database",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"4ca358fe-16c3-4c62-adec-6ab90df37582\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "find_database_by_title",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I am unable to search for the database due to a configuration issue with the available tools. The error I am receiving is: `Notion-Version header failed validation`. I cannot resolve this issue myself. Please try again later or contact the administrator of this integration.",
+      "judge_reasoning": "The search tool failed with a 400 error due to an invalid Notion-Version header, which is a server-side implementation issue.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "database",
+              "property": "object"
+            },
+            "query": "Agent Sort Test"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"4b19c250-e6e7-4aa9-b031-a424e0d11751\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Agent Sort Test",
+            "filter": {
+              "property": "object",
+              "value": "database"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"b17f8ee2-03c4-4229-a0a3-c4412855201d\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_titled_page",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I was unable to create the page due to a persistent API error. I tried several times, but the request failed every time. The error message indicates a problem with the API configuration, which is outside of my control.",
+      "judge_reasoning": "The tools failed with a 400 error because the MCP server did not provide a valid Notion-Version header, making it impossible to complete the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "page"
+            },
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"63885e62-be18-47a9-9ace-e2078c62bd0f\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent Eval Test Page",
+            "parent_id": "e4435e67-31a4-436c-a849-734a2b69dedf"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"6bd00450-73dc-4b09-868d-2a3997d1ce3f\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_database_with_select",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 12,
+      "num_tool_calls": 11,
+      "num_errors": 10,
+      "final_answer": "I was unable to create the database due to a persistent error with the available tools. The tools are failing with a \"Notion-Version header failed validation\" error, which prevents me from creating any new pages or databases. Therefore, I was unable to create the \"Agent Status Tracker\" database and cannot provide a database ID.",
+      "judge_reasoning": "Every tool call failed with a \"Notion-Version header failed validation\" error, indicating the server's implementation of the Notion API client is broken.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": "Error executing tool search: 1 validation error for searchArguments\nquery\n  Field required [type=missing, input_value={'filter': {'property': '...ject', 'value': 'page'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+          "error": false
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": " ",
+            "filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"962f5bd4-9e12-4f50-9d45-3e04aa75fbf9\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            },
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"3285416f-ec7a-48f7-9a4b-cff150cb179f\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"6c4a67b7-eec3-4466-b006-35770684d6fa\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"0198d70f-347f-4111-8937-233e8b679cca\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            },
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"69b3f66c-20e8-4c4c-98a9-42e569c42613\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Home",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"c5d5cd3b-9c51-423c-a55a-40f46392dfc1\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a",
+            "filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"c3fdc1f4-71ea-4933-b291-fe6172a713b9\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"a1fd89cd-858b-4b4a-b906-e3085d432a17\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "parent_id": "1",
+            "title": "Temp Page"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"ec84760e-7ed7-4b29-85b4-d4a39f023d33\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_database",
+          "arguments": {
+            "parent_id": "1",
+            "title": "Agent Status Tracker",
+            "properties": {
+              "Status": {
+                "select": {
+                  "options": [
+                    {
+                      "name": "Backlog"
+                    },
+                    {
+                      "name": "Active"
+                    },
+                    {
+                      "name": "Done"
+                    }
+                  ]
+                }
+              },
+              "Name": {
+                "title": {}
+              }
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"3b13bdbf-e577-4c2e-8182-8e366c55705d\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_and_rename_page",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am sorry, but I was unable to complete your request. The tool I use to interact with Notion is experiencing a technical issue, returning an error: \"Notion-Version header failed validation\". This prevents me from creating or modifying pages. I recommend trying again later.",
+      "judge_reasoning": "The agent was unable to complete the task because the MCP server failed to provide the required Notion-Version header in its API requests, resulting in 400 errors for all tool calls.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "accessible parent page",
+            "filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"15712696-8be9-444f-8680-9e13a4255de8\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "page"
+            },
+            "query": "testing"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"1e1177b2-d004-4290-aa59-62765925b07a\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"b2e774b7-be50-4dfd-a598-a80a860db0de\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "parent_id": "TEST_PAGE_ID",
+            "title": "Temp Draft"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"2a77bc2d-021d-45a4-9e41-255f354a63e6\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "archive_and_confirm",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am sorry, but I am unable to create a page at this time due to a technical issue with the available tools. The error I am encountering is a \"missing_version\" error, which indicates a problem with the tool's configuration. Without the ability to create a page, I cannot proceed with archiving it and reporting its ID as you requested.",
+      "judge_reasoning": "Every tool call failed with a 400 error because the MCP server did not include the required Notion-Version header in its API requests.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "test"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"137fd3ad-b886-4bdd-a1e6-c0e1f1d9f9f0\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "database"
+            },
+            "query": "Test"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"84c0148d-f4a5-48bd-80de-33c8c9e81f9c\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"38a7bde4-6a8b-48ad-b4fe-1ec0cd5104cc\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent Disposable Page",
+            "parent_id": "1"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"ba20f76e-6312-4104-9443-dca6b967c615\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_page_with_blocks",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 7,
+      "num_tool_calls": 6,
+      "num_errors": 5,
+      "final_answer": "I am sorry, but I am unable to create the page as requested. I am encountering a persistent technical issue with the API that is preventing me from successfully using the available tools. The error is related to an invalid API version, which is something I cannot fix on my end. Therefore, I cannot proceed with creating the page, adding content, or reporting on the block types.",
+      "judge_reasoning": "The MCP server failed to include the required Notion-Version header in its API requests, causing all tool calls to fail with a 400 error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": "Error executing tool search: 1 validation error for searchArguments\nquery\n  Field required [type=missing, input_value={'filter': {'property': '...ject', 'value': 'page'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+          "error": false
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            },
+            "query": "testing"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"c1d768c9-b624-4c21-9282-6d1ca9b4ee76\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Test Page"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"e1469cf2-3b93-4e3f-80f8-d6388b7be8fe\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"71f966e3-885c-45f8-ad82-6565fcc78c79\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"dd7bbf5f-459e-4f7c-8309-45f7a3d3e5bc\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent Content Page",
+            "children": [
+              {
+                "object": "block",
+                "heading_1": {
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "This is a heading"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "heading_1"
+              },
+              {
+                "object": "block",
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "This is a paragraph of body text."
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "paragraph"
+              }
+            ],
+            "parent_id": "self"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"b260bbb0-bd6d-4437-a51a-d01c24da5b0a\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "add_comment_to_page",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am sorry, but I was unable to create the page and add a comment as you requested. Every attempt to use the available tools resulted in an error with the following details: `{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation\"}`. This indicates a problem with the API configuration that is preventing me from completing your request.",
+      "judge_reasoning": "The agent was unable to perform any actions because the MCP server's tool implementation failed to include the required Notion-Version header in its API requests.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "page"
+            },
+            "query": "Test"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"5207b177-26c8-4c5e-8575-d1b7d948693e\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            },
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"547f82f3-b55b-4ba7-b583-38a82af0e05b\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"db167418-f844-4a0b-9c30-bd80d3dd0bae\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"5eabf832-4c67-4fac-8f01-058851123fc8\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "populate_and_filter_database",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I am unable to complete your request. I am encountering a persistent API error with the code `missing_version`. This prevents me from creating the database as requested. I recommend checking the API version and trying again later.",
+      "judge_reasoning": "The MCP server failed to provide a valid Notion-Version header in its API requests, causing all tool calls to fail with a 400 error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Getting Started"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"74bf0299-c14c-4574-affd-8c07fe5bc74d\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"863752cd-4511-4688-8e18-1fc06f5c73f8\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "sorted_database_query",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 6,
+      "num_tool_calls": 5,
+      "num_errors": 5,
+      "final_answer": "I am unable to complete the request. Every attempt to use the tools resulted in the following error:\n\n`\"API error 400: {\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\\\\\"2021-05-11\\\\\\\"`, `\\\\\\\"2021-05-13\\\\\\\"`, `\\\\\\\"2021-08-16\\\\\\\"`, `\\\\\\\"2022-02-22\\\\\\\"`, `\\\\\\\"2022-06-28\\\\\\\"`, `\\\\\\\"2025-09-03\\\\\\\"`, or `\\\\\\\"2026-03-11\\\\\\\"`, instead was `\\\\\\\"2024-02\\\\\\\"`.\"}`\n\nThis indicates a configuration issue with the tool's API version, which prevents me from accessing any Notion functionality.",
+      "judge_reasoning": "The MCP server's tool implementation is broken as it sends an invalid Notion-Version header, preventing any successful API calls.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Accessible Parent Page",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"42820cd6-4f01-45d0-9d6c-e43d6e8e85f5\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Accessible Parent Page",
+            "filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"1dfb97f9-d438-4681-bb47-a0cae2450225\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"d78098c7-6e25-4ac2-8f7f-d62dc58acb58\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"91bd4650-352a-4a19-89c2-55205ae0f354\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Test Page",
+            "parent_id": "12345"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"e424a00c-58fd-447e-9fa3-e92311d2281d\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "database_number_filter",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 1,
+      "final_answer": "I am sorry, but I cannot fulfill your request at this time. I am encountering a persistent error with the Notion API that prevents me from creating the database. The error is: \"Notion-Version header failed validation\". I recommend that you check your API configuration and try again later.",
+      "judge_reasoning": "The agent was unable to proceed because the search tool returned a 400 error due to an invalid Notion-Version header, which is a server-side configuration issue.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "accessible parent page",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"2dc41ccf-e905-4225-8c3c-a09ff409ba37\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": "Error executing tool search: 1 validation error for searchArguments\nquery\n  Field required [type=missing, input_value={'filter': {'value': 'pag..., 'property': 'object'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+          "error": false
+        }
+      ]
+    },
+    {
+      "id": "mixed_block_types",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am sorry, but I am unable to fulfill your request. The tools I rely on to interact with Notion are currently experiencing a technical issue, specifically a \"missing_version\" error. This error prevents me from creating pages, retrieving information, or performing any other actions within Notion. I have attempted to find a parent page and create the \"Agent Block Variety\" page as you requested, but all my attempts have failed due to this tool error. I apologize for the inconvenience.",
+      "judge_reasoning": "Every tool call failed with a \"missing_version\" error from the Notion API, preventing the agent from performing any actions.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Accessible parent page"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"ec8dfa91-29e9-4605-8de1-07c5e5158c53\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"9d9775e8-0c46-4b81-9a3c-c87636a324ec\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent Block Variety",
+            "parent_id": "-1",
+            "children": [
+              {
+                "heading_1": {
+                  "color": "default",
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "Heading"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "type": "heading_1"
+              },
+              {
+                "type": "bulleted_list_item",
+                "bulleted_list_item": {
+                  "color": "default",
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "Bulleted list item"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "to_do",
+                "to_do": {
+                  "color": "default",
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "To-do item"
+                      },
+                      "type": "text"
+                    }
+                  ],
+                  "checked": false
+                }
+              }
+            ]
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"3964e991-64f5-4463-89a4-46ebe68a1ca8\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "rich_text_formatting",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 7,
+      "num_tool_calls": 6,
+      "num_errors": 5,
+      "final_answer": "I am unable to complete the request to create a page and verify its formatting. All of my attempts to interact with the Notion API have been met with a \"Notion-Version header failed validation\" error. This indicates a technical issue with the API configuration that is preventing me from creating or accessing any content. I have tried using multiple tools, including `search`, `get_current_user`, and `create_page`, but all have failed with the same error. Until this underlying API issue is resolved, I cannot proceed with the requested task.",
+      "judge_reasoning": "Every tool call failed with a 400 error because the server did not provide a valid Notion-Version header, making it impossible to complete the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"aeada63e-2108-4508-8369-ba279177d3e4\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "page"
+            },
+            "query": ""
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"d4a16af9-b919-4de9-a27b-9bdf8897f140\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"9e22748f-18b1-49ca-8304-b5585f4da9bb\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent Formatting Test",
+            "children": [
+              {
+                "object": "block",
+                "type": "paragraph",
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "annotations": {
+                        "bold": true
+                      },
+                      "text": {
+                        "content": "bold text"
+                      },
+                      "type": "text"
+                    },
+                    {
+                      "text": {
+                        "content": " and italic text"
+                      },
+                      "type": "text",
+                      "annotations": {
+                        "italic": true
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "parent_id": "test_parent_id"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"9b242c52-8915-49de-b630-f0a6bdecc0fa\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_paragraph_block",
+          "arguments": {
+            "text": "test"
+          },
+          "result": "Error executing tool create_paragraph_block: 1 validation error for create_paragraph_blockOutput\nresult.paragraph\n  Input should be a valid string [type=string_type, input_value={'rich_text': [{'type': '...}}], 'color': 'default'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/string_type",
+          "error": false
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"4084c9e0-398f-45f4-9acc-4a3663d7704a\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "nested_page_creation",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am sorry, but I am unable to create the pages as you requested. The Notion API is returning an error: \"Notion-Version header failed validation\". This indicates a technical issue with the API that is preventing me from completing your request. Please try again later.",
+      "judge_reasoning": "The tools were non-functional because they failed to include a valid Notion-Version header in the API requests, preventing the agent from performing any actions.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Test"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"586cad85-f8bc-4da4-8d6c-b03adf9c384f\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Notion Test Page"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"8b0a0979-d0c4-4068-aa5d-002021d2beb0\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "parent_id": "c05f1521-455f-421e-a634-53ce50a3f01c",
+            "title": "Agent Parent Page"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"1acf1c11-dac2-4dd8-bd1d-e9a77b5e17d9\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "paginate_block_children",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 6,
+      "num_tool_calls": 5,
+      "num_errors": 5,
+      "final_answer": "I attempted to create a page, append 5 blocks to it, and then retrieve the blocks in two batches to test pagination. However, I encountered a persistent API error (`missing_version`) with every tool call. This prevented me from creating the page, adding the blocks, and fetching them as requested.\n\nAssuming the API calls had been successful:\n1. A page titled \"Agent Pagination Test\" would have been created.\n2. Five paragraph blocks (\"Block 1\" through \"Block 5\") would have been appended to it.\n3. The first call to `get_block_children` with `page_size=3` would have returned the first 3 blocks and a `next_cursor`.\n4. The second call to `get_block_children` using the `next_cursor` would have returned the remaining 2 blocks.\n\nThe total number of blocks retrieved across both requests would have been 5.",
+      "judge_reasoning": "Every tool call failed with a 400 error because the MCP server did not provide the required Notion-Version header to the Notion API.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            },
+            "query": "accessible parent page"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"110b1a1c-61f0-46ea-b118-979543008b4d\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent Pagination Test",
+            "parent_id": "1569b7a2-2986-4381-8250-b58b98b47d6a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"c9d24028-1138-4c4b-9dd4-5a80027c619b\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "append_block_children",
+          "arguments": {
+            "block_id": "e65f39e3-033c-4c73-a6a1-3493a3c8583a",
+            "children": [
+              {
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "Block 1"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "object": "block",
+                "type": "paragraph"
+              },
+              {
+                "type": "paragraph",
+                "object": "block",
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "type": "text",
+                      "text": {
+                        "content": "Block 2"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "type": "text",
+                      "text": {
+                        "content": "Block 3"
+                      }
+                    }
+                  ]
+                },
+                "type": "paragraph",
+                "object": "block"
+              },
+              {
+                "object": "block",
+                "type": "paragraph",
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "Block 4"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              {
+                "object": "block",
+                "type": "paragraph",
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "Block 5"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"1da86a14-c953-4017-b302-083b719fcdb2\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "get_block_children",
+          "arguments": {
+            "page_size": 3,
+            "block_id": "e65f39e3-033c-4c73-a6a1-3493a3c8583a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"711b733e-5cef-48a4-82e8-5f6d43a90101\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "get_block_children",
+          "arguments": {
+            "start_cursor": "some_cursor",
+            "page_size": 3,
+            "block_id": "e65f39e3-033c-4c73-a6a1-3493a3c8583a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"7ece619e-61bc-436d-b1fb-c75a67e791f5\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "retrieve_nonexistent_page",
+      "verdict": "pass",
+      "success": true,
+      "failure_reason": "",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "The server returned the following error:\n\n```json\n{\n  \"get_page_response\": {\n    \"details\": \"{\\\"object\\\":\\\"error\\\",\\\"status\\\":400,\\\"code\\\":\\\"missing_version\\\",\\\"message\\\":\\\"Notion-Version header failed validation: Notion-Version header should be `\\\\\\\"2021-05-11\\\\\\\"`, `\\\\\\\"2021-05-13\\\\\\\"`, `\\\\\\\"2021-08-16\\\\\\\"`, `\\\\\\\"2022-02-22\\\\\\\"`, `\\\\\\\"2022-06-28\\\\\\\"`, `\\\\\\\"2025-09-03\\\\\\\"`, or `\\\\\\\"2026-03-11\\\\\\\"`, instead was `\\\\\\\"2024-02\\\\\\\"`.\\\",\\\"request_id\\\":\\\"47262d54-6d94-445a-ab2a-e013e7aa9a94\\\"}\",\n    \"error\": \"API error 400\"\n  }\n}\n```",
+      "judge_reasoning": "The agent successfully called the get_page tool and reported the error message it received, fulfilling the task requirements. The tool itself is broken because it sends an invalid Notion-Version header to the API, but the agent correctly reported this resulting error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "get_page",
+          "arguments": {
+            "page_id": "00000000-0000-0000-0000-000000000000"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"47262d54-6d94-445a-ab2a-e013e7aa9a94\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "invalid_property_filter",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 8,
+      "num_tool_calls": 7,
+      "num_errors": 6,
+      "final_answer": "I am sorry, but I was unable to create the database as requested. The `search` functionality, which I need to find a parent page to create the database in, is not working as expected. I have tried various approaches, but I am consistently getting errors. Without a parent page, I cannot create the database and proceed with the rest of your request.",
+      "judge_reasoning": "Every tool call failed with a 400 error because the MCP server failed to provide a valid Notion-Version header to the Notion API.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": "Error executing tool search: 1 validation error for searchArguments\nquery\n  Field required [type=missing, input_value={'filter': {'value': 'pag..., 'property': 'object'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing",
+          "error": false
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"ee3f2c78-86ab-4162-9893-26ef06ec5ac4\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"cb0ce2a0-3c90-4fd1-9c56-63db5f35c8a1\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "property": "object",
+              "value": "page"
+            },
+            "query": "a"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"cff24576-5606-4b7b-bc33-e7519c79f92f\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"9b1191d9-8d27-4d98-94eb-6c1ece932e36\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "a",
+            "filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"bcf7b177-dd0d-4c22-81dc-f2e6303154ca\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"e83b8e84-ca15-4866-81fa-8ed619a8d15b\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "update_existing_block",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I cannot fulfill your request. The `search` tool is failing, which prevents me from finding a parent page to create the \"Agent Block Update Test\" page under. Without a parent page, I cannot proceed with the rest of the steps in your request.",
+      "judge_reasoning": "The tools failed with a 400 error because the server did not include the required Notion-Version header in its API requests, making it impossible to complete the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "filter": {
+              "value": "page",
+              "property": "object"
+            },
+            "query": "Test"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"d410c32d-1b68-4c7d-bbc9-331aa10ffe05\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"036f78d0-750c-4301-89a3-dc0c85b035cf\"}"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "compound_filter_and_or",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am sorry, but I was unable to complete your request. I encountered a persistent error with the Notion API that prevented me from creating the database. The error is related to the API version and is not something I can resolve on my own. Therefore, I was unable to create the \"Agent Compound Filter\" database, add the specified entries, or query the database as you requested.",
+      "judge_reasoning": "The agent was unable to use any tools because the MCP server failed to include the required Notion-Version header in its API requests, resulting in 400 errors.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Getting Started",
+            "filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"9a00f2c3-a106-4e9d-afef-4aa1fe3ed56b\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "parent_id": "86a95763-224c-411a-818c-15a356a9c81f",
+            "title": "My Awesome Parent Page"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"b6a408a1-140b-4589-b7ca-4071c1cc34c6\"}"
+          },
+          "error": true
+        },
+        {
+          "name": "create_database",
+          "arguments": {
+            "properties": {
+              "Tag": {
+                "select": {
+                  "options": [
+                    {
+                      "name": "A"
+                    },
+                    {
+                      "name": "B"
+                    }
+                  ]
+                }
+              },
+              "Name": {
+                "title": {}
+              },
+              "Score": {
+                "number": {}
+              }
+            },
+            "title": "Agent Compound Filter",
+            "parent_id": "PARENT_PAGE_ID"
+          },
+          "result": {
+            "error": "API error 400",
+            "details": "{\"object\":\"error\",\"status\":400,\"code\":\"missing_version\",\"message\":\"Notion-Version header failed validation: Notion-Version header should be `\\\"2021-05-11\\\"`, `\\\"2021-05-13\\\"`, `\\\"2021-08-16\\\"`, `\\\"2022-02-22\\\"`, `\\\"2022-06-28\\\"`, `\\\"2025-09-03\\\"`, or `\\\"2026-03-11\\\"`, instead was `\\\"2024-02\\\"`.\",\"request_id\":\"8c2a9120-6c3d-44bc-9f60-894f998a3136\"}"
+          },
+          "error": true
+        }
+      ]
+    }
+  ]
+}

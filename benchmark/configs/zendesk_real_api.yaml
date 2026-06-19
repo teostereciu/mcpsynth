@@ -1,0 +1,111 @@
+# Zendesk Real API Testing Configuration
+
+api_name: "Zendesk"
+api_version: "Support API v2 / Help Center API v2"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  ZENDESK_SUBDOMAIN:
+    description: "Your Zendesk subdomain (e.g. 'mycompany' for mycompany.zendesk.com)"
+    how_to_get:
+      steps:
+        - "Your subdomain is the part before .zendesk.com in your Zendesk URL"
+        - "E.g. if your Zendesk is at mycompany.zendesk.com, the subdomain is 'mycompany'"
+    example: "mycompany"
+
+  ZENDESK_EMAIL:
+    description: "Agent or admin email address"
+    how_to_get:
+      steps:
+        - "Use the email address of an agent or admin account in your Zendesk instance"
+    example: "agent@mycompany.com"
+
+  ZENDESK_API_TOKEN:
+    description: "Zendesk API token"
+    how_to_get:
+      url: "https://{subdomain}.zendesk.com/admin/apps-integrations/apis/zendesk-api"
+      steps:
+        - "Log in to Zendesk as an admin"
+        - "Go to Admin Center → Apps and Integrations → APIs → Zendesk API"
+        - "Enable token access and click 'Add API token'"
+        - "Copy the token (it is only shown once)"
+    notes:
+      - "The token is used with email/token basic auth: '{email}/token:{api_token}'"
+      - "Tokens do not expire but can be revoked from the admin panel"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_notes: |
+  Zendesk offers sandbox environments for paid accounts:
+    - Go to Admin Center → Account → Sandbox
+    - The sandbox is a full copy of your production instance
+    - Recommended for testing to avoid affecting real tickets and users
+  For trial/free accounts, use a dedicated test subdomain.
+
+mock_mode:
+  available: false
+
+rate_limits:
+  notes: |
+    Zendesk enforces rate limits per account plan:
+      - Trial/Essential: 10 requests/minute
+      - Team/Professional: 200 requests/minute
+      - Enterprise: 400 requests/minute
+    Search API: additional stricter limits apply (avoid rapid repeated searches).
+    Response headers include X-Rate-Limit and X-Rate-Limit-Remaining.
+
+cleanup_notes: |
+  Test records created during testing will persist in your Zendesk instance:
+    - Tickets: can be deleted via API (DELETE /api/v2/tickets/{id}) or UI
+    - Users: can be deleted if they have no tickets, or suspended
+    - Organizations: can be deleted if empty
+    - Groups: can be deleted via API
+  Use a sandbox environment to avoid polluting production data.
+
+authentication:
+  type: "HTTP Basic Auth"
+  format: "{email}/token:{api_token}"
+  notes: |
+    The '/token' suffix distinguishes API token auth from password auth.
+    Base64-encode "{email}/token:{api_token}" for the Authorization header,
+    or use requests.auth.HTTPBasicAuth(f"{email}/token", api_token).
+
+base_urls:
+  ticketing: "https://{subdomain}.zendesk.com/api/v2"
+  help_center: "https://{subdomain}.zendesk.com/api/v2/help_center"
+
+response_format: |
+  Individual resource responses are wrapped in the resource name:
+    GET /api/v2/tickets/123 → {"ticket": {...}}
+    POST /api/v2/tickets    → {"ticket": {...}}
+
+  List responses use the plural resource name plus pagination:
+    GET /api/v2/tickets → {"tickets": [...], "count": N, "next_page": "...", "previous_page": "..."}
+
+  Error responses:
+    {"error": "RecordNotFound", "description": "Not found"}
+
+permissions:
+  required_roles: |
+    - Agent or Admin role required for most operations
+    - Admin role required for: creating/deleting groups, managing users with admin role
+    - End-user role can only create tickets and view their own data
+  notes: |
+    API token auth inherits the permissions of the associated email's role.
+    Use an admin account's email for full access during testing.
+
+documentation:
+  tickets: "https://developer.zendesk.com/api-reference/ticketing/tickets/tickets/"
+  users: "https://developer.zendesk.com/api-reference/ticketing/users/users/"
+  organizations: "https://developer.zendesk.com/api-reference/ticketing/organizations/organizations/"
+  groups: "https://developer.zendesk.com/api-reference/ticketing/groups/groups/"
+  search: "https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/"
+  help_center: "https://developer.zendesk.com/api-reference/help_center/help-center-api/articles/"
+  rate_limits: "https://developer.zendesk.com/api-reference/introduction/rate-limits/"

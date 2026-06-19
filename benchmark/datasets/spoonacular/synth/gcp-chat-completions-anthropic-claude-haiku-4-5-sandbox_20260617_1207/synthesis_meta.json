@@ -1,0 +1,12 @@
+{
+  "dataset": "spoonacular",
+  "model": "gcp-chat-completions-anthropic-claude-haiku-4.5-sandbox",
+  "condition": "docs",
+  "synthesis_time": 1727.4268352985382,
+  "token_usage": {
+    "input_tokens": 1823965,
+    "output_tokens": 25585
+  },
+  "cost_estimate": null,
+  "timestamp": "20260617_1207"
+}

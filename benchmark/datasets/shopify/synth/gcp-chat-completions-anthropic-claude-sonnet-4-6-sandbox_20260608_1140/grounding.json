@@ -1,0 +1,578 @@
+{
+  "list_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products.json"
+  },
+  "get_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}.json"
+  },
+  "count_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products/count.json"
+  },
+  "create_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "POST /admin/api/2026-01/products.json"
+  },
+  "update_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "PUT /admin/api/2026-01/products/{product_id}.json"
+  },
+  "delete_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}.json"
+  },
+  "list_product_variants": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/variants.json"
+  },
+  "get_product_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "count_product_variants": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/variants/count.json"
+  },
+  "create_product_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "POST /admin/api/2026-01/products/{product_id}/variants.json"
+  },
+  "update_product_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "PUT /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "delete_product_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}/variants/{variant_id}.json"
+  },
+  "list_product_images": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/images.json"
+  },
+  "get_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/images/{image_id}.json"
+  },
+  "count_product_images": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}/images/count.json"
+  },
+  "create_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "POST /admin/api/2026-01/products/{product_id}/images.json"
+  },
+  "update_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "PUT /admin/api/2026-01/products/{product_id}/images/{image_id}.json"
+  },
+  "delete_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}/images/{image_id}.json"
+  },
+  "list_custom_collections": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "GET /admin/api/2026-01/custom_collections.json"
+  },
+  "get_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "GET /admin/api/2026-01/custom_collections/{custom_collection_id}.json"
+  },
+  "count_custom_collections": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "GET /admin/api/2026-01/custom_collections/count.json"
+  },
+  "create_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "POST /admin/api/2026-01/custom_collections.json"
+  },
+  "update_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "PUT /admin/api/2026-01/custom_collections/{custom_collection_id}.json"
+  },
+  "delete_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "DELETE /admin/api/2026-01/custom_collections/{custom_collection_id}.json"
+  },
+  "list_collects": {
+    "doc": "docs/api_collect.md",
+    "endpoint": "GET /admin/api/2026-01/collects.json"
+  },
+  "create_collect": {
+    "doc": "docs/api_collect.md",
+    "endpoint": "POST /admin/api/2026-01/collects.json"
+  },
+  "delete_collect": {
+    "doc": "docs/api_collect.md",
+    "endpoint": "DELETE /admin/api/2026-01/collects/{collect_id}.json"
+  },
+  "get_collection": {
+    "doc": "docs/api_collection.md",
+    "endpoint": "GET /admin/api/2026-01/collections/{collection_id}.json"
+  },
+  "list_collection_products": {
+    "doc": "docs/api_collection.md",
+    "endpoint": "GET /admin/api/2026-01/collections/{collection_id}/products.json"
+  },
+  "list_smart_collections": {
+    "doc": "docs/api_smartcollection.md",
+    "endpoint": "GET /admin/api/2026-01/smart_collections.json"
+  },
+  "get_smart_collection": {
+    "doc": "docs/api_smartcollection.md",
+    "endpoint": "GET /admin/api/2026-01/smart_collections/{smart_collection_id}.json"
+  },
+  "count_smart_collections": {
+    "doc": "docs/api_smartcollection.md",
+    "endpoint": "GET /admin/api/2026-01/smart_collections/count.json"
+  },
+  "create_smart_collection": {
+    "doc": "docs/api_smartcollection.md",
+    "endpoint": "POST /admin/api/2026-01/smart_collections.json"
+  },
+  "update_smart_collection": {
+    "doc": "docs/api_smartcollection.md",
+    "endpoint": "PUT /admin/api/2026-01/smart_collections/{smart_collection_id}.json"
+  },
+  "delete_smart_collection": {
+    "doc": "docs/api_smartcollection.md",
+    "endpoint": "DELETE /admin/api/2026-01/smart_collections/{smart_collection_id}.json"
+  },
+  "list_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders.json"
+  },
+  "get_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "count_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders/count.json"
+  },
+  "create_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders.json"
+  },
+  "update_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "PUT /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "delete_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "DELETE /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "cancel_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/cancel.json"
+  },
+  "close_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/close.json"
+  },
+  "open_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/open.json"
+  },
+  "list_draft_orders": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "GET /admin/api/2026-01/draft_orders.json"
+  },
+  "get_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "GET /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "count_draft_orders": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "GET /admin/api/2026-01/draft_orders/count.json"
+  },
+  "create_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "POST /admin/api/2026-01/draft_orders.json"
+  },
+  "update_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "PUT /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "delete_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "DELETE /admin/api/2026-01/draft_orders/{draft_order_id}.json"
+  },
+  "complete_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "PUT /admin/api/2026-01/draft_orders/{draft_order_id}/complete.json"
+  },
+  "send_draft_order_invoice": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "POST /admin/api/2026-01/draft_orders/{draft_order_id}/send_invoice.json"
+  },
+  "list_refunds": {
+    "doc": "docs/api_refund.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/refunds.json"
+  },
+  "get_refund": {
+    "doc": "docs/api_refund.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/refunds/{refund_id}.json"
+  },
+  "calculate_refund": {
+    "doc": "docs/api_refund.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/refunds/calculate.json"
+  },
+  "create_refund": {
+    "doc": "docs/api_refund.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/refunds.json"
+  },
+  "list_transactions": {
+    "doc": "docs/api_transaction.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/transactions.json"
+  },
+  "get_transaction": {
+    "doc": "docs/api_transaction.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/transactions/{transaction_id}.json"
+  },
+  "count_transactions": {
+    "doc": "docs/api_transaction.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/transactions/count.json"
+  },
+  "create_transaction": {
+    "doc": "docs/api_transaction.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/transactions.json"
+  },
+  "list_fulfillments_by_order": {
+    "doc": "docs/api_fulfillment.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/fulfillments.json"
+  },
+  "list_fulfillments_by_fulfillment_order": {
+    "doc": "docs/api_fulfillment.md",
+    "endpoint": "GET /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/fulfillments.json"
+  },
+  "get_fulfillment": {
+    "doc": "docs/api_fulfillment.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/fulfillments/{fulfillment_id}.json"
+  },
+  "count_fulfillments": {
+    "doc": "docs/api_fulfillment.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/fulfillments/count.json"
+  },
+  "create_fulfillment": {
+    "doc": "docs/api_fulfillment.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillments.json"
+  },
+  "cancel_fulfillment": {
+    "doc": "docs/api_fulfillment.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillments/{fulfillment_id}/cancel.json"
+  },
+  "update_fulfillment_tracking": {
+    "doc": "docs/api_fulfillment.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillments/{fulfillment_id}/update_tracking.json"
+  },
+  "list_fulfillment_orders": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/fulfillment_orders.json"
+  },
+  "get_fulfillment_order": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "GET /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}.json"
+  },
+  "cancel_fulfillment_order": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/cancel.json"
+  },
+  "close_fulfillment_order": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/close.json"
+  },
+  "hold_fulfillment_order": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/hold.json"
+  },
+  "release_fulfillment_order_hold": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/release_hold.json"
+  },
+  "move_fulfillment_order": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/move.json"
+  },
+  "open_fulfillment_order": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/open.json"
+  },
+  "reschedule_fulfillment_order": {
+    "doc": "docs/api_fulfillmentorder.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/reschedule.json"
+  },
+  "send_fulfillment_request": {
+    "doc": "docs/api_fulfillmentrequest.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/fulfillment_request.json"
+  },
+  "accept_fulfillment_request": {
+    "doc": "docs/api_fulfillmentrequest.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/fulfillment_request/accept.json"
+  },
+  "reject_fulfillment_request": {
+    "doc": "docs/api_fulfillmentrequest.md",
+    "endpoint": "POST /admin/api/2026-01/fulfillment_orders/{fulfillment_order_id}/fulfillment_request/reject.json"
+  },
+  "list_order_risks": {
+    "doc": "docs/api_order-risk.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}/risks.json"
+  },
+  "create_order_risk": {
+    "doc": "docs/api_order-risk.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/risks.json"
+  },
+  "list_inventory_items": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "GET /admin/api/2026-01/inventory_items.json"
+  },
+  "get_inventory_item": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "GET /admin/api/2026-01/inventory_items/{inventory_item_id}.json"
+  },
+  "update_inventory_item": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "PUT /admin/api/2026-01/inventory_items/{inventory_item_id}.json"
+  },
+  "list_inventory_levels": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "GET /admin/api/2026-01/inventory_levels.json"
+  },
+  "adjust_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /admin/api/2026-01/inventory_levels/adjust.json"
+  },
+  "set_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /admin/api/2026-01/inventory_levels/set.json"
+  },
+  "connect_inventory_item_to_location": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /admin/api/2026-01/inventory_levels/connect.json"
+  },
+  "delete_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "DELETE /admin/api/2026-01/inventory_levels.json"
+  },
+  "list_locations": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /admin/api/2026-01/locations.json"
+  },
+  "get_location": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /admin/api/2026-01/locations/{location_id}.json"
+  },
+  "count_locations": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /admin/api/2026-01/locations/count.json"
+  },
+  "get_location_inventory_levels": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /admin/api/2026-01/locations/{location_id}/inventory_levels.json"
+  },
+  "list_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers.json"
+  },
+  "get_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "search_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/search.json"
+  },
+  "count_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/count.json"
+  },
+  "create_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /admin/api/2026-01/customers.json"
+  },
+  "update_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "get_customer_orders": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}/orders.json"
+  },
+  "create_customer_activation_url": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /admin/api/2026-01/customers/{customer_id}/account_activation_url.json"
+  },
+  "list_customer_addresses": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}/addresses.json"
+  },
+  "get_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "create_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "POST /admin/api/2026-01/customers/{customer_id}/addresses.json"
+  },
+  "update_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "set_default_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}/addresses/{address_id}/default.json"
+  },
+  "delete_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "DELETE /admin/api/2026-01/customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "list_price_rules": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules.json"
+  },
+  "get_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "count_price_rules": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules/count.json"
+  },
+  "create_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "POST /admin/api/2026-01/price_rules.json"
+  },
+  "update_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "PUT /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "delete_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "DELETE /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "list_discount_codes": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes.json"
+  },
+  "get_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json"
+  },
+  "count_discount_codes": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /admin/api/2026-01/discount_codes/count.json"
+  },
+  "create_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "POST /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes.json"
+  },
+  "update_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "PUT /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json"
+  },
+  "delete_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "DELETE /admin/api/2026-01/price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json"
+  },
+  "create_discount_code_batch": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "POST /admin/api/2026-01/price_rules/{price_rule_id}/batch.json"
+  },
+  "list_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks.json"
+  },
+  "get_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "count_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks/count.json"
+  },
+  "create_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "POST /admin/api/2026-01/webhooks.json"
+  },
+  "update_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "PUT /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "delete_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "DELETE /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "list_metafields": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /admin/api/2026-01/{resource}/{resource_id}/metafields.json"
+  },
+  "get_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /admin/api/2026-01/{resource}/{resource_id}/metafields/{metafield_id}.json"
+  },
+  "count_metafields": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /admin/api/2026-01/{resource}/{resource_id}/metafields/count.json"
+  },
+  "create_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "POST /admin/api/2026-01/{resource}/{resource_id}/metafields.json"
+  },
+  "update_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "PUT /admin/api/2026-01/{resource}/{resource_id}/metafields/{metafield_id}.json"
+  },
+  "delete_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "DELETE /admin/api/2026-01/{resource}/{resource_id}/metafields/{metafield_id}.json"
+  },
+  "get_shop": {
+    "doc": "docs/api_shop.md",
+    "endpoint": "GET /admin/api/2026-01/shop.json"
+  },
+  "list_gift_cards": {
+    "doc": "docs/api_gift-card.md",
+    "endpoint": "GET /admin/api/2026-01/gift_cards.json"
+  },
+  "get_gift_card": {
+    "doc": "docs/api_gift-card.md",
+    "endpoint": "GET /admin/api/2026-01/gift_cards/{gift_card_id}.json"
+  },
+  "count_gift_cards": {
+    "doc": "docs/api_gift-card.md",
+    "endpoint": "GET /admin/api/2026-01/gift_cards/count.json"
+  },
+  "search_gift_cards": {
+    "doc": "docs/api_gift-card.md",
+    "endpoint": "GET /admin/api/2026-01/gift_cards/search.json"
+  },
+  "create_gift_card": {
+    "doc": "docs/api_gift-card.md",
+    "endpoint": "POST /admin/api/2026-01/gift_cards.json"
+  },
+  "update_gift_card": {
+    "doc": "docs/api_gift-card.md",
+    "endpoint": "PUT /admin/api/2026-01/gift_cards/{gift_card_id}.json"
+  },
+  "disable_gift_card": {
+    "doc": "docs/api_gift-card.md",
+    "endpoint": "POST /admin/api/2026-01/gift_cards/{gift_card_id}/disable.json"
+  },
+  "list_abandoned_checkouts": {
+    "doc": "docs/api_abandoned-checkouts.md",
+    "endpoint": "GET /admin/api/2026-01/checkouts.json"
+  },
+  "list_events": {
+    "doc": "docs/api_event.md",
+    "endpoint": "GET /admin/api/2026-01/events.json"
+  },
+  "get_event": {
+    "doc": "docs/api_event.md",
+    "endpoint": "GET /admin/api/2026-01/events/{event_id}.json"
+  },
+  "count_events": {
+    "doc": "docs/api_event.md",
+    "endpoint": "GET /admin/api/2026-01/events/count.json"
+  }
+}

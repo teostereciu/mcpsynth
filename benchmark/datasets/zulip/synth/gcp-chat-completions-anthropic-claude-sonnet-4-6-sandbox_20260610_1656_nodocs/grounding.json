@@ -1,0 +1,422 @@
+{
+  "send_message": {
+    "doc": "docs/messages/send-message.md",
+    "endpoint": "POST /messages"
+  },
+  "get_messages": {
+    "doc": "docs/messages/get-messages.md",
+    "endpoint": "GET /messages"
+  },
+  "get_message": {
+    "doc": "docs/messages/get-message.md",
+    "endpoint": "GET /messages/{message_id}"
+  },
+  "edit_message": {
+    "doc": "docs/messages/update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "docs/messages/delete-message.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "move_message": {
+    "doc": "docs/messages/update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "get_message_history": {
+    "doc": "docs/messages/get-message-history.md",
+    "endpoint": "GET /messages/{message_id}/history"
+  },
+  "add_message_flag": {
+    "doc": "docs/messages/update-message-flags.md",
+    "endpoint": "POST /messages/flags"
+  },
+  "remove_message_flag": {
+    "doc": "docs/messages/update-message-flags.md",
+    "endpoint": "POST /messages/flags"
+  },
+  "mark_all_as_read": {
+    "doc": "docs/messages/mark-all-as-read.md",
+    "endpoint": "POST /mark_all_as_read"
+  },
+  "mark_stream_as_read": {
+    "doc": "docs/messages/mark-stream-as-read.md",
+    "endpoint": "POST /mark_stream_as_read"
+  },
+  "mark_topic_as_read": {
+    "doc": "docs/messages/mark-topic-as-read.md",
+    "endpoint": "POST /mark_topic_as_read"
+  },
+  "get_raw_message": {
+    "doc": "docs/messages/get-message.md",
+    "endpoint": "GET /messages/{message_id}"
+  },
+  "render_message": {
+    "doc": "docs/messages/render-message.md",
+    "endpoint": "POST /messages/render"
+  },
+  "update_message_flags_for_narrow": {
+    "doc": "docs/messages/update-message-flags-for-narrow.md",
+    "endpoint": "POST /messages/flags/narrow"
+  },
+  "get_streams": {
+    "doc": "docs/streams/get-streams.md",
+    "endpoint": "GET /streams"
+  },
+  "get_stream_by_id": {
+    "doc": "docs/streams/get-stream.md",
+    "endpoint": "GET /streams/{stream_id}"
+  },
+  "get_stream_id": {
+    "doc": "docs/streams/get-stream-id.md",
+    "endpoint": "GET /get_stream_id"
+  },
+  "create_stream": {
+    "doc": "docs/streams/subscribe.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "subscribe_to_stream": {
+    "doc": "docs/streams/subscribe.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "unsubscribe_from_stream": {
+    "doc": "docs/streams/unsubscribe.md",
+    "endpoint": "DELETE /users/me/subscriptions"
+  },
+  "get_subscriptions": {
+    "doc": "docs/streams/get-subscriptions.md",
+    "endpoint": "GET /users/me/subscriptions"
+  },
+  "get_subscription_status": {
+    "doc": "docs/streams/get-subscription-status.md",
+    "endpoint": "GET /users/{user_id}/subscriptions/{stream_id}"
+  },
+  "update_stream": {
+    "doc": "docs/streams/update-stream.md",
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "archive_stream": {
+    "doc": "docs/streams/archive-stream.md",
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "get_stream_topics": {
+    "doc": "docs/streams/get-topics.md",
+    "endpoint": "GET /users/me/{stream_id}/topics"
+  },
+  "get_stream_members": {
+    "doc": "docs/streams/get-subscribers.md",
+    "endpoint": "GET /streams/{stream_id}/members"
+  },
+  "mute_topic": {
+    "doc": "docs/streams/mute-topic.md",
+    "endpoint": "PATCH /users/me/subscriptions/muted_topics"
+  },
+  "unmute_topic": {
+    "doc": "docs/streams/mute-topic.md",
+    "endpoint": "PATCH /users/me/subscriptions/muted_topics"
+  },
+  "update_subscription_settings": {
+    "doc": "docs/streams/update-subscription-settings.md",
+    "endpoint": "POST /users/me/subscriptions/properties"
+  },
+  "get_default_streams": {
+    "doc": "docs/streams/get-default-streams.md",
+    "endpoint": "GET /default_streams"
+  },
+  "add_default_stream": {
+    "doc": "docs/streams/add-default-stream.md",
+    "endpoint": "POST /default_streams"
+  },
+  "remove_default_stream": {
+    "doc": "docs/streams/remove-default-stream.md",
+    "endpoint": "DELETE /default_streams"
+  },
+  "get_topics": {
+    "doc": "docs/streams/get-topics.md",
+    "endpoint": "GET /users/me/{stream_id}/topics"
+  },
+  "rename_topic": {
+    "doc": "docs/messages/update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "resolve_topic": {
+    "doc": "docs/messages/update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "unresolve_topic": {
+    "doc": "docs/messages/update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_topic": {
+    "doc": "docs/streams/delete-topic.md",
+    "endpoint": "POST /streams/{stream_id}/delete_topic"
+  },
+  "get_users": {
+    "doc": "docs/users/get-users.md",
+    "endpoint": "GET /users"
+  },
+  "get_user": {
+    "doc": "docs/users/get-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "get_user_by_email": {
+    "doc": "docs/users/get-user-by-email.md",
+    "endpoint": "GET /users/{email}"
+  },
+  "get_own_user": {
+    "doc": "docs/users/get-own-user.md",
+    "endpoint": "GET /users/me"
+  },
+  "create_user": {
+    "doc": "docs/users/create-user.md",
+    "endpoint": "POST /users"
+  },
+  "update_user": {
+    "doc": "docs/users/update-user.md",
+    "endpoint": "PATCH /users/{user_id}"
+  },
+  "deactivate_user": {
+    "doc": "docs/users/deactivate-user.md",
+    "endpoint": "DELETE /users/{user_id}"
+  },
+  "reactivate_user": {
+    "doc": "docs/users/reactivate-user.md",
+    "endpoint": "POST /users/{user_id}/reactivate"
+  },
+  "get_user_presence": {
+    "doc": "docs/users/get-user-presence.md",
+    "endpoint": "GET /users/{user_id_or_email}/presence"
+  },
+  "get_all_presence": {
+    "doc": "docs/users/get-presence.md",
+    "endpoint": "GET /realm/presence"
+  },
+  "update_own_presence": {
+    "doc": "docs/users/update-presence.md",
+    "endpoint": "POST /users/me/presence"
+  },
+  "get_user_groups": {
+    "doc": "docs/user-groups/get-user-groups.md",
+    "endpoint": "GET /user_groups"
+  },
+  "create_user_group": {
+    "doc": "docs/user-groups/create-user-group.md",
+    "endpoint": "POST /user_groups/create"
+  },
+  "update_user_group": {
+    "doc": "docs/user-groups/update-user-group.md",
+    "endpoint": "PATCH /user_groups/{group_id}"
+  },
+  "delete_user_group": {
+    "doc": "docs/user-groups/delete-user-group.md",
+    "endpoint": "DELETE /user_groups/{group_id}"
+  },
+  "update_user_group_members": {
+    "doc": "docs/user-groups/update-user-group-members.md",
+    "endpoint": "POST /user_groups/{group_id}/members"
+  },
+  "get_user_group_members": {
+    "doc": "docs/user-groups/get-user-group-members.md",
+    "endpoint": "GET /user_groups/{group_id}/members"
+  },
+  "mute_user": {
+    "doc": "docs/users/mute-user.md",
+    "endpoint": "POST /users/me/muted_users/{muted_user_id}"
+  },
+  "unmute_user": {
+    "doc": "docs/users/unmute-user.md",
+    "endpoint": "DELETE /users/me/muted_users/{muted_user_id}"
+  },
+  "get_muted_users": {
+    "doc": "docs/users/get-muted-users.md",
+    "endpoint": "GET /users/me/muted_users"
+  },
+  "update_user_status": {
+    "doc": "docs/users/update-status.md",
+    "endpoint": "POST /users/me/status"
+  },
+  "get_user_status": {
+    "doc": "docs/users/get-user-status.md",
+    "endpoint": "GET /users/{user_id}/status"
+  },
+  "add_reaction": {
+    "doc": "docs/messages/add-reaction.md",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "docs/messages/remove-reaction.md",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "get_scheduled_messages": {
+    "doc": "docs/scheduled-messages/get-scheduled-messages.md",
+    "endpoint": "GET /scheduled_messages"
+  },
+  "create_scheduled_message": {
+    "doc": "docs/scheduled-messages/create-scheduled-message.md",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "update_scheduled_message": {
+    "doc": "docs/scheduled-messages/update-scheduled-message.md",
+    "endpoint": "PATCH /scheduled_messages/{scheduled_message_id}"
+  },
+  "delete_scheduled_message": {
+    "doc": "docs/scheduled-messages/delete-scheduled-message.md",
+    "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"
+  },
+  "get_drafts": {
+    "doc": "docs/drafts/get-drafts.md",
+    "endpoint": "GET /drafts"
+  },
+  "create_drafts": {
+    "doc": "docs/drafts/create-drafts.md",
+    "endpoint": "POST /drafts"
+  },
+  "update_draft": {
+    "doc": "docs/drafts/edit-draft.md",
+    "endpoint": "PATCH /drafts/{draft_id}"
+  },
+  "delete_draft": {
+    "doc": "docs/drafts/delete-draft.md",
+    "endpoint": "DELETE /drafts/{draft_id}"
+  },
+  "upload_file": {
+    "doc": "docs/uploads/upload-file.md",
+    "endpoint": "POST /user_uploads"
+  },
+  "get_file_temporary_url": {
+    "doc": "docs/uploads/get-file-temporary-url.md",
+    "endpoint": "GET /user_uploads/{realm_id_str}/{filename}"
+  },
+  "get_realm_info": {
+    "doc": "docs/realm/get-realm.md",
+    "endpoint": "GET /realm"
+  },
+  "get_server_settings": {
+    "doc": "docs/realm/get-server-settings.md",
+    "endpoint": "GET /server_settings"
+  },
+  "get_realm_emoji": {
+    "doc": "docs/realm/get-custom-emoji.md",
+    "endpoint": "GET /realm/emoji"
+  },
+  "upload_realm_emoji": {
+    "doc": "docs/realm/upload-custom-emoji.md",
+    "endpoint": "POST /realm/emoji/{emoji_name}"
+  },
+  "delete_realm_emoji": {
+    "doc": "docs/realm/delete-custom-emoji.md",
+    "endpoint": "DELETE /realm/emoji/{emoji_name}"
+  },
+  "get_realm_linkifiers": {
+    "doc": "docs/realm/get-linkifiers.md",
+    "endpoint": "GET /realm/linkifiers"
+  },
+  "add_realm_linkifier": {
+    "doc": "docs/realm/add-linkifier.md",
+    "endpoint": "POST /realm/linkifiers"
+  },
+  "update_realm_linkifier": {
+    "doc": "docs/realm/update-linkifier.md",
+    "endpoint": "PATCH /realm/linkifiers/{filter_id}"
+  },
+  "delete_realm_linkifier": {
+    "doc": "docs/realm/remove-linkifier.md",
+    "endpoint": "DELETE /realm/linkifiers/{filter_id}"
+  },
+  "get_realm_profile_fields": {
+    "doc": "docs/realm/get-custom-profile-fields.md",
+    "endpoint": "GET /realm/profile_fields"
+  },
+  "create_realm_profile_field": {
+    "doc": "docs/realm/create-custom-profile-field.md",
+    "endpoint": "POST /realm/profile_fields"
+  },
+  "delete_realm_profile_field": {
+    "doc": "docs/realm/delete-custom-profile-field.md",
+    "endpoint": "DELETE /realm/profile_fields/{field_id}"
+  },
+  "get_realm_filters": {
+    "doc": "docs/realm/get-playgrounds.md",
+    "endpoint": "GET /realm/playgrounds"
+  },
+  "add_realm_playground": {
+    "doc": "docs/realm/add-playground.md",
+    "endpoint": "POST /realm/playgrounds"
+  },
+  "delete_realm_playground": {
+    "doc": "docs/realm/remove-playground.md",
+    "endpoint": "DELETE /realm/playgrounds/{playground_id}"
+  },
+  "send_realm_invitation": {
+    "doc": "docs/realm/send-invites.md",
+    "endpoint": "POST /invites"
+  },
+  "get_invitations": {
+    "doc": "docs/realm/get-invites.md",
+    "endpoint": "GET /invites"
+  },
+  "revoke_invitation": {
+    "doc": "docs/realm/revoke-invite.md",
+    "endpoint": "DELETE /invites/{invite_id}"
+  },
+  "get_realm_export": {
+    "doc": "docs/realm/get-realm-export.md",
+    "endpoint": "GET /export/realm"
+  },
+  "create_realm_export": {
+    "doc": "docs/realm/export-realm.md",
+    "endpoint": "POST /export/realm"
+  },
+  "get_bots": {
+    "doc": "docs/bots/get-bots.md",
+    "endpoint": "GET /bots"
+  },
+  "get_own_bots": {
+    "doc": "docs/bots/get-own-bots.md",
+    "endpoint": "GET /users/me/bots"
+  },
+  "create_bot": {
+    "doc": "docs/bots/create-bot.md",
+    "endpoint": "POST /bots"
+  },
+  "update_bot": {
+    "doc": "docs/bots/update-bot.md",
+    "endpoint": "PATCH /bots/{bot_id}"
+  },
+  "deactivate_bot": {
+    "doc": "docs/bots/deactivate-bot.md",
+    "endpoint": "DELETE /bots/{bot_id}"
+  },
+  "reactivate_bot": {
+    "doc": "docs/bots/reactivate-bot.md",
+    "endpoint": "POST /bots/{bot_id}/reactivate"
+  },
+  "get_bot_api_key": {
+    "doc": "docs/bots/get-bot-api-key.md",
+    "endpoint": "GET /bots/{bot_id}/api_key/regenerate"
+  },
+  "regenerate_bot_api_key": {
+    "doc": "docs/bots/regenerate-bot-api-key.md",
+    "endpoint": "POST /bots/{bot_id}/api_key/regenerate"
+  },
+  "send_typing_notification": {
+    "doc": "docs/typing/send-typing-indicator.md",
+    "endpoint": "POST /typing"
+  },
+  "register_event_queue": {
+    "doc": "docs/events/register-queue.md",
+    "endpoint": "POST /register"
+  },
+  "get_events": {
+    "doc": "docs/events/get-events.md",
+    "endpoint": "GET /events"
+  },
+  "delete_event_queue": {
+    "doc": "docs/events/delete-queue.md",
+    "endpoint": "DELETE /events"
+  },
+  "get_server_settings_no_auth": {
+    "doc": "docs/realm/get-server-settings.md",
+    "endpoint": "GET /server_settings"
+  }
+}

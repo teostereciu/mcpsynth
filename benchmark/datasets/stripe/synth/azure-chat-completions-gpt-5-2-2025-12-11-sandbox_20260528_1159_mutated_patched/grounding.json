@@ -1,0 +1,162 @@
+{
+  "create_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges"
+  },
+  "update_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges/{charge_id}"
+  },
+  "create_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds"
+  },
+  "update_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds/{refund_id}"
+  },
+  "retrieve_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /v1/refunds/{refund_id}"
+  },
+  "create_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers"
+  },
+  "update_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers/{customer_id}"
+  },
+  "retrieve_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers/{customer_id}"
+  },
+  "create_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products"
+  },
+  "update_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products/{product_id}"
+  },
+  "retrieve_product": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /v1/products/{product_id}"
+  },
+  "create_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /v1/prices"
+  },
+  "update_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /v1/prices/{price_id}"
+  },
+  "retrieve_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "GET /v1/prices/{price_id}"
+  },
+  "create_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions"
+  },
+  "create_preview_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/create_preview"
+  },
+  "create_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "POST /v1/checkout/sessions"
+  },
+  "retrieve_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "GET /v1/checkout/sessions/{session_id}"
+  },
+  "update_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "POST /v1/checkout/sessions/{session_id}"
+  },
+  "create_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /v1/payment_links"
+  },
+  "update_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /v1/payment_links/{payment_link_id}"
+  },
+  "list_payment_link_line_items": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "GET /v1/payment_links/{payment_link_id}/line_items"
+  },
+  "create_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts"
+  },
+  "update_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts/{account_id}"
+  },
+  "retrieve_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /v1/accounts/{account_id}"
+  },
+  "create_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers"
+  },
+  "update_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers/{transfer_id}"
+  },
+  "retrieve_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "GET /v1/transfers/{transfer_id}"
+  },
+  "create_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts"
+  },
+  "update_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts/{payout_id}"
+  },
+  "retrieve_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "GET /v1/payouts/{payout_id}"
+  },
+  "create_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents"
+  },
+  "update_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}"
+  },
+  "retrieve_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "GET /v1/setup_intents/{setup_intent_id}"
+  },
+  "create_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "POST /v1/coupons"
+  },
+  "update_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "POST /v1/coupons/{coupon_id}"
+  },
+  "retrieve_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "GET /v1/coupons/{coupon_id}"
+  },
+  "create_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "POST /v1/promotion_codes"
+  },
+  "update_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "POST /v1/promotion_codes/{promotion_code_id}"
+  },
+  "retrieve_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "GET /v1/promotion_codes/{promotion_code_id}"
+  }
+}

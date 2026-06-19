@@ -1,0 +1,130 @@
+{
+  "search_items": {
+    "doc": "docs/api_browse_search.md",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "get_item": {
+    "doc": "docs/api_browse_item.md",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}"
+  },
+  "get_item_by_legacy_id": {
+    "doc": "docs/api_browse_legacy_item.md",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_legacy_id"
+  },
+  "get_items_by_ids": {
+    "doc": "docs/api_browse_items.md",
+    "endpoint": "GET /buy/browse/v1/item"
+  },
+  "get_item_variations": {
+    "doc": "docs/api_browse_variations.md",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}/get_variations"
+  },
+  "get_item_groups": {
+    "doc": "docs/api_browse_item_groups.md",
+    "endpoint": "GET /buy/browse/v1/item_group/{item_id}"
+  },
+  "get_shopping_cart": {
+    "doc": "docs/api_browse_shopping_cart.md",
+    "endpoint": "GET /buy/browse/v1/shopping_cart"
+  },
+  "add_item_to_cart": {
+    "doc": "docs/api_browse_shopping_cart.md",
+    "endpoint": "POST /buy/browse/v1/shopping_cart/add_item"
+  },
+  "remove_item_from_cart": {
+    "doc": "docs/api_browse_shopping_cart.md",
+    "endpoint": "DELETE /buy/browse/v1/shopping_cart/remove_item/{cart_item_id}"
+  },
+  "update_cart_item_quantity": {
+    "doc": "docs/api_browse_shopping_cart.md",
+    "endpoint": "PUT /buy/browse/v1/shopping_cart/update_quantity/{cart_item_id}"
+  },
+  "get_deals": {
+    "doc": "docs/api_deal_deals.md",
+    "endpoint": "GET /buy/deal/v1/deal"
+  },
+  "get_deal_by_id": {
+    "doc": "docs/api_deal_deal_details.md",
+    "endpoint": "GET /buy/deal/v1/deal/{deal_id}"
+  },
+  "get_deal_events": {
+    "doc": "docs/api_deal_events.md",
+    "endpoint": "GET /buy/deal/v1/event"
+  },
+  "get_event_by_id": {
+    "doc": "docs/api_deal_event_details.md",
+    "endpoint": "GET /buy/deal/v1/event/{event_id}"
+  },
+  "get_item_feed": {
+    "doc": "docs/api_feed_item_feed.md",
+    "endpoint": "GET /buy/feed/v1/item"
+  },
+  "get_item_snapshot_feed": {
+    "doc": "docs/api_feed_item_snapshot.md",
+    "endpoint": "GET /buy/feed/v1/item_snapshot"
+  },
+  "create_guest_checkout": {
+    "doc": "docs/api_order_guest_checkout.md",
+    "endpoint": "POST /buy/order/v1/guest_checkout"
+  },
+  "get_guest_order": {
+    "doc": "docs/api_order_guest_order.md",
+    "endpoint": "GET /buy/order/v1/guest_order/{order_id}"
+  },
+  "estimate_shipping": {
+    "doc": "docs/api_order_estimate_shipping.md",
+    "endpoint": "POST /buy/order/v1/estimate_shipping"
+  },
+  "get_item_market_insights": {
+    "doc": "docs/api_marketplace_insights_item.md",
+    "endpoint": "GET /buy/marketplace_insights/v1/item_market_insights/{item_id}"
+  },
+  "search_item_market_insights": {
+    "doc": "docs/api_marketplace_insights_search.md",
+    "endpoint": "GET /buy/marketplace_insights/v1/item_market_insights/search"
+  },
+  "get_item_recommendations": {
+    "doc": "docs/api_recommendation_item.md",
+    "endpoint": "GET /buy/recommendation/v1/item_recommendation"
+  },
+  "get_category_tree": {
+    "doc": "docs/api_catalog_category_tree.md",
+    "endpoint": "GET /commerce/catalog/v1/category_tree/{category_tree_id}"
+  },
+  "get_category_suggestions": {
+    "doc": "docs/api_catalog_category_suggestions.md",
+    "endpoint": "GET /commerce/catalog/v1/category_tree/get_category_suggestions"
+  },
+  "get_item_aspects": {
+    "doc": "docs/api_catalog_item_aspects.md",
+    "endpoint": "GET /commerce/catalog/v1/item_aspects"
+  },
+  "get_default_category_and_aspects": {
+    "doc": "docs/api_taxonomy_default_category.md",
+    "endpoint": "GET /commerce/taxonomy/v1/get_default_category_and_aspects"
+  },
+  "get_category_aspects": {
+    "doc": "docs/api_taxonomy_category_aspects.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_aspects"
+  },
+  "translate_text": {
+    "doc": "docs/api_translation_translate.md",
+    "endpoint": "POST /commerce/translation/v1/translate"
+  },
+  "get_item_images": {
+    "doc": "docs/api_media_item_images.md",
+    "endpoint": "GET /buy/media/v1/item/{item_id}/image"
+  },
+  "get_subscriptions": {
+    "doc": "docs/api_notification_subscriptions.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  },
+  "create_subscription": {
+    "doc": "docs/api_notification_create_subscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "delete_subscription": {
+    "doc": "docs/api_notification_delete_subscription.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}"
+  }
+}

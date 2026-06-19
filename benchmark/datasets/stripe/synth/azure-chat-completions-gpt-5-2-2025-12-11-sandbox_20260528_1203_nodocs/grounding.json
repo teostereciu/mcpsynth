@@ -1,0 +1,306 @@
+{
+  "customers_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/customers"
+  },
+  "customers_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/customers/{customer_id}"
+  },
+  "customers_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/customers/{customer_id}"
+  },
+  "customers_delete": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "DELETE /v1/customers/{customer_id}"
+  },
+  "customers_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/customers"
+  },
+  "payment_intents_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "payment_intents_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/payment_intents/{payment_intent_id}"
+  },
+  "payment_intents_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}"
+  },
+  "payment_intents_confirm": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/confirm"
+  },
+  "payment_intents_capture": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/capture"
+  },
+  "payment_intents_cancel": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/cancel"
+  },
+  "payment_intents_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/payment_intents"
+  },
+  "charges_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/charges/{charge_id}"
+  },
+  "charges_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/charges/{charge_id}"
+  },
+  "charges_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/charges"
+  },
+  "refunds_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/refunds"
+  },
+  "refunds_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/refunds/{refund_id}"
+  },
+  "refunds_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/refunds/{refund_id}"
+  },
+  "refunds_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/refunds"
+  },
+  "products_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/products"
+  },
+  "products_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/products/{product_id}"
+  },
+  "products_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/products/{product_id}"
+  },
+  "products_delete": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "DELETE /v1/products/{product_id}"
+  },
+  "products_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/products"
+  },
+  "prices_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/prices"
+  },
+  "prices_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/prices/{price_id}"
+  },
+  "prices_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/prices/{price_id}"
+  },
+  "prices_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/prices"
+  },
+  "subscriptions_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/subscriptions"
+  },
+  "subscriptions_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/subscriptions/{subscription_id}"
+  },
+  "subscriptions_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/subscriptions/{subscription_id}"
+  },
+  "subscriptions_cancel": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "DELETE /v1/subscriptions/{subscription_id}"
+  },
+  "subscriptions_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/subscriptions"
+  },
+  "invoices_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/invoices"
+  },
+  "invoices_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/invoices/{invoice_id}"
+  },
+  "invoices_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}"
+  },
+  "invoices_finalize": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/finalize"
+  },
+  "invoices_pay": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/pay"
+  },
+  "invoices_void": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/void"
+  },
+  "invoices_mark_uncollectible": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/mark_uncollectible"
+  },
+  "invoices_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/invoices"
+  },
+  "checkout_sessions_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/checkout/sessions"
+  },
+  "checkout_sessions_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/checkout/sessions/{session_id}"
+  },
+  "checkout_sessions_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/checkout/sessions"
+  },
+  "payment_links_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payment_links"
+  },
+  "payment_links_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/payment_links/{payment_link_id}"
+  },
+  "payment_links_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payment_links/{payment_link_id}"
+  },
+  "payment_links_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/payment_links"
+  },
+  "setup_intents_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/setup_intents"
+  },
+  "setup_intents_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/setup_intents/{setup_intent_id}"
+  },
+  "setup_intents_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}"
+  },
+  "setup_intents_confirm": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}/confirm"
+  },
+  "setup_intents_cancel": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}/cancel"
+  },
+  "setup_intents_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/setup_intents"
+  },
+  "coupons_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/coupons"
+  },
+  "coupons_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/coupons/{coupon_id}"
+  },
+  "coupons_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/coupons/{coupon_id}"
+  },
+  "coupons_delete": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "DELETE /v1/coupons/{coupon_id}"
+  },
+  "coupons_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/coupons"
+  },
+  "promotion_codes_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/promotion_codes"
+  },
+  "promotion_codes_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/promotion_codes/{promotion_code_id}"
+  },
+  "promotion_codes_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/promotion_codes/{promotion_code_id}"
+  },
+  "promotion_codes_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/promotion_codes"
+  },
+  "accounts_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/accounts"
+  },
+  "accounts_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/accounts/{account_id}"
+  },
+  "accounts_update": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/accounts/{account_id}"
+  },
+  "accounts_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/accounts"
+  },
+  "account_links_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/account_links"
+  },
+  "transfers_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/transfers"
+  },
+  "transfers_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/transfers/{transfer_id}"
+  },
+  "transfers_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/transfers"
+  },
+  "payouts_create": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payouts"
+  },
+  "payouts_retrieve": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/payouts/{payout_id}"
+  },
+  "payouts_cancel": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payouts/{payout_id}/cancel"
+  },
+  "payouts_reverse": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "POST /v1/payouts/{payout_id}/reverse"
+  },
+  "payouts_list": {
+    "doc": "docs/EMPTY.md",
+    "endpoint": "GET /v1/payouts"
+  }
+}

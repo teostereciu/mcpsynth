@@ -1,0 +1,50 @@
+{
+  "inventory_create_or_replace_inventory_item": {
+    "doc": "docs/api_inventory_create-or-replace-inventory-item.md",
+    "endpoint": "PUT /inventory_item/{seller_sku}"
+  },
+  "inventory_get_inventory_item": {
+    "doc": "docs/api_inventory_get-inventory-item.md",
+    "endpoint": "GET /inventory_item/{seller_sku}"
+  },
+  "inventory_get_inventory_items": {
+    "doc": "docs/api_inventory_get-inventory-items.md",
+    "endpoint": "GET /inventory_item"
+  },
+  "inventory_create_offer": {
+    "doc": "docs/api_inventory_create-offer.md",
+    "endpoint": "POST /offer"
+  },
+  "inventory_publish_offer": {
+    "doc": "docs/api_inventory_publish-offer.md",
+    "endpoint": "POST /offer/{offerId}/publish"
+  },
+  "fulfillment_get_orders": {
+    "doc": "docs/api_fulfillment_get-orders.md",
+    "endpoint": "GET /order"
+  },
+  "fulfillment_get_order": {
+    "doc": "docs/api_fulfillment_get-order.md",
+    "endpoint": "GET /order/{orderId}"
+  },
+  "fulfillment_create_shipping_fulfillment": {
+    "doc": "docs/api_fulfillment_create-shipping-fulfillment.md",
+    "endpoint": "POST /order/{orderId}/shipping_fulfillment"
+  },
+  "account_get_payment_policies": {
+    "doc": "docs/api_account_get-payment-policies.md",
+    "endpoint": "GET /payment_policy"
+  },
+  "account_create_payment_policy": {
+    "doc": "docs/api_account_create-payment-policy.md",
+    "endpoint": "POST /payment_policy"
+  },
+  "account_get_fulfillment_policies": {
+    "doc": "docs/api_account_get-fulfillment-policies.md",
+    "endpoint": "GET /fulfillment_policy"
+  },
+  "finances_get_transactions": {
+    "doc": "docs/api_finances_get-transactions.md",
+    "endpoint": "GET /transaction"
+  }
+}

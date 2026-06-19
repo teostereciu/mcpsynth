@@ -1,0 +1,22 @@
+{
+  "get_orders": {
+    "doc": "docs/fulfillment/get-orders.md",
+    "endpoint": "GET /sell/fulfillment/v1/order"
+  },
+  "get_inventory_items": {
+    "doc": "docs/inventory/get-inventory-items.md",
+    "endpoint": "GET /sell/inventory/v1/inventory_item"
+  },
+  "get_offers": {
+    "doc": "docs/inventory/get-offers.md",
+    "endpoint": "GET /sell/inventory/v1/offer"
+  },
+  "get_listing_fees": {
+    "doc": "docs/inventory/get-listing-fees.md",
+    "endpoint": "GET /sell/inventory/v1/offer"
+  },
+  "get_policies": {
+    "doc": "docs/account/get-policies.md",
+    "endpoint": "GET /sell/account/v1/fulfillment_policy"
+  }
+}

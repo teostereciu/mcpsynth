@@ -1,0 +1,23 @@
+{
+  "send_message": {"doc": "docs/api_send-message.md", "endpoint": "POST /messages"},
+  "get_messages": {"doc": "docs/api_get-messages.md", "endpoint": "GET /messages"},
+  "get_message": {"doc": "docs/api_get-message.md", "endpoint": "GET /messages/{message_id}"},
+  "update_message": {"doc": "docs/api_update-message.md", "endpoint": "PATCH /messages/{message_id}"},
+  "delete_message": {"doc": "docs/api_delete-message.md", "endpoint": "DELETE /messages/{message_id}"},
+  "add_reaction": {"doc": "docs/api_add-reaction.md", "endpoint": "POST /messages/{message_id}/reactions"},
+  "remove_reaction": {"doc": "docs/api_remove-reaction.md", "endpoint": "DELETE /messages/{message_id}/reactions"},
+  "get_streams": {"doc": "docs/api_get-streams.md", "endpoint": "GET /streams"},
+  "create_stream": {"doc": "docs/api_create-stream.md", "endpoint": "POST /channels/create"},
+  "update_stream": {"doc": "docs/api_update-stream.md", "endpoint": "PATCH /streams/{stream_id}"},
+  "archive_stream": {"doc": "docs/api_archive-stream.md", "endpoint": "DELETE /streams/{stream_id}"},
+  "get_users": {"doc": "docs/api_get-users.md", "endpoint": "GET /users"},
+  "get_user": {"doc": "docs/api_get-user.md", "endpoint": "GET /users/{user_id}"},
+  "get_own_user": {"doc": "docs/api_get-own-user.md", "endpoint": "GET /users/me"},
+  "get_presence": {"doc": "docs/api_get-presence.md", "endpoint": "GET /realm/presence"},
+  "get_drafts": {"doc": "docs/api_get-drafts.md", "endpoint": "GET /drafts"},
+  "create_drafts": {"doc": "docs/api_create-drafts.md", "endpoint": "POST /drafts"},
+  "get_scheduled_messages": {"doc": "docs/api_get-scheduled-messages.md", "endpoint": "GET /scheduled_messages"},
+  "create_scheduled_message": {"doc": "docs/api_create-scheduled-message.md", "endpoint": "POST /scheduled_messages"},
+  "update_scheduled_message": {"doc": "docs/api_update-scheduled-message.md", "endpoint": "PATCH /scheduled_messages/{scheduled_message_id}"},
+  "delete_scheduled_message": {"doc": "docs/api_delete-scheduled-message.md", "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"}
+}

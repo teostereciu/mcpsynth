@@ -1,0 +1,130 @@
+{
+  "get_issue": {
+    "doc": "docs/issues.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "list_issues": {
+    "doc": "docs/issues.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues"
+  },
+  "create_issue": {
+    "doc": "docs/issues.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues"
+  },
+  "update_issue": {
+    "doc": "docs/issues.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "list_issue_comments": {
+    "doc": "docs/issues.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "create_issue_comment": {
+    "doc": "docs/issues.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "get_pull_request": {
+    "doc": "docs/pulls.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "list_pull_requests": {
+    "doc": "docs/pulls.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  },
+  "create_pull_request": {
+    "doc": "docs/pulls.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls"
+  },
+  "merge_pull_request": {
+    "doc": "docs/pulls.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"
+  },
+  "create_pull_request_review": {
+    "doc": "docs/pulls.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews"
+  },
+  "get_repository": {
+    "doc": "docs/repos.md",
+    "endpoint": "GET /repos/{owner}/{repo}"
+  },
+  "create_repository": {
+    "doc": "docs/repos.md",
+    "endpoint": "POST /user/repos"
+  },
+  "fork_repository": {
+    "doc": "docs/repos.md",
+    "endpoint": "POST /repos/{owner}/{repo}/forks"
+  },
+  "list_branches": {
+    "doc": "docs/repos.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches"
+  },
+  "get_branch": {
+    "doc": "docs/repos.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}"
+  },
+  "list_commits": {
+    "doc": "docs/repos.md",
+    "endpoint": "GET /repos/{owner}/{repo}/commits"
+  },
+  "get_repository_content": {
+    "doc": "docs/repos.md",
+    "endpoint": "GET /repos/{owner}/{repo}/contents/{path}"
+  },
+  "create_or_update_file_contents": {
+    "doc": "docs/repos.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/contents/{path}"
+  },
+  "list_releases": {
+    "doc": "docs/releases.md",
+    "endpoint": "GET /repos/{owner}/{repo}/releases"
+  },
+  "get_release": {
+    "doc": "docs/releases.md",
+    "endpoint": "GET /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "create_release": {
+    "doc": "docs/releases.md",
+    "endpoint": "POST /repos/{owner}/{repo}/releases"
+  },
+  "list_repository_workflows": {
+    "doc": "docs/actions.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows"
+  },
+  "list_workflow_runs": {
+    "doc": "docs/actions.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs"
+  },
+  "trigger_workflow_dispatch": {
+    "doc": "docs/actions.md",
+    "endpoint": "POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches"
+  },
+  "search_code": {
+    "doc": "docs/search.md",
+    "endpoint": "GET /search/code"
+  },
+  "search_issues": {
+    "doc": "docs/search.md",
+    "endpoint": "GET /search/issues"
+  },
+  "search_repositories": {
+    "doc": "docs/search.md",
+    "endpoint": "GET /search/repositories"
+  },
+  "list_repository_webhooks": {
+    "doc": "docs/webhooks.md",
+    "endpoint": "GET /repos/{owner}/{repo}/hooks"
+  },
+  "create_repository_webhook": {
+    "doc": "docs/webhooks.md",
+    "endpoint": "POST /repos/{owner}/{repo}/hooks"
+  },
+  "get_branch_protection": {
+    "doc": "docs/branches.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}/protection"
+  },
+  "update_branch_protection": {
+    "doc": "docs/branches.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/branches/{branch}/protection"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Parameter name mutations for the Confluence Cloud REST API (v1 and v2), covering common query params used in content search, space, and page endpoints.",
+  "mutations": [
+    {"original": "cql", "mutated": "query"},
+    {"original": "start", "mutated": "offset"},
+    {"original": "limit", "mutated": "max_results"},
+    {"original": "expand", "mutated": "include"},
+    {"original": "status", "mutated": "content_status"}
+  ]
+}

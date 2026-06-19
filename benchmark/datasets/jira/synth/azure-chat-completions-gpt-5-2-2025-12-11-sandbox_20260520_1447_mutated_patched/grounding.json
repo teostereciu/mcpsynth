@@ -1,0 +1,334 @@
+{
+  "create_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "POST /issue"
+  },
+  "get_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "GET /issue/{issueIdOrKey}"
+  },
+  "update_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}"
+  },
+  "delete_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}"
+  },
+  "assign_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}/assignee"
+  },
+  "get_transitions": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/transitions"
+  },
+  "transition_issue": {
+    "doc": "docs/api_issues.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/transitions"
+  },
+  "search_issues": {
+    "doc": "docs/api_issue-search.md",
+    "endpoint": "POST /search"
+  },
+  "issue_picker": {
+    "doc": "docs/api_issue-search.md",
+    "endpoint": "GET /issue/picker"
+  },
+  "match_issues_to_jql": {
+    "doc": "docs/api_issue-search.md",
+    "endpoint": "POST /jql_query/match"
+  },
+  "get_comments": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/comment"
+  },
+  "add_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/comment"
+  },
+  "get_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/comment/{id}"
+  },
+  "update_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}/comment/{id}"
+  },
+  "delete_comment": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}/comment/{id}"
+  },
+  "get_comments_by_ids": {
+    "doc": "docs/api_issue-comments.md",
+    "endpoint": "POST /comment/list"
+  },
+  "get_issue_worklogs": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/worklog"
+  },
+  "add_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/worklog"
+  },
+  "get_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/worklog/{id}"
+  },
+  "update_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}/worklog/{id}"
+  },
+  "delete_worklog": {
+    "doc": "docs/api_issue-worklogs.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}/worklog/{id}"
+  },
+  "get_attachment_meta": {
+    "doc": "docs/api_issue-attachments.md",
+    "endpoint": "GET /attachment/meta"
+  },
+  "get_attachment": {
+    "doc": "docs/api_issue-attachments.md",
+    "endpoint": "GET /attachment/{id}"
+  },
+  "delete_attachment": {
+    "doc": "docs/api_issue-attachments.md",
+    "endpoint": "DELETE /attachment/{id}"
+  },
+  "add_attachment": {
+    "doc": "docs/api_issue-attachments.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/attachments"
+  },
+  "get_issue_watchers": {
+    "doc": "docs/api_issue-watchers.md",
+    "endpoint": "GET /issue/{issueIdOrKey}/watchers"
+  },
+  "add_watcher": {
+    "doc": "docs/api_issue-watchers.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/watchers"
+  },
+  "delete_watcher": {
+    "doc": "docs/api_issue-watchers.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}/watchers"
+  },
+  "bulk_is_watching": {
+    "doc": "docs/api_issue-watchers.md",
+    "endpoint": "POST /issue/watching"
+  },
+  "create_issue_link": {
+    "doc": "docs/api_issue-links.md",
+    "endpoint": "POST /issueLink"
+  },
+  "get_issue_link": {
+    "doc": "docs/api_issue-links.md",
+    "endpoint": "GET /issueLink/{linkId}"
+  },
+  "delete_issue_link": {
+    "doc": "docs/api_issue-links.md",
+    "endpoint": "DELETE /issueLink/{linkId}"
+  },
+  "list_issue_link_types": {
+    "doc": "docs/api_issue-link-types.md",
+    "endpoint": "GET /issueLinkType"
+  },
+  "get_issue_link_type": {
+    "doc": "docs/api_issue-link-types.md",
+    "endpoint": "GET /issueLinkType/{issueLinkTypeId}"
+  },
+  "create_issue_link_type": {
+    "doc": "docs/api_issue-link-types.md",
+    "endpoint": "POST /issueLinkType"
+  },
+  "update_issue_link_type": {
+    "doc": "docs/api_issue-link-types.md",
+    "endpoint": "PUT /issueLinkType/{issueLinkTypeId}"
+  },
+  "delete_issue_link_type": {
+    "doc": "docs/api_issue-link-types.md",
+    "endpoint": "DELETE /issueLinkType/{issueLinkTypeId}"
+  },
+  "list_projects": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "GET /project"
+  },
+  "search_projects": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "GET /project/search"
+  },
+  "get_project": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "GET /project/{projectIdOrKey}"
+  },
+  "create_project": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "POST /project"
+  },
+  "update_project": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "PUT /project/{projectIdOrKey}"
+  },
+  "delete_project": {
+    "doc": "docs/api_projects.md",
+    "endpoint": "DELETE /project/{projectIdOrKey}"
+  },
+  "search_components": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "GET /component"
+  },
+  "create_component": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "POST /component"
+  },
+  "get_component": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "GET /component/{id}"
+  },
+  "update_component": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "PUT /component/{id}"
+  },
+  "delete_component": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "DELETE /component/{id}"
+  },
+  "get_project_components": {
+    "doc": "docs/api_project-components.md",
+    "endpoint": "GET /project/{projectIdOrKey}/components"
+  },
+  "list_project_versions": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "GET /project/{projectIdOrKey}/versions"
+  },
+  "list_project_versions_paginated": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "GET /project/{projectIdOrKey}/version"
+  },
+  "create_version": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "POST /version"
+  },
+  "get_version": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "GET /version/{id}"
+  },
+  "update_version": {
+    "doc": "docs/api_project-versions.md",
+    "endpoint": "PUT /version/{id}"
+  },
+  "get_user": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /user"
+  },
+  "bulk_get_users": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /user/bulk"
+  },
+  "search_users": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /users/search"
+  },
+  "get_user_groups": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /user/groups"
+  },
+  "find_groups": {
+    "doc": "docs/api_groups.md",
+    "endpoint": "GET /groups/picker"
+  },
+  "get_group_members": {
+    "doc": "docs/api_groups.md",
+    "endpoint": "GET /group/member"
+  },
+  "add_user_to_group": {
+    "doc": "docs/api_groups.md",
+    "endpoint": "POST /group/user"
+  },
+  "remove_user_from_group": {
+    "doc": "docs/api_groups.md",
+    "endpoint": "DELETE /group/user"
+  },
+  "list_priorities": {
+    "doc": "docs/api_issue-priorities.md",
+    "endpoint": "GET /priority"
+  },
+  "get_priority": {
+    "doc": "docs/api_issue-priorities.md",
+    "endpoint": "GET /priority/{id}"
+  },
+  "search_priorities": {
+    "doc": "docs/api_issue-priorities.md",
+    "endpoint": "GET /priority/search"
+  },
+  "get_statuses": {
+    "doc": "docs/api_status.md",
+    "endpoint": "GET /statuses"
+  },
+  "get_statuses_by_names": {
+    "doc": "docs/api_status.md",
+    "endpoint": "GET /statuses/byNames"
+  },
+  "search_statuses": {
+    "doc": "docs/api_status.md",
+    "endpoint": "GET /statuses/search"
+  },
+  "list_issue_types": {
+    "doc": "docs/api_issue-types.md",
+    "endpoint": "GET /issuetype"
+  },
+  "get_issue_type": {
+    "doc": "docs/api_issue-types.md",
+    "endpoint": "GET /issuetype/{id}"
+  },
+  "get_issue_types_for_project": {
+    "doc": "docs/api_issue-types.md",
+    "endpoint": "GET /issuetype/project"
+  },
+  "get_alternative_issue_types": {
+    "doc": "docs/api_issue-types.md",
+    "endpoint": "GET /issuetype/{id}/alternatives"
+  },
+  "create_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "POST /filter"
+  },
+  "get_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "GET /filter/{id}"
+  },
+  "update_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "PUT /filter/{id}"
+  },
+  "delete_filter": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "DELETE /filter/{id}"
+  },
+  "my_filters": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "GET /filter/my"
+  },
+  "favourite_filters": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "GET /filter/favourite"
+  },
+  "search_filters": {
+    "doc": "docs/api_filters.md",
+    "endpoint": "GET /filter/search"
+  },
+  "get_myself": {
+    "doc": "docs/api_myself.md",
+    "endpoint": "GET /myself"
+  },
+  "get_my_preference": {
+    "doc": "docs/api_myself.md",
+    "endpoint": "GET /mypreferences"
+  },
+  "set_my_preference": {
+    "doc": "docs/api_myself.md",
+    "endpoint": "PUT /mypreferences"
+  },
+  "delete_my_preference": {
+    "doc": "docs/api_myself.md",
+    "endpoint": "DELETE /mypreferences"
+  }
+}

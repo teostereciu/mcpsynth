@@ -1,0 +1,1606 @@
+{
+  "create_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges"
+  },
+  "retrieve_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /v1/charges/{id}"
+  },
+  "update_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges/{id}"
+  },
+  "list_charges": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /v1/charges"
+  },
+  "create_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers"
+  },
+  "retrieve_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers/{id}"
+  },
+  "update_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers/{id}"
+  },
+  "list_customers": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers"
+  },
+  "create_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "retrieve_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents/{id}"
+  },
+  "confirm_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{id}/confirm"
+  },
+  "update_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{id}"
+  },
+  "cancel_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{id}/cancel"
+  },
+  "create_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions"
+  },
+  "retrieve_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "GET /v1/subscriptions/{id}"
+  },
+  "update_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions/{id}"
+  },
+  "cancel_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions/{id}/cancel"
+  },
+  "create_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices"
+  },
+  "retrieve_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "GET /v1/invoices/{id}"
+  },
+  "update_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{id}"
+  },
+  "finalize_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{id}/finalize"
+  },
+  "pay_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{id}/pay"
+  },
+  "void_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{id}/void"
+  },
+  "create_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds"
+  },
+  "retrieve_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /v1/refunds/{id}"
+  },
+  "update_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds/{id}"
+  },
+  "create_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers"
+  },
+  "retrieve_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "GET /v1/transfers/{id}"
+  },
+  "update_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers/{id}"
+  },
+  "retrieve_dispute": {
+    "doc": "docs/disputes.md",
+    "endpoint": "GET /v1/disputes/{id}"
+  },
+  "update_dispute": {
+    "doc": "docs/disputes.md",
+    "endpoint": "POST /v1/disputes/{id}"
+  },
+  "list_disputes": {
+    "doc": "docs/disputes.md",
+    "endpoint": "GET /v1/disputes"
+  },
+  "create_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products"
+  },
+  "retrieve_product": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /v1/products/{id}"
+  },
+  "update_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products/{id}"
+  },
+  "list_products": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /v1/products"
+  },
+  "create_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /v1/prices"
+  },
+  "retrieve_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "GET /v1/prices/{id}"
+  },
+  "update_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /v1/prices/{id}"
+  },
+  "list_prices": {
+    "doc": "docs/prices.md",
+    "endpoint": "GET /v1/prices"
+  },
+  "create_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "POST /v1/payment_methods"
+  },
+  "retrieve_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "GET /v1/payment_methods/{id}"
+  },
+  "update_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "POST /v1/payment_methods/{id}"
+  },
+  "list_payment_methods": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "GET /v1/payment_methods"
+  },
+  "attach_payment_method_to_customer": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "POST /v1/customers/{id}/payment_methods"
+  },
+  "detach_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "POST /v1/payment_methods/{id}/detach"
+  },
+  "create_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "POST /v1/coupons"
+  },
+  "retrieve_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "GET /v1/coupons/{id}"
+  },
+  "update_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "POST /v1/coupons/{id}"
+  },
+  "delete_coupon": {
+    "doc": "docs/coupons.md",
+    "endpoint": "DELETE /v1/coupons/{id}"
+  },
+  "list_coupons": {
+    "doc": "docs/coupons.md",
+    "endpoint": "GET /v1/coupons"
+  },
+  "create_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "POST /v1/promotion_codes"
+  },
+  "retrieve_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "GET /v1/promotion_codes/{id}"
+  },
+  "update_promotion_code": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "POST /v1/promotion_codes/{id}"
+  },
+  "list_promotion_codes": {
+    "doc": "docs/promotion_codes.md",
+    "endpoint": "GET /v1/promotion_codes"
+  },
+  "create_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts"
+  },
+  "retrieve_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /v1/accounts/{id}"
+  },
+  "update_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts/{id}"
+  },
+  "list_accounts": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /v1/accounts"
+  },
+  "create_account_link": {
+    "doc": "docs/account_links.md",
+    "endpoint": "POST /v1/account_links"
+  },
+  "create_login_link": {
+    "doc": "docs/accounts_login_link.md",
+    "endpoint": "POST /v1/accounts/{id}/login_links"
+  },
+  "create_capacity_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers"
+  },
+  "create_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /v1/payment_links"
+  },
+  "retrieve_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "GET /v1/payment_links/{id}"
+  },
+  "update_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /v1/payment_links/{id}"
+  },
+  "create_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "POST /v1/checkout/sessions"
+  },
+  "retrieve_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "GET /v1/checkout/sessions/{id}"
+  },
+  "list_checkout_sessions": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "GET /v1/checkout/sessions"
+  },
+  "create_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents"
+  },
+  "retrieve_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "GET /v1/setup_intents/{id}"
+  },
+  "confirm_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{id}/confirm"
+  },
+  "update_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{id}"
+  },
+  "cancel_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{id}/cancel"
+  },
+  "create_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "POST /v2/core/event_destinations"
+  },
+  "retrieve_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "GET /v2/core/event_destinations/{id}"
+  },
+  "update_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "POST /v2/core/event_destinations/{id}"
+  },
+  "list_event_destinations": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "GET /v2/core/event_destinations"
+  },
+  "ping_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "POST /v2/core/event_destinations/{id}/ping"
+  },
+  "create_meter_event": {
+    "doc": "docs/v2_meter-events.md",
+    "endpoint": "POST /v2/billing/meter_events"
+  },
+  "list_meter_events": {
+    "doc": "docs/v2_meter-events.md",
+    "endpoint": "GET /v2/billing/meter_events"
+  },
+  "create_meter_event_session": {
+    "doc": "docs/v2_meter-event-streams.md",
+    "endpoint": "POST /v2/billing/meter_event_session"
+  },
+  "create_account_token": {
+    "doc": "docs/v2_core_account-tokens.md",
+    "endpoint": "POST /v2/core/account_tokens"
+  },
+  "create_person_token": {
+    "doc": "docs/v2_core_person-tokens.md",
+    "endpoint": "POST /v2/core/accounts/{id}/person_tokens"
+  },
+  "create_person": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "POST /v2/core/accounts/{id}/persons"
+  },
+  "retrieve_person": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "GET /v2/core/accounts/{id}/persons/{person_id}"
+  },
+  "update_person": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "POST /v2/core/accounts/{id}/persons/{person_id}"
+  },
+  "list_persons": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "GET /v2/core/accounts/{id}/persons"
+  },
+  "create_funding_instructions": {
+    "doc": "docs/balance.md",
+    "endpoint": "POST /v1/balance/inbound_transfers/funding_instructions"
+  },
+  "retrieve_balance": {
+    "doc": "docs/balance.md",
+    "endpoint": "GET /v1/balance"
+  },
+  "retrieve_balance_transaction": {
+    "doc": "docs/balance_transactions.md",
+    "endpoint": "GET /v1/balance_transactions/{id}"
+  },
+  "list_balance_transactions": {
+    "doc": "docs/balance_transactions.md",
+    "endpoint": "GET /v1/balance_transactions"
+  },
+  "create_capital_financing_offer": {
+    "doc": "docs/capital_financing_offers.md",
+    "endpoint": "POST /v1/capital/financing_offers"
+  },
+  "create_customer_bank_account": {
+    "doc": "docs/customer_bank_accounts.md",
+    "endpoint": "POST /v1/customers/{id}/sources"
+  },
+  "retrieve_customer_bank_account": {
+    "doc": "docs/customer_bank_accounts.md",
+    "endpoint": "GET /v1/customers/{id}/sources/{id}"
+  },
+  "update_customer_bank_account": {
+    "doc": "docs/customer_bank_accounts.md",
+    "endpoint": "POST /v1/customers/{id}/sources/{id}"
+  },
+  "delete_customer_bank_account": {
+    "doc": "docs/customer_bank_accounts.md",
+    "endpoint": "DELETE /v1/customers/{id}/sources/{id}"
+  },
+  "list_customer_bank_accounts": {
+    "doc": "docs/customer_bank_accounts.md",
+    "endpoint": "GET /v1/customers/{id}/sources"
+  },
+  "create_external_account": {
+    "doc": "docs/external_accounts.md",
+    "endpoint": "POST /v1/accounts/{id}/external_accounts"
+  },
+  "retrieve_external_account": {
+    "doc": "docs/external_accounts.md",
+    "endpoint": "GET /v1/accounts/{id}/external_accounts/{id}"
+  },
+  "update_external_account": {
+    "doc": "docs/external_accounts.md",
+    "endpoint": "POST /v1/accounts/{id}/external_accounts/{id}"
+  },
+  "delete_external_account": {
+    "doc": "docs/external_accounts.md",
+    "endpoint": "DELETE /v1/accounts/{id}/external_accounts/{id}"
+  },
+  "list_external_accounts": {
+    "doc": "docs/external_accounts.md",
+    "endpoint": "GET /v1/accounts/{id}/external_accounts"
+  },
+  "create_financial_connections_account": {
+    "doc": "docs/financial_connections_accounts.md",
+    "endpoint": "POST /v1/financial_connections/accounts"
+  },
+  "retrieve_financial_connections_account": {
+    "doc": "docs/financial_connections_accounts.md",
+    "endpoint": "GET /v1/financial_connections/accounts/{id}"
+  },
+  "update_financial_connections_account": {
+    "doc": "docs/financial_connections_accounts.md",
+    "endpoint": "POST /v1/financial_connections/accounts/{id}"
+  },
+  "delete_financial_connections_account": {
+    "doc": "docs/financial_connections_accounts.md",
+    "endpoint": "DELETE /v1/financial_connections/accounts/{id}"
+  },
+  "list_financial_connections_accounts": {
+    "doc": "docs/financial_connections_accounts.md",
+    "endpoint": "GET /v1/financial_connections/accounts"
+  },
+  "create_financial_connections_session": {
+    "doc": "docs/financial_connections_sessions.md",
+    "endpoint": "POST /v1/financial_connections/sessions"
+  },
+  "create_identity_verification_session": {
+    "doc": "docs/identity_verification_sessions.md",
+    "endpoint": "POST /v1/identity/verification_sessions"
+  },
+  "retrieve_identity_verification_session": {
+    "doc": "docs/identity_verification_sessions.md",
+    "endpoint": "GET /v1/identity/verification_sessions/{id}"
+  },
+  "update_identity_verification_session": {
+    "doc": "docs/identity_verification_sessions.md",
+    "endpoint": "POST /v1/identity/verification_sessions/{id}"
+  },
+  "create_issue_refund": {
+    "doc": "docs/issuing_refunds.md",
+    "endpoint": "POST /v1/issuing/refunds"
+  },
+  "retrieve_issue_refund": {
+    "doc": "docs/issuing_refunds.md",
+    "endpoint": "GET /v1/issuing/refunds/{id}"
+  },
+  "create_issuing_authorization": {
+    "doc": "docs/issuing_authorizations.md",
+    "endpoint": "POST /v1/issuing/authorizations"
+  },
+  "retrieve_issuing_authorization": {
+    "doc": "docs/issuing_authorizations.md",
+    "endpoint": "GET /v1/issuing/authorizations/{id}"
+  },
+  "update_issuing_authorization": {
+    "doc": "docs/issuing_authorizations.md",
+    "endpoint": "POST /v1/issuing/authorizations/{id}"
+  },
+  "approve_issuing_authorization": {
+    "doc": "docs/issuing_authorizations.md",
+    "endpoint": "POST /v1/issuing/authorizations/{id}/approve"
+  },
+  "decline_issuing_authorization": {
+    "doc": "docs/issuing_authorizations.md",
+    "endpoint": "POST /v1/issuing/authorizations/{id}/decline"
+  },
+  "create_issuing_card": {
+    "doc": "docs/issuing_cards.md",
+    "endpoint": "POST /v1/issuing/cards"
+  },
+  "retrieve_issuing_card": {
+    "doc": "docs/issuing_cards.md",
+    "endpoint": "GET /v1/issuing/cards/{id}"
+  },
+  "update_issuing_card": {
+    "doc": "docs/issuing_cards.md",
+    "endpoint": "POST /v1/issuing/cards/{id}"
+  },
+  "create_issuing_cardholder": {
+    "doc": "docs/issuing_cardholders.md",
+    "endpoint": "POST /v1/issuing/cardholders"
+  },
+  "retrieve_issuing_cardholder": {
+    "doc": "docs/issuing_cardholders.md",
+    "endpoint": "GET /v1/issuing/cardholders/{id}"
+  },
+  "update_issuing_cardholder": {
+    "doc": "docs/issuing_cardholders.md",
+    "endpoint": "POST /v1/issuing/cardholders/{id}"
+  },
+  "create_issuing_dispute": {
+    "doc": "docs/issuing_disputes.md",
+    "endpoint": "POST /v1/issuing/disputes"
+  },
+  "retrieve_issuing_dispute": {
+    "doc": "docs/issuing_disputes.md",
+    "endpoint": "GET /v1/issuing/disputes/{id}"
+  },
+  "update_issuing_dispute": {
+    "doc": "docs/issuing_disputes.md",
+    "endpoint": "POST /v1/issuing/disputes/{id}"
+  },
+  "create_issuing_transaction": {
+    "doc": "docs/issuing_transactions.md",
+    "endpoint": "POST /v1/issuing/transactions"
+  },
+  "retrieve_issuing_transaction": {
+    "doc": "docs/issuing_transactions.md",
+    "endpoint": "GET /v1/issuing/transactions/{id}"
+  },
+  "update_issuing_transaction": {
+    "doc": "docs/issuing_transactions.md",
+    "endpoint": "POST /v1/issuing/transactions/{id}"
+  },
+  "create_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts"
+  },
+  "retrieve_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "GET /v1/payouts/{id}"
+  },
+  "update_payout": {
+    "doc": "docs/payouts.md",
+    "endpoint": "POST /v1/payouts/{id}"
+  },
+  "list_payouts": {
+    "doc": "docs/payouts.md",
+    "endpoint": "GET /v1/payouts"
+  },
+  "create_plan": {
+    "doc": "docs/plans.md",
+    "endpoint": "POST /v1/plans"
+  },
+  "retrieve_plan": {
+    "doc": "docs/plans.md",
+    "endpoint": "GET /v1/plans/{id}"
+  },
+  "update_plan": {
+    "doc": "docs/plans.md",
+    "endpoint": "POST /v1/plans/{id}"
+  },
+  "delete_plan": {
+    "doc": "docs/plans.md",
+    "endpoint": "DELETE /v1/plans/{id}"
+  },
+  "list_plans": {
+    "doc": "docs/plans.md",
+    "endpoint": "GET /v1/plans"
+  },
+  "create_quote": {
+    "doc": "docs/quotes.md",
+    "endpoint": "POST /v1/quotes"
+  },
+  "retrieve_quote": {
+    "doc": "docs/quotes.md",
+    "endpoint": "GET /v1/quotes/{id}"
+  },
+  "update_quote": {
+    "doc": "docs/quotes.md",
+    "endpoint": "POST /v1/quotes/{id}"
+  },
+  "accept_quote": {
+    "doc": "docs/quotes.md",
+    "endpoint": "POST /v1/quotes/{id}/accept"
+  },
+  "cancel_quote": {
+    "doc": "docs/quotes.md",
+    "endpoint": "POST /v1/quotes/{id}/cancel"
+  },
+  "list_quotes": {
+    "doc": "docs/quotes.md",
+    "endpoint": "GET /v1/quotes"
+  },
+  "create_radar_value_list": {
+    "doc": "docs/radar_value_lists.md",
+    "endpoint": "POST /v1/radar/value_lists"
+  },
+  "retrieve_radar_value_list": {
+    "doc": "docs/radar_value_lists.md",
+    "endpoint": "GET /v1/radar/value_lists/{id}"
+  },
+  "update_radar_value_list": {
+    "doc": "docs/radar_value_lists.md",
+    "endpoint": "POST /v1/radar/value_lists/{id}"
+  },
+  "delete_radar_value_list": {
+    "doc": "docs/radar_value_lists.md",
+    "endpoint": "DELETE /v1/radar/value_lists/{id}"
+  },
+  "list_radar_value_lists": {
+    "doc": "docs/radar_value_lists.md",
+    "endpoint": "GET /v1/radar/value_lists"
+  },
+  "create_radar_value_list_item": {
+    "doc": "docs/radar_value_list_items.md",
+    "endpoint": "POST /v1/radar/value_list_items"
+  },
+  "retrieve_radar_value_list_item": {
+    "doc": "docs/radar_value_list_items.md",
+    "endpoint": "GET /v1/radar/value_list_items/{id}"
+  },
+  "update_radar_value_list_item": {
+    "doc": "docs/radar_value_list_items.md",
+    "endpoint": "POST /v1/radar/value_list_items/{id}"
+  },
+  "delete_radar_value_list_item": {
+    "doc": "docs/radar_value_list_items.md",
+    "endpoint": "DELETE /v1/radar/value_list_items/{id}"
+  },
+  "list_radar_value_list_items": {
+    "doc": "docs/radar_value_list_items.md",
+    "endpoint": "GET /v1/radar/value_list_items"
+  },
+  "create_radar_early_fraud_warning": {
+    "doc": "docs/radar_early_fraud_warnings.md",
+    "endpoint": "POST /v1/radar/early_fraud_warnings"
+  },
+  "retrieve_radar_early_fraud_warning": {
+    "doc": "docs/radar_early_fraud_warnings.md",
+    "endpoint": "GET /v1/radar/early_fraud_warnings/{id}"
+  },
+  "create_shipping_rate": {
+    "doc": "docs/shipping_rates.md",
+    "endpoint": "POST /v1/shipping_rates"
+  },
+  "retrieve_shipping_rate": {
+    "doc": "docs/shipping_rates.md",
+    "endpoint": "GET /v1/shipping_rates/{id}"
+  },
+  "update_shipping_rate": {
+    "doc": "docs/shipping_rates.md",
+    "endpoint": "POST /v1/shipping_rates/{id}"
+  },
+  "list_shipping_rates": {
+    "doc": "docs/shipping_rates.md",
+    "endpoint": "GET /v1/shipping_rates"
+  },
+  "create_tax_rate": {
+    "doc": "docs/tax_rates.md",
+    "endpoint": "POST /v1/tax_rates"
+  },
+  "retrieve_tax_rate": {
+    "doc": "docs/tax_rates.md",
+    "endpoint": "GET /v1/tax_rates/{id}"
+  },
+  "update_tax_rate": {
+    "doc": "docs/tax_rates.md",
+    "endpoint": "POST /v1/tax_rates/{id}"
+  },
+  "list_tax_rates": {
+    "doc": "docs/tax_rates.md",
+    "endpoint": "GET /v1/tax_rates"
+  },
+  "create_tax_id": {
+    "doc": "docs/tax_ids.md",
+    "endpoint": "POST /v1/customers/{id}/tax_ids"
+  },
+  "retrieve_tax_id": {
+    "doc": "docs/tax_ids.md",
+    "endpoint": "GET /v1/customers/{id}/tax_ids/{id}"
+  },
+  "delete_tax_id": {
+    "doc": "docs/tax_ids.md",
+    "endpoint": "DELETE /v1/customers/{id}/tax_ids/{id}"
+  },
+  "list_tax_ids": {
+    "doc": "docs/tax_ids.md",
+    "endpoint": "GET /v1/customers/{id}/tax_ids"
+  },
+  "create_webhook_endpoint": {
+    "doc": "docs/webhook_endpoints.md",
+    "endpoint": "POST /v1/webhook_endpoints"
+  },
+  "retrieve_webhook_endpoint": {
+    "doc": "docs/webhook_endpoints.md",
+    "endpoint": "GET /v1/webhook_endpoints/{id}"
+  },
+  "update_webhook_endpoint": {
+    "doc": "docs/webhook_endpoints.md",
+    "endpoint": "POST /v1/webhook_endpoints/{id}"
+  },
+  "delete_webhook_endpoint": {
+    "doc": "docs/webhook_endpoints.md",
+    "endpoint": "DELETE /v1/webhook_endpoints/{id}"
+  },
+  "list_webhook_endpoints": {
+    "doc": "docs/webhook_endpoints.md",
+    "endpoint": "GET /v1/webhook_endpoints"
+  },
+  "create_event": {
+    "doc": "docs/events.md",
+    "endpoint": "POST /v1/events"
+  },
+  "retrieve_event": {
+    "doc": "docs/events.md",
+    "endpoint": "GET /v1/events/{id}"
+  },
+  "list_events": {
+    "doc": "docs/events.md",
+    "endpoint": "GET /v1/events"
+  },
+  "create_file": {
+    "doc": "docs/files.md",
+    "endpoint": "POST /v1/files"
+  },
+  "retrieve_file": {
+    "doc": "docs/files.md",
+    "endpoint": "GET /v1/files/{id}"
+  },
+  "create_file_link": {
+    "doc": "docs/file_links.md",
+    "endpoint": "POST /v1/file_links"
+  },
+  "retrieve_file_link": {
+    "doc": "docs/file_links.md",
+    "endpoint": "GET /v1/file_links/{id}"
+  },
+  "update_file_link": {
+    "doc": "docs/file_links.md",
+    "endpoint": "POST /v1/file_links/{id}"
+  },
+  "list_file_links": {
+    "doc": "docs/file_links.md",
+    "endpoint": "GET /v1/file_links"
+  },
+  "create_source": {
+    "doc": "docs/sources.md",
+    "endpoint": "POST /v1/sources"
+  },
+  "retrieve_source": {
+    "doc": "docs/sources.md",
+    "endpoint": "GET /v1/sources/{id}"
+  },
+  "update_source": {
+    "doc": "docs/sources.md",
+    "endpoint": "POST /v1/sources/{id}"
+  },
+  "delete_source": {
+    "doc": "docs/sources.md",
+    "endpoint": "DELETE /v1/sources/{id}"
+  },
+  "list_sources": {
+    "doc": "docs/sources.md",
+    "endpoint": "GET /v1/sources"
+  },
+  "create_terminal_location": {
+    "doc": "docs/terminal_locations.md",
+    "endpoint": "POST /v1/terminal/locations"
+  },
+  "retrieve_terminal_location": {
+    "doc": "docs/terminal_locations.md",
+    "endpoint": "GET /v1/terminal/locations/{id}"
+  },
+  "update_terminal_location": {
+    "doc": "docs/terminal_locations.md",
+    "endpoint": "POST /v1/terminal/locations/{id}"
+  },
+  "delete_terminal_location": {
+    "doc": "docs/terminal_locations.md",
+    "endpoint": "DELETE /v1/terminal/locations/{id}"
+  },
+  "list_terminal_locations": {
+    "doc": "docs/terminal_locations.md",
+    "endpoint": "GET /v1/terminal/locations"
+  },
+  "create_terminal_reader": {
+    "doc": "docs/terminal_readers.md",
+    "endpoint": "POST /v1/terminal/readers"
+  },
+  "retrieve_terminal_reader": {
+    "doc": "docs/terminal_readers.md",
+    "endpoint": "GET /v1/terminal/readers/{id}"
+  },
+  "update_terminal_reader": {
+    "doc": "docs/terminal_readers.md",
+    "endpoint": "POST /v1/terminal/readers/{id}"
+  },
+  "delete_terminal_reader": {
+    "doc": "docs/terminal_readers.md",
+    "endpoint": "DELETE /v1/terminal/readers/{id}"
+  },
+  "list_terminal_readers": {
+    "doc": "docs/terminal_readers.md",
+    "endpoint": "GET /v1/terminal/readers"
+  },
+  "create_terminal_connection_token": {
+    "doc": "docs/terminal_connection_tokens.md",
+    "endpoint": "POST /v1/terminal/connection_tokens"
+  },
+  "create_token": {
+    "doc": "docs/tokens.md",
+    "endpoint": "POST /v1/tokens"
+  },
+  "retrieve_token": {
+    "doc": "docs/tokens.md",
+    "endpoint": "GET /v1/tokens/{id}"
+  },
+  "create_topup": {
+    "doc": "docs/topups.md",
+    "endpoint": "POST /v1/topups"
+  },
+  "retrieve_topup": {
+    "doc": "docs/topups.md",
+    "endpoint": "GET /v1/topups/{id}"
+  },
+  "cancel_topup": {
+    "doc": "docs/topups.md",
+    "endpoint": "POST /v1/topups/{id}/cancel"
+  },
+  "list_topups": {
+    "doc": "docs/topups.md",
+    "endpoint": "GET /v1/topups"
+  },
+  "create_application_fee": {
+    "doc": "docs/application_fees.md",
+    "endpoint": "POST /v1/application_fees"
+  },
+  "retrieve_application_fee": {
+    "doc": "docs/application_fees.md",
+    "endpoint": "GET /v1/application_fees/{id}"
+  },
+  "list_application_fees": {
+    "doc": "docs/application_fees.md",
+    "endpoint": "GET /v1/application_fees"
+  },
+  "create_fee_refund": {
+    "doc": "docs/fee_refunds.md",
+    "endpoint": "POST /v1/application_fees/{id}/refunds"
+  },
+  "retrieve_fee_refund": {
+    "doc": "docs/fee_refunds.md",
+    "endpoint": "GET /v1/application_fees/{id}/refunds/{id}"
+  },
+  "update_fee_refund": {
+    "doc": "docs/fee_refunds.md",
+    "endpoint": "POST /v1/application_fees/{id}/refunds/{id}"
+  },
+  "list_fee_refunds": {
+    "doc": "docs/fee_refunds.md",
+    "endpoint": "GET /v1/application_fees/{id}/refunds"
+  },
+  "create_transfer_reversal": {
+    "doc": "docs/transfer_reversals.md",
+    "endpoint": "POST /v1/transfers/{id}/reversals"
+  },
+  "retrieve_transfer_reversal": {
+    "doc": "docs/transfer_reversals.md",
+    "endpoint": "GET /v1/transfers/{id}/reversals/{id}"
+  },
+  "update_transfer_reversal": {
+    "doc": "docs/transfer_reversals.md",
+    "endpoint": "POST /v1/transfers/{id}/reversals/{id}"
+  },
+  "list_transfer_reversals": {
+    "doc": "docs/transfer_reversals.md",
+    "endpoint": "GET /v1/transfers/{id}/reversals"
+  },
+  "create_invoice_item": {
+    "doc": "docs/invoiceitems.md",
+    "endpoint": "POST /v1/invoiceitems"
+  },
+  "retrieve_invoice_item": {
+    "doc": "docs/invoiceitems.md",
+    "endpoint": "GET /v1/invoiceitems/{id}"
+  },
+  "update_invoice_item": {
+    "doc": "docs/invoiceitems.md",
+    "endpoint": "POST /v1/invoiceitems/{id}"
+  },
+  "delete_invoice_item": {
+    "doc": "docs/invoiceitems.md",
+    "endpoint": "DELETE /v1/invoiceitems/{id}"
+  },
+  "list_invoice_items": {
+    "doc": "docs/invoiceitems.md",
+    "endpoint": "GET /v1/invoiceitems"
+  },
+  "create_subscription_item": {
+    "doc": "docs/subscription_items.md",
+    "endpoint": "POST /v1/subscription_items"
+  },
+  "retrieve_subscription_item": {
+    "doc": "docs/subscription_items.md",
+    "endpoint": "GET /v1/subscription_items/{id}"
+  },
+  "update_subscription_item": {
+    "doc": "docs/subscription_items.md",
+    "endpoint": "POST /v1/subscription_items/{id}"
+  },
+  "delete_subscription_item": {
+    "doc": "docs/subscription_items.md",
+    "endpoint": "DELETE /v1/subscription_items/{id}"
+  },
+  "list_subscription_items": {
+    "doc": "docs/subscription_items.md",
+    "endpoint": "GET /v1/subscription_items"
+  },
+  "create_discount": {
+    "doc": "docs/discounts.md",
+    "endpoint": "POST /v1/customers/{id}/discounts"
+  },
+  "delete_discount": {
+    "doc": "docs/discounts.md",
+    "endpoint": "DELETE /v1/customers/{id}/discounts"
+  },
+  "retrieve_discount": {
+    "doc": "docs/discounts.md",
+    "endpoint": "GET /v1/customers/{id}/discounts"
+  },
+  "create_customer_session": {
+    "doc": "docs/customer_sessions.md",
+    "endpoint": "POST /v1/customer/sessions"
+  },
+  "retrieve_customer_session": {
+    "doc": "docs/customer_sessions.md",
+    "endpoint": "GET /v1/customer/sessions/{id}"
+  },
+  "create_customer_portal_configuration": {
+    "doc": "docs/customer_portal_configurations.md",
+    "endpoint": "POST /v1/billing portal/configurations"
+  },
+  "retrieve_customer_portal_configuration": {
+    "doc": "docs/customer_portal_configurations.md",
+    "endpoint": "GET /v1/billing portal/configurations/{id}"
+  },
+  "update_customer_portal_configuration": {
+    "doc": "docs/customer_portal_configurations.md",
+    "endpoint": "POST /v1/billing portal/configurations/{id}"
+  },
+  "list_customer_portal_configurations": {
+    "doc": "docs/customer_portal_configurations.md",
+    "endpoint": "GET /v1/billing portal/configurations"
+  },
+  "create_customer_portal_session": {
+    "doc": "docs/customer_portal_sessions.md",
+    "endpoint": "POST /v1/billing portal/sessions"
+  },
+  "create_mandate": {
+    "doc": "docs/mandates.md",
+    "endpoint": "POST /v1/mandates"
+  },
+  "retrieve_mandate": {
+    "doc": "docs/mandates.md",
+    "endpoint": "GET /v1/mandates/{id}"
+  },
+  "create_setup_attempt": {
+    "doc": "docs/setup_attempts.md",
+    "endpoint": "POST /v1/setup_attempts"
+  },
+  "retrieve_setup_attempt": {
+    "doc": "docs/setup_attempts.md",
+    "endpoint": "GET /v1/setup_attempts/{id}"
+  },
+  "list_setup_attempts": {
+    "doc": "docs/setup_attempts.md",
+    "endpoint": "GET /v1/setup_attempts"
+  },
+  "create_payment_method_configuration": {
+    "doc": "docs/payment_method_configurations.md",
+    "endpoint": "POST /v1/payment_method_configurations"
+  },
+  "retrieve_payment_method_configuration": {
+    "doc": "docs/payment_method_configurations.md",
+    "endpoint": "GET /v1/payment_method_configurations/{id}"
+  },
+  "update_payment_method_configuration": {
+    "doc": "docs/payment_method_configurations.md",
+    "endpoint": "POST /v1/payment_method_configurations/{id}"
+  },
+  "list_payment_method_configurations": {
+    "doc": "docs/payment_method_configurations.md",
+    "endpoint": "GET /v1/payment_method_configurations"
+  },
+  "create_payment_method_domain": {
+    "doc": "docs/payment_method_domains.md",
+    "endpoint": "POST /v1/payment_method_domains"
+  },
+  "retrieve_payment_method_domain": {
+    "doc": "docs/payment_method_domains.md",
+    "endpoint": "GET /v1/payment_method_domains/{id}"
+  },
+  "update_payment_method_domain": {
+    "doc": "docs/payment_method_domains.md",
+    "endpoint": "POST /v1/payment_method_domains/{id}"
+  },
+  "delete_payment_method_domain": {
+    "doc": "docs/payment_method_domains.md",
+    "endpoint": "DELETE /v1/payment_method_domains/{id}"
+  },
+  "list_payment_method_domains": {
+    "doc": "docs/payment_method_domains.md",
+    "endpoint": "GET /v1/payment_method_domains"
+  },
+  "create_capability": {
+    "doc": "docs/capabilities.md",
+    "endpoint": "POST /v1/accounts/{id}/capabilities"
+  },
+  "retrieve_capability": {
+    "doc": "docs/capabilities.md",
+    "endpoint": "GET /v1/accounts/{id}/capabilities/{id}"
+  },
+  "update_capability": {
+    "doc": "docs/capabilities.md",
+    "endpoint": "POST /v1/accounts/{id}/capabilities/{id}"
+  },
+  "create_country_spec": {
+    "doc": "docs/country_specs.md",
+    "endpoint": "POST /v1/country_specs"
+  },
+  "retrieve_country_spec": {
+    "doc": "docs/country_specs.md",
+    "endpoint": "GET /v1/country_specs/{id}"
+  },
+  "list_country_specs": {
+    "doc": "docs/country_specs.md",
+    "endpoint": "GET /v1/country_specs"
+  },
+  "create_tax_calculation": {
+    "doc": "docs/tax_calculations.md",
+    "endpoint": "POST /v1/tax/calculations"
+  },
+  "retrieve_tax_calculation": {
+    "doc": "docs/tax_calculations.md",
+    "endpoint": "GET /v1/tax/calculations/{id}"
+  },
+  "create_tax_code": {
+    "doc": "docs/tax_codes.md",
+    "endpoint": "POST /v1/tax_codes"
+  },
+  "retrieve_tax_code": {
+    "doc": "docs/tax_codes.md",
+    "endpoint": "GET /v1/tax_codes/{id}"
+  },
+  "list_tax_codes": {
+    "doc": "docs/tax_codes.md",
+    "endpoint": "GET /v1/tax_codes"
+  },
+  "create_tax_registration": {
+    "doc": "docs/tax_registrations.md",
+    "endpoint": "POST /v1/tax_registrations"
+  },
+  "retrieve_tax_registration": {
+    "doc": "docs/tax_registrations.md",
+    "endpoint": "GET /v1/tax_registrations/{id}"
+  },
+  "update_tax_registration": {
+    "doc": "docs/tax_registrations.md",
+    "endpoint": "POST /v1/tax_registrations/{id}"
+  },
+  "delete_tax_registration": {
+    "doc": "docs/tax_registrations.md",
+    "endpoint": "DELETE /v1/tax_registrations/{id}"
+  },
+  "list_tax_registrations": {
+    "doc": "docs/tax_registrations.md",
+    "endpoint": "GET /v1/tax_registrations"
+  },
+  "create_tax_setting": {
+    "doc": "docs/tax_settings.md",
+    "endpoint": "POST /v1/tax/settings"
+  },
+  "retrieve_tax_setting": {
+    "doc": "docs/tax_settings.md",
+    "endpoint": "GET /v1/tax/settings"
+  },
+  "update_tax_setting": {
+    "doc": "docs/tax_settings.md",
+    "endpoint": "POST /v1/tax/settings"
+  },
+  "create_balance_settings": {
+    "doc": "docs/balance-settings.md",
+    "endpoint": "POST /v1/balance/settings"
+  },
+  "retrieve_balance_settings": {
+    "doc": "docs/balance-settings.md",
+    "endpoint": "GET /v1/balance/settings"
+  },
+  "update_balance_settings": {
+    "doc": "docs/balance-settings.md",
+    "endpoint": "POST /v1/balance/settings"
+  },
+  "create_cash_balance": {
+    "doc": "docs/cash_balance.md",
+    "endpoint": "POST /v1/customers/{id}/cash_balance"
+  },
+  "retrieve_cash_balance": {
+    "doc": "docs/cash_balance.md",
+    "endpoint": "GET /v1/customers/{id}/cash_balance"
+  },
+  "update_cash_balance": {
+    "doc": "docs/cash_balance.md",
+    "endpoint": "POST /v1/customers/{id}/cash_balance"
+  },
+  "create_cash_balance_transaction": {
+    "doc": "docs/cash_balance_transactions.md",
+    "endpoint": "POST /v1/customers/{id}/cash_balance_transactions"
+  },
+  "retrieve_cash_balance_transaction": {
+    "doc": "docs/cash_balance_transactions.md",
+    "endpoint": "GET /v1/customers/{id}/cash_balance_transactions/{id}"
+  },
+  "list_cash_balance_transactions": {
+    "doc": "docs/cash_balance_transactions.md",
+    "endpoint": "GET /v1/customers/{id}/cash_balance_transactions"
+  },
+  "create_customer_balance_transaction": {
+    "doc": "docs/customer_balance_transactions.md",
+    "endpoint": "POST /v1/customers/{id}/balance_transactions"
+  },
+  "retrieve_customer_balance_transaction": {
+    "doc": "docs/customer_balance_transactions.md",
+    "endpoint": "GET /v1/customers/{id}/balance_transactions/{id}"
+  },
+  "update_customer_balance_transaction": {
+    "doc": "docs/customer_balance_transactions.md",
+    "endpoint": "POST /v1/customers/{id}/balance_transactions/{id}"
+  },
+  "list_customer_balance_transactions": {
+    "doc": "docs/customer_balance_transactions.md",
+    "endpoint": "GET /v1/customers/{id}/balance_transactions"
+  },
+  "create_credit_note": {
+    "doc": "docs/credit_notes.md",
+    "endpoint": "POST /v1/credit_notes"
+  },
+  "retrieve_credit_note": {
+    "doc": "docs/credit_notes.md",
+    "endpoint": "GET /v1/credit_notes/{id}"
+  },
+  "update_credit_note": {
+    "doc": "docs/credit_notes.md",
+    "endpoint": "POST /v1/credit_notes/{id}"
+  },
+  "void_credit_note": {
+    "doc": "docs/credit_notes.md",
+    "endpoint": "POST /v1/credit_notes/{id}/void"
+  },
+  "issue_credit_note": {
+    "doc": "docs/credit_notes.md",
+    "endpoint": "POST /v1/credit_notes/{id}/issue"
+  },
+  "list_credit_notes": {
+    "doc": "docs/credit_notes.md",
+    "endpoint": "GET /v1/credit_notes"
+  },
+  "create_invoice_line_item": {
+    "doc": "docs/invoice-line-item.md",
+    "endpoint": "POST /v1/invoices/{id}/lines"
+  },
+  "retrieve_invoice_line_item": {
+    "doc": "docs/invoice-line-item.md",
+    "endpoint": "GET /v1/invoices/{id}/lines/{id}"
+  },
+  "update_invoice_line_item": {
+    "doc": "docs/invoice-line-item.md",
+    "endpoint": "POST /v1/invoices/{id}/lines/{id}"
+  },
+  "delete_invoice_line_item": {
+    "doc": "docs/invoice-line-item.md",
+    "endpoint": "DELETE /v1/invoices/{id}/lines/{id}"
+  },
+  "list_invoice_line_items": {
+    "doc": "docs/invoice-line-item.md",
+    "endpoint": "GET /v1/invoices/{id}/lines"
+  },
+  "create_invoice_payment": {
+    "doc": "docs/invoice-payment.md",
+    "endpoint": "POST /v1/invoices/{id}/payments"
+  },
+  "retrieve_invoice_payment": {
+    "doc": "docs/invoice-payment.md",
+    "endpoint": "GET /v1/invoices/{id}/payments/{id}"
+  },
+  "list_invoice_payments": {
+    "doc": "docs/invoice-payment.md",
+    "endpoint": "GET /v1/invoices/{id}/payments"
+  },
+  "create_climate_order": {
+    "doc": "docs/climate_order.md",
+    "endpoint": "POST /v1/climate/orders"
+  },
+  "retrieve_climate_order": {
+    "doc": "docs/climate_order.md",
+    "endpoint": "GET /v1/climate/orders/{id}"
+  },
+  "update_climate_order": {
+    "doc": "docs/climate_order.md",
+    "endpoint": "POST /v1/climate/orders/{id}"
+  },
+  "cancel_climate_order": {
+    "doc": "docs/climate_order.md",
+    "endpoint": "POST /v1/climate/orders/{id}/cancel"
+  },
+  "list_climate_orders": {
+    "doc": "docs/climate_order.md",
+    "endpoint": "GET /v1/climate/orders"
+  },
+  "create_billing_meter": {
+    "doc": "docs/billing_meter.md",
+    "endpoint": "POST /v2/billing/meters"
+  },
+  "retrieve_billing_meter": {
+    "doc": "docs/billing_meter.md",
+    "endpoint": "GET /v2/billing/meters/{id}"
+  },
+  "update_billing_meter": {
+    "doc": "docs/billing_meter.md",
+    "endpoint": "POST /v2/billing/meters/{id}"
+  },
+  "list_billing_meters": {
+    "doc": "docs/billing_meter.md",
+    "endpoint": "GET /v2/billing/meters"
+  },
+  "create_billing_meter_event_summary": {
+    "doc": "docs/billing_meter-event-summary.md",
+    "endpoint": "POST /v2/billing/meter_event_summaries"
+  },
+  "retrieve_billing_meter_event_summary": {
+    "doc": "docs/billing_meter-event-summary.md",
+    "endpoint": "GET /v2/billing/meter_event_summaries/{id}"
+  },
+  "list_billing_meter_event_summaries": {
+    "doc": "docs/billing_meter-event-summary.md",
+    "endpoint": "GET /v2/billing/meter_event_summaries"
+  },
+  "create_billing_alert": {
+    "doc": "docs/billing_alert.md",
+    "endpoint": "POST /v2/billing/alerts"
+  },
+  "retrieve_billing_alert": {
+    "doc": "docs/billing_alert.md",
+    "endpoint": "GET /v2/billing/alerts/{id}"
+  },
+  "update_billing_alert": {
+    "doc": "docs/billing_alert.md",
+    "endpoint": "POST /v2/billing/alerts/{id}"
+  },
+  "list_billing_alerts": {
+    "doc": "docs/billing_alert.md",
+    "endpoint": "GET /v2/billing/alerts"
+  },
+  "create_billing_credit_grant": {
+    "doc": "docs/billing_credit-grant.md",
+    "endpoint": "POST /v2/billing/credit_grants"
+  },
+  "retrieve_billing_credit_grant": {
+    "doc": "docs/billing_credit-grant.md",
+    "endpoint": "GET /v2/billing/credit_grants/{id}"
+  },
+  "update_billing_credit_grant": {
+    "doc": "docs/billing_credit-grant.md",
+    "endpoint": "POST /v2/billing/credit_grants/{id}"
+  },
+  "list_billing_credit_grants": {
+    "doc": "docs/billing_credit-grant.md",
+    "endpoint": "GET /v2/billing/credit_grants"
+  },
+  "create_billing_credit_balance_summary": {
+    "doc": "docs/billing_credit-balance-summary.md",
+    "endpoint": "POST /v2/billing/credit_balance_summaries"
+  },
+  "retrieve_billing_credit_balance_summary": {
+    "doc": "docs/billing_credit-balance-summary.md",
+    "endpoint": "GET /v2/billing/credit_balance_summaries/{id}"
+  },
+  "list_billing_credit_balance_summaries": {
+    "doc": "docs/billing_credit-balance-summary.md",
+    "endpoint": "GET /v2/billing/credit_balance_summaries"
+  },
+  "create_billing_credit_balance_transaction": {
+    "doc": "docs/billing_credit-balance-transaction.md",
+    "endpoint": "POST /v2/billing/credit_balance_transactions"
+  },
+  "retrieve_billing_credit_balance_transaction": {
+    "doc": "docs/billing_credit-balance-transaction.md",
+    "endpoint": "GET /v2/billing/credit_balance_transactions/{id}"
+  },
+  "list_billing_credit_balance_transactions": {
+    "doc": "docs/billing_credit-balance-transaction.md",
+    "endpoint": "GET /v2/billing/credit_balance_transactions"
+  },
+  "create_billing_meter_event_adjustment": {
+    "doc": "docs/billing_meter-event-adjustment.md",
+    "endpoint": "POST /v2/billing/meter_event_adjustments"
+  },
+  "retrieve_billing_meter_event_adjustment": {
+    "doc": "docs/billing_meter-event-adjustment.md",
+    "endpoint": "GET /v2/billing/meter_event_adjustments/{id}"
+  },
+  "update_billing_meter_event_adjustment": {
+    "doc": "docs/billing_meter-event-adjustment.md",
+    "endpoint": "POST /v2/billing/meter_event_adjustments/{id}"
+  },
+  "list_billing_meter_event_adjustments": {
+    "doc": "docs/billing_meter-event-adjustment.md",
+    "endpoint": "GET /v2/billing/meter_event_adjustments"
+  },
+  "create_v2_billing_meter_event_adjustment": {
+    "doc": "docs/v2_billing_meter-event-adjustments.md",
+    "endpoint": "POST /v2/billing/meter_event_adjustments"
+  },
+  "retrieve_v2_billing_meter_event_adjustment": {
+    "doc": "docs/v2_billing_meter-event-adjustments.md",
+    "endpoint": "GET /v2/billing/meter_event_adjustments/{id}"
+  },
+  "update_v2_billing_meter_event_adjustment": {
+    "doc": "docs/v2_billing_meter-event-adjustments.md",
+    "endpoint": "POST /v2/billing/meter_event_adjustments/{id}"
+  },
+  "list_v2_billing_meter_event_adjustments": {
+    "doc": "docs/v2_billing_meter-event-adjustments.md",
+    "endpoint": "GET /v2/billing/meter_event_adjustments"
+  },
+  "create_v2_core_account_link": {
+    "doc": "docs/v2_core_account-links.md",
+    "endpoint": "POST /v2/core/account_links"
+  },
+  "retrieve_v2_core_account_link": {
+    "doc": "docs/v2_core_account-links.md",
+    "endpoint": "GET /v2/core/account_links/{id}"
+  },
+  "create_v2_core_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "POST /v2/core/event_destinations"
+  },
+  "retrieve_v2_core_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "GET /v2/core/event_destinations/{id}"
+  },
+  "update_v2_core_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "POST /v2/core/event_destinations/{id}"
+  },
+  "list_v2_core_event_destinations": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "GET /v2/core/event_destinations"
+  },
+  "ping_v2_core_event_destination": {
+    "doc": "docs/v2_core_event-destinations.md",
+    "endpoint": "POST /v2/core/event_destinations/{id}/ping"
+  },
+  "create_v2_core_event": {
+    "doc": "docs/v2_core_events.md",
+    "endpoint": "POST /v2/core/events"
+  },
+  "retrieve_v2_core_event": {
+    "doc": "docs/v2_core_events.md",
+    "endpoint": "GET /v2/core/events/{id}"
+  },
+  "list_v2_core_events": {
+    "doc": "docs/v2_core_events.md",
+    "endpoint": "GET /v2/core/events"
+  },
+  "create_v2_core_person_token": {
+    "doc": "docs/v2_core_person-tokens.md",
+    "endpoint": "POST /v2/core/accounts/{id}/person_tokens"
+  },
+  "create_v2_core_person": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "POST /v2/core/accounts/{id}/persons"
+  },
+  "retrieve_v2_core_person": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "GET /v2/core/accounts/{id}/persons/{id}"
+  },
+  "update_v2_core_person": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "POST /v2/core/accounts/{id}/persons/{id}"
+  },
+  "list_v2_core_persons": {
+    "doc": "docs/v2_core_persons.md",
+    "endpoint": "GET /v2/core/accounts/{id}/persons"
+  },
+  "create_v2_core_account": {
+    "doc": "docs/v2_core_accounts.md",
+    "endpoint": "POST /v2/core/accounts"
+  },
+  "retrieve_v2_core_account": {
+    "doc": "docs/v2_core_accounts.md",
+    "endpoint": "GET /v2/core/accounts/{id}"
+  },
+  "update_v2_core_account": {
+    "doc": "docs/v2_core_accounts.md",
+    "endpoint": "POST /v2/core/accounts/{id}"
+  },
+  "list_v2_core_accounts": {
+    "doc": "docs/v2_core_accounts.md",
+    "endpoint": "GET /v2/core/accounts"
+  },
+  "create_v2_core_account_token": {
+    "doc": "docs/v2_core_account-tokens.md",
+    "endpoint": "POST /v2/core/account_tokens"
+  },
+  "retrieve_v2_core_account_token": {
+    "doc": "docs/v2_core_account-tokens.md",
+    "endpoint": "GET /v2/core/account_tokens/{id}"
+  },
+  "create_v2_meter_event_stream": {
+    "doc": "docs/v2_meter-event-streams.md",
+    "endpoint": "POST /v2/billing/meter_event_session"
+  },
+  "create_v2_meter_event": {
+    "doc": "docs/v2_meter-events.md",
+    "endpoint": "POST /v2/billing/meter_events"
+  },
+  "retrieve_v2_meter_event": {
+    "doc": "docs/v2_meter-events.md",
+    "endpoint": "GET /v2/billing/meter_events/{id}"
+  },
+  "list_v2_meter_events": {
+    "doc": "docs/v2_meter-events.md",
+    "endpoint": "GET /v2/billing/meter_events"
+  },
+  "create_identity_verification_report": {
+    "doc": "docs/identity_verification_reports.md",
+    "endpoint": "POST /v1/identity/verification_reports"
+  },
+  "retrieve_identity_verification_report": {
+    "doc": "docs/identity_verification_reports.md",
+    "endpoint": "GET /v1/identity/verification_reports/{id}"
+  },
+  "create_card": {
+    "doc": "docs/cards.md",
+    "endpoint": "POST /v1/tokens"
+  },
+  "retrieve_card": {
+    "doc": "docs/cards.md",
+    "endpoint": "GET /v1/tokens/{id}"
+  },
+  "create_external_account_card": {
+    "doc": "docs/external_account_cards.md",
+    "endpoint": "POST /v1/accounts/{id}/external_accounts"
+  },
+  "retrieve_external_account_card": {
+    "doc": "docs/external_account_cards.md",
+    "endpoint": "GET /v1/accounts/{id}/external_accounts/{id}"
+  },
+  "update_external_account_card": {
+    "doc": "docs/external_account_cards.md",
+    "endpoint": "POST /v1/accounts/{id}/external_accounts/{id}"
+  },
+  "delete_external_account_card": {
+    "doc": "docs/external_account_cards.md",
+    "endpoint": "DELETE /v1/accounts/{id}/external_accounts/{id}"
+  },
+  "list_external_account_cards": {
+    "doc": "docs/external_account_cards.md",
+    "endpoint": "GET /v1/accounts/{id}/external_accounts"
+  },
+  "create_secret_management": {
+    "doc": "docs/secret_management.md",
+    "endpoint": "POST /v1/secret_management/secrets"
+  },
+  "retrieve_secret_management": {
+    "doc": "docs/secret_management.md",
+    "endpoint": "GET /v1/secret_management/secrets/{id}"
+  },
+  "update_secret_management": {
+    "doc": "docs/secret_management.md",
+    "endpoint": "POST /v1/secret_management/secrets/{id}"
+  },
+  "delete_secret_management": {
+    "doc": "docs/secret_management.md",
+    "endpoint": "DELETE /v1/secret_management/secrets/{id}"
+  },
+  "list_secret_management": {
+    "doc": "docs/secret_management.md",
+    "endpoint": "GET /v1/secret_management/secrets"
+  },
+  "create_confirmation_token": {
+    "doc": "docs/confirmation_tokens.md",
+    "endpoint": "POST /v1/confirmation_tokens"
+  },
+  "retrieve_confirmation_token": {
+    "doc": "docs/confirmation_tokens.md",
+    "endpoint": "GET /v1/confirmation_tokens/{id}"
+  },
+  "create_test_clock": {
+    "doc": "docs/test_clocks.md",
+    "endpoint": "POST /v1/test_clocks"
+  },
+  "retrieve_test_clock": {
+    "doc": "docs/test_clocks.md",
+    "endpoint": "GET /v1/test_clocks/{id}"
+  },
+  "advance_test_clock": {
+    "doc": "docs/test_clocks.md",
+    "endpoint": "POST /v1/test_clocks/{id}/advance"
+  },
+  "delete_test_clock": {
+    "doc": "docs/test_clocks.md",
+    "endpoint": "DELETE /v1/test_clocks/{id}"
+  },
+  "list_test_clocks": {
+    "doc": "docs/test_clocks.md",
+    "endpoint": "GET /v1/test_clocks"
+  },
+  "create_subscription_schedule": {
+    "doc": "docs/subscription_schedules.md",
+    "endpoint": "POST /v1/subscription_schedules"
+  },
+  "retrieve_subscription_schedule": {
+    "doc": "docs/subscription_schedules.md",
+    "endpoint": "GET /v1/subscription_schedules/{id}"
+  },
+  "update_subscription_schedule": {
+    "doc": "docs/subscription_schedules.md",
+    "endpoint": "POST /v1/subscription_schedules/{id}"
+  },
+  "cancel_subscription_schedule": {
+    "doc": "docs/subscription_schedules.md",
+    "endpoint": "POST /v1/subscription_schedules/{id}/cancel"
+  },
+  "release_subscription_schedule": {
+    "doc": "docs/subscription_schedules.md",
+    "endpoint": "POST /v1/subscription_schedules/{id}/release"
+  },
+  "list_subscription_schedules": {
+    "doc": "docs/subscription_schedules.md",
+    "endpoint": "GET /v1/subscription_schedules"
+  },
+  "create_person": {
+    "doc": "docs/persons.md",
+    "endpoint": "POST /v1/accounts/{id}/persons"
+  },
+  "retrieve_person": {
+    "doc": "docs/persons.md",
+    "endpoint": "GET /v1/accounts/{id}/persons/{id}"
+  },
+  "update_person": {
+    "doc": "docs/persons.md",
+    "endpoint": "POST /v1/accounts/{id}/persons/{id}"
+  },
+  "delete_person": {
+    "doc": "docs/persons.md",
+    "endpoint": "DELETE /v1/accounts/{id}/persons/{id}"
+  },
+  "list_persons": {
+    "doc": "docs/persons.md",
+    "endpoint": "GET /v1/accounts/{id}/persons"
+  },
+  "create_account_session": {
+    "doc": "docs/account_sessions.md",
+    "endpoint": "POST /v1/account_sessions"
+  },
+  "create_include_dependent_response_values": {
+    "doc": "docs/include_dependent_response_values.md",
+    "endpoint": "POST /v2/core/accounts"
+  },
+  "create_capital_financing_summary": {
+    "doc": "docs/capital_financing_summary.md",
+    "endpoint": "POST /v1/capital/financing_summaries"
+  },
+  "retrieve_capital_financing_summary": {
+    "doc": "docs/capital_financing_summary.md",
+    "endpoint": "GET /v1/capital/financing_summaries/{id}"
+  },
+  "create_capital_financing_offer": {
+    "doc": "docs/capital_financing_offers.md",
+    "endpoint": "POST /v1/capital/financing_offers"
+  },
+  "retrieve_capital_financing_offer": {
+    "doc": "docs/capital_financing_offers.md",
+    "endpoint": "GET /v1/capital/financing_offers/{id}"
+  },
+  "accept_capital_financing_offer": {
+    "doc": "docs/capital_financing_offers.md",
+    "endpoint": "POST /v1/capital/financing_offers/{id}/accept"
+  },
+  "mark_capital_financing_offer_delivered": {
+    "doc": "docs/capital_financing_offers.md",
+    "endpoint": "POST /v1/capital/financing_offers/{id}/mark_delivered"
+  },
+  "create_invoice_rendering_template": {
+    "doc": "docs/invoice-rendering-template.md",
+    "endpoint": "POST /v1/invoice_rendering/templates"
+  },
+  "retrieve_invoice_rendering_template": {
+    "doc": "docs/invoice-rendering-template.md",
+    "endpoint": "GET /v1/invoice_rendering/templates/{id}"
+  },
+  "update_invoice_rendering_template": {
+    "doc": "docs/invoice-rendering-template.md",
+    "endpoint": "POST /v1/invoice_rendering/templates/{id}"
+  },
+  "delete_invoice_rendering_template": {
+    "doc": "docs/invoice-rendering-template.md",
+    "endpoint": "DELETE /v1/invoice_rendering/templates/{id}"
+  },
+  "list_invoice_rendering_templates": {
+    "doc": "docs/invoice-rendering-template.md",
+    "endpoint": "GET /v1/invoice_rendering/templates"
+  },
+  "archive_invoice_rendering_template": {
+    "doc": "docs/invoice-rendering-template.md",
+    "endpoint": "POST /v1/invoice_rendering/templates/{id}/archive"
+  }
+}

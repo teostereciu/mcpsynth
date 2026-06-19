@@ -1,0 +1,50 @@
+{
+  "create_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "retrieve_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents/{payment_intent_id}"
+  },
+  "update_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}"
+  },
+  "list_payment_intents": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents"
+  },
+  "confirm_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/confirm"
+  },
+  "capture_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/capture"
+  },
+  "cancel_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/cancel"
+  },
+  "create_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers"
+  },
+  "retrieve_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers/{customer_id}"
+  },
+  "update_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers/{customer_id}"
+  },
+  "delete_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "DELETE /v1/customers/{customer_id}"
+  },
+  "list_customers": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers"
+  }
+}

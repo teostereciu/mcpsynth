@@ -1,0 +1,70 @@
+{
+  "get_repository": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /repos/{owner}/{repo}"
+  },
+  "list_user_repositories": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /user/repos"
+  },
+  "create_repository_for_authenticated_user": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "POST /user/repos"
+  },
+  "list_repository_issues": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /repos/{owner}/{repo}/issues"
+  },
+  "create_issue": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "POST /repos/{owner}/{repo}/issues"
+  },
+  "get_issue": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "list_pull_requests": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  },
+  "create_pull_request": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls"
+  },
+  "get_pull_request": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "get_authenticated_user": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /user"
+  },
+  "get_user": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /users/{username}"
+  },
+  "list_gists": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /gists"
+  },
+  "create_gist": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "POST /gists"
+  },
+  "get_gist": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /gists/{gist_id}"
+  },
+  "search_repositories": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /search/repositories"
+  },
+  "search_issues_and_pull_requests": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /search/issues"
+  },
+  "search_code": {
+    "doc": "No specific doc available, implemented from general knowledge.",
+    "endpoint": "GET /search/code"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "dataset": "confluence",
+  "model": "azure-chat-completions-gpt-5-4-2026-03-05-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 2354.148337841034,
+  "token_usage": {
+    "input_tokens": 660162,
+    "output_tokens": 11381
+  },
+  "cost_estimate": null,
+  "timestamp": "20260608_1205"
+}

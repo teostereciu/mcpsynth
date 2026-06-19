@@ -1,0 +1,150 @@
+{
+  "search_items": {
+    "doc": "docs/browse/search.md",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "search_items_by_image": {
+    "doc": "docs/browse/search_by_image.md",
+    "endpoint": "POST /buy/browse/v1/item_summary/search_by_image"
+  },
+  "get_item": {
+    "doc": "docs/browse/get_item.md",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}"
+  },
+  "get_item_by_legacy_id": {
+    "doc": "docs/browse/get_item_by_legacy_id.md",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_legacy_id"
+  },
+  "get_items_by_item_group": {
+    "doc": "docs/browse/get_items_by_item_group.md",
+    "endpoint": "GET /buy/browse/v1/item/get_items_by_item_group"
+  },
+  "get_items": {
+    "doc": "docs/browse/get_items.md",
+    "endpoint": "GET /buy/browse/v1/item/"
+  },
+  "check_compatibility": {
+    "doc": "docs/browse/check_compatibility.md",
+    "endpoint": "POST /buy/browse/v1/item/{item_id}/check_compatibility"
+  },
+  "get_compatibility_properties": {
+    "doc": "docs/browse/get_compatibility_properties.md",
+    "endpoint": "GET /buy/browse/v1/item/get_compatibility_properties"
+  },
+  "get_compatibility_property_values": {
+    "doc": "docs/browse/get_compatibility_property_values.md",
+    "endpoint": "GET /buy/browse/v1/item/get_compatibility_property_values"
+  },
+  "get_deal_items": {
+    "doc": "docs/deal/get_deal_items.md",
+    "endpoint": "GET /buy/deal/v1/deal_item"
+  },
+  "get_events": {
+    "doc": "docs/deal/get_events.md",
+    "endpoint": "GET /buy/deal/v1/event"
+  },
+  "get_event": {
+    "doc": "docs/deal/get_event.md",
+    "endpoint": "GET /buy/deal/v1/event/{event_id}"
+  },
+  "get_event_items": {
+    "doc": "docs/deal/get_event_items.md",
+    "endpoint": "GET /buy/deal/v1/event_item"
+  },
+  "get_item_feed": {
+    "doc": "docs/feed/get_item_feed.md",
+    "endpoint": "GET /buy/feed/v1_beta/item"
+  },
+  "get_item_group_feed": {
+    "doc": "docs/feed/get_item_group_feed.md",
+    "endpoint": "GET /buy/feed/v1_beta/item_group"
+  },
+  "get_item_snapshot_feed": {
+    "doc": "docs/feed/get_item_snapshot_feed.md",
+    "endpoint": "GET /buy/feed/v1_beta/item_snapshot"
+  },
+  "get_feed_files": {
+    "doc": "docs/feed/get_files.md",
+    "endpoint": "GET /buy/feed/v1/file"
+  },
+  "get_feed_file": {
+    "doc": "docs/feed/get_file.md",
+    "endpoint": "GET /buy/feed/v1/file/{file_id}"
+  },
+  "get_feed_access": {
+    "doc": "docs/feed/get_access.md",
+    "endpoint": "GET /buy/feed/v1/access"
+  },
+  "initiate_guest_checkout_session": {
+    "doc": "docs/order/initiate_guest_checkout_session.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/initiate"
+  },
+  "get_guest_checkout_session": {
+    "doc": "docs/order/get_guest_checkout_session.md",
+    "endpoint": "GET /buy/order/v2/guest_checkout_session/{checkout_session_id}"
+  },
+  "update_guest_checkout_session": {
+    "doc": "docs/order/update_guest_checkout_session.md",
+    "endpoint": "PUT /buy/order/v2/guest_checkout_session/{checkout_session_id}/update"
+  },
+  "apply_guest_coupon": {
+    "doc": "docs/order/apply_guest_coupon.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/apply_coupon"
+  },
+  "remove_guest_coupon": {
+    "doc": "docs/order/remove_guest_coupon.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/remove_coupon"
+  },
+  "update_guest_quantity": {
+    "doc": "docs/order/update_guest_quantity.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/update_quantity"
+  },
+  "update_guest_shipping_option": {
+    "doc": "docs/order/update_guest_shipping_option.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/update_shipping_option"
+  },
+  "initiate_guest_payment": {
+    "doc": "docs/order/initiate_guest_payment.md",
+    "endpoint": "POST /buy/order/v2/guest_checkout_session/{checkout_session_id}/initiate_payment"
+  },
+  "place_guest_order": {
+    "doc": "docs/order/place_guest_order.md",
+    "endpoint": "POST /buy/order/v2/guest_purchase_order"
+  },
+  "get_guest_purchase_order": {
+    "doc": "docs/order/get_guest_purchase_order.md",
+    "endpoint": "GET /buy/order/v2/guest_purchase_order/{purchase_order_id}"
+  },
+  "search_sold_items": {
+    "doc": "docs/marketplace_insights/search.md",
+    "endpoint": "GET /buy/marketplace_insights/v1_beta/item_sales/search"
+  },
+  "search_sold_items_by_image": {
+    "doc": "docs/marketplace_insights/search_by_image.md",
+    "endpoint": "POST /buy/marketplace_insights/v1_beta/item_sales/search_by_image"
+  },
+  "get_default_category_tree_id": {
+    "doc": "docs/taxonomy/get_default_category_tree_id.md",
+    "endpoint": "GET /commerce/taxonomy/v1/get_default_category_tree_id"
+  },
+  "get_category_tree": {
+    "doc": "docs/taxonomy/get_category_tree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"
+  },
+  "get_category_subtree": {
+    "doc": "docs/taxonomy/get_category_subtree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_subtree"
+  },
+  "get_category_suggestions": {
+    "doc": "docs/taxonomy/get_category_suggestions.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_suggestions"
+  },
+  "get_item_aspects_for_category": {
+    "doc": "docs/taxonomy/get_item_aspects_for_category.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_item_aspects_for_category"
+  },
+  "get_categories_by_level": {
+    "doc": "docs/taxonomy/get_categories_by_level.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_categories_by_level"
+  }
+}

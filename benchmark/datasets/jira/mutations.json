@@ -1,0 +1,10 @@
+{
+  "description": "Jira Cloud REST API parameter mutations for parametric contamination testing. Renames Jira-specific request parameters to plausible-but-wrong alternatives. All mutated params are exercised by eval task scenarios (JQL search, pagination, issue retrieval, user lookup).",
+  "mutations": [
+    {"original": "jql",        "mutated": "jql_query"},
+    {"original": "maxResults", "mutated": "page_size"},
+    {"original": "startAt",    "mutated": "start_index"},
+    {"original": "fields",     "mutated": "include_fields"},
+    {"original": "accountId",  "mutated": "user_id"}
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "search_items": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "get_item": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}"
+  },
+  "get_item_by_legacy_id": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_legacy_id"
+  },
+  "get_item_group": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/browse/v1/item_group/{item_group_id}"
+  },
+  "get_item_group_legacy": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/browse/v1/item_group/get_item_group_by_legacy_id"
+  },
+  "get_deal": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/deal/v1/deal/{deal_id}"
+  },
+  "get_deals": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/deal/v1/deal"
+  },
+  "get_event": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/deal/v1/event/{event_id}"
+  },
+  "get_events": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/deal/v1/event"
+  },
+  "get_item_feed": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/feed/v1/item_feed"
+  },
+  "get_item_snapshot": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/feed/v1/item_snapshot/{snapshot_id}"
+  },
+  "guest_checkout_session_create": {
+    "doc": "docs/unknown.md",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session"
+  },
+  "get_guest_checkout_session": {
+    "doc": "docs/unknown.md",
+    "endpoint": "GET /buy/order/v1/guest_checkout_session/{session_id}"
+  },
+  "update_guest_checkout_session": {
+    "doc": "docs/unknown.md",
+    "endpoint": "PATCH /buy/order/v1/guest_checkout_session/{session_id}"
+  },
+  "place_order": {
+    "doc": "docs/unknown.md",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/{session_id}/place_order"
+  }
+}

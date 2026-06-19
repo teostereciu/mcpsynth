@@ -1,0 +1,274 @@
+# Management/3/patch/merchants/(merchantId)/stores/(reference)/terminalSettings
+
+*Source: https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/stores/(reference)/terminalSettings*
+
+---
+
+# Update terminal settings
+Updates payment terminal settings for the store identified in the path. These settings apply to all terminals under the store, unless different values are configured for an individual terminal.
+- To change a parameter value, include the full object that contains the parameter, even if you don't want to change all parameters in the object.
+- To restore a parameter value inherited from a higher level, include the full object that contains the parameter, and specify an empty value for the parameter or omit the parameter.
+- Objects that are not included in the request are not updated.
+To make this request, your API credential must have the followingrole:
+- Management API—Terminal settings read and write
+Forsensitive terminal settings, your API credential must have the following role:
+- Management API—Terminal settings Advanced read and write
+In the live environment, requests to this endpoint are subject torate limits.
+The reference that identifies the store.
+The unique identifier of the merchant account.
+Settings to define the header of the shopper receipt.
+The structure of the header to show on the shopper receipt. You can define the order of one or two header lines and blank lines. For example,header1,header2,filler. The text of the header lines is defined in the Customer Area underIn-person payments>Terminal settings>Receiptsin theReceipt linesblock.
+Settings for terminal connectivity features.
+Indicates the status of the SIM card in the payment terminal. Can be updated and received only at terminal level, and only for models that support cellular connectivity.
+Possible values:
+- ACTIVATED: the SIM card is activated. Cellular connectivity may still need to be enabled on the terminal itself, in theNetworksettings.
+- INVENTORY: the SIM card is not activated. The terminal can't use cellular connectivity.
+The list of local and public URLs to send notifications to when using local integrations.
+One or more local URLs to send event notifications to when using Terminal API.
+Indicates if the message sent to this URL should be encrypted.
+The password for authentication of the notifications.
+The URL in the format: http(s)://domain.com.
+The username for authentication of the notifications.
+One or more public URLs to send event notifications to when using Terminal API.
+Indicates if the message sent to this URL should be encrypted.
+The password for authentication of the notifications.
+The URL in the format: http(s)://domain.com.
+The username for authentication of the notifications.
+Settings for tipping with or without predefined options to choose from. The maximum number of predefined options is four, or three plus the option to enter a custom tip.
+Indicates whether one of the predefined tipping options is to let the shopper enter a custom tip. Iftrue, only three of the other options defined inpredefinedTipEntriesare shown.
+The currency that the tipping settings apply to.
+Tipping options the shopper can choose from ifusePredefinedTipEntriesistrue. The maximum number of predefined options is four, or three plus the option to enter a custom tip.
+The options can be a mix of:
+- A percentage of the transaction amount. Example:5%
+- A tip amount inminor units. Example:500for a EUR 5 tip.
+Indicates whether the terminal shows a prompt to enter a tip (false), or predefined tipping options to choose from (true).
+Settings for terminal hardware features.
+The brightness of the display when the terminal is being used, expressed as a percentage.
+The hour of the day when the terminal is set to reset the Totals report. By default, the reset hour is at 6:00 AM in the timezone of the terminal. Minimum value: 0, maximum value: 23.
+The hour of the day when the terminal is set to reboot to apply the configuration and software updates. By default, the restart hour is at 6:00 AM in the timezone of the terminal. Minimum value: 0, maximum value: 23.
+Settings for the home screen.
+Hide/show the navigation bar.
+Show/hide the payments menu.
+Show/hide the settings menu.
+Settings for kiosk mode.
+List of package names for apps allowed to run in kiosk mode.
+The package name of the app to launch on startup. This must be one of the apps included inallowedAppsInKioskMode.
+Settings for localization.
+Language of the terminal.
+Secondary language of the terminal.
+The time zone of the terminal.
+Settings for Mail Order/Telephone Order transactions.
+Enable MOTO transactions.
+The maximum amount for MOTO transactions. You need to set the currency for this amount using thestandalone.currencyCodeparameter. Do not enable standalone, unless you are using a standalone solution.
+
+```
+standalone.currencyCode
+```
+Settings for a Terminal API integration.
+The list of local and public URLs to send display notifications to when using Terminal API.
+One or more local URLs to send notifications to when using Terminal API.
+Indicates if the message sent to this URL should be encrypted.
+The password for authentication of the notifications.
+The URL in the format: http(s)://domain.com.
+The username for authentication of the notifications.
+One or more public URLs to send notifications to when using Terminal API.
+Indicates if the message sent to this URL should be encrypted.
+The password for authentication of the notifications.
+The URL in the format: http(s)://domain.com.
+The username for authentication of the notifications.
+The key you share with Adyen to secure local communications when using Terminal API.
+The unique identifier of the shared key.
+The secure passphrase to protect the shared key. Must consist of:
+- At least 12 characters.
+- At least 1 uppercase letter:[A-Z].
+- At least 1 lowercase letter:[a-z].
+- At least 1 digit:[0-9].
+- At least 1 special character. Limited to the following:~,!,@,#,$,%,^,&,*,(,),_,+,=,},{,],[,;,:,?,.,,,>,<.
+The version number of the shared key.
+The list of local and public URLs to send event notifications to when using Terminal API.
+One or more local URLs to send event notifications to when using Terminal API.
+Indicates if the message sent to this URL should be encrypted.
+The password for authentication of the notifications.
+The URL in the format: http(s)://domain.com.
+The username for authentication of the notifications.
+One or more public URLs to send event notifications to when using Terminal API.
+Indicates if the message sent to this URL should be encrypted.
+The password for authentication of the notifications.
+The URL in the format: http(s)://domain.com.
+The username for authentication of the notifications.
+UseeventUrlsinstead.
+One or more URLs to send event messages to when using Terminal API.
+Configures sending event notifications by pressing a button on a terminal, for example used for pay-at-table.
+The type of event notification sent when you select the notification button.
+The text shown in the prompt which opens when you select the notification button. For example, the description of the input box for pay-at-table.
+Enables sending event notifications either by pressing the Confirm key on terminals with a keypad or by tapping the event notification button on the terminal screen.
+Shows or hides the event notification button on the screen of terminal models that have a keypad.
+The name of the notification button on the terminal screen.
+Settings foroffline paymentfeatures.
+The maximum offline transaction amount for chip cards, in the processing currency and specified inminor units.
+The maximum offline transaction amount for swiped cards, in the specified currency.
+The transaction amount, inminor units.
+The three-characterISO currency code.
+Settings for an Oracle Payment Interface (OPI) integration.
+Indicates if Pay at table is enabled.
+The store number to use for Pay at Table.
+The URL and port number used for Pay at Table communication.
+Settings forpasscodesfeatures.
+The passcode for the Admin menu and the Settings menu.
+The passcode for referenced and unreferenced refunds on standalone terminals.
+The passcode to unlock the terminal screen after a timeout.
+The passcode for the Transactions menu.
+Settings forPay-at-tablefeatures.
+Allowed authentication methods: Magswipe, Manual Entry.
+Enable Pay at table.
+Sets the allowed payment instrument for Pay at table transactions.  Can be:cashorcard. If not set, the terminal presents both options.
+Settings for payment features.
+The default currency for contactless payments on the payment terminal, in three-letterISO 4217currency code format.
+Contact Adyen before you update this setting for the first time. To enable you to change the contactless currency, we first need to check if you meet the compliance requirements.
+Hides the minor units for the listedISO currency codes.
+Generic receipt settings.
+The receipt logo converted to a Base64-encoded string. The image must be a .bmp file of < 256 KB, dimensions 240 (H) x 384 (W) px.
+Indicates whether a screen appears asking if you want to print the shopper receipt.
+Data to print on the receipt as a QR code. This can include static text and the following variables:
+- ${merchantreference}: the merchant reference of the transaction.
+- ${pspreference}: the PSP reference of the transaction.
+For example,http://www.example.com/order/${pspreference}/${merchantreference}.
+Transaction outcomes that you want the terminal to print a merchant receipt or a shopper receipt for.
+Print a merchant receipt when the payment is approved.
+Print a merchant receipt when the transaction is cancelled.
+Print a merchant receipt when capturing the payment is approved.
+Print a merchant receipt when capturing the payment is refused.
+Print a merchant receipt when the refund is approved.
+Print a merchant receipt when the refund is refused.
+Print a merchant receipt when the payment is refused.
+Print a merchant receipt when a previous transaction is voided.
+Print a shopper receipt when the payment is approved.
+Print a shopper receipt when the transaction is cancelled.
+Print a shopper receipt when capturing the payment is approved.
+Print a shopper receipt when capturing the payment is refused.
+Print a shopper receipt when the refund is approved.
+Print a shopper receipt when the refund is refused.
+Print a shopper receipt when the payment is refused.
+Print a shopper receipt when a previous transaction is voided.
+Settings for refunds.
+Settings for referenced refunds.
+Indicates whether referenced refunds are enabled on the standalone terminal.
+Settings for unreferenced refunds.
+Indicates whether unreferenced refunds are enabled on the terminal.
+Settings to skip signature, sign on display, or sign on receipt.
+IfskipSignatureis false, indicates whether the shopper should provide a signature on the display (true) or on the merchant receipt (false).
+Name that identifies the terminal.
+Slogan shown on the start screen of the device.
+Skip asking for a signature. This is possible because all global card schemes (American Express, Diners, Discover, JCB, MasterCard, VISA, and UnionPay) regard a signature as optional.
+Settings forstandalonefeatures.
+The default currency of the standalone payment terminal as anISO 4217currency code.
+Indicates whether the tipping options specified ingratuitiesare enabled on the standalone terminal.
+Enable standalone mode.
+Settings for store-and-forward offline payments. ThemaxAmount,maxPayments, andsupportedCardTypesparameters must be configured, either in the request or inherited from a higher level in your account structure.
+The maximum amount that the terminal accepts for a single store-and-forward payment.
+The transaction amount, inminor units.
+The three-characterISO currency code.
+The maximum number of store-and-forward transactions per terminal that you can process while offline.
+The type of card for which the terminal accepts store-and-forward payments. You can specify multiple card types.
+Set totrueto accept credit cards.
+Set totrueto accept debit cards.
+Set totrueto accept cards that allow deferred debit.
+Set totrueto accept prepaid cards.
+Set totrueto accept card types for which the terminal can't determine the funding source while offline.
+Settings for paymentsurchargefeatures.
+Show the surcharge details on the terminal, so the shopper can confirm.
+Surcharge fees or percentages for specific cards, funding sources (credit or debit), and currencies.
+Payment method, likeeftpos_australiaormc. See thepossible values.
+Set totrueto apply surcharges only to commercial/business cards.
+The country/region of the card issuer. If used, the surcharge settings only apply to the card issued in that country/region.
+Currency and percentage or amount of the surcharge.
+Surcharge amount per transaction, inminor units.
+Three-characterISO currency code. For example,AUD.
+The maximum surcharge amount per transaction, inminor units.
+Surcharge percentage per transaction. The maximum number of decimal places is two. For example,1%or2.27%.
+Funding source. Possible values:
+- Credit
+- Debit
+Exclude the tip amount from the surcharge calculation.
+Settings for Tap to Pay.
+The text shown on the screen during the Tap to Pay transaction.
+Settings to define the behaviour of the payment terminal.
+Indicates whether the Adyen app on the payment terminal restarts automatically when the configuration is updated.
+Settings for devicetime-outs.
+Indicates the number of seconds of inactivity after which the terminal display goes into sleep mode.
+Remote Wi-Fi profiles for WPA and WPA2 PSK and EAP Wi-Fi networks.
+List of remote Wi-Fi profiles.
+The type of Wi-Fi network. Possible values:wpa-psk,wpa2-psk,wpa-eap,wpa2-eap.
+Indicates whether to automatically select the best authentication method available. Does not work on older terminal models.
+Useinfrafor infrastructure-based networks. This applies to most networks. Useadhoconly if the communication is p2p-based between base stations.
+The channel number of the Wi-Fi network. The recommended setting is0for automatic channel selection.
+Indicates whether this is your preferred wireless network. Iftrue, the terminal will try connecting to this network first.
+Specifies the server domain name for EAP-TLS and EAP-PEAP WiFi profiles on Android 11 and above.
+ForauthTypewpa-eaporwpa2-eap. Possible values:tls,peap,leap,fast
+ForauthTypewpa-eaporwpa2-eap. The root certificate from the CA that signed the certificate of the RADIUS server that is part of your wireless network.
+The certificate content converted to a Base64-encoded string.
+The name of the certificate. Must be unique across Wi-Fi profiles.
+Foreaptls. The certificate chain for the terminals. All terminals in the same network will use the same EAP client certificate.
+The certificate content converted to a Base64-encoded string.
+The name of the certificate. Must be unique across Wi-Fi profiles.
+Foreaptls. The RSA private key for the client. Include the lines BEGIN RSA PRIVATE KEY and END RSA PRIVATE KEY.
+The certificate content converted to a Base64-encoded string.
+The name of the certificate. Must be unique across Wi-Fi profiles.
+Foreaptls. The password of the RSA key file, if that file is password-protected.
+ForauthTypewpa-eaporwpa2-eap. The EAP-PEAP username from your MS-CHAP account. Must match the configuration of your RADIUS server.
+Foreaptls. The EAP intermediate certificate.
+The certificate content converted to a Base64-encoded string.
+The name of the certificate. Must be unique across Wi-Fi profiles.
+Foreappeap. The EAP-PEAP password from your MS-CHAP account. Must match the configuration of your RADIUS server.
+Indicates if the network doesn't broadcast its SSID. Mandatory for Android terminals, because these terminals rely on this setting to be able to connect to any network.
+Your name for the Wi-Fi profile.
+ForauthType**wpa-psk orwpa2-psk. The password to the wireless network.
+The name of the wireless network.
+The type of encryption. Possible values:auto,ccmp(recommended),tkip
+General Wi-Fi settings.
+The preferred Wi-Fi band, for use if the terminals support multiple bands. Possible values: All, 2.4GHz, 5GHz.
+Indicates whether roaming is enabled on the terminals.
+The connection time-out in seconds. Minimum value: 0.
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow lesscardholderReceiptobjectSettings to define the header of the shopper receipt.Show childrenHide childrenheaderForAuthorizedReceiptstringThe structure of the header to show on the shopper receipt. You can define the order of one or two header lines and blank lines. For example,header1,header2,filler. The text of the header lines is defined in the Customer Area underIn-person payments>Terminal settings>Receiptsin theReceipt linesblock.connectivityobjectSettings for terminal connectivity features.Show childrenHide childrensimcardStatusstringIndicates the status of the SIM card in the payment terminal. Can be updated and received only at terminal level, and only for models that support cellular connectivity.Possible values:ACTIVATED: the SIM card is activated. Cellular connectivity may still need to be enabled on the terminal itself, in theNetworksettings.INVENTORY: the SIM card is not activated. The terminal can't use cellular connectivity.terminalIPAddressURLobjectThe list of local and public URLs to send notifications to when using local integrations.Show childrenHide childreneventLocalUrlsarray[object]One or more local URLs to send event notifications to when using Terminal API.Show childrenHide childrenencryptedbooleanIndicates if the message sent to this URL should be encrypted.passwordstringThe password for authentication of the notifications.urlstringThe URL in the format: http(s)://domain.com.usernamestringThe username for authentication of the notifications.eventPublicUrlsarray[object]One or more public URLs to send event notifications to when using Terminal API.Show childrenHide childrenencryptedbooleanIndicates if the message sent to this URL should be encrypted.passwordstringThe password for authentication of the notifications.urlstringThe URL in the format: http(s)://domain.com.usernamestringThe username for authentication of the notifications.gratuitiesarray[object]Settings for tipping with or without predefined options to choose from. The maximum number of predefined options is four, or three plus the option to enter a custom tip.Show childrenHide childrenallowCustomAmountbooleanIndicates whether one of the predefined tipping options is to let the shopper enter a custom tip. Iftrue, only three of the other options defined inpredefinedTipEntriesare shown.currencystringThe currency that the tipping settings apply to.predefinedTipEntriesarray[string]Tipping options the shopper can choose from ifusePredefinedTipEntriesistrue. The maximum number of predefined options is four, or three plus the option to enter a custom tip.
+The options can be a mix of:A percentage of the transaction amount. Example:5%A tip amount inminor units. Example:500for a EUR 5 tip.usePredefinedTipEntriesbooleanIndicates whether the terminal shows a prompt to enter a tip (false), or predefined tipping options to choose from (true).hardwareobjectSettings for terminal hardware features.Show childrenHide childrendisplayMaximumBackLightintegerThe brightness of the display when the terminal is being used, expressed as a percentage.resetTotalsHourintegerThe hour of the day when the terminal is set to reset the Totals report. By default, the reset hour is at 6:00 AM in the timezone of the terminal. Minimum value: 0, maximum value: 23.restartHourintegerThe hour of the day when the terminal is set to reboot to apply the configuration and software updates. By default, the restart hour is at 6:00 AM in the timezone of the terminal. Minimum value: 0, maximum value: 23.homeScreenobjectSettings for the home screen.Show childrenHide childrenhideNavigationBarbooleanHide/show the navigation bar.showPaymentsMenubooleanShow/hide the payments menu.showSettingsMenubooleanShow/hide the settings menu.kioskModeobjectSettings for kiosk mode.Show childrenHide childrenallowedAppsInKioskModearray[string]List of package names for apps allowed to run in kiosk mode.kioskAppOnStartupstringThe package name of the app to launch on startup. This must be one of the apps included inallowedAppsInKioskMode.localizationobjectSettings for localization.Show childrenHide childrenlanguagestringLanguage of the terminal.secondaryLanguagestringSecondary language of the terminal.timezonestringThe time zone of the terminal.motoobjectSettings for Mail Order/Telephone Order transactions.Show childrenHide childrenenableMotobooleanEnable MOTO transactions.maxAmountintegerThe maximum amount for MOTO transactions. You need to set the currency for this amount using thestandalone.currencyCodeparameter. Do not enable standalone, unless you are using a standalone solution.nexoobjectSettings for a Terminal API integration.Show childrenHide childrendisplayUrlsobjectThe list of local and public URLs to send display notifications to when using Terminal API.Show childrenHide childrenlocalUrlsarray[object]One or more local URLs to send notifications to when using Terminal API.Show childrenHide childrenencryptedbooleanIndicates if the message sent to this URL should be encrypted.passwordstringThe password for authentication of the notifications.urlstringThe URL in the format: http(s)://domain.com.usernamestringThe username for authentication of the notifications.publicUrlsarray[object]One or more public URLs to send notifications to when using Terminal API.Show childrenHide childrenencryptedbooleanIndicates if the message sent to this URL should be encrypted.passwordstringThe password for authentication of the notifications.urlstringThe URL in the format: http(s)://domain.com.usernamestringThe username for authentication of the notifications.encryptionKeyobjectThe key you share with Adyen to secure local communications when using Terminal API.Show childrenHide childrenidentifierstringThe unique identifier of the shared key.passphrasestringThe secure passphrase to protect the shared key. Must consist of:At least 12 characters.At least 1 uppercase letter:[A-Z].At least 1 lowercase letter:[a-z].At least 1 digit:[0-9].At least 1 special character. Limited to the following:~,!,@,#,$,%,^,&,*,(,),_,+,=,},{,],[,;,:,?,.,,,>,<.versionintegerThe version number of the shared key.eventUrlsobjectThe list of local and public URLs to send event notifications to when using Terminal API.Show childrenHide childreneventLocalUrlsarray[object]One or more local URLs to send event notifications to when using Terminal API.Show childrenHide childrenencryptedbooleanIndicates if the message sent to this URL should be encrypted.passwordstringThe password for authentication of the notifications.urlstringThe URL in the format: http(s)://domain.com.usernamestringThe username for authentication of the notifications.eventPublicUrlsarray[object]One or more public URLs to send event notifications to when using Terminal API.Show childrenHide childrenencryptedbooleanIndicates if the message sent to this URL should be encrypted.passwordstringThe password for authentication of the notifications.urlstringThe URL in the format: http(s)://domain.com.usernamestringThe username for authentication of the notifications.nexoEventUrlsarray[string]Deprecated in version 1UseeventUrlsinstead.One or more URLs to send event messages to when using Terminal API.notificationobjectConfigures sending event notifications by pressing a button on a terminal, for example used for pay-at-table.Show childrenHide childrencategorystringThe type of event notification sent when you select the notification button.detailsstringThe text shown in the prompt which opens when you select the notification button. For example, the description of the input box for pay-at-table.enabledbooleanEnables sending event notifications either by pressing the Confirm key on terminals with a keypad or by tapping the event notification button on the terminal screen.showButtonbooleanShows or hides the event notification button on the screen of terminal models that have a keypad.titlestringThe name of the notification button on the terminal screen.offlineProcessingobjectSettings foroffline paymentfeatures.Show childrenHide childrenchipFloorLimitintegerThe maximum offline transaction amount for chip cards, in the processing currency and specified inminor units.offlineSwipeLimitsarray[object]The maximum offline transaction amount for swiped cards, in the specified currency.Show childrenHide childrenamountintegerThe transaction amount, inminor units.currencyCodestringThe three-characterISO currency code.opiobjectSettings for an Oracle Payment Interface (OPI) integration.Show childrenHide childrenenablePayAtTablebooleanIndicates if Pay at table is enabled.payAtTableStoreNumberstringThe store number to use for Pay at Table.payAtTableURLstringThe URL and port number used for Pay at Table communication.passcodesobjectSettings forpasscodesfeatures.Show childrenHide childrenadminMenuPinstringMax length:6The passcode for the Admin menu and the Settings menu.refundPinstringMax length:6The passcode for referenced and unreferenced refunds on standalone terminals.screenLockPinstringMin length:4Max length:6The passcode to unlock the terminal screen after a timeout.txMenuPinstringMax length:6The passcode for the Transactions menu.payAtTableobjectSettings forPay-at-tablefeatures.Show childrenHide childrenauthenticationMethodstringAllowed authentication methods: Magswipe, Manual Entry.enablePayAtTablebooleanEnable Pay at table.paymentInstrumentstringSets the allowed payment instrument for Pay at table transactions.  Can be:cashorcard. If not set, the terminal presents both options.paymentobjectSettings for payment features.Show childrenHide childrencontactlessCurrencystringMin length:3Max length:3The default currency for contactless payments on the payment terminal, in three-letterISO 4217currency code format.Contact Adyen before you update this setting for the first time. To enable you to change the contactless currency, we first need to check if you meet the compliance requirements.hideMinorUnitsInCurrenciesarray[string]Hides the minor units for the listedISO currency codes.receiptOptionsobjectGeneric receipt settings.Show childrenHide childrenlogostringMax length:350000The receipt logo converted to a Base64-encoded string. The image must be a .bmp file of < 256 KB, dimensions 240 (H) x 384 (W) px.promptBeforePrintingbooleanIndicates whether a screen appears asking if you want to print the shopper receipt.qrCodeDatastringData to print on the receipt as a QR code. This can include static text and the following variables:${merchantreference}: the merchant reference of the transaction.${pspreference}: the PSP reference of the transaction.For example,http://www.example.com/order/${pspreference}/${merchantreference}.receiptPrintingobjectTransaction outcomes that you want the terminal to print a merchant receipt or a shopper receipt for.Show childrenHide childrenmerchantApprovedbooleanPrint a merchant receipt when the payment is approved.merchantCancelledbooleanPrint a merchant receipt when the transaction is cancelled.merchantCaptureApprovedbooleanPrint a merchant receipt when capturing the payment is approved.merchantCaptureRefusedbooleanPrint a merchant receipt when capturing the payment is refused.merchantRefundApprovedbooleanPrint a merchant receipt when the refund is approved.merchantRefundRefusedbooleanPrint a merchant receipt when the refund is refused.merchantRefusedbooleanPrint a merchant receipt when the payment is refused.merchantVoidbooleanPrint a merchant receipt when a previous transaction is voided.shopperApprovedbooleanPrint a shopper receipt when the payment is approved.shopperCancelledbooleanPrint a shopper receipt when the transaction is cancelled.shopperCaptureApprovedbooleanPrint a shopper receipt when capturing the payment is approved.shopperCaptureRefusedbooleanPrint a shopper receipt when capturing the payment is refused.shopperRefundApprovedbooleanPrint a shopper receipt when the refund is approved.shopperRefundRefusedbooleanPrint a shopper receipt when the refund is refused.shopperRefusedbooleanPrint a shopper receipt when the payment is refused.shopperVoidbooleanPrint a shopper receipt when a previous transaction is voided.refundsobjectSettings for refunds.Show childrenHide childrenreferencedobjectSettings for referenced refunds.Show childrenHide childrenenableStandaloneRefundsbooleanIndicates whether referenced refunds are enabled on the standalone terminal.unreferencedobjectSettings for unreferenced refunds.Show childrenHide childrenenableUnreferencedRefundsbooleanIndicates whether unreferenced refunds are enabled on the terminal.signatureobjectSettings to skip signature, sign on display, or sign on receipt.Show childrenHide childrenaskSignatureOnScreenbooleanIfskipSignatureis false, indicates whether the shopper should provide a signature on the display (true) or on the merchant receipt (false).deviceNamestringName that identifies the terminal.deviceSloganstringMax length:50Slogan shown on the start screen of the device.skipSignaturebooleanSkip asking for a signature. This is possible because all global card schemes (American Express, Diners, Discover, JCB, MasterCard, VISA, and UnionPay) regard a signature as optional.standaloneobjectSettings forstandalonefeatures.Show childrenHide childrencurrencyCodestringMin length:3Max length:3The default currency of the standalone payment terminal as anISO 4217currency code.enableGratuitiesbooleanIndicates whether the tipping options specified ingratuitiesare enabled on the standalone terminal.enableStandalonebooleanEnable standalone mode.storeAndForwardobjectSettings for store-and-forward offline payments. ThemaxAmount,maxPayments, andsupportedCardTypesparameters must be configured, either in the request or inherited from a higher level in your account structure.Show childrenHide childrenmaxAmountarray[object]The maximum amount that the terminal accepts for a single store-and-forward payment.Show childrenHide childrenamountintegerThe transaction amount, inminor units.currencyCodestringThe three-characterISO currency code.maxPaymentsintegerThe maximum number of store-and-forward transactions per terminal that you can process while offline.supportedCardTypesobjectThe type of card for which the terminal accepts store-and-forward payments. You can specify multiple card types.Show childrenHide childrencreditbooleanSet totrueto accept credit cards.debitbooleanSet totrueto accept debit cards.deferredDebitbooleanSet totrueto accept cards that allow deferred debit.prepaidbooleanSet totrueto accept prepaid cards.unknownbooleanSet totrueto accept card types for which the terminal can't determine the funding source while offline.surchargeobjectSettings for paymentsurchargefeatures.Show childrenHide childrenaskConfirmationbooleanShow the surcharge details on the terminal, so the shopper can confirm.configurationsarray[object]Surcharge fees or percentages for specific cards, funding sources (credit or debit), and currencies.Show childrenHide childrenbrandstringPayment method, likeeftpos_australiaormc. See thepossible values.commercialbooleanSet totrueto apply surcharges only to commercial/business cards.countryarray[string]The country/region of the card issuer. If used, the surcharge settings only apply to the card issued in that country/region.currenciesarray[object]Currency and percentage or amount of the surcharge.Show childrenHide childrenamountintegerSurcharge amount per transaction, inminor units.currencyCodestringThree-characterISO currency code. For example,AUD.maxAmountintegerThe maximum surcharge amount per transaction, inminor units.percentagenumberSurcharge percentage per transaction. The maximum number of decimal places is two. For example,1%or2.27%.sourcesarray[string]Funding source. Possible values:CreditDebitexcludeGratuityFromSurchargebooleanExclude the tip amount from the surcharge calculation.tapToPayobjectSettings for Tap to Pay.Show childrenHide childrenmerchantDisplayNamestringThe text shown on the screen during the Tap to Pay transaction.terminalInstructionsobjectSettings to define the behaviour of the payment terminal.Show childrenHide childrenadyenAppRestartbooleanIndicates whether the Adyen app on the payment terminal restarts automatically when the configuration is updated.timeoutsobjectSettings for devicetime-outs.Show childrenHide childrenfromActiveToSleepintegerIndicates the number of seconds of inactivity after which the terminal display goes into sleep mode.wifiProfilesobjectRemote Wi-Fi profiles for WPA and WPA2 PSK and EAP Wi-Fi networks.Show childrenHide childrenprofilesarray[object]List of remote Wi-Fi profiles.Show childrenHide childrenauthTypestringThe type of Wi-Fi network. Possible values:wpa-psk,wpa2-psk,wpa-eap,wpa2-eap.autoWifibooleanIndicates whether to automatically select the best authentication method available. Does not work on older terminal models.bssTypestringUseinfrafor infrastructure-based networks. This applies to most networks. Useadhoconly if the communication is p2p-based between base stations.channelintegerThe channel number of the Wi-Fi network. The recommended setting is0for automatic channel selection.defaultProfilebooleanIndicates whether this is your preferred wireless network. Iftrue, the terminal will try connecting to this network first.domainSuffixstringSpecifies the server domain name for EAP-TLS and EAP-PEAP WiFi profiles on Android 11 and above.eapstringForauthTypewpa-eaporwpa2-eap. Possible values:tls,peap,leap,fasteapCaCertobjectForauthTypewpa-eaporwpa2-eap. The root certificate from the CA that signed the certificate of the RADIUS server that is part of your wireless network.Show childrenHide childrendatastringThe certificate content converted to a Base64-encoded string.namestringThe name of the certificate. Must be unique across Wi-Fi profiles.eapClientCertobjectForeaptls. The certificate chain for the terminals. All terminals in the same network will use the same EAP client certificate.Show childrenHide childrendatastringThe certificate content converted to a Base64-encoded string.namestringThe name of the certificate. Must be unique across Wi-Fi profiles.eapClientKeyobjectForeaptls. The RSA private key for the client. Include the lines BEGIN RSA PRIVATE KEY and END RSA PRIVATE KEY.Show childrenHide childrendatastringThe certificate content converted to a Base64-encoded string.namestringThe name of the certificate. Must be unique across Wi-Fi profiles.eapClientPwdstringForeaptls. The password of the RSA key file, if that file is password-protected.eapIdentitystringForauthTypewpa-eaporwpa2-eap. The EAP-PEAP username from your MS-CHAP account. Must match the configuration of your RADIUS server.eapIntermediateCertobjectForeaptls. The EAP intermediate certificate.Show childrenHide childrendatastringThe certificate content converted to a Base64-encoded string.namestringThe name of the certificate. Must be unique across Wi-Fi profiles.eapPwdstringForeappeap. The EAP-PEAP password from your MS-CHAP account. Must match the configuration of your RADIUS server.hiddenSsidbooleanIndicates if the network doesn't broadcast its SSID. Mandatory for Android terminals, because these terminals rely on this setting to be able to connect to any network.namestringYour name for the Wi-Fi profile.pskstringForauthType**wpa-psk orwpa2-psk. The password to the wireless network.ssidstringThe name of the wireless network.wsecstringThe type of encryption. Possible values:auto,ccmp(recommended),tkipsettingsobjectGeneral Wi-Fi settings.Show childrenHide childrenbandstringThe preferred Wi-Fi band, for use if the terminals support multiple bands. Possible values: All, 2.4GHz, 5GHz.roamingbooleanIndicates whether roaming is enabled on the terminals.timeoutintegerThe connection time-out in seconds. Minimum value: 0.
+- 204 - No ContentThe request has been successfully processed, but there is no additional content.
+- 400 - Bad RequestA problem reading or understanding the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 401 - UnauthorizedAuthentication required.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 403 - ForbiddenInsufficient permissions to process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 500 - Internal Server ErrorThe server could not process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+
+#### 200 - OK
+- ACTIVATED: the SIM card is activated. Cellular connectivity may still need to be enabled on the terminal itself, in theNetworksettings.
+- INVENTORY: the SIM card is not activated. The terminal can't use cellular connectivity.
+- A percentage of the transaction amount. Example:5%
+- A tip amount inminor units. Example:500for a EUR 5 tip.
+
+```
+standalone.currencyCode
+```
+- At least 12 characters.
+- At least 1 uppercase letter:[A-Z].
+- At least 1 lowercase letter:[a-z].
+- At least 1 digit:[0-9].
+- At least 1 special character. Limited to the following:~,!,@,#,$,%,^,&,*,(,),_,+,=,},{,],[,;,:,?,.,,,>,<.
+- ${merchantreference}: the merchant reference of the transaction.
+- ${pspreference}: the PSP reference of the transaction.
+- Credit
+- Debit
+
+#### 204 - No Content
+
+#### 400 - Bad Request
+
+#### 401 - Unauthorized
+
+#### 403 - Forbidden
+
+#### 422 - Unprocessable Entity
+
+#### 500 - Internal Server Error

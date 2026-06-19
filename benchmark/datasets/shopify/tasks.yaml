@@ -1,0 +1,224 @@
+# Agent evaluation tasks for Shopify Admin REST API MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring guidelines.
+#
+# Required env vars: SHOPIFY_ACCESS_TOKEN, SHOPIFY_STORE_URL
+
+tasks:
+  # ---------- READ ----------
+
+  # Discriminates: does the agent call get_shop and surface the currency
+  # field rather than just the shop name?
+  - id: get_shop_info
+    prompt: >
+      Retrieve the shop information for the Shopify store. Report the shop
+      name, email, currency, and plan name.
+    expected: currency
+    tags: [read]
+
+  # Discriminates: does the agent list products and surface the title field
+  # rather than raw product IDs?
+  - id: list_products
+    prompt: >
+      List the first 5 products in the Shopify store. Report their titles,
+      statuses (active/draft/archived), and prices of the first variant.
+    expected: title
+    tags: [read]
+
+  # Discriminates: does the agent create a draft order and confirm it appears
+  # in the draft orders list, surfacing the status field?
+  - id: create_and_list_draft_order
+    prompt: >
+      Create a Shopify draft order with one line item: title "Agent Test Item",
+      price 9.99 USD, and quantity 2. List all draft orders in the store and
+      confirm the new draft order appears. Report the draft order ID and status.
+    expected: draft_order
+    tags: [write, multi-step]
+    # Tests: POST /draft_orders + GET /draft_orders list.
+    # Discriminates servers that implement the draft_orders namespace separately
+    # from the orders namespace. Fresh store has no orders so this generates data.
+
+  # Discriminates: does the agent confirm the created customer appears in the
+  # list endpoint, not just that the create call succeeded?
+  - id: create_and_verify_customer_list
+    prompt: >
+      Create a customer with first name "Agent", last name "ListTest", and email
+      "agent.listtest@example-mcp.com". List the first 10 customers and confirm
+      the newly created customer appears. Report the customer ID found in the list.
+    expected: agent.listtest@example-mcp.com
+    tags: [write, multi-step]
+    # Tests: create customer → list customers → confirm appearance.
+    # Discriminates servers where the list endpoint is correctly implemented and
+    # not returning cached or stale data. Fresh store has no customers otherwise.
+
+  # Discriminates: does the agent call list_webhooks and surface the topic
+  # field rather than just the webhook ID or address?
+  - id: list_webhooks
+    prompt: >
+      Create a webhook in the Shopify store for "products/create" events
+      pointing to "https://httpbin.org/post". Then list all webhooks and confirm
+      the new one appears. Report all webhook topics and their destination URLs.
+    expected: topic
+    tags: [write, multi-step]
+    # Tests: create webhook + list webhooks. Topic field confirms the list
+    # endpoint was called and the webhook appears, not just the create response.
+
+  # Discriminates: does the agent apply the status filter and surface counts
+  # from two separate filtered calls, not just list all products?
+  - id: filter_products_by_status
+    prompt: >
+      Create one product with status "active" titled "Agent Active Product" and
+      one with status "draft" titled "Agent Draft Product". List only active
+      products and report the count. Then list only draft products and report
+      that count. Confirm each product appears in its respective filtered list.
+    expected: status
+    tags: [write, multi-step]
+    # Tests: create (x2) + list with status=active filter + list with status=draft.
+    # "status" in the results confirms the filter parameter was correctly applied.
+    # Discriminates servers that implement the status filter vs returning all products.
+
+  # Discriminates: does the agent call list_locations and surface location
+  # names rather than just IDs?
+  - id: list_inventory_locations
+    prompt: >
+      List all inventory locations configured in the Shopify store. Report
+      the name and ID of each location.
+    expected: name
+    tags: [read]
+
+  # ---------- WRITE ----------
+
+  # Discriminates: does the agent call create_product and surface the title
+  # from the created resource rather than just returning the ID?
+  - id: create_product
+    prompt: >
+      Create a new Shopify product with title "Agent Eval Test Product",
+      description "A test product created by the MCP agent harness.",
+      vendor "AgentCo", product type "Test", and status "draft".
+      Report the product ID.
+    expected: Agent Eval Test Product
+    tags: [write]
+
+  # Discriminates: does the agent create a webhook with the correct topic
+  # and surface "orders/create" from the created resource?
+  - id: create_webhook
+    prompt: >
+      Create a webhook in the Shopify store that sends notifications for
+      "orders/create" events to the URL "https://httpbin.org/post".
+      Report the webhook ID created.
+    expected: orders/create
+    tags: [write]
+
+  # Discriminates: does the agent construct the price rule with the correct
+  # title and surface it from the created resource?
+  - id: create_price_rule
+    prompt: >
+      Create a price rule with title "AGENTTEST20", value type "percentage",
+      value -20 (20% off), target type "line_item", allocation method
+      "across", customer selection "all", and start date today.
+      Report the price rule ID.
+    expected: AGENTTEST20
+    tags: [write]
+
+  # Discriminates: does the agent create a customer with the exact email
+  # provided and surface it from the created resource?
+  - id: create_customer
+    prompt: >
+      Create a new customer in the Shopify store with first name "Agent",
+      last name "Eval", and email "agent.eval.shopify@example-mcp.com".
+      Report the customer ID and email address.
+    expected: agent.eval.shopify@example-mcp.com
+    tags: [write]
+
+  # ---------- MULTI-STEP ----------
+
+  # Discriminates: does the agent chain create → update and confirm the
+  # revised title from the final retrieved resource?
+  - id: create_product_then_update
+    prompt: >
+      Create a Shopify product titled "Agent Update Test Product" with status
+      "draft". Update that product's title to "Agent Update Test Product -
+      Revised" and status to "active". Retrieve the product and confirm the
+      changes. Report the product ID and final title.
+    expected: Agent Update Test Product - Revised
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: does the agent chain price rule → discount code and
+  # surface the discount code string rather than just the price rule ID?
+  - id: price_rule_and_discount_code
+    prompt: >
+      Create a price rule titled "AGENTSUMMER10" with 10% off for all
+      customers. Then create a discount code "AGENTSUMMER10" for that price
+      rule. Report the price rule ID and the discount code string created.
+    expected: AGENTSUMMER10
+    tags: [write, multi-step, workflow]
+
+  # Discriminates: does the agent fetch full product detail after creating,
+  # and surface the variants array rather than just the create response?
+  - id: create_product_then_get_details
+    prompt: >
+      Create a Shopify product titled "Agent Detail Test Product" with status
+      "draft" and vendor "AgentCo". Retrieve the full details of that product
+      by ID, including all variants and images. Report the product title, number
+      of variants, and number of images.
+    expected: variants
+    tags: [write, multi-step, workflow]
+    # Tests: create product → GET /products/{id} with full detail.
+    # Discriminates agents that make a separate get call vs returning only the
+    # create response. A newly created product has 1 default variant and 0 images.
+
+  # Discriminates: does the agent construct a multi-line-item draft order and
+  # parse line_items from the retrieved resource, not just the create response?
+  - id: draft_order_with_line_items
+    prompt: >
+      Create a draft order with two line items: "Agent Widget A" at 12.00 USD
+      quantity 1, and "Agent Widget B" at 8.50 USD quantity 3. Retrieve that
+      draft order by ID and report the number of line items, the title and
+      quantity of each, and the total price.
+    expected: line_items
+    tags: [write, multi-step, workflow]
+    # Tests: POST /draft_orders with multiple line_items → GET /draft_orders/{id}.
+    # "line_items" array must show both items with correct quantities.
+    # Discriminates servers that correctly construct and parse the line_items array.
+
+  # ---------- HARDER ----------
+
+  # Discriminates: must call the product variants endpoint separately and thread
+  # the product ID into the variant create call, then surface variant count
+  - id: create_product_with_variant
+    prompt: >
+      Create a Shopify product titled "Agent Variant Test Product" with status
+      "draft". Add a second variant to it with option "Large" and price 19.99 USD.
+      Retrieve the product and report how many variants it has in total and the
+      price of each variant.
+    expected: variants
+    tags: [write, multi-step, harder]
+    # Tests: create product → POST /products/{id}/variants → GET /products/{id}.
+    # "variants" array in the retrieved product must show 2 entries.
+    # Discriminates servers that expose the product variants sub-resource endpoint.
+
+  # Discriminates: must thread inventory_item_id from a variant into the inventory
+  # levels endpoint — a 4-call chain across products, locations, and inventory
+  - id: inventory_level_workflow
+    prompt: >
+      Create a Shopify product titled "Agent Inventory Test Product" with status
+      "draft". Find the inventory_item_id of its default variant. List the
+      inventory locations in the store and get the first location's ID. Set the
+      inventory level for that item at that location to 25 units. Retrieve the
+      inventory level and confirm the available quantity. Report the
+      inventory_item_id and the confirmed available quantity.
+    expected: available
+    tags: [write, multi-step, harder]
+    # Tests: create product → extract variant.inventory_item_id → list locations
+    # → POST /inventory_levels/set → GET /inventory_levels.
+    # Requires threading two IDs (inventory_item_id, location_id) across 4+ calls
+    # and across different resource namespaces (products, inventory, locations).
+
+  # Discriminates: does the agent surface the API error string rather than
+  # returning an empty result or a generic failure message?
+  - id: error_handling_invalid_resource
+    prompt: >
+      Attempt to retrieve a product with ID 999999999999. Report the error
+      response received from the Shopify API, including any status code or
+      error message.
+    expected: Not Found
+    tags: [read, error-handling]

@@ -1,0 +1,118 @@
+{
+  "search_catalog_products": {
+    "doc": "docs/api_catalog_search.md",
+    "endpoint": "GET /commerce/catalog/v1/product_summary/search"
+  },
+  "get_product_by_id": {
+    "doc": "docs/api_catalog_get_product.md",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}"
+  },
+  "get_product_by_sku": {
+    "doc": "docs/api_catalog_search.md",
+    "endpoint": "GET /commerce/catalog/v1/product_summary/search"
+  },
+  "get_product_by_upc": {
+    "doc": "docs/api_catalog_search.md",
+    "endpoint": "GET /commerce/catalog/v1/product_summary/search"
+  },
+  "get_product_by_ean": {
+    "doc": "docs/api_catalog_search.md",
+    "endpoint": "GET /commerce/catalog/v1/product_summary/search"
+  },
+  "get_category_tree": {
+    "doc": "docs/api_taxonomy_category_tree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"
+  },
+  "get_category_suggestions": {
+    "doc": "docs/api_taxonomy_category_suggestions.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/get_category_suggestions"
+  },
+  "get_category_aspects": {
+    "doc": "docs/api_taxonomy_aspects.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category/{category_id}/aspects"
+  },
+  "get_item_aspects_for_category": {
+    "doc": "docs/api_taxonomy_item_aspects.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category/{category_id}/item_aspects"
+  },
+  "get_compatibility_properties": {
+    "doc": "docs/api_taxonomy_compatibility.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category/{category_id}/compatibility_properties"
+  },
+  "get_compatibility_property_values": {
+    "doc": "docs/api_taxonomy_compatibility_values.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category/{category_id}/compatibility_properties/{property_name}/values"
+  },
+  "get_user_profile": {
+    "doc": "docs/api_identity_user.md",
+    "endpoint": "GET /commerce/identity/v1/user"
+  },
+  "upload_image": {
+    "doc": "docs/api_media_upload_image.md",
+    "endpoint": "POST /commerce/media/v1/image"
+  },
+  "get_image_details": {
+    "doc": "docs/api_media_get_image.md",
+    "endpoint": "GET /commerce/media/v1/image/{image_id}"
+  },
+  "delete_image": {
+    "doc": "docs/api_media_delete_image.md",
+    "endpoint": "DELETE /commerce/media/v1/image/{image_id}"
+  },
+  "upload_video": {
+    "doc": "docs/api_media_upload_video.md",
+    "endpoint": "POST /commerce/media/v1/video"
+  },
+  "get_video_details": {
+    "doc": "docs/api_media_get_video.md",
+    "endpoint": "GET /commerce/media/v1/video/{video_id}"
+  },
+  "delete_video": {
+    "doc": "docs/api_media_delete_video.md",
+    "endpoint": "DELETE /commerce/media/v1/video/{video_id}"
+  },
+  "get_subscriptions": {
+    "doc": "docs/api_notification_subscriptions.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  },
+  "create_subscription": {
+    "doc": "docs/api_notification_create_subscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "get_subscription": {
+    "doc": "docs/api_notification_get_subscription.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "update_subscription": {
+    "doc": "docs/api_notification_update_subscription.md",
+    "endpoint": "PUT /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "delete_subscription": {
+    "doc": "docs/api_notification_delete_subscription.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "get_subscription_events": {
+    "doc": "docs/api_notification_events.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscription_id}/event"
+  },
+  "get_event_details": {
+    "doc": "docs/api_notification_event_details.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscription_id}/event/{event_id}"
+  },
+  "search_charities": {
+    "doc": "docs/api_charity_search.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org"
+  },
+  "get_charity_by_id": {
+    "doc": "docs/api_charity_get.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org/{charity_id}"
+  },
+  "translate_text": {
+    "doc": "docs/api_translation_text.md",
+    "endpoint": "POST /commerce/translation/v1/translate"
+  },
+  "translate_listing": {
+    "doc": "docs/api_translation_listing.md",
+    "endpoint": "POST /commerce/translation/v1/translate_listing"
+  }
+}

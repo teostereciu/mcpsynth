@@ -1,0 +1,81 @@
+# function_executed
+
+*Source: https://docs.slack.dev/reference/events/function_executed*
+
+---
+
+## Facts
+
+**Required Scopes**
+
+No scopes required!
+
+**Compatible APIs**
+
+[`Events`](/apis/events-api)
+
+## Usage info​
+
+This event notifies you when a [custom function](/workflows/workflow-steps#listener) is executed as a step in a workflow.
+
+This example includes both the [event wrapper](/apis/events-api/#callback-field) and the [event structure](/apis/events-api/#event-type-structure) for the `function_executed` event.
+
+
+    {
+        "token": "XXYYZZ",
+        "team_id": "T123ABC456",
+        "api_app_id": "A123ABC456",
+        "event": {
+            "type": "function_executed",
+            "function": {
+                "id": "Fn123456789O",
+                "callback_id": "sample_function",
+                "title": "Sample function",
+                "description": "Runs sample function",
+                "type": "app",
+                "input_parameters": [
+                    {
+                        "type": "slack#/reference/objects/user-object_id",
+                        "name": "user_id",
+                        "description": "Message recipient",
+                        "title": "User",
+                        "is_required": true
+                    }
+                ],
+                "output_parameters": [
+                    {
+                        "type": "slack#/reference/objects/user-object_id",
+                        "name": "user_id",
+                        "description": "User that completed the function",
+                        "title": "Greeting",
+                        "is_required": true
+                    }
+                ],
+                "app_id": "AP123456789",
+                "date_created": 1694727597,
+                "date_updated": 1698947481,
+                "date_deleted": 0
+            },
+            "inputs": {
+                "user_id": "USER12345678"
+            },
+            "function_execution_id": "Fx1234567O9L",
+            "workflow_execution_id": "WxABC123DEF0",
+            "event_ts": "1698958075.998738",
+            "bot_access_token": "abcd-1325532282098-1322446258629-6123648410839-527a1cab3979cad288c9e20330d212cf"
+        },
+        "type": "event_callback",
+        "authorizations": [
+            {
+                "team_id": "T123ABC456",
+                "user_id": "U123ABC456",
+                "is_bot": false,
+                "is_enterprise_install": false,
+            }
+        ],
+        "event_id": "Ev123ABC456",
+        "event_time": 123456789
+    }
+
+
+The `function_executed` event is an event generated in the context of a Slack workflow run. To receive this event, your app must have a function which is used as a step in a workflow. When the workflow is triggered and the steps of the workflow begin to execute, an event will be dispatched for any function which belongs to your app.

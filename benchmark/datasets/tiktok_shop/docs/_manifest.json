@@ -1,0 +1,2473 @@
+{
+  "source": "TikTok Shop Partner API Documentation (Scraped)",
+  "scraped_from": "https://partner.tiktokshop.com/docv2/page/get-authorized-category-assets-202405",
+  "scrape_date": "2026-04-08T16:59:13.020290",
+  "total_pages": 493,
+  "files": [
+    {
+      "filename": "api_get-authorized-category-assets-202405.md",
+      "title": "Get Authorized Category Assets",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-authorized-category-assets-202405"
+    },
+    {
+      "filename": "api_get-authorized-shops-202309.md",
+      "title": "Get Authorized Shops",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-authorized-shops-202309"
+    },
+    {
+      "filename": "api_get-shop-webhooks-202309.md",
+      "title": "Get Shop Webhooks",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-webhooks-202309"
+    },
+    {
+      "filename": "api_update-shop-webhook-202309.md",
+      "title": "Update Shop Webhook",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-shop-webhook-202309"
+    },
+    {
+      "filename": "api_delete-shop-webhook-202309.md",
+      "title": "Delete Shop Webhook",
+      "url": "https://partner.tiktokshop.com/docv2/page/delete-shop-webhook-202309"
+    },
+    {
+      "filename": "api_seller-api-overview.md",
+      "title": "Seller API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-api-overview"
+    },
+    {
+      "filename": "api_get-active-shops-202309.md",
+      "title": "Get Active Shops",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-active-shops-202309"
+    },
+    {
+      "filename": "api_get-seller-permissions-202309.md",
+      "title": "Get Seller Permissions",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-seller-permissions-202309"
+    },
+    {
+      "filename": "api_get-shop-group-202601.md",
+      "title": "Get Shop Group",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-group-202601"
+    },
+    {
+      "filename": "api_products-api-overview.md",
+      "title": "Products API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/products-api-overview"
+    },
+    {
+      "filename": "api_listing-quality-diagnosis.md",
+      "title": "Listing quality diagnosis",
+      "url": "https://partner.tiktokshop.com/docv2/page/listing-quality-diagnosis"
+    },
+    {
+      "filename": "api_product-pricing.md",
+      "title": "Product pricing",
+      "url": "https://partner.tiktokshop.com/docv2/page/product-pricing"
+    },
+    {
+      "filename": "api_common-mistakes.md",
+      "title": "Common mistakes",
+      "url": "https://partner.tiktokshop.com/docv2/page/common-mistakes"
+    },
+    {
+      "filename": "api_check-listing-prerequisites-202312.md",
+      "title": "Check Listing Prerequisites",
+      "url": "https://partner.tiktokshop.com/docv2/page/check-listing-prerequisites-202312"
+    },
+    {
+      "filename": "api_get-categories-202309.md",
+      "title": "Get Categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-categories-202309"
+    },
+    {
+      "filename": "api_recommend-category-202309.md",
+      "title": "Recommend Category",
+      "url": "https://partner.tiktokshop.com/docv2/page/recommend-category-202309"
+    },
+    {
+      "filename": "api_get-category-rules-202309.md",
+      "title": "Get Category Rules",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-category-rules-202309"
+    },
+    {
+      "filename": "api_get-attributes-202309.md",
+      "title": "Get Attributes",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-attributes-202309"
+    },
+    {
+      "filename": "api_get-brands-202309.md",
+      "title": "Get Brands",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-brands-202309"
+    },
+    {
+      "filename": "api_create-custom-brands-202309.md",
+      "title": "Create Custom Brands",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-custom-brands-202309"
+    },
+    {
+      "filename": "api_check-product-listing-202309.md",
+      "title": "Check Product Listing",
+      "url": "https://partner.tiktokshop.com/docv2/page/check-product-listing-202309"
+    },
+    {
+      "filename": "api_upload-product-image-202309.md",
+      "title": "Upload Product Image",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-product-image-202309"
+    },
+    {
+      "filename": "api_upload-product-file-202309.md",
+      "title": "Upload Product File",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-product-file-202309"
+    },
+    {
+      "filename": "api_search-size-charts-202407.md",
+      "title": "Search Size Charts",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-size-charts-202407"
+    },
+    {
+      "filename": "api_create-product-202309.md",
+      "title": "Create Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-product-202309"
+    },
+    {
+      "filename": "api_activate-product-202309.md",
+      "title": "Activate Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/activate-product-202309"
+    },
+    {
+      "filename": "api_deactivate-products-202309.md",
+      "title": "Deactivate Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/deactivate-products-202309"
+    },
+    {
+      "filename": "api_delete-products-202309.md",
+      "title": "Delete Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/delete-products-202309"
+    },
+    {
+      "filename": "api_recover-products-202309.md",
+      "title": "Recover Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/recover-products-202309"
+    },
+    {
+      "filename": "api_get-product-202309.md",
+      "title": "Get Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-product-202309"
+    },
+    {
+      "filename": "api_search-products-202502.md",
+      "title": "Search Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-products-202502"
+    },
+    {
+      "filename": "api_update-price-202309.md",
+      "title": "Update Price",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-price-202309"
+    },
+    {
+      "filename": "api_update-inventory-202309.md",
+      "title": "Update Inventory",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-inventory-202309"
+    },
+    {
+      "filename": "api_inventory-search-202309.md",
+      "title": "Inventory Search",
+      "url": "https://partner.tiktokshop.com/docv2/page/inventory-search-202309"
+    },
+    {
+      "filename": "api_diagnose-and-optimize-product-202411.md",
+      "title": "Diagnose and Optimize Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/diagnose-and-optimize-product-202411"
+    },
+    {
+      "filename": "api_product-information-issue-diagnosis-202405.md",
+      "title": "Product Information Issue Diagnosis",
+      "url": "https://partner.tiktokshop.com/docv2/page/product-information-issue-diagnosis-202405"
+    },
+    {
+      "filename": "api_get-products-seo-words-202405.md",
+      "title": "Get Products SEO Words",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-products-seo-words-202405"
+    },
+    {
+      "filename": "api_get-recommended-product-title-and-description-202405.md",
+      "title": "Get Recommended Product Title And Description",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-recommended-product-title-and-description-202405"
+    },
+    {
+      "filename": "api_optimized-images-202404.md",
+      "title": "Optimized Images",
+      "url": "https://partner.tiktokshop.com/docv2/page/optimized-images-202404"
+    },
+    {
+      "filename": "api_create-image-translation-tasks-202505.md",
+      "title": "Create Image Translation Tasks",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-image-translation-tasks-202505"
+    },
+    {
+      "filename": "api_get-image-translation-tasks-202506.md",
+      "title": "Get Image Translation Tasks",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-image-translation-tasks-202506"
+    },
+    {
+      "filename": "api_get-global-categories-202309.md",
+      "title": "Get Global Categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-global-categories-202309"
+    },
+    {
+      "filename": "api_recommend-global-categories-202309.md",
+      "title": "Recommend Global Categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/recommend-global-categories-202309"
+    },
+    {
+      "filename": "api_get-global-category-rules-202309.md",
+      "title": "Get Global Category Rules",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-global-category-rules-202309"
+    },
+    {
+      "filename": "api_get-global-attributes-202309.md",
+      "title": "Get Global Attributes",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-global-attributes-202309"
+    },
+    {
+      "filename": "api_create-global-product-202309.md",
+      "title": "Create Global Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-global-product-202309"
+    },
+    {
+      "filename": "api_publish-global-product-202309.md",
+      "title": "Publish Global Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/publish-global-product-202309"
+    },
+    {
+      "filename": "api_edit-global-product-202309.md",
+      "title": "Edit Global Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/edit-global-product-202309"
+    },
+    {
+      "filename": "api_delete-global-products-202309.md",
+      "title": "Delete Global Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/delete-global-products-202309"
+    },
+    {
+      "filename": "api_get-global-product-202309.md",
+      "title": "Get Global Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-global-product-202309"
+    },
+    {
+      "filename": "api_search-global-products-202312.md",
+      "title": "Search Global Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-global-products-202312"
+    },
+    {
+      "filename": "api_update-global-inventory-202309.md",
+      "title": "Update Global Inventory",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-global-inventory-202309"
+    },
+    {
+      "filename": "api_create-manufacturer-202409.md",
+      "title": "Create Manufacturer",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-manufacturer-202409"
+    },
+    {
+      "filename": "api_partial-edit-manufacturer-202409.md",
+      "title": "Partial Edit Manufacturer",
+      "url": "https://partner.tiktokshop.com/docv2/page/partial-edit-manufacturer-202409"
+    },
+    {
+      "filename": "api_search-manufacturers-202501.md",
+      "title": "Search Manufacturers",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-manufacturers-202501"
+    },
+    {
+      "filename": "api_create-responsible-person-202409.md",
+      "title": "Create Responsible Person",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-responsible-person-202409"
+    },
+    {
+      "filename": "api_partial-edit-responsible-person-202409.md",
+      "title": "Partial Edit Responsible Person",
+      "url": "https://partner.tiktokshop.com/docv2/page/partial-edit-responsible-person-202409"
+    },
+    {
+      "filename": "api_search-responsible-persons-202501.md",
+      "title": "Search Responsible Persons",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-responsible-persons-202501"
+    },
+    {
+      "filename": "api_create-category-upgrade-task-202407.md",
+      "title": "Create Category Upgrade Task",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-category-upgrade-task-202407"
+    },
+    {
+      "filename": "api_get-global-listing-rules-202507.md",
+      "title": "Get Global Listing Rules",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-global-listing-rules-202507"
+    },
+    {
+      "filename": "api_replicate-product-202507.md",
+      "title": "Replicate Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/replicate-product-202507"
+    },
+    {
+      "filename": "api_get-global-replicated-products-202507.md",
+      "title": "Get Global Replicated Products ",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-global-replicated-products-202507"
+    },
+    {
+      "filename": "api_edit-product-202509.md",
+      "title": "Edit Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/edit-product-202509"
+    },
+    {
+      "filename": "api_partial-edit-product-202509.md",
+      "title": "Partial Edit Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/partial-edit-product-202509"
+    },
+    {
+      "filename": "api_partial-edit-global-product-202509.md",
+      "title": "Partial Edit Global Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/partial-edit-global-product-202509"
+    },
+    {
+      "filename": "api_get-recommended-product-package-202602.md",
+      "title": "Get Recommended Product Package",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-recommended-product-package-202602"
+    },
+    {
+      "filename": "api_promotion-api-overview.md",
+      "title": "Promotion API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/promotion-api-overview"
+    },
+    {
+      "filename": "api_shipping-discount-supported-areas.md",
+      "title": "Shipping discount supported areas",
+      "url": "https://partner.tiktokshop.com/docv2/page/shipping-discount-supported-areas"
+    },
+    {
+      "filename": "api_create-activity-202309.md",
+      "title": "Create Activity",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-activity-202309"
+    },
+    {
+      "filename": "api_update-activity-202309.md",
+      "title": "Update Activity",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-activity-202309"
+    },
+    {
+      "filename": "api_deactivate-activity-202309.md",
+      "title": "Deactivate Activity",
+      "url": "https://partner.tiktokshop.com/docv2/page/deactivate-activity-202309"
+    },
+    {
+      "filename": "api_get-activity-202309.md",
+      "title": "Get Activity",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-activity-202309"
+    },
+    {
+      "filename": "api_search-activities-202309.md",
+      "title": "Search Activities",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-activities-202309"
+    },
+    {
+      "filename": "api_update-activity-product-202309.md",
+      "title": "Update Activity Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-activity-product-202309"
+    },
+    {
+      "filename": "api_remove-activity-product-202309.md",
+      "title": "Remove Activity Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/remove-activity-product-202309"
+    },
+    {
+      "filename": "api_get-coupon-202406.md",
+      "title": "Get Coupon ",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-coupon-202406"
+    },
+    {
+      "filename": "api_search-coupons-202406.md",
+      "title": "Search Coupons",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-coupons-202406"
+    },
+    {
+      "filename": "api_order-api-overview.md",
+      "title": "Order API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/order-api-overview"
+    },
+    {
+      "filename": "api_get-order-list-202309.md",
+      "title": "Get Order List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-order-list-202309"
+    },
+    {
+      "filename": "api_get-price-detail-202407.md",
+      "title": "Get Price Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-price-detail-202407"
+    },
+    {
+      "filename": "api_add-external-order-references-202406.md",
+      "title": "Add External Order References",
+      "url": "https://partner.tiktokshop.com/docv2/page/add-external-order-references-202406"
+    },
+    {
+      "filename": "api_get-external-order-references-202406.md",
+      "title": "Get External Order References",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-external-order-references-202406"
+    },
+    {
+      "filename": "api_search-order-by-external-order-reference-202406.md",
+      "title": "Search Order By External Order Reference",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-order-by-external-order-reference-202406"
+    },
+    {
+      "filename": "api_get-order-detail-202507.md",
+      "title": "Get Order Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-order-detail-202507"
+    },
+    {
+      "filename": "api_update-the-blind-box-opening-results-202511.md",
+      "title": "Update The Blind Box Opening Results",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-the-blind-box-opening-results-202511"
+    },
+    {
+      "filename": "api_fulfillment-api-overview.md",
+      "title": "Fulfillment API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/fulfillment-api-overview"
+    },
+    {
+      "filename": "api_i83mvdfg.md",
+      "title": "UK & EU: Purchase shipping labels from TikTok",
+      "url": "https://partner.tiktokshop.com/docv2/page/i83mvdfg"
+    },
+    {
+      "filename": "api_get-order-split-attributes-202309.md",
+      "title": "Get Order Split Attributes",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-order-split-attributes-202309"
+    },
+    {
+      "filename": "api_split-orders-202309.md",
+      "title": "Split Orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/split-orders-202309"
+    },
+    {
+      "filename": "api_get-eligible-shipping-service-202309.md",
+      "title": "Get Eligible Shipping Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-eligible-shipping-service-202309"
+    },
+    {
+      "filename": "api_create-first-mile-bundle-202407.md",
+      "title": "Create First Mile Bundle",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-first-mile-bundle-202407"
+    },
+    {
+      "filename": "api_search-package-202309.md",
+      "title": "Search Package",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-package-202309"
+    },
+    {
+      "filename": "api_search-combinable-packages-202309.md",
+      "title": "Search Combinable Packages",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-combinable-packages-202309"
+    },
+    {
+      "filename": "api_combine-package-202309.md",
+      "title": "Combine Package",
+      "url": "https://partner.tiktokshop.com/docv2/page/combine-package-202309"
+    },
+    {
+      "filename": "api_uncombine-packages-202309.md",
+      "title": "Uncombine Packages",
+      "url": "https://partner.tiktokshop.com/docv2/page/uncombine-packages-202309"
+    },
+    {
+      "filename": "api_get-package-handover-time-slots-202309.md",
+      "title": "Get Package Handover Time Slots",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-package-handover-time-slots-202309"
+    },
+    {
+      "filename": "api_ship-package-202309.md",
+      "title": "Ship Package",
+      "url": "https://partner.tiktokshop.com/docv2/page/ship-package-202309"
+    },
+    {
+      "filename": "api_batch-ship-packages-202309.md",
+      "title": "Batch Ship Packages",
+      "url": "https://partner.tiktokshop.com/docv2/page/batch-ship-packages-202309"
+    },
+    {
+      "filename": "api_mark-package-as-shipped-202309.md",
+      "title": "Mark Package As Shipped",
+      "url": "https://partner.tiktokshop.com/docv2/page/mark-package-as-shipped-202309"
+    },
+    {
+      "filename": "api_get-package-shipping-document-202309.md",
+      "title": "Get Package Shipping Document",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-package-shipping-document-202309"
+    },
+    {
+      "filename": "api_get-package-detail-202309.md",
+      "title": "Get Package Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-package-detail-202309"
+    },
+    {
+      "filename": "api_get-tracking-202309.md",
+      "title": "Get Tracking",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-tracking-202309"
+    },
+    {
+      "filename": "api_update-shipping-info-202309.md",
+      "title": "Update Shipping Info",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-shipping-info-202309"
+    },
+    {
+      "filename": "api_update-package-shipping-info-202309.md",
+      "title": "Update Package Shipping Info",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-package-shipping-info-202309"
+    },
+    {
+      "filename": "api_fulfillment-upload-delivery-file-202309.md",
+      "title": "Fulfillment Upload Delivery File",
+      "url": "https://partner.tiktokshop.com/docv2/page/fulfillment-upload-delivery-file-202309"
+    },
+    {
+      "filename": "api_fulfillment-upload-delivery-image-202309.md",
+      "title": "Fulfillment Upload Delivery Image",
+      "url": "https://partner.tiktokshop.com/docv2/page/fulfillment-upload-delivery-image-202309"
+    },
+    {
+      "filename": "api_update-package-delivery-status-202309.md",
+      "title": "Update Package Delivery Status",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-package-delivery-status-202309"
+    },
+    {
+      "filename": "api_upload-invoice-202502.md",
+      "title": "Upload Invoice",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-invoice-202502"
+    },
+    {
+      "filename": "api_tts-tracking-validation-202508.md",
+      "title": "TTS Tracking Validation ",
+      "url": "https://partner.tiktokshop.com/docv2/page/tts-tracking-validation-202508"
+    },
+    {
+      "filename": "api_create-first-mile-bundle-v2-202510.md",
+      "title": "Create First Mile Bundle(V2)",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-first-mile-bundle-v2-202510"
+    },
+    {
+      "filename": "api_create-packages-202512.md",
+      "title": "Create Packages",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-packages-202512"
+    },
+    {
+      "filename": "api_redeem-info-callback-202601.md",
+      "title": "Redeem Info Callback",
+      "url": "https://partner.tiktokshop.com/docv2/page/redeem-info-callback-202601"
+    },
+    {
+      "filename": "api_get-fbt-merchant-onboarded-regions-202409.md",
+      "title": "Get FBT Merchant Onboarded Regions",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-fbt-merchant-onboarded-regions-202409"
+    },
+    {
+      "filename": "api_get-fbt-warehouse-list-202408.md",
+      "title": "Get FBT Warehouse List ",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-fbt-warehouse-list-202408"
+    },
+    {
+      "filename": "api_search-fbt-inventory-202408.md",
+      "title": "Search FBT Inventory",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-fbt-inventory-202408"
+    },
+    {
+      "filename": "api_search-fbt-inventory-record-202410.md",
+      "title": "Search FBT Inventory Record",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-fbt-inventory-record-202410"
+    },
+    {
+      "filename": "api_search-goods-info-202409.md",
+      "title": "Search Goods Info",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-goods-info-202409"
+    },
+    {
+      "filename": "api_get-fbf-mcf-order-status-202601.md",
+      "title": "Get FBF MCF Order Status",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-fbf-mcf-order-status-202601"
+    },
+    {
+      "filename": "api_cancel-fbt-mcf-order-202601.md",
+      "title": "Cancel FBT MCF Order",
+      "url": "https://partner.tiktokshop.com/docv2/page/cancel-fbt-mcf-order-202601"
+    },
+    {
+      "filename": "api_create-fbt-mcf-order-202601.md",
+      "title": "Create FBT MCF Order",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-fbt-mcf-order-202601"
+    },
+    {
+      "filename": "api_get-fbt-merchant-mcf-status-202601.md",
+      "title": "Get FBT Merchant MCF Status",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-fbt-merchant-mcf-status-202601"
+    },
+    {
+      "filename": "api_create-update-inbound-plan-202602.md",
+      "title": "Create Update Inbound Plan",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-update-inbound-plan-202602"
+    },
+    {
+      "filename": "api_list-available-inbound-method-202602.md",
+      "title": "List Available Inbound Method",
+      "url": "https://partner.tiktokshop.com/docv2/page/list-available-inbound-method-202602"
+    },
+    {
+      "filename": "api_get-inbound-method-detail-202602.md",
+      "title": "Get Inbound Method Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-inbound-method-detail-202602"
+    },
+    {
+      "filename": "api_print-label-202602.md",
+      "title": "Print Label",
+      "url": "https://partner.tiktokshop.com/docv2/page/print-label-202602"
+    },
+    {
+      "filename": "api_update-tracking-202602.md",
+      "title": "Update Tracking",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-tracking-202602"
+    },
+    {
+      "filename": "api_cancel-inbound-order-202602.md",
+      "title": "Cancel Inbound Order",
+      "url": "https://partner.tiktokshop.com/docv2/page/cancel-inbound-order-202602"
+    },
+    {
+      "filename": "api_get-inbound-order-202602.md",
+      "title": "Get Inbound Order",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-inbound-order-202602"
+    },
+    {
+      "filename": "api_confirm-inbound-method-202603.md",
+      "title": "Confirm Inbound Method",
+      "url": "https://partner.tiktokshop.com/docv2/page/confirm-inbound-method-202603"
+    },
+    {
+      "filename": "api_ship-inbound-order-202603.md",
+      "title": "Ship Inbound Order",
+      "url": "https://partner.tiktokshop.com/docv2/page/ship-inbound-order-202603"
+    },
+    {
+      "filename": "api_logistic-api-overview.md",
+      "title": "Logistic API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/logistic-api-overview"
+    },
+    {
+      "filename": "api_get-warehouse-list-202309.md",
+      "title": "Get Warehouse List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-warehouse-list-202309"
+    },
+    {
+      "filename": "api_get-global-seller-warehouse-202309.md",
+      "title": "Get Global Seller Warehouse",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-global-seller-warehouse-202309"
+    },
+    {
+      "filename": "api_get-warehouse-delivery-options-202309.md",
+      "title": "Get Warehouse Delivery Options",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-warehouse-delivery-options-202309"
+    },
+    {
+      "filename": "api_get-shipping-providers-202309.md",
+      "title": "Get Shipping Providers",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shipping-providers-202309"
+    },
+    {
+      "filename": "api_get-available-shipping-template-202510.md",
+      "title": "Get Available Shipping Template",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-available-shipping-template-202510"
+    },
+    {
+      "filename": "api_return-refund-and-cancel-api-overview.md",
+      "title": "Return, refund, and cancel API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/return-refund-and-cancel-api-overview"
+    },
+    {
+      "filename": "api_return-reasons.md",
+      "title": "Return reasons",
+      "url": "https://partner.tiktokshop.com/docv2/page/return-reasons"
+    },
+    {
+      "filename": "api_refund-reasons.md",
+      "title": "Refund reasons",
+      "url": "https://partner.tiktokshop.com/docv2/page/refund-reasons"
+    },
+    {
+      "filename": "api_cancel-reasons.md",
+      "title": "Cancel reasons",
+      "url": "https://partner.tiktokshop.com/docv2/page/cancel-reasons"
+    },
+    {
+      "filename": "api_get-reject-reasons-202309.md",
+      "title": "Get Reject Reasons",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-reject-reasons-202309"
+    },
+    {
+      "filename": "api_approve-return-202309.md",
+      "title": "Approve Return",
+      "url": "https://partner.tiktokshop.com/docv2/page/approve-return-202309"
+    },
+    {
+      "filename": "api_reject-return-202309.md",
+      "title": "Reject Return",
+      "url": "https://partner.tiktokshop.com/docv2/page/reject-return-202309"
+    },
+    {
+      "filename": "api_get-return-records-202309.md",
+      "title": "Get Return Records",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-return-records-202309"
+    },
+    {
+      "filename": "api_approve-cancellation-202309.md",
+      "title": "Approve Cancellation",
+      "url": "https://partner.tiktokshop.com/docv2/page/approve-cancellation-202309"
+    },
+    {
+      "filename": "api_reject-cancellation-202309.md",
+      "title": "Reject Cancellation",
+      "url": "https://partner.tiktokshop.com/docv2/page/reject-cancellation-202309"
+    },
+    {
+      "filename": "api_get-aftersale-eligibility-202512.md",
+      "title": "Get Aftersale Eligibility",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-aftersale-eligibility-202512"
+    },
+    {
+      "filename": "api_get-decision-eligibility-202601.md",
+      "title": "Get Decision Eligibility",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-decision-eligibility-202601"
+    },
+    {
+      "filename": "api_calculate-refund-202602.md",
+      "title": "Calculate Refund",
+      "url": "https://partner.tiktokshop.com/docv2/page/calculate-refund-202602"
+    },
+    {
+      "filename": "api_cancel-order-202602.md",
+      "title": "Cancel Order",
+      "url": "https://partner.tiktokshop.com/docv2/page/cancel-order-202602"
+    },
+    {
+      "filename": "api_create-return-202602.md",
+      "title": "Create Return",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-return-202602"
+    },
+    {
+      "filename": "api_search-cancellations-202602.md",
+      "title": "Search Cancellations",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-cancellations-202602"
+    },
+    {
+      "filename": "api_search-returns-202602.md",
+      "title": "Search Returns",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-returns-202602"
+    },
+    {
+      "filename": "api_get-aftersale-eligibility-202602.md",
+      "title": "Get Aftersale Eligibility",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-aftersale-eligibility-202602"
+    },
+    {
+      "filename": "api_finance-api-overview.md",
+      "title": "Finance API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/finance-api-overview"
+    },
+    {
+      "filename": "api_get-statements-202309.md",
+      "title": "Get Statements",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-statements-202309"
+    },
+    {
+      "filename": "api_get-payments-202309.md",
+      "title": "Get Payments",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-payments-202309"
+    },
+    {
+      "filename": "api_get-withdrawals-202309.md",
+      "title": "Get Withdrawals",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-withdrawals-202309"
+    },
+    {
+      "filename": "api_get-transactions-by-order-202501.md",
+      "title": "Get Transactions by Order",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-transactions-by-order-202501"
+    },
+    {
+      "filename": "api_get-transactions-by-statement-202501.md",
+      "title": "Get Transactions by Statement",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-transactions-by-statement-202501"
+    },
+    {
+      "filename": "api_get-unsettled-transactions-202507.md",
+      "title": "Get Unsettled Transactions",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-unsettled-transactions-202507"
+    },
+    {
+      "filename": "api_get-video-performances-202403.md",
+      "title": "Get Video Performances",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-video-performances-202403"
+    },
+    {
+      "filename": "api_get-shop-performance-per-hour-202510.md",
+      "title": "Get Shop Performance Per Hour",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-performance-per-hour-202510"
+    },
+    {
+      "filename": "api_get-shop-live-performance-per-minutes-202510.md",
+      "title": "Get Shop LIVE Performance Per Minutes",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-per-minutes-202510"
+    },
+    {
+      "filename": "api_get-shop-live-products-performance-list-202512.md",
+      "title": "Get Shop LIVE Products Performance List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-live-products-performance-list-202512"
+    },
+    {
+      "filename": "api_get-shop-performance-202509.md",
+      "title": "Get Shop Performance",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-performance-202509"
+    },
+    {
+      "filename": "api_get-shop-product-performance-detail-202509.md",
+      "title": "Get Shop Product Performance Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-product-performance-detail-202509"
+    },
+    {
+      "filename": "api_get-shop-sku-performance-202509.md",
+      "title": "Get Shop SKU Performance",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-sku-performance-202509"
+    },
+    {
+      "filename": "api_get-shop-sku-performance-list-202509.md",
+      "title": "Get Shop SKU Performance List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-sku-performance-list-202509"
+    },
+    {
+      "filename": "api_get-shop-video-performance-list-202509.md",
+      "title": "Get Shop Video Performance List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-list-202509"
+    },
+    {
+      "filename": "api_get-shop-video-performance-overview-202509.md",
+      "title": "Get Shop Video Performance Overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-overview-202509"
+    },
+    {
+      "filename": "api_get-shop-video-performance-details-202509.md",
+      "title": "Get Shop Video Performance Details",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-video-performance-details-202509"
+    },
+    {
+      "filename": "api_get-shop-video-product-performance-list-202509.md",
+      "title": "Get Shop Video Product Performance List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-video-product-performance-list-202509"
+    },
+    {
+      "filename": "api_get-shop-live-performance-list-202509.md",
+      "title": "Get Shop LIVE Performance List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-list-202509"
+    },
+    {
+      "filename": "api_get-shop-live-performance-overview-202509.md",
+      "title": "Get Shop LIVE Performance Overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-live-performance-overview-202509"
+    },
+    {
+      "filename": "api_get-shop-product-performance-list-202509.md",
+      "title": "Get Shop Product Performance List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-product-performance-list-202509"
+    },
+    {
+      "filename": "api_get-view-trend-performances-202502.md",
+      "title": "Get View Trend Performances",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-view-trend-performances-202502"
+    },
+    {
+      "filename": "api_get-traffic-performances-202502.md",
+      "title": "Get Traffic Performances",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-traffic-performances-202502"
+    },
+    {
+      "filename": "api_get-user-portraits-202502.md",
+      "title": "Get User Portraits",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-user-portraits-202502"
+    },
+    {
+      "filename": "api_get-product-stats-202502.md",
+      "title": "Get Product Stats",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-product-stats-202502"
+    },
+    {
+      "filename": "api_get-interactive-trend-performances-202502.md",
+      "title": "Get Interactive Trend Performances",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-interactive-trend-performances-202502"
+    },
+    {
+      "filename": "api_get-gmv-trend-performances-202502.md",
+      "title": "Get GMV Trend Performances",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-gmv-trend-performances-202502"
+    },
+    {
+      "filename": "api_get-live-core-stats-202502.md",
+      "title": "Get Live Core Stats",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-live-core-stats-202502"
+    },
+    {
+      "filename": "api_customer-service-api-overview.md",
+      "title": "Customer Service API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/customer-service-api-overview"
+    },
+    {
+      "filename": "api_6y23rc6a.md",
+      "title": "Message Types",
+      "url": "https://partner.tiktokshop.com/docv2/page/6y23rc6a"
+    },
+    {
+      "filename": "api_gx13i64p.md",
+      "title": "Post-sales Solutions for Customer Services",
+      "url": "https://partner.tiktokshop.com/docv2/page/gx13i64p"
+    },
+    {
+      "filename": "api_create-conversation-202309.md",
+      "title": "Create Conversation",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-conversation-202309"
+    },
+    {
+      "filename": "api_get-conversations-202309.md",
+      "title": "Get Conversations",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-conversations-202309"
+    },
+    {
+      "filename": "api_get-conversation-messages-202309.md",
+      "title": "Get Conversation Messages",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-conversation-messages-202309"
+    },
+    {
+      "filename": "api_upload-buyer-messages-image-202309.md",
+      "title": "Upload Buyer Messages Image",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-buyer-messages-image-202309"
+    },
+    {
+      "filename": "api_send-message-202309.md",
+      "title": "Send Message",
+      "url": "https://partner.tiktokshop.com/docv2/page/send-message-202309"
+    },
+    {
+      "filename": "api_read-message-202309.md",
+      "title": "Read Message",
+      "url": "https://partner.tiktokshop.com/docv2/page/read-message-202309"
+    },
+    {
+      "filename": "api_get-agent-settings-202309.md",
+      "title": "Get Agent Settings",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-agent-settings-202309"
+    },
+    {
+      "filename": "api_update-agent-settings-202309.md",
+      "title": "Update Agent Settings ",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-agent-settings-202309"
+    },
+    {
+      "filename": "api_get-customer-service-performance-202407.md",
+      "title": "Get Customer Service Performance",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-customer-service-performance-202407"
+    },
+    {
+      "filename": "api_get-conversation-202601.md",
+      "title": "Get Conversation",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-conversation-202601"
+    },
+    {
+      "filename": "api_search-sessions-202602.md",
+      "title": "Search Sessions",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-sessions-202602"
+    },
+    {
+      "filename": "api_customer-engagement-api-overview.md",
+      "title": "Customer engagement API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/customer-engagement-api-overview"
+    },
+    {
+      "filename": "api_get-message-templates-202412.md",
+      "title": "Get Message Templates",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-message-templates-202412"
+    },
+    {
+      "filename": "api_create-engagement-task-202412.md",
+      "title": "Create Engagement Task",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-engagement-task-202412"
+    },
+    {
+      "filename": "api_send-engagement-message-202412.md",
+      "title": "Send Engagement Message",
+      "url": "https://partner.tiktokshop.com/docv2/page/send-engagement-message-202412"
+    },
+    {
+      "filename": "api_get-task-performances-202412.md",
+      "title": "Get Task Performances",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-task-performances-202412"
+    },
+    {
+      "filename": "api_create-custom-engagement-task-202502.md",
+      "title": "Create Custom Engagement Task",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-custom-engagement-task-202502"
+    },
+    {
+      "filename": "api_get-feature-permissions-202502.md",
+      "title": "Get Feature Permissions",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-feature-permissions-202502"
+    },
+    {
+      "filename": "api_product-review-removal-202602.md",
+      "title": "Product Review Removal",
+      "url": "https://partner.tiktokshop.com/docv2/page/product-review-removal-202602"
+    },
+    {
+      "filename": "api_affiliate-creator-api-overview.md",
+      "title": "Affiliate Creator API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/affiliate-creator-api-overview"
+    },
+    {
+      "filename": "api_get-creator-profile-202508.md",
+      "title": "Get Creator Profile",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-creator-profile-202508"
+    },
+    {
+      "filename": "api_get-showcase-products-202405.md",
+      "title": "Get Showcase Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-showcase-products-202405"
+    },
+    {
+      "filename": "api_add-showcase-products-202405.md",
+      "title": "Add Showcase Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/add-showcase-products-202405"
+    },
+    {
+      "filename": "api_remove-showcase-products-202409.md",
+      "title": "Remove Showcase Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/remove-showcase-products-202409"
+    },
+    {
+      "filename": "api_top-showcase-products-202409.md",
+      "title": "Top Showcase Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/top-showcase-products-202409"
+    },
+    {
+      "filename": "api_creator-search-open-collaboration-product-202405.md",
+      "title": "Creator Search Open Collaboration Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/creator-search-open-collaboration-product-202405"
+    },
+    {
+      "filename": "api_get-open-collaboration-product-list-by-product-ids-202509.md",
+      "title": "Get Open Collaboration Product List By Product Ids",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-open-collaboration-product-list-by-product-ids-202509"
+    },
+    {
+      "filename": "api_search-creator-target-collaborations-202405.md",
+      "title": "Search Creator Target Collaborations",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-creator-target-collaborations-202405"
+    },
+    {
+      "filename": "api_search-creator-sample-applications-202412.md",
+      "title": "Search Creator Sample Applications",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-creator-sample-applications-202412"
+    },
+    {
+      "filename": "api_get-creator-sample-application-detail-202412.md",
+      "title": "Get Creator Sample Application Detail ",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-creator-sample-application-detail-202412"
+    },
+    {
+      "filename": "api_creator-search-sample-application-fulfillments-202409.md",
+      "title": "Creator Search Sample Application Fulfillments",
+      "url": "https://partner.tiktokshop.com/docv2/page/creator-search-sample-application-fulfillments-202409"
+    },
+    {
+      "filename": "api_creator-generate-general-link-202505.md",
+      "title": "Creator Generate General Link",
+      "url": "https://partner.tiktokshop.com/docv2/page/creator-generate-general-link-202505"
+    },
+    {
+      "filename": "api_creator-generate-publisher-link-202504.md",
+      "title": "Creator Generate Publisher Link",
+      "url": "https://partner.tiktokshop.com/docv2/page/creator-generate-publisher-link-202504"
+    },
+    {
+      "filename": "api_creator-search-affiliate-trace-orders-202505.md",
+      "title": "Creator Search Affiliate Trace Orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/creator-search-affiliate-trace-orders-202505"
+    },
+    {
+      "filename": "api_search-creator-affiliate-orders-202410.md",
+      "title": "Search Creator Affiliate Orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-creator-affiliate-orders-202410"
+    },
+    {
+      "filename": "api_get-creator-applicable-sample-label-202412.md",
+      "title": "Get Creator Applicable Sample Label",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-creator-applicable-sample-label-202412"
+    },
+    {
+      "filename": "api_upload-shoppable-video-file-202505.md",
+      "title": "Upload Shoppable Video File",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-shoppable-video-file-202505"
+    },
+    {
+      "filename": "api_get-shop-products-202509.md",
+      "title": "Get Shop Products",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shop-products-202509"
+    },
+    {
+      "filename": "api_get-shoppable-video-status-202509.md",
+      "title": "Get Shoppable Video Status",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shoppable-video-status-202509"
+    },
+    {
+      "filename": "api_precheck-video-content-202511.md",
+      "title": "Precheck Video Content",
+      "url": "https://partner.tiktokshop.com/docv2/page/precheck-video-content-202511"
+    },
+    {
+      "filename": "api_get-shoppable-video-precheck-result-202601.md",
+      "title": "Get Shoppable Video Precheck Result ",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-shoppable-video-precheck-result-202601"
+    },
+    {
+      "filename": "api_post-shoppable-video-202603.md",
+      "title": "Post Shoppable Video",
+      "url": "https://partner.tiktokshop.com/docv2/page/post-shoppable-video-202603"
+    },
+    {
+      "filename": "api_affiliate-partner-api-overview.md",
+      "title": "Affiliate Partner API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/affiliate-partner-api-overview"
+    },
+    {
+      "filename": "api_create-affiliate-partner-campaign-202405.md",
+      "title": "Create Affiliate Partner Campaign",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-affiliate-partner-campaign-202405"
+    },
+    {
+      "filename": "api_edit-affiliate-partner-campaign-202405.md",
+      "title": "Edit Affiliate Partner Campaign",
+      "url": "https://partner.tiktokshop.com/docv2/page/edit-affiliate-partner-campaign-202405"
+    },
+    {
+      "filename": "api_publish-affiliate-partner-campaign-202405.md",
+      "title": "Publish Affiliate Partner Campaign",
+      "url": "https://partner.tiktokshop.com/docv2/page/publish-affiliate-partner-campaign-202405"
+    },
+    {
+      "filename": "api_review-affiliate-partner-campaign-product-202405.md",
+      "title": "Review Affiliate Partner Campaign Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/review-affiliate-partner-campaign-product-202405"
+    },
+    {
+      "filename": "api_generate-affiliate-partner-campaign-product-link-202405.md",
+      "title": "Generate Affiliate Partner Campaign Product Link",
+      "url": "https://partner.tiktokshop.com/docv2/page/generate-affiliate-partner-campaign-product-link-202405"
+    },
+    {
+      "filename": "api_get-affiliate-partner-campaign-detail-202405.md",
+      "title": "Get Affiliate Partner Campaign Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-affiliate-partner-campaign-detail-202405"
+    },
+    {
+      "filename": "api_get-affiliate-partner-campaign-list-202405.md",
+      "title": "Get Affiliate Partner Campaign List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-affiliate-partner-campaign-list-202405"
+    },
+    {
+      "filename": "api_get-affiliate-partner-campaign-product-list-202405.md",
+      "title": "Get Affiliate Partner Campaign Product List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-affiliate-partner-campaign-product-list-202405"
+    },
+    {
+      "filename": "api_get-affiliate-campaign-creator-fulfillment-status-list-202501.md",
+      "title": "Get Affiliate Campaign Creator Fulfillment Status List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-affiliate-campaign-creator-fulfillment-status-list-202501"
+    },
+    {
+      "filename": "api_partner-generate-multi-affiliate-campaign-product-link-202505.md",
+      "title": "Partner Generate Multi Affiliate Campaign Product Link",
+      "url": "https://partner.tiktokshop.com/docv2/page/partner-generate-multi-affiliate-campaign-product-link-202505"
+    },
+    {
+      "filename": "api_get-affiliate-campaign-creator-fulfillment-status-info-202508.md",
+      "title": "Get Affiliate Campaign Creator Fulfillment Status Info",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-affiliate-campaign-creator-fulfillment-status-info-202508"
+    },
+    {
+      "filename": "api_get-affiliate-campaign-creator-product-content-statistics-202508.md",
+      "title": "Get Affiliate Campaign Creator Product Content Statistics",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-affiliate-campaign-creator-product-content-statistics-202508"
+    },
+    {
+      "filename": "api_get-affiliate-campaign-creator-product-sample-status-202508.md",
+      "title": "Get Affiliate Campaign Creator Product Sample Status",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-affiliate-campaign-creator-product-sample-status-202508"
+    },
+    {
+      "filename": "api_search-cap-affiliate-orders-202603.md",
+      "title": "Search CAP Affiliate Orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-cap-affiliate-orders-202603"
+    },
+    {
+      "filename": "api_search-tap-affiliate-orders-202603.md",
+      "title": "Search Tap Affiliate Orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-tap-affiliate-orders-202603"
+    },
+    {
+      "filename": "api_affiliate-seller-api-overview.md",
+      "title": "Affiliate Seller API overview",
+      "url": "https://partner.tiktokshop.com/docv2/page/affiliate-seller-api-overview"
+    },
+    {
+      "filename": "api_seller-search-creator-on-marketplace-202508.md",
+      "title": "Seller Search Creator on Marketplace",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-search-creator-on-marketplace-202508"
+    },
+    {
+      "filename": "api_get-marketplace-creator-performance-202508.md",
+      "title": "Get Marketplace Creator Performance",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-marketplace-creator-performance-202508"
+    },
+    {
+      "filename": "api_get-open-collaboration-settings-202409.md",
+      "title": "Get Open Collaboration Settings",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-open-collaboration-settings-202409"
+    },
+    {
+      "filename": "api_edit-open-collaboration-settings-202405.md",
+      "title": "Edit Open Collaboration Settings",
+      "url": "https://partner.tiktokshop.com/docv2/page/edit-open-collaboration-settings-202405"
+    },
+    {
+      "filename": "api_get-open-collaboration-sample-rules-202410.md",
+      "title": "Get Open Collaboration Sample Rules",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-open-collaboration-sample-rules-202410"
+    },
+    {
+      "filename": "api_edit-open-collaboration-sample-rule-202410.md",
+      "title": "Edit Open Collaboration Sample Rule",
+      "url": "https://partner.tiktokshop.com/docv2/page/edit-open-collaboration-sample-rule-202410"
+    },
+    {
+      "filename": "api_create-open-collaboration-202412.md",
+      "title": "Create Open Collaboration",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-open-collaboration-202412"
+    },
+    {
+      "filename": "api_search-open-collaboration-202412.md",
+      "title": "Search Open Collaboration",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-open-collaboration-202412"
+    },
+    {
+      "filename": "api_get-open-collaboration-creator-content-detail-202508.md",
+      "title": "Get Open Collaboration Creator Content Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-open-collaboration-creator-content-detail-202508"
+    },
+    {
+      "filename": "api_seller-search-affiliate-open-collaboration-product-202405.md",
+      "title": "Seller Search Affiliate Open Collaboration Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-search-affiliate-open-collaboration-product-202405"
+    },
+    {
+      "filename": "api_remove-creator-from-open-collaboration-202508.md",
+      "title": "Remove Creator From Open Collaboration",
+      "url": "https://partner.tiktokshop.com/docv2/page/remove-creator-from-open-collaboration-202508"
+    },
+    {
+      "filename": "api_create-target-collaboration-202508.md",
+      "title": "Create Target Collaboration",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-target-collaboration-202508"
+    },
+    {
+      "filename": "api_search-target-collaborations-202508.md",
+      "title": "Search Target Collaborations",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-target-collaborations-202508"
+    },
+    {
+      "filename": "api_update-target-collaboration-202508.md",
+      "title": "Update Target Collaboration",
+      "url": "https://partner.tiktokshop.com/docv2/page/update-target-collaboration-202508"
+    },
+    {
+      "filename": "api_remove-target-collaboration-202409.md",
+      "title": "Remove Target Collaboration",
+      "url": "https://partner.tiktokshop.com/docv2/page/remove-target-collaboration-202409"
+    },
+    {
+      "filename": "api_query-target-collaboration-detail-202412.md",
+      "title": "Query Target Collaboration Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/query-target-collaboration-detail-202412"
+    },
+    {
+      "filename": "api_query-target-collaboration-detail-202508.md",
+      "title": "Query Target Collaboration Detail",
+      "url": "https://partner.tiktokshop.com/docv2/page/query-target-collaboration-detail-202508"
+    },
+    {
+      "filename": "api_get-conversation-list-202412.md",
+      "title": "Get Conversation List",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-conversation-list-202412"
+    },
+    {
+      "filename": "api_get-message-in-the-conversation-202412.md",
+      "title": "Get Message in the Conversation",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-message-in-the-conversation-202412"
+    },
+    {
+      "filename": "api_get-latest-unread-messages-202412.md",
+      "title": "Get Latest Unread Messages",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-latest-unread-messages-202412"
+    },
+    {
+      "filename": "api_create-conversation-with-creator-202508.md",
+      "title": "Create Conversation with creator",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-conversation-with-creator-202508"
+    },
+    {
+      "filename": "api_upload-message-image-202511.md",
+      "title": "Upload Message Image",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-message-image-202511"
+    },
+    {
+      "filename": "api_send-im-message-202412.md",
+      "title": "Send IM Message",
+      "url": "https://partner.tiktokshop.com/docv2/page/send-im-message-202412"
+    },
+    {
+      "filename": "api_mark-conversation-read-202412.md",
+      "title": "Mark Conversation Read",
+      "url": "https://partner.tiktokshop.com/docv2/page/mark-conversation-read-202412"
+    },
+    {
+      "filename": "api_seller-search-sample-applications-202507.md",
+      "title": "Seller Search Sample Applications",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-search-sample-applications-202507"
+    },
+    {
+      "filename": "api_seller-search-sample-applications-202508.md",
+      "title": "Seller Search Sample Applications",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-search-sample-applications-202508"
+    },
+    {
+      "filename": "api_seller-review-sample-applications-202507.md",
+      "title": "Seller Review Sample Applications",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-review-sample-applications-202507"
+    },
+    {
+      "filename": "api_seller-search-sample-applications-fulfillments-202409.md",
+      "title": "Seller Search Sample Applications Fulfillments",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-search-sample-applications-fulfillments-202409"
+    },
+    {
+      "filename": "api_generate-target-collaboration-link-202509.md",
+      "title": "Generate Target Collaboration Link",
+      "url": "https://partner.tiktokshop.com/docv2/page/generate-target-collaboration-link-202509"
+    },
+    {
+      "filename": "api_generate-affiliate-product-promotion-link-202405.md",
+      "title": "Generate Affiliate Product Promotion Link",
+      "url": "https://partner.tiktokshop.com/docv2/page/generate-affiliate-product-promotion-link-202405"
+    },
+    {
+      "filename": "api_seller-get-sample-request-deeplink-202512.md",
+      "title": "Seller Get Sample Request Deeplink",
+      "url": "https://partner.tiktokshop.com/docv2/page/seller-get-sample-request-deeplink-202512"
+    },
+    {
+      "filename": "api_search-seller-affiliate-orders-202410.md",
+      "title": "Search Seller Affiliate Orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/search-seller-affiliate-orders-202410"
+    },
+    {
+      "filename": "api_get-seller-search-creator-marketplace-advanced-filters-202601.md",
+      "title": "Get Seller Search  Creator Marketplace Advanced Filters",
+      "url": "https://partner.tiktokshop.com/docv2/page/get-seller-search-creator-marketplace-advanced-filters-202601"
+    },
+    {
+      "filename": "api_confirm-package-shipment-202309.md",
+      "title": "Confirm Package Shipment ",
+      "url": "https://partner.tiktokshop.com/docv2/page/confirm-package-shipment-202309"
+    },
+    {
+      "filename": "api_upload-file-init-202512.md",
+      "title": "Upload File Init",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-file-init-202512"
+    },
+    {
+      "filename": "api_17-shoppable-content-posting.md",
+      "title": "(17) Shoppable content posting",
+      "url": "https://partner.tiktokshop.com/docv2/page/17-shoppable-content-posting"
+    },
+    {
+      "filename": "api_20-creator-deauthorization.md",
+      "title": "(20) Creator deauthorization",
+      "url": "https://partner.tiktokshop.com/docv2/page/20-creator-deauthorization"
+    },
+    {
+      "filename": "api_iygh3ycz.md",
+      "title": "(55) Video Precheck Result",
+      "url": "https://partner.tiktokshop.com/docv2/page/iygh3ycz"
+    },
+    {
+      "filename": "api_arpnre1g.md",
+      "title": "(59) Shoppable Video Precheck Tasks Result",
+      "url": "https://partner.tiktokshop.com/docv2/page/arpnre1g"
+    },
+    {
+      "filename": "api_33-new-message-listener.md",
+      "title": "(33) New message listener",
+      "url": "https://partner.tiktokshop.com/docv2/page/33-new-message-listener"
+    },
+    {
+      "filename": "api_urzvzank.md",
+      "title": "(56) Sample Application Status Change",
+      "url": "https://partner.tiktokshop.com/docv2/page/urzvzank"
+    },
+    {
+      "filename": "api_13-new-conversation.md",
+      "title": "(13) New conversation",
+      "url": "https://partner.tiktokshop.com/docv2/page/13-new-conversation"
+    },
+    {
+      "filename": "api_14-new-message.md",
+      "title": "(14) New message",
+      "url": "https://partner.tiktokshop.com/docv2/page/14-new-message"
+    },
+    {
+      "filename": "api_36-invoice-status-change.md",
+      "title": "(36) Invoice status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/36-invoice-status-change"
+    },
+    {
+      "filename": "api_21-inbound-fbt-order-status-change.md",
+      "title": "(21) Inbound FBT order status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/21-inbound-fbt-order-status-change"
+    },
+    {
+      "filename": "api_22-fbt-merchant-onboarding.md",
+      "title": "(22) FBT merchant onboarding",
+      "url": "https://partner.tiktokshop.com/docv2/page/22-fbt-merchant-onboarding"
+    },
+    {
+      "filename": "api_23-goods-match.md",
+      "title": "(23) Goods match",
+      "url": "https://partner.tiktokshop.com/docv2/page/23-goods-match"
+    },
+    {
+      "filename": "api_24-fbt-inventory-update.md",
+      "title": "(24) FBT inventory update",
+      "url": "https://partner.tiktokshop.com/docv2/page/24-fbt-inventory-update"
+    },
+    {
+      "filename": "api_gqh1f39k.md",
+      "title": "(58) Get FBT MCF Order Status",
+      "url": "https://partner.tiktokshop.com/docv2/page/gqh1f39k"
+    },
+    {
+      "filename": "api_3-recipient-address-update.md",
+      "title": "(3) Recipient address update",
+      "url": "https://partner.tiktokshop.com/docv2/page/3-recipient-address-update"
+    },
+    {
+      "filename": "api_4-package-update.md",
+      "title": "(4) Package update",
+      "url": "https://partner.tiktokshop.com/docv2/page/4-package-update"
+    },
+    {
+      "filename": "api_1-order-status-change.md",
+      "title": "(1) Order status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/1-order-status-change"
+    },
+    {
+      "filename": "api_11-cancellation-status-change.md",
+      "title": "(11) Cancellation status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/11-cancellation-status-change"
+    },
+    {
+      "filename": "api_5-product-status-change.md",
+      "title": "(5) Product status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/5-product-status-change"
+    },
+    {
+      "filename": "api_15-product-information-change.md",
+      "title": "(15) Product information change",
+      "url": "https://partner.tiktokshop.com/docv2/page/15-product-information-change"
+    },
+    {
+      "filename": "api_16-product-creation.md",
+      "title": "(16) Product creation",
+      "url": "https://partner.tiktokshop.com/docv2/page/16-product-creation"
+    },
+    {
+      "filename": "api_18-product-category-change.md",
+      "title": "(18) Product category change",
+      "url": "https://partner.tiktokshop.com/docv2/page/18-product-category-change"
+    },
+    {
+      "filename": "api_19-size-chart-change.md",
+      "title": "(19) Size chart change",
+      "url": "https://partner.tiktokshop.com/docv2/page/19-size-chart-change"
+    },
+    {
+      "filename": "api_25-opportunity-matching-status-change.md",
+      "title": "(25) Opportunity matching status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/25-opportunity-matching-status-change"
+    },
+    {
+      "filename": "api_27-inventory-status-change.md",
+      "title": "(27) Inventory status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/27-inventory-status-change"
+    },
+    {
+      "filename": "api_37-product-audit-status-change.md",
+      "title": "(37) Product audit status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/37-product-audit-status-change"
+    },
+    {
+      "filename": "api_38-strikethrough-price-expired.md",
+      "title": "(38) Strikethrough price expired",
+      "url": "https://partner.tiktokshop.com/docv2/page/38-strikethrough-price-expired"
+    },
+    {
+      "filename": "api_42-combined-listing-change.md",
+      "title": "(42) Combined listing change",
+      "url": "https://partner.tiktokshop.com/docv2/page/42-combined-listing-change"
+    },
+    {
+      "filename": "api_46-image-translation-completed.md",
+      "title": "(46) Image translation completed",
+      "url": "https://partner.tiktokshop.com/docv2/page/46-image-translation-completed"
+    },
+    {
+      "filename": "api_7nzxgima.md",
+      "title": "(51) Global replication status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/7nzxgima"
+    },
+    {
+      "filename": "api_g2wnrb57.md",
+      "title": "(52) Global listing method change",
+      "url": "https://partner.tiktokshop.com/docv2/page/g2wnrb57"
+    },
+    {
+      "filename": "api_ve4gakno.md",
+      "title": "(62) Product Package Recommended",
+      "url": "https://partner.tiktokshop.com/docv2/page/ve4gakno"
+    },
+    {
+      "filename": "api_39-activity-status-change.md",
+      "title": "(39) Activity status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/39-activity-status-change"
+    },
+    {
+      "filename": "api_x6legjl9.md",
+      "title": "(63) Activity change",
+      "url": "https://partner.tiktokshop.com/docv2/page/x6legjl9"
+    },
+    {
+      "filename": "api_12-return-status-change.md",
+      "title": "(12) Return status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/12-return-status-change"
+    },
+    {
+      "filename": "api_6-seller-deauthorization.md",
+      "title": "(6) Seller deauthorization",
+      "url": "https://partner.tiktokshop.com/docv2/page/6-seller-deauthorization"
+    },
+    {
+      "filename": "api_7-upcoming-authorization-expiration.md",
+      "title": "(7) Upcoming authorization expiration",
+      "url": "https://partner.tiktokshop.com/docv2/page/7-upcoming-authorization-expiration"
+    },
+    {
+      "filename": "api_35-tokopedia-mirror-status-change.md",
+      "title": "(35) Tokopedia mirror status change",
+      "url": "https://partner.tiktokshop.com/docv2/page/35-tokopedia-mirror-status-change"
+    },
+    {
+      "filename": "api_66063c677be39902c7774b24.md",
+      "title": "GLOBAL: TIKTOK SHOP PARTNER CENTER TERMS OF SERVICE",
+      "url": "https://partner.tiktokshop.com/docv2/page/66063c677be39902c7774b24"
+    },
+    {
+      "filename": "api_6678d84e0f0ec602e4480c42.md",
+      "title": "Developer Terms of Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/6678d84e0f0ec602e4480c42"
+    },
+    {
+      "filename": "api_6673e596c6a35e02ddea7e80.md",
+      "title": "EU-UK Developer Terms of Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/6673e596c6a35e02ddea7e80"
+    },
+    {
+      "filename": "api_6678ef9d59505302c071ce68.md",
+      "title": "Sandbox Terms of Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/6678ef9d59505302c071ce68"
+    },
+    {
+      "filename": "api_6678eff115cef902c2267598.md",
+      "title": "TikTok Shop Development Shops Terms of Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/6678eff115cef902c2267598"
+    },
+    {
+      "filename": "api_6678f02fe7617302ddb59351.md",
+      "title": "Partner Center Privacy Policy",
+      "url": "https://partner.tiktokshop.com/docv2/page/6678f02fe7617302ddb59351"
+    },
+    {
+      "filename": "api_670745ef58db080300fd1e64.md",
+      "title": "IE: TikTok Shop Terms of Use",
+      "url": "https://partner.tiktokshop.com/docv2/page/670745ef58db080300fd1e64"
+    },
+    {
+      "filename": "api_670746a600b0df0302ad9ddf.md",
+      "title": "ES: TikTok Shop Terms of Use",
+      "url": "https://partner.tiktokshop.com/docv2/page/670746a600b0df0302ad9ddf"
+    },
+    {
+      "filename": "api_670747aa58db080300fd2601.md",
+      "title": "IE: Summary of TikTok Shop Terms of Use",
+      "url": "https://partner.tiktokshop.com/docv2/page/670747aa58db080300fd2601"
+    },
+    {
+      "filename": "api_670747b90dcee902fa0738ba.md",
+      "title": "ES: Summary of TikTok Shop Terms of Use",
+      "url": "https://partner.tiktokshop.com/docv2/page/670747b90dcee902fa0738ba"
+    },
+    {
+      "filename": "api_67bc3c963629d304a1e54745.md",
+      "title": "TikTok Shop - Partner Campaign Terms and Conditions",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc3c963629d304a1e54745"
+    },
+    {
+      "filename": "api_673c30c45befc00319a4b380.md",
+      "title": "\u3010TikTok Shop - Cross-border Partner\u3011 Onboarding Guide",
+      "url": "https://partner.tiktokshop.com/docv2/page/673c30c45befc00319a4b380"
+    },
+    {
+      "filename": "api_673c32823959ad0306b0fb9b.md",
+      "title": "\u3010TikTok Shop Cross-border Partner\u3011 Onboarding - Common Reasons of Rejection",
+      "url": "https://partner.tiktokshop.com/docv2/page/673c32823959ad0306b0fb9b"
+    },
+    {
+      "filename": "api_66063c745c6cb902e38086cf.md",
+      "title": "GLOBAL: KETENTUAN LAYANAN PUSAT MITRA TIKTOK SHOP",
+      "url": "https://partner.tiktokshop.com/docv2/page/66063c745c6cb902e38086cf"
+    },
+    {
+      "filename": "api_67a5ac01c815c7031386b0cc.md",
+      "title": "CONDITIONS D'UTILISATION DE L\u2019ESPACE PARTENAIRES DE TIKTOK SHOP DANS LE MONDE",
+      "url": "https://partner.tiktokshop.com/docv2/page/67a5ac01c815c7031386b0cc"
+    },
+    {
+      "filename": "api_67bc3a43b9f52a04b6062187.md",
+      "title": "CONDITIONS D'UTILISATION DE TIKTOK SHOP PAR LES D\u00c9VELOPPEURS",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc3a43b9f52a04b6062187"
+    },
+    {
+      "filename": "api_67bc3bcdd4484504a9bd2bd5.md",
+      "title": "TikTok Shop - Conditions g\u00e9n\u00e9rales des campagnes partenaires",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc3bcdd4484504a9bd2bd5"
+    },
+    {
+      "filename": "api_67a46f567b39820312bf8887.md",
+      "title": "GLOBAL: TIKTOK SHOP PARTNER CENTER GESCH\u00c4FTSBEDINGUNGEN",
+      "url": "https://partner.tiktokshop.com/docv2/page/67a46f567b39820312bf8887"
+    },
+    {
+      "filename": "api_67bc36c0a42623049af0bc74.md",
+      "title": "TIKTOK SHOP ENTWICKLER GESCH\u00c4FTSENTWICKLERBEDINGUNGEN ",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc36c0a42623049af0bc74"
+    },
+    {
+      "filename": "api_67bc3c12c422a204a9356441.md",
+      "title": "TikTok Shop - Allgemeine Gesch\u00e4ftsbedingungen f\u00fcr Partner Kampagnen",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc3c12c422a204a9356441"
+    },
+    {
+      "filename": "api_67a5b236c815c7031386e125.md",
+      "title": "TERMINI DI SERVIZIO DEL PARTNER CENTER DI TIKTOK SHOP GLOBALI",
+      "url": "https://partner.tiktokshop.com/docv2/page/67a5b236c815c7031386e125"
+    },
+    {
+      "filename": "api_67bc3aeb3629d304a1e538a7.md",
+      "title": "TERMINI DI SERVIZIO PER GLI SVILUPPATORI DI TIKTOK SHOP ",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc3aeb3629d304a1e538a7"
+    },
+    {
+      "filename": "api_67bc3c5f572c9f04b705dc3c.md",
+      "title": "TikTok Shop - Termini e Condizioni della Campagna Partner",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc3c5f572c9f04b705dc3c"
+    },
+    {
+      "filename": "api_682c68d30fbaee049c885ee5.md",
+      "title": "\u30b0\u30ed\u30fc\u30d0\u30eb\uff1aTikTok Shop\u30d1\u30fc\u30c8\u30ca\u30fc\u30bb\u30f3\u30bf\u30fc\u5229\u7528\u898f\u7d04",
+      "url": "https://partner.tiktokshop.com/docv2/page/682c68d30fbaee049c885ee5"
+    },
+    {
+      "filename": "api_682d9c973be2e104a5557714.md",
+      "title": "TikTok Shop\u30c7\u30d9\u30ed\u30c3\u30d1\u30fc\u5229\u7528\u898f\u7d04",
+      "url": "https://partner.tiktokshop.com/docv2/page/682d9c973be2e104a5557714"
+    },
+    {
+      "filename": "api_682d9f4649d9ad0497abfe02.md",
+      "title": "TikTok Shop Development Shops\u5229\u7528\u898f\u7d04",
+      "url": "https://partner.tiktokshop.com/docv2/page/682d9f4649d9ad0497abfe02"
+    },
+    {
+      "filename": "api_677e359ee3c22a0310c73f94.md",
+      "title": "GLOBAL: T\u00c9RMINOS DE SERVICIO DEL CENTRO DE SOCIOS DE TIKTOK SHOP",
+      "url": "https://partner.tiktokshop.com/docv2/page/677e359ee3c22a0310c73f94"
+    },
+    {
+      "filename": "api_677d1a15f7765c0308b7041a.md",
+      "title": "T\u00e9rminos de Servicio para Desarrolladores de TikTok Shop",
+      "url": "https://partner.tiktokshop.com/docv2/page/677d1a15f7765c0308b7041a"
+    },
+    {
+      "filename": "api_677e3bcbc3ba9502fd0a1e3d.md",
+      "title": "T\u00e9rminos de Servicio de las Tiendas de Desarrollo de TikTok Shop",
+      "url": "https://partner.tiktokshop.com/docv2/page/677e3bcbc3ba9502fd0a1e3d"
+    },
+    {
+      "filename": "api_682c6930ef8c65049c5b1ce4.md",
+      "title": "Termos de Servi\u00e7o Globais do Centro de Parceiros da TikTok Shop",
+      "url": "https://partner.tiktokshop.com/docv2/page/682c6930ef8c65049c5b1ce4"
+    },
+    {
+      "filename": "api_682d9ee135294f04a8e2d7dc.md",
+      "title": "Termos de Servi\u00e7o das Lojas de Desenvolvimento da TikTok Shop",
+      "url": "https://partner.tiktokshop.com/docv2/page/682d9ee135294f04a8e2d7dc"
+    },
+    {
+      "filename": "api_6673e54c6733ff02c2d3abd5.md",
+      "title": "T\u00c9RMINOS DE SERVICIO PARA DESARROLLADORES DE TIKTOK SHOP",
+      "url": "https://partner.tiktokshop.com/docv2/page/6673e54c6733ff02c2d3abd5"
+    },
+    {
+      "filename": "api_670746eff17b7d02f9609f64.md",
+      "title": "ES: T\u00e9rminos de Uso de TikTok Shop",
+      "url": "https://partner.tiktokshop.com/docv2/page/670746eff17b7d02f9609f64"
+    },
+    {
+      "filename": "api_670747e3e8a65d02f934d1f4.md",
+      "title": "Resumen de los ES: T\u00e9rminos de Uso de TikTok Shop",
+      "url": "https://partner.tiktokshop.com/docv2/page/670747e3e8a65d02f934d1f4"
+    },
+    {
+      "filename": "api_673c4987e32c7f030db8e7f2.md",
+      "title": "GLOBAL: T\u00c9RMINOS DE SERVICIO DEL CENTRO DE SOCIOS DE TIKTOK SHOP ",
+      "url": "https://partner.tiktokshop.com/docv2/page/673c4987e32c7f030db8e7f2"
+    },
+    {
+      "filename": "api_67bc3cdaa0cc7104ab5f5bad.md",
+      "title": "TikTok Shop - T\u00e9rminos y Condiciones de las Campa\u00f1as para Socios",
+      "url": "https://partner.tiktokshop.com/docv2/page/67bc3cdaa0cc7104ab5f5bad"
+    },
+    {
+      "filename": "api_66be1c10326d2e0300240ed9.md",
+      "title": "\u0e02\u0e49\u0e2d\u0e01\u0e33\u0e2b\u0e19\u0e14\u0e01\u0e32\u0e23\u0e43\u0e2b\u0e49\u0e1a\u0e23\u0e34\u0e01\u0e32\u0e23\u0e28\u0e39\u0e19\u0e22\u0e4c\u0e1e\u0e32\u0e23\u0e4c\u0e17\u0e40\u0e19\u0e2d\u0e23\u0e4c TikTok Shop",
+      "url": "https://partner.tiktokshop.com/docv2/page/66be1c10326d2e0300240ed9"
+    },
+    {
+      "filename": "api_6718aa3e8ea12f030fddf109.md",
+      "title": "Company Details",
+      "url": "https://partner.tiktokshop.com/docv2/page/6718aa3e8ea12f030fddf109"
+    },
+    {
+      "filename": "api_67d3893d9027f704a1718aee.md",
+      "title": "Terms of Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/67d3893d9027f704a1718aee"
+    },
+    {
+      "filename": "api_new-apis-and-webhook-for-affiliates-beta.md",
+      "title": "New APIs and webhook for affiliates (beta)",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-apis-and-webhook-for-affiliates-beta"
+    },
+    {
+      "filename": "api_new-affiliate-messaging-apis.md",
+      "title": "New affiliate messaging APIs",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-affiliate-messaging-apis"
+    },
+    {
+      "filename": "api_3obfokj6.md",
+      "title": "Creator Open ID for Affiliate APIs",
+      "url": "https://partner.tiktokshop.com/docv2/page/3obfokj6"
+    },
+    {
+      "filename": "api_x0ebukvz.md",
+      "title": "New Capability  for Affiliate Sample Applications ",
+      "url": "https://partner.tiktokshop.com/docv2/page/x0ebukvz"
+    },
+    {
+      "filename": "api_authorization-page-updates.md",
+      "title": "Authorization page updates",
+      "url": "https://partner.tiktokshop.com/docv2/page/authorization-page-updates"
+    },
+    {
+      "filename": "api_new-shipping-label-format-launched-in-id-my-and-vn-markets.md",
+      "title": "New shipping label format launched in the ID, MY and VN markets",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-shipping-label-format-launched-in-id-my-and-vn-markets"
+    },
+    {
+      "filename": "api_for-local-and-cross-border-sellers-in-us-market-shipping-information-update-time-window-extended-to-72-hours.md",
+      "title": "For local and cross-border sellers in the US market: Shipping information update time window extended to 72 hours",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-local-and-cross-border-sellers-in-us-market-shipping-information-update-time-window-extended-to-72-hours"
+    },
+    {
+      "filename": "api_for-local-sellers-in-uk-market-introducing-item-level-order-split-shipping.md",
+      "title": "For local sellers in the UK market: Introducing item level order split shipping",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-local-sellers-in-uk-market-introducing-item-level-order-split-shipping"
+    },
+    {
+      "filename": "api_for-local-sellers-in-us-market-warning-information-added-to-mark-package-as-shipped-api.md",
+      "title": "For local sellers in the US market: Warning information added to Mark Package as Shipped API",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-local-sellers-in-us-market-warning-information-added-to-mark-package-as-shipped-api"
+    },
+    {
+      "filename": "api_for-sea-market-partner-developer-parameters-handover-method-in-api-ship-package-and-batch-ship-package-will-be-useless.md",
+      "title": "For the SEA market partner&developer: The parameters \"handover_method\" in API Ship Package and Batch Ship Package will be useless",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-sea-market-partner-developer-parameters-handover-method-in-api-ship-package-and-batch-ship-package-will-be-useless"
+    },
+    {
+      "filename": "api_when-sea-pop-sellers-add-edit-or-publish-global-products-by-api-some-specific-categories-will-be-prohibited-and-restricted-directly.md",
+      "title": "When SEA POP sellers add, edit or publish global products by API, some specific categories will be prohibited and restricted directly",
+      "url": "https://partner.tiktokshop.com/docv2/page/when-sea-pop-sellers-add-edit-or-publish-global-products-by-api-some-specific-categories-will-be-prohibited-and-restricted-directly"
+    },
+    {
+      "filename": "api_br-market-zpl-format-support-for-shipping-documents.md",
+      "title": "BR market: ZPL format support for shipping documents",
+      "url": "https://partner.tiktokshop.com/docv2/page/br-market-zpl-format-support-for-shipping-documents"
+    },
+    {
+      "filename": "api_us-market-tiktok-shipping-label-allocation.md",
+      "title": "US market: TikTok Shipping label allocation",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-tiktok-shipping-label-allocation"
+    },
+    {
+      "filename": "api_t9ucngno.md",
+      "title": "For SEA Market: Recommended Default Order Sorting Logic to Support Fast Delivery Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/t9ucngno"
+    },
+    {
+      "filename": "api_gt8qv13g.md",
+      "title": "US market: POP USPS label restriction",
+      "url": "https://partner.tiktokshop.com/docv2/page/gt8qv13g"
+    },
+    {
+      "filename": "api_4260w8mg.md",
+      "title": "For SEA market: The parameter \"handover_method\" in API Ship Package and Batch Ship Package will be useless for cross-border overseas sellers",
+      "url": "https://partner.tiktokshop.com/docv2/page/4260w8mg"
+    },
+    {
+      "filename": "api_m5p1u1fo.md",
+      "title": "For SEA Market: Recommended Improvement to Support Fast Delivery Service",
+      "url": "https://partner.tiktokshop.com/docv2/page/m5p1u1fo"
+    },
+    {
+      "filename": "api_7z0wsn3s.md",
+      "title": "For all EU markets (EU5) Get Shipping Providers API ",
+      "url": "https://partner.tiktokshop.com/docv2/page/7z0wsn3s"
+    },
+    {
+      "filename": "api_order_orders_post_town.md",
+      "title": "Post town added for UK recipient addresses in the Get Order Detail API",
+      "url": "https://partner.tiktokshop.com/docv2/page/order_orders_post_town"
+    },
+    {
+      "filename": "api_shortened-string-length-for-buyer-email-in-get-order-detail-api.md",
+      "title": "Shortened string length for buyer_email in Get Order Detail API",
+      "url": "https://partner.tiktokshop.com/docv2/page/shortened-string-length-for-buyer-email-in-get-order-detail-api"
+    },
+    {
+      "filename": "api_for-us-and-uk-markets-introducing-on-hold-order-status.md",
+      "title": "For US and UK markets: Introducing \"On Hold\" order status",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-us-and-uk-markets-introducing-on-hold-order-status"
+    },
+    {
+      "filename": "api_sla-information-now-available-in-orders-api.md",
+      "title": "SLA information now available in Orders API",
+      "url": "https://partner.tiktokshop.com/docv2/page/sla-information-now-available-in-orders-api"
+    },
+    {
+      "filename": "api_delivery-instructions-now-available-in-orders-api.md",
+      "title": "Delivery instructions now available in Orders API",
+      "url": "https://partner.tiktokshop.com/docv2/page/delivery-instructions-now-available-in-orders-api"
+    },
+    {
+      "filename": "api_for-us-local-sellers-item-level-tax-rate-added-to-order-resource.md",
+      "title": "For US local sellers: Item level tax rate added to the Order resource",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-us-local-sellers-item-level-tax-rate-added-to-order-resource"
+    },
+    {
+      "filename": "api_for-sea-market-upcoming-changes-on-tracking-number-availability-in-orders-api.md",
+      "title": "For SEA market: Upcoming changes on tracking number availability in Orders API",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-sea-market-upcoming-changes-on-tracking-number-availability-in-orders-api"
+    },
+    {
+      "filename": "api_for-us-market-replacement-orders-now-available.md",
+      "title": "For US market: Replacement orders now available",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-us-market-replacement-orders-now-available"
+    },
+    {
+      "filename": "api_for-us-market-new-property-address-level-field-added-to-orders-api.md",
+      "title": "For US market: New property address_level field added to Orders API",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-us-market-new-property-address-level-field-added-to-orders-api"
+    },
+    {
+      "filename": "api_for-uk-market-support-item-level-cancellation.md",
+      "title": "For UK market: Support item level cancellation",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-uk-market-support-item-level-cancellation"
+    },
+    {
+      "filename": "api_virtual-bundles-are-now-available-in-order-details.md",
+      "title": "Virtual bundles are now available in order details",
+      "url": "https://partner.tiktokshop.com/docv2/page/virtual-bundles-are-now-available-in-order-details"
+    },
+    {
+      "filename": "api_for-sea-market-upcoming-changes-on-tracking-number-availability.md",
+      "title": "For SEA market: Upcoming changes on tracking number availability",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-sea-market-upcoming-changes-on-tracking-number-availability"
+    },
+    {
+      "filename": "api_auto-combine-order-id-available-in-order-details-for-live-sessions.md",
+      "title": "Auto Combine Order ID available in Order Details for LIVE sessions",
+      "url": "https://partner.tiktokshop.com/docv2/page/auto-combine-order-id-available-in-order-details-for-live-sessions"
+    },
+    {
+      "filename": "api_adding-co-founded-shipping-discount-fields.md",
+      "title": "Adding co-founded shipping discount fields",
+      "url": "https://partner.tiktokshop.com/docv2/page/adding-co-founded-shipping-discount-fields"
+    },
+    {
+      "filename": "api_us-market-pre-order-made-to-order-back-order-functionality-delivery-sla.md",
+      "title": "US market: Pre-order, made-to-order, back-order functionality; delivery SLA",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-pre-order-made-to-order-back-order-functionality-delivery-sla"
+    },
+    {
+      "filename": "api_us-and-uk-markets-exchange-orders.md",
+      "title": "US and UK markets: Exchange orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-and-uk-markets-exchange-orders"
+    },
+    {
+      "filename": "api_us-market-fast-delivery-program.md",
+      "title": "US market: Fast delivery program",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-fast-delivery-program"
+    },
+    {
+      "filename": "api_us-market-changes-to-recipient-address-masking.md",
+      "title": "US market: Changes to recipient_address masking",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-changes-to-recipient-address-masking"
+    },
+    {
+      "filename": "api_br-and-mx-markets-changes-to-name-logic.md",
+      "title": "BR and MX markets: Changes to name logic",
+      "url": "https://partner.tiktokshop.com/docv2/page/br-and-mx-markets-changes-to-name-logic"
+    },
+    {
+      "filename": "api_yeklql2a.md",
+      "title": "UK and EU markets: Introducing On Time Delivery Rate (OTDR) for Shipped by Seller (3PL) Orders ",
+      "url": "https://partner.tiktokshop.com/docv2/page/yeklql2a"
+    },
+    {
+      "filename": "api_8cpq7zt5.md",
+      "title": "US market: Item protection/insurance",
+      "url": "https://partner.tiktokshop.com/docv2/page/8cpq7zt5"
+    },
+    {
+      "filename": "api_yb76cyzi.md",
+      "title": "\u3010Important Notice\u3011Enable Support for the New \u201cOn Hold\u201d Order Status",
+      "url": "https://partner.tiktokshop.com/docv2/page/yb76cyzi"
+    },
+    {
+      "filename": "api_us-only-order-cancellation-workflow-updates.md",
+      "title": "US only: Order cancellation workflow updates",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-only-order-cancellation-workflow-updates"
+    },
+    {
+      "filename": "api_removal-of-unable-to-deliver-to-buyer-address-as-cancellation-reason-in-id-vn-th-sg-ph-markets.md",
+      "title": "Removal of \"unable to deliver to buyer address\" as a cancellation reason in ID, VN, TH, SG, PH markets",
+      "url": "https://partner.tiktokshop.com/docv2/page/removal-of-unable-to-deliver-to-buyer-address-as-cancellation-reason-in-id-vn-th-sg-ph-markets"
+    },
+    {
+      "filename": "api_three-seller-initiates-cancel-reasons-will-be-changed.md",
+      "title": "SEA market only:Three Seller Initiates Cancel Reasons will be changed",
+      "url": "https://partner.tiktokshop.com/docv2/page/three-seller-initiates-cancel-reasons-will-be-changed"
+    },
+    {
+      "filename": "api_c44syeeb.md",
+      "title": "For SEA market: Get Rejection Reasons before Cancellation or Return Rejection",
+      "url": "https://partner.tiktokshop.com/docv2/page/c44syeeb"
+    },
+    {
+      "filename": "api_jsqxpibu.md",
+      "title": "For SEA market: Configure \"Cancellation status change\" webhook to receive cancellation message",
+      "url": "https://partner.tiktokshop.com/docv2/page/jsqxpibu"
+    },
+    {
+      "filename": "api_updates-to-product-errors.md",
+      "title": "Updates to product errors",
+      "url": "https://partner.tiktokshop.com/docv2/page/updates-to-product-errors"
+    },
+    {
+      "filename": "api_new-image-translation-apis.md",
+      "title": "Introducing new product image text translation APIs and webhook",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-image-translation-apis"
+    },
+    {
+      "filename": "api_for-sea-market-partner-developer-add-expire-date-on-product-certifications.md",
+      "title": "For the SEA Market Partner & Developer: Add Expire Date on Product Certifications",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-sea-market-partner-developer-add-expire-date-on-product-certifications"
+    },
+    {
+      "filename": "api_eu-gpsr-communication-doc-adding-responsible-person-manufacturer-and-safety-label-information.md",
+      "title": "EU GPSR Communication Doc - adding Responsible person, Manufacturer and Safety label information",
+      "url": "https://partner.tiktokshop.com/docv2/page/eu-gpsr-communication-doc-adding-responsible-person-manufacturer-and-safety-label-information"
+    },
+    {
+      "filename": "api_updates-to-product-api-mandatory-certifications.md",
+      "title": "Updates to Product API Mandatory Certifications",
+      "url": "https://partner.tiktokshop.com/docv2/page/updates-to-product-api-mandatory-certifications"
+    },
+    {
+      "filename": "api_new-property-added-to-recommend-category-api-to-indicate-whether-sellers-can-use-recommended-category.md",
+      "title": "New property added to Recommend Category API to indicate whether sellers can use the recommended category",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-property-added-to-recommend-category-api-to-indicate-whether-sellers-can-use-recommended-category"
+    },
+    {
+      "filename": "api_new-property-added-to-get-category-rules-api-to-indicate-whether-package-dimension-is-mandatory.md",
+      "title": "New property added to Get Category Rules API to indicate whether the package dimension is mandatory",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-property-added-to-get-category-rules-api-to-indicate-whether-package-dimension-is-mandatory"
+    },
+    {
+      "filename": "api_changes-to-check-listing-prerequisite-api-in-v202312.md",
+      "title": "Changes to Check Listing Prerequisite API in v202312",
+      "url": "https://partner.tiktokshop.com/docv2/page/changes-to-check-listing-prerequisite-api-in-v202312"
+    },
+    {
+      "filename": "api_changes-to-create-product-and-edit-product-apis.md",
+      "title": "Changes to Create Product and Edit Product APIs",
+      "url": "https://partner.tiktokshop.com/docv2/page/changes-to-create-product-and-edit-product-apis"
+    },
+    {
+      "filename": "api_draft-status-available-for-create-product-api.md",
+      "title": "Draft status available for Create Product API",
+      "url": "https://partner.tiktokshop.com/docv2/page/draft-status-available-for-create-product-api"
+    },
+    {
+      "filename": "api_new-endpoint-listing-schema.md",
+      "title": "New endpoint: Listing schema",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-endpoint-listing-schema"
+    },
+    {
+      "filename": "api_new-webhook-product-update.md",
+      "title": "New webhook: Product update",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-webhook-product-update"
+    },
+    {
+      "filename": "api_uk-market-only-size-chart-is-now-mandatory-for-product-listings.md",
+      "title": "UK market only: Size chart is now mandatory for product listings",
+      "url": "https://partner.tiktokshop.com/docv2/page/uk-market-only-size-chart-is-now-mandatory-for-product-listings"
+    },
+    {
+      "filename": "api_for-uk-market-updates-to-mandatory-attributes-and-product-certifications-for-certain-product-categories.md",
+      "title": "For the UK market: Updates to mandatory attributes and product certifications for certain product categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-uk-market-updates-to-mandatory-attributes-and-product-certifications-for-certain-product-categories"
+    },
+    {
+      "filename": "api_us-market-product-category-expansion.md",
+      "title": "US market: Product category expansion",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-product-category-expansion"
+    },
+    {
+      "filename": "api_us-and-uk-markets-product-information-quality-apis.md",
+      "title": "US and UK markets: Product information quality APIs",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-and-uk-markets-product-information-quality-apis"
+    },
+    {
+      "filename": "api_for-th-market-updates-to-mandatory-attributes-and-product-certifications-for-certain-product-categories.md",
+      "title": "For the TH market: Updates to mandatory attributes and product certifications for certain product categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-th-market-updates-to-mandatory-attributes-and-product-certifications-for-certain-product-categories"
+    },
+    {
+      "filename": "api_new-fields-added-to-product-api-for-shop-ads.md",
+      "title": "New fields added to Product API for Shop Ads",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-fields-added-to-product-api-for-shop-ads"
+    },
+    {
+      "filename": "api_for-th-market-updates-to-mandatory-certifications-for-certain-product-categories.md",
+      "title": "For the TH market: Updates to mandatory certifications for certain product categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-th-market-updates-to-mandatory-certifications-for-certain-product-categories"
+    },
+    {
+      "filename": "api_new-promotion-apis-gift-with-purchase-and-free-sample.md",
+      "title": "New Promotion APIs: Gift with purchase and free sample",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-promotion-apis-gift-with-purchase-and-free-sample"
+    },
+    {
+      "filename": "api_us-market-mandatory-hazmat-attributes-added.md",
+      "title": "US market: Mandatory hazmat attributes added",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-mandatory-hazmat-attributes-added"
+    },
+    {
+      "filename": "api_us-and-uk-markets-product-category-recommendation.md",
+      "title": "US and UK markets: Product category recommendation",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-and-uk-markets-product-category-recommendation"
+    },
+    {
+      "filename": "api_for-ph-market-updates-to-mandatory-attributes-on-fresh-and-frozen-related-categories.md",
+      "title": "For the PH market: Updates to mandatory attributes on fresh and frozen related categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-ph-market-updates-to-mandatory-attributes-on-fresh-and-frozen-related-categories"
+    },
+    {
+      "filename": "api_for-sea-market-various-categories-will-require-mandatory-attribute-dangerous-goods.md",
+      "title": "For the SEA market: Various categories will require the mandatory attribute - \"Dangerous Goods\"",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-sea-market-various-categories-will-require-mandatory-attribute-dangerous-goods"
+    },
+    {
+      "filename": "api_new-webhook-product-creation.md",
+      "title": "New webhook: Product creation",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-webhook-product-creation"
+    },
+    {
+      "filename": "api_sunsetting-listing-schemas-endpoint.md",
+      "title": "Sunsetting listing schemas endpoint",
+      "url": "https://partner.tiktokshop.com/docv2/page/sunsetting-listing-schemas-endpoint"
+    },
+    {
+      "filename": "api_uk-market-mandatory-hazmat-attributes-added.md",
+      "title": "UK market: Mandatory hazmat attributes added",
+      "url": "https://partner.tiktokshop.com/docv2/page/uk-market-mandatory-hazmat-attributes-added"
+    },
+    {
+      "filename": "api_us-market-introducing-listing-quality-tiers-lqt-for-products.md",
+      "title": "US market: Introducing Listing Quality Tiers (LQT) for products",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-introducing-listing-quality-tiers-lqt-for-products"
+    },
+    {
+      "filename": "api_eu-market-adding-compliance-required-fields-to-products-api.md",
+      "title": "EU market: Adding compliance required fields to Products API",
+      "url": "https://partner.tiktokshop.com/docv2/page/eu-market-adding-compliance-required-fields-to-products-api"
+    },
+    {
+      "filename": "api_for-es-and-ie-market-updates-to-mandatory-certifications-for-certain-product-categories.md",
+      "title": "For the ES and IE market: Updates to Mandatory Certifications for Certain Product Categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-es-and-ie-market-updates-to-mandatory-certifications-for-certain-product-categories"
+    },
+    {
+      "filename": "api_us-market-adding-mandatory-certificates-for-bikes-scooters-and-appliances.md",
+      "title": "US market: Adding mandatory certificates for Bikes, Scooters and Appliances",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-adding-mandatory-certificates-for-bikes-scooters-and-appliances"
+    },
+    {
+      "filename": "api_html-tags-are-supported-in-product-descriptions.md",
+      "title": "HTML Tags are supported in product descriptions",
+      "url": "https://partner.tiktokshop.com/docv2/page/html-tags-are-supported-in-product-descriptions"
+    },
+    {
+      "filename": "api_um8sunwp.md",
+      "title": "US market: Updates to mandatory attributes ",
+      "url": "https://partner.tiktokshop.com/docv2/page/um8sunwp"
+    },
+    {
+      "filename": "api_external-product-attribution-for-reviews-and-ads.md",
+      "title": "External Product Attribution for Reviews and Ads",
+      "url": "https://partner.tiktokshop.com/docv2/page/external-product-attribution-for-reviews-and-ads"
+    },
+    {
+      "filename": "api_us-uk-markets-hazmat-deadline-extension.md",
+      "title": "US&UK Markets: Hazmat Deadline Extension",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-uk-markets-hazmat-deadline-extension"
+    },
+    {
+      "filename": "api_product-audit-status-is-added-to-products-api.md",
+      "title": "Product Audit Status is Added to Products API",
+      "url": "https://partner.tiktokshop.com/docv2/page/product-audit-status-is-added-to-products-api"
+    },
+    {
+      "filename": "api_price-and-inventory-is-optional-when-editing-products.md",
+      "title": "Price and Inventory is optional when editing products",
+      "url": "https://partner.tiktokshop.com/docv2/page/price-and-inventory-is-optional-when-editing-products"
+    },
+    {
+      "filename": "api_new-endpoint-diagnose-and-optimize-product.md",
+      "title": "New Endpoint: Diagnose and Optimize Product",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-endpoint-diagnose-and-optimize-product"
+    },
+    {
+      "filename": "api_mx-market-minimum-product-price-adjustment.md",
+      "title": "MX market: Minimum product price adjustment",
+      "url": "https://partner.tiktokshop.com/docv2/page/mx-market-minimum-product-price-adjustment"
+    },
+    {
+      "filename": "api_product-api-now-supports-two-prices.md",
+      "title": "Product API now supports two prices",
+      "url": "https://partner.tiktokshop.com/docv2/page/product-api-now-supports-two-prices"
+    },
+    {
+      "filename": "api_create-product-api-now-supports-an-idempotency-key.md",
+      "title": "Create Product API now supports an idempotency key",
+      "url": "https://partner.tiktokshop.com/docv2/page/create-product-api-now-supports-an-idempotency-key"
+    },
+    {
+      "filename": "api_hazmat-deadline-extended-to-april-15.md",
+      "title": "Hazmat Deadline Extended to April 15",
+      "url": "https://partner.tiktokshop.com/docv2/page/hazmat-deadline-extended-to-april-15"
+    },
+    {
+      "filename": "api_mandatory-certifications-for-certain-categories-added.md",
+      "title": "Mandatory certifications for certain categories added",
+      "url": "https://partner.tiktokshop.com/docv2/page/mandatory-certifications-for-certain-categories-added"
+    },
+    {
+      "filename": "api_upload-product-image-and-upload-product-file-support-more-file-formats.md",
+      "title": "Upload Product Image and Upload Product File support more file formats",
+      "url": "https://partner.tiktokshop.com/docv2/page/upload-product-image-and-upload-product-file-support-more-file-formats"
+    },
+    {
+      "filename": "api_streamlining-of-invite-only-product-categories.md",
+      "title": "Streamlining of invite-only product categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/streamlining-of-invite-only-product-categories"
+    },
+    {
+      "filename": "api_us-market-supplementary-sku-images.md",
+      "title": "US market: Supplementary SKU images",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-supplementary-sku-images"
+    },
+    {
+      "filename": "api_us-uk-and-sea-markets-pre-order-and-made-to-order-product-types.md",
+      "title": "US, UK, and SEA markets: Pre-order and made-to-order product types",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-uk-and-sea-markets-pre-order-and-made-to-order-product-types"
+    },
+    {
+      "filename": "api_us-market-updates-to-mandatory-attributes.md",
+      "title": "US market: Updates to mandatory attributes",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-updates-to-mandatory-attributes"
+    },
+    {
+      "filename": "api_g03iqsx0.md",
+      "title": "Draft editing support for published listings",
+      "url": "https://partner.tiktokshop.com/docv2/page/g03iqsx0"
+    },
+    {
+      "filename": "api_a5crrkzs.md",
+      "title": "GS POP product listing workflow revamp",
+      "url": "https://partner.tiktokshop.com/docv2/page/a5crrkzs"
+    },
+    {
+      "filename": "api_npb6fvbh.md",
+      "title": "SEA market: Product category expansion",
+      "url": "https://partner.tiktokshop.com/docv2/page/npb6fvbh"
+    },
+    {
+      "filename": "api_vfskyjvl.md",
+      "title": "EU market: New compliance data required - CLP/Biocides ",
+      "url": "https://partner.tiktokshop.com/docv2/page/vfskyjvl"
+    },
+    {
+      "filename": "api_7s72ctzw.md",
+      "title": "UK, EU, & JP markets: Product category expansion",
+      "url": "https://partner.tiktokshop.com/docv2/page/7s72ctzw"
+    },
+    {
+      "filename": "api_sj5neagj.md",
+      "title": "US market: Existing SKU standardization",
+      "url": "https://partner.tiktokshop.com/docv2/page/sj5neagj"
+    },
+    {
+      "filename": "api_xmc35tyc.md",
+      "title": "US market: Backorder Quantity Thresholds",
+      "url": "https://partner.tiktokshop.com/docv2/page/xmc35tyc"
+    },
+    {
+      "filename": "api_fapus8ql.md",
+      "title": "[Important] Legacy Global Product Management Flow Decommission Notice ",
+      "url": "https://partner.tiktokshop.com/docv2/page/fapus8ql"
+    },
+    {
+      "filename": "api_ezoyrtmn.md",
+      "title": "For SEA market: Product category expansion cutoff date is January 12, 2026",
+      "url": "https://partner.tiktokshop.com/docv2/page/ezoyrtmn"
+    },
+    {
+      "filename": "api_r1wchdjn.md",
+      "title": "EU Markets: Category Rules Update \u2013 Responsible Person Attribute Now Mandatory ",
+      "url": "https://partner.tiktokshop.com/docv2/page/r1wchdjn"
+    },
+    {
+      "filename": "api_l8xklei9.md",
+      "title": "US market: Mandatory compliance attributes added for Paper Money and Coins Categories",
+      "url": "https://partner.tiktokshop.com/docv2/page/l8xklei9"
+    },
+    {
+      "filename": "api_maintenance-scheduled-downtime-for-promotion-apis.md",
+      "title": "(MAINTENANCE) Scheduled downtime for Promotion APIs",
+      "url": "https://partner.tiktokshop.com/docv2/page/maintenance-scheduled-downtime-for-promotion-apis"
+    },
+    {
+      "filename": "api_supplementary-notice-on-api-deprecation-finance-apis.md",
+      "title": "Supplementary Notice on API Deprecation: Finance APIs",
+      "url": "https://partner.tiktokshop.com/docv2/page/supplementary-notice-on-api-deprecation-finance-apis"
+    },
+    {
+      "filename": "api_us-and-uk-markets-new-properties-added-to-finance-api.md",
+      "title": "US and UK markets: New properties added to Finance API",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-and-uk-markets-new-properties-added-to-finance-api"
+    },
+    {
+      "filename": "api_us-market-adding-shipping-fee-items-to-finance-api.md",
+      "title": "US market: Adding shipping fee items to Finance API",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-adding-shipping-fee-items-to-finance-api"
+    },
+    {
+      "filename": "api_new-version-v202501-for-statement-transactions-and-order-statement-transactions.md",
+      "title": "New version (v202501) for Statement Transactions and Order Statement Transactions",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-version-v202501-for-statement-transactions-and-order-statement-transactions"
+    },
+    {
+      "filename": "api_u62dh98s.md",
+      "title": "For Indonesian market: Changes in Order and Finance APIs for Horizon+ Orders",
+      "url": "https://partner.tiktokshop.com/docv2/page/u62dh98s"
+    },
+    {
+      "filename": "api_joyljtav.md",
+      "title": "Analytics Open API Metric Consistency Adjustment Announcement",
+      "url": "https://partner.tiktokshop.com/docv2/page/joyljtav"
+    },
+    {
+      "filename": "api_sv0xa2r6.md",
+      "title": "New APIs for TikTok LIVE ",
+      "url": "https://partner.tiktokshop.com/docv2/page/sv0xa2r6"
+    },
+    {
+      "filename": "api_j5k1cmia.md",
+      "title": "Analytics APIs now available globally",
+      "url": "https://partner.tiktokshop.com/docv2/page/j5k1cmia"
+    },
+    {
+      "filename": "api_ukjcmkq5.md",
+      "title": "[Important] New Analytics API Supports Data Drill Down & Deprecation of Old Versions",
+      "url": "https://partner.tiktokshop.com/docv2/page/ukjcmkq5"
+    },
+    {
+      "filename": "api_deprecating-tts-api-v1.md",
+      "title": "Deprecating TikTok Shop API V1",
+      "url": "https://partner.tiktokshop.com/docv2/page/deprecating-tts-api-v1"
+    },
+    {
+      "filename": "api_introducing-api-version-202309.md",
+      "title": "Introducing API version 202309",
+      "url": "https://partner.tiktokshop.com/docv2/page/introducing-api-version-202309"
+    },
+    {
+      "filename": "api_black-friday-cyber-monday-campaign-developer-update.md",
+      "title": "Black Friday Cyber Monday campaign developer update",
+      "url": "https://partner.tiktokshop.com/docv2/page/black-friday-cyber-monday-campaign-developer-update"
+    },
+    {
+      "filename": "api_tts-open-api-release-update-november-2023.md",
+      "title": "TikTok Shop open API release update - November 2023",
+      "url": "https://partner.tiktokshop.com/docv2/page/tts-open-api-release-update-november-2023"
+    },
+    {
+      "filename": "api_upcoming-updates-to-tts-open-api-release-december-2023-q1-2024.md",
+      "title": "Upcoming updates to TikTok Shop open API (release: December 2023/Q1 2024)",
+      "url": "https://partner.tiktokshop.com/docv2/page/upcoming-updates-to-tts-open-api-release-december-2023-q1-2024"
+    },
+    {
+      "filename": "api_introducing-seller-center-development-shops.md",
+      "title": "Introducing Seller Center development shops",
+      "url": "https://partner.tiktokshop.com/docv2/page/introducing-seller-center-development-shops"
+    },
+    {
+      "filename": "api_new-function-pre-publish-checklist.md",
+      "title": "New function: Pre-publish checklist",
+      "url": "https://partner.tiktokshop.com/docv2/page/new-function-pre-publish-checklist"
+    },
+    {
+      "filename": "api_for-us-local-sellers-retail-delivery-fee-is-added-to-api.md",
+      "title": "For US local sellers: Retail delivery fee is added to API",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-us-local-sellers-retail-delivery-fee-is-added-to-api"
+    },
+    {
+      "filename": "api_return-amount-detail-information-available-in-search-return-api.md",
+      "title": "Return amount detail information available in Search Return API",
+      "url": "https://partner.tiktokshop.com/docv2/page/return-amount-detail-information-available-in-search-return-api"
+    },
+    {
+      "filename": "api_for-sea-markets-introducing-development-shops.md",
+      "title": "For SEA markets: Introducing development shops",
+      "url": "https://partner.tiktokshop.com/docv2/page/for-sea-markets-introducing-development-shops"
+    },
+    {
+      "filename": "api_development-shops-supports-creating-accounts-for-cross-border-shops.md",
+      "title": "Development shops supports creating accounts for cross-border shops",
+      "url": "https://partner.tiktokshop.com/docv2/page/development-shops-supports-creating-accounts-for-cross-border-shops"
+    },
+    {
+      "filename": "api_ard-updates.md",
+      "title": "ARD updates",
+      "url": "https://partner.tiktokshop.com/docv2/page/ard-updates"
+    },
+    {
+      "filename": "api_adding-sku-and-product-limit-to-promotion-api.md",
+      "title": "Adding SKU and product limit to Promotion API",
+      "url": "https://partner.tiktokshop.com/docv2/page/adding-sku-and-product-limit-to-promotion-api"
+    },
+    {
+      "filename": "api_reminder-legacy-api-sunsets-on-dec-31-2024.md",
+      "title": "(REMINDER) Legacy API Sunsets on Dec 31, 2024",
+      "url": "https://partner.tiktokshop.com/docv2/page/reminder-legacy-api-sunsets-on-dec-31-2024"
+    },
+    {
+      "filename": "api_us-market-removing-some-reject-reasons-for-returns.md",
+      "title": "US market: Removing some reject reasons for returns",
+      "url": "https://partner.tiktokshop.com/docv2/page/us-market-removing-some-reject-reasons-for-returns"
+    },
+    {
+      "filename": "api_id-market-tokopedia-shop-open-api-integration-one-pager.md",
+      "title": "ID market: \"Tokopedia & Shop\" Open API Integration One Pager",
+      "url": "https://partner.tiktokshop.com/docv2/page/id-market-tokopedia-shop-open-api-integration-one-pager"
+    },
+    {
+      "filename": "api_br-market-updated-api-workflow-to-support-order-invoice-and-warehouse.md",
+      "title": "BR market: Updated API workflow to support Order, Invoice and Warehouse",
+      "url": "https://partner.tiktokshop.com/docv2/page/br-market-updated-api-workflow-to-support-order-invoice-and-warehouse"
+    },
+    {
+      "filename": "api_jp-market-updated-apis-for-products-orders-logistics-and-customer-service.md",
+      "title": "JP market: Updated APIs for Products, Orders, Logistics, and Customer service",
+      "url": "https://partner.tiktokshop.com/docv2/page/jp-market-updated-apis-for-products-orders-logistics-and-customer-service"
+    },
+    {
+      "filename": "api_mx-market-gs-pop-api-updates.md",
+      "title": "MX market: GS POP API Updates",
+      "url": "https://partner.tiktokshop.com/docv2/page/mx-market-gs-pop-api-updates"
+    },
+    {
+      "filename": "api_hrilusvh.md",
+      "title": "For ID market: One Change for Privacy Improvement of Image Message",
+      "url": "https://partner.tiktokshop.com/docv2/page/hrilusvh"
+    },
+    {
+      "filename": "api_k1156vkq.md",
+      "title": "ID market: Tokopedia Open API Termination - Migrate to TikTok Shop Partner Center by September 30, 2025",
+      "url": "https://partner.tiktokshop.com/docv2/page/k1156vkq"
+    },
+    {
+      "filename": "api_gvt0yknn.md",
+      "title": "EU market: Pfand Fees and Packaging Type Data",
+      "url": "https://partner.tiktokshop.com/docv2/page/gvt0yknn"
+    }
+  ]
+}

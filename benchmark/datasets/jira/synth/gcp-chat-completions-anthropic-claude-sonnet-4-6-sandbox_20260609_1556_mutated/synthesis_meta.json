@@ -1,0 +1,12 @@
+{
+  "dataset": "jira",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 1463.0101368427277,
+  "token_usage": {
+    "input_tokens": 8148065,
+    "output_tokens": 52246
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1556"
+}

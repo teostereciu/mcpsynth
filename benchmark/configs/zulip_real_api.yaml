@@ -1,0 +1,314 @@
+# Zulip Real API Testing Configuration
+#
+# This config defines what's needed to test the Zulip MCP server against
+# the real Zulip API (not just Prism mock).
+
+api_name: "Zulip"
+api_version: "REST API v1"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  ZULIP_API_KEY:
+    description: "Bot API key for Zulip"
+    how_to_get:
+      url: "https://your-org.zulipchat.com/#settings/your-bots"
+      steps:
+        - "Log in to your Zulip organization"
+        - "Navigate to Settings > Your bots (or click 'Add a new bot' if you don't have one)"
+        - "Click 'Add a new bot'"
+        - "Bot type: Generic bot (recommended for testing)"
+        - "Bot name: 'MCP Benchmark Testing' (or any name)"
+        - "Bot email: Will be auto-generated (e.g., mcp-bot@your-org.zulipchat.com)"
+        - "After creation, click 'Show/change your API key'"
+        - "Copy the API key"
+      notes:
+        - "Use a dedicated test bot account"
+        - "Bot will need permissions to create streams, send messages, etc."
+        - "IMPORTANT: For comprehensive testing, the main test bot needs ADMIN permissions"
+        - "Some operations require admin permissions (topic deletion, etc.)"
+    validation: "^[a-zA-Z0-9]{32}$"
+
+  ZULIP_EMAIL:
+    description: "Bot email address"
+    how_to_get:
+      notes:
+        - "This is shown when you create the bot"
+        - "Format: bot-name@your-org.zulipchat.com"
+        - "Or find it in Settings > Your bots"
+    validation: "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    example: "mcp-bot@example.zulipchat.com"
+
+  ZULIP_SITE:
+    description: "Zulip organization URL"
+    how_to_get:
+      notes:
+        - "Your Zulip organization's base URL"
+        - "Format: https://your-org.zulipchat.com"
+        - "Or your self-hosted instance URL"
+    validation: "^https?://[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    example: "https://example.zulipchat.com"
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS (for extended testing)
+# ==============================================================================
+
+optional_credentials:
+  ZULIP_TEST_STREAM:
+    description: "Dedicated test stream name (optional, will auto-create if not specified)"
+    notes:
+      - "Tests will create a temporary stream if not provided"
+      - "Use a dedicated test stream to avoid cluttering your main streams"
+    validation: "^[a-zA-Z0-9_-]+$"
+    example: "mcp-test-stream"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  Zulip does not provide a sandbox/test environment or mock server (like Prism).
+  Real API testing requires:
+    - Creating a Zulip account (or using self-hosted instance)
+    - Creating a test bot
+    - Using real API quota
+    - All operations affect real organization state
+
+  Risky scenarios (no mock alternative):
+    - Scenario 7: Stream Topic Management (deletes topics - could affect real discussions)
+    - Scenario 14: Organization Emoji Management (requires admin, modifies org emoji namespace)
+    - Scenario 6: Create Stream and Subscribe Users (creates streams, clutters org)
+    - Scenario 11: User Group Management (creates user groups, clutters org)
+
+  Recommendations:
+    - Use a dedicated test organization (free at zulip.com)
+    - Or use a self-hosted development instance
+    - Create a dedicated test stream to isolate test activity
+    - Consider using a separate test org for risky scenarios (7, 14)
+    - DO NOT run tests on production organizations with important data
+
+rate_limits:
+  general: "200 requests/minute per user (configurable by org admin)"
+  notes: |
+    - Test suite is designed to stay well under limits
+    - Typical full workflow test uses <30 requests
+    - Rate limits are configurable on self-hosted instances
+    - Zulipchat.com organizations have standard limits
+
+cleanup_notes: |
+  Tests are designed to be self-documenting and safe:
+    - Test streams are created with timestamp prefixes
+    - All test messages include [TEST] prefix
+    - Streams can be archived/deleted after testing
+    - No destructive operations on existing streams
+
+  Manual cleanup (if desired):
+    - Archive or delete test streams created during testing
+    - Delete test messages from streams
+    - Deactivate test bot when done (Settings > Your bots > Deactivate)
+
+# ==============================================================================
+# TEST COVERAGE
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 80  # Approximate, across 14 domains
+  tested_scenarios: 15
+
+  domains_tested:
+    - Messages (send, read, edit, delete, reactions, flags, search)
+    - Streams (create, subscribe, topics, archive)
+    - Users (get, update, presence, status)
+    - User Groups (create, manage members)
+    - Events (real-time event streaming, queue management)
+    - Drafts (create, list, edit, delete)
+    - Scheduled Messages (schedule, update, delete)
+    - Media (upload files, attachments)
+    - Organization (settings, custom emoji)
+    - Typing (typing indicators)
+    - Invites (send, manage, revoke)
+    - Emojis (emoji reactions, custom emoji)
+    - Filters (message filtering, narrowing)
+    - Server (server info, settings, capabilities)
+
+# ==============================================================================
+# PERMISSIONS REQUIRED
+# ==============================================================================
+
+permissions:
+  basic_testing:
+    description: "Minimal permissions for basic scenarios"
+    required:
+      - "Send messages to streams"
+      - "Create streams (public)"
+      - "Subscribe to streams"
+      - "React to messages"
+      - "Upload files"
+    coverage: "~60% of scenarios (9/15)"
+
+  recommended_testing:
+    description: "Recommended permissions for comprehensive testing"
+    required:
+      - "All basic permissions"
+      - "Create/manage user groups"
+      - "Schedule messages"
+      - "Manage drafts"
+      - "Edit messages"
+      - "Delete messages (own messages)"
+      - "Manage stream topics"
+    coverage: "~85% of scenarios (13/15)"
+
+  comprehensive_testing:
+    description: "Full permissions for all scenarios"
+    required:
+      - "All recommended permissions"
+      - "Administrator role (for test-bot)"
+      - "Upload custom emoji (requires admin)"
+      - "Delete stream topics (requires admin)"
+      - "Additional test bots: alice-bot, bob-bot, charlie-bot"
+    coverage: "100% of scenarios (20/20)"
+    notes: |
+      - Main test bot (test-bot) MUST have Administrator role
+      - Required for scenarios 7 (topic deletion) and 14 (custom emoji)
+      - Multi-user scenarios (3, 6, 8, 11, 13, 19) require alice-bot, bob-bot, charlie-bot
+      - All additional bots can have Member role (admin not required)
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  api_key_storage: |
+    - Store credentials in .env file (gitignored)
+    - Never commit API keys to version control
+    - Use environment variables for CI/CD
+
+  bot_permissions: |
+    - Use a dedicated test bot account
+    - Don't use personal account API keys
+    - Consider creating bot with limited permissions
+    - Deactivate bot after testing if no longer needed
+
+  safe_testing: |
+    - Use dedicated test streams
+    - Don't test on production streams with important discussions
+    - Review test code before running
+    - Be aware tests will send real messages and create real resources
+
+# ==============================================================================
+# SETUP INSTRUCTIONS
+# ==============================================================================
+
+setup_instructions:
+  quick_start: |
+    1. Create a free Zulip organization at https://zulip.com/new/
+    2. Or use your existing organization/self-hosted instance
+    3. Create test bots (4 total required):
+       a. Main test bot (test-bot@your-org.zulipchat.com) - MUST HAVE ADMIN ROLE
+       b. alice-bot@your-org.zulipchat.com (Generic bot)
+       c. bob-bot@your-org.zulipchat.com (Generic bot)
+       d. charlie-bot@your-org.zulipchat.com (Generic bot)
+    4. Grant admin permissions to main test bot:
+       - Settings > Organization settings > Users
+       - Find your test bot
+       - Change role to "Administrator"
+    5. Run: python scripts/setup_real_api.py zulip
+    6. Follow the interactive wizard to configure credentials
+    7. Run tests: pytest tests/ --impl-dir=generated_tools -v
+
+  detailed_bot_setup: |
+    Required Bots for Comprehensive Testing:
+
+    1. Main Test Bot (ADMIN):
+       - Email: test-bot@your-org.zulipchat.com (or custom name)
+       - Role: Administrator
+       - Purpose: Primary bot that runs all tests
+       - Permissions: Full admin access
+       - Why admin: Scenarios 7 (topic deletion) and 14 (custom emoji) require admin
+
+    2. Alice Bot (Member):
+       - Email: alice-bot@your-org.zulipchat.com
+       - Role: Member
+       - Purpose: Multi-user scenarios (scenarios 3, 6, 8, 11, 13, 19)
+
+    3. Bob Bot (Member):
+       - Email: bob-bot@your-org.zulipchat.com
+       - Role: Member
+       - Purpose: Multi-user scenarios (scenarios 6, 11, 13, 19)
+
+    4. Charlie Bot (Member):
+       - Email: charlie-bot@your-org.zulipchat.com
+       - Role: Member
+       - Purpose: User groups (scenario 11), multi-user scenarios (scenario 13)
+
+    Setup Steps:
+    1. Go to Settings > Your bots
+    2. Click "Add a new bot" (repeat 4 times)
+    3. For each bot:
+       - Bot type: Generic bot
+       - Bot name: test-bot, alice-bot, bob-bot, charlie-bot
+       - Bot email: Will be auto-generated
+    4. For test-bot only:
+       - Go to Settings > Organization settings > Users
+       - Find "test-bot"
+       - Click the pencil icon
+       - Change role to "Administrator"
+       - Click "Save changes"
+    5. Copy the API key from test-bot for your .env file
+
+  self_hosted: |
+    If using self-hosted Zulip:
+    1. Ensure your Zulip instance is accessible
+    2. Create 4 bot accounts (test-bot, alice-bot, bob-bot, charlie-bot)
+    3. Grant admin role to test-bot
+    4. Update ZULIP_SITE to your instance URL
+    5. Follow normal setup process
+
+# ==============================================================================
+# TEST ENVIRONMENT (Current Setup)
+# ==============================================================================
+
+test_environment:
+  organization: "demo-synthmcp.zulipchat.com"
+  bots:
+    test-bot:
+      email: "test-bot@demo-synthmcp.zulipchat.com"
+      role: "Administrator"
+      purpose: "Main test bot (runs all scenarios)"
+      required: true
+    alice-bot:
+      email: "alice-bot@demo-synthmcp.zulipchat.com"
+      role: "Member"
+      purpose: "Multi-user scenarios (3, 6, 8, 11, 13, 19)"
+      required: true
+    bob-bot:
+      email: "bob-bot@demo-synthmcp.zulipchat.com"
+      role: "Member"
+      purpose: "Multi-user scenarios (6, 11, 13, 19)"
+      required: true
+    charlie-bot:
+      email: "charlie-bot@demo-synthmcp.zulipchat.com"
+      role: "Member"
+      purpose: "User groups (11), multi-user scenarios (13)"
+      required: true
+
+  notes: |
+    - All bots created as "Generic bot" type
+    - Only test-bot has Administrator role
+    - TASK.md references these specific bot emails
+    - Scenario solutions hardcode these bot emails
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  api_docs: "https://zulip.com/api/"
+  bot_setup: "https://zulip.com/help/add-a-bot-or-integration"
+  api_keys: "https://zulip.com/api/api-keys"
+  rest_api: "https://zulip.com/api/rest"
+  self_hosting: "https://zulip.readthedocs.io/en/stable/production/install.html"

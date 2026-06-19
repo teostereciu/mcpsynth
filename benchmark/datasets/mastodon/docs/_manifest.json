@@ -1,0 +1,183 @@
+{
+  "source": "Mastodon API (docs.joinmastodon.org)",
+  "scraped_from": "https://docs.joinmastodon.org/methods/",
+  "scrape_date": "2026-05-12T11:29:50.541582",
+  "total_pages": 35,
+  "files": [
+    {
+      "filename": "api_accounts.md",
+      "title": "accounts API methods",
+      "url": "https://docs.joinmastodon.org/methods/accounts/"
+    },
+    {
+      "filename": "api_blocks.md",
+      "title": "blocks API methods",
+      "url": "https://docs.joinmastodon.org/methods/blocks/"
+    },
+    {
+      "filename": "api_bookmarks.md",
+      "title": "bookmarks API methods",
+      "url": "https://docs.joinmastodon.org/methods/bookmarks/"
+    },
+    {
+      "filename": "api_domain_blocks.md",
+      "title": "domain_blocks API methods",
+      "url": "https://docs.joinmastodon.org/methods/domain_blocks/"
+    },
+    {
+      "filename": "api_endorsements.md",
+      "title": "endorsements API methods",
+      "url": "https://docs.joinmastodon.org/methods/endorsements/"
+    },
+    {
+      "filename": "api_favourites.md",
+      "title": "favourites API methods",
+      "url": "https://docs.joinmastodon.org/methods/favourites/"
+    },
+    {
+      "filename": "api_featured_tags.md",
+      "title": "featured_tags API methods",
+      "url": "https://docs.joinmastodon.org/methods/featured_tags/"
+    },
+    {
+      "filename": "api_filters.md",
+      "title": "filters API methods",
+      "url": "https://docs.joinmastodon.org/methods/filters/"
+    },
+    {
+      "filename": "api_follow_requests.md",
+      "title": "follow_requests API methods",
+      "url": "https://docs.joinmastodon.org/methods/follow_requests/"
+    },
+    {
+      "filename": "api_followed_tags.md",
+      "title": "followed_tags API methods",
+      "url": "https://docs.joinmastodon.org/methods/followed_tags/"
+    },
+    {
+      "filename": "api_mutes.md",
+      "title": "mutes API methods",
+      "url": "https://docs.joinmastodon.org/methods/mutes/"
+    },
+    {
+      "filename": "api_preferences.md",
+      "title": "preferences API methods",
+      "url": "https://docs.joinmastodon.org/methods/preferences/"
+    },
+    {
+      "filename": "api_reports.md",
+      "title": "reports API methods",
+      "url": "https://docs.joinmastodon.org/methods/reports/"
+    },
+    {
+      "filename": "api_suggestions.md",
+      "title": "suggestions API methods",
+      "url": "https://docs.joinmastodon.org/methods/suggestions/"
+    },
+    {
+      "filename": "api_tags.md",
+      "title": "tags API methods",
+      "url": "https://docs.joinmastodon.org/methods/tags/"
+    },
+    {
+      "filename": "api_profile.md",
+      "title": "profile API methods",
+      "url": "https://docs.joinmastodon.org/methods/profile/"
+    },
+    {
+      "filename": "api_statuses.md",
+      "title": "statuses API methods",
+      "url": "https://docs.joinmastodon.org/methods/statuses/"
+    },
+    {
+      "filename": "api_media.md",
+      "title": "media API methods",
+      "url": "https://docs.joinmastodon.org/methods/media/"
+    },
+    {
+      "filename": "api_polls.md",
+      "title": "polls API methods",
+      "url": "https://docs.joinmastodon.org/methods/polls/"
+    },
+    {
+      "filename": "api_scheduled_statuses.md",
+      "title": "scheduled_statuses API methods",
+      "url": "https://docs.joinmastodon.org/methods/scheduled_statuses/"
+    },
+    {
+      "filename": "api_timelines.md",
+      "title": "timelines API methods",
+      "url": "https://docs.joinmastodon.org/methods/timelines/"
+    },
+    {
+      "filename": "api_conversations.md",
+      "title": "conversations API methods",
+      "url": "https://docs.joinmastodon.org/methods/conversations/"
+    },
+    {
+      "filename": "api_lists.md",
+      "title": "lists API methods",
+      "url": "https://docs.joinmastodon.org/methods/lists/"
+    },
+    {
+      "filename": "api_markers.md",
+      "title": "markers API methods",
+      "url": "https://docs.joinmastodon.org/methods/markers/"
+    },
+    {
+      "filename": "api_streaming.md",
+      "title": "streaming API methods",
+      "url": "https://docs.joinmastodon.org/methods/streaming/"
+    },
+    {
+      "filename": "api_notifications.md",
+      "title": "notifications API methods",
+      "url": "https://docs.joinmastodon.org/methods/notifications/"
+    },
+    {
+      "filename": "api_push.md",
+      "title": "push API methods",
+      "url": "https://docs.joinmastodon.org/methods/push/"
+    },
+    {
+      "filename": "api_apps.md",
+      "title": "apps API methods",
+      "url": "https://docs.joinmastodon.org/methods/apps/"
+    },
+    {
+      "filename": "api_oauth.md",
+      "title": "OAuth API methods",
+      "url": "https://docs.joinmastodon.org/methods/oauth/"
+    },
+    {
+      "filename": "api_instance.md",
+      "title": "instance API methods",
+      "url": "https://docs.joinmastodon.org/methods/instance/"
+    },
+    {
+      "filename": "api_announcements.md",
+      "title": "announcements API methods",
+      "url": "https://docs.joinmastodon.org/methods/announcements/"
+    },
+    {
+      "filename": "api_custom_emojis.md",
+      "title": "custom_emojis API methods",
+      "url": "https://docs.joinmastodon.org/methods/custom_emojis/"
+    },
+    {
+      "filename": "api_directory.md",
+      "title": "directory API methods",
+      "url": "https://docs.joinmastodon.org/methods/directory/"
+    },
+    {
+      "filename": "api_trends.md",
+      "title": "trends API methods",
+      "url": "https://docs.joinmastodon.org/methods/trends/"
+    },
+    {
+      "filename": "api_search.md",
+      "title": "search API methods",
+      "url": "https://docs.joinmastodon.org/methods/search/"
+    }
+  ]
+}

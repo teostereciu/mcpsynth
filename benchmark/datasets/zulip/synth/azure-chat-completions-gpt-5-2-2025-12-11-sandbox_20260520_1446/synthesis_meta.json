@@ -1,0 +1,12 @@
+{
+  "dataset": "zulip",
+  "model": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox",
+  "condition": "docs",
+  "synthesis_time": 59.163002014160156,
+  "token_usage": {
+    "input_tokens": 114886,
+    "output_tokens": 2048
+  },
+  "cost_estimate": null,
+  "timestamp": "20260520_1446"
+}

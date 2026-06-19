@@ -1,0 +1,310 @@
+{
+  "list_pages": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /pages"
+  },
+  "get_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /pages/{id}"
+  },
+  "create_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "POST /pages"
+  },
+  "update_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "PUT /pages/{id}"
+  },
+  "delete_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "DELETE /pages/{id}"
+  },
+  "update_page_title": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "PUT /pages/{id}/title"
+  },
+  "list_spaces": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /spaces"
+  },
+  "get_space": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /spaces/{id}"
+  },
+  "create_space": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "POST /spaces"
+  },
+  "list_blog_posts": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "GET /blogposts"
+  },
+  "get_blog_post": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "GET /blogposts/{id}"
+  },
+  "create_blog_post": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "POST /blogposts"
+  },
+  "update_blog_post": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "PUT /blogposts/{id}"
+  },
+  "delete_blog_post": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "DELETE /blogposts/{id}"
+  },
+  "list_page_footer_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /pages/{id}/footer-comments"
+  },
+  "list_page_inline_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /pages/{id}/inline-comments"
+  },
+  "create_footer_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "POST /footer-comments"
+  },
+  "get_footer_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /footer-comments/{comment-id}"
+  },
+  "update_footer_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "PUT /footer-comments/{comment-id}"
+  },
+  "delete_footer_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "DELETE /footer-comments/{comment-id}"
+  },
+  "list_attachments": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /attachments"
+  },
+  "get_attachment": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /attachments/{id}"
+  },
+  "list_page_attachments": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /pages/{id}/attachments"
+  },
+  "delete_attachment": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "DELETE /attachments/{id}"
+  },
+  "list_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /labels"
+  },
+  "list_page_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /pages/{id}/labels"
+  },
+  "list_space_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /spaces/{id}/labels"
+  },
+  "list_page_versions": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /pages/{id}/versions"
+  },
+  "get_page_version": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /pages/{page-id}/versions/{version-number}"
+  },
+  "list_blog_post_versions": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /blogposts/{id}/versions"
+  },
+  "get_blog_post_version": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /blogposts/{blogpost-id}/versions/{version-number}"
+  },
+  "list_page_properties": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /pages/{page-id}/properties"
+  },
+  "get_page_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /pages/{page-id}/properties/{property-id}"
+  },
+  "create_page_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "POST /pages/{page-id}/properties"
+  },
+  "update_page_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "PUT /pages/{page-id}/properties/{property-id}"
+  },
+  "delete_page_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "DELETE /pages/{page-id}/properties/{property-id}"
+  },
+  "get_users_by_account_ids": {
+    "doc": "docs/api_v2_user.md",
+    "endpoint": "POST /users-bulk"
+  },
+  "check_user_access": {
+    "doc": "docs/api_v2_user.md",
+    "endpoint": "POST /user/access/check-access-by-email"
+  },
+  "invite_users_by_email": {
+    "doc": "docs/api_v2_user.md",
+    "endpoint": "POST /user/access/invite-by-email"
+  },
+  "search_content": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search"
+  },
+  "search_users": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search/user"
+  },
+  "list_space_pages": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /spaces/{id}/pages"
+  },
+  "list_space_blog_posts": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "GET /spaces/{id}/blogposts"
+  },
+  "list_label_pages": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /labels/{id}/pages"
+  },
+  "list_label_blog_posts": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "GET /labels/{id}/blogposts"
+  },
+  "list_label_attachments": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /labels/{id}/attachments"
+  },
+  "list_blog_post_footer_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /blogposts/{id}/footer-comments"
+  },
+  "list_blog_post_inline_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /blogposts/{id}/inline-comments"
+  },
+  "list_blog_post_attachments": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /blogposts/{id}/attachments"
+  },
+  "list_blog_post_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /blogposts/{id}/labels"
+  },
+  "list_blog_post_properties": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /blogposts/{blogpost-id}/properties"
+  },
+  "get_blog_post_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /blogposts/{blogpost-id}/properties/{property-id}"
+  },
+  "create_blog_post_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "POST /blogposts/{blogpost-id}/properties"
+  },
+  "update_blog_post_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "PUT /blogposts/{blogpost-id}/properties/{property-id}"
+  },
+  "delete_blog_post_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "DELETE /blogposts/{blogpost-id}/properties/{property-id}"
+  },
+  "list_attachment_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /attachments/{id}/labels"
+  },
+  "list_attachment_properties": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /attachments/{attachment-id}/properties"
+  },
+  "get_attachment_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /attachments/{attachment-id}/properties/{property-id}"
+  },
+  "create_attachment_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "POST /attachments/{attachment-id}/properties"
+  },
+  "update_attachment_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "PUT /attachments/{attachment-id}/properties/{property-id}"
+  },
+  "delete_attachment_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "DELETE /attachments/{attachment-id}/properties/{property-id}"
+  },
+  "list_attachment_versions": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /attachments/{id}/versions"
+  },
+  "get_attachment_version": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /attachments/{attachment-id}/versions/{version-number}"
+  },
+  "list_attachment_footer_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /attachments/{id}/footer-comments"
+  },
+  "list_all_footer_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /footer-comments"
+  },
+  "list_footer_comment_children": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /footer-comments/{id}/children"
+  },
+  "list_footer_comment_versions": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /footer-comments/{id}/versions"
+  },
+  "get_footer_comment_version": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /footer-comments/{id}/versions/{version-number}"
+  },
+  "list_all_inline_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /inline-comments"
+  },
+  "create_inline_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "POST /inline-comments"
+  },
+  "get_inline_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /inline-comments/{comment-id}"
+  },
+  "update_inline_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "PUT /inline-comments/{comment-id}"
+  },
+  "delete_inline_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "DELETE /inline-comments/{comment-id}"
+  },
+  "list_inline_comment_children": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /inline-comments/{id}/children"
+  },
+  "list_inline_comment_versions": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /inline-comments/{id}/versions"
+  },
+  "get_inline_comment_version": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /inline-comments/{id}/versions/{version-number}"
+  },
+  "list_space_content_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /spaces/{id}/content/labels"
+  }
+}

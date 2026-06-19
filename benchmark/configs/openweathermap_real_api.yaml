@@ -1,0 +1,131 @@
+# OpenWeatherMap Real API Testing Configuration
+#
+# This config defines what's needed to test the OpenWeatherMap MCP server
+# against the real OpenWeatherMap API (free tier).
+
+api_name: "OpenWeatherMap"
+api_version: "API 2.5 (free tier)"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  OPENWEATHER_API_KEY:
+    description: "OpenWeatherMap API key"
+    how_to_get:
+      url: "https://home.openweathermap.org/api_keys"
+      steps:
+        - "Sign up at https://openweathermap.org/ (free account)"
+        - "Verify your email address"
+        - "Navigate to 'My API keys' in your account"
+        - "A default API key is created automatically"
+        - "Copy the key (32-character hex string)"
+      notes:
+        - "Free tier is sufficient for all 10 test scenarios"
+        - "New API keys may take up to 2 hours to activate"
+        - "Free tier: 60 calls/minute, 1,000,000 calls/month"
+    validation: "^[a-f0-9]{32}$"
+    example: "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  OpenWeatherMap does not provide a separate sandbox/test environment.
+  All API calls go to the production endpoint: https://api.openweathermap.org
+
+  Free Tier Coverage:
+    ✅ Current Weather Data (API 2.5)
+    ✅ 5 Day / 3 Hour Forecast (API 2.5)
+    ✅ Air Pollution API
+    ✅ Geocoding API (Direct and Reverse)
+    ❌ One Call API 3.0 (requires paid plan)
+    ❌ Historical weather data (requires paid plan)
+
+rate_limits:
+  free_tier: "60 calls/minute, 1,000,000 calls/month"
+  notes: |
+    - All 10 test scenarios fit comfortably within free tier limits
+    - Add small delays if running scenarios repeatedly in quick succession
+    - Burst limit: 60 calls/minute (enforced per API key)
+
+cleanup_notes: |
+  OpenWeatherMap is fully read-only:
+    - No resources created, no cleanup needed
+    - Safe to run tests repeatedly without side effects
+    - Weather data is live — results may vary by conditions
+
+# ==============================================================================
+# TEST COVERAGE BY API
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 4
+
+  by_api:
+    current_weather:
+      description: "Current weather by city name or coordinates"
+      endpoint: "/data/2.5/weather"
+      priority: "critical"
+      scenarios: [1, 2, 8, 9]
+
+    forecast:
+      description: "5-day / 3-hour forecast"
+      endpoint: "/data/2.5/forecast"
+      priority: "critical"
+      scenarios: [3, 4]
+
+    geocoding:
+      description: "City name to coordinates and reverse"
+      endpoint: "/geo/1.0/direct and /geo/1.0/reverse"
+      priority: "high"
+      scenarios: [5, 6, 10]
+
+    air_pollution:
+      description: "Air quality index and pollutant data"
+      endpoint: "/data/2.5/air_pollution"
+      priority: "medium"
+      scenarios: [7, 10]
+
+# ==============================================================================
+# COMMON PARAMETERS
+# ==============================================================================
+
+common_parameters:
+  units:
+    - "metric" — Celsius, m/s wind speed
+    - "imperial" — Fahrenheit, mph wind speed
+    - "standard" — Kelvin (default)
+  lang:
+    description: "Language for weather descriptions"
+    example_values: ["en", "de", "fr", "es", "ja", "zh_cn"]
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  credential_storage: |
+    - Store API key in .env file (gitignored)
+    - Never commit API key to version control
+    - Free tier key has no financial risk if exposed, but still rotate if leaked
+
+  safe_testing: |
+    - Fully read-only API, no side effects
+    - Safe to test in any environment
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  api_docs: "https://openweathermap.org/api"
+  current_weather: "https://openweathermap.org/current"
+  forecast: "https://openweathermap.org/forecast5"
+  geocoding: "https://openweathermap.org/api/geocoding-api"
+  air_pollution: "https://openweathermap.org/api/air-pollution"
+  api_keys: "https://home.openweathermap.org/api_keys"

@@ -1,0 +1,43 @@
+# Payment/68/post/retrieve3ds2Result
+
+*Source: https://docs.adyen.com/api-explorer/Payment/68/post/retrieve3ds2Result*
+
+---
+
+# Get the 3DS2 authentication result
+Retrieves thethreeDS2Resultafter doing a 3D Secure 2 authentication only.
+The merchant account identifier, with which you want to process the transaction.
+The pspReference returned in the /authorise call.
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow lessthreeDS2ResultobjectThe result of the 3D Secure 2 authentication.Show childrenHide childrenauthenticationValuestringTheauthenticationValuevalue as defined in the 3D Secure 2 specification.cavvAlgorithmstringThe algorithm used by the ACS to calculate the authentication value, only for Cartes Bancaires integrations.challengeCancelstringIndicator informing the Access Control Server (ACS) and the Directory Server (DS) that the authentication has been cancelled. For possible values, refer to3D Secure API reference.dsTransIDstringThedsTransIDvalue as defined in the 3D Secure 2 specification.ecistringTheecivalue as defined in the 3D Secure 2 specification.exemptionIndicatorstringIndicates the exemption type that was applied by the issuer to the authentication, if exemption applied.
+Allowed values:lowValuesecureCorporatetrustedBeneficiarytransactionRiskAnalysismessageVersionstringThemessageVersionvalue as defined in the 3D Secure 2 specification.riskScorestringRisk score calculated by Cartes Bancaires Directory Server (DS).threeDSRequestorChallengeIndstringIndicates whether a challenge is requested for this transaction. Possible values:01— No preference02— No challenge requested03— Challenge requested (3DS Requestor preference)04— Challenge requested (Mandate)05— No challenge (transactional risk analysis is already performed)06— Data OnlythreeDSServerTransIDstringThethreeDSServerTransIDvalue as defined in the 3D Secure 2 specification.timestampstringThetimestampvalue of the 3D Secure 2 authentication.transStatusstringThetransStatusvalue as defined in the 3D Secure 2 specification.transStatusReasonstringProvides information on why thetransStatusfield has the specified value. For possible values, refer toour docs.whiteListStatusstringThewhiteListStatusvalue as defined in the 3D Secure 2 specification.
+- 400 - Bad RequestA problem reading or understanding the request.Show moreShow lessadditionalDataobjectContains additional information about the payment. Some data fields are included only if you select them first. Go toCustomer Area>Developers>Additional data.errorCodestringThe error code mapped to the error message.errorTypestringThe category of the error.messagestringA short explanation of the issue.pspReferencestringThe PSP reference of the payment.statusintegerThe HTTP response status.
+- 401 - UnauthorizedAuthentication required.Show moreShow lessadditionalDataobjectContains additional information about the payment. Some data fields are included only if you select them first. Go toCustomer Area>Developers>Additional data.errorCodestringThe error code mapped to the error message.errorTypestringThe category of the error.messagestringA short explanation of the issue.pspReferencestringThe PSP reference of the payment.statusintegerThe HTTP response status.
+- 403 - ForbiddenInsufficient permissions to process the request.Show moreShow lessadditionalDataobjectContains additional information about the payment. Some data fields are included only if you select them first. Go toCustomer Area>Developers>Additional data.errorCodestringThe error code mapped to the error message.errorTypestringThe category of the error.messagestringA short explanation of the issue.pspReferencestringThe PSP reference of the payment.statusintegerThe HTTP response status.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessadditionalDataobjectContains additional information about the payment. Some data fields are included only if you select them first. Go toCustomer Area>Developers>Additional data.errorCodestringThe error code mapped to the error message.errorTypestringThe category of the error.messagestringA short explanation of the issue.pspReferencestringThe PSP reference of the payment.statusintegerThe HTTP response status.
+- 500 - Internal Server ErrorThe server could not process the request.Show moreShow lessadditionalDataobjectContains additional information about the payment. Some data fields are included only if you select them first. Go toCustomer Area>Developers>Additional data.errorCodestringThe error code mapped to the error message.errorTypestringThe category of the error.messagestringA short explanation of the issue.pspReferencestringThe PSP reference of the payment.statusintegerThe HTTP response status.
+
+#### 200 - OK
+- lowValue
+- secureCorporate
+- trustedBeneficiary
+- transactionRiskAnalysis
+- 01— No preference
+- 02— No challenge requested
+- 03— Challenge requested (3DS Requestor preference)
+- 04— Challenge requested (Mandate)
+- 05— No challenge (transactional risk analysis is already performed)
+- 06— Data Only
+
+#### 400 - Bad Request
+
+#### 401 - Unauthorized
+
+#### 403 - Forbidden
+
+#### 422 - Unprocessable Entity
+
+#### 500 - Internal Server Error

@@ -1,0 +1,19 @@
+{
+  "name": "stock_time_series",
+  "description": "Stock time series wrapper for TIME_SERIES_* endpoints.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "function": {"type": "string"},
+      "ticker": {"type": "string"},
+      "interval": {"type": "string", "description": "Intraday interval (1min,5min,15min,30min,60min) when applicable"},
+      "output_size": {"type": "string", "description": "compact|full"},
+      "adjusted": {"type": "boolean"},
+      "month": {"type": "string", "description": "YYYY-MM"},
+      "entitlement": {"type": "string", "description": "realtime|delayed"},
+      "datatype": {"type": "string", "description": "json|csv"},
+      "apikey": {"type": "string"}
+    },
+    "required": ["function", "ticker"]
+  }
+}

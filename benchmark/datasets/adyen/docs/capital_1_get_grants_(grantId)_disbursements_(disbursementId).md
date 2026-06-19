@@ -1,0 +1,23 @@
+# capital/1/get/grants/(grantId)/disbursements/(disbursementId)
+
+*Source: https://docs.adyen.com/api-explorer/capital/1/get/grants/(grantId)/disbursements/(disbursementId)*
+
+---
+
+# Get disbursement details
+Returns the details of a disbursement specified in the path.
+The unique identifier of the disbursement.
+The unique identifier of the grant reference.
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow lessaccountHolderIdstringThe unique identifier of the account holder that received the disbursement.amountobjectContains information about the amount of the disbursement.Show childrenHide childrencurrencystringThe three-characterISO currency codeof the amount.valueintegerThe numeric value of the amount, inminor units.balanceAccountIdstringThe unique identifier of the balance account that received the disbursement.balancesobjectContains information about the balances of the disbursement.Show childrenHide childrencurrencystringThe three-characterISO currency code.feeintegerThe amount of the grant fee.principalintegerThe grant amount that is paid out to the user for business financing.totalintegerThe total amount of the grant that the user must repay. It is the sum of the fee amount and the principal amount.feeobjectContains information about the fee that your user must pay for the disbursement.Show childrenHide childrenamountobjectContains the amount of the grant fee.Show childrenHide childrencurrencystringThe three-characterISO currency codeof the amount.valueintegerThe numeric value of the amount, inminor units.fundsCollectionsarray[object]Contains information about the accounts that Adyen uses to collect funds related to repayments.Show childrenHide childrenaccountIdentificationobjectContains the identification information of the account to which you can transfer funds related to repayments.Show childrenHide childrentypestringThe type of account, which depends on the country of the account and the currency of the transfer.Select typeauLocalbrLocalcaLocalczLocaldkLocalhkLocalhuLocalibannoLocalnumberAndBicnzLocalplLocalseLocalsgLocalukLocalusLocalfundsCollectionTypestringThe type of funds collection.Possible values:UnscheduledRepayment,Revocation.grantIdstringThe unique identifier of the grant related to the disbursement.idstringThe unique identifier of the disbursement.repaymentobjectContains information about the basis points configured for repaying the disbursement.Show childrenHide childrenbasisPointsintegerMaximum:10000The percentage of your user's incoming net volume that is deducted for repaying the grant. The percentage expressed inbasis points.updateDescriptionstringDeprecatedMin length:1Max length:240
+- 404 - Not FoundThe entity was not found.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringUnique business error code.instancestringA URI that identifies the specific occurrence of the problem if applicable.invalidFieldsarray[object]Array of fields with validation errors when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringThe unique reference for the request.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the validation error type. It points to human-readable documentation for the problem type.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringUnique business error code.instancestringA URI that identifies the specific occurrence of the problem if applicable.invalidFieldsarray[object]Array of fields with validation errors when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringThe unique reference for the request.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the validation error type. It points to human-readable documentation for the problem type.
+
+#### 200 - OK
+
+#### 404 - Not Found
+
+#### 422 - Unprocessable Entity

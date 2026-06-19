@@ -1,0 +1,278 @@
+{
+  "search_recipes": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "search_recipes_by_nutrients": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/findByNutrients"
+  },
+  "search_recipes_by_ingredients": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/findByIngredients"
+  },
+  "get_recipe_information": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "get_recipe_information_bulk": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/informationBulk"
+  },
+  "get_similar_recipes": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/similar"
+  },
+  "get_random_recipes": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/random"
+  },
+  "autocomplete_recipe_search": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/autocomplete"
+  },
+  "get_recipe_taste_by_id": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/tasteWidget.json"
+  },
+  "get_recipe_equipment_by_id": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/equipmentWidget.json"
+  },
+  "get_recipe_price_breakdown_by_id": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/priceBreakdownWidget.json"
+  },
+  "get_recipe_ingredients_by_id": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/ingredientWidget.json"
+  },
+  "get_recipe_nutrition_by_id": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "get_analyzed_recipe_instructions": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/analyzedInstructions"
+  },
+  "extract_recipe_from_website": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/extract"
+  },
+  "analyze_recipe": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "POST /recipes/analyze"
+  },
+  "summarize_recipe": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/summary"
+  },
+  "analyze_recipe_instructions": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "POST /recipes/analyzeInstructions"
+  },
+  "classify_cuisine": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "POST /recipes/cuisine"
+  },
+  "analyze_recipe_search_query": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/queries/analyze"
+  },
+  "search_ingredients": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "get_ingredient_information": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "compute_ingredient_amount": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/amount"
+  },
+  "convert_amounts": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /recipes/convert"
+  },
+  "parse_ingredients": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "compute_glycemic_load": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "POST /food/ingredients/glycemicLoad"
+  },
+  "autocomplete_ingredient_search": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  },
+  "get_ingredient_substitutes": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/substitutes"
+  },
+  "get_ingredient_substitutes_by_id": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/substitutes"
+  },
+  "get_dish_pairing_for_wine": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/dishes"
+  },
+  "get_wine_pairing": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "get_wine_description": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/description"
+  },
+  "get_wine_recommendation": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/recommendation"
+  },
+  "get_meal_plan_week": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/week/{start-date}"
+  },
+  "get_meal_plan_day": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/day/{date}"
+  },
+  "generate_meal_plan": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "add_to_meal_plan": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/items"
+  },
+  "clear_meal_plan_day": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/day/{date}"
+  },
+  "delete_from_meal_plan": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/items/{id}"
+  },
+  "get_meal_plan_templates": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/templates"
+  },
+  "get_meal_plan_template": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/templates/{id}"
+  },
+  "add_meal_plan_template": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/templates"
+  },
+  "delete_meal_plan_template": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/templates/{id}"
+  },
+  "get_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/shopping-list"
+  },
+  "add_to_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/shopping-list/items"
+  },
+  "delete_from_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/shopping-list/items/{id}"
+  },
+  "generate_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/shopping-list/{start-date}/{end-date}"
+  },
+  "compute_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/shopping-list/compute"
+  },
+  "connect_user": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /users/connect"
+  },
+  "search_menu_items": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/search"
+  },
+  "get_menu_item_information": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/{id}"
+  },
+  "autocomplete_menu_item_search": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/suggest"
+  },
+  "search_grocery_products": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/search"
+  },
+  "search_grocery_products_by_upc": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/upc/{upc}"
+  },
+  "get_product_information": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/{id}"
+  },
+  "get_comparable_products": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/upc/{upc}/comparable"
+  },
+  "autocomplete_product_search": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/suggest"
+  },
+  "classify_grocery_product": {
+    "doc": "docs/api_products.md",
+    "endpoint": "POST /food/products/classify"
+  },
+  "classify_grocery_product_bulk": {
+    "doc": "docs/api_products.md",
+    "endpoint": "POST /food/products/classifyBatch"
+  },
+  "map_ingredients_to_grocery_products": {
+    "doc": "docs/api_products.md",
+    "endpoint": "POST /food/ingredients/map"
+  },
+  "search_all_food": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/search"
+  },
+  "search_food_videos": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/videos/search"
+  },
+  "quick_answer": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /recipes/quickAnswer"
+  },
+  "detect_food_in_text": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "POST /food/detect"
+  },
+  "search_site_content": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/site/search"
+  },
+  "get_random_food_joke": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/jokes/random"
+  },
+  "get_random_food_trivia": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/trivia/random"
+  },
+  "talk_to_chatbot": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/converse"
+  },
+  "conversation_suggests": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/converse/suggest"
+  }
+}

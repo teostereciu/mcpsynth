@@ -1,0 +1,1231 @@
+{
+  "dataset": "notion",
+  "impl": "gcp-chat-completions-anthropic-claude-haiku-4-5-sandbox_20260615_1358_mutated_patched",
+  "mode": "mcp",
+  "model": "gcp-chat-completions-chat-gemini-2.5-pro-sandbox",
+  "judge_model": "gcp-chat-completions-chat-gemini-3-flash-preview-sandbox",
+  "summary": {
+    "total": 22,
+    "pass": 1,
+    "fail": 1,
+    "undefined": 20,
+    "scoreable": 2,
+    "pass_rate": 0.5,
+    "synthesis_pass_rate": 0.6667,
+    "n_server_sufficient": 10,
+    "n_server_insufficient": 5,
+    "n_server_sufficient_unknown": 7,
+    "failure_reasons": {
+      "ENVIRONMENT": 19,
+      "TOOL_IMPLEMENTATION": 1,
+      "AGENT_REASONING": 1
+    }
+  },
+  "tasks": [
+    {
+      "id": "list_workspace_users",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I am unable to retrieve the list of users due to a persistent SSL certificate verification error. Please try again later or contact your administrator for assistance.",
+      "judge_reasoning": "The agent was unable to complete the task because the list_users tool failed with a persistent SSL certificate verification error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "get_integration_identity",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "I am sorry, but I was unable to retrieve the account information due to an error. The tool returned the following error message: \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)\".",
+      "judge_reasoning": "The tool call failed with an SSL certificate verification error, which is an environmental issue that prevented the agent from retrieving the required information.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "get_self",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "search_all_content",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "I am sorry, but I was unable to retrieve the list of pages and databases. The request failed with the following error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000).",
+      "judge_reasoning": "The agent's attempt to use the search tool failed due to an SSL certificate verification error, which is an environmental issue that prevented the task from being completed.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "count_pages_vs_databases",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": null,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "I am sorry, but I was unable to complete your request. The following error occurred: \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)\".",
+      "judge_reasoning": "The agent's attempt to use the search tool failed due to an SSL certificate verification error, which is an environmental issue outside the agent's control.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "find_database_by_title",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "An error occurred while trying to search for the database: `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)`.",
+      "judge_reasoning": "The search tool failed with an SSL certificate verification error, which is a runtime exception within the tool's execution environment.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query_filter": {
+              "property": "object",
+              "value": "database"
+            },
+            "query": "Agent Sort Test"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_titled_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "AGENT_REASONING",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 1,
+      "num_tool_calls": 0,
+      "num_errors": 0,
+      "final_answer": "I can do that. What is the parent page ID? If you don't have it, I can search for a suitable parent page if you provide a search query.",
+      "judge_reasoning": "The agent failed to use the search tool to find a suitable parent page and instead asked the user for the ID, failing to complete the task.",
+      "error": "",
+      "tool_calls": []
+    },
+    {
+      "id": "create_database_with_select",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "",
+      "judge_reasoning": "The agent's first tool call failed due to an SSL certificate verification error, preventing it from proceeding with the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query_filter": {
+              "value": "page",
+              "property": "object"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_and_rename_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 6,
+      "num_tool_calls": 5,
+      "num_errors": 5,
+      "final_answer": "Due to a recurring SSL error, I was unable to create or modify a page. Each attempt to interact with the Notion API resulted in a \"CERTIFICATE_VERIFY_FAILED\" error. Therefore, I cannot provide a page ID or confirm any title changes.",
+      "judge_reasoning": "The agent was unable to perform any actions because all tool calls failed with an SSL certificate verification error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "parent": {
+              "page_id": "PARENT_PAGE_ID"
+            },
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Temp Draft"
+                  }
+                }
+              ]
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "get_self",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "update_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Published Page"
+                  }
+                }
+              ]
+            },
+            "page_id": "-1"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "retrieve_page",
+          "arguments": {
+            "page_id": "-1"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "archive_and_confirm",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": null,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am sorry, but I was unable to create or find an accessible page to archive due to a persistent SSL certificate verification error. This error prevents me from completing your request. Please check your SSL certificate configuration.",
+      "judge_reasoning": "The agent was unable to perform any actions because every tool call resulted in an SSL certificate verification error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "accessible page"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Disposable Page"
+                  },
+                  "type": "text"
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "e71c73c1-873f-4073-9d11-b7b74237f13a"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Disposable Page"
+                  }
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "e71c73c1-873f-4073-9d11-b7b74237f13a"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Test"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_page_with_blocks",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I was unable to create the page due to a connection error. Therefore, I cannot retrieve the page content and report the block types.",
+      "judge_reasoning": "The agent was unable to execute any tools due to SSL certificate verification errors in the environment.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "results_per_page": 1,
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "Agent Content Page"
+                  }
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "PARENT_PAGE_ID"
+            },
+            "children": [
+              {
+                "type": "heading_2",
+                "object": "block",
+                "heading_2": {
+                  "rich_text": [
+                    {
+                      "type": "text",
+                      "text": {
+                        "content": "This is a heading"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "paragraph",
+                "object": "block",
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "type": "text",
+                      "text": {
+                        "content": "This is a paragraph of body text."
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "add_comment_to_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am sorry, but I am unable to create the page and comment as you requested. I am encountering a persistent SSL certificate verification error, which is preventing me from completing the request.",
+      "judge_reasoning": "The agent was unable to perform any actions due to a persistent SSL certificate verification error when calling the tools.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "populate_and_filter_database",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": null,
+      "judge_reliable": true,
+      "num_turns": 6,
+      "num_tool_calls": 5,
+      "num_errors": 5,
+      "final_answer": "I am sorry, but I was unable to create the database. Every attempt to find a parent page or create the database has resulted in a \"certificate verify failed\" error. This indicates a problem with the SSL certificate configuration of the server, which is outside of my control. I am unable to proceed with the request.",
+      "judge_reasoning": "The agent was unable to execute any tools due to persistent SSL certificate verification errors, which is an environmental issue.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "get_self",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_database",
+          "arguments": {
+            "properties": {
+              "Name": {
+                "title": {}
+              },
+              "Priority": {
+                "select": {
+                  "options": [
+                    {
+                      "color": "red",
+                      "name": "High"
+                    },
+                    {
+                      "color": "yellow",
+                      "name": "Medium"
+                    },
+                    {
+                      "color": "green",
+                      "name": "Low"
+                    }
+                  ]
+                }
+              }
+            },
+            "parent": {},
+            "title": [
+              {
+                "text": {
+                  "content": "Agent Priority DB"
+                }
+              }
+            ]
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "sorted_database_query",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": null,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am sorry, but I am unable to complete your request. The `search` tool is consistently failing with an \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)\" error. This prevents me from finding a parent page to create the database under, which is the first step of your request.",
+      "judge_reasoning": "The agent encountered a persistent SSL certificate verification error when attempting to use the search tool, which prevented it from finding a parent page and completing the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "database_number_filter",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am unable to complete the request due to a persistent SSL error. The error message `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)` indicates a problem with the server's SSL certificate. This is a security measure that I cannot bypass.\n\nTo proceed, the server's SSL certificate issue needs to be resolved by the server administrator.\n\nOnce the SSL issue is fixed, I will be able to:\n1. Create the \"Agent Score Filter\" database.\n2. Add the entries: Alpha=10, Beta=75, Gamma=30, and Delta=90.\n3. Query for entries with a score greater than 50.\n4. Report the count and names of the matching entries.",
+      "judge_reasoning": "The agent encountered a persistent SSL certificate verification error when attempting to use the tools, preventing any interaction with the Notion API.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_database",
+          "arguments": {
+            "parent": {
+              "page_id": "PARENT_PAGE_ID"
+            },
+            "properties": {
+              "Name": {
+                "title": {}
+              },
+              "Score": {
+                "number": {}
+              }
+            },
+            "title": [
+              {
+                "text": {
+                  "content": "Agent Score Filter"
+                }
+              }
+            ]
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "mixed_block_types",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": null,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am unable to complete your request at the moment. The execution of the tool is failing with the following error: `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)`. This error is preventing me from creating the page and adding the blocks as you requested.",
+      "judge_reasoning": "The agent was unable to execute any tools due to an SSL certificate verification error in the environment.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query_filter": {
+              "property": "object",
+              "value": "page"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "children": [
+              {
+                "object": "block",
+                "heading_1": {
+                  "rich_text": [
+                    {
+                      "type": "text",
+                      "text": {
+                        "content": "Heading 1"
+                      }
+                    }
+                  ],
+                  "is_toggleable": false
+                },
+                "type": "heading_1"
+              },
+              {
+                "bulleted_list_item": {
+                  "children": [],
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "Bulleted list item"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "object": "block",
+                "type": "bulleted_list_item"
+              },
+              {
+                "type": "to_do",
+                "to_do": {
+                  "rich_text": [
+                    {
+                      "type": "text",
+                      "text": {
+                        "content": "To-do item"
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "checked": false
+                },
+                "object": "block"
+              }
+            ],
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Block Variety"
+                  },
+                  "type": "text"
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "e71c959a-237e-46dd-82db-2385c21feb8a",
+              "type": "page_id"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "rich_text_formatting",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I am unable to complete your request. I am encountering an SSL certificate verification error, which is preventing me from accessing the necessary resources. This is likely a network configuration issue that is beyond my ability to resolve.",
+      "judge_reasoning": "The agent encountered SSL certificate verification errors when attempting to use the tools, which is an environment-level failure.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Getting Started"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Formatting Test"
+                  }
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "-"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "nested_page_creation",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 7,
+      "num_tool_calls": 6,
+      "num_errors": 6,
+      "final_answer": "I attempted to create a page titled \"Agent Parent Page\" and a child page titled \"Agent Child Page\". Both attempts resulted in the following error: \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)\". Therefore, I am unable to provide the page IDs.",
+      "judge_reasoning": "The agent encountered a persistent SSL certificate verification error on every tool call, preventing it from performing any actions.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "get_self",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "parent": {
+              "page_id": "ACCESSIBLE_PARENT_PAGE"
+            },
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Parent Page"
+                  }
+                }
+              ]
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Parent Page"
+                  }
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "ACCESSIBLE_PARENT_PAGE"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Child Page"
+                  }
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "AGENT_PARENT_PAGE_ID"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "paginate_block_children",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": null,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am unable to complete the request. I have tried to create a page, search for a parent page, and even list users, but every attempt has resulted in an SSL certificate verification error. This error prevents me from creating the initial page required to proceed with the rest of the steps. Without a successful API call, I cannot create the \"Agent Pagination Test\" page, add blocks to it, or test the pagination of block children as requested.",
+      "judge_reasoning": "The agent was unable to execute any tools due to persistent SSL certificate verification errors, which is an environmental issue.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Getting Started"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query_filter": {
+              "property": "object",
+              "value": "database"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "properties": {
+              "title": [
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "Agent Pagination Test"
+                  }
+                }
+              ]
+            },
+            "parent": {
+              "page_id": "79dc06da-1ab6-468d-99d8-cde40f19c6a3"
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "list_users",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "retrieve_nonexistent_page",
+      "verdict": "pass",
+      "success": true,
+      "failure_reason": "",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "The server returned the following error: `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)`",
+      "judge_reasoning": "The agent correctly reported the error returned by the tool, although the tool itself failed due to an SSL certificate issue.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "retrieve_page",
+          "arguments": {
+            "page_id": "00000000-0000-0000-0000-000000000000"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "invalid_property_filter",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": null,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am unable to complete your request as I am encountering a persistent SSL error: \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)\". This error prevents me from creating the \"Agent Filter Error Test\" database, and therefore I cannot proceed to query it with an invalid filter. I have attempted multiple API calls, and they have all failed with the same error, indicating a problem with the connection to the service.",
+      "judge_reasoning": "The agent was unable to perform any actions because all tool calls failed with a persistent SSL certificate verification error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_database",
+          "arguments": {
+            "parent": {
+              "page_id": "accessible-parent-page"
+            },
+            "title": [
+              {
+                "text": {
+                  "content": "Agent Filter Error Test"
+                }
+              }
+            ]
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "get_self",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "update_existing_block",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I was unable to complete your request. Every attempt to connect to the Notion API resulted in an SSL error: `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)`. This prevented me from creating the page, adding the block, and performing the other actions you requested.",
+      "judge_reasoning": "The agent encountered SSL certificate verification errors when attempting to call the Notion API tools, preventing any progress on the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "parent": {
+              "workspace": true,
+              "type": "workspace"
+            },
+            "children": [
+              {
+                "paragraph": {
+                  "rich_text": [
+                    {
+                      "text": {
+                        "content": "Original text"
+                      },
+                      "type": "text"
+                    }
+                  ]
+                },
+                "object": "block",
+                "type": "paragraph"
+              }
+            ],
+            "properties": {
+              "title": [
+                {
+                  "text": {
+                    "content": "Agent Block Update Test"
+                  },
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "compound_filter_and_or",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am unable to complete the request due to a persistent SSL error: `[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)`. This error prevents me from creating the database, adding entries, and querying the results as you requested. I have tried multiple API calls, and they all failed with the same error, indicating a problem with the connection to the Notion API.",
+      "judge_reasoning": "The agent encountered persistent SSL certificate verification errors on every tool call, preventing any interaction with the Notion API.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search",
+          "arguments": {
+            "query": ""
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "search",
+          "arguments": {
+            "query": "Test"
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "create_database",
+          "arguments": {
+            "parent": {
+              "page_id": "1"
+            },
+            "properties": {
+              "Name": {
+                "title": {}
+              },
+              "Score": {
+                "number": {}
+              },
+              "Tag": {
+                "select": {
+                  "options": [
+                    {
+                      "name": "A"
+                    },
+                    {
+                      "name": "B"
+                    }
+                  ]
+                }
+              }
+            },
+            "title": [
+              {
+                "text": {
+                  "content": "Agent Compound Filter"
+                }
+              }
+            ]
+          },
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        },
+        {
+          "name": "get_self",
+          "arguments": {},
+          "result": {
+            "error": "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)"
+          },
+          "error": true
+        }
+      ]
+    }
+  ]
+}

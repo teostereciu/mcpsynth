@@ -1,0 +1,170 @@
+{
+  "search_recipes_complex": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "search_recipes_by_nutrients": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/findByNutrients"
+  },
+  "ingredient_search": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "get_ingredient_information": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "compute_ingredient_amount": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/amount"
+  },
+  "convert_amounts": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /recipes/convert"
+  },
+  "parse_ingredients": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "compute_glycemic_load": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "POST /food/ingredients/glycemicLoad"
+  },
+  "autocomplete_ingredient_search": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  },
+  "get_ingredient_substitutes": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/substitutes"
+  },
+  "get_ingredient_substitutes_by_id": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/substitutes"
+  },
+  "get_meal_plan_week": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/week/{start-date}"
+  },
+  "get_meal_plan_day": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/day/{date}"
+  },
+  "generate_meal_plan": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "add_to_meal_plan": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/items"
+  },
+  "clear_meal_plan_day": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/day/{date}"
+  },
+  "delete_from_meal_plan": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/items/{id}"
+  },
+  "get_meal_plan_templates": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/templates"
+  },
+  "get_meal_plan_template": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/templates/{id}"
+  },
+  "add_meal_plan_template": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/templates"
+  },
+  "delete_meal_plan_template": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/templates/{id}"
+  },
+  "get_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/shopping-list"
+  },
+  "add_to_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/shopping-list/items"
+  },
+  "delete_from_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "DELETE /mealplanner/{username}/shopping-list/items/{id}"
+  },
+  "generate_shopping_list": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /mealplanner/{username}/shopping-list/{start-date}/{end-date}"
+  },
+  "search_custom_foods": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/foods/search"
+  },
+  "connect_user": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "POST /users/connect"
+  },
+  "wine_dish_pairing": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/dishes"
+  },
+  "wine_pairing": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "wine_description": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/description"
+  },
+  "wine_recommendation": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/recommendation"
+  },
+  "search_all_food": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/search"
+  },
+  "search_food_videos": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/videos/search"
+  },
+  "quick_answer": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /recipes/quickAnswer"
+  },
+  "detect_food_in_text": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "POST /food/detect"
+  },
+  "search_site_content": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /food/site/search"
+  },
+  "search_menu_items": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/search"
+  },
+  "get_menu_item_information": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/{id}"
+  },
+  "autocomplete_menu_item_search": {
+    "doc": "docs/api_menu_items.md",
+    "endpoint": "GET /food/menuItems/suggest"
+  },
+  "search_grocery_products": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/search"
+  },
+  "search_grocery_products_by_upc": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/upc/{upc}"
+  },
+  "get_product_information": {
+    "doc": "docs/api_products.md",
+    "endpoint": "GET /food/products/{id}"
+  }
+}

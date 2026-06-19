@@ -1,0 +1,164 @@
+# Agent evaluation tasks for eBay Commerce API MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for design principles.
+#
+# Required env vars: EBAY_APP_ID, EBAY_CERT_ID
+# EBAY_REFRESH_TOKEN required for user-scoped APIs (Media, Identity)
+# EBAY_ENVIRONMENT defaults to SANDBOX
+
+tasks:
+  # Discriminates: agent must resolve the US marketplace to a tree ID, not invent one
+  - id: get_default_category_tree
+    prompt: >
+      Get the default category tree ID for the US marketplace (marketplace ID: EBAY_US).
+      Report the category tree ID returned.
+    expected: categoryTreeId
+    tags: [read]
+
+  # Discriminates: agent must resolve the root node without fetching the full tree
+  - id: get_category_tree
+    prompt: >
+      Get the root category node for the US marketplace category tree. Use the category
+      subtree endpoint starting at the root, or the tree metadata endpoint — do not fetch
+      the full category tree dump. Report the root category name and the number of
+      immediate top-level subcategories.
+    expected: rootCategoryNode
+    tags: [read]
+    # IMPORTANT: taxonomy_get_category_tree returns the entire tree (~1.4M tokens) and
+    # will overflow the model context window. Use taxonomy_get_category_subtree at the
+    # root node, or taxonomy_get_category_tree_id metadata, to get root info safely.
+
+  # Discriminates: agent must navigate into a subtree and list child nodes, not just the parent
+  - id: get_category_subtree
+    prompt: >
+      Retrieve the category subtree starting at category 58058 (Cell Phones & Smartphones)
+      in the US marketplace. Use the subtree endpoint for that specific category — do not
+      fetch the full category tree. Report the category name and list its immediate
+      subcategories.
+    expected: childCategoryTreeNodes
+    tags: [read]
+    # Constraint: fetching the full category tree (taxonomy_get_category_tree) returns
+    # ~1.4M tokens and will overflow the context window. Use taxonomy_get_category_subtree
+    # with category_tree_node_id=58058 instead.
+
+  # Discriminates: must surface actual category IDs from suggestions, not just the wrapper field name
+  - id: get_category_suggestions
+    prompt: >
+      Use the taxonomy API to get category suggestions for the query "wireless bluetooth
+      headphones" in the US marketplace. Report the top 3 suggested categories with their
+      IDs and names.
+    expected: categoryId
+    tags: [read]
+
+  # Discriminates: must identify which aspects carry an aspectConstraint object, not just list names
+  - id: get_item_aspects_electronics
+    prompt: >
+      Retrieve the item aspects (attributes) for category 9355 (Cell Phones & Smartphones)
+      in the US marketplace. Use the item aspects endpoint for the specific category directly —
+      do not fetch the full category tree. Report the names of the first 5 required aspects
+      and describe whether each has constrained values.
+    expected: aspectConstraint
+    tags: [read]
+    # Constraint: fetching the full category tree (taxonomy_get_category_tree) returns
+    # ~1.4M tokens and will overflow the context window. Use the per-category aspects
+    # endpoint (e.g. taxonomy_get_item_aspects_for_category) instead.
+
+  # Discriminates: must call expired categories and surface fromCategoryId/toCategoryId mapping
+  - id: get_expired_categories_detail
+    prompt: >
+      Retrieve the expired (deprecated) category IDs for the US marketplace taxonomy.
+      Report the first 5 expired category mappings, showing the old category ID and the
+      new category ID it maps to.
+    expected: toCategoryId
+    tags: [read]
+    # Tests: taxonomy_get_expired_categories endpoint.
+    # "toCategoryId" only appears in expired category mapping objects.
+    # The sandbox returns a list of fromCategoryId→toCategoryId pairs.
+    # Charity API (commerce/charity) returns 404 in the eBay sandbox — removed.
+
+  # Discriminates: must call category suggestions and surface category name for a specific product
+  - id: get_category_suggestions_laptop
+    prompt: >
+      Get category suggestions for the query "gaming laptop" in the US marketplace.
+      Report the top 3 suggested categories with their category names and IDs.
+    expected: categoryId
+    tags: [read]
+    # Tests: taxonomy_get_category_suggestions with a different query than the other
+    # suggestions task, to verify the parameter is actually used.
+    # Translation API (commerce/translation) returns 404 in the eBay sandbox — removed.
+
+  # Discriminates: must get suggestions for a specific product and surface real category IDs
+  - id: get_category_suggestions_phones
+    prompt: >
+      Get category suggestions for "iPhone 15 Pro Max" in the US marketplace. Report the
+      top 3 suggested categories including their category names and category IDs.
+    expected: categoryId
+    tags: [read]
+
+  # Discriminates: must distinguish required vs optional aspects by reading aspect metadata
+  - id: get_item_aspects_cameras
+    prompt: >
+      Retrieve the item aspects for eBay category 31388 (Digital Cameras) in the US
+      marketplace. Use the item aspects endpoint for the specific category directly —
+      do not fetch the full category tree. Report which aspects are required versus
+      optional, listing at least 3 examples from each group if they exist.
+    expected: required
+    tags: [read]
+    # Constraint: fetching the full category tree (taxonomy_get_category_tree) returns
+    # ~1.4M tokens and will overflow the context window. Use the per-category aspects
+    # endpoint (e.g. taxonomy_get_item_aspects_for_category) instead.
+
+  # Discriminates: two suggestion calls with different queries — must surface different results
+  - id: compare_category_suggestions
+    prompt: >
+      Get category suggestions for "running shoes" in the US marketplace. Then get category
+      suggestions for "office chair" in the US marketplace. Report the top suggested category
+      name and ID for each query, and confirm they map to different categories.
+    expected: categoryId
+    tags: [read, multi-step]
+    # Tests: two taxonomy_get_category_suggestions calls with different queries.
+    # Both must return results; the suggested categories should differ, proving the
+    # query parameter is threaded correctly in each call.
+    # Translation API (commerce/translation) returns 404 in the eBay sandbox — removed.
+
+
+  # Discriminates: chains tree-ID lookup into a dependent aspects call using the resolved tree ID
+  - id: category_tree_then_aspects
+    prompt: >
+      Get the default category tree ID for the US marketplace. Then retrieve item aspects
+      for category 9355 (Cell Phones & Smartphones) using that tree ID. Use the item aspects
+      endpoint for the specific category directly — do not fetch the full category tree.
+      Report the category tree ID and the first 5 aspects found, noting which have
+      constrained values.
+    expected: aspectConstraint
+    tags: [read, multi-step, workflow]
+    # Constraint: fetching the full category tree (taxonomy_get_category_tree) returns
+    # ~1.4M tokens and will overflow the context window. The tree ID from step 1 should
+    # be passed to the per-category aspects endpoint, not to taxonomy_get_category_tree.
+
+  # Discriminates: chains suggestions → aspects using category ID from suggestions result
+  - id: suggestions_then_aspects
+    prompt: >
+      Get category suggestions for "digital camera" in the US marketplace. Take the
+      category ID from the top suggestion. Retrieve the item aspects for that category
+      directly (not the full tree). Report the suggested category name and ID, and the
+      first 3 aspects returned for that category.
+    expected: aspectConstraint
+    tags: [read, multi-step, workflow]
+    # Tests: taxonomy_get_category_suggestions → taxonomy_get_item_aspects_for_category
+    # using the discovered category ID (not a hardcoded one).
+    # "aspectConstraint" only appears in the aspects response, not in suggestions.
+    # Charity API (commerce/charity) returns 404 in the eBay sandbox — removed.
+    # Constraint: do not fetch the full category tree (~1.4M tokens).
+
+  # Discriminates: error response must be specific enough to confirm "not found", not generic failure
+  - id: error_handling_invalid_category
+    prompt: >
+      Attempt to retrieve item aspects for a non-existent category ID "999999999" in the
+      US marketplace. Use the item aspects endpoint for the specific category directly —
+      do not fetch the full category tree. Report the full error response received,
+      including any HTTP status or error message text.
+    expected: "Not Found"
+    tags: [read, error-handling]
+    # Constraint: fetching the full category tree (taxonomy_get_category_tree) returns
+    # ~1.4M tokens and will overflow the context window. Use the per-category aspects
+    # endpoint (e.g. taxonomy_get_item_aspects_for_category) instead.

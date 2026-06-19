@@ -1,0 +1,12 @@
+{
+  "dataset": "github",
+  "model": "gcp-chat-completions-chat-gemini-2.5-flash-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 57.70607113838196,
+  "token_usage": {
+    "input_tokens": 314879,
+    "output_tokens": 2283
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_1201"
+}

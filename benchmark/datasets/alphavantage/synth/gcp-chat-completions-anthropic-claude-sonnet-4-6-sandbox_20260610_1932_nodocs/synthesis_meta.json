@@ -1,0 +1,12 @@
+{
+  "dataset": "alphavantage",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 1445.3314740657806,
+  "token_usage": {
+    "input_tokens": 56223,
+    "output_tokens": 11302
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1932"
+}

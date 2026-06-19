@@ -1,0 +1,6 @@
+{
+  "get_product": {"doc": "docs/api_commerce_catalog_resources_product_methods_getProduct.md", "endpoint": "GET /commerce/catalog/v1_beta/product/{epid}"},
+  "search_products": {"doc": "docs/api_commerce_catalog_resources_product_summary_methods_search.md", "endpoint": "GET /commerce/catalog/v1_beta/product_summary/search"},
+  "get_image": {"doc": "docs/api_commerce_media_resources_image_methods_getImage.md", "endpoint": "GET /commerce/media/v1_beta/image/{image_id}"},
+  "get_subscriptions": {"doc": "docs/api_commerce_notification_resources_subscription_methods_getSubscriptions.md", "endpoint": "GET /commerce/notification/v1/subscription"}
+}

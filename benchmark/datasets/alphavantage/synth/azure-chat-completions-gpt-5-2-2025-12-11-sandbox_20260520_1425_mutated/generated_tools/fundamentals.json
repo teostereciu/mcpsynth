@@ -1,0 +1,14 @@
+{
+  "name": "fundamentals",
+  "description": "Fundamental data wrapper (OVERVIEW, INCOME_STATEMENT, BALANCE_SHEET, CASH_FLOW, EARNINGS, DIVIDENDS, SPLITS, etc.).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "function": {"type": "string"},
+      "ticker": {"type": "string"},
+      "format": {"type": "string", "description": "json|csv"},
+      "apikey": {"type": "string"}
+    },
+    "required": ["function", "ticker"]
+  }
+}

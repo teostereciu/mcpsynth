@@ -1,0 +1,118 @@
+from typing import Any, Dict, List, Optional
+
+from .jira_client import JiraClient
+
+
+def get_worklogs(issue_id_or_key: str, start_at: int = 0, max_results: int = 50,
+                 started_after: Optional[int] = None, started_before: Optional[int] = None,
+                 expand: Optional[str] = None) -> Any:
+    """GET /issue/{issueIdOrKey}/worklog"""
+    params: Dict[str, Any] = {"startAt": start_at, "maxResults": max_results}
+    if started_after is not None:
+        params["startedAfter"] = started_after
+    if started_before is not None:
+        params["startedBefore"] = started_before
+    if expand is not None:
+        params["expand"] = expand
+    return JiraClient().request("GET", f"/issue/{issue_id_or_key}/worklog", params=params)
+
+
+def add_worklog(issue_id_or_key: str, time_spent_seconds: Optional[int] = None, time_spent: Optional[str] = None,
+                started: Optional[str] = None, comment: Any = None, visibility: Optional[Dict[str, Any]] = None,
+                notify_users: Optional[bool] = None, adjust_estimate: Optional[str] = None,
+                new_estimate: Optional[str] = None, reduce_by: Optional[str] = None,
+                expand: Optional[str] = None, override_editable_flag: Optional[bool] = None,
+                properties: Optional[List[Dict[str, Any]]] = None) -> Any:
+    """POST /issue/{issueIdOrKey}/worklog"""
+    params: Dict[str, Any] = {}
+    if notify_users is not None:
+        params["notifyUsers"] = str(notify_users).lower()
+    if adjust_estimate is not None:
+        params["adjustEstimate"] = adjust_estimate
+    if new_estimate is not None:
+        params["newEstimate"] = new_estimate
+    if reduce_by is not None:
+        params["reduceBy"] = reduce_by
+    if expand is not None:
+        params["expand"] = expand
+    if override_editable_flag is not None:
+        params["overrideEditableFlag"] = str(override_editable_flag).lower()
+
+    payload: Dict[str, Any] = {}
+    if comment is not None:
+        payload["comment"] = comment
+    if started is not None:
+        payload["started"] = started
+    if time_spent is not None:
+        payload["timeSpent"] = time_spent
+    if time_spent_seconds is not None:
+        payload["timeSpentSeconds"] = time_spent_seconds
+    if visibility is not None:
+        payload["visibility"] = visibility
+    if properties is not None:
+        payload["properties"] = properties
+
+    return JiraClient().request("POST", f"/issue/{issue_id_or_key}/worklog", params=params or None, json_body=payload)
+
+
+def get_worklog(issue_id_or_key: str, worklog_id: str, expand: Optional[str] = None) -> Any:
+    """GET /issue/{issueIdOrKey}/worklog/{id}"""
+    params: Dict[str, Any] = {}
+    if expand is not None:
+        params["expand"] = expand
+    return JiraClient().request("GET", f"/issue/{issue_id_or_key}/worklog/{worklog_id}", params=params or None)
+
+
+def update_worklog(issue_id_or_key: str, worklog_id: str, time_spent_seconds: Optional[int] = None,
+                   time_spent: Optional[str] = None, started: Optional[str] = None, comment: Any = None,
+                   visibility: Optional[Dict[str, Any]] = None, notify_users: Optional[bool] = None,
+                   adjust_estimate: Optional[str] = None, new_estimate: Optional[str] = None,
+                   expand: Optional[str] = None, override_editable_flag: Optional[bool] = None,
+                   properties: Optional[List[Dict[str, Any]]] = None) -> Any:
+    """PUT /issue/{issueIdOrKey}/worklog/{id}"""
+    params: Dict[str, Any] = {}
+    if notify_users is not None:
+        params["notifyUsers"] = str(notify_users).lower()
+    if adjust_estimate is not None:
+        params["adjustEstimate"] = adjust_estimate
+    if new_estimate is not None:
+        params["newEstimate"] = new_estimate
+    if expand is not None:
+        params["expand"] = expand
+    if override_editable_flag is not None:
+        params["overrideEditableFlag"] = str(override_editable_flag).lower()
+
+    payload: Dict[str, Any] = {}
+    if comment is not None:
+        payload["comment"] = comment
+    if started is not None:
+        payload["started"] = started
+    if time_spent is not None:
+        payload["timeSpent"] = time_spent
+    if time_spent_seconds is not None:
+        payload["timeSpentSeconds"] = time_spent_seconds
+    if visibility is not None:
+        payload["visibility"] = visibility
+    if properties is not None:
+        payload["properties"] = properties
+
+    return JiraClient().request("PUT", f"/issue/{issue_id_or_key}/worklog/{worklog_id}", params=params or None, json_body=payload)
+
+
+def delete_worklog(issue_id_or_key: str, worklog_id: str, notify_users: Optional[bool] = None,
+                   adjust_estimate: Optional[str] = None, new_estimate: Optional[str] = None,
+                   increase_by: Optional[str] = None, override_editable_flag: Optional[bool] = None) -> Any:
+    """DELETE /issue/{issueIdOrKey}/worklog/{id}"""
+    params: Dict[str, Any] = {}
+    if notify_users is not None:
+        params["notifyUsers"] = str(notify_users).lower()
+    if adjust_estimate is not None:
+        params["adjustEstimate"] = adjust_estimate
+    if new_estimate is not None:
+        params["newEstimate"] = new_estimate
+    if increase_by is not None:
+        params["increaseBy"] = increase_by
+    if override_editable_flag is not None:
+        params["overrideEditableFlag"] = str(override_editable_flag).lower()
+
+    return JiraClient().request("DELETE", f"/issue/{issue_id_or_key}/worklog/{worklog_id}", params=params or None)

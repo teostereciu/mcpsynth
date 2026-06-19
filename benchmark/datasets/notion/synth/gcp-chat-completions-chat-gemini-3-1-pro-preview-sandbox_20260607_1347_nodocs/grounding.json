@@ -1,0 +1,70 @@
+{
+  "search": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /search"
+  },
+  "retrieve_page": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "create_page": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /pages"
+  },
+  "update_page": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "retrieve_database": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "query_database": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "create_database": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /databases"
+  },
+  "update_database": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "retrieve_block": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "update_block": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "retrieve_block_children": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "append_block_children": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "delete_block": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /blocks/{block_id}"
+  },
+  "retrieve_user": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "list_users": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users"
+  },
+  "retrieve_comments": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /comments"
+  },
+  "create_comment": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /comments"
+  }
+}

@@ -1,0 +1,112 @@
+from fastmcp import FastMCP
+
+from . import gmail as _gmail
+from . import calendar as _calendar
+from . import drive as _drive
+from . import docs_api as _docs
+from . import slides as _slides
+from . import sheets as _sheets
+
+mcp = FastMCP("google-workspace")
+
+# Gmail
+mcp.tool()(_gmail.gmail_get_profile)
+mcp.tool()(_gmail.gmail_messages_list)
+mcp.tool()(_gmail.gmail_messages_get)
+mcp.tool()(_gmail.gmail_messages_send)
+mcp.tool()(_gmail.gmail_messages_modify)
+mcp.tool()(_gmail.gmail_messages_trash)
+mcp.tool()(_gmail.gmail_messages_untrash)
+mcp.tool()(_gmail.gmail_messages_delete)
+mcp.tool()(_gmail.gmail_messages_batchDelete)
+mcp.tool()(_gmail.gmail_messages_batchModify)
+mcp.tool()(_gmail.gmail_messages_insert)
+mcp.tool()(_gmail.gmail_messages_attachments_get)
+mcp.tool()(_gmail.gmail_threads_list)
+mcp.tool()(_gmail.gmail_threads_get)
+mcp.tool()(_gmail.gmail_threads_modify)
+mcp.tool()(_gmail.gmail_threads_trash)
+mcp.tool()(_gmail.gmail_threads_delete)
+mcp.tool()(_gmail.gmail_labels_list)
+mcp.tool()(_gmail.gmail_labels_get)
+mcp.tool()(_gmail.gmail_labels_create)
+mcp.tool()(_gmail.gmail_labels_update)
+mcp.tool()(_gmail.gmail_labels_delete)
+mcp.tool()(_gmail.gmail_drafts_list)
+mcp.tool()(_gmail.gmail_drafts_get)
+mcp.tool()(_gmail.gmail_drafts_create)
+mcp.tool()(_gmail.gmail_drafts_update)
+mcp.tool()(_gmail.gmail_drafts_send)
+mcp.tool()(_gmail.gmail_drafts_delete)
+mcp.tool()(_gmail.gmail_history_list)
+mcp.tool()(_gmail.gmail_settings_getAutoForwarding)
+mcp.tool()(_gmail.gmail_settings_getImap)
+mcp.tool()(_gmail.gmail_settings_getPop)
+mcp.tool()(_gmail.gmail_settings_getVacation)
+mcp.tool()(_gmail.gmail_settings_updateVacation)
+
+# Calendar
+mcp.tool()(_calendar.calendar_calendars_insert)
+mcp.tool()(_calendar.calendar_calendars_get)
+mcp.tool()(_calendar.calendar_calendars_update)
+mcp.tool()(_calendar.calendar_calendars_delete)
+mcp.tool()(_calendar.calendar_calendarList_list)
+mcp.tool()(_calendar.calendar_calendarList_get)
+mcp.tool()(_calendar.calendar_calendarList_insert)
+mcp.tool()(_calendar.calendar_events_list)
+mcp.tool()(_calendar.calendar_events_get)
+mcp.tool()(_calendar.calendar_events_insert)
+mcp.tool()(_calendar.calendar_events_update)
+mcp.tool()(_calendar.calendar_events_patch)
+mcp.tool()(_calendar.calendar_events_delete)
+mcp.tool()(_calendar.calendar_events_move)
+mcp.tool()(_calendar.calendar_acl_list)
+mcp.tool()(_calendar.calendar_acl_insert)
+mcp.tool()(_calendar.calendar_acl_delete)
+mcp.tool()(_calendar.calendar_freebusy_query)
+mcp.tool()(_calendar.calendar_settings_list)
+mcp.tool()(_calendar.calendar_settings_get)
+
+# Drive
+mcp.tool()(_drive.drive_files_create)
+mcp.tool()(_drive.drive_files_get)
+mcp.tool()(_drive.drive_files_list)
+mcp.tool()(_drive.drive_files_update)
+mcp.tool()(_drive.drive_files_delete)
+mcp.tool()(_drive.drive_files_copy)
+mcp.tool()(_drive.drive_files_export)
+mcp.tool()(_drive.drive_permissions_create)
+mcp.tool()(_drive.drive_permissions_list)
+mcp.tool()(_drive.drive_permissions_delete)
+mcp.tool()(_drive.drive_drives_list)
+mcp.tool()(_drive.drive_drives_get)
+mcp.tool()(_drive.drive_comments_list)
+mcp.tool()(_drive.drive_replies_list)
+
+# Docs
+mcp.tool()(_docs.docs_documents_create)
+mcp.tool()(_docs.docs_documents_get)
+mcp.tool()(_docs.docs_documents_batchUpdate)
+
+# Slides
+mcp.tool()(_slides.slides_presentations_create)
+mcp.tool()(_slides.slides_presentations_get)
+mcp.tool()(_slides.slides_presentations_batchUpdate)
+mcp.tool()(_slides.slides_presentations_pages_get)
+mcp.tool()(_slides.slides_presentations_pages_getThumbnail)
+
+# Sheets
+mcp.tool()(_sheets.sheets_spreadsheets_create)
+mcp.tool()(_sheets.sheets_spreadsheets_get)
+mcp.tool()(_sheets.sheets_spreadsheets_batchUpdate)
+mcp.tool()(_sheets.sheets_spreadsheets_getByDataFilter)
+mcp.tool()(_sheets.sheets_values_get)
+mcp.tool()(_sheets.sheets_values_update)
+mcp.tool()(_sheets.sheets_values_append)
+mcp.tool()(_sheets.sheets_values_clear)
+mcp.tool()(_sheets.sheets_values_batchGet)
+mcp.tool()(_sheets.sheets_values_batchUpdate)
+mcp.tool()(_sheets.sheets_values_batchClear)
+mcp.tool()(_sheets.sheets_sheets_copyTo)
+mcp.tool()(_sheets.sheets_developerMetadata_get)
+mcp.tool()(_sheets.sheets_developerMetadata_search)

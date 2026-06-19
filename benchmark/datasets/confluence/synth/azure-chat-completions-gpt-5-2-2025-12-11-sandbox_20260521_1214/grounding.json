@@ -1,0 +1,138 @@
+{
+  "pages_list": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /wiki/api/v2/pages"
+  },
+  "pages_get": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}"
+  },
+  "pages_create": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "POST /wiki/api/v2/pages"
+  },
+  "pages_update": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "PUT /wiki/api/v2/pages/{id}"
+  },
+  "pages_delete": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "DEL /wiki/api/v2/pages/{id}"
+  },
+  "spaces_list": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /wiki/api/v2/spaces"
+  },
+  "spaces_get": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /wiki/api/v2/spaces/{id}"
+  },
+  "spaces_create": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "POST /wiki/api/v2/spaces"
+  },
+  "search_cql": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search"
+  },
+  "labels_add_to_content": {
+    "doc": "docs/api_v1_content-labels.md",
+    "endpoint": "POST /wiki/rest/api/content/{id}/label"
+  },
+  "labels_remove_from_content": {
+    "doc": "docs/api_v1_content-labels.md",
+    "endpoint": "DEL /wiki/rest/api/content/{id}/label/{label}"
+  },
+  "labels_remove_from_content_by_query": {
+    "doc": "docs/api_v1_content-labels.md",
+    "endpoint": "DEL /wiki/rest/api/content/{id}/label"
+  },
+  "attachments_list": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /wiki/api/v2/attachments"
+  },
+  "attachments_list_for_page": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/attachments"
+  },
+  "attachments_get": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /wiki/api/v2/attachments/{id}"
+  },
+  "attachments_delete": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "DEL /wiki/api/v2/attachments/{id}"
+  },
+  "comments_list_page_footer": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/footer-comments"
+  },
+  "comments_list_page_inline": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/inline-comments"
+  },
+  "comments_create_footer": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "POST /wiki/api/v2/footer-comments"
+  },
+  "versions_list_page": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/versions"
+  },
+  "versions_get_page_details": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /wiki/api/v2/pages/{page-id}/versions/{version-number}"
+  },
+  "versions_restore_content": {
+    "doc": "docs/api_v1_content-versions.md",
+    "endpoint": "POST /wiki/rest/api/content/{id}/version"
+  },
+  "properties_list_page": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /wiki/api/v2/pages/{page-id}/properties"
+  },
+  "properties_create_page": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "POST /wiki/api/v2/pages/{page-id}/properties"
+  },
+  "properties_get_page": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /wiki/api/v2/pages/{page-id}/properties/{property-id}"
+  },
+  "properties_update_page": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "PUT /wiki/api/v2/pages/{page-id}/properties/{property-id}"
+  },
+  "properties_delete_page": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "DEL /wiki/api/v2/pages/{page-id}/properties/{property-id}"
+  },
+  "blogposts_list": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "GET /wiki/api/v2/blogposts"
+  },
+  "blogposts_get": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "GET /wiki/api/v2/blogposts/{id}"
+  },
+  "blogposts_create": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "POST /wiki/api/v2/blogposts"
+  },
+  "blogposts_update": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "PUT /wiki/api/v2/blogposts/{id}"
+  },
+  "blogposts_delete": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "DEL /wiki/api/v2/blogposts/{id}"
+  },
+  "users_get_current": {
+    "doc": "docs/api_v1_users.md",
+    "endpoint": "GET /wiki/rest/api/user/current"
+  },
+  "users_get_by_account_id": {
+    "doc": "docs/api_v1_users.md",
+    "endpoint": "GET /wiki/rest/api/user"
+  }
+}

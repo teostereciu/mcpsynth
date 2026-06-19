@@ -1,0 +1,7 @@
+{
+  "command": "npx",
+  "args": ["-y", "@notionhq/notion-mcp-server"],
+  "env_map": {
+    "NOTION_TOKEN": "NOTION_API_KEY"
+  }
+}

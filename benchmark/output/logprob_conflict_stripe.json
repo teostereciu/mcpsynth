@@ -1,0 +1,440 @@
+{
+  "dataset": "stripe",
+  "model": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox",
+  "endpoint": "POST /v1/payment_intents",
+  "mutations": [
+    {
+      "original": "payment_method",
+      "mutated": "payment_instrument"
+    },
+    {
+      "original": "customer",
+      "mutated": "customer_id"
+    },
+    {
+      "original": "currency",
+      "mutated": "currency_code"
+    },
+    {
+      "original": "metadata",
+      "mutated": "custom_fields"
+    },
+    {
+      "original": "description",
+      "mutated": "notes"
+    }
+  ],
+  "runs": [
+    {
+      "run": 1,
+      "output": "```python\nimport os\nimport requests\nimport mcp\n\n@mcp.tool()\ndef create_payment_intent(\n    amount,\n    currency,\n    automatic_payment_methods=None,\n    confirm=None,\n    customer=None,\n    customer_account=None,\n    description=None,\n    metadata=None,\n    off_session=None,\n    payment_method=None,\n    receipt_email=None,\n    setup_future_usage=None,\n    shipping=None,\n    statement_descriptor=None,\n    statement_descriptor_suffix=None,\n    amount_details=None,\n    application_fee_amount=None,\n    capture_method=None,\n    confirmation_method=None,\n    confirmation_token=None,\n    error_on_requires_action=None,\n    excluded_payment_method_types=None,\n    hooks=None,\n    mandate=None,\n    mandate_data=None,\n    on_behalf_of=None,\n    payment_details=None,\n    payment_method_configuration=None,\n    payment_method_data=None,\n    payment_method_options=None,\n    payment_method_types=None,\n    radar_options=None,\n    return_url=None,\n    transfer_data=None,\n    transfer_group=None,\n    use_stripe_sdk=None,\n):\n    url = \"https://api.stripe.com/v1/payment_intents\"\n    data = {\n        \"amount\": amount,\n        \"currency\": currency,\n        \"automatic_payment_methods\": automatic_payment_methods,\n        \"confirm\": confirm,\n        \"customer\": customer,\n        \"customer_account\": customer_account,\n        \"description\": description,\n        \"metadata\": metadata,\n        \"off_session\": off_session,\n        \"payment_method\": payment_method,\n        \"receipt_email\": receipt_email,\n        \"setup_future_usage\": setup_future_usage,\n        \"shipping\": shipping,\n        \"statement_descriptor\": statement_descriptor,\n        \"statement_descriptor_suffix\": statement_descriptor_suffix,\n        \"amount_details\": amount_details,\n        \"application_fee_amount\": application_fee_amount,\n        \"capture_method\": capture_method,\n        \"confirmation_method\": confirmation_method,\n        \"confirmation_token\": confirmation_token,\n        \"error_on_requires_action\": error_on_requires_action,\n        \"excluded_payment_method_types\": excluded_payment_method_types,\n        \"hooks\": hooks,\n        \"mandate\": mandate,\n        \"mandate_data\": mandate_data,\n        \"on_behalf_of\": on_behalf_of,\n        \"payment_details\": payment_details,\n        \"payment_method_configuration\": payment_method_configuration,\n        \"payment_method_data\": payment_method_data,\n        \"payment_method_options\": payment_method_options,\n        \"payment_method_types\": payment_method_types,\n        \"radar_options\": radar_options,\n        \"return_url\": return_url,\n        \"transfer_data\": transfer_data,\n        \"transfer_group\": transfer_group,\n        \"use_stripe_sdk\": use_stripe_sdk,\n    }\n    data = {k: v for k, v in data.items() if v is not None}\n\n    headers = {\"Authorization\": f\"Bearer {os.environ['STRIPE_API_KEY']}\"}\n    r = requests.post(url, headers=headers, data=data, timeout=30)\n    r.raise",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "payment_method",
+            "mutated": "payment_instrument"
+          },
+          "outcome": "memory",
+          "token_position": 32,
+          "winner": "payment_method",
+          "loser": "payment_instrument",
+          "chosen_token": "_methods",
+          "chosen_logprob": -0.0,
+          "chosen_prob": 0.999996,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_methods",
+              "logprob": -0.0,
+              "prob": 0.999996
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "customer",
+            "mutated": "customer_id"
+          },
+          "outcome": "memory",
+          "token_position": 40,
+          "winner": "customer",
+          "loser": "customer_id",
+          "chosen_token": " customer",
+          "chosen_logprob": -0.0,
+          "chosen_prob": 0.999973,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " customer",
+              "logprob": -0.0,
+              "prob": 0.999973
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "currency",
+            "mutated": "currency_code"
+          },
+          "outcome": "memory",
+          "token_position": 27,
+          "winner": "currency",
+          "loser": "currency_code",
+          "chosen_token": " currency",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000122,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " currency",
+              "logprob": 0.0001,
+              "prob": 1.000122
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "metadata",
+            "mutated": "custom_fields"
+          },
+          "outcome": "memory",
+          "token_position": 53,
+          "winner": "metadata",
+          "loser": "custom_fields",
+          "chosen_token": " metadata",
+          "chosen_logprob": 0.0,
+          "chosen_prob": 1.000015,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " metadata",
+              "logprob": 0.0,
+              "prob": 1.000015
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "description",
+            "mutated": "notes"
+          },
+          "outcome": "memory",
+          "token_position": 49,
+          "winner": "description",
+          "loser": "notes",
+          "chosen_token": " description",
+          "chosen_logprob": -0.0001,
+          "chosen_prob": 0.999866,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " description",
+              "logprob": -0.0001,
+              "prob": 0.999866
+            }
+          ]
+        }
+      ],
+      "token_count": 597
+    },
+    {
+      "run": 2,
+      "output": "```python\n@mcp.tool()\ndef create_payment_intent(\n    amount,\n    currency,\n    automatic_payment_methods=None,\n    confirm=None,\n    customer=None,\n    customer_account=None,\n    description=None,\n    metadata=None,\n    off_session=None,\n    payment_method=None,\n    receipt_email=None,\n    setup_future_usage=None,\n    shipping=None,\n    statement_descriptor=None,\n    statement_descriptor_suffix=None,\n    amount_details=None,\n    application_fee_amount=None,\n    capture_method=None,\n    confirmation_method=None,\n    confirmation_token=None,\n    error_on_requires_action=None,\n    excluded_payment_method_types=None,\n    hooks=None,\n    mandate=None,\n    mandate_data=None,\n    on_behalf_of=None,\n    payment_details=None,\n    payment_method_configuration=None,\n    payment_method_data=None,\n    payment_method_options=None,\n    payment_method_types=None,\n    radar_options=None,\n    return_url=None,\n    transfer_data=None,\n    transfer_group=None,\n    use_stripe_sdk=None,\n):\n    import os\n    import requests\n\n    url = \"https://api.stripe.com/v1/payment_intents\"\n    data = {\n        \"amount\": amount,\n        \"currency\": currency,\n        \"automatic_payment_methods\": automatic_payment_methods,\n        \"confirm\": confirm,\n        \"customer\": customer,\n        \"customer_account\": customer_account,\n        \"description\": description,\n        \"metadata\": metadata,\n        \"off_session\": off_session,\n        \"payment_method\": payment_method,\n        \"receipt_email\": receipt_email,\n        \"setup_future_usage\": setup_future_usage,\n        \"shipping\": shipping,\n        \"statement_descriptor\": statement_descriptor,\n        \"statement_descriptor_suffix\": statement_descriptor_suffix,\n        \"amount_details\": amount_details,\n        \"application_fee_amount\": application_fee_amount,\n        \"capture_method\": capture_method,\n        \"confirmation_method\": confirmation_method,\n        \"confirmation_token\": confirmation_token,\n        \"error_on_requires_action\": error_on_requires_action,\n        \"excluded_payment_method_types\": excluded_payment_method_types,\n        \"hooks\": hooks,\n        \"mandate\": mandate,\n        \"mandate_data\": mandate_data,\n        \"on_behalf_of\": on_behalf_of,\n        \"payment_details\": payment_details,\n        \"payment_method_configuration\": payment_method_configuration,\n        \"payment_method_data\": payment_method_data,\n        \"payment_method_options\": payment_method_options,\n        \"payment_method_types\": payment_method_types,\n        \"radar_options\": radar_options,\n        \"return_url\": return_url,\n        \"transfer_data\": transfer_data,\n        \"transfer_group\": transfer_group,\n        \"use_stripe_sdk\": use_stripe_sdk,\n    }\n    data = {k: v for k, v in data.items() if v is not None}\n\n    r = requests.post(\n        url,\n        data=data,\n        auth=(os.environ.get(\"STRIPE_SECRET_KEY\", \"\"), \"\"),\n        timeout=60,\n    )\n    r.raise_for_status()\n    return",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "payment_method",
+            "mutated": "payment_instrument"
+          },
+          "outcome": "memory",
+          "token_position": 22,
+          "winner": "payment_method",
+          "loser": "payment_instrument",
+          "chosen_token": "_methods",
+          "chosen_logprob": 0.0,
+          "chosen_prob": 1.000011,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_methods",
+              "logprob": 0.0,
+              "prob": 1.000011
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "customer",
+            "mutated": "customer_id"
+          },
+          "outcome": "memory",
+          "token_position": 30,
+          "winner": "customer",
+          "loser": "customer_id",
+          "chosen_token": " customer",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000084,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " customer",
+              "logprob": 0.0001,
+              "prob": 1.000084
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "currency",
+            "mutated": "currency_code"
+          },
+          "outcome": "memory",
+          "token_position": 17,
+          "winner": "currency",
+          "loser": "currency_code",
+          "chosen_token": " currency",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.00008,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " currency",
+              "logprob": 0.0001,
+              "prob": 1.00008
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "metadata",
+            "mutated": "custom_fields"
+          },
+          "outcome": "memory",
+          "token_position": 43,
+          "winner": "metadata",
+          "loser": "custom_fields",
+          "chosen_token": " metadata",
+          "chosen_logprob": -0.0,
+          "chosen_prob": 0.999969,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " metadata",
+              "logprob": -0.0,
+              "prob": 0.999969
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "description",
+            "mutated": "notes"
+          },
+          "outcome": "memory",
+          "token_position": 39,
+          "winner": "description",
+          "loser": "notes",
+          "chosen_token": " description",
+          "chosen_logprob": -0.0001,
+          "chosen_prob": 0.999866,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " description",
+              "logprob": -0.0001,
+              "prob": 0.999866
+            }
+          ]
+        }
+      ],
+      "token_count": 597
+    },
+    {
+      "run": 3,
+      "output": "```python\nimport os\nimport requests\nfrom mcp import mcp\n\n@mcp.tool()\ndef create_paymentintent(\n    amount,\n    currency,\n    automatic_payment_methods=None,\n    confirm=None,\n    customer=None,\n    customer_account=None,\n    description=None,\n    metadata=None,\n    off_session=None,\n    payment_method=None,\n    receipt_email=None,\n    setup_future_usage=None,\n    shipping=None,\n    statement_descriptor=None,\n    statement_descriptor_suffix=None,\n    amount_details=None,\n    application_fee_amount=None,\n    capture_method=None,\n    confirmation_method=None,\n    confirmation_token=None,\n    error_on_requires_action=None,\n    excluded_payment_method_types=None,\n    hooks=None,\n    mandate=None,\n    mandate_data=None,\n    on_behalf_of=None,\n    payment_details=None,\n    payment_method_configuration=None,\n    payment_method_data=None,\n    payment_method_options=None,\n    payment_method_types=None,\n    radar_options=None,\n    return_url=None,\n    transfer_data=None,\n    transfer_group=None,\n    use_stripe_sdk=None,\n):\n    url = \"https://api.stripe.com/v1/payment_intents\"\n    data = {\n        \"amount\": amount,\n        \"currency\": currency,\n        \"automatic_payment_methods\": automatic_payment_methods,\n        \"confirm\": confirm,\n        \"customer\": customer,\n        \"customer_account\": customer_account,\n        \"description\": description,\n        \"metadata\": metadata,\n        \"off_session\": off_session,\n        \"payment_method\": payment_method,\n        \"receipt_email\": receipt_email,\n        \"setup_future_usage\": setup_future_usage,\n        \"shipping\": shipping,\n        \"statement_descriptor\": statement_descriptor,\n        \"statement_descriptor_suffix\": statement_descriptor_suffix,\n        \"amount_details\": amount_details,\n        \"application_fee_amount\": application_fee_amount,\n        \"capture_method\": capture_method,\n        \"confirmation_method\": confirmation_method,\n        \"confirmation_token\": confirmation_token,\n        \"error_on_requires_action\": error_on_requires_action,\n        \"excluded_payment_method_types\": excluded_payment_method_types,\n        \"hooks\": hooks,\n        \"mandate\": mandate,\n        \"mandate_data\": mandate_data,\n        \"on_behalf_of\": on_behalf_of,\n        \"payment_details\": payment_details,\n        \"payment_method_configuration\": payment_method_configuration,\n        \"payment_method_data\": payment_method_data,\n        \"payment_method_options\": payment_method_options,\n        \"payment_method_types\": payment_method_types,\n        \"radar_options\": radar_options,\n        \"return_url\": return_url,\n        \"transfer_data\": transfer_data,\n        \"transfer_group\": transfer_group,\n        \"use_stripe_sdk\": use_stripe_sdk,\n    }\n    data = {k: v for k, v in data.items() if v is not None}\n\n    api_key = os.environ.get(\"STRIPE_API_KEY\")\n    resp = requests.post(url, data=data, auth=(api_key, \"\"))\n    resp.raise_for_status()\n    return",
+      "conflicts": [
+        {
+          "mutation": {
+            "original": "payment_method",
+            "mutated": "payment_instrument"
+          },
+          "outcome": "memory",
+          "token_position": 34,
+          "winner": "payment_method",
+          "loser": "payment_instrument",
+          "chosen_token": "_methods",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000065,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": "_methods",
+              "logprob": 0.0001,
+              "prob": 1.000065
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "customer",
+            "mutated": "customer_id"
+          },
+          "outcome": "memory",
+          "token_position": 42,
+          "winner": "customer",
+          "loser": "customer_id",
+          "chosen_token": " customer",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000126,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " customer",
+              "logprob": 0.0001,
+              "prob": 1.000126
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "currency",
+            "mutated": "currency_code"
+          },
+          "outcome": "memory",
+          "token_position": 29,
+          "winner": "currency",
+          "loser": "currency_code",
+          "chosen_token": " currency",
+          "chosen_logprob": 0.0001,
+          "chosen_prob": 1.000057,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " currency",
+              "logprob": 0.0001,
+              "prob": 1.000057
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "metadata",
+            "mutated": "custom_fields"
+          },
+          "outcome": "memory",
+          "token_position": 55,
+          "winner": "metadata",
+          "loser": "custom_fields",
+          "chosen_token": " metadata",
+          "chosen_logprob": -0.0,
+          "chosen_prob": 0.999969,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " metadata",
+              "logprob": -0.0,
+              "prob": 0.999969
+            }
+          ]
+        },
+        {
+          "mutation": {
+            "original": "description",
+            "mutated": "notes"
+          },
+          "outcome": "memory",
+          "token_position": 51,
+          "winner": "description",
+          "loser": "notes",
+          "chosen_token": " description",
+          "chosen_logprob": -0.0001,
+          "chosen_prob": 0.999886,
+          "loser_token_match": null,
+          "loser_rank": null,
+          "loser_logprob": null,
+          "loser_prob": 0.0,
+          "conflict_score": 0.0,
+          "top_alternatives": [
+            {
+              "rank": 0,
+              "token": " description",
+              "logprob": -0.0001,
+              "prob": 0.999886
+            }
+          ]
+        }
+      ],
+      "token_count": 597
+    }
+  ]
+}

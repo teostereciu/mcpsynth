@@ -1,0 +1,78 @@
+{
+  "create_page": {
+    "doc": "docs/post-page.md",
+    "endpoint": "POST /v1/pages"
+  },
+  "retrieve_page": {
+    "doc": "docs/retrieve-a-page.md",
+    "endpoint": "GET /v1/pages/{page_id}"
+  },
+  "update_page": {
+    "doc": "docs/patch-page.md",
+    "endpoint": "PATCH /v1/pages/{page_id}"
+  },
+  "archive_page": {
+    "doc": "docs/archive-a-page.md",
+    "endpoint": "PATCH /v1/pages/{page_id}"
+  },
+  "create_database": {
+    "doc": "docs/create-database.md",
+    "endpoint": "POST /v1/databases"
+  },
+  "query_database": {
+    "doc": "docs/post-database-query.md",
+    "endpoint": "POST /v1/databases/{database_id}/query"
+  },
+  "retrieve_database": {
+    "doc": "docs/retrieve-database.md",
+    "endpoint": "GET /v1/databases/{database_id}"
+  },
+  "update_database": {
+    "doc": "docs/update-database.md",
+    "endpoint": "PATCH /v1/databases/{database_id}"
+  },
+  "retrieve_block": {
+    "doc": "docs/retrieve-a-block.md",
+    "endpoint": "GET /v1/blocks/{block_id}"
+  },
+  "update_block": {
+    "doc": "docs/update-a-block.md",
+    "endpoint": "PATCH /v1/blocks/{block_id}"
+  },
+  "retrieve_block_children": {
+    "doc": "docs/get-block-children.md",
+    "endpoint": "GET /v1/blocks/{block_id}/children"
+  },
+  "append_block_children": {
+    "doc": "docs/patch-block-children.md",
+    "endpoint": "PATCH /v1/blocks/{block_id}/children"
+  },
+  "delete_block": {
+    "doc": "docs/delete-a-block.md",
+    "endpoint": "DELETE /v1/blocks/{block_id}"
+  },
+  "create_comment": {
+    "doc": "docs/create-a-comment.md",
+    "endpoint": "POST /v1/comments"
+  },
+  "list_comments": {
+    "doc": "docs/list-comments.md",
+    "endpoint": "GET /v1/comments"
+  },
+  "list_users": {
+    "doc": "docs/get-users.md",
+    "endpoint": "GET /v1/users"
+  },
+  "get_user": {
+    "doc": "docs/get-user.md",
+    "endpoint": "GET /v1/users/{user_id}"
+  },
+  "get_self": {
+    "doc": "docs/get-self.md",
+    "endpoint": "GET /v1/users/me"
+  },
+  "search": {
+    "doc": "docs/post-search.md",
+    "endpoint": "POST /v1/search"
+  }
+}

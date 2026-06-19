@@ -1,0 +1,6 @@
+{
+  "list_my_issues": {
+    "doc": "docs/api_issues-issues.md",
+    "endpoint": "GET /issues"
+  }
+}

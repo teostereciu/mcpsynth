@@ -1,0 +1,13 @@
+{
+  "name": "commodities",
+  "description": "Commodities wrapper (gold/silver, WTI, Brent, natural gas, copper, wheat, etc.).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "function": {"type": "string"},
+      "params": {"type": "object", "additionalProperties": true},
+      "apikey": {"type": "string"}
+    },
+    "required": ["function"]
+  }
+}

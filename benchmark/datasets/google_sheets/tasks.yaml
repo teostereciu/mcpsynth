@@ -1,0 +1,192 @@
+# Agent evaluation tasks for Google Sheets MCP server.
+#
+# NOTE: google_sheets is a subset of google_workspace covering only the Sheets API.
+# Required env vars: GOOGLE_ACCESS_TOKEN (or GOOGLE_WORKSPACE_CREDENTIALS)
+#
+# See benchmark/TASK_CREATION_GUIDE.md for prompt writing principles,
+# difficulty calibration, and the full checklist.
+#
+# Dataset note: every task creates its own spreadsheet so runs are independent
+# and cleanable. Sheet/range addresses are provided where they cannot be derived
+# from tool docs (e.g. A1 notation). Endpoint names and parameter names are not.
+
+tasks:
+  # ---------- READ ----------
+
+  - id: get_spreadsheet_metadata
+    prompt: >
+      Create a new spreadsheet titled "Agent Sheets Test" and then retrieve its
+      metadata. Report the spreadsheet ID, title, and the names of its sheets.
+    expected: Agent Sheets Test
+    tags: [write, read, multi-step]
+    # Tests: create + metadata retrieval; "Agent Sheets Test" only appears if the
+    # correct spreadsheet was created and its metadata correctly fetched.
+
+  - id: read_range
+    prompt: >
+      Create a spreadsheet titled "Agent Read Test". Write the values
+      [["A", "B", "C"], [1, 2, 3], [4, 5, 6]] to the range "Sheet1!A1:C3".
+      Then read back the range "Sheet1!A1:C3" and report the values returned.
+    expected: Sheet1
+    tags: [write, read, multi-step]
+    # Tests: write + targeted range read; "Sheet1" confirms the range address was
+    # correctly interpreted and the correct sheet/range was queried.
+
+  # ---------- WRITE ----------
+
+  - id: write_values
+    prompt: >
+      Create a new Google Sheets spreadsheet titled "Agent Write Test".
+      Write the values [["Product", "Price"], ["Widget", "9.99"], ["Gadget", "24.99"]]
+      to the range "Sheet1!A1:B3". Report the number of rows and columns updated.
+    expected: "3"
+    tags: [write]
+    # Tests: basic range write; the response must include updatedRows or equivalent
+    # count — "3" confirms all three rows were written, not just acknowledged.
+
+  - id: append_rows
+    prompt: >
+      Create a new spreadsheet titled "Agent Append Test". Write a header row
+      [["Name", "Email", "Score"]] to A1:C1. Then append the rows
+      [["Alice", "alice@example.com", "95"], ["Bob", "bob@example.com", "82"]]
+      below the header. Read back all rows and report the full contents.
+    expected: Alice
+    tags: [write, multi-step]
+    # Tests: append operation distinct from write; "Alice" confirms appended data
+    # landed in the sheet and was correctly read back.
+
+  - id: clear_range
+    prompt: >
+      Create a spreadsheet titled "Agent Clear Test". Write the data
+      [["x", "y"], [1, 2], [3, 4]] to "Sheet1!A1:B3". Then clear the range
+      "Sheet1!A2:B3". Read back "Sheet1!A1:B3" and confirm only the header row remains.
+    expected: "x"
+    tags: [write, multi-step]
+    # Tests: targeted range clear followed by read-back; "x" is the header value
+    # that must remain — confirms the clear did not wipe the header row.
+
+  # ---------- SHEET MANAGEMENT ----------
+
+  - id: add_new_sheet
+    prompt: >
+      Create a spreadsheet titled "Agent Sheet Management Test". Add a new sheet
+      named "DataSheet" to it. Report the new sheet's ID and confirm the spreadsheet
+      now has two sheets.
+    expected: DataSheet
+    tags: [write, multi-step]
+    # Tests: add sheet operation; "DataSheet" only appears if the sheet was
+    # successfully created with the correct name.
+
+  - id: rename_sheet
+    prompt: >
+      Create a spreadsheet titled "Agent Rename Test". Add a new sheet called
+      "OldName". Then rename that sheet to "NewName". List the sheets in the
+      spreadsheet and confirm the rename worked.
+    expected: NewName
+    tags: [write, multi-step]
+    # Tests: sheet rename via batch update; "NewName" confirms the rename
+    # persisted, not just that the request was accepted.
+
+  # ---------- BATCH OPERATIONS ----------
+
+  - id: batch_read_multiple_ranges
+    prompt: >
+      Create a spreadsheet titled "Agent Batch Test". Write [["R1C1"]] to
+      "Sheet1!A1" and [["R2C1"]] to "Sheet1!B1". Then perform a batch read of
+      both ranges ["Sheet1!A1", "Sheet1!B1"] in a single request. Report the
+      values returned from both ranges.
+    expected: R1C1
+    tags: [write, read, multi-step]
+    # Tests: batchGet endpoint; "R1C1" confirms the batch read reached the
+    # correct cell and parsed the multi-range response correctly.
+
+  - id: batch_write_multiple_ranges
+    prompt: >
+      Create a spreadsheet titled "Agent Batch Write Test". Use a single batch
+      update to write [["Header1"]] to "Sheet1!A1" and [["Header2"]] to
+      "Sheet1!C1". Then read back both ranges to confirm the values were written.
+    expected: Header1
+    tags: [write, multi-step]
+    # Tests: batchUpdate write; "Header1" verifies the batch write reached the
+    # correct range and that the read-back confirmed persistence.
+
+  # ---------- FORMATTING ----------
+
+  - id: format_cells
+    prompt: >
+      Create a spreadsheet titled "Agent Format Test". Write [["Total", "100"]]
+      to "Sheet1!A1:B1". Apply bold formatting to cell A1. Then retrieve the
+      spreadsheet metadata including cell formatting and confirm that A1 has bold
+      applied. Report the cell value and whether bold formatting is present.
+    expected: bold
+    tags: [write, multi-step]
+    # Tests: cell formatting via batchUpdate with CellFormat; "bold" only appears
+    # if the agent correctly applied and then read back the textFormat.bold field.
+
+  - id: freeze_rows
+    prompt: >
+      Create a spreadsheet titled "Agent Freeze Test". Write the header row
+      [["Name", "Score", "Rank"]] to "Sheet1!A1:C1". Freeze the first row of
+      the sheet. Retrieve the spreadsheet metadata and confirm that the row is
+      frozen. Report the number of frozen rows.
+    expected: frozenRowCount
+    tags: [write, multi-step]
+    # Tests: updateSheetProperties with frozenRowCount; the field name in the
+    # response only appears if the sheet properties were correctly set and read.
+
+  - id: sort_range
+    prompt: >
+      Create a spreadsheet titled "Agent Sort Test". Write the values
+      [["Name", "Score"], ["Charlie", "45"], ["Alice", "92"], ["Bob", "67"]]
+      to "Sheet1!A1:B4". Sort the data rows A2:B4 by the Score column in
+      descending order. Read back the range "Sheet1!A1:B4" and report the
+      rows in their sorted order.
+    expected: Alice
+    tags: [write, multi-step]
+    # Tests: sortRange request; Alice has the highest score (92) so she must
+    # appear first after a descending sort — confirms correct column targeting.
+
+  - id: count_and_sum_formula
+    prompt: >
+      Create a spreadsheet titled "Agent Formula Test". Write the values
+      [["10"], ["20"], ["30"], ["40"]] to "Sheet1!A1:A4". Insert a SUM formula
+      into cell A5 that totals the values in A1:A4. Read back cell A5 and report
+      the computed result.
+    expected: "100"
+    tags: [write, multi-step]
+    # Tests: writing a formula and reading back the computed value; "100" is the
+    # exact sum and will only appear if the formula was entered correctly.
+
+  - id: copy_sheet
+    prompt: >
+      Create a spreadsheet titled "Agent Copy Test Source" and write
+      [["Source Data"]] to "Sheet1!A1". Create a second spreadsheet titled
+      "Agent Copy Test Destination". Copy the first sheet from the source
+      spreadsheet into the destination spreadsheet. Read cell A1 of the copied
+      sheet in the destination and confirm the data was transferred.
+    expected: Source Data
+    tags: [write, multi-step, workflow]
+    # Tests: copyTo (sheets.copyTo) across spreadsheets; "Source Data" verifies
+    # the copy completed and the sheet content is accessible in the destination.
+
+  - id: named_range
+    prompt: >
+      Create a spreadsheet titled "Agent Named Range Test". Write
+      [["Val1", "Val2", "Val3"]] to "Sheet1!A1:C1". Create a named range called
+      "AgentTestRange" covering cells A1:C1. List the named ranges defined in
+      the spreadsheet and confirm it exists. Report the named range name.
+    expected: AgentTestRange
+    tags: [write, multi-step]
+    # Tests: addNamedRange via batchUpdate; "AgentTestRange" only appears if the
+    # named range was created with the exact name and is retrievable from metadata.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: error_handling_invalid_id
+    prompt: >
+      Try to retrieve metadata for a spreadsheet with ID
+      "INVALID_SPREADSHEET_ID_000". Report the error response received.
+    expected: "404"
+    tags: [read, error-handling]
+    # Tests: error propagation; a 404 or "not found" confirms the tool correctly
+    # surfaces API errors rather than swallowing them or returning empty data.

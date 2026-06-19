@@ -1,0 +1,10 @@
+{
+  "description": "Parameter name mutations for the Shopify Admin REST API, covering common query/body params used in order, customer, and product endpoints.",
+  "mutations": [
+    {"original": "financial_status", "mutated": "payment_status"},
+    {"original": "fulfillment_status", "mutated": "shipping_status"},
+    {"original": "created_at_min", "mutated": "created_after"},
+    {"original": "since_id", "mutated": "after_id"},
+    {"original": "limit", "mutated": "count"}
+  ]
+}

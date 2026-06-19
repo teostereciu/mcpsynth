@@ -1,0 +1,126 @@
+{
+  "list_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products.json"
+  },
+  "get_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}.json"
+  },
+  "create_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "POST /admin/api/2026-01/products.json"
+  },
+  "update_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "PUT /admin/api/2026-01/products/{product_id}.json"
+  },
+  "delete_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}.json"
+  },
+  "list_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders.json"
+  },
+  "get_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "create_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders.json"
+  },
+  "update_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "PUT /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "delete_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "DELETE /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "cancel_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/cancel.json"
+  },
+  "close_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/close.json"
+  },
+  "open_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/open.json"
+  },
+  "list_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers.json"
+  },
+  "get_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "create_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /admin/api/2026-01/customers.json"
+  },
+  "update_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "delete_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "DELETE /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "list_inventory_items": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "GET /admin/api/2026-01/inventory_items.json"
+  },
+  "get_inventory_item": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "GET /admin/api/2026-01/inventory_items/{inventory_item_id}.json"
+  },
+  "update_inventory_item": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "PUT /admin/api/2026-01/inventory_items/{inventory_item_id}.json"
+  },
+  "list_price_rules": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules.json"
+  },
+  "get_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "create_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "POST /admin/api/2026-01/price_rules.json"
+  },
+  "update_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "PUT /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "delete_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "DELETE /admin/api/2026-01/price_rules/{price_rule_id}.json"
+  },
+  "list_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks.json"
+  },
+  "get_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "create_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "POST /admin/api/2026-01/webhooks.json"
+  },
+  "update_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "PUT /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "delete_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "DELETE /admin/api/2026-01/webhooks/{webhook_id}.json"
+  }
+}

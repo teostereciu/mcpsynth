@@ -1,0 +1,10 @@
+{
+  "description": "Stripe API parameter mutations for parametric contamination testing. Renames common Stripe request parameters to plausible-but-wrong alternatives.",
+  "mutations": [
+    {"original": "payment_method", "mutated": "payment_instrument"},
+    {"original": "customer",       "mutated": "customer_id"},
+    {"original": "currency",       "mutated": "currency_code"},
+    {"original": "metadata",       "mutated": "custom_fields"},
+    {"original": "description",    "mutated": "notes"}
+  ]
+}

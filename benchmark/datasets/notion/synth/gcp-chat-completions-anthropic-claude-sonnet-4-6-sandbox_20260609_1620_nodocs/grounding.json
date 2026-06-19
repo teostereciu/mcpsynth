@@ -1,0 +1,158 @@
+{
+  "retrieve_page": {
+    "doc": "docs/pages/retrieve-a-page.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "retrieve_page_property": {
+    "doc": "docs/pages/retrieve-a-page-property-item.md",
+    "endpoint": "GET /pages/{page_id}/properties/{property_id}"
+  },
+  "create_page": {
+    "doc": "docs/pages/create-a-page.md",
+    "endpoint": "POST /pages"
+  },
+  "update_page_properties": {
+    "doc": "docs/pages/update-page-properties.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "archive_page": {
+    "doc": "docs/pages/archive-a-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "unarchive_page": {
+    "doc": "docs/pages/unarchive-a-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "set_page_icon": {
+    "doc": "docs/pages/update-page-properties.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "set_page_cover": {
+    "doc": "docs/pages/update-page-properties.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "retrieve_database": {
+    "doc": "docs/databases/retrieve-a-database.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "create_database": {
+    "doc": "docs/databases/create-a-database.md",
+    "endpoint": "POST /databases"
+  },
+  "update_database": {
+    "doc": "docs/databases/update-a-database.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "query_database": {
+    "doc": "docs/databases/query-a-database.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "query_database_with_compound_filter": {
+    "doc": "docs/databases/query-a-database.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "retrieve_block": {
+    "doc": "docs/blocks/retrieve-a-block.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "retrieve_block_children": {
+    "doc": "docs/blocks/retrieve-block-children.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "append_block_children": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "update_block": {
+    "doc": "docs/blocks/update-a-block.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "delete_block": {
+    "doc": "docs/blocks/delete-a-block.md",
+    "endpoint": "DELETE /blocks/{block_id}"
+  },
+  "append_paragraph": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_heading": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_bulleted_list": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_numbered_list": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_todo": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_code_block": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_divider": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_callout": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_toggle": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_image": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_bookmark": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_quote": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "append_table_of_contents": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "list_comments": {
+    "doc": "docs/comments/list-comments.md",
+    "endpoint": "GET /comments"
+  },
+  "create_comment": {
+    "doc": "docs/comments/create-a-comment.md",
+    "endpoint": "POST /comments"
+  },
+  "list_users": {
+    "doc": "docs/users/list-all-users.md",
+    "endpoint": "GET /users"
+  },
+  "retrieve_user": {
+    "doc": "docs/users/retrieve-a-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "retrieve_bot_user": {
+    "doc": "docs/users/retrieve-your-token-s-bot-user.md",
+    "endpoint": "GET /users/me"
+  },
+  "search": {
+    "doc": "docs/search/search-by-title.md",
+    "endpoint": "POST /search"
+  },
+  "search_pages": {
+    "doc": "docs/search/search-by-title.md",
+    "endpoint": "POST /search"
+  },
+  "search_databases": {
+    "doc": "docs/search/search-by-title.md",
+    "endpoint": "POST /search"
+  }
+}

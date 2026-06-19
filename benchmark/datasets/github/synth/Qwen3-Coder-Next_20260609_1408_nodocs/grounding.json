@@ -1,0 +1,306 @@
+{
+  "list_repositories": {
+    "doc": null,
+    "endpoint": "GET /user/repos"
+  },
+  "get_repository": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}"
+  },
+  "create_repository": {
+    "doc": null,
+    "endpoint": "POST /user/repos"
+  },
+  "update_repository": {
+    "doc": null,
+    "endpoint": "PATCH /repos/{owner}/{repo}"
+  },
+  "delete_repository": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}"
+  },
+  "list_branches": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/branches"
+  },
+  "get_branch": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}"
+  },
+  "create_branch": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/branches"
+  },
+  "protect_branch": {
+    "doc": null,
+    "endpoint": "PUT /repos/{owner}/{repo}/branches/{branch}/protection"
+  },
+  "list_pull_requests": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  },
+  "get_pull_request": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "create_pull_request": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/pulls"
+  },
+  "update_pull_request": {
+    "doc": null,
+    "endpoint": "PATCH /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "merge_pull_request": {
+    "doc": null,
+    "endpoint": "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"
+  },
+  "list_pull_request_files": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}/files"
+  },
+  "list_pull_request_comments": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}/comments"
+  },
+  "create_pull_request_review": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews"
+  },
+  "list_pull_request_reviews": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"
+  },
+  "get_pull_request_review": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}"
+  },
+  "delete_pull_request_review": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}"
+  },
+  "list_issues": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/issues"
+  },
+  "get_issue": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "create_issue": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/issues"
+  },
+  "update_issue": {
+    "doc": null,
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "add_issue_labels": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "remove_issue_label": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}"
+  },
+  "list_issue_comments": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "create_issue_comment": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "list_issue_events": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}/events"
+  },
+  "list_labels": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/labels"
+  },
+  "get_label": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/labels/{name}"
+  },
+  "create_label": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/labels"
+  },
+  "update_label": {
+    "doc": null,
+    "endpoint": "PATCH /repos/{owner}/{repo}/labels/{name}"
+  },
+  "delete_label": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}/labels/{name}"
+  },
+  "list_assignees": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/assignees"
+  },
+  "add_assignees": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/assignees"
+  },
+  "remove_assignees": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/assignees"
+  },
+  "list_commits": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/commits"
+  },
+  "get_commit": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/commits/{sha}"
+  },
+  "list_commit_comments": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/commits/{sha}/comments"
+  },
+  "create_commit_comment": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/commits/{sha}/comments"
+  },
+  "get_contents": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/contents/{path}"
+  },
+  "create_file": {
+    "doc": null,
+    "endpoint": "PUT /repos/{owner}/{repo}/contents/{path}"
+  },
+  "update_file": {
+    "doc": null,
+    "endpoint": "PUT /repos/{owner}/{repo}/contents/{path}"
+  },
+  "delete_file": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}/contents/{path}"
+  },
+  "list_releases": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/releases"
+  },
+  "get_release": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "create_release": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/releases"
+  },
+  "update_release": {
+    "doc": null,
+    "endpoint": "PATCH /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "delete_release": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "list_workflow_runs": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/actions/runs"
+  },
+  "get_workflow_run": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/actions/runs/{run_id}"
+  },
+  "rerun_workflow_run": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun"
+  },
+  "list_workflows": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows"
+  },
+  "get_workflow": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}"
+  },
+  "enable_workflow": {
+    "doc": null,
+    "endpoint": "PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable"
+  },
+  "disable_workflow": {
+    "doc": null,
+    "endpoint": "PUT /repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable"
+  },
+  "search_repositories": {
+    "doc": null,
+    "endpoint": "GET /search/repositories"
+  },
+  "search_code": {
+    "doc": null,
+    "endpoint": "GET /search/code"
+  },
+  "search_issues": {
+    "doc": null,
+    "endpoint": "GET /search/issues"
+  },
+  "search_users": {
+    "doc": null,
+    "endpoint": "GET /search/users"
+  },
+  "get_authenticated_user": {
+    "doc": null,
+    "endpoint": "GET /user"
+  },
+  "update_authenticated_user": {
+    "doc": null,
+    "endpoint": "PATCH /user"
+  },
+  "list_user_repositories": {
+    "doc": null,
+    "endpoint": "GET /users/{username}/repos"
+  },
+  "get_user": {
+    "doc": null,
+    "endpoint": "GET /users/{username}"
+  },
+  "list_org_repositories": {
+    "doc": null,
+    "endpoint": "GET /orgs/{org}/repos"
+  },
+  "get_org": {
+    "doc": null,
+    "endpoint": "GET /orgs/{org}"
+  },
+  "list_hooks": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/hooks"
+  },
+  "get_hook": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "create_hook": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/hooks"
+  },
+  "update_hook": {
+    "doc": null,
+    "endpoint": "PATCH /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "delete_hook": {
+    "doc": null,
+    "endpoint": "DELETE /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "list_stargazers": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/stargazers"
+  },
+  "list_forks": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/forks"
+  },
+  "create_fork": {
+    "doc": null,
+    "endpoint": "POST /repos/{owner}/{repo}/forks"
+  },
+  "get_license": {
+    "doc": null,
+    "endpoint": "GET /repos/{owner}/{repo}/license"
+  }
+}

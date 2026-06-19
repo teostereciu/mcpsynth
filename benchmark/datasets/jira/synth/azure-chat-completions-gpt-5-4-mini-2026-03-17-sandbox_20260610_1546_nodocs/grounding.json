@@ -1,0 +1,38 @@
+{
+  "get_myself": {
+    "doc": "docs/myself.md",
+    "endpoint": "GET /myself"
+  },
+  "search_issues": {
+    "doc": "docs/search.md",
+    "endpoint": "GET /search"
+  },
+  "get_issue": {
+    "doc": "docs/issue-get.md",
+    "endpoint": "GET /issue/{issueIdOrKey}"
+  },
+  "create_issue": {
+    "doc": "docs/issue-create.md",
+    "endpoint": "POST /issue"
+  },
+  "update_issue": {
+    "doc": "docs/issue-update.md",
+    "endpoint": "PUT /issue/{issueIdOrKey}"
+  },
+  "delete_issue": {
+    "doc": "docs/issue-delete.md",
+    "endpoint": "DELETE /issue/{issueIdOrKey}"
+  },
+  "add_comment": {
+    "doc": "docs/comment-create.md",
+    "endpoint": "POST /issue/{issueIdOrKey}/comment"
+  },
+  "list_projects": {
+    "doc": "docs/project-search.md",
+    "endpoint": "GET /project/search"
+  },
+  "get_project": {
+    "doc": "docs/project-get.md",
+    "endpoint": "GET /project/{projectIdOrKey}"
+  }
+}

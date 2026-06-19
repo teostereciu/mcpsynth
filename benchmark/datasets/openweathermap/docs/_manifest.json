@@ -1,0 +1,50 @@
+{
+  "name": "OpenWeatherMap Free Tier APIs",
+  "description": "Complete documentation for OpenWeatherMap Free Tier APIs (2.5 + Geocoding)",
+  "version": "2.5",
+  "endpoints": {
+    "current_weather": {
+      "filename": "api_current_weather.md",
+      "description": "Current Weather Data (API 2.5)",
+      "url": "https://openweathermap.org/current",
+      "lines": 1868
+    },
+    "5day_forecast": {
+      "filename": "api_5day_forecast.md",
+      "description": "5 Day / 3 Hour Forecast (API 2.5)",
+      "url": "https://openweathermap.org/forecast5",
+      "lines": 659
+    },
+    "air_pollution": {
+      "filename": "api_air_pollution.md",
+      "description": "Air Pollution API",
+      "url": "https://openweathermap.org/api/air-pollution",
+      "lines": 562
+    },
+    "geocoding": {
+      "filename": "api_geocoding.md",
+      "description": "Geocoding API (Direct and Reverse)",
+      "url": "https://openweathermap.org/api/geocoding-api",
+      "lines": 197
+    }
+  },
+  "total_endpoints": 4,
+  "api_endpoints": {
+    "current_weather": "/data/2.5/weather",
+    "5day_forecast": "/data/2.5/forecast",
+    "air_pollution": "/data/2.5/air_pollution",
+    "air_pollution_forecast": "/data/2.5/air_pollution/forecast",
+    "air_pollution_history": "/data/2.5/air_pollution/history",
+    "geocoding_direct": "/geo/1.0/direct",
+    "geocoding_reverse": "/geo/1.0/reverse"
+  },
+  "features": [
+    "Current weather data",
+    "5-day / 3-hour forecast",
+    "Air pollution data (current, forecast, historical)",
+    "Geocoding (city to coordinates)",
+    "Reverse geocoding (coordinates to city)"
+  ],
+  "authentication": "API key required (appid query parameter)",
+  "free_tier": "60 calls/min, 1M calls/month"
+}

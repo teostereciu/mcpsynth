@@ -1,0 +1,78 @@
+{
+  "notion_pages_create": {
+    "doc": "docs/post-page.md",
+    "endpoint": "POST /pages"
+  },
+  "notion_pages_retrieve": {
+    "doc": "docs/retrieve-a-page.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "notion_pages_update": {
+    "doc": "docs/patch-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "notion_databases_create": {
+    "doc": "docs/create-a-database.md",
+    "endpoint": "POST /databases"
+  },
+  "notion_databases_retrieve": {
+    "doc": "docs/retrieve-a-database.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "notion_databases_update": {
+    "doc": "docs/update-a-database.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "notion_databases_query": {
+    "doc": "docs/post-database-query.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "notion_blocks_retrieve": {
+    "doc": "docs/retrieve-a-block.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "notion_blocks_children_list": {
+    "doc": "docs/get-block-children.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "notion_blocks_children_append": {
+    "doc": "docs/patch-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "notion_blocks_update": {
+    "doc": "docs/update-a-block.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "notion_blocks_delete": {
+    "doc": "docs/delete-a-block.md",
+    "endpoint": "DELETE /blocks/{block_id}"
+  },
+  "notion_comments_create": {
+    "doc": "docs/create-a-comment.md",
+    "endpoint": "POST /comments"
+  },
+  "notion_comments_list": {
+    "doc": "docs/list-comments.md",
+    "endpoint": "GET /comments"
+  },
+  "notion_comments_retrieve": {
+    "doc": "docs/retrieve-comment.md",
+    "endpoint": "GET /comments/{comment_id}"
+  },
+  "notion_search_by_title": {
+    "doc": "docs/post-search.md",
+    "endpoint": "POST /search"
+  },
+  "notion_users_list": {
+    "doc": "docs/get-users.md",
+    "endpoint": "GET /users"
+  },
+  "notion_users_retrieve": {
+    "doc": "docs/get-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "notion_users_me": {
+    "doc": "docs/get-self.md",
+    "endpoint": "GET /users/me"
+  }
+}

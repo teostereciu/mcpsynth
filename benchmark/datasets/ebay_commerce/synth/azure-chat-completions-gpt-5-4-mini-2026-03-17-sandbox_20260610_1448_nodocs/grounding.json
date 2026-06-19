@@ -1,0 +1,20 @@
+{
+  "get_taxonomy_categories": {"doc": "docs/taxonomy/get-category-tree.md", "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"},
+  "get_category_tree": {"doc": "docs/taxonomy/get-category-tree.md", "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"},
+  "get_category_tree_aspects": {"doc": "docs/taxonomy/get-item-aspects-for-category.md", "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_item_aspects_for_category"},
+  "get_category_suggestions": {"doc": "docs/taxonomy/get-category-suggestions.md", "endpoint": "GET /commerce/taxonomy/v1/category_tree/0/get_category_suggestions"},
+  "get_item_aspects_for_category": {"doc": "docs/taxonomy/get-item-aspects-for-category.md", "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_item_aspects_for_category"},
+  "get_compatibility_properties": {"doc": "docs/taxonomy/get-compatibility-properties.md", "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_compatibility_properties"},
+  "get_catalog_product": {"doc": "docs/catalog/get-product.md", "endpoint": "GET /commerce/catalog/v1/product/{epid}"},
+  "search_catalog_products": {"doc": "docs/catalog/search-products.md", "endpoint": "GET /commerce/catalog/v1/product_summary/search"},
+  "get_product_metadata": {"doc": "docs/catalog/get-product-metadata.md", "endpoint": "GET /commerce/catalog/v1/product_metadata"},
+  "create_media_upload_session": {"doc": "docs/media/create-upload-session.md", "endpoint": "POST /commerce/media/v1/upload_session"},
+  "get_media_upload_session": {"doc": "docs/media/get-upload-session.md", "endpoint": "GET /commerce/media/v1/upload_session/{upload_session_id}"},
+  "complete_media_upload_session": {"doc": "docs/media/complete-upload-session.md", "endpoint": "POST /commerce/media/v1/upload_session/{upload_session_id}/complete"},
+  "create_notification_subscription": {"doc": "docs/notification/create-subscription.md", "endpoint": "POST /commerce/notification/v1/subscription"},
+  "get_notification_subscriptions": {"doc": "docs/notification/get-subscriptions.md", "endpoint": "GET /commerce/notification/v1/subscription"},
+  "delete_notification_subscription": {"doc": "docs/notification/delete-subscription.md", "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}"},
+  "get_identity_me": {"doc": "docs/identity/get-user.md", "endpoint": "GET /commerce/identity/v1/user/"},
+  "get_identity_user": {"doc": "docs/identity/get-user.md", "endpoint": "GET /commerce/identity/v1/user/"},
+  "translate_text": {"doc": "docs/translation/translate.md", "endpoint": "POST /commerce/translation/v1_beta/translate"}
+}

@@ -1,0 +1,606 @@
+{
+  "create_offer": {
+    "doc": "docs/api_inventory_create-offer.md",
+    "endpoint": "POST /sell/inventory/v1/offer"
+  },
+  "get_offer": {
+    "doc": "docs/api_inventory_get-offer.md",
+    "endpoint": "GET /sell/inventory/v1/offer/{offerId}"
+  },
+  "get_offers": {
+    "doc": "docs/api_inventory_get-offers.md",
+    "endpoint": "GET /sell/inventory/v1/offer"
+  },
+  "update_offer": {
+    "doc": "docs/api_inventory_update-offer.md",
+    "endpoint": "PUT /sell/inventory/v1/offer/{offerId}"
+  },
+  "delete_offer": {
+    "doc": "docs/api_inventory_delete-offer.md",
+    "endpoint": "DELETE /sell/inventory/v1/offer/{offerId}"
+  },
+  "publish_offer": {
+    "doc": "docs/api_inventory_publish-offer.md",
+    "endpoint": "POST /sell/inventory/v1/offer/{offerId}/publish"
+  },
+  "withdraw_offer": {
+    "doc": "docs/api_inventory_withdraw-offer.md",
+    "endpoint": "POST /sell/inventory/v1/offer/{offerId}/withdraw"
+  },
+  "create_inventory_item": {
+    "doc": "docs/api_inventory_create-or-replace-inventory-item.md",
+    "endpoint": "PUT /sell/inventory/v1/inventory_item/{seller_sku}"
+  },
+  "get_inventory_item": {
+    "doc": "docs/api_inventory_get-inventory-item.md",
+    "endpoint": "GET /sell/inventory/v1/inventory_item/{seller_sku}"
+  },
+  "get_inventory_items": {
+    "doc": "docs/api_inventory_get-inventory-items.md",
+    "endpoint": "GET /sell/inventory/v1/inventory_item"
+  },
+  "delete_inventory_item": {
+    "doc": "docs/api_inventory_delete-inventory-item.md",
+    "endpoint": "DELETE /sell/inventory/v1/inventory_item/{seller_sku}"
+  },
+  "create_inventory_location": {
+    "doc": "docs/api_inventory_create-inventory-location.md",
+    "endpoint": "POST /sell/inventory/v1/location/{merchantLocationKey}"
+  },
+  "get_inventory_location": {
+    "doc": "docs/api_inventory_get-inventory-location.md",
+    "endpoint": "GET /sell/inventory/v1/location/{merchantLocationKey}"
+  },
+  "get_inventory_locations": {
+    "doc": "docs/api_inventory_get-inventory-locations.md",
+    "endpoint": "GET /sell/inventory/v1/location"
+  },
+  "update_inventory_location": {
+    "doc": "docs/api_inventory_update-inventory-location.md",
+    "endpoint": "POST /sell/inventory/v1/location/{merchantLocationKey}/update_location_details"
+  },
+  "delete_inventory_location": {
+    "doc": "docs/api_inventory_delete-inventory-location.md",
+    "endpoint": "DELETE /sell/inventory/v1/location/{merchantLocationKey}"
+  },
+  "enable_inventory_location": {
+    "doc": "docs/api_inventory_enable-inventory-location.md",
+    "endpoint": "POST /sell/inventory/v1/location/{merchantLocationKey}/enable"
+  },
+  "disable_inventory_location": {
+    "doc": "docs/api_inventory_disable-inventory-location.md",
+    "endpoint": "POST /sell/inventory/v1/location/{merchantLocationKey}/disable"
+  },
+  "get_listing_fees": {
+    "doc": "docs/api_inventory_get-listing-fees.md",
+    "endpoint": "POST /sell/inventory/v1/offer/get_listing_fees"
+  },
+  "get_order": {
+    "doc": "docs/api_fulfillment_get-order.md",
+    "endpoint": "GET /sell/fulfillment/v1/order/{orderId}"
+  },
+  "get_orders": {
+    "doc": "docs/api_fulfillment_get-orders.md",
+    "endpoint": "GET /sell/fulfillment/v1/order"
+  },
+  "create_shipping_fulfillment": {
+    "doc": "docs/api_fulfillment_create-shipping-fulfillment.md",
+    "endpoint": "POST /sell/fulfillment/v1/order/{orderId}/shipping_fulfillment"
+  },
+  "get_shipping_fulfillment": {
+    "doc": "docs/api_fulfillment_get-shipping-fulfillment.md",
+    "endpoint": "GET /sell/fulfillment/v1/order/{orderId}/shipping_fulfillment/{fulfillmentId}"
+  },
+  "get_shipping_fulfillments": {
+    "doc": "docs/api_fulfillment_get-shipping-fulfillments.md",
+    "endpoint": "GET /sell/fulfillment/v1/order/{orderId}/shipping_fulfillment"
+  },
+  "issue_refund": {
+    "doc": "docs/api_fulfillment_issue-refund.md",
+    "endpoint": "POST /sell/fulfillment/v1/order/{order_id}/issue_refund"
+  },
+  "get_payment_dispute": {
+    "doc": "docs/api_fulfillment_get-payment-dispute.md",
+    "endpoint": "GET /sell/fulfillment/v1/payment_dispute/{payment_dispute_id}"
+  },
+  "get_payment_dispute_summaries": {
+    "doc": "docs/api_fulfillment_get-payment-dispute-summaries.md",
+    "endpoint": "GET /sell/fulfillment/v1/payment_dispute_summary"
+  },
+  "accept_payment_dispute": {
+    "doc": "docs/api_fulfillment_accept-payment-dispute.md",
+    "endpoint": "POST /sell/fulfillment/v1/payment_dispute/{payment_dispute_id}/accept"
+  },
+  "contest_payment_dispute": {
+    "doc": "docs/api_fulfillment_contest-payment-dispute.md",
+    "endpoint": "POST /sell/fulfillment/v1/payment_dispute/{payment_dispute_id}/contest"
+  },
+  "add_evidence": {
+    "doc": "docs/api_fulfillment_add-evidence.md",
+    "endpoint": "POST /sell/fulfillment/v1/payment_dispute/{payment_dispute_id}/add_evidence"
+  },
+  "create_fulfillment_policy": {
+    "doc": "docs/api_account_create-fulfillment-policy.md",
+    "endpoint": "POST /sell/account/v1/fulfillment_policy/"
+  },
+  "get_fulfillment_policy": {
+    "doc": "docs/api_account_get-fulfillment-policy.md",
+    "endpoint": "GET /sell/account/v1/fulfillment_policy/{fulfillmentPolicyId}"
+  },
+  "get_fulfillment_policies": {
+    "doc": "docs/api_account_get-fulfillment-policies.md",
+    "endpoint": "GET /sell/account/v1/fulfillment_policy"
+  },
+  "get_fulfillment_policy_by_name": {
+    "doc": "docs/api_account_get-fulfillment-policy-by-name.md",
+    "endpoint": "GET /sell/account/v1/fulfillment_policy/get_by_policy_name"
+  },
+  "update_fulfillment_policy": {
+    "doc": "docs/api_account_update-fulfillment-policy.md",
+    "endpoint": "PUT /sell/account/v1/fulfillment_policy/{fulfillmentPolicyId}"
+  },
+  "delete_fulfillment_policy": {
+    "doc": "docs/api_account_delete-fulfillment-policy.md",
+    "endpoint": "DELETE /sell/account/v1/fulfillment_policy/{fulfillmentPolicyId}"
+  },
+  "create_payment_policy": {
+    "doc": "docs/api_account_create-payment-policy.md",
+    "endpoint": "POST /sell/account/v1/payment_policy"
+  },
+  "get_payment_policy": {
+    "doc": "docs/api_account_get-payment-policy.md",
+    "endpoint": "GET /sell/account/v1/payment_policy/{payment_policy_id}"
+  },
+  "get_payment_policies": {
+    "doc": "docs/api_account_get-payment-policies.md",
+    "endpoint": "GET /sell/account/v1/payment_policy"
+  },
+  "get_payment_policy_by_name": {
+    "doc": "docs/api_account_get-payment-policy-by-name.md",
+    "endpoint": "GET /sell/account/v1/payment_policy/get_by_policy_name"
+  },
+  "update_payment_policy": {
+    "doc": "docs/api_account_update-payment-policy.md",
+    "endpoint": "PUT /sell/account/v1/payment_policy/{payment_policy_id}"
+  },
+  "delete_payment_policy": {
+    "doc": "docs/api_account_delete-payment-policy.md",
+    "endpoint": "DELETE /sell/account/v1/payment_policy/{payment_policy_id}"
+  },
+  "create_return_policy": {
+    "doc": "docs/api_account_create-return-policy.md",
+    "endpoint": "POST /sell/account/v1/return_policy"
+  },
+  "get_return_policy": {
+    "doc": "docs/api_account_get-return-policy.md",
+    "endpoint": "GET /sell/account/v1/return_policy/{return_policy_id}"
+  },
+  "get_return_policies": {
+    "doc": "docs/api_account_get-return-policies.md",
+    "endpoint": "GET /sell/account/v1/return_policy"
+  },
+  "get_return_policy_by_name": {
+    "doc": "docs/api_account_get-return-policy-by-name.md",
+    "endpoint": "GET /sell/account/v1/return_policy/get_by_policy_name"
+  },
+  "update_return_policy": {
+    "doc": "docs/api_account_update-return-policy.md",
+    "endpoint": "PUT /sell/account/v1/return_policy/{return_policy_id}"
+  },
+  "delete_return_policy": {
+    "doc": "docs/api_account_delete-return-policy.md",
+    "endpoint": "DELETE /sell/account/v1/return_policy/{return_policy_id}"
+  },
+  "get_privileges": {
+    "doc": "docs/api_account_get-privileges.md",
+    "endpoint": "GET /sell/account/v1/privilege"
+  },
+  "get_opted_in_programs": {
+    "doc": "docs/api_account_get-opted-in-programs.md",
+    "endpoint": "GET /sell/account/v1/program/get_opted_in_programs"
+  },
+  "opt_in_to_program": {
+    "doc": "docs/api_account_opt-in-to-program.md",
+    "endpoint": "POST /sell/account/v1/program/opt_in"
+  },
+  "opt_out_of_program": {
+    "doc": "docs/api_account_opt-out-of-program.md",
+    "endpoint": "POST /sell/account/v1/program/opt_out"
+  },
+  "create_campaign": {
+    "doc": "docs/api_marketing_get-campaigns.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign"
+  },
+  "get_campaign": {
+    "doc": "docs/api_marketing_get-campaign.md",
+    "endpoint": "GET /sell/marketing/v1/ad_campaign/{campaign_id}"
+  },
+  "get_campaigns": {
+    "doc": "docs/api_marketing_get-campaigns.md",
+    "endpoint": "GET /sell/marketing/v1/ad_campaign"
+  },
+  "update_campaign": {
+    "doc": "docs/api_marketing_get-campaigns.md",
+    "endpoint": "PUT /sell/marketing/v1/ad_campaign/{campaign_id}"
+  },
+  "delete_campaign": {
+    "doc": "docs/api_marketing_delete-campaign.md",
+    "endpoint": "DELETE /sell/marketing/v1/ad_campaign/{campaign_id}"
+  },
+  "create_ad": {
+    "doc": "docs/api_marketing_create-ad-by-listing-id.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/ad"
+  },
+  "get_ad": {
+    "doc": "docs/api_marketing_get-ad.md",
+    "endpoint": "GET /sell/marketing/v1/ad_campaign/{campaign_id}/ad/{ad_id}"
+  },
+  "get_ads": {
+    "doc": "docs/api_marketing_get-ads.md",
+    "endpoint": "GET /sell/marketing/v1/ad_campaign/{campaign_id}/ad"
+  },
+  "update_ad_bid": {
+    "doc": "docs/api_marketing_update-bid.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/ad/{ad_id}/update_bid"
+  },
+  "delete_ad": {
+    "doc": "docs/api_marketing_delete-ad.md",
+    "endpoint": "DELETE /sell/marketing/v1/ad_campaign/{campaign_id}/ad/{ad_id}"
+  },
+  "get_payout_summary": {
+    "doc": "docs/api_finances_get-payout-summary.md",
+    "endpoint": "GET /sell/finances/v1/payout_summary"
+  },
+  "get_payouts": {
+    "doc": "docs/api_finances_get-payouts.md",
+    "endpoint": "GET /sell/finances/v1/payout"
+  },
+  "get_payout": {
+    "doc": "docs/api_finances_get-payout.md",
+    "endpoint": "GET /sell/finances/v1/payout/{payout_Id}"
+  },
+  "get_transactions": {
+    "doc": "docs/api_finances_get-transactions.md",
+    "endpoint": "GET /sell/finances/v1/transaction"
+  },
+  "get_transaction_summary": {
+    "doc": "docs/api_finances_get-transaction-summary.md",
+    "endpoint": "GET /sell/finances/v1/transaction_summary"
+  },
+  "get_seller_funds_summary": {
+    "doc": "docs/api_finances_get-seller-funds-summary.md",
+    "endpoint": "GET /sell/finances/v1/seller_funds_summary"
+  },
+  "create_inventory_task": {
+    "doc": "docs/api_feed_create-inventory-task.md",
+    "endpoint": "POST /sell/feed/v1/inventory_task"
+  },
+  "get_inventory_task": {
+    "doc": "docs/api_feed_get-inventory-task.md",
+    "endpoint": "GET /sell/feed/v1/inventory_task/{task_id}"
+  },
+  "get_inventory_tasks": {
+    "doc": "docs/api_feed_get-inventory-tasks.md",
+    "endpoint": "GET /sell/feed/v1/inventory_task"
+  },
+  "create_order_task": {
+    "doc": "docs/api_feed_create-order-task.md",
+    "endpoint": "POST /sell/feed/v1/order_task"
+  },
+  "get_order_task": {
+    "doc": "docs/api_feed_get-order-task.md",
+    "endpoint": "GET /sell/feed/v1/order_task/{task_id}"
+  },
+  "get_order_tasks": {
+    "doc": "docs/api_feed_get-order-tasks.md",
+    "endpoint": "GET /sell/feed/v1/order_task"
+  },
+  "get_task": {
+    "doc": "docs/api_feed_get-task.md",
+    "endpoint": "GET /sell/feed/v1/task/{task_id}"
+  },
+  "get_tasks": {
+    "doc": "docs/api_feed_get-tasks.md",
+    "endpoint": "GET /sell/feed/v1/task"
+  },
+  "get_category_policies": {
+    "doc": "docs/api_metadata_get-category-policies.md",
+    "endpoint": "GET /sell/metadata/v1/marketplace/{market_id}/get_category_policies"
+  },
+  "get_currencies": {
+    "doc": "docs/api_metadata_get-currencies.md",
+    "endpoint": "GET /sell/metadata/v1/marketplace/{market_id}/get_currencies"
+  },
+  "get_listing_violations_summary": {
+    "doc": "docs/api_compliance_get-listing-violations-summary.md",
+    "endpoint": "GET /sell/compliance/v1/listing_violation_summary"
+  },
+  "get_listing_violations": {
+    "doc": "docs/api_compliance_get-listing-violations.md",
+    "endpoint": "GET /sell/compliance/v1/listing_violation"
+  },
+  "get_traffic_report": {
+    "doc": "docs/api_analytics_get-traffic-report.md",
+    "endpoint": "GET /sell/analytics/v1/traffic_report"
+  },
+  "get_seller_standards_profile": {
+    "doc": "docs/api_analytics_get-seller-standards-profile.md",
+    "endpoint": "GET /sell/analytics/v1/seller_standards_profile/{program}/{cycle}"
+  },
+  "find_listing_recommendations": {
+    "doc": "docs/api_recommendation_find-listing-recommendations.md",
+    "endpoint": "POST /sell/recommendation/v1/find"
+  },
+  "find_eligible_items": {
+    "doc": "docs/api_negotiation_find-eligible-items.md",
+    "endpoint": "GET /sell/negotiation/v1/find_eligible_items"
+  },
+  "send_offer_to_interested_buyers": {
+    "doc": "docs/api_negotiation_send-offer-to-interested-buyers.md",
+    "endpoint": "POST /sell/negotiation/v1/send_offer_to_interested_buyers"
+  },
+  "get_store": {
+    "doc": "docs/api_stores_get-store.md",
+    "endpoint": "GET /sell/stores/v1/store"
+  },
+  "get_store_categories": {
+    "doc": "docs/api_stores_get-store-categories.md",
+    "endpoint": "GET /sell/stores/v1/store/categories"
+  },
+  "add_store_category": {
+    "doc": "docs/api_stores_add-store-category.md",
+    "endpoint": "POST /sell/stores/v1/store/categories"
+  },
+  "delete_store_category": {
+    "doc": "docs/api_stores_delete-store-category.md",
+    "endpoint": "DELETE /sell/stores/v1/store/categories/{category_id}"
+  },
+  "rename_store_category": {
+    "doc": "docs/api_stores_rename-store-category.md",
+    "endpoint": "PUT /sell/stores/v1/store/categories/{category_id}"
+  },
+  "create_shipping_quote": {
+    "doc": "docs/api_logistics_create-shipping-quote.md",
+    "endpoint": "POST /sell/logistics/v1/shipping_quote"
+  },
+  "get_shipping_quote": {
+    "doc": "docs/api_logistics_get-shipping-quote.md",
+    "endpoint": "GET /sell/logistics/v1/shipping_quote/{shippingQuoteId}"
+  },
+  "create_shipment_from_quote": {
+    "doc": "docs/api_logistics_create-from-shipping-quote.md",
+    "endpoint": "POST /sell/logistics/v1/shipment/create_from_shipping_quote"
+  },
+  "get_shipment": {
+    "doc": "docs/api_logistics_get-shipment.md",
+    "endpoint": "GET /sell/logistics/v1/shipment/{shipmentId}"
+  },
+  "cancel_shipment": {
+    "doc": "docs/api_logistics_cancel-shipment.md",
+    "endpoint": "POST /sell/logistics/v1/shipment/{shipmentId}/cancel"
+  },
+  "download_label_file": {
+    "doc": "docs/api_logistics_download-label-file.md",
+    "endpoint": "GET /sell/logistics/v1/shipment/{shipmentId}/download_label_file"
+  },
+  "bulk_create_offer": {
+    "doc": "docs/api_inventory_bulk-create-offer.md",
+    "endpoint": "POST /sell/inventory/v1/bulk_create_offer"
+  },
+  "bulk_publish_offer": {
+    "doc": "docs/api_inventory_bulk-publish-offer.md",
+    "endpoint": "POST /sell/inventory/v1/bulk_publish_offer"
+  },
+  "bulk_update_price_quantity": {
+    "doc": "docs/api_inventory_bulk-update-price-quantity.md",
+    "endpoint": "POST /sell/inventory/v1/bulk_update_price_quantity"
+  },
+  "create_inventory_item_group": {
+    "doc": "docs/api_inventory_create-or-replace-inventory-item-group.md",
+    "endpoint": "PUT /sell/inventory/v1/inventory_item_group/{inventoryItemGroupKey}"
+  },
+  "get_inventory_item_group": {
+    "doc": "docs/api_inventory_get-inventory-item-group.md",
+    "endpoint": "GET /sell/inventory/v1/inventory_item_group/{inventoryItemGroupKey}"
+  },
+  "delete_inventory_item_group": {
+    "doc": "docs/api_inventory_delete-inventory-item-group.md",
+    "endpoint": "DELETE /sell/inventory/v1/inventory_item_group/{inventoryItemGroupKey}"
+  },
+  "publish_offer_by_inventory_item_group": {
+    "doc": "docs/api_inventory_publish-offer-by-inventory-item-group.md",
+    "endpoint": "POST /sell/inventory/v1/offer/publish_by_inventory_item_group"
+  },
+  "withdraw_offer_by_inventory_item_group": {
+    "doc": "docs/api_inventory_withdraw-offer-by-inventory-item-group.md",
+    "endpoint": "POST /sell/inventory/v1/offer/withdraw_by_inventory_item_group"
+  },
+  "create_product_compatibility": {
+    "doc": "docs/api_inventory_create-or-replace-product-compatibility.md",
+    "endpoint": "PUT /sell/inventory/v1/inventory_item/{seller_sku}/product_compatibility"
+  },
+  "get_product_compatibility": {
+    "doc": "docs/api_inventory_get-product-compatibility.md",
+    "endpoint": "GET /sell/inventory/v1/inventory_item/{seller_sku}/product_compatibility"
+  },
+  "delete_product_compatibility": {
+    "doc": "docs/api_inventory_delete-product-compatibility.md",
+    "endpoint": "DELETE /sell/inventory/v1/inventory_item/{seller_sku}/product_compatibility"
+  },
+  "create_sku_location_mapping": {
+    "doc": "docs/api_inventory_create-or-replace-sku-location-mapping.md",
+    "endpoint": "PUT /sell/inventory/v1/listing/{listingId}/seller_sku/{seller_sku}/locations"
+  },
+  "get_sku_location_mapping": {
+    "doc": "docs/api_inventory_get-sku-location-mapping.md",
+    "endpoint": "GET /sell/inventory/v1/listing/{listingId}/seller_sku/{seller_sku}/locations"
+  },
+  "delete_sku_location_mapping": {
+    "doc": "docs/api_inventory_delete-sku-location-mapping.md",
+    "endpoint": "DELETE /sell/inventory/v1/listing/{listingId}/seller_sku/{seller_sku}/locations"
+  },
+  "get_activities": {
+    "doc": "docs/api_fulfillment_get-activities.md",
+    "endpoint": "GET /sell/fulfillment/v1/payment_dispute/{payment_dispute_id}/activity"
+  },
+  "fetch_evidence_content": {
+    "doc": "docs/api_fulfillment_fetch-evidence-content.md",
+    "endpoint": "GET /sell/fulfillment/v1/payment_dispute/{payment_dispute_id}/fetch_evidence_content"
+  },
+  "create_ad_group": {
+    "doc": "docs/api_marketing_create-ad-group.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/ad_group"
+  },
+  "get_ad_group": {
+    "doc": "docs/api_marketing_get-ad-group.md",
+    "endpoint": "GET /sell/marketing/v1/ad_campaign/{campaign_id}/ad_group/{ad_group_id}"
+  },
+  "get_ad_groups": {
+    "doc": "docs/api_marketing_get-ad-groups.md",
+    "endpoint": "GET /sell/marketing/v1/ad_campaign/{campaign_id}/ad_group"
+  },
+  "update_ad_group": {
+    "doc": "docs/api_marketing_update-ad-group.md",
+    "endpoint": "PUT /sell/marketing/v1/ad_campaign/{campaign_id}/ad_group/{ad_group_id}"
+  },
+  "bulk_create_ads_by_listing_id": {
+    "doc": "docs/api_marketing_bulk-create-ads-by-listing-id.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/bulk_create_ads_by_listing_id"
+  },
+  "bulk_create_ads_by_inventory_reference": {
+    "doc": "docs/api_marketing_bulk-create-ads-by-inventory-reference.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/bulk_create_ads_by_inventory_reference"
+  },
+  "bulk_delete_ads_by_listing_id": {
+    "doc": "docs/api_marketing_bulk-delete-ads-by-listing-id.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/bulk_delete_ads_by_listing_id"
+  },
+  "bulk_update_ads_bid_by_listing_id": {
+    "doc": "docs/api_marketing_bulk-update-ads-bid-by-listing-id.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/bulk_update_ads_bid_by_listing_id"
+  },
+  "suggest_bids": {
+    "doc": "docs/api_marketing_suggest-bids.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/ad_group/{ad_group_id}/suggest_bids"
+  },
+  "suggest_keywords": {
+    "doc": "docs/api_marketing_suggest-keywords.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/ad_group/{ad_group_id}/suggest_keywords"
+  },
+  "suggest_budget": {
+    "doc": "docs/api_marketing_suggest-budget.md",
+    "endpoint": "GET /sell/marketing/v1/ad_campaign/suggest_budget"
+  },
+  "clone_campaign": {
+    "doc": "docs/api_marketing_clone-campaign.md",
+    "endpoint": "POST /sell/marketing/v1/ad_campaign/{campaign_id}/clone"
+  },
+  "create_schedule": {
+    "doc": "docs/api_feed_create-schedule.md",
+    "endpoint": "POST /sell/feed/v1/schedule"
+  },
+  "get_schedule": {
+    "doc": "docs/api_feed_get-schedule.md",
+    "endpoint": "GET /sell/feed/v1/schedule/{schedule_id}"
+  },
+  "get_schedules": {
+    "doc": "docs/api_feed_get-schedules.md",
+    "endpoint": "GET /sell/feed/v1/schedule"
+  },
+  "update_schedule": {
+    "doc": "docs/api_feed_update-schedule.md",
+    "endpoint": "PUT /sell/feed/v1/schedule/{schedule_id}"
+  },
+  "delete_schedule": {
+    "doc": "docs/api_feed_delete-schedule.md",
+    "endpoint": "DELETE /sell/feed/v1/schedule/{schedule_id}"
+  },
+  "get_schedule_templates": {
+    "doc": "docs/api_feed_get-schedule-templates.md",
+    "endpoint": "GET /sell/feed/v1/schedule_template"
+  },
+  "get_schedule_template": {
+    "doc": "docs/api_feed_get-schedule-template.md",
+    "endpoint": "GET /sell/feed/v1/schedule_template/{schedule_template_id}"
+  },
+  "find_seller_standards_profiles": {
+    "doc": "docs/api_analytics_find-seller-standards-profiles.md",
+    "endpoint": "GET /sell/analytics/v1/seller_standards_profile"
+  },
+  "get_customer_service_metric": {
+    "doc": "docs/api_analytics_get-customer-service-metric.md",
+    "endpoint": "GET /sell/analytics/v1/customer_service_metric/{customer_service_metric_type}/{evaluation_type}"
+  },
+  "get_item_condition_policies": {
+    "doc": "docs/api_metadata_get-item-condition-policies.md",
+    "endpoint": "GET /sell/metadata/v1/marketplace/{market_id}/get_item_condition_policies"
+  },
+  "get_listing_type_policies": {
+    "doc": "docs/api_metadata_get-listing-type-policies.md",
+    "endpoint": "GET /sell/metadata/v1/marketplace/{market_id}/get_listing_type_policies"
+  },
+  "get_listing_structure_policies": {
+    "doc": "docs/api_metadata_get-listing-structure-policies.md",
+    "endpoint": "GET /sell/metadata/v1/marketplace/{market_id}/get_listing_structure_policies"
+  },
+  "get_hazardous_materials_labels": {
+    "doc": "docs/api_metadata_get-hazardous-materials-labels.md",
+    "endpoint": "GET /sell/metadata/v1/marketplace/{market_id}/get_hazardous_materials_labels"
+  },
+  "get_automotive_parts_compatibility_policies": {
+    "doc": "docs/api_metadata_get-automotive-parts-compatibility-policies.md",
+    "endpoint": "GET /sell/metadata/v1/marketplace/{market_id}/get_automotive_parts_compatibility_policies"
+  },
+  "create_custom_policy": {
+    "doc": "docs/api_account_create-custom-policy.md",
+    "endpoint": "POST /sell/account/v1/custom_policy/"
+  },
+  "get_custom_policy": {
+    "doc": "docs/api_account_get-custom-policy.md",
+    "endpoint": "GET /sell/account/v1/custom_policy/{custom_policy_id}"
+  },
+  "get_custom_policies": {
+    "doc": "docs/api_account_get-custom-policies.md",
+    "endpoint": "GET /sell/account/v1/custom_policy/"
+  },
+  "update_custom_policy": {
+    "doc": "docs/api_account_update-custom-policy.md",
+    "endpoint": "PUT /sell/account/v1/custom_policy/{custom_policy_id}"
+  },
+  "delete_custom_policy": {
+    "doc": "docs/api_account_delete-custom-policy.md",
+    "endpoint": "DELETE /sell/account/v1/custom_policy/{custom_policy_id}"
+  },
+  "create_or_replace_sales_tax": {
+    "doc": "docs/api_account_create-or-replace-sales-tax.md",
+    "endpoint": "PUT /sell/account/v1/sales_tax/{countryCode}/{jurisdictionId}"
+  },
+  "get_sales_tax": {
+    "doc": "docs/api_account_get-sales-tax.md",
+    "endpoint": "GET /sell/account/v1/sales_tax/{countryCode}/{jurisdictionId}"
+  },
+  "get_sales_taxes": {
+    "doc": "docs/api_account_get-sales-taxes.md",
+    "endpoint": "GET /sell/account/v1/sales_tax"
+  },
+  "delete_sales_tax": {
+    "doc": "docs/api_account_delete-sales-tax.md",
+    "endpoint": "DELETE /sell/account/v1/sales_tax/{countryCode}/{jurisdictionId}"
+  },
+  "get_rate_tables": {
+    "doc": "docs/api_account_get-rate-tables.md",
+    "endpoint": "GET /sell/account/v1/rate_table"
+  },
+  "get_subscription": {
+    "doc": "docs/api_account_get-subscription.md",
+    "endpoint": "GET /sell/account/v1/subscription"
+  },
+  "get_payments_program": {
+    "doc": "docs/api_account_get-payments-program.md",
+    "endpoint": "GET /sell/account/v1/payments_program/{market_id}/{payments_program_type}"
+  },
+  "get_payments_program_onboarding": {
+    "doc": "docs/api_account_get-payments-program-onboarding.md",
+    "endpoint": "GET /sell/account/v1/payments_program/{market_id}/{payments_program_type}/onboarding"
+  }
+}

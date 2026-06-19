@@ -1,0 +1,74 @@
+{
+  "get_current_weather_by_city": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_coordinates": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_zip": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_current_weather_by_city_id": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_forecast_by_city": {
+    "doc": "docs/forecast-5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_coordinates": {
+    "doc": "docs/forecast-5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_zip": {
+    "doc": "docs/forecast-5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_forecast_by_city_id": {
+    "doc": "docs/forecast-5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "get_current_air_pollution": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution"
+  },
+  "get_air_pollution_forecast": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/forecast"
+  },
+  "get_historical_air_pollution": {
+    "doc": "docs/air-pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/history"
+  },
+  "geocode_by_city_name": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/direct"
+  },
+  "geocode_by_zip": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/zip"
+  },
+  "reverse_geocode": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/reverse"
+  },
+  "get_weather_and_forecast_by_city": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "get_weather_and_air_quality_by_coordinates": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "find_city_coordinates": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/direct"
+  },
+  "get_full_location_report": {
+    "doc": "docs/current-weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  }
+}

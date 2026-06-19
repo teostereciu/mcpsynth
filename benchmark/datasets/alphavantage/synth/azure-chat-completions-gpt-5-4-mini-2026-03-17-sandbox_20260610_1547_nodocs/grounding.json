@@ -1,0 +1,6 @@
+{
+  "alpha_vantage_tools": {
+    "doc": "TASK.md",
+    "endpoint": "GET https://www.alphavantage.co/query"
+  }
+}

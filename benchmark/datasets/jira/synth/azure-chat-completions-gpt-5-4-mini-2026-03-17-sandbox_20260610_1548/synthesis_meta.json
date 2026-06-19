@@ -1,0 +1,12 @@
+{
+  "dataset": "jira",
+  "model": "azure-chat-completions-gpt-5-4-mini-2026-03-17-sandbox",
+  "condition": "docs",
+  "synthesis_time": 66.62269806861877,
+  "token_usage": {
+    "input_tokens": 74086,
+    "output_tokens": 1903
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1548"
+}

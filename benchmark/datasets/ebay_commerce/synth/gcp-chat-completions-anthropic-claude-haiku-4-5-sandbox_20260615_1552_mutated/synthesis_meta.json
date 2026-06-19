@@ -1,0 +1,12 @@
+{
+  "dataset": "ebay_commerce",
+  "model": "gcp-chat-completions-anthropic-claude-haiku-4.5-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 815.8671107292175,
+  "token_usage": {
+    "input_tokens": 2168207,
+    "output_tokens": 33859
+  },
+  "cost_estimate": null,
+  "timestamp": "20260615_1552"
+}

@@ -1,0 +1,187 @@
+# Agent evaluation tasks for Google Workspace MCP server.
+#
+# Required env vars: GOOGLE_ACCESS_TOKEN (or GOOGLE_WORKSPACE_CREDENTIALS)
+# Covers Gmail, Calendar, Drive, Docs, Slides, Sheets
+#
+# See benchmark/TASK_CREATION_GUIDE.md for prompt writing principles,
+# difficulty calibration, and the full checklist.
+#
+# Dataset note: write tasks use clearly test-namespaced names and addresses
+# (agent-eval-*, "Agent Eval *", *@example-mcp-eval.com) for cleanability.
+# Endpoint names and parameter names are not provided in prompts.
+
+tasks:
+  # ---------- GMAIL ----------
+
+  - id: gmail_get_profile
+    prompt: >
+      Retrieve the Gmail profile for the authenticated user. Report the email
+      address and total message count.
+    expected: emailAddress
+    tags: [read, gmail]
+    # Tests: users.getProfile; "emailAddress" is the exact field name in the
+    # Gmail profile response — confirms the correct resource was fetched, not
+    # a generic user object from a different API.
+
+  - id: gmail_list_messages
+    prompt: >
+      List the 5 most recent messages in the authenticated user's Gmail inbox.
+      Fetch the details of each message and report the subject and sender.
+    expected: subject
+    tags: [read, gmail, multi-step]
+    # Tests: messages.list + messages.get chain; "subject" only appears in the
+    # per-message detail response, confirming the agent fetched details beyond
+    # the bare message ID list.
+
+  - id: gmail_create_label
+    prompt: >
+      Create a new Gmail label called "agent-eval-test". Report the label ID
+      and name returned.
+    expected: agent-eval-test
+    tags: [write, gmail]
+    # Tests: labels.create; the exact name "agent-eval-test" only appears if
+    # the label was created and the response correctly returned.
+
+  - id: gmail_create_draft
+    prompt: >
+      Create a Gmail draft email addressed to the authenticated user's own
+      email address with subject "Agent harness test draft" and body
+      "This is a test draft created by the MCP agent evaluation harness."
+      Report the draft ID.
+    expected: draft
+    tags: [write, gmail]
+    # Tests: drafts.create; the draft ID always begins with a prefix containing
+    # "draft" — confirms the correct resource type was created.
+
+  # ---------- CALENDAR ----------
+
+  - id: calendar_list_events
+    prompt: >
+      List the next 5 upcoming events on the authenticated user's primary
+      calendar. Report the event titles and start times, or confirm there are
+      none scheduled.
+    expected: summary
+    tags: [read, calendar]
+    # Tests: events.list on the primary calendar; "summary" is the Calendar API
+    # field name for the event title — only present if the correct resource was
+    # returned rather than, say, a Drive file listing.
+
+  - id: calendar_create_event
+    prompt: >
+      Create a calendar event on the authenticated user's primary calendar with
+      title "Agent Harness Test Event", starting tomorrow at 10:00 AM UTC and
+      ending at 11:00 AM UTC, with description "Created by MCP agent evaluation
+      harness". Report the event ID.
+    expected: Agent Harness Test Event
+    tags: [write, calendar]
+    # Tests: events.insert; the exact title only appears in the response if the
+    # event was created correctly and the response was parsed.
+
+  # ---------- DRIVE ----------
+
+  - id: drive_create_folder
+    prompt: >
+      Create a new folder in Google Drive named "agent-eval-test-folder".
+      Report the folder ID and its MIME type.
+    expected: application/vnd.google-apps.folder
+    tags: [write, drive]
+    # Tests: files.create with folder MIME type; this exact MIME type string only
+    # appears if the resource was created as a folder, not a file.
+
+  - id: drive_list_files
+    prompt: >
+      List the 5 most recently modified files in the authenticated user's
+      Google Drive. Report the file names and their MIME types.
+    expected: mimeType
+    tags: [read, drive]
+    # Tests: files.list with orderBy modified; "mimeType" confirms the file
+    # metadata fields were correctly requested and returned (not just names).
+
+  # ---------- DOCS ----------
+
+  - id: docs_create_document
+    prompt: >
+      Create a new Google Doc titled "Agent Evaluation Test Document".
+      Report the document ID.
+    expected: Agent Evaluation Test Document
+    tags: [write, docs]
+    # Tests: documents.create; the exact title only appears in the response body
+    # if the document was created and the title field was returned correctly.
+
+  - id: docs_create_and_insert
+    prompt: >
+      Create a new Google Doc titled "Agent Test: Content Insertion". Insert
+      the text "Hello from the MCP agent harness!" into the document body.
+      Report the document ID and confirm the text was inserted.
+    expected: Hello from the MCP agent harness!
+    tags: [write, docs, multi-step, workflow]
+    # Tests: documents.create + documents.batchUpdate with insertText; the exact
+    # inserted text only appears if the batchUpdate was called correctly with the
+    # right location and insertText request type.
+
+  # ---------- SHEETS ----------
+
+  - id: sheets_create_spreadsheet
+    prompt: >
+      Create a new Google Sheets spreadsheet titled "Agent Eval Test Sheet".
+      Report the spreadsheet ID.
+    expected: Agent Eval Test Sheet
+    tags: [write, sheets]
+    # Tests: spreadsheets.create; the exact title confirms the spreadsheet was
+    # created and its properties were returned in the response.
+
+  - id: sheets_write_and_read
+    prompt: >
+      Create a new Google Sheets spreadsheet titled "Agent Eval: Read/Write Test".
+      Write the values [["Name", "Score"], ["Alice", "95"], ["Bob", "87"]] to
+      the range "Sheet1!A1:B3". Then read those values back and report them.
+    expected: Alice
+    tags: [write, sheets, multi-step, workflow]
+    # Tests: spreadsheets.values.update + values.get; "Alice" confirms the data
+    # survived a full write-then-read round trip.
+
+  - id: sheets_append_rows
+    prompt: >
+      Create a new spreadsheet titled "Agent Eval: Append Test". Write the header
+      row [["Item", "Quantity", "Price"]] to "Sheet1!A1:C1". Then append the rows
+      [["Widget", "10", "5.99"], ["Gadget", "5", "12.49"]] below the header.
+      Read back the full range and report the contents.
+    expected: Widget
+    tags: [write, sheets, multi-step]
+    # Tests: values.append distinct from values.update; "Widget" confirms the
+    # appended rows landed correctly and were read back.
+
+  # ---------- SLIDES ----------
+
+  - id: slides_create_presentation
+    prompt: >
+      Create a new Google Slides presentation titled "Agent Eval Test Presentation".
+      Report the presentation ID.
+    expected: Agent Eval Test Presentation
+    tags: [write, slides]
+    # Tests: presentations.create; the exact title only appears in the response
+    # if the Slides API was used (not Docs or Sheets). Discriminates servers that
+    # omit Slides coverage entirely.
+
+  # ---------- CROSS-PRODUCT ----------
+
+  - id: drive_then_docs
+    prompt: >
+      Create a folder in Google Drive named "agent-docs-folder". Then create a
+      Google Doc titled "Doc in Folder" and move it into that folder. Report the
+      folder ID, document ID, and confirm the file is listed under the folder.
+    expected: agent-docs-folder
+    tags: [write, drive, docs, multi-step, workflow]
+    # Tests: Drive folder create + Docs create + files.update (parents) chain;
+    # the folder name in the final file listing confirms the move succeeded.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: error_handling_invalid_resource
+    prompt: >
+      Try to retrieve a Google Drive file with ID "INVALID_FILE_ID_00000".
+      Report the error response received.
+    expected: "404"
+    tags: [read, error-handling]
+    # Tests: error propagation on files.get; a 404 or "fileNotFound" confirms
+    # the tool surfaces API errors rather than silently returning empty results.

@@ -1,0 +1,237 @@
+# Agent evaluation tasks for Confluence Cloud REST API MCP server.
+#
+# Required env vars:
+#   CONFLUENCE_BASE_URL   — e.g. https://testsynth.atlassian.net/wiki
+#   CONFLUENCE_SPACE_KEY  — default space key (SYNTH)
+#   JIRA_EMAIL            — Atlassian account email
+#   JIRA_API_TOKEN        — Atlassian API token
+#
+# See benchmark/TASK_CREATION_GUIDE.md for prompt writing principles.
+
+tasks:
+  # ---------- READ ----------
+
+  - id: get_current_user
+    prompt: >
+      Find out which Atlassian account this integration is running as.
+      Report the display name and account ID.
+    expected: accountId
+    tags: [read]
+    # Tests: current-user endpoint; accountId only appears in a correctly parsed
+    # user response, not hallucinated.
+
+  - id: list_spaces
+    prompt: >
+      List the spaces available in this Confluence instance.
+      Report the key and name of each space.
+    expected: SYNTH
+    tags: [read]
+    # Tests: space list tool; SYNTH space was created during setup so it must appear.
+
+  - id: get_space_and_homepage
+    prompt: >
+      Get the details of the Confluence space with key "SYNTH", expanding the
+      homepage reference. Use the homepage page ID from the space metadata to
+      retrieve the full homepage page. Report the space name, the homepage page
+      ID, and the homepage page title.
+    expected: homepage
+    tags: [read, multi-step]
+    # Tests: GET /wiki/rest/api/space/SYNTH?expand=homepage → extract homepage.id
+    # → GET /wiki/rest/api/content/{id}. Requires the agent to chain two calls
+    # and extract the nested homepage reference from the space object.
+
+  - id: list_pages_in_space
+    prompt: >
+      List the pages in the Confluence space with key "SYNTH".
+      Report how many pages exist and their titles.
+    expected: SYNTH
+    tags: [read]
+    # Tests: list-pages endpoint filtered by space; exercises space_key parameter.
+
+  - id: search_content_cql
+    prompt: >
+      Search Confluence for all content in the space "SYNTH" using CQL.
+      Use the query: space = "SYNTH"
+      Report how many results are returned and their titles.
+    expected: SYNTH
+    tags: [read]
+    # Tests: CQL search endpoint; requires correct cql parameter usage.
+
+  # ---------- WRITE ----------
+
+  - id: create_page
+    prompt: >
+      Create a new Confluence page in the space "SYNTH" with:
+      - Title: "Agent eval test page"
+      - Body: "This page was created by the MCP agent evaluation harness."
+      Report the page ID and URL.
+    expected: id
+    tags: [write]
+    # Tests: create-page tool; id only appears in a successful creation response.
+
+  - id: create_page_with_storage_format
+    prompt: >
+      Create a new Confluence page in the space "SYNTH" with:
+      - Title: "Agent eval formatted page"
+      - Body content in storage format: "<p>Hello from the agent harness.</p><ul><li>Item one</li><li>Item two</li></ul>"
+      Report the page ID.
+    expected: id
+    tags: [write]
+    # Tests: create-page with explicit body representation (storage format).
+
+  - id: update_page
+    prompt: >
+      First, create a page in space "SYNTH" titled "Agent eval update test" with body "Initial content."
+      Then update that same page to have the body "Updated content from agent harness."
+      Report the page ID and the new version number after the update.
+    expected: version
+    tags: [write, multi-step]
+    # Tests: create then update; update requires current version number — a common
+    # schema pitfall. "version" only appears if the update response is read correctly.
+
+  - id: create_and_get_page
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval round-trip test" with body "Round-trip content."
+      Then fetch that same page by ID and report its title and body text.
+    expected: round-trip
+    tags: [write, read, multi-step]
+    # Tests: create then get; "round-trip" only appears if the get response is
+    # parsed correctly, not just the create response.
+
+  - id: delete_page
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval delete test" with body "To be deleted."
+      Then delete it. Confirm the deletion by attempting to fetch the page again
+      and reporting whether it still exists.
+    expected: error
+    tags: [write, multi-step]
+    # Tests: create then delete then get; "error" should appear because the
+    # subsequent fetch should return a 404.
+
+  - id: add_label_to_page
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval label test" with body "Label test."
+      Add the label "agent-eval" to that page.
+      Then fetch the labels on the page and report them.
+    expected: agent-eval
+    tags: [write, multi-step]
+    # Tests: create page + add label + list labels; "agent-eval" must appear in
+    # the label list, not just be assumed from the add response.
+
+  - id: create_footer_comment
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval comment test" with body "Comment target."
+      Add a footer comment to that page with the text "This is a test comment from the agent harness."
+      Report the comment ID.
+    expected: id
+    tags: [write, multi-step]
+    # Tests: create page + create comment; comment id only appears in a successful
+    # comment creation response.
+
+  - id: list_page_versions
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval version test" with body "Version 1."
+      Update it with new body "Version 2."
+      Then list the version history of the page and report how many versions exist.
+    expected: "2"
+    tags: [write, multi-step]
+    # Tests: create + update + list-versions; two versions must exist. "2" only
+    # appears if version history is correctly read.
+
+  - id: create_blog_post
+    prompt: >
+      Create a blog post in space "SYNTH" with:
+      - Title: "Agent eval blog post"
+      - Body: "This blog post was created by the agent harness."
+      Report the blog post ID and its URL.
+    expected: id
+    tags: [write]
+    # Tests: blog post creation — distinct from page creation, different content type.
+
+  - id: upload_attachment
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval attachment test" with body "Attachment target."
+      Upload a text attachment to that page with filename "agent-test.txt" and content "Hello from agent harness."
+      Report the attachment ID.
+    expected: id
+    tags: [write, multi-step]
+    # Tests: create page + upload attachment; attachment upload is a multipart
+    # request, a common implementation pitfall.
+
+  - id: set_content_property
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval property test" with body "Property target."
+      Set a content property on that page with key "agent-eval-key" and value {"status": "tested"}.
+      Then fetch the property back and report the value.
+    expected: tested
+    tags: [write, multi-step]
+    # Tests: create page + set property + get property; "tested" only appears if
+    # the property is correctly written and read back.
+
+  # ---------- HARDER ----------
+
+  # Discriminates: must chain create → label → comment → property and then CQL
+  # search by label — four distinct API namespaces in sequence.
+  - id: full_page_lifecycle
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval lifecycle test" with
+      body "Lifecycle test page." Add the label "agent-lifecycle" to the page.
+      Add a footer comment with text "Lifecycle comment from agent harness."
+      Set a content property with key "eval-status" and value {"stage": "complete"}.
+      Then search Confluence using CQL: label = "agent-lifecycle" AND space = "SYNTH".
+      Report the page ID, the comment ID, and how many results the CQL search
+      returned.
+    expected: agent-lifecycle
+    tags: [write, multi-step, harder]
+    # Tests: create page → add label → add comment → set property → CQL search by label.
+    # "agent-lifecycle" only appears in the CQL search results if the label was
+    # correctly applied and the search executed against the label index.
+    # Four distinct Confluence API namespaces: content, labels, comments, search.
+
+  # Discriminates: must create a parent page, then a child page with the parent
+  # ID as ancestor, then verify the hierarchy via the children endpoint.
+  - id: create_page_hierarchy
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent eval parent page" with body
+      "Parent page." Then create a child page titled "Agent eval child page"
+      with body "Child page content." using the parent page's ID as the ancestor.
+      Retrieve the children of the parent page and confirm the child page
+      appears. Report the parent page ID, the child page ID, and the child
+      page title from the children response.
+    expected: children
+    tags: [write, multi-step, harder]
+    # Tests: create parent → create child (with ancestor ID) → GET /content/{id}/child/page.
+    # "children" only appears if the children endpoint was called and the child
+    # page was correctly linked to the parent via the ancestor field.
+    # Requires threading the parent ID into the child creation and the children call.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: get_nonexistent_page
+    prompt: >
+      Try to get a Confluence page with ID "999999999" (which does not exist).
+      Report what error or response you receive.
+    expected: error
+    tags: [read, error-handling]
+    # Tests: 404 error handling; the tool should return an error dict, not raise.
+
+  - id: create_page_missing_space
+    prompt: >
+      Try to create a Confluence page in a space with key "DOESNOTEXIST".
+      Report what error or response you receive.
+    expected: error
+    tags: [write, error-handling]
+    # Tests: error handling for invalid space key.
+
+  - id: cql_create_and_search
+    prompt: >
+      Create a page in space "SYNTH" titled "Agent CQL Verify Test" with body
+      "CQL verification page." Then search Confluence using CQL:
+      title = "Agent CQL Verify Test" AND space = "SYNTH"
+      Report how many results are returned and the page ID from the search
+      result. Then delete the page.
+    expected: "1"
+    tags: [write, read, multi-step]
+    # Tests: create page → CQL search with exact title filter → count → delete.
+    # "1" only appears if the CQL title match found the just-created page.
+    # A generic space search or empty query would return a different count.

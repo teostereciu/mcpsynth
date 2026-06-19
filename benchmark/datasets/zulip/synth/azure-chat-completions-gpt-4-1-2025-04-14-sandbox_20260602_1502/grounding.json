@@ -1,0 +1,62 @@
+{
+  "send_message": {
+    "doc": "docs/api_send-message.md",
+    "endpoint": "POST /messages"
+  },
+  "get_messages": {
+    "doc": "docs/api_get-messages.md",
+    "endpoint": "GET /messages"
+  },
+  "edit_message": {
+    "doc": "docs/api_update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "docs/api_delete-message.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "get_message_history": {
+    "doc": "docs/api_get-message-history.md",
+    "endpoint": "GET /messages/{message_id}/history"
+  },
+  "add_reaction": {
+    "doc": "docs/api_add-reaction.md",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "docs/api_remove-reaction.md",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "create_scheduled_message": {
+    "doc": "docs/api_create-scheduled-message.md",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "get_scheduled_messages": {
+    "doc": "docs/api_get-scheduled-messages.md",
+    "endpoint": "GET /scheduled_messages"
+  },
+  "edit_scheduled_message": {
+    "doc": "docs/api_update-scheduled-message.md",
+    "endpoint": "PATCH /scheduled_messages/{scheduled_message_id}"
+  },
+  "delete_scheduled_message": {
+    "doc": "docs/api_delete-scheduled-message.md",
+    "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"
+  },
+  "create_drafts": {
+    "doc": "docs/api_create-drafts.md",
+    "endpoint": "POST /drafts"
+  },
+  "get_drafts": {
+    "doc": "docs/api_get-drafts.md",
+    "endpoint": "GET /drafts"
+  },
+  "edit_draft": {
+    "doc": "docs/api_edit-draft.md",
+    "endpoint": "PATCH /drafts/{draft_id}"
+  },
+  "delete_draft": {
+    "doc": "docs/api_delete-draft.md",
+    "endpoint": "DELETE /drafts/{draft_id}"
+  }
+}

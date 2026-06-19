@@ -1,0 +1,170 @@
+{
+  "list_users": {
+    "doc": "docs/users/list-users.md",
+    "endpoint": "GET /users"
+  },
+  "get_user": {
+    "doc": "docs/users/retrieve-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "me": {
+    "doc": "docs/users/retrieve-bot-user.md",
+    "endpoint": "GET /users/me"
+  },
+  "create_page": {
+    "doc": "docs/pages/create-page.md",
+    "endpoint": "POST /pages"
+  },
+  "retrieve_page": {
+    "doc": "docs/pages/retrieve-page.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "update_page": {
+    "doc": "docs/pages/update-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "archive_page": {
+    "doc": "docs/pages/archive-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "get_page_properties": {
+    "doc": "docs/pages/retrieve-page-properties.md",
+    "endpoint": "GET /pages/{page_id}/properties"
+  },
+  "list_databases": {
+    "doc": "docs/databases/list-databases.md",
+    "endpoint": "GET /databases"
+  },
+  "retrieve_database": {
+    "doc": "docs/databases/retrieve-database.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "query_database": {
+    "doc": "docs/databases/query-database.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "create_database_page": {
+    "doc": "docs/databases/create-page.md",
+    "endpoint": "POST /pages"
+  },
+  "get_database_schema": {
+    "doc": "docs/databases/retrieve-database-schema.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "update_database": {
+    "doc": "docs/databases/update-database.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "retrieve_block": {
+    "doc": "docs/blocks/retrieve-block.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "update_block": {
+    "doc": "docs/blocks/update-block.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "delete_block": {
+    "doc": "docs/blocks/archive-block.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "retrieve_block_children": {
+    "doc": "docs/blocks/retrieve-block-children.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "append_block_children": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "create_paragraph_block": {
+    "doc": "docs/blocks/paragraph-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_heading_1_block": {
+    "doc": "docs/blocks/heading-1-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_heading_2_block": {
+    "doc": "docs/blocks/heading-2-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_heading_3_block": {
+    "doc": "docs/blocks/heading-3-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_bullet_item_block": {
+    "doc": "docs/blocks/bullet-list-item.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_numbered_item_block": {
+    "doc": "docs/blocks/numbered-list-item.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_to_do_block": {
+    "doc": "docs/blocks/to-do-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_toggle_block": {
+    "doc": "docs/blocks/toggle-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_quote_block": {
+    "doc": "docs/blocks/quote-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_callout_block": {
+    "doc": "docs/blocks/callout-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_code_block": {
+    "doc": "docs/blocks/code-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_divider_block": {
+    "doc": "docs/blocks/divider-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "create_breadcrumb_block": {
+    "doc": "docs/blocks/breadcrumb-block.md",
+    "endpoint": "POST /pages (for creating page with children)"
+  },
+  "search": {
+    "doc": "docs/search/search.md",
+    "endpoint": "POST /search"
+  },
+  "create_comment": {
+    "doc": "docs/comments/create-comment.md",
+    "endpoint": "POST /comments"
+  },
+  "list_comments": {
+    "doc": "docs/comments/list-comments.md",
+    "endpoint": "GET /comments"
+  },
+  "create_icon": {
+    "doc": "docs/blocks/icon.md",
+    "endpoint": "N/A (helper function for creating icon objects)"
+  },
+  "create_database_icon": {
+    "doc": "docs/databases/icon.md",
+    "endpoint": "N/A (helper function for creating icon objects)"
+  },
+  "create_page_icon": {
+    "doc": "docs/pages/icon.md",
+    "endpoint": "N/A (helper function for creating icon objects)"
+  },
+  "create_cover_image": {
+    "doc": "docs/pages/cover.md",
+    "endpoint": "N/A (helper function for creating cover objects)"
+  },
+  "get_block_url": {
+    "doc": "docs/blocks/url.md",
+    "endpoint": "N/A (utility function)"
+  },
+  "get_page_url": {
+    "doc": "docs/pages/url.md",
+    "endpoint": "N/A (utility function)"
+  },
+  "health_check": {
+    "doc": "docs/misc/health-check.md",
+    "endpoint": "GET /users/me"
+  }
+}

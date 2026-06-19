@@ -1,0 +1,12 @@
+{
+  "dataset": "mastodon",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 734.5736620426178,
+  "token_usage": {
+    "input_tokens": 413427,
+    "output_tokens": 26936
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1717"
+}

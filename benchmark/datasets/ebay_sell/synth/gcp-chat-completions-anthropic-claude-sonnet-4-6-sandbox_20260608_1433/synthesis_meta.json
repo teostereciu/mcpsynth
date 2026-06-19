@@ -1,0 +1,12 @@
+{
+  "dataset": "ebay_sell",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "docs",
+  "synthesis_time": 1256.4800901412964,
+  "token_usage": {
+    "input_tokens": 2659389,
+    "output_tokens": 22676
+  },
+  "cost_estimate": null,
+  "timestamp": "20260608_1433"
+}

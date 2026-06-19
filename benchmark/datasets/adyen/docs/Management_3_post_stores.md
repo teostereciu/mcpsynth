@@ -1,0 +1,101 @@
+# Management/3/post/stores
+
+*Source: https://docs.adyen.com/api-explorer/Management/3/post/stores*
+
+---
+
+# Create a store
+Creates a store for the merchant account specified in the request.
+To make this request, your API credential must have the followingrole:
+- Management API—Stores read and write
+In the live environment, requests to this endpoint are subject torate limits.
+The address of the store.
+The name of the city.
+The two-letter country code inISO_3166-1_alpha-2format.
+The street address.
+Second address line.
+Third address line.
+The postal code.
+The state or province code as defined inISO 3166-2. For example,ONfor Ontario, Canada.
+Required for the following countries:
+- Australia
+- Brazil
+- Canada
+- India
+- Mexico
+- New Zealand
+- United States
+The unique identifiers of thebusiness linesthat the store is associated with.
+If not specified, the business line of the merchant account is used. Required when there are multiple business lines under the merchant account.
+Your description of the store.
+The unique identifier of the store, used by certain payment methods and tax authorities.
+Required for CNPJ in Brazil, in the format 00.000.000/0000-00 separated by dots, slashes, hyphens, or without separators.
+Optional for SIRET in France, up to 14 digits.
+Optional for Zip in Australia, up to 50 digits.
+Localized information about the store.
+An array of local shopper statements. Card schemes use this in the bank statement.
+For Japan local shopper statements in both ja-Hani and ja-Kana are required.
+The character set of the local shopper statement.
+Possible values:ja-Hani,ja-Kana.
+The text of the local shopper statement in the specified character set.
+The unique identifier of the merchant account that the store belongs to.
+The phone number of the store, including '+' and country code in theE.164format. If passed in a different format, we convert and validate the phone number against E.164.
+Your reference to recognize the store by. Also known as the store code.
+Allowed characters: lowercase and uppercase letters without diacritics, numbers 0 through 9, hyphen (-), and underscore (_).
+If you do not provide a reference in your POST request, it is populated with the Adyen-generatedid.
+The store name to be shown on the shopper's bank or credit card statement and on the shopper receipt.
+Maximum length: 22 characters; can't be all numbers.
+Rules for Adyen for Platforms merchants to split the transaction amount and fees.
+Theunique identifier of the balance accountto which the split amount must be booked, depending on the definedsplit logic.
+The unique identifier of thesplit configuration profile.
+The sub-merchant data relevant for registered payment facilitators transacting on standalone terminals.
+The email associated with the sub-merchant's account.
+A unique identifier that you create for the sub-merchant, used by schemes to identify the sub-merchant.
+- Format: Alphanumeric
+- Maximum length: 15 characters
+The sub-merchant's 4-digit Merchant Category Code (MCC).
+- Format: Numeric
+- Fixed length: 4 digits
+The name of the sub-merchant. Based on scheme specifications, this value will overwrite the shopper statement that will appear in the card statement.
+- Format: Alphanumeric
+- Maximum length: 22 characters
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow less_linksobjectReference to resources connected with the store.Show childrenHide childrenselfobjectLink to the resource itself.Show childrenHide childrenhrefstringaddressobjectThe address of the store.Show childrenHide childrencitystringThe name of the city.countrystringThe two-letter country code inISO_3166-1_alpha-2format.line1stringThe street address.line2stringSecond address line.line3stringThird address line.postalCodestringThe postal code.stateOrProvincestringThe state or province code as defined inISO 3166-2. For example,ONfor Ontario, Canada.Required for the following countries:AustraliaBrazilCanadaIndiaMexicoNew ZealandUnited StatesbusinessLineIdsarray[string]The unique identifiers of thebusiness linesthat the store is associated with.
+If not specified, the business line of the merchant account is used. Required when there are multiple business lines under the merchant account.descriptionstringThe description of the store.externalReferenceIdstringThe unique identifier of the store, used by certain payment methods and tax authorities.Required for CNPJ in Brazil, in the format 00.000.000/0000-00 separated by dots, slashes, hyphens, or without separators.Optional for SIRET in France, up to 14 digits.Optional for Zip in Australia, up to 50 digits.idstringThe unique identifier of the store. This value is generated by Adyen.localizedInformationobjectThe localized information of the store.Show childrenHide childrenlocalShopperStatementarray[object]An array of local shopper statements. Card schemes use this in the bank statement.For Japan local shopper statements in both ja-Hani and ja-Kana are required.Show childrenHide childrenscriptstringThe character set of the local shopper statement.Possible values:ja-Hani,ja-Kana.valuestringThe text of the local shopper statement in the specified character set.merchantIdstringThe unique identifier of the merchant account that the store belongs to.phoneNumberstringThe phone number of the store, including '+' and country code in theE.164format. If passed in a different format, we convert and validate the phone number against E.164.referencestringA reference to recognize the store by. Also known as the store code.
+Allowed characters: lowercase and uppercase letters without diacritics, numbers 0 through 9, hyphen (-), and underscore (_)shopperStatementstringThe store name shown on the shopper's bank or credit card statement and on the shopper receipt.splitConfigurationobjectRules for Adyen for Platforms merchants to split the transaction amount and fees.Show childrenHide childrenbalanceAccountIdstringTheunique identifier of the balance accountto which the split amount must be booked, depending on the definedsplit logic.splitConfigurationIdstringThe unique identifier of thesplit configuration profile.statusstringThe status of the store. Possible values are:active. This value is assigned automatically when a store is created.inactive. The terminals under the store are blocked from accepting new transactions, but capturing outstanding transactions is still possible.closed. This status is irreversible. The terminals under the store are reassigned to the merchant inventory.subMerchantDataobjectThe sub-merchant data relevant for registered payment facilitators transacting on standalone terminals.Show childrenHide childrenemailstringMax length:320The email associated with the sub-merchant's account.idstringA unique identifier that you create for the sub-merchant, used by schemes to identify the sub-merchant.Format: AlphanumericMaximum length: 15 charactersmccstringThe sub-merchant's 4-digit Merchant Category Code (MCC).Format: NumericFixed length: 4 digitsnamestringThe name of the sub-merchant. Based on scheme specifications, this value will overwrite the shopper statement that will appear in the card statement.Format: AlphanumericMaximum length: 22 characters
+- 400 - Bad RequestA problem reading or understanding the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 401 - UnauthorizedAuthentication required.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 403 - ForbiddenInsufficient permissions to process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 500 - Internal Server ErrorThe server could not process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+
+#### 200 - OK
+- Australia
+- Brazil
+- Canada
+- India
+- Mexico
+- New Zealand
+- United States
+- active. This value is assigned automatically when a store is created.
+- inactive. The terminals under the store are blocked from accepting new transactions, but capturing outstanding transactions is still possible.
+- closed. This status is irreversible. The terminals under the store are reassigned to the merchant inventory.
+- Format: Alphanumeric
+- Maximum length: 15 characters
+- Format: Numeric
+- Fixed length: 4 digits
+- Format: Alphanumeric
+- Maximum length: 22 characters
+
+#### 400 - Bad Request
+
+#### 401 - Unauthorized
+
+#### 403 - Forbidden
+
+#### 422 - Unprocessable Entity
+
+#### 500 - Internal Server Error

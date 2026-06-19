@@ -1,0 +1,12 @@
+{
+  "dataset": "confluence",
+  "model": "gcp-chat-completions-chat-gemini-3.5-flash-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 319.0756268501282,
+  "token_usage": {
+    "input_tokens": 112536,
+    "output_tokens": 12992
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1457"
+}

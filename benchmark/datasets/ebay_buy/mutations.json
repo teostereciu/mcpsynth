@@ -1,0 +1,10 @@
+{
+  "description": "eBay Buy API parameter mutations for parametric contamination testing. Renames core search/browse parameters to plausible-but-wrong alternatives. All mutated params are exercised by eval task scenarios (pagination, sorting, condition/price filtering, item lookup).",
+  "mutations": [
+    {"original": "limit",   "mutated": "max_results"},
+    {"original": "offset",  "mutated": "skip"},
+    {"original": "sort",    "mutated": "order_by"},
+    {"original": "filter",  "mutated": "search_filter"},
+    {"original": "item_id", "mutated": "listing_id"}
+  ]
+}

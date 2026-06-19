@@ -1,0 +1,246 @@
+# Agent evaluation tasks for Stripe API MCP server.
+#
+# Required env vars: STRIPE_API_KEY (sk_test_...)
+# All tasks use test mode — no real charges are made.
+#
+# See benchmark/TASK_CREATION_GUIDE.md for prompt writing principles,
+# difficulty calibration, and the full checklist.
+#
+# Dataset note: test token values (tok_visa) are provided where required since
+# they are Stripe-specific constants not discoverable from tool docs. Endpoint
+# names and parameter names are not provided.
+
+tasks:
+  # ---------- READ ----------
+
+  - id: query_account_balance
+    prompt: >
+      Retrieve the current balance of the Stripe account. Report the available
+      and pending amounts for each currency.
+    expected: available
+    tags: [read]
+    # Tests: balance endpoint; "available" verifies the correct balance object
+    # structure was returned and interpreted.
+
+  - id: list_customers
+    prompt: >
+      List the most recent 5 customers in the Stripe account. Report their IDs
+      and email addresses. If there are none, report that.
+    expected: email
+    tags: [read]
+    # Tests: customer list tool with a limit; no explicit "limit" hint given.
+
+  - id: list_active_products
+    prompt: >
+      List the active products in the Stripe account. Report their names and IDs.
+      If there are none, report that.
+    expected: active
+    tags: [read]
+    # Tests: product list with active filter; agent must discover the filter
+    # parameter from tool docs.
+
+  - id: retrieve_payment_intents
+    prompt: >
+      List the most recent 3 PaymentIntents in the account. Report their IDs,
+      amounts, and statuses.
+    expected: status
+    tags: [read]
+    # Tests: PaymentIntent list tool coverage; "status" verifies the correct
+    # resource was retrieved.
+
+  # ---------- WRITE ----------
+
+  - id: create_customer
+    prompt: >
+      Create a Stripe customer with name "Agent Test Customer",
+      email "agent.test@example-mcp-eval.com", and description
+      "Created by MCP agent evaluation harness". Report the customer ID.
+    expected: cus_
+    tags: [write]
+
+  - id: create_product_and_price
+    prompt: >
+      Create a product named "Agent Test Product" with description
+      "A test product created by the agent harness". Create a one-time price
+      for it of 999 USD. Report the product ID and price ID.
+    expected: price_
+    tags: [write, multi-step]
+    # Tests: product + price creation chain; "one-time" (not recurring) requires
+    # correctly omitting the recurring parameter.
+
+  - id: create_payment_intent
+    prompt: >
+      Create a PaymentIntent for 2000 cents USD. Report the payment intent ID
+      and the first 20 characters of the client secret.
+    expected: pi_
+    tags: [write]
+    # Tests: PaymentIntent creation with amount in cents; no method type hint.
+
+  - id: create_checkout_session
+    prompt: >
+      Create a Stripe Checkout Session for a one-time payment. Use an inline
+      product named "Agent Checkout Test" priced at 1000 cents USD, quantity 1.
+      Set success URL to https://example.com/success and cancel URL to
+      https://example.com/cancel. Report the session ID and URL.
+    expected: cs_
+    tags: [write]
+    # Tests: checkout session with inline price_data; requires correctly
+    # constructing the line_items array without explicit parameter names.
+
+  - id: create_coupon
+    prompt: >
+      Create a coupon offering 20% off, valid for one use per customer.
+      Name it "AGENT20". Report the coupon ID.
+    expected: AGENT20
+    tags: [write]
+    # Tests: coupon creation; "duration" parameter must be set correctly.
+    # No explicit "duration: once" hint is provided.
+
+  - id: create_payment_link
+    prompt: >
+      Create a product named "Agent Link Product" priced at 4999 cents USD.
+      Create a Payment Link for that product with quantity 1.
+      Report the payment link ID and URL.
+    expected: plink_
+    tags: [write, multi-step]
+
+  # ---------- MULTI-STEP / WORKFLOW ----------
+
+  - id: customer_update_and_verify
+    prompt: >
+      Create a customer named "Lifecycle Test" with email
+      "lifecycle@example-mcp-eval.com". Update their description to
+      "Updated by agent harness". Retrieve the customer and confirm the
+      description was saved. Report the customer ID and final description.
+    expected: Updated by agent harness
+    tags: [write, multi-step, workflow]
+    # Tests: create + update + retrieve; the retrieve step verifies the update
+    # actually persisted, not just that the update call succeeded.
+
+  - id: charge_and_refund
+    prompt: >
+      Create a charge of 3000 cents USD using the test card token "tok_visa".
+      Then partially refund 1000 cents of that charge.
+      Report the charge ID, refund ID, and refund amount.
+    expected: re_
+    tags: [write, multi-step, workflow]
+    # tok_visa is provided since it is a test-mode token value, not discoverable
+    # from tool docs. No endpoint hint is given; the tool must be found by goal.
+
+  - id: subscription_workflow
+    prompt: >
+      Create a customer named "Sub Test" with email "sub.test@example-mcp-eval.com".
+      Create a product named "Agent Sub Product" with a recurring monthly price
+      of 1999 cents USD. Subscribe the customer to that price.
+      Report the subscription ID and its status.
+    expected: sub_
+    tags: [write, multi-step, workflow]
+    # Tests: customer + product + price + subscription creation chain.
+    # Recurring price requires correctly setting the recurring.interval parameter.
+
+  - id: invoice_workflow
+    prompt: >
+      Create a customer named "Invoice Test" with email
+      "invoice@example-mcp-eval.com". Create a manual invoice for that customer,
+      add a line item of 500 cents USD, finalize the invoice, and report its
+      ID and status.
+    expected: in_
+    tags: [write, multi-step, workflow]
+    # Tests: invoice creation flow; requires finding and using invoice item +
+    # finalize endpoints without explicit names.
+
+  - id: save_payment_method
+    prompt: >
+      Create a customer named "Setup Test" with email
+      "setup@example-mcp-eval.com". Create a SetupIntent for that customer to
+      save a payment method for future use. Report the SetupIntent ID and the
+      first 20 characters of the client secret.
+    expected: seti_
+    tags: [write, multi-step]
+    # Tests: SetupIntent endpoint coverage; less common than PaymentIntent,
+    # often missing or undocumented in MCP servers.
+
+  - id: coupon_and_promotion_code
+    prompt: >
+      Create a coupon with 15% off valid once. Then create a promotion code
+      "AGENTPROMO15" for that coupon. Report the coupon ID and promotion code ID.
+    expected: AGENTPROMO15
+    tags: [write, multi-step]
+    # Tests: promotion code endpoint; separate from coupon, requires the agent
+    # to discover the promotion_codes resource.
+
+  - id: find_and_update_customer
+    prompt: >
+      List existing customers and find one whose email contains "example-mcp-eval".
+      Update that customer's metadata to include the key "evaluated" with value
+      "true". Report the customer ID and confirm the metadata was saved.
+    expected: evaluated
+    tags: [read, write, multi-step]
+    # Tests: list + update with metadata. Discovery-first pattern; the agent must
+    # find the customer before updating it. Metadata parameter requires the tool
+    # to clearly document the metadata object structure.
+
+  # ---------- HARDER ----------
+
+  - id: full_payment_flow
+    prompt: >
+      Create a customer named "Payment Flow Test" with email
+      "payflow@example-mcp-eval.com". Create a PaymentIntent for 5000 cents USD
+      for that customer. Confirm the PaymentIntent using the test payment method
+      "pm_card_visa". Report the PaymentIntent ID and its final status.
+    expected: pi_
+    tags: [write, multi-step, workflow, harder]
+    # Tests: customer + PaymentIntent creation + confirm chain. pm_card_visa is
+    # a Stripe test constant; agent must pass it as payment_method in confirm.
+    # Confirms the agent can thread a customer ID across multiple tool calls.
+
+  - id: subscription_then_cancel
+    prompt: >
+      Create a customer named "Cancel Sub Test" with email
+      "cancelsub@example-mcp-eval.com". Create a product "Cancellable Plan" with
+      a recurring monthly price of 2500 cents USD. Subscribe the customer to that
+      price. Immediately cancel the subscription at period end (set
+      cancel_at_period_end to true). Report the subscription ID and confirm
+      cancel_at_period_end is true in the response.
+    expected: cancel_at_period_end
+    tags: [write, multi-step, workflow, harder]
+    # Tests: create subscription + update to schedule cancellation. Agent must
+    # discover that subscriptions_cancel or subscriptions_update supports
+    # cancel_at_period_end; the exact tool name is not provided.
+
+  - id: invoice_void_workflow
+    prompt: >
+      Create a customer named "Void Invoice Test" with email
+      "voidinv@example-mcp-eval.com". Create a manual invoice for that customer,
+      add a line item of 750 cents USD, finalize the invoice, then void it.
+      Report the invoice ID and confirm its final status is "void".
+    expected: void
+    tags: [write, multi-step, workflow, harder]
+    # Tests: full invoice lifecycle including the void step, which is a separate
+    # endpoint many servers omit. Agent must discover the void endpoint without
+    # being told its name.
+
+  - id: balance_transactions_after_charge
+    prompt: >
+      Create a charge of 1500 cents USD using the test card token "tok_visa".
+      Then list the most recent 3 balance transactions and confirm one of them
+      corresponds to this charge (matching by amount 1500 or charge ID).
+      Report the charge ID and the matching balance transaction ID.
+    expected: txn_
+    tags: [write, multi-step, workflow, harder]
+    # Tests: charge creation + balance_transactions_list correlation.
+    # Agent must connect a write operation to a read operation and match
+    # by amount or reference ID across two different resource types.
+
+  - id: tax_rate_on_invoice
+    prompt: >
+      Create a tax rate of 8.5% named "Agent Sales Tax" (inclusive: false).
+      Create a customer named "Tax Test" with email "tax@example-mcp-eval.com".
+      Create a manual invoice for that customer, add a line item of 1000 cents
+      USD, apply the tax rate to the invoice line item, finalize the invoice.
+      Report the invoice ID, tax rate ID, and total amount due.
+    expected: txr_
+    tags: [write, multi-step, workflow, harder]
+    # Tests: tax_rates_create + invoiceitems with tax_rates array + finalize.
+    # Requires the agent to pass the tax rate ID into the invoice item creation,
+    # exercising cross-resource ID threading and the tax module.

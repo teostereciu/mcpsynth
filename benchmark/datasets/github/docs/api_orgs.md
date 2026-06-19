@@ -1,0 +1,146 @@
+# REST API endpoints for organizations
+
+*Source: https://docs.github.com/en/rest/orgs*
+
+---
+
+# REST API endpoints for organizations
+Use the REST API to control and manage all your GitHub organizations.
+- REST API endpoints for organizationsList organizationsGet an organizationUpdate an organizationDelete an organizationList app installations for an organizationGet immutable releases settings for an organizationSet immutable releases settings for an organizationList selected repositories for immutable releases enforcementSet selected repositories for immutable releases enforcementEnable a selected repository for immutable releases in an organizationDisable a selected repository for immutable releases in an organizationEnable or disable a security feature for an organizationList organizations for the authenticated userList organizations for a user
+- REST API endpoints for API InsightsGet route stats by actorGet subject statsGet summary statsGet summary stats by userGet summary stats by actorGet time statsGet time stats by userGet time stats by actorGet user stats
+- REST API endpoints for artifact metadataCreate an artifact deployment recordSet cluster deployment recordsCreate artifact metadata storage recordList artifact deployment recordsList artifact storage records
+- REST API endpoints for artifact attestationsList attestations by bulk subject digestsDelete attestations in bulkDelete attestations by subject digestList attestation repositoriesDelete attestations by IDList attestations
+- REST API endpoints for blocking usersList users blocked by an organizationCheck if a user is blocked by an organizationBlock a user from an organizationUnblock a user from an organization
+- REST API endpoints for custom propertiesGet all custom properties for an organizationCreate or update custom properties for an organizationGet a custom property for an organizationCreate or update a custom property for an organizationRemove a custom property for an organizationList custom property values for organization repositoriesCreate or update custom property values for organization repositories
+- REST API endpoints for issue fieldsList issue fields for an organizationCreate issue field for an organizationUpdate issue field for an organizationDelete issue field for an organization
+- REST API endpoints for issue typesList issue types for an organizationCreate issue type for an organizationUpdate issue type for an organizationDelete issue type for an organization
+- REST API endpoints for organization membersList failed organization invitationsList pending organization invitationsCreate an organization invitationCancel an organization invitationList organization invitation teamsList organization membersCheck organization membership for a userRemove an organization memberGet organization membership for a userSet organization membership for a userRemove organization membership for a userList public organization membersCheck public organization membership for a userSet public organization membership for the authenticated userRemove public organization membership for the authenticated userList organization memberships for the authenticated userGet an organization membership for the authenticated userUpdate an organization membership for the authenticated user
+- REST API endpoints for network configurationsList hosted compute network configurations for an organizationCreate a hosted compute network configuration for an organizationGet a hosted compute network configuration for an organizationUpdate a hosted compute network configuration for an organizationDelete a hosted compute network configuration from an organizationGet a hosted compute network settings resource for an organization
+- REST API endpoints for organization rolesGet all organization roles for an organizationRemove all organization roles for a teamAssign an organization role to a teamRemove an organization role from a teamRemove all organization roles for a userAssign an organization role to a userRemove an organization role from a userGet an organization roleList teams that are assigned to an organization roleList users that are assigned to an organization role
+- REST API endpoints for outside collaboratorsList outside collaborators for an organizationConvert an organization member to outside collaboratorRemove outside collaborator from an organization
+- REST API endpoints for personal access tokensList requests to access organization resources with fine-grained personal access tokensReview requests to access organization resources with fine-grained personal access tokensReview a request to access organization resources with a fine-grained personal access tokenList repositories requested to be accessed by a fine-grained personal access tokenList fine-grained personal access tokens with access to organization resourcesUpdate the access to organization resources via fine-grained personal access tokensUpdate the access a fine-grained personal access token has to organization resourcesList repositories a fine-grained personal access token has access to
+- REST API endpoints for rule suitesList organization rule suitesGet an organization rule suite
+- REST API endpoints for rulesGet all organization repository rulesetsCreate an organization repository rulesetGet an organization repository rulesetUpdate an organization repository rulesetDelete an organization repository rulesetGet organization ruleset historyGet organization ruleset version
+- REST API endpoints for security managersList security manager teamsAdd a security manager teamRemove a security manager team
+- REST API endpoints for organization webhooksList organization webhooksCreate an organization webhookGet an organization webhookUpdate an organization webhookDelete an organization webhookGet a webhook configuration for an organizationUpdate a webhook configuration for an organizationList deliveries for an organization webhookGet a webhook delivery for an organization webhookRedeliver a delivery for an organization webhookPing an organization webhook
+- List organizations
+- Get an organization
+- Update an organization
+- Delete an organization
+- List app installations for an organization
+- Get immutable releases settings for an organization
+- Set immutable releases settings for an organization
+- List selected repositories for immutable releases enforcement
+- Set selected repositories for immutable releases enforcement
+- Enable a selected repository for immutable releases in an organization
+- Disable a selected repository for immutable releases in an organization
+- Enable or disable a security feature for an organization
+- List organizations for the authenticated user
+- List organizations for a user
+- Get route stats by actor
+- Get subject stats
+- Get summary stats
+- Get summary stats by user
+- Get summary stats by actor
+- Get time stats
+- Get time stats by user
+- Get time stats by actor
+- Get user stats
+- Create an artifact deployment record
+- Set cluster deployment records
+- Create artifact metadata storage record
+- List artifact deployment records
+- List artifact storage records
+- List attestations by bulk subject digests
+- Delete attestations in bulk
+- Delete attestations by subject digest
+- List attestation repositories
+- Delete attestations by ID
+- List attestations
+- List users blocked by an organization
+- Check if a user is blocked by an organization
+- Block a user from an organization
+- Unblock a user from an organization
+- Get all custom properties for an organization
+- Create or update custom properties for an organization
+- Get a custom property for an organization
+- Create or update a custom property for an organization
+- Remove a custom property for an organization
+- List custom property values for organization repositories
+- Create or update custom property values for organization repositories
+- List issue fields for an organization
+- Create issue field for an organization
+- Update issue field for an organization
+- Delete issue field for an organization
+- List issue types for an organization
+- Create issue type for an organization
+- Update issue type for an organization
+- Delete issue type for an organization
+- List failed organization invitations
+- List pending organization invitations
+- Create an organization invitation
+- Cancel an organization invitation
+- List organization invitation teams
+- List organization members
+- Check organization membership for a user
+- Remove an organization member
+- Get organization membership for a user
+- Set organization membership for a user
+- Remove organization membership for a user
+- List public organization members
+- Check public organization membership for a user
+- Set public organization membership for the authenticated user
+- Remove public organization membership for the authenticated user
+- List organization memberships for the authenticated user
+- Get an organization membership for the authenticated user
+- Update an organization membership for the authenticated user
+- List hosted compute network configurations for an organization
+- Create a hosted compute network configuration for an organization
+- Get a hosted compute network configuration for an organization
+- Update a hosted compute network configuration for an organization
+- Delete a hosted compute network configuration from an organization
+- Get a hosted compute network settings resource for an organization
+- Get all organization roles for an organization
+- Remove all organization roles for a team
+- Assign an organization role to a team
+- Remove an organization role from a team
+- Remove all organization roles for a user
+- Assign an organization role to a user
+- Remove an organization role from a user
+- Get an organization role
+- List teams that are assigned to an organization role
+- List users that are assigned to an organization role
+- List outside collaborators for an organization
+- Convert an organization member to outside collaborator
+- Remove outside collaborator from an organization
+- List requests to access organization resources with fine-grained personal access tokens
+- Review requests to access organization resources with fine-grained personal access tokens
+- Review a request to access organization resources with a fine-grained personal access token
+- List repositories requested to be accessed by a fine-grained personal access token
+- List fine-grained personal access tokens with access to organization resources
+- Update the access to organization resources via fine-grained personal access tokens
+- Update the access a fine-grained personal access token has to organization resources
+- List repositories a fine-grained personal access token has access to
+- List organization rule suites
+- Get an organization rule suite
+- Get all organization repository rulesets
+- Create an organization repository ruleset
+- Get an organization repository ruleset
+- Update an organization repository ruleset
+- Delete an organization repository ruleset
+- Get organization ruleset history
+- Get organization ruleset version
+- List security manager teams
+- Add a security manager team
+- Remove a security manager team
+- List organization webhooks
+- Create an organization webhook
+- Get an organization webhook
+- Update an organization webhook
+- Delete an organization webhook
+- Get a webhook configuration for an organization
+- Update a webhook configuration for an organization
+- List deliveries for an organization webhook
+- Get a webhook delivery for an organization webhook
+- Redeliver a delivery for an organization webhook
+- Ping an organization webhook

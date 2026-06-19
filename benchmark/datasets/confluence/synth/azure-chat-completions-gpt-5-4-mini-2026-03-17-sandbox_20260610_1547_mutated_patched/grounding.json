@@ -1,0 +1,18 @@
+{
+  "list_spaces": {"doc": "docs/api_v2_space.md", "endpoint": "GET /spaces"},
+  "get_space": {"doc": "docs/api_v2_space.md", "endpoint": "GET /spaces/{id}"},
+  "create_space": {"doc": "docs/api_v2_space.md", "endpoint": "POST /spaces"},
+  "list_pages": {"doc": "docs/api_v2_page.md", "endpoint": "GET /pages"},
+  "get_page": {"doc": "docs/api_v2_page.md", "endpoint": "GET /pages/{id}"},
+  "create_page": {"doc": "docs/api_v2_page.md", "endpoint": "POST /pages"},
+  "update_page": {"doc": "docs/api_v2_page.md", "endpoint": "PUT /pages/{id}"},
+  "delete_page": {"doc": "docs/api_v2_page.md", "endpoint": "DEL /pages/{id}"},
+  "update_page_title": {"doc": "docs/api_v2_page.md", "endpoint": "PUT /pages/{id}/title"},
+  "list_attachments": {"doc": "docs/api_v2_attachment.md", "endpoint": "GET /attachments"},
+  "get_attachment": {"doc": "docs/api_v2_attachment.md", "endpoint": "GET /attachments/{id}"},
+  "delete_attachment": {"doc": "docs/api_v2_attachment.md", "endpoint": "DEL /attachments/{id}"},
+  "list_page_attachments": {"doc": "docs/api_v2_attachment.md", "endpoint": "GET /pages/{id}/attachments"},
+  "list_blogpost_attachments": {"doc": "docs/api_v2_attachment.md", "endpoint": "GET /blogposts/{id}/attachments"},
+  "list_custom_content_attachments": {"doc": "docs/api_v2_attachment.md", "endpoint": "GET /custom-content/{id}/attachments"},
+  "list_label_attachments": {"doc": "docs/api_v2_attachment.md", "endpoint": "GET /labels/{id}/attachments"}
+}

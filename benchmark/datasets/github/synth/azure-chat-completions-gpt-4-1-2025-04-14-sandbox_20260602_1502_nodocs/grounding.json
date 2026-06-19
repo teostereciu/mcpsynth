@@ -1,0 +1,38 @@
+{
+  "list_issues": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/issues"},
+  "create_issue": {"doc": "", "endpoint": "POST /repos/{owner}/{repo}/issues"},
+  "get_issue": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"},
+  "update_issue": {"doc": "", "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"},
+  "close_issue": {"doc": "", "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"},
+
+  "list_pull_requests": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/pulls"},
+  "create_pull_request": {"doc": "", "endpoint": "POST /repos/{owner}/{repo}/pulls"},
+  "get_pull_request": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"},
+  "merge_pull_request": {"doc": "", "endpoint": "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"},
+
+  "get_repo": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}"},
+  "create_repo": {"doc": "", "endpoint": "POST /user/repos"},
+  "fork_repo": {"doc": "", "endpoint": "POST /repos/{owner}/{repo}/forks"},
+  "list_branches": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/branches"},
+  "get_branch": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}"},
+
+  "get_file_contents": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/contents/{path}"},
+  "update_file_contents": {"doc": "", "endpoint": "PUT /repos/{owner}/{repo}/contents/{path}"},
+  "create_file": {"doc": "", "endpoint": "PUT /repos/{owner}/{repo}/contents/{path}"},
+
+  "list_releases": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/releases"},
+  "create_release": {"doc": "", "endpoint": "POST /repos/{owner}/{repo}/releases"},
+  "get_release": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/releases/{release_id}"},
+
+  "list_workflows": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/actions/workflows"},
+  "list_workflow_runs": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs"},
+  "dispatch_workflow": {"doc": "", "endpoint": "POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches"},
+
+  "search_code": {"doc": "", "endpoint": "GET /search/code"},
+
+  "list_repo_webhooks": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/hooks"},
+  "create_repo_webhook": {"doc": "", "endpoint": "POST /repos/{owner}/{repo}/hooks"},
+
+  "get_branch_protection": {"doc": "", "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}/protection"},
+  "update_branch_protection": {"doc": "", "endpoint": "PUT /repos/{owner}/{repo}/branches/{branch}/protection"}
+}

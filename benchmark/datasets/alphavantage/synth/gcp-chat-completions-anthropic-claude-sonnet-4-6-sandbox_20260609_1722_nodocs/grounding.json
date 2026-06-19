@@ -1,0 +1,194 @@
+{
+  "stock_intraday": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY"
+  },
+  "stock_daily": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_DAILY"
+  },
+  "stock_daily_adjusted": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED"
+  },
+  "stock_weekly": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY"
+  },
+  "stock_weekly_adjusted": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED"
+  },
+  "stock_monthly": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY"
+  },
+  "stock_monthly_adjusted": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED"
+  },
+  "stock_quote": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=GLOBAL_QUOTE"
+  },
+  "symbol_search": {
+    "doc": "docs/api_stock_time_series.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=SYMBOL_SEARCH"
+  },
+  "fx_exchange_rate": {
+    "doc": "docs/api_forex.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "fx_intraday": {
+    "doc": "docs/api_forex.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_INTRADAY"
+  },
+  "fx_daily": {
+    "doc": "docs/api_forex.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_DAILY"
+  },
+  "fx_weekly": {
+    "doc": "docs/api_forex.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_WEEKLY"
+  },
+  "fx_monthly": {
+    "doc": "docs/api_forex.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_MONTHLY"
+  },
+  "crypto_exchange_rate": {
+    "doc": "docs/api_crypto.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "crypto_intraday": {
+    "doc": "docs/api_crypto.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CRYPTO_INTRADAY"
+  },
+  "crypto_daily": {
+    "doc": "docs/api_crypto.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY"
+  },
+  "crypto_weekly": {
+    "doc": "docs/api_crypto.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY"
+  },
+  "crypto_monthly": {
+    "doc": "docs/api_crypto.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY"
+  },
+  "indicator_sma": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=SMA"
+  },
+  "indicator_ema": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=EMA"
+  },
+  "indicator_rsi": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=RSI"
+  },
+  "indicator_macd": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=MACD"
+  },
+  "indicator_bbands": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=BBANDS"
+  },
+  "indicator_vwap": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=VWAP"
+  },
+  "indicator_stoch": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=STOCH"
+  },
+  "indicator_adx": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ADX"
+  },
+  "indicator_cci": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CCI"
+  },
+  "indicator_aroon": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=AROON"
+  },
+  "fundamental_company_overview": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=OVERVIEW"
+  },
+  "fundamental_income_statement": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=INCOME_STATEMENT"
+  },
+  "fundamental_balance_sheet": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=BALANCE_SHEET"
+  },
+  "fundamental_cash_flow": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CASH_FLOW"
+  },
+  "fundamental_earnings": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=EARNINGS"
+  },
+  "fundamental_earnings_calendar": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=EARNINGS_CALENDAR"
+  },
+  "fundamental_ipo_calendar": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=IPO_CALENDAR"
+  },
+  "fundamental_listing_status": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=LISTING_STATUS"
+  },
+  "economic_real_gdp": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=REAL_GDP"
+  },
+  "economic_real_gdp_per_capita": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=REAL_GDP_PER_CAPITA"
+  },
+  "economic_treasury_yield": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TREASURY_YIELD"
+  },
+  "economic_federal_funds_rate": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FEDERAL_FUNDS_RATE"
+  },
+  "economic_cpi": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CPI"
+  },
+  "economic_inflation": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=INFLATION"
+  },
+  "economic_retail_sales": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=RETAIL_SALES"
+  },
+  "economic_durables": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DURABLES"
+  },
+  "economic_unemployment": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=UNEMPLOYMENT"
+  },
+  "economic_nonfarm_payroll": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=NONFARM_PAYROLL"
+  },
+  "sector_performance": {
+    "doc": "docs/api_sector_performance.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=SECTOR"
+  }
+}

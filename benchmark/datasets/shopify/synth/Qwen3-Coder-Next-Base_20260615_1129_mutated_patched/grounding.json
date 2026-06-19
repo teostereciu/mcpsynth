@@ -1,0 +1,243 @@
+{
+  # Shop
+  "get_shop": {
+    "doc": "docs/api_shop.md",
+    "endpoint": "GET /admin/api/2026-01/shop.json"
+  },
+  
+  # Customer
+  "create_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /admin/api/2026-01/customers.json"
+  },
+  "get_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers.json"
+  },
+  "get_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "update_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "PUT /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "delete_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "DELETE /admin/api/2026-01/customers/{customer_id}.json"
+  },
+  "search_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/search.json"
+  },
+  "get_customer_orders": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/{customer_id}/orders.json"
+  },
+  "get_customer_count": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /admin/api/2026-01/customers/count.json"
+  },
+  
+  # Order
+  "create_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders.json"
+  },
+  "get_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders.json"
+  },
+  "get_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "get_order_count": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /admin/api/2026-01/orders/count.json"
+  },
+  "update_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "PUT /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "delete_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "DELETE /admin/api/2026-01/orders/{order_id}.json"
+  },
+  "cancel_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/cancel.json"
+  },
+  "close_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/close.json"
+  },
+  "open_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/open.json"
+  },
+  
+  # Product
+  "create_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "POST /admin/api/2026-01/products.json"
+  },
+  "get_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products.json"
+  },
+  "get_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products/{product_id}.json"
+  },
+  "get_product_count": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /admin/api/2026-01/products/count.json"
+  },
+  "update_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "PUT /admin/api/2026-01/products/{product_id}.json"
+  },
+  "delete_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "DELETE /admin/api/2026-01/products/{product_id}.json"
+  },
+  
+  # Variant
+  "create_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "POST /admin/api/2026-01/variants.json"
+  },
+  "get_variants": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /admin/api/2026-01/variants.json"
+  },
+  "get_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "update_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "PUT /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  "delete_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "DELETE /admin/api/2026-01/variants/{variant_id}.json"
+  },
+  
+  # Inventory
+  "get_inventory_items": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "GET /admin/api/2026-01/inventory_items.json"
+  },
+  "update_inventory_item": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "PUT /admin/api/2026-01/inventory_items/{id}.json"
+  },
+  "create_location": {
+    "doc": "docs/api_location.md",
+    "endpoint": "POST /admin/api/2026-01/locations.json"
+  },
+  "get_locations": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /admin/api/2026-01/locations.json"
+  },
+  "get_inventory_levels": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "GET /admin/api/2026-01/inventory_levels.json"
+  },
+  
+  # Collection
+  "create_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "POST /admin/api/2026-01/custom_collections.json"
+  },
+  "get_custom_collections": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "GET /admin/api/2026-01/custom_collections.json"
+  },
+  "get_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "GET /admin/api/2026-01/custom_collections/{collection_id}.json"
+  },
+  "update_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "PUT /admin/api/2026-01/custom_collections/{collection_id}.json"
+  },
+  "delete_custom_collection": {
+    "doc": "docs/api_customcollection.md",
+    "endpoint": "DELETE /admin/api/2026-01/custom_collections/{collection_id}.json"
+  },
+  
+  # Discount
+  "create_pricerule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "POST /admin/api/2026-01/price_rules.json"
+  },
+  "get_price_rules": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules.json"
+  },
+  "get_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /admin/api/2026-01/price_rules/{rule_id}.json"
+  },
+  "update_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "PUT /admin/api/2026-01/price_rules/{rule_id}.json"
+  },
+  "delete_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "DELETE /admin/api/2026-01/price_rules/{rule_id}.json"
+  },
+  "create_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "POST /admin/api/2026-01/discount_codes.json"
+  },
+  
+  # Webhook
+  "create_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "POST /admin/api/2026-01/webhooks.json"
+  },
+  "get_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks.json"
+  },
+  "get_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "get_webhook_count": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /admin/api/2026-01/webhooks/count.json"
+  },
+  "update_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "PUT /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  "delete_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "DELETE /admin/api/2026-01/webhooks/{webhook_id}.json"
+  },
+  
+  # Metafield
+  "create_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "POST /admin/api/2026-01/metafields.json"
+  },
+  "get_metafields": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /admin/api/2026-01/metafields.json"
+  },
+  "get_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /admin/api/2026-01/metafields/{metafield_id}.json"
+  },
+  
+  # Refund
+  "create_refund": {
+    "doc": "docs/api_refund.md",
+    "endpoint": "POST /admin/api/2026-01/orders/{order_id}/refunds.json"
+  }
+}

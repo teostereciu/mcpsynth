@@ -1,0 +1,508 @@
+{
+  "source": "Jira Cloud REST API v3 (developer.atlassian.com)",
+  "scraped_from": "https://developer.atlassian.com/cloud/jira/platform/rest/v3",
+  "scrape_date": "2026-04-13T00:02:54.559944",
+  "total_pages": 100,
+  "files": [
+    {
+      "filename": "api_announcement-banner.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-announcement-banner/"
+    },
+    {
+      "filename": "api_app-data-policies.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-app-data-policies/"
+    },
+    {
+      "filename": "api_app-migration.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-app-migration/"
+    },
+    {
+      "filename": "api_app-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-app-properties/"
+    },
+    {
+      "filename": "api_application-roles.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-application-roles/"
+    },
+    {
+      "filename": "api_audit-records.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-audit-records/"
+    },
+    {
+      "filename": "api_avatars.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-avatars/"
+    },
+    {
+      "filename": "api_classification-levels.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-classification-levels/"
+    },
+    {
+      "filename": "api_dashboards.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-dashboards/"
+    },
+    {
+      "filename": "api_dynamic-modules.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-dynamic-modules/"
+    },
+    {
+      "filename": "api_field-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-field-schemes/"
+    },
+    {
+      "filename": "api_filter-sharing.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-filter-sharing/"
+    },
+    {
+      "filename": "api_filters.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-filters/"
+    },
+    {
+      "filename": "api_group-and-user-picker.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-group-and-user-picker/"
+    },
+    {
+      "filename": "api_groups.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-groups/"
+    },
+    {
+      "filename": "api_issue-attachments.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-attachments/"
+    },
+    {
+      "filename": "api_issue-bulk-operations.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-bulk-operations/"
+    },
+    {
+      "filename": "api_issue-comment-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-comment-properties/"
+    },
+    {
+      "filename": "api_issue-comments.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-comments/"
+    },
+    {
+      "filename": "api_issue-custom-field-associations.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-custom-field-associations/"
+    },
+    {
+      "filename": "api_issue-custom-field-configuration-(apps).md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-custom-field-configuration-(apps)/"
+    },
+    {
+      "filename": "api_issue-custom-field-contexts.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-custom-field-contexts/"
+    },
+    {
+      "filename": "api_issue-custom-field-options.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-custom-field-options/"
+    },
+    {
+      "filename": "api_issue-custom-field-options-(apps).md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-custom-field-options-(apps)/"
+    },
+    {
+      "filename": "api_issue-custom-field-values-(apps).md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-custom-field-values-(apps)/"
+    },
+    {
+      "filename": "api_issue-field-configurations.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-field-configurations/"
+    },
+    {
+      "filename": "api_issue-fields.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-fields/"
+    },
+    {
+      "filename": "api_issue-link-types.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-link-types/"
+    },
+    {
+      "filename": "api_issue-links.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-links/"
+    },
+    {
+      "filename": "api_issue-navigator-settings.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-navigator-settings/"
+    },
+    {
+      "filename": "api_issue-notification-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-notification-schemes/"
+    },
+    {
+      "filename": "api_issue-panels.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-panels/"
+    },
+    {
+      "filename": "api_issue-priorities.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-priorities/"
+    },
+    {
+      "filename": "api_issue-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-properties/"
+    },
+    {
+      "filename": "api_issue-redaction.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-redaction/"
+    },
+    {
+      "filename": "api_issue-remote-links.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-remote-links/"
+    },
+    {
+      "filename": "api_issue-resolutions.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-resolutions/"
+    },
+    {
+      "filename": "api_issue-search.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-search/"
+    },
+    {
+      "filename": "api_issue-security-level.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-security-level/"
+    },
+    {
+      "filename": "api_issue-security-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-security-schemes/"
+    },
+    {
+      "filename": "api_issue-type-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-type-properties/"
+    },
+    {
+      "filename": "api_issue-type-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-type-schemes/"
+    },
+    {
+      "filename": "api_issue-type-screen-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-type-screen-schemes/"
+    },
+    {
+      "filename": "api_issue-types.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-types/"
+    },
+    {
+      "filename": "api_issue-votes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-votes/"
+    },
+    {
+      "filename": "api_issue-watchers.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-watchers/"
+    },
+    {
+      "filename": "api_issue-worklog-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-worklog-properties/"
+    },
+    {
+      "filename": "api_issue-worklogs.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issue-worklogs/"
+    },
+    {
+      "filename": "api_issues.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/"
+    },
+    {
+      "filename": "api_jql.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-jql/"
+    },
+    {
+      "filename": "api_jql-functions-(apps).md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-jql-functions-(apps)/"
+    },
+    {
+      "filename": "api_jira-expressions.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-jira-expressions/"
+    },
+    {
+      "filename": "api_jira-settings.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-jira-settings/"
+    },
+    {
+      "filename": "api_labels.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-labels/"
+    },
+    {
+      "filename": "api_license-metrics.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-license-metrics/"
+    },
+    {
+      "filename": "api_migration-of-connect-modules-to-forge.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-migration-of-connect-modules-to-forge/"
+    },
+    {
+      "filename": "api_myself.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-myself/"
+    },
+    {
+      "filename": "api_permission-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-permission-schemes/"
+    },
+    {
+      "filename": "api_permissions.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-permissions/"
+    },
+    {
+      "filename": "api_plans.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-plans/"
+    },
+    {
+      "filename": "api_priority-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-priority-schemes/"
+    },
+    {
+      "filename": "api_project-avatars.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-avatars/"
+    },
+    {
+      "filename": "api_project-categories.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-categories/"
+    },
+    {
+      "filename": "api_project-classification-levels.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-classification-levels/"
+    },
+    {
+      "filename": "api_project-components.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-components/"
+    },
+    {
+      "filename": "api_project-email.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-email/"
+    },
+    {
+      "filename": "api_project-features.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-features/"
+    },
+    {
+      "filename": "api_project-key-and-name-validation.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-key-and-name-validation/"
+    },
+    {
+      "filename": "api_project-permission-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-permission-schemes/"
+    },
+    {
+      "filename": "api_project-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-properties/"
+    },
+    {
+      "filename": "api_project-role-actors.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-role-actors/"
+    },
+    {
+      "filename": "api_project-roles.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-roles/"
+    },
+    {
+      "filename": "api_project-templates.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-templates/"
+    },
+    {
+      "filename": "api_project-types.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-types/"
+    },
+    {
+      "filename": "api_project-versions.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-project-versions/"
+    },
+    {
+      "filename": "api_projects.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-projects/"
+    },
+    {
+      "filename": "api_screen-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-screen-schemes/"
+    },
+    {
+      "filename": "api_screen-tab-fields.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-screen-tab-fields/"
+    },
+    {
+      "filename": "api_screen-tabs.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-screen-tabs/"
+    },
+    {
+      "filename": "api_screens.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-screens/"
+    },
+    {
+      "filename": "api_server-info.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-server-info/"
+    },
+    {
+      "filename": "api_service-registry.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-service-registry/"
+    },
+    {
+      "filename": "api_status.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-status/"
+    },
+    {
+      "filename": "api_tasks.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-tasks/"
+    },
+    {
+      "filename": "api_teams-in-plan.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-teams-in-plan/"
+    },
+    {
+      "filename": "api_time-tracking.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-time-tracking/"
+    },
+    {
+      "filename": "api_ui-modifications-(apps).md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-ui-modifications-(apps)/"
+    },
+    {
+      "filename": "api_user-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-user-properties/"
+    },
+    {
+      "filename": "api_user-search.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-user-search/"
+    },
+    {
+      "filename": "api_users.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-users/"
+    },
+    {
+      "filename": "api_webhooks.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-webhooks/"
+    },
+    {
+      "filename": "api_workflow-scheme-drafts.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflow-scheme-drafts/"
+    },
+    {
+      "filename": "api_workflow-scheme-project-associations.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflow-scheme-project-associations/"
+    },
+    {
+      "filename": "api_workflow-schemes.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflow-schemes/"
+    },
+    {
+      "filename": "api_workflow-status-categories.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflow-status-categories/"
+    },
+    {
+      "filename": "api_workflow-statuses.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflow-statuses/"
+    },
+    {
+      "filename": "api_workflow-transition-properties.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflow-transition-properties/"
+    },
+    {
+      "filename": "api_workflow-transition-rules.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflow-transition-rules/"
+    },
+    {
+      "filename": "api_workflows.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-workflows/"
+    },
+    {
+      "filename": "api_other-operations.md",
+      "title": "Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-other-operations/"
+    }
+  ]
+}

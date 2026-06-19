@@ -1,0 +1,90 @@
+{
+  "get_user": {
+    "doc": "https://developers.notion.com/reference/get-user",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "list_users": {
+    "doc": "https://developers.notion.com/reference/get-users",
+    "endpoint": "GET /users"
+  },
+  "get_current_bot": {
+    "doc": "https://developers.notion.com/reference/get-self",
+    "endpoint": "GET /users/me"
+  },
+  "search_pages": {
+    "doc": "https://developers.notion.com/reference/post-search",
+    "endpoint": "POST /search"
+  },
+  "search_databases": {
+    "doc": "https://developers.notion.com/reference/post-search",
+    "endpoint": "POST /search"
+  },
+  "get_page": {
+    "doc": "https://developers.notion.com/reference/get-page",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "create_page": {
+    "doc": "https://developers.notion.com/reference/post-page",
+    "endpoint": "POST /pages"
+  },
+  "update_page": {
+    "doc": "https://developers.notion.com/reference/patch-page",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "archive_page": {
+    "doc": "https://developers.notion.com/reference/patch-page",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "unarchive_page": {
+    "doc": "https://developers.notion.com/reference/patch-page",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "get_database": {
+    "doc": "https://developers.notion.com/reference/get-database",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "query_database": {
+    "doc": "https://developers.notion.com/reference/post-database-query",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "create_database": {
+    "doc": "https://developers.notion.com/reference/post-database",
+    "endpoint": "POST /databases"
+  },
+  "update_database": {
+    "doc": "https://developers.notion.com/reference/patch-database",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "get_block": {
+    "doc": "https://developers.notion.com/reference/get-block",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "get_block_children": {
+    "doc": "https://developers.notion.com/reference/get-block-children",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "append_block_children": {
+    "doc": "https://developers.notion.com/reference/patch-block-children",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "update_block": {
+    "doc": "https://developers.notion.com/reference/patch-block",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "delete_block": {
+    "doc": "https://developers.notion.com/reference/patch-block",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "create_comment": {
+    "doc": "https://developers.notion.com/reference/create-comment",
+    "endpoint": "POST /comments"
+  },
+  "list_comments": {
+    "doc": "https://developers.notion.com/reference/list-comments",
+    "endpoint": "GET /comments"
+  },
+  "list_blocks_recursive": {
+    "doc": "https://developers.notion.com/reference/get-block-children",
+    "endpoint": "GET /blocks/{block_id}/children"
+  }
+}

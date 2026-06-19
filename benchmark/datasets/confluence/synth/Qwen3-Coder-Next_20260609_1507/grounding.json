@@ -1,0 +1,154 @@
+{
+  "list_spaces": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /spaces"
+  },
+  "get_space_by_key": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /spaces/{id}"
+  },
+  "create_space": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "POST /spaces"
+  },
+  "delete_space": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "DELETE /spaces/{id}"
+  },
+  "list_pages": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /pages"
+  },
+  "get_page_by_id": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /pages/{id}"
+  },
+  "create_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "POST /pages"
+  },
+  "update_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "PUT /pages/{id}"
+  },
+  "delete_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "DEL /pages/{id}"
+  },
+  "get_page_by_title": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search"
+  },
+  "search_content": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search"
+  },
+  "search_users": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search/user"
+  },
+  "add_label": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "POST /labels/{id}/labels"
+  },
+  "list_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /labels/{id}/labels"
+  },
+  "remove_label": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "DEL /labels/{id}"
+  },
+  "list_footer_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /pages/{id}/footer-comments"
+  },
+  "create_footer_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "POST /footer-comments"
+  },
+  "list_inline_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /pages/{id}/inline-comments"
+  },
+  "create_inline_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "POST /inline-comments"
+  },
+  "list_content_properties": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /pages/{page-id}/properties"
+  },
+  "get_content_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /pages/{page-id}/properties/{property-id}"
+  },
+  "set_content_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "POST /pages/{page-id}/properties"
+  },
+  "delete_content_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "DEL /pages/{page-id}/properties/{property-id}"
+  },
+  "list_attachments": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /pages/{id}/attachments"
+  },
+  "get_attachment_by_id": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /attachments/{id}"
+  },
+  "create_attachment": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "POST /attachments"
+  },
+  "get_current_user": {
+    "doc": "docs/api_v1_users.md",
+    "endpoint": "GET /wiki/rest/api/user/current"
+  },
+  "get_user_by_account_id": {
+    "doc": "docs/api_v1_users.md",
+    "endpoint": "GET /wiki/rest/api/user"
+  },
+  "bulk_get_users": {
+    "doc": "docs/api_v2_user.md",
+    "endpoint": "POST /users-bulk"
+  },
+  "list_space_properties": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /spaces/{id}/properties"
+  },
+  "get_space_property": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /spaces/{id}/properties/{property-id}"
+  },
+  "set_space_property": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "POST /spaces/{id}/properties"
+  },
+  "delete_space_property": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "DEL /spaces/{id}/properties/{property-id}"
+  },
+  "list_space_permissions": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /spaces/{id}/permissions"
+  },
+  "add_space_permission": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "POST /spaces/{id}/permissions"
+  },
+  "list_page_versions": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /pages/{id}/versions"
+  },
+  "get_page_version": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /pages/{id}/versions/{version-number}"
+  },
+  "search_labels": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /labels"
+  }
+}

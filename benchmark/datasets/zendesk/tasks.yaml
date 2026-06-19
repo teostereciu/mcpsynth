@@ -1,0 +1,189 @@
+# Agent evaluation tasks for Zendesk REST APIs MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring principles.
+#
+# Domain constraints:
+#   - All write tasks use namespaced names ("Agent Eval Test …", "Agent Test …") and the
+#     email domain "@example-mcp-eval.com" so created records are easy to clean up.
+#   - Zendesk paginates most list endpoints; prompts request the first 5 to avoid
+#     pagination complexity.
+#   - Help Center (Guide) endpoints may return empty results in sandboxes with no content;
+#     tasks that query Help Center accept an empty response as a valid pass.
+#   - The API returns ticket URLs in the `url` field (JSON API) and `html_url` for the
+#     web UI link; tasks use `url` to verify ticket creation via the API.
+#   - User-organization association is done by updating the user's `organization_id`,
+#     not by a separate association endpoint.
+#
+# Required env vars: ZENDESK_SUBDOMAIN, ZENDESK_EMAIL, ZENDESK_API_TOKEN
+
+tasks:
+  # ---------- READ ----------
+  - id: list_tickets
+    prompt: >
+      List the most recent 5 tickets in Zendesk. Report the ticket IDs,
+      subjects, statuses, and requester names.
+    expected: subject
+    tags: [read]
+    # Discriminates: `subject` is the ticket-specific text field. A response containing
+    # `subject` confirms the tickets endpoint was called and the field correctly
+    # populated, rather than a generic list or error object.
+
+  - id: list_users
+    prompt: >
+      List the first 5 users (agents and end-users) in Zendesk. Report
+      their names, emails, and roles.
+    expected: email
+    tags: [read]
+    # Discriminates: `email` is present on user objects from the users endpoint.
+    # Its presence confirms users (not tickets or groups) were fetched.
+
+  - id: list_groups
+    prompt: >
+      List all groups in the Zendesk account. Report the group names and IDs.
+    expected: name
+    tags: [read]
+    # Discriminates: `name` confirms the groups endpoint was used and the group name
+    # field is correctly surfaced. Weaker than a specific group name but stronger than
+    # `id`, which appears in virtually every Zendesk response.
+
+  - id: list_organizations
+    prompt: >
+      List the first 5 organizations in Zendesk. Report their names and IDs.
+    expected: name
+    tags: [read]
+    # Discriminates: `name` is the distinguishing organizations field. A correctly
+    # structured organizations response will include name; an error or wrong-endpoint
+    # response will not.
+
+  - id: list_help_center_articles
+    prompt: >
+      List the first 5 articles in the Zendesk Help Center. Report their
+      titles and IDs, or confirm there are none.
+    expected: title
+    tags: [read]
+    # Discriminates: `title` is specific to Help Center article objects. Its presence
+    # confirms the Guide/Help Center endpoint was reached, not the tickets or users API.
+    # An empty list is a valid pass for sandboxes with no content.
+
+  - id: search_tickets
+    prompt: >
+      Search for Zendesk tickets with status "open". Report the IDs and
+      subjects of the first 5 matching tickets, or confirm there are none.
+    expected: subject
+    tags: [read]
+    # Discriminates: `subject` only appears in a correctly structured ticket search
+    # result. Tests the search endpoint (/api/v2/search) with a status filter, not
+    # just the unfiltered ticket list.
+
+  - id: search_help_center
+    prompt: >
+      Search the Zendesk Help Center for articles containing the word "help".
+      Report the titles of the first 3 results, or confirm there are none.
+    expected: title
+    tags: [read]
+    # Discriminates: tests the Help Center search endpoint, separate from the main
+    # ticket search. `title` in the result confirms article objects were returned.
+
+  # ---------- WRITE ----------
+  - id: create_ticket
+    prompt: >
+      Create a new Zendesk ticket with:
+      - Subject: "Agent harness test ticket"
+      - Comment/description: "This ticket was created by the MCP agent evaluation harness. Safe to close."
+      - Priority: low
+      Report the ticket ID and URL.
+    expected: url
+    tags: [write]
+    # Discriminates: `url` is the API resource URL field on a Zendesk ticket object
+    # (e.g. https://<subdomain>.zendesk.com/api/v2/tickets/<id>.json). Its presence
+    # confirms the create endpoint returned a full ticket object, not just an ID.
+
+  - id: create_user
+    prompt: >
+      Create a new Zendesk end-user with:
+      - Name: "Agent Test User"
+      - Email: "agent.testuser.zendesk@example-mcp-eval.com"
+      Report the user ID and name.
+    expected: Agent Test User
+    tags: [write]
+    # Discriminates: the exact name "Agent Test User" only appears if the user was
+    # created and the name property returned. Distinguishes a successful creation
+    # response from a bare ID or error.
+
+  - id: create_organization
+    prompt: >
+      Create a new Zendesk organization with name "Agent Eval Test Org".
+      Report the organization ID and name.
+    expected: Agent Eval Test Org
+    tags: [write]
+    # Discriminates: the name "Agent Eval Test Org" only appears in a correctly
+    # structured creation response. More specific than `id`, which appears in any
+    # Zendesk response.
+
+  - id: create_group
+    prompt: >
+      Create a new Zendesk group named "Agent Eval Test Group".
+      Report the group ID and name.
+    expected: Agent Eval Test Group
+    tags: [write]
+    # Discriminates: the group name only appears if the groups endpoint was called
+    # and the response includes the name field. Tests a separate resource type from
+    # tickets, users, and organizations.
+
+  # ---------- MULTI-STEP ----------
+  - id: create_ticket_then_update
+    prompt: >
+      Create a Zendesk ticket with subject "Agent Update Test Ticket" and
+      description "Initial description by agent harness."
+      Then update the ticket status to "pending".
+      Retrieve the ticket and confirm its status. Report the ticket ID
+      and final status.
+    expected: pending
+    tags: [write, multi-step, workflow]
+    # Discriminates: 3-step workflow (create → update → read). The "pending" status
+    # value only appears if the update was applied correctly and the subsequent read
+    # returns the ticket's new state.
+
+  - id: create_ticket_and_comment
+    prompt: >
+      Create a ticket with subject "Agent Comment Test" and description
+      "Ticket for comment testing." Then add a public comment to the ticket:
+      "Follow-up comment from the agent harness."
+      Report the ticket ID and confirm the comment was added.
+    expected: follow-up comment
+    tags: [write, multi-step, workflow]
+    # Discriminates: the phrase "follow-up comment" only appears if the comment was
+    # submitted and the agent confirms its text. Tests the ticket comments endpoint
+    # separately from ticket creation.
+
+  - id: search_and_get_ticket
+    prompt: >
+      Search for Zendesk tickets with status "open" (or any status if none are open).
+      Retrieve the full details of the first ticket found, including its comments.
+      Report the ticket ID, subject, and number of comments.
+    expected: comments
+    tags: [read, multi-step]
+    # Discriminates: 2-step workflow (search → get with comments). The `comments` field
+    # only appears in the ticket detail response when the comments sideload is
+    # requested, not in list or search results.
+
+  - id: create_user_and_org_then_associate
+    prompt: >
+      Create an organization named "Agent Association Test Org". Create a
+      user named "Agent Assoc User" with email "agent.assoc@example-mcp-eval.com".
+      Then associate the user with the organization. Report the user ID,
+      organization ID, and confirm the association.
+    expected: organization_id
+    tags: [write, multi-step, workflow]
+    # Discriminates: 3-step workflow. `organization_id` is the field on the user object
+    # that must be non-null to confirm the association. Tests that the agent can pass
+    # the org ID from the first call into the user update.
+
+  - id: error_handling_invalid_ticket
+    prompt: >
+      Try to retrieve a Zendesk ticket with ID 9999999999. Report the error
+      response received.
+    expected: RecordNotFound
+    tags: [read, error-handling]
+    # Discriminates: Zendesk returns "RecordNotFound" in the error body for missing
+    # records. This string is more specific than "error" or "404" and confirms the MCP
+    # server forwards the full error payload, not just an HTTP status code.

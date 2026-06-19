@@ -1,0 +1,39 @@
+from typing import Any, Dict
+
+from .client import call_alpha_vantage
+
+
+def fx_exchange_rate(from_currency: str, to_currency: str) -> Dict[str, Any]:
+    return call_alpha_vantage({
+        "function": "CURRENCY_EXCHANGE_RATE",
+        "from_currency": from_currency,
+        "to_currency": to_currency,
+    })
+
+
+def fx_daily(from_symbol: str, to_symbol: str, outputsize: str = "compact", datatype: str = "json") -> Dict[str, Any]:
+    return call_alpha_vantage({
+        "function": "FX_DAILY",
+        "from_symbol": from_symbol,
+        "to_symbol": to_symbol,
+        "outputsize": outputsize,
+        "datatype": datatype,
+    })
+
+
+def fx_weekly(from_symbol: str, to_symbol: str, datatype: str = "json") -> Dict[str, Any]:
+    return call_alpha_vantage({
+        "function": "FX_WEEKLY",
+        "from_symbol": from_symbol,
+        "to_symbol": to_symbol,
+        "datatype": datatype,
+    })
+
+
+def fx_monthly(from_symbol: str, to_symbol: str, datatype: str = "json") -> Dict[str, Any]:
+    return call_alpha_vantage({
+        "function": "FX_MONTHLY",
+        "from_symbol": from_symbol,
+        "to_symbol": to_symbol,
+        "datatype": datatype,
+    })

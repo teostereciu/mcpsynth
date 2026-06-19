@@ -1,0 +1,126 @@
+{
+  "catalog_get_product": {
+    "doc": "docs/commerce_catalog_product.md",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}"
+  },
+  "catalog_search_products": {
+    "doc": "docs/commerce_catalog_product_summary_search.md",
+    "endpoint": "GET /commerce/catalog/v1/product_summary/search"
+  },
+  "charity_get_charity_org": {
+    "doc": "docs/commerce_charity_get_charity_org.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org/{charityOrgId}"
+  },
+  "charity_search_charity_orgs": {
+    "doc": "docs/commerce_charity_search_charity_orgs.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org"
+  },
+  "identity_get_user": {
+    "doc": "docs/commerce_identity_get_user.md",
+    "endpoint": "GET /commerce/identity/v1/user/"
+  },
+  "media_create_upload_session": {
+    "doc": "docs/commerce_media_create_upload_session.md",
+    "endpoint": "POST /commerce/media/v1_beta/upload_session"
+  },
+  "media_get_upload_session": {
+    "doc": "docs/commerce_media_get_upload_session.md",
+    "endpoint": "GET /commerce/media/v1_beta/upload_session/{uploadSessionId}"
+  },
+  "media_upload_file_part": {
+    "doc": "docs/commerce_media_upload_file_part.md",
+    "endpoint": "PUT /commerce/media/v1_beta/upload_session/{uploadSessionId}"
+  },
+  "media_complete_upload_session": {
+    "doc": "docs/commerce_media_complete_upload_session.md",
+    "endpoint": "POST /commerce/media/v1_beta/upload_session/{uploadSessionId}/complete"
+  },
+  "media_get_asset": {
+    "doc": "docs/commerce_media_get_asset.md",
+    "endpoint": "GET /commerce/media/v1_beta/asset/{assetId}"
+  },
+  "media_search_assets": {
+    "doc": "docs/commerce_media_search_assets.md",
+    "endpoint": "GET /commerce/media/v1_beta/asset"
+  },
+  "media_delete_asset": {
+    "doc": "docs/commerce_media_delete_asset.md",
+    "endpoint": "DELETE /commerce/media/v1_beta/asset/{assetId}"
+  },
+  "notification_get_public_key": {
+    "doc": "docs/commerce_notification_get_public_key.md",
+    "endpoint": "GET /commerce/notification/v1/public_key"
+  },
+  "notification_get_subscriptions": {
+    "doc": "docs/commerce_notification_get_subscriptions.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  },
+  "notification_create_subscription": {
+    "doc": "docs/commerce_notification_create_subscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "notification_get_subscription": {
+    "doc": "docs/commerce_notification_get_subscription.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscriptionId}"
+  },
+  "notification_update_subscription": {
+    "doc": "docs/commerce_notification_update_subscription.md",
+    "endpoint": "PUT /commerce/notification/v1/subscription/{subscriptionId}"
+  },
+  "notification_delete_subscription": {
+    "doc": "docs/commerce_notification_delete_subscription.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscriptionId}"
+  },
+  "notification_get_destinations": {
+    "doc": "docs/commerce_notification_get_destinations.md",
+    "endpoint": "GET /commerce/notification/v1/destination"
+  },
+  "notification_create_destination": {
+    "doc": "docs/commerce_notification_create_destination.md",
+    "endpoint": "POST /commerce/notification/v1/destination"
+  },
+  "notification_get_destination": {
+    "doc": "docs/commerce_notification_get_destination.md",
+    "endpoint": "GET /commerce/notification/v1/destination/{destinationId}"
+  },
+  "notification_update_destination": {
+    "doc": "docs/commerce_notification_update_destination.md",
+    "endpoint": "PUT /commerce/notification/v1/destination/{destinationId}"
+  },
+  "notification_delete_destination": {
+    "doc": "docs/commerce_notification_delete_destination.md",
+    "endpoint": "DELETE /commerce/notification/v1/destination/{destinationId}"
+  },
+  "taxonomy_get_default_category_tree_id": {
+    "doc": "docs/commerce_taxonomy_get_default_category_tree_id.md",
+    "endpoint": "GET /commerce/taxonomy/v1/get_default_category_tree_id"
+  },
+  "taxonomy_get_category_tree": {
+    "doc": "docs/commerce_taxonomy_get_category_tree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryTreeId}"
+  },
+  "taxonomy_get_category_subtree": {
+    "doc": "docs/commerce_taxonomy_get_category_subtree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryTreeId}/get_category_subtree"
+  },
+  "taxonomy_get_category_suggestions": {
+    "doc": "docs/commerce_taxonomy_get_category_suggestions.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryTreeId}/get_category_suggestions"
+  },
+  "taxonomy_get_item_aspects_for_category": {
+    "doc": "docs/commerce_taxonomy_get_item_aspects_for_category.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryTreeId}/get_item_aspects_for_category"
+  },
+  "taxonomy_get_compatibility_properties": {
+    "doc": "docs/commerce_taxonomy_get_compatibility_properties.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryTreeId}/get_compatibility_properties"
+  },
+  "taxonomy_get_compatibility_property_values": {
+    "doc": "docs/commerce_taxonomy_get_compatibility_property_values.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryTreeId}/get_compatibility_property_values"
+  },
+  "translation_translate": {
+    "doc": "docs/commerce_translation_translate.md",
+    "endpoint": "POST /commerce/translation/v1/translate"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "pages_get": {
+    "doc": "docs/retrieve-a-page.md",
+    "endpoint": "GET /v1/pages/{page_id}"
+  },
+  "pages_create_tool": {
+    "doc": "docs/post-page.md",
+    "endpoint": "POST /v1/pages"
+  },
+  "pages_update_tool": {
+    "doc": "docs/patch-page.md",
+    "endpoint": "PATCH /v1/pages/{page_id}"
+  },
+  "pages_trash": {
+    "doc": "docs/archive-a-page.md",
+    "endpoint": "PATCH /v1/pages/{page_id}"
+  },
+  "pages_restore_tool": {
+    "doc": "docs/archive-a-page.md",
+    "endpoint": "PATCH /v1/pages/{page_id}"
+  },
+  "pages_move_tool": {
+    "doc": "docs/move-page.md",
+    "endpoint": "POST /v1/pages/{page_id}/move"
+  },
+  "pages_get_property_item": {
+    "doc": "docs/retrieve-a-page-property.md",
+    "endpoint": "GET /v1/pages/{page_id}/properties/{property_id}"
+  },
+  "databases_create_tool": {
+    "doc": "docs/create-a-database.md",
+    "endpoint": "POST /v1/databases"
+  },
+  "databases_get": {
+    "doc": "docs/retrieve-a-database.md",
+    "endpoint": "GET /v1/databases/{database_id}"
+  },
+  "databases_list_tool": {
+    "doc": "docs/get-databases.md",
+    "endpoint": "GET /v1/databases"
+  },
+  "databases_update_tool": {
+    "doc": "docs/update-a-database.md",
+    "endpoint": "PATCH /v1/databases/{database_id}"
+  },
+  "databases_query_tool": {
+    "doc": "docs/post-database-query.md",
+    "endpoint": "POST /v1/databases/{database_id}/query"
+  },
+  "blocks_get": {
+    "doc": "docs/retrieve-a-block.md",
+    "endpoint": "GET /v1/blocks/{block_id}"
+  },
+  "blocks_children_list_tool": {
+    "doc": "docs/get-block-children.md",
+    "endpoint": "GET /v1/blocks/{block_id}/children"
+  },
+  "blocks_children_append_tool": {
+    "doc": "docs/patch-block-children.md",
+    "endpoint": "PATCH /v1/blocks/{block_id}/children"
+  },
+  "blocks_update_tool": {
+    "doc": "docs/update-a-block.md",
+    "endpoint": "PATCH /v1/blocks/{block_id}"
+  },
+  "blocks_delete_tool": {
+    "doc": "docs/delete-a-block.md",
+    "endpoint": "DELETE /v1/blocks/{block_id}"
+  },
+  "comments_create_tool": {
+    "doc": "docs/create-a-comment.md",
+    "endpoint": "POST /v1/comments"
+  },
+  "comments_list_tool": {
+    "doc": "docs/list-comments.md",
+    "endpoint": "GET /v1/comments"
+  },
+  "comments_get": {
+    "doc": "docs/retrieve-comment.md",
+    "endpoint": "GET /v1/comments/{comment_id}"
+  },
+  "users_me_tool": {
+    "doc": "docs/get-self.md",
+    "endpoint": "GET /v1/users/me"
+  },
+  "users_list_tool": {
+    "doc": "docs/get-users.md",
+    "endpoint": "GET /v1/users"
+  },
+  "users_get": {
+    "doc": "docs/get-user.md",
+    "endpoint": "GET /v1/users/{user_id}"
+  },
+  "search_tool": {
+    "doc": "docs/post-search.md",
+    "endpoint": "POST /v1/search"
+  },
+  "data_sources_create_tool": {
+    "doc": "docs/create-a-data-source.md",
+    "endpoint": "POST /v1/data_sources"
+  },
+  "data_sources_get": {
+    "doc": "docs/retrieve-a-data-source.md",
+    "endpoint": "GET /v1/data_sources/{data_source_id}"
+  },
+  "data_sources_update_tool": {
+    "doc": "docs/update-a-data-source.md",
+    "endpoint": "PATCH /v1/data_sources/{data_source_id}"
+  },
+  "data_sources_query_tool": {
+    "doc": "docs/query-a-data-source.md",
+    "endpoint": "POST /v1/data_sources/{data_source_id}/query"
+  },
+  "data_sources_list_templates_tool": {
+    "doc": "docs/list-data-source-templates.md",
+    "endpoint": "GET /v1/data_sources/{data_source_id}/templates"
+  },
+  "file_uploads_create_tool": {
+    "doc": "docs/create-a-file-upload.md",
+    "endpoint": "POST /v1/file_uploads"
+  },
+  "file_uploads_send_tool": {
+    "doc": "docs/send-a-file-upload.md",
+    "endpoint": "POST /v1/file_uploads/{file_upload_id}/send"
+  },
+  "file_uploads_complete_tool": {
+    "doc": "docs/complete-a-file-upload.md",
+    "endpoint": "POST /v1/file_uploads/{file_upload_id}/complete"
+  },
+  "file_uploads_get": {
+    "doc": "docs/retrieve-a-file-upload.md",
+    "endpoint": "GET /v1/file_uploads/{file_upload_id}"
+  },
+  "file_uploads_list_tool": {
+    "doc": "docs/list-file-uploads.md",
+    "endpoint": "GET /v1/file_uploads"
+  }
+}

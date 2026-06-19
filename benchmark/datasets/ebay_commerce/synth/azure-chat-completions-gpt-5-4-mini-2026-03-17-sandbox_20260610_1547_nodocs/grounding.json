@@ -1,0 +1,34 @@
+{
+  "list_tools": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /"
+  },
+  "get_identity": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /commerce/identity/v1/user"
+  },
+  "get_taxonomy_categories": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"
+  },
+  "search_catalog": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product_summary/search"
+  },
+  "create_media_upload_session": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /commerce/media/v1/upload_session"
+  },
+  "get_media_upload_session": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /commerce/media/v1/upload_session/{upload_session_id}"
+  },
+  "create_notification_subscription": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "list_notification_subscriptions": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  }
+}

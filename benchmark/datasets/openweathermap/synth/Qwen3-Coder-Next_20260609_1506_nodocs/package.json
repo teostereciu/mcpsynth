@@ -1,0 +1,19 @@
+{
+  "name": "openweather-mcp",
+  "version": "1.0.0",
+  "description": "OpenWeatherMap MCP Server - provides tools for weather, forecast, air pollution, and geocoding",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.5.0"
+  }
+}

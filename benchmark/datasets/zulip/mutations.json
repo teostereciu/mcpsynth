@@ -1,0 +1,11 @@
+{
+  "description": "Zulip API parameter mutations for parametric contamination testing. Renames Zulip-specific request parameters to plausible-but-wrong alternatives. All mutated params are exercised by eval task scenarios (sending/fetching messages, stream operations).",
+  "mutations": [
+    {"original": "narrow",      "mutated": "filter_spec"},
+    {"original": "num_before",  "mutated": "before_count"},
+    {"original": "num_after",   "mutated": "after_count"},
+    {"original": "anchor",      "mutated": "start_message_id"},
+    {"original": "topic",       "mutated": "message_topic"},
+    {"original": "stream",      "mutated": "channel_name"}
+  ]
+}

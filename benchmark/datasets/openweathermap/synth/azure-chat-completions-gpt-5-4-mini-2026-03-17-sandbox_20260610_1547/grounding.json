@@ -1,0 +1,46 @@
+{
+  "get_current_weather_by_coordinates": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather?lat={lat}&lon={lon}"
+  },
+  "get_current_weather_by_city_name": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather?q={city name}"
+  },
+  "get_current_weather_by_city_id": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather?id={city id}"
+  },
+  "get_current_weather_by_zip": {
+    "doc": "docs/api_current_weather.md",
+    "endpoint": "GET /data/2.5/weather?zip={zip code}"
+  },
+  "get_forecast_by_coordinates": {
+    "doc": "docs/api_5day_forecast.md",
+    "endpoint": "GET /data/2.5/forecast?lat={lat}&lon={lon}"
+  },
+  "get_air_pollution_current": {
+    "doc": "docs/api_air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution?lat={lat}&lon={lon}"
+  },
+  "get_air_pollution_forecast": {
+    "doc": "docs/api_air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/forecast?lat={lat}&lon={lon}"
+  },
+  "get_air_pollution_history": {
+    "doc": "docs/api_air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/history?lat={lat}&lon={lon}&start={start}&end={end}"
+  },
+  "geocode_direct": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/direct?q={city name}"
+  },
+  "geocode_zip": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/zip?zip={zip code}"
+  },
+  "geocode_reverse": {
+    "doc": "docs/api_geocoding.md",
+    "endpoint": "GET /geo/1.0/reverse?lat={lat}&lon={lon}"
+  }
+}

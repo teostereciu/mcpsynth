@@ -1,0 +1,219 @@
+# GitHub Real API Testing Configuration
+#
+# This config defines what's needed to test the GitHub MCP server against
+# the real GitHub API (not just Prism mock).
+
+api_name: "GitHub"
+api_version: "REST API v3"
+test_suite: "tests/test_workflows_real_api.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  GITHUB_TOKEN:
+    description: "Personal access token for GitHub API"
+    how_to_get:
+      url: "https://github.com/settings/tokens/new"
+      steps:
+        - "Click 'Generate new token (classic)'"
+        - "Token name: 'MCP Benchmark Testing'"
+        - "Expiration: 90 days (recommended)"
+        - "Select scopes (see above for recommendations)"
+        - "Click 'Generate token'"
+        - "Copy the token (starts with ghp_)"
+      scopes:
+        minimal:
+          description: "For test scenarios only (18/20 scenarios)"
+          required:
+            - repo: "Full repository access (issues, PRs, commits, releases)"
+            - workflow: "Actions workflow management (dispatch, re-run)"
+          notes:
+            - "Token owner must have admin access to test repository"
+            - "Skips scenarios 11 (teams) and 13 (transfers)"
+          coverage: "18 out of 20 test scenarios"
+
+        basic:
+          description: "General API testing (~40% endpoint coverage)"
+          required:
+            - repo: "Full repository access (issues, PRs, commits)"
+          coverage: "~270 endpoints (repos, issues, pulls, checks)"
+
+        recommended:
+          description: "Extended testing (~70-75% endpoint coverage)"
+          required:
+            - repo: "Full repository access"
+            - workflow: "Actions workflow management"
+            - read:user: "Read user profile data"
+            - read:org: "Read organization data"
+            - gist: "Create and manage gists"
+          coverage: "~500 endpoints (repos, issues, pulls, actions, users, orgs, gists, teams, checks, search)"
+
+        comprehensive:
+          description: "Maximum testing (~85-90% endpoint coverage)"
+          required:
+            - repo: "Full repository access"
+            - workflow: "Actions workflow management"
+            - read:user: "Read user profile data"
+            - read:org: "Read organization data"
+            - gist: "Create and manage gists"
+            - project: "Manage project boards"
+            - read:packages: "Read GitHub Packages"
+            - notifications: "Manage notifications"
+          coverage: "~900 endpoints (nearly all except admin/enterprise)"
+
+        not_recommended:
+          description: "Dangerous or impractical for benchmarks"
+          scopes:
+            - admin:org: "Requires organization ownership"
+            - delete_repo: "Dangerous - allows repository deletion"
+            - admin:repo_hook: "Too permissive for testing"
+            - admin:gpg_key: "Not needed for API testing"
+    validation: "^ghp_[a-zA-Z0-9]{36,}$|^github_pat_[a-zA-Z0-9_]{82}$"
+
+  GITHUB_TEST_REPO:
+    description: "Test repository in owner/repo format"
+    how_to_get:
+      url: "https://github.com/new"
+      steps:
+        - "Repository name: mcp-test-workflows (or any name)"
+        - "Description: 'Test repository for MCP benchmark'"
+        - "Visibility: Public (REQUIRED - free tier branch protection only works on public repos)"
+        - "Initialize with README: Yes"
+        - "After creation, copy template files from benchmark/datasets/github/test_repo_template/"
+        - "Copy the 'owner/repo' from the repository URL"
+      template_setup:
+        - "Template files are in benchmark/datasets/github/test_repo_template/"
+        - "Required files: .github/workflows/{ci,deploy}.yml, src/{api,auth}.py, tests/test_api.py, README.md, dist/*.{tar.gz,zip}"
+        - "See test_repo_template/README_SETUP.md for detailed instructions"
+        - "git clone your-repo && cd your-repo"
+        - "cp -r path/to/test_repo_template/* ."
+        - "cp -r path/to/test_repo_template/.github ."
+        - "git add . && git commit -m 'Add test files' && git push"
+      notes:
+        - "Use a dedicated test repository"
+        - "Repository MUST be public (branch protection requires public repo on free tier)"
+        - "Tests will create/close issues and PRs"
+        - "All test data is prefixed with [TEST]"
+        - "No destructive operations (repo won't be deleted)"
+        - "Repository must have main branch with template files"
+    validation: "^[a-zA-Z0-9_-]+/[a-zA-Z0-9_-]+$"
+    example: "octocat/mcp-test-workflows"
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS (for extended testing)
+# ==============================================================================
+
+optional_credentials:
+  GITHUB_TEST_ORG:
+    description: "Organization name for testing org endpoints (optional)"
+    required_for: "Organization and team endpoints (~100 additional endpoints)"
+    how_to_get:
+      url: "https://github.com/organizations/plan"
+      steps:
+        - "Create a free organization (if you don't have one)"
+        - "Organization name: 'mcp-test-org' (or any name)"
+        - "Use organization name only (not owner/repo format)"
+    validation: "^[a-zA-Z0-9_-]+$"
+    example: "mcp-test-org"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  GitHub does not provide a sandbox/test environment.
+  Real API testing requires:
+    - Creating a real GitHub account
+    - Creating a test repository
+    - Using real API quota
+
+  This is why we primarily use Prism mock server for Tier 1 testing.
+
+rate_limits:
+  authenticated: "5,000 requests/hour"
+  unauthenticated: "60 requests/hour"
+  search: "30 requests/minute"
+  notes: |
+    - Test suite is designed to stay well under limits
+    - Typical full workflow test uses <20 requests
+    - Monitor usage at: https://api.github.com/rate_limit
+
+cleanup_notes: |
+  Tests are designed to be self-documenting and safe:
+    - All created issues are automatically closed
+    - All test items prefixed with [TEST] and timestamp
+    - No repositories are deleted
+    - No destructive operations performed
+
+  Manual cleanup (if desired):
+    - Visit your test repo and delete closed test issues
+    - Revoke token when done: https://github.com/settings/tokens
+
+# ==============================================================================
+# TEST COVERAGE BY SCOPE
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 1080
+  tested_endpoints: 682  # Top 10 domains
+
+  by_scope:
+    minimal:
+      scopes: ["repo", "workflow"]
+      scenarios_testable: "18/20"
+      endpoints_testable: 300
+      percentage: 90
+      notes: "Sufficient for test scenarios (skips org-dependent scenarios 11, 13)"
+      domains: ["repos", "issues", "pulls", "actions", "checks"]
+
+    basic:
+      scopes: ["repo"]
+      endpoints_testable: 270
+      percentage: 40
+      domains: ["repos", "issues", "pulls", "checks", "deployments"]
+
+    recommended:
+      scopes: ["repo", "workflow", "read:user", "read:org", "gist"]
+      endpoints_testable: 500
+      percentage: 73
+      domains: ["repos", "issues", "pulls", "actions", "users", "orgs", "gists", "teams", "checks", "search"]
+
+    comprehensive:
+      scopes: ["repo", "workflow", "read:user", "read:org", "gist", "project", "read:packages", "notifications"]
+      endpoints_testable: 900
+      percentage: 83
+      domains: "Nearly all domains except admin/enterprise"
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  token_storage: |
+    - Store token in .env file (gitignored)
+    - Never commit tokens to version control
+    - Use GitHub Secrets for CI/CD
+
+  token_permissions: |
+    - Recommended: Use 'recommended' scope set
+    - Avoid: admin:*, delete_* scopes
+    - Minimize: Set token expiration (90 days recommended)
+
+  safe_testing: |
+    - Use dedicated test repository
+    - Don't test on production repositories
+    - Review test code before running
+    - Revoke token when testing complete
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  token_scopes: "https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps"
+  personal_tokens: "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens"
+  rate_limits: "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api"
+  rest_api: "https://docs.github.com/en/rest"

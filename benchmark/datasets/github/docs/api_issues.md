@@ -1,0 +1,73 @@
+# REST API endpoints for issues
+
+*Source: https://docs.github.com/en/rest/issues*
+
+---
+
+# REST API endpoints for issues
+Use the REST API to view and manage issues, including issue assignees, comments, labels, and milestones.
+- REST API endpoints for issuesList issues assigned to the authenticated userList organization issues assigned to the authenticated userList repository issuesCreate an issueGet an issueUpdate an issueLock an issueUnlock an issueList user account issues assigned to the authenticated user
+- REST API endpoints for issue assigneesList assigneesCheck if a user can be assignedAdd assignees to an issueRemove assignees from an issueCheck if a user can be assigned to a issue
+- REST API endpoints for issue commentsList issue comments for a repositoryGet an issue commentUpdate an issue commentDelete an issue commentPin an issue commentUnpin an issue commentList issue commentsCreate an issue comment
+- REST API endpoints for issue eventsList issue events for a repositoryGet an issue eventList issue events
+- REST API endpoints for issue dependenciesList dependencies an issue is blocked byAdd a dependency an issue is blocked byRemove dependency an issue is blocked byList dependencies an issue is blocking
+- REST API endpoints for issue field valuesList issue field values for an issueAdd issue field values to an issueSet issue field values for an issueDelete an issue field value from an issue
+- REST API endpoints for labelsList labels for an issueAdd labels to an issueSet labels for an issueRemove all labels from an issueRemove a label from an issueList labels for a repositoryCreate a labelGet a labelUpdate a labelDelete a labelList labels for issues in a milestone
+- REST API endpoints for milestonesList milestonesCreate a milestoneGet a milestoneUpdate a milestoneDelete a milestone
+- REST API endpoints for sub-issuesGet parent issueRemove sub-issueList sub-issuesAdd sub-issueReprioritize sub-issue
+- REST API endpoints for timeline eventsList timeline events for an issue
+- List issues assigned to the authenticated user
+- List organization issues assigned to the authenticated user
+- List repository issues
+- Create an issue
+- Get an issue
+- Update an issue
+- Lock an issue
+- Unlock an issue
+- List user account issues assigned to the authenticated user
+- List assignees
+- Check if a user can be assigned
+- Add assignees to an issue
+- Remove assignees from an issue
+- Check if a user can be assigned to a issue
+- List issue comments for a repository
+- Get an issue comment
+- Update an issue comment
+- Delete an issue comment
+- Pin an issue comment
+- Unpin an issue comment
+- List issue comments
+- Create an issue comment
+- List issue events for a repository
+- Get an issue event
+- List issue events
+- List dependencies an issue is blocked by
+- Add a dependency an issue is blocked by
+- Remove dependency an issue is blocked by
+- List dependencies an issue is blocking
+- List issue field values for an issue
+- Add issue field values to an issue
+- Set issue field values for an issue
+- Delete an issue field value from an issue
+- List labels for an issue
+- Add labels to an issue
+- Set labels for an issue
+- Remove all labels from an issue
+- Remove a label from an issue
+- List labels for a repository
+- Create a label
+- Get a label
+- Update a label
+- Delete a label
+- List labels for issues in a milestone
+- List milestones
+- Create a milestone
+- Get a milestone
+- Update a milestone
+- Delete a milestone
+- Get parent issue
+- Remove sub-issue
+- List sub-issues
+- Add sub-issue
+- Reprioritize sub-issue
+- List timeline events for an issue

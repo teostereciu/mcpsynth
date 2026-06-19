@@ -1,0 +1,114 @@
+{
+  "get_taxonomy_categories": {
+    "doc": "eBay Commerce Taxonomy API",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/get_category_tree"
+  },
+  "get_taxonomy_category": {
+    "doc": "eBay Commerce Taxonomy API",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_id}"
+  },
+  "get_taxonomy_aspects": {
+    "doc": "eBay Commerce Taxonomy API",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_id}/aspect_heuristics"
+  },
+  "get_taxonomy_compatibility": {
+    "doc": "eBay Commerce Taxonomy API",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_id}/compatibility"
+  },
+  "search_taxonomy_categories": {
+    "doc": "eBay Commerce Taxonomy API",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/search_categories"
+  },
+  "get_catalog_product": {
+    "doc": "eBay Commerce Catalog API",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}"
+  },
+  "search_catalog_products": {
+    "doc": "eBay Commerce Catalog API",
+    "endpoint": "GET /commerce/catalog/v1/product/search"
+  },
+  "get_catalog_product_variants": {
+    "doc": "eBay Commerce Catalog API",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}/variants"
+  },
+  "get_catalog_eans": {
+    "doc": "eBay Commerce Catalog API",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}/ean"
+  },
+  "get_catalog_isbns": {
+    "doc": "eBay Commerce Catalog API",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}/isbn"
+  },
+  "get_catalog_upcs": {
+    "doc": "eBay Commerce Catalog API",
+    "endpoint": "GET /commerce/catalog/v1/product/{product_id}/upc"
+  },
+  "get_user_profile": {
+    "doc": "eBay Commerce Identity API",
+    "endpoint": "GET /commerce/identity/v1/user"
+  },
+  "get_user_account": {
+    "doc": "eBay Commerce Identity API",
+    "endpoint": "GET /commerce/identity/v1/user/account"
+  },
+  "get_user_disputes": {
+    "doc": "eBay Commerce Identity API",
+    "endpoint": "GET /commerce/identity/v1/user/disputes"
+  },
+  "upload_media_from_url": {
+    "doc": "eBay Commerce Media API",
+    "endpoint": "POST /commerce/media/v1/upload_url"
+  },
+  "get_media_status": {
+    "doc": "eBay Commerce Media API",
+    "endpoint": "GET /commerce/media/v1/upload_status/{media_id}"
+  },
+  "create_media_repository": {
+    "doc": "eBay Commerce Media API",
+    "endpoint": "POST /commerce/media/v1/media_repository"
+  },
+  "list_media_repositories": {
+    "doc": "eBay Commerce Media API",
+    "endpoint": "GET /commerce/media/v1/media_repository"
+  },
+  "create_webhook_subscription": {
+    "doc": "eBay Commerce Notification API",
+    "endpoint": "POST /commerce/notification/subscription"
+  },
+  "list_webhook_subscriptions": {
+    "doc": "eBay Commerce Notification API",
+    "endpoint": "GET /commerce/notification/subscription"
+  },
+  "get_webhook_subscription": {
+    "doc": "eBay Commerce Notification API",
+    "endpoint": "GET /commerce/notification/subscription/{subscription_id}"
+  },
+  "delete_webhook_subscription": {
+    "doc": "eBay Commerce Notification API",
+    "endpoint": "DELETE /commerce/notification/subscription/{subscription_id}"
+  },
+  "get_notification_events": {
+    "doc": "eBay Commerce Notification API",
+    "endpoint": "GET /commerce/notification/subscription/{subscription_id}/event"
+  },
+  "get_charity_organizations": {
+    "doc": "eBay Commerce Charity API",
+    "endpoint": "GET /commerce/charity/v1/organization"
+  },
+  "get_charity_campaigns": {
+    "doc": "eBay Commerce Charity API",
+    "endpoint": "GET /commerce/charity/v1/organization/{organization_id}/campaign"
+  },
+  "create_charity_donation": {
+    "doc": "eBay Commerce Charity API",
+    "endpoint": "POST /commerce/charity/v1/donation"
+  },
+  "translate_text": {
+    "doc": "eBay Commerce Translation API",
+    "endpoint": "POST /commerce/translation/v1/translate"
+  },
+  "detect_language": {
+    "doc": "eBay Commerce Translation API",
+    "endpoint": "POST /commerce/translation/v1/detect"
+  }
+}

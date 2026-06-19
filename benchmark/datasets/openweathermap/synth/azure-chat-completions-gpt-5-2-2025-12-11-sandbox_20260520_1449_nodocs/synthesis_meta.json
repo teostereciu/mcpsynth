@@ -1,0 +1,12 @@
+{
+  "dataset": "openweathermap",
+  "model": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 54.21325492858887,
+  "token_usage": {
+    "input_tokens": 13289,
+    "output_tokens": 3207
+  },
+  "cost_estimate": null,
+  "timestamp": "20260520_1449"
+}

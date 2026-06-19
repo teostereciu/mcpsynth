@@ -1,0 +1,12 @@
+{
+  "dataset": "notion",
+  "model": "gcp-chat-completions-anthropic-claude-haiku-4.5-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 1039.7889852523804,
+  "token_usage": {
+    "input_tokens": 2879811,
+    "output_tokens": 30501
+  },
+  "cost_estimate": null,
+  "timestamp": "20260615_1358"
+}

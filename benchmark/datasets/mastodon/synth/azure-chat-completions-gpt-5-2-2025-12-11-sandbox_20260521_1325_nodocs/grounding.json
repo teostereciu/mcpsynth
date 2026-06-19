@@ -1,0 +1,150 @@
+{
+  "statuses_create_status": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "statuses_get_status": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/statuses/{id}"
+  },
+  "statuses_delete_status": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /api/v1/statuses/{id}"
+  },
+  "statuses_reblog_status": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/statuses/{id}/reblog"
+  },
+  "statuses_unreblog_status": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unreblog"
+  },
+  "statuses_favourite_status": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/statuses/{id}/favourite"
+  },
+  "statuses_unfavourite_status": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unfavourite"
+  },
+  "statuses_get_status_context": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/statuses/{id}/context"
+  },
+  "accounts_verify_credentials": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "accounts_get_account": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/accounts/{id}"
+  },
+  "accounts_follow_account": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/accounts/{id}/follow"
+  },
+  "accounts_unfollow_account": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/accounts/{id}/unfollow"
+  },
+  "accounts_get_followers": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/accounts/{id}/followers"
+  },
+  "accounts_get_following": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/accounts/{id}/following"
+  },
+  "timelines_get_home_timeline": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "timelines_get_public_timeline": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "timelines_get_hashtag_timeline": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/timelines/tag/{hashtag}"
+  },
+  "timelines_get_list_timeline": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/timelines/list/{list_id}"
+  },
+  "notifications_list_notifications": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "notifications_get_notification": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/notifications/{id}"
+  },
+  "notifications_dismiss_notification": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/notifications/dismiss"
+  },
+  "notifications_clear_notifications": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "search_search": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/search"
+  },
+  "lists_list_lists": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "lists_get_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/lists/{id}"
+  },
+  "lists_create_list": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "lists_update_list": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /api/v1/lists/{id}"
+  },
+  "lists_delete_list": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /api/v1/lists/{id}"
+  },
+  "lists_add_accounts_to_list": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/lists/{id}/accounts"
+  },
+  "lists_remove_accounts_from_list": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /api/v1/lists/{id}/accounts"
+  },
+  "lists_get_list_accounts": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/lists/{id}/accounts"
+  },
+  "bookmarks_list_bookmarks": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "bookmarks_bookmark_status": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/statuses/{id}/bookmark"
+  },
+  "bookmarks_unbookmark_status": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v1/statuses/{id}/unbookmark"
+  },
+  "favourites_list_favourites": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "media_upload_media": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v2/media"
+  },
+  "instance_get_instance_info": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/instance"
+  }
+}

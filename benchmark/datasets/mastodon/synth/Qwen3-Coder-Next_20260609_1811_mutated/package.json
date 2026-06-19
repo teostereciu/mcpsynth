@@ -1,0 +1,14 @@
+{
+  "name": "mastodon-mcp",
+  "version": "1.0.0",
+  "description": "Mastodon API MCP Server - A Model Context Protocol server implementing the Mastodon REST API",
+  "main": "server.py",
+  "scripts": {
+    "start": "python3 server.py",
+    "validate": "python3 validate.py"
+  },
+  "dependencies": {
+    "fastmcp": "3.2.4",
+    "requests": "2.32.3"
+  }
+}

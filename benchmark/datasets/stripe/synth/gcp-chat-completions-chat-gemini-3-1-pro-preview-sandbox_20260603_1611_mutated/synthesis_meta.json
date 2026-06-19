@@ -1,0 +1,12 @@
+{
+  "dataset": "stripe",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 197.79006433486938,
+  "token_usage": {
+    "input_tokens": 236442,
+    "output_tokens": 8388
+  },
+  "cost_estimate": null,
+  "timestamp": "20260603_1611"
+}

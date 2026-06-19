@@ -1,0 +1,54 @@
+{
+  "time_series_daily": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY"
+  },
+  "time_series_intraday": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=TIME_SERIES_INTRADAY"
+  },
+  "quote": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=GLOBAL_QUOTE"
+  },
+  "symbol_search": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET /query?function=SYMBOL_SEARCH"
+  },
+  "fx_exchange_rate": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET /query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "company_overview": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=OVERVIEW"
+  },
+  "income_statement": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=INCOME_STATEMENT"
+  },
+  "balance_sheet": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=BALANCE_SHEET"
+  },
+  "earnings": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET /query?function=EARNINGS"
+  },
+  "cpi": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=CPI"
+  },
+  "unemployment": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=UNEMPLOYMENT"
+  },
+  "treasury_yield": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET /query?function=TREASURY_YIELD"
+  },
+  "sector_performance": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET /query?function=SECTOR"
+  }
+}

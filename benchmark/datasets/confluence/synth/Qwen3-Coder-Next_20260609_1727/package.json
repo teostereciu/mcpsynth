@@ -1,0 +1,39 @@
+{
+  "name": "confluence-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Confluence Cloud API",
+  "main": "main.py",
+  "scripts": {
+    "start": "uvicorn main:app --host 0.0.0.0 --port 8000",
+    "dev": "uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "lint": "flake8 server.py main.py",
+    "format": "black server.py main.py",
+    "test": "pytest"
+  },
+  "dependencies": {
+    "fastapi": ">=0.104.0",
+    "uvicorn": ">=0.24.0",
+    "httpx": ">=0.25.0",
+    "pydantic": ">=2.5.0",
+    "python-dotenv": ">=1.0.0"
+  },
+  "dev_dependencies": {
+    "flake8": ">=6.1.0",
+    "black": ">=23.11.0",
+    "pytest": ">=7.4.3",
+    "mypy": ">=1.7.1"
+  },
+  "keywords": [
+    "confluence",
+    "mcp",
+    "rest-api",
+    "atlassian"
+  ],
+  "author": "Confluence MCP Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/confluence-mcp-server.git"
+  },
+  "python_requires": ">=3.8"
+}

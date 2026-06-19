@@ -1,0 +1,14 @@
+{
+  "dataset": "openweathermap",
+  "model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+  "condition": "docs",
+  "synthesis_time": 83.95997452735901,
+  "token_usage": {
+    "input_tokens": 146875,
+    "output_tokens": 13314
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1212",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 14
+}

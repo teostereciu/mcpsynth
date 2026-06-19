@@ -1,0 +1,14 @@
+{
+  "dataset": "ebay_commerce",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "docs",
+  "synthesis_time": 189.11275053024292,
+  "token_usage": {
+    "input_tokens": 980226,
+    "output_tokens": 11933
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1502",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 35
+}

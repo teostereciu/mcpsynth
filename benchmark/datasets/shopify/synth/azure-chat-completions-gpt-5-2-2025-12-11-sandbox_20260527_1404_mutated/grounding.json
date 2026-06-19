@@ -1,0 +1,206 @@
+{
+  "create_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "POST /products.json"
+  },
+  "list_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products.json"
+  },
+  "get_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products/{product_id}.json"
+  },
+  "count_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products/count.json"
+  },
+  "update_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "PUT /products/{product_id}.json"
+  },
+  "delete_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "DELETE /products/{product_id}.json"
+  },
+  "create_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "POST /products/{product_id}/variants.json"
+  },
+  "list_variants": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /products/{product_id}/variants.json"
+  },
+  "count_variants": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /products/{product_id}/variants/count.json"
+  },
+  "get_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /variants/{variant_id}.json"
+  },
+  "update_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "PUT /variants/{variant_id}.json"
+  },
+  "delete_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "DELETE /products/{product_id}/variants/{variant_id}.json"
+  },
+  "create_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders.json"
+  },
+  "list_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /orders.json"
+  },
+  "get_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /orders/{order_id}.json"
+  },
+  "count_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /orders/count.json"
+  },
+  "update_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "PUT /orders/{order_id}.json"
+  },
+  "delete_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "DELETE /orders/{order_id}.json"
+  },
+  "cancel_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders/{order_id}/cancel.json"
+  },
+  "close_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders/{order_id}/close.json"
+  },
+  "open_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders/{order_id}/open.json"
+  },
+  "create_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /customers.json"
+  },
+  "list_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers.json"
+  },
+  "get_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers/{customer_id}.json"
+  },
+  "count_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers/count.json"
+  },
+  "search_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers/search.json"
+  },
+  "update_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "PUT /customers/{customer_id}.json"
+  },
+  "customer_orders": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers/{customer_id}/orders.json"
+  },
+  "create_customer_account_activation_url": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /customers/{customer_id}/account_activation_url.json"
+  },
+  "send_customer_invite": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /customers/{customer_id}/send_invite.json"
+  },
+  "list_inventory_levels": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "GET /inventory_levels.json"
+  },
+  "adjust_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /inventory_levels/adjust.json"
+  },
+  "set_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /inventory_levels/set.json"
+  },
+  "connect_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /inventory_levels/connect.json"
+  },
+  "delete_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "DELETE /inventory_levels.json"
+  },
+  "list_locations": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations.json"
+  },
+  "get_location": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations/{location_id}.json"
+  },
+  "location_inventory_levels": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations/{location_id}/inventory_levels.json"
+  },
+  "count_locations": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations/count.json"
+  },
+  "create_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "POST /webhooks.json"
+  },
+  "list_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /webhooks.json"
+  },
+  "get_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /webhooks/{webhook_id}.json"
+  },
+  "count_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /webhooks/count.json"
+  },
+  "update_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "PUT /webhooks/{webhook_id}.json"
+  },
+  "delete_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "DELETE /webhooks/{webhook_id}.json"
+  },
+  "create_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "POST /{resource}/{resource_id}/metafields.json"
+  },
+  "list_metafields": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /{resource}/{resource_id}/metafields.json"
+  },
+  "get_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /{resource}/{resource_id}/metafields/{metafield_id}.json"
+  },
+  "count_metafields": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /{resource}/{resource_id}/metafields/count.json"
+  },
+  "update_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "PUT /{resource}/{resource_id}/metafields/{metafield_id}.json"
+  },
+  "delete_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "DELETE /{resource}/{resource_id}/metafields/{metafield_id}.json"
+  }
+}

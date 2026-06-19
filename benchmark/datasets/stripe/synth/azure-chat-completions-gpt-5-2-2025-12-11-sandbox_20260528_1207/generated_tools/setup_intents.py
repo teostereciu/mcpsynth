@@ -1,0 +1,195 @@
+from typing import Any, Dict, Optional, List
+
+from .http_client import stripe_request
+
+
+def create_setup_intent(
+    *,
+    customer: Optional[str] = None,
+    customer_account: Optional[str] = None,
+    payment_method: Optional[str] = None,
+    usage: Optional[str] = None,
+    confirm: Optional[bool] = None,
+    description: Optional[str] = None,
+    metadata: Optional[Dict[str, str]] = None,
+    automatic_payment_methods: Optional[Dict[str, Any]] = None,
+    payment_method_types: Optional[List[str]] = None,
+    return_url: Optional[str] = None,
+    payment_method_data: Optional[Dict[str, Any]] = None,
+    payment_method_options: Optional[Dict[str, Any]] = None,
+    mandate_data: Optional[Dict[str, Any]] = None,
+    use_stripe_sdk: Optional[bool] = None,
+    extra_params: Optional[Dict[str, Any]] = None,
+    stripe_account: Optional[str] = None,
+    idempotency_key: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
+    if customer is not None:
+        params["customer"] = customer
+    if customer_account is not None:
+        params["customer_account"] = customer_account
+    if payment_method is not None:
+        params["payment_method"] = payment_method
+    if usage is not None:
+        params["usage"] = usage
+    if confirm is not None:
+        params["confirm"] = confirm
+    if description is not None:
+        params["description"] = description
+    if metadata is not None:
+        params["metadata"] = metadata
+    if automatic_payment_methods is not None:
+        params["automatic_payment_methods"] = automatic_payment_methods
+    if payment_method_types is not None:
+        params["payment_method_types"] = payment_method_types
+    if return_url is not None:
+        params["return_url"] = return_url
+    if payment_method_data is not None:
+        params["payment_method_data"] = payment_method_data
+    if payment_method_options is not None:
+        params["payment_method_options"] = payment_method_options
+    if mandate_data is not None:
+        params["mandate_data"] = mandate_data
+    if use_stripe_sdk is not None:
+        params["use_stripe_sdk"] = use_stripe_sdk
+    if extra_params:
+        params.update(extra_params)
+
+    return stripe_request(
+        "POST",
+        "/v1/setup_intents",
+        params=params,
+        stripe_account=stripe_account,
+        idempotency_key=idempotency_key,
+    )
+
+
+def retrieve_setup_intent(setup_intent_id: str, *, stripe_account: Optional[str] = None) -> Dict[str, Any]:
+    return stripe_request("GET", f"/v1/setup_intents/{setup_intent_id}", stripe_account=stripe_account)
+
+
+def update_setup_intent(
+    setup_intent_id: str,
+    *,
+    customer: Optional[str] = None,
+    customer_account: Optional[str] = None,
+    payment_method: Optional[str] = None,
+    description: Optional[str] = None,
+    metadata: Optional[Dict[str, str]] = None,
+    payment_method_types: Optional[List[str]] = None,
+    payment_method_data: Optional[Dict[str, Any]] = None,
+    payment_method_options: Optional[Dict[str, Any]] = None,
+    automatic_payment_methods: Optional[Dict[str, Any]] = None,
+    extra_params: Optional[Dict[str, Any]] = None,
+    stripe_account: Optional[str] = None,
+    idempotency_key: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
+    if customer is not None:
+        params["customer"] = customer
+    if customer_account is not None:
+        params["customer_account"] = customer_account
+    if payment_method is not None:
+        params["payment_method"] = payment_method
+    if description is not None:
+        params["description"] = description
+    if metadata is not None:
+        params["metadata"] = metadata
+    if payment_method_types is not None:
+        params["payment_method_types"] = payment_method_types
+    if payment_method_data is not None:
+        params["payment_method_data"] = payment_method_data
+    if payment_method_options is not None:
+        params["payment_method_options"] = payment_method_options
+    if automatic_payment_methods is not None:
+        params["automatic_payment_methods"] = automatic_payment_methods
+    if extra_params:
+        params.update(extra_params)
+
+    return stripe_request(
+        "POST",
+        f"/v1/setup_intents/{setup_intent_id}",
+        params=params,
+        stripe_account=stripe_account,
+        idempotency_key=idempotency_key,
+    )
+
+
+def confirm_setup_intent(
+    setup_intent_id: str,
+    *,
+    payment_method: Optional[str] = None,
+    return_url: Optional[str] = None,
+    mandate_data: Optional[Dict[str, Any]] = None,
+    payment_method_data: Optional[Dict[str, Any]] = None,
+    use_stripe_sdk: Optional[bool] = None,
+    extra_params: Optional[Dict[str, Any]] = None,
+    stripe_account: Optional[str] = None,
+    idempotency_key: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
+    if payment_method is not None:
+        params["payment_method"] = payment_method
+    if return_url is not None:
+        params["return_url"] = return_url
+    if mandate_data is not None:
+        params["mandate_data"] = mandate_data
+    if payment_method_data is not None:
+        params["payment_method_data"] = payment_method_data
+    if use_stripe_sdk is not None:
+        params["use_stripe_sdk"] = use_stripe_sdk
+    if extra_params:
+        params.update(extra_params)
+
+    return stripe_request(
+        "POST",
+        f"/v1/setup_intents/{setup_intent_id}/confirm",
+        params=params,
+        stripe_account=stripe_account,
+        idempotency_key=idempotency_key,
+    )
+
+
+def cancel_setup_intent(
+    setup_intent_id: str,
+    *,
+    cancellation_reason: Optional[str] = None,
+    extra_params: Optional[Dict[str, Any]] = None,
+    stripe_account: Optional[str] = None,
+    idempotency_key: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {}
+    if cancellation_reason is not None:
+        params["cancellation_reason"] = cancellation_reason
+    if extra_params:
+        params.update(extra_params)
+
+    return stripe_request(
+        "POST",
+        f"/v1/setup_intents/{setup_intent_id}/cancel",
+        params=params,
+        stripe_account=stripe_account,
+        idempotency_key=idempotency_key,
+    )
+
+
+def list_setup_intents(
+    *,
+    customer: Optional[str] = None,
+    limit: int = 10,
+    starting_after: Optional[str] = None,
+    ending_before: Optional[str] = None,
+    extra_params: Optional[Dict[str, Any]] = None,
+    stripe_account: Optional[str] = None,
+) -> Dict[str, Any]:
+    params: Dict[str, Any] = {"limit": limit}
+    if customer is not None:
+        params["customer"] = customer
+    if starting_after is not None:
+        params["starting_after"] = starting_after
+    if ending_before is not None:
+        params["ending_before"] = ending_before
+    if extra_params:
+        params.update(extra_params)
+
+    return stripe_request("GET", "/v1/setup_intents", params=params, stripe_account=stripe_account)

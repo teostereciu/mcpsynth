@@ -1,0 +1,214 @@
+{
+  "send_message": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "POST /messages"
+  },
+  "get_messages": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "GET /messages"
+  },
+  "edit_message": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "get_message_history": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "GET /messages/{message_id}/history"
+  },
+  "add_reaction": {
+    "doc": "docs/api_reactions.md",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "docs/api_reactions.md",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "add_flag": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "POST /messages/flags"
+  },
+  "remove_flag": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "POST /messages/flags/remove"
+  },
+  "move_message": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "list_streams": {
+    "doc": "docs/api_streams.md",
+    "endpoint": "GET /streams"
+  },
+  "get_stream_by_id": {
+    "doc": "docs/api_streams.md",
+    "endpoint": "GET /streams/{stream_id}"
+  },
+  "create_stream": {
+    "doc": "docs/api_streams.md",
+    "endpoint": "POST /streams"
+  },
+  "update_stream": {
+    "doc": "docs/api_streams.md",
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "archive_stream": {
+    "doc": "docs/api_streams.md",
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "subscribe_to_stream": {
+    "doc": "docs/api_subscriptions.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "unsubscribe_from_stream": {
+    "doc": "docs/api_subscriptions.md",
+    "endpoint": "DELETE /users/me/subscriptions"
+  },
+  "get_stream_topics": {
+    "doc": "docs/api_streams.md",
+    "endpoint": "GET /streams/{stream_id}/topics"
+  },
+  "rename_topic": {
+    "doc": "docs/api_topics.md",
+    "endpoint": "PATCH /topics/{topic_name}"
+  },
+  "delete_topic": {
+    "doc": "docs/api_topics.md",
+    "endpoint": "DELETE /topics/{topic_name}"
+  },
+  "resolve_topic": {
+    "doc": "docs/api_topics.md",
+    "endpoint": "PATCH /topics/{topic_name}"
+  },
+  "unresolve_topic": {
+    "doc": "docs/api_topics.md",
+    "endpoint": "PATCH /topics/{topic_name}"
+  },
+  "get_user_profile": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "list_users": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /users"
+  },
+  "get_user_presence": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /users/{user_id}/presence"
+  },
+  "update_user_status": {
+    "doc": "docs/api_users.md",
+    "endpoint": "POST /users/me/status"
+  },
+  "get_user_by_email": {
+    "doc": "docs/api_users.md",
+    "endpoint": "GET /users/by_email"
+  },
+  "create_user": {
+    "doc": "docs/api_users.md",
+    "endpoint": "POST /users"
+  },
+  "deactivate_user": {
+    "doc": "docs/api_users.md",
+    "endpoint": "DELETE /users/{user_id}"
+  },
+  "schedule_message": {
+    "doc": "docs/api_scheduled_messages.md",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "list_scheduled_messages": {
+    "doc": "docs/api_scheduled_messages.md",
+    "endpoint": "GET /scheduled_messages"
+  },
+  "edit_scheduled_message": {
+    "doc": "docs/api_scheduled_messages.md",
+    "endpoint": "PATCH /scheduled_messages/{scheduled_message_id}"
+  },
+  "delete_scheduled_message": {
+    "doc": "docs/api_scheduled_messages.md",
+    "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"
+  },
+  "create_draft": {
+    "doc": "docs/api_drafts.md",
+    "endpoint": "POST /drafts"
+  },
+  "list_drafts": {
+    "doc": "docs/api_drafts.md",
+    "endpoint": "GET /drafts"
+  },
+  "edit_draft": {
+    "doc": "docs/api_drafts.md",
+    "endpoint": "PATCH /drafts/{draft_id}"
+  },
+  "delete_draft": {
+    "doc": "docs/api_drafts.md",
+    "endpoint": "DELETE /drafts/{draft_id}"
+  },
+  "upload_file": {
+    "doc": "docs/api_file_uploads.md",
+    "endpoint": "POST /user_uploads"
+  },
+  "search_messages": {
+    "doc": "docs/api_search.md",
+    "endpoint": "GET /search_messages"
+  },
+  "list_emoji": {
+    "doc": "docs/api_emoji.md",
+    "endpoint": "GET /emoji"
+  },
+  "get_organization_info": {
+    "doc": "docs/api_organization.md",
+    "endpoint": "GET /server_settings"
+  },
+  "get_user_groups": {
+    "doc": "docs/api_user_groups.md",
+    "endpoint": "GET /user_groups"
+  },
+  "create_user_group": {
+    "doc": "docs/api_user_groups.md",
+    "endpoint": "POST /user_groups"
+  },
+  "update_user_group": {
+    "doc": "docs/api_user_groups.md",
+    "endpoint": "PATCH /user_groups/{group_id}"
+  },
+  "delete_user_group": {
+    "doc": "docs/api_user_groups.md",
+    "endpoint": "DELETE /user_groups/{group_id}"
+  },
+  "add_user_to_group": {
+    "doc": "docs/api_user_groups.md",
+    "endpoint": "POST /user_groups/{group_id}/members"
+  },
+  "remove_user_from_group": {
+    "doc": "docs/api_user_groups.md",
+    "endpoint": "DELETE /user_groups/{group_id}/members/{user_id}"
+  },
+  "get_subscriptions": {
+    "doc": "docs/api_subscriptions.md",
+    "endpoint": "GET /users/me/subscriptions"
+  },
+  "update_subscription_settings": {
+    "doc": "docs/api_subscriptions.md",
+    "endpoint": "PATCH /users/me/subscriptions/properties"
+  },
+  "get_narrow_messages": {
+    "doc": "docs/api_messages.md",
+    "endpoint": "GET /messages"
+  },
+  "mute_topic": {
+    "doc": "docs/api_muting.md",
+    "endpoint": "PATCH /user_topics"
+  },
+  "unmute_topic": {
+    "doc": "docs/api_muting.md",
+    "endpoint": "PATCH /user_topics"
+  },
+  "set_typing_status": {
+    "doc": "docs/api_typing.md",
+    "endpoint": "POST /typing"
+  }
+}

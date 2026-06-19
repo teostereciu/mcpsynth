@@ -1,0 +1,43 @@
+{
+  "source": "Spoonacular Food API (spoonacular.com/food-api/docs)",
+  "scraped_from": "https://spoonacular.com/food-api/docs",
+  "scrape_date": "2026-05-12T11:38:48.509123",
+  "total_pages": 7,
+  "files": [
+    {
+      "filename": "api_recipes.md",
+      "title": "Recipes",
+      "url": "https://spoonacular.com/food-api/docs#Recipes"
+    },
+    {
+      "filename": "api_ingredients.md",
+      "title": "Ingredients",
+      "url": "https://spoonacular.com/food-api/docs#Ingredients"
+    },
+    {
+      "filename": "api_products.md",
+      "title": "Products",
+      "url": "https://spoonacular.com/food-api/docs#Products"
+    },
+    {
+      "filename": "api_menu_items.md",
+      "title": "Menu Items",
+      "url": "https://spoonacular.com/food-api/docs#Menu-Items"
+    },
+    {
+      "filename": "api_meal_planning.md",
+      "title": "Meal Planning",
+      "url": "https://spoonacular.com/food-api/docs#Meal-Planning"
+    },
+    {
+      "filename": "api_wine.md",
+      "title": "Wine",
+      "url": "https://spoonacular.com/food-api/docs#Wine"
+    },
+    {
+      "filename": "api_misc.md",
+      "title": "Misc",
+      "url": "https://spoonacular.com/food-api/docs#Misc"
+    }
+  ]
+}

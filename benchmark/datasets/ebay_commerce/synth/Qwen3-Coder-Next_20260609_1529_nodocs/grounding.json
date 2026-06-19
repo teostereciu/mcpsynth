@@ -1,0 +1,126 @@
+{
+  "get_taxonomy_categories": {
+    "doc": "docs/taxonomy/get-categories.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree"
+  },
+  "get_category_mapping": {
+    "doc": "docs/taxonomy/get-category-mapping.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_mapping"
+  },
+  "get_category_aspects": {
+    "doc": "docs/taxonomy/get-category-aspects.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryId}/aspect_hints"
+  },
+  "get_compatibility_properties": {
+    "doc": "docs/taxonomy/get-compatibility.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{categoryId}/compatibility_properties"
+  },
+  "get_catalog_product": {
+    "doc": "docs/catalog/get-product.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/{productId}"
+  },
+  "search_catalog_products": {
+    "doc": "docs/catalog/search-products.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/search"
+  },
+  "get_product_recommendations": {
+    "doc": "docs/catalog/get-recommendations.md",
+    "endpoint": "POST /commerce/catalog/v1_beta/product/recommendation"
+  },
+  "get_upc_recommended_product": {
+    "doc": "docs/catalog/get-upc-recommendation.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/recommendation/upc/{upc}"
+  },
+  "get_user_profile": {
+    "doc": "docs/identity/get-profile.md",
+    "endpoint": "GET /commerce/identity/v1/user/profile"
+  },
+  "get_user_account": {
+    "doc": "docs/identity/get-account.md",
+    "endpoint": "GET /commerce/identity/v1/user/account"
+  },
+  "upload_media": {
+    "doc": "docs/media/upload-media.md",
+    "endpoint": "POST /commerce/media/v1_beta/upload_media"
+  },
+  "get_media_status": {
+    "doc": "docs/media/get-upload-status.md",
+    "endpoint": "GET /commerce/media/v1_beta/upload_status"
+  },
+  "list_webhook_subscriptions": {
+    "doc": "docs/notification/list-subscriptions.md",
+    "endpoint": "GET /commerce/notification/v1_beta/subscription"
+  },
+  "create_webhook_subscription": {
+    "doc": "docs/notification/create-subscription.md",
+    "endpoint": "POST /commerce/notification/v1_beta/subscription"
+  },
+  "delete_webhook_subscription": {
+    "doc": "docs/notification/delete-subscription.md",
+    "endpoint": "DELETE /commerce/notification/v1_beta/subscription/{subscriptionId}"
+  },
+  "list_webhook_events": {
+    "doc": "docs/notification/list-events.md",
+    "endpoint": "GET /commerce/notification/v1_beta/subscription/{subscriptionId}/event"
+  },
+  "translate_text": {
+    "doc": "docs/translation/translate.md",
+    "endpoint": "POST /commerce/translation/v1_beta/translate"
+  },
+  "get_translation_supported_languages": {
+    "doc": "docs/translation/get-languages.md",
+    "endpoint": "GET /commerce/translation/v1_beta/supported_languages"
+  },
+  "search_charity_organizations": {
+    "doc": "docs/charity/search-charities.md",
+    "endpoint": "GET /commerce/charity/v1_beta/organization/search"
+  },
+  "get_charity_organization": {
+    "doc": "docs/charity/get-charity.md",
+    "endpoint": "GET /commerce/charity/v1_beta/organization/{organizationId}"
+  },
+  "create_charity_donor_record": {
+    "doc": "docs/charity/create-donor.md",
+    "endpoint": "POST /commerce/charity/v1_beta/donor_record"
+  },
+  "get_charity_donor_records": {
+    "doc": "docs/charity/list-donors.md",
+    "endpoint": "GET /commerce/charity/v1_beta/donor_record"
+  },
+  "create_item": {
+    "doc": "docs/sell/create-item.md",
+    "endpoint": "POST /sell/inventory/v1_beta/item"
+  },
+  "get_item": {
+    "doc": "docs/sell/get-item.md",
+    "endpoint": "GET /sell/inventory/v1_beta/item/{itemId}"
+  },
+  "update_item": {
+    "doc": "docs/sell/update-item.md",
+    "endpoint": "PUT /sell/inventory/v1_beta/item/{itemId}"
+  },
+  "delete_item": {
+    "doc": "docs/sell/delete-item.md",
+    "endpoint": "DELETE /sell/inventory/v1_beta/item/{itemId}"
+  },
+  "list_items": {
+    "doc": "docs/sell/list-items.md",
+    "endpoint": "GET /sell/inventory/v1_beta/item"
+  },
+  "create_inventory_item": {
+    "doc": "docs/sell/create-inventory.md",
+    "endpoint": "POST /sell/inventory/v1_beta/inventory_item"
+  },
+  "get_inventory_item": {
+    "doc": "docs/sell/get-inventory.md",
+    "endpoint": "GET /sell/inventory/v1_beta/inventory_item/{sku}"
+  },
+  "list_inventory_items": {
+    "doc": "docs/sell/list-inventory.md",
+    "endpoint": "GET /sell/inventory/v1_beta/inventory_item"
+  },
+  "add_inventory_item_location": {
+    "doc": "docs/sell/add-location.md",
+    "endpoint": "PUT /sell/inventory/v1_beta/inventory_item/{sku}/location/{locationId}"
+  }
+}

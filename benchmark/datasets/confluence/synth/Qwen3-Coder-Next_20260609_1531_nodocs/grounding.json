@@ -1,0 +1,150 @@
+{
+  "get_space": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/rest/api/space/{spaceKey}"
+  },
+  "list_spaces": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/rest/api/space"
+  },
+  "create_space": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/rest/api/space"
+  },
+  "delete_space": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "DELETE /wiki/rest/api/space/{spaceKey}"
+  },
+  "get_page": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages/{id}"
+  },
+  "create_page": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/pages"
+  },
+  "update_page": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "PUT /wiki/api/v2/pages/{id}"
+  },
+  "delete_page": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "DELETE /wiki/api/v2/pages/{id}"
+  },
+  "get_page_children": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/children/{type}"
+  },
+  "move_page": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/pages/move"
+  },
+  "get_page_by_title": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages"
+  },
+  "create_blog_post": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/pages"
+  },
+  "get_blog_post": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages/{id}"
+  },
+  "update_blog_post": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "PUT /wiki/api/v2/pages/{id}"
+  },
+  "delete_blog_post": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "DELETE /wiki/api/v2/pages/{id}"
+  },
+  "add_comment": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/pages/{id}/comments"
+  },
+  "get_comments": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/comments"
+  },
+  "get_inline_comments": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/comments/inline"
+  },
+  "update_comment": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "PUT /wiki/api/v2/comments/{id}"
+  },
+  "delete_comment": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "DELETE /wiki/api/v2/comments/{id}"
+  },
+  "list_attachments": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/{contentId}/attachments"
+  },
+  "upload_attachment": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/{contentId}/attachments"
+  },
+  "download_attachment": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/attachments/{id}/data"
+  },
+  "delete_attachment": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "DELETE /wiki/api/v2/attachments/{id}"
+  },
+  "add_label": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/{contentId}/labels"
+  },
+  "get_labels": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/{contentId}/labels"
+  },
+  "delete_label": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "DELETE /wiki/api/v2/{contentId}/labels/{labelId}"
+  },
+  "search": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/search"
+  },
+  "get_version": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/versions/{versionId}"
+  },
+  "list_versions": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/versions"
+  },
+  "restore_version": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/pages/{id}/restore"
+  },
+  "get_content_properties": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/{contentId}/properties"
+  },
+  "set_content_property": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "POST /wiki/api/v2/{contentId}/properties"
+  },
+  "update_content_property": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "PUT /wiki/api/v2/{contentId}/properties/{key}"
+  },
+  "delete_content_property": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "DELETE /wiki/api/v2/{contentId}/properties/{key}"
+  },
+  "get_current_user": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/user"
+  },
+  "get_user_by_account_id": {
+    "doc": "Built from Confluence Cloud REST API knowledge",
+    "endpoint": "GET /wiki/api/v2/user"
+  }
+}

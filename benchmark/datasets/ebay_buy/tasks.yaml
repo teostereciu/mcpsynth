@@ -1,0 +1,206 @@
+# Agent evaluation tasks for eBay Buy API MCP server.
+#
+# Required env vars: EBAY_APP_ID, EBAY_CERT_ID
+# EBAY_ENVIRONMENT defaults to SANDBOX
+#
+# See benchmark/TASK_CREATION_GUIDE.md for prompt writing principles,
+# difficulty calibration, and the full checklist.
+#
+# Dataset note: eBay category IDs are provided where needed (domain knowledge
+# not derivable from tools). API surface names and endpoint paths are not given.
+
+tasks:
+  # ---------- SEARCH ----------
+
+  - id: search_products
+    prompt: >
+      Search for "wireless headphones" on eBay. Report the title, price, and
+      item ID of the first 5 results.
+    expected: itemId
+    tags: [read]
+    # Tests: basic search tool; "itemId" verifies the agent extracted the
+    # item identifier, which is needed for downstream item detail calls.
+
+  - id: search_with_filter
+    prompt: >
+      Search for "mechanical keyboard" on eBay. Report only results that are
+      listed as new condition. Report the titles and prices of up to 5 results.
+    expected: condition
+    tags: [read]
+    # Tests: search with condition filter; agent must discover the filter
+    # parameter from tool docs without being told its name.
+
+  - id: search_cheapest
+    prompt: >
+      Search for "USB-C cable" on eBay and find the cheapest listing. Report
+      its title, price, and item ID.
+    expected: itemId
+    tags: [read]
+    # Tests: search with price sort; agent must discover the sort parameter
+    # and apply it to find the minimum-price result.
+
+  - id: browse_by_category
+    prompt: >
+      Browse listings in eBay category 58058 (Cell Phones & Smartphones).
+      Report the titles and prices of the first 5 items.
+    expected: price
+    tags: [read]
+    # Tests: category-scoped browsing; category ID provided as domain knowledge.
+
+  - id: get_item_by_legacy_id
+    prompt: >
+      Search for "Sony headphones" on eBay. Take the first result and use the
+      item group endpoint to retrieve all variations in that item's group.
+      Report the number of variations and the title and price of the first one.
+    expected: itemGroupHref
+    tags: [read, multi-step]
+    # Tests: browse_get_items_by_item_group via itemGroupHref from search result.
+    # In the eBay sandbox legacy item IDs resolve to item groups (error 11006
+    # from get_item_by_legacy_id); get_items_by_item_group is the correct path.
+    # "itemGroupHref" appears in search results for multi-variation listings and
+    # must be extracted to call the group endpoint.
+
+  - id: search_with_price_range
+    prompt: >
+      Search for "laptop" on eBay priced between $200 and $800 USD. Report the
+      titles and prices of the first 5 results.
+    expected: price
+    tags: [read]
+    # Tests: price range filter syntax in Browse search. The agent must discover
+    # the correct filter parameter format from tool docs (no hint provided).
+
+  # ---------- ITEM DETAIL ----------
+
+  - id: search_then_get_item
+    prompt: >
+      Search for "vintage watch" on eBay. Retrieve the full details of the
+      first result. Report the item title, price, condition, return policy,
+      and seller username.
+    expected: condition
+    tags: [read, multi-step]
+    # Tests: search + getItem chain; condition and return policy require
+    # item detail retrieval, not just the search result summary.
+
+  - id: get_item_shipping
+    prompt: >
+      Search for "yoga mat" on eBay. For the first result, retrieve and report
+      the available shipping options and estimated delivery information.
+    expected: shippingOptions
+    tags: [read, multi-step]
+    # Tests: shipping information extraction from item detail response.
+
+  - id: batch_item_lookup
+    prompt: >
+      Search for "bluetooth speaker" on eBay and get the item IDs of the first
+      3 results. Retrieve the full details of each item individually and report
+      the title, price, and seller username for each.
+    expected: seller
+    tags: [read, multi-step]
+    # Tests: search + 3x getItem calls. The batch get_items endpoint (get_items)
+    # returns "Access denied" (error 1100) in the sandbox — it requires an
+    # additional OAuth scope not available with client credentials. Individual
+    # getItem calls work correctly. "seller" only appears in item detail responses,
+    # not in search summaries, confirming the agent made the detail calls.
+
+  # ---------- MULTI-STEP / SYNTHESIS ----------
+
+  - id: get_item_group_variations
+    prompt: >
+      Search for "iPhone case" on eBay. Find a result that belongs to an item
+      group (it will have an itemGroupHref field). Use that href to retrieve all
+      variations in the group. Report how many variations exist and what
+      attributes differ between them (e.g. color, size, material).
+    expected: itemGroupHref
+    tags: [read, multi-step]
+    # Tests: browse_get_items_by_item_group endpoint. Search results include
+    # itemGroupHref for multi-variation listings; the agent must extract the
+    # group ID from the href and call the group lookup tool.
+    # "itemGroupHref" in the search result is the discrimination field — it only
+    # appears for grouped items. The group response has no top-level itemGroupId
+    # field; individual item attributes (color, material) are in each item object.
+
+  - id: compare_item_prices
+    prompt: >
+      Search for "wireless headphones" on eBay. Find the highest-priced and
+      lowest-priced results among all listings returned. Report both titles
+      and prices.
+    expected: price
+    tags: [read, multi-step]
+    # Tests: search + price comparison across multiple results. Requires the
+    # agent to inspect all items rather than returning the first one.
+    # "wireless headphones" has 12 results in sandbox; "running shoes" has 0.
+
+  - id: search_across_categories
+    prompt: >
+      Search for "apple watch" in eBay category 178893 (Smart Watches) and
+      separately in category 14249 (Wristwatches). Report how many results
+      are found in each category.
+    expected: itemId
+    tags: [read, multi-step]
+    # Tests: two category-scoped searches + count comparison. Category IDs
+    # are provided as domain knowledge.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: error_handling_invalid_item
+    prompt: >
+      Try to retrieve item details for the item ID "v1|INVALID_ITEM_999|0".
+      Report what error or response the API returns.
+    expected: error
+    tags: [read, error-handling]
+    # Tests: error response structure; verifies the server returns interpretable
+    # error messages rather than raw HTTP exceptions.
+
+  # ---------- HARDER ----------
+
+  - id: search_sort_and_paginate
+    prompt: >
+      Search for "wireless headphones" on eBay sorted by price ascending.
+      Retrieve the first page of 5 results, then retrieve the next page of 5
+      results (offset 5). Report the item IDs and prices from both pages and
+      confirm that all prices across both pages are in non-decreasing order.
+    expected: price
+    tags: [read, multi-step, harder]
+    # Tests: sort + pagination via offset parameter. Agent must use both limit
+    # and offset in successive calls and compare values across pages.
+    # "wireless headphones" has 12 results in sandbox — enough for two pages.
+    # "gaming mouse" has only 1 result and cannot be paginated.
+
+  - id: search_filter_and_enrich
+    prompt: >
+      Search for "wireless headphones" on eBay filtered to items in new
+      condition. Take the first result and retrieve its full item details.
+      Report the title, seller username, return policy acceptance, and all
+      available shipping option names.
+    expected: seller
+    tags: [read, multi-step, harder]
+    # Tests: filter composition (condition filter) + item enrichment.
+    # Agent must apply the condition filter and then call getItem on the
+    # result — two distinct tool capabilities chained.
+    # "seller" only appears in the item detail response, not search summaries.
+
+  - id: search_offset_deduplication
+    prompt: >
+      Search for "wireless headphones" on eBay with a limit of 4. Then search
+      again with the same query but offset by 4. Confirm that none of the item
+      IDs in the second page appeared in the first page and report all unique
+      item IDs found across both pages.
+    expected: itemId
+    tags: [read, multi-step, harder]
+    # Tests: pagination correctness — agent must call search twice with
+    # different offsets and deduplicate item IDs across results.
+    # "wireless headphones" has 12 results in sandbox — enough for two pages.
+    # "wireless earbuds" has only 1 result and cannot be paginated.
+
+  - id: cheapest_per_category
+    prompt: >
+      Search for "headphones" in eBay category 112529 (Headphones) and in
+      category 15052 (Portable Audio & Headphones). For each category, find
+      the single cheapest listing by sorting by price. Report the cheapest
+      item title and price for each category and which category has the
+      lower minimum price.
+    expected: price
+    tags: [read, multi-step, harder]
+    # Tests: two independent sorted searches + cross-result comparison.
+    # Category IDs provided as domain knowledge. Agent must apply sort
+    # within each category-scoped search.

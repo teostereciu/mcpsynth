@@ -1,0 +1,873 @@
+{
+  "source": "HubSpot API Documentation (developers.hubspot.com)",
+  "scraped_from": "https://developers.hubspot.com/docs/api",
+  "scrape_date": "2026-04-13T00:50:50.395416",
+  "total_pages": 173,
+  "files": [
+    {
+      "filename": "api_overview.md",
+      "title": "2026-03 API reference",
+      "url": "https://developers.hubspot.com/docs/api/overview"
+    },
+    {
+      "filename": "api_crm_contacts.md",
+      "title": "CRM API | Contacts",
+      "url": "https://developers.hubspot.com/docs/api/crm/contacts"
+    },
+    {
+      "filename": "api_crm_companies.md",
+      "title": "CRM API | Companies",
+      "url": "https://developers.hubspot.com/docs/api/crm/companies"
+    },
+    {
+      "filename": "api_crm_deals.md",
+      "title": "CRM API | Deals",
+      "url": "https://developers.hubspot.com/docs/api/crm/deals"
+    },
+    {
+      "filename": "api_crm_line-items.md",
+      "title": "Line items API",
+      "url": "https://developers.hubspot.com/docs/api/crm/line-items"
+    },
+    {
+      "filename": "api_crm_quotes.md",
+      "title": "Legacy quotes",
+      "url": "https://developers.hubspot.com/docs/api/crm/quotes"
+    },
+    {
+      "filename": "api_crm_tickets.md",
+      "title": "CRM API | Tickets",
+      "url": "https://developers.hubspot.com/docs/api/crm/tickets"
+    },
+    {
+      "filename": "api_cms_blog-post.md",
+      "title": "CMS API | Blog Posts",
+      "url": "https://developers.hubspot.com/docs/api/cms/blog-post"
+    },
+    {
+      "filename": "api_conversations_conversations.md",
+      "title": "Conversations API",
+      "url": "https://developers.hubspot.com/docs/api/conversations/conversations"
+    },
+    {
+      "filename": "api_files_files.md",
+      "title": "Files API",
+      "url": "https://developers.hubspot.com/docs/api/files/files"
+    },
+    {
+      "filename": "api_-reference_error-handling.md",
+      "title": "Error handling",
+      "url": "https://developers.hubspot.com/docs/api-reference/error-handling"
+    },
+    {
+      "filename": "api_properties_guide.md",
+      "title": "Properties API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/properties/guide"
+    },
+    {
+      "filename": "api_v3_associate-records.md",
+      "title": "Associate records",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/associations/v3/associate-records"
+    },
+    {
+      "filename": "api_crm_search-the-crm.md",
+      "title": "CRM search",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/search-the-crm"
+    },
+    {
+      "filename": "api_latest_overview.md",
+      "title": "2026-03 API reference",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/overview"
+    },
+    {
+      "filename": "api_contacts_guide.md",
+      "title": "CRM API | Contacts",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/contacts/guide"
+    },
+    {
+      "filename": "api_associate-records_guide.md",
+      "title": "Associate records",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/associations/associate-records/guide"
+    },
+    {
+      "filename": "api_batch_delete-companies.md",
+      "title": "Archive a batch of companies",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/companies/batch/delete-companies"
+    },
+    {
+      "filename": "api_deals_guide.md",
+      "title": "CRM API | Deals",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/deals/guide"
+    },
+    {
+      "filename": "api_crm-products-v3_guide.md",
+      "title": "CRM API | Products",
+      "url": "https://developers.hubspot.com/docs/api-reference/crm-products-v3/guide"
+    },
+    {
+      "filename": "api_crm-quotes-v3_guide.md",
+      "title": "Legacy quotes",
+      "url": "https://developers.hubspot.com/docs/api-reference/crm-quotes-v3/guide"
+    },
+    {
+      "filename": "api_crm-associations-v4_guide.md",
+      "title": "Associate records",
+      "url": "https://developers.hubspot.com/docs/api-reference/crm-associations-v4/guide"
+    },
+    {
+      "filename": "api_crm-properties-v3_guide.md",
+      "title": "Properties API",
+      "url": "https://developers.hubspot.com/docs/api-reference/crm-properties-v3/guide"
+    },
+    {
+      "filename": "api_quotes_guide.md",
+      "title": "Legacy quotes",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/quotes/guide"
+    },
+    {
+      "filename": "api_commerce-payments_guide.md",
+      "title": "Payments API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/commerce-payments/guide"
+    },
+    {
+      "filename": "api_line-items_guide.md",
+      "title": "Line items API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/line-items/guide"
+    },
+    {
+      "filename": "api_products_guide.md",
+      "title": "CRM API | Products",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/products/guide"
+    },
+    {
+      "filename": "api_companies_guide.md",
+      "title": "CRM API | Companies",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/companies/guide"
+    },
+    {
+      "filename": "api_discounts_guide.md",
+      "title": "CRM API | Discounts",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/discounts/guide"
+    },
+    {
+      "filename": "api_fees_guide.md",
+      "title": "CRM API | Fees",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/fees/guide"
+    },
+    {
+      "filename": "api_taxes_guide.md",
+      "title": "CRM API | Taxes",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/taxes/guide"
+    },
+    {
+      "filename": "api_tickets_guide.md",
+      "title": "CRM API | Tickets",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/tickets/guide"
+    },
+    {
+      "filename": "api_authors_guide.md",
+      "title": "CMS API | Blog Authors",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/cms/blogs/authors/guide"
+    },
+    {
+      "filename": "api_conversations_guide.md",
+      "title": "Conversations API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/conversations/guide"
+    },
+    {
+      "filename": "api_actors_get-actor.md",
+      "title": "Get a single actor",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/conversations/conversations/actors/get-actor"
+    },
+    {
+      "filename": "api_messages_get-conversation.md",
+      "title": "Get a single message",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/conversations/conversations/messages/get-conversation"
+    },
+    {
+      "filename": "api_files_guide.md",
+      "title": "Files API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/files/guide"
+    },
+    {
+      "filename": "api_notes_guide.md",
+      "title": "Activities | Notes",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/activities/notes/guide"
+    },
+    {
+      "filename": "api_workflow-actions_custom-code-actions.md",
+      "title": "Workflows | Custom code actions",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/automation/workflow-actions/custom-code-actions"
+    },
+    {
+      "filename": "api_custom-objects_guide.md",
+      "title": "Custom object records API guide",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/custom-objects/guide"
+    },
+    {
+      "filename": "api_contacts_object-definition.md",
+      "title": "Contact object definition",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/contacts/object-definition"
+    },
+    {
+      "filename": "api_companies_object-definition.md",
+      "title": "Company object definition",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/companies/object-definition"
+    },
+    {
+      "filename": "api_deals_object-definition.md",
+      "title": "Deal object definition",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/deals/object-definition"
+    },
+    {
+      "filename": "api_tickets_object-definition.md",
+      "title": "Ticket object definition",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/tickets/object-definition"
+    },
+    {
+      "filename": "api_properties_sensitive-data.md",
+      "title": "Access and manage Sensitive Data",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/properties/sensitive-data"
+    },
+    {
+      "filename": "api_owners_guide.md",
+      "title": "CRM API | Owners",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/owners/guide"
+    },
+    {
+      "filename": "api_associate-records_guide_2.md",
+      "title": "Associate records",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/associations/associate-records/guide"
+    },
+    {
+      "filename": "api_associations-schema_guide.md",
+      "title": "Configure associations",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/associations/associations-schema/guide"
+    },
+    {
+      "filename": "api_user-provisioning_guide.md",
+      "title": "Settings API | User provisioning",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/user-provisioning/guide"
+    },
+    {
+      "filename": "api_feedback-submissions_guide.md",
+      "title": "Survey responses",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/feedback-submissions/guide"
+    },
+    {
+      "filename": "api_invoices_guide.md",
+      "title": "Invoices",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/invoices/guide"
+    },
+    {
+      "filename": "api_orders_guide.md",
+      "title": "CRM API | Orders",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/orders/guide"
+    },
+    {
+      "filename": "api_commerce-subscriptions_guide.md",
+      "title": "Subscriptions API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/commerce-subscriptions/guide"
+    },
+    {
+      "filename": "api_cms-authors-v3_guide.md",
+      "title": "CMS API | Blog Authors",
+      "url": "https://developers.hubspot.com/docs/api-reference/cms-authors-v3/guide"
+    },
+    {
+      "filename": "api_schemas_guide.md",
+      "title": "Schemas API guide",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/schemas/guide"
+    },
+    {
+      "filename": "api_crm_using-object-apis.md",
+      "title": "Using Object APIs",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/using-object-apis"
+    },
+    {
+      "filename": "api_crm_understanding-the-crm.md",
+      "title": "Understanding the CRM APIs",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/understanding-the-crm"
+    },
+    {
+      "filename": "api_imports_guide.md",
+      "title": "CRM API | Imports",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/imports/guide"
+    },
+    {
+      "filename": "api_exports_guide.md",
+      "title": "Exports",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/exports/guide"
+    },
+    {
+      "filename": "api_v3-legacy_submit-data-authenticated.md",
+      "title": "Submit data to a form (supporting authentication)",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/marketing/forms/v3-legacy/submit-data-authenticated"
+    },
+    {
+      "filename": "api_users_guide.md",
+      "title": "Account | Users API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/users/guide"
+    },
+    {
+      "filename": "api_users_guide_2.md",
+      "title": "Account | Users API",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/users/guide"
+    },
+    {
+      "filename": "api_carts_guide.md",
+      "title": "CRM API | Carts",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/carts/guide"
+    },
+    {
+      "filename": "api_tasks_guide.md",
+      "title": "Activities | Tasks",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/activities/tasks/guide"
+    },
+    {
+      "filename": "api_pipelines_guide.md",
+      "title": "CRM API | Pipelines",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/pipelines/guide"
+    },
+    {
+      "filename": "api_v3_guide.md",
+      "title": "Subscriptions preferences v3",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/communication-preferences/v3/guide"
+    },
+    {
+      "filename": "api_account-information_guide.md",
+      "title": "Account information API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/account/account-information/guide"
+    },
+    {
+      "filename": "api_calls_guide.md",
+      "title": "Activities | Calls",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/activities/calls/guide"
+    },
+    {
+      "filename": "api_communications_guide.md",
+      "title": "Engagements | Communications",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/communications/guide"
+    },
+    {
+      "filename": "api_emails_guide.md",
+      "title": "Activities | Email",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/activities/emails/guide"
+    },
+    {
+      "filename": "api_goals_guide.md",
+      "title": "CRM API | Goals",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/goals/guide"
+    },
+    {
+      "filename": "api_leads_guide.md",
+      "title": "CRM API | Leads",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/leads/guide"
+    },
+    {
+      "filename": "api_marketing-events_guide.md",
+      "title": "Marketing events API guide",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/marketing/marketing-events/guide"
+    },
+    {
+      "filename": "api_meetings_guide.md",
+      "title": "Activities | Meetings",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/activities/meetings/guide"
+    },
+    {
+      "filename": "api_postal-mail_guide.md",
+      "title": "Activities | Postal Mail",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/activities/postal-mail/guide"
+    },
+    {
+      "filename": "api_object-library_guide.md",
+      "title": "Object library",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/object-library/guide"
+    },
+    {
+      "filename": "api_associations-schema_guide_2.md",
+      "title": "Configure associations",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/associations/associations-schema/guide"
+    },
+    {
+      "filename": "api_schemas_create-schema.md",
+      "title": "Create a new custom object schema.",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/schemas/create-schema"
+    },
+    {
+      "filename": "api_schemas_get-schema.md",
+      "title": "Retrieve the schema of a specified custom object.",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/schemas/get-schema"
+    },
+    {
+      "filename": "api_define-events_guide.md",
+      "title": "Define custom events",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/events/define-events/guide"
+    },
+    {
+      "filename": "api_imports_get-imports.md",
+      "title": "Retrieve imports",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/imports/get-imports"
+    },
+    {
+      "filename": "api_crm_search-the-crm_2.md",
+      "title": "Search the CRM",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/search-the-crm"
+    },
+    {
+      "filename": "api_owners_guide_2.md",
+      "title": "CRM API | Owners",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/owners/guide"
+    },
+    {
+      "filename": "api_properties_guide_2.md",
+      "title": "CRM API | Properties",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/properties/guide"
+    },
+    {
+      "filename": "api_communication-preferences_guide.md",
+      "title": "API guide",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/communication-preferences/guide"
+    },
+    {
+      "filename": "api_calling-extensions_recordings-and-transcriptions.md",
+      "title": "Call recordings and transcripts",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/extensions/calling-extensions/recordings-and-transcriptions"
+    },
+    {
+      "filename": "api_authentication_manage-oauth-tokens.md",
+      "title": "Manage OAuth access tokens using the v3 APIs",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/authentication/manage-oauth-tokens"
+    },
+    {
+      "filename": "api_marketing-events_create-event.md",
+      "title": "Create an event",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/marketing/marketing-events/create-event"
+    },
+    {
+      "filename": "api_batch_update-postal-mail.md",
+      "title": "Set default association",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/postal-mail/batch/update-postal-mail"
+    },
+    {
+      "filename": "api_property-validations_guide.md",
+      "title": "Property validations API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/property-validations/guide"
+    },
+    {
+      "filename": "api_send-event-data_guide.md",
+      "title": "Send custom event occurrences",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/events/send-event-data/guide"
+    },
+    {
+      "filename": "api_custom-objects_guide_2.md",
+      "title": "Custom object records API guide",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/custom-objects/guide"
+    },
+    {
+      "filename": "api_properties_sensitive-data_2.md",
+      "title": "Access and manage Sensitive Data",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/properties/sensitive-data"
+    },
+    {
+      "filename": "api_brands_guide.md",
+      "title": "Brands API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/account/brands/guide"
+    },
+    {
+      "filename": "api_calls_guide_2.md",
+      "title": "Activities | Calls",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/calls/guide"
+    },
+    {
+      "filename": "api_v1_guide.md",
+      "title": "Manage OAuth access tokens using the v1 APIs",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/authentication/oauth-tokens/v1/guide"
+    },
+    {
+      "filename": "api_crm-property-validations-v3_guide.md",
+      "title": "Property validations API",
+      "url": "https://developers.hubspot.com/docs/api-reference/crm-property-validations-v3/guide"
+    },
+    {
+      "filename": "api_tracking-code_overview.md",
+      "title": "HubSpot tracking code API",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/overview"
+    },
+    {
+      "filename": "api_media-bridge_guide.md",
+      "title": "CMS API | Media Bridge",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/cms/media-bridge/guide"
+    },
+    {
+      "filename": "api_schemas_guide_2.md",
+      "title": "Schemas API guide",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/schemas/guide"
+    },
+    {
+      "filename": "api_crm_using-object-apis_2.md",
+      "title": "Using Object APIs",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/using-object-apis"
+    },
+    {
+      "filename": "api_contacts_guide_2.md",
+      "title": "CRM API | Contacts",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/contacts/guide"
+    },
+    {
+      "filename": "api_companies_guide_2.md",
+      "title": "CRM API | Companies",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/companies/guide"
+    },
+    {
+      "filename": "api_deals_guide_2.md",
+      "title": "CRM API | Deals",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/deals/guide"
+    },
+    {
+      "filename": "api_tickets_guide_2.md",
+      "title": "CRM API | Tickets",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/tickets/guide"
+    },
+    {
+      "filename": "api_imports_guide_2.md",
+      "title": "CRM API | Imports",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/imports/guide"
+    },
+    {
+      "filename": "api_exports_guide_2.md",
+      "title": "Exports",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/exports/guide"
+    },
+    {
+      "filename": "api_brands_get-brands.md",
+      "title": "Retrieve brands by associated user",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/account/brands/get-brands"
+    },
+    {
+      "filename": "api_communications_guide_2.md",
+      "title": "Engagements | Communications",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/communications/guide"
+    },
+    {
+      "filename": "api_batch_create-calls.md",
+      "title": "Create calls",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/calls/batch/create-calls"
+    },
+    {
+      "filename": "api_batch_get-calls.md",
+      "title": "Retrieve calls",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/calls/batch/get-calls"
+    },
+    {
+      "filename": "api_batch_update-calls.md",
+      "title": "Update calls",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/calls/batch/update-calls"
+    },
+    {
+      "filename": "api_calls_delete-call.md",
+      "title": "Archive a call",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/calls/delete-call"
+    },
+    {
+      "filename": "api_tracking-code_identify.md",
+      "title": "Identify a visitor",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/identify"
+    },
+    {
+      "filename": "api_tracking-code_track-event.md",
+      "title": "Track a behavioral event",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/track-event"
+    },
+    {
+      "filename": "api_tracking-code_track-page-view.md",
+      "title": "Track a page view",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/track-page-view"
+    },
+    {
+      "filename": "api_tracking-code_set-path.md",
+      "title": "Set the current page path",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/set-path"
+    },
+    {
+      "filename": "api_tracking-code_add-privacy-consent-listener.md",
+      "title": "Add privacy consent listener",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/add-privacy-consent-listener"
+    },
+    {
+      "filename": "api_tracking-code_revoke-cookie-consent.md",
+      "title": "Revoke cookie consent",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/revoke-cookie-consent"
+    },
+    {
+      "filename": "api_tracking-code_do-not-track.md",
+      "title": "Enable do not track",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/tracking-code/do-not-track"
+    },
+    {
+      "filename": "api_source-code_guide.md",
+      "title": "CMS | Source Code API",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/cms/source-code/guide"
+    },
+    {
+      "filename": "api_v1_get-contacts-v1-contactutkcontactutk-profile.md",
+      "title": "Get a contact by its user token",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/contacts/v1/get-contacts-v1-contactutkcontactutk-profile"
+    },
+    {
+      "filename": "api_account-information_guide_2.md",
+      "title": "Account information API",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/account-information/guide"
+    },
+    {
+      "filename": "api_carts_guide_2.md",
+      "title": "CRM API | Carts",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/carts/guide"
+    },
+    {
+      "filename": "api_discounts_guide_2.md",
+      "title": "CRM API | Discounts",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/discounts/guide"
+    },
+    {
+      "filename": "api_emails_guide_2.md",
+      "title": "Activities | Email",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/emails/guide"
+    },
+    {
+      "filename": "api_feedback-submissions_guide_2.md",
+      "title": "Survey responses",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/feedback-submissions/guide"
+    },
+    {
+      "filename": "api_fees_guide_2.md",
+      "title": "CRM API | Fees",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/fees/guide"
+    },
+    {
+      "filename": "api_goals_guide_2.md",
+      "title": "CRM API | Goals",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/goals/guide"
+    },
+    {
+      "filename": "api_invoices_guide_2.md",
+      "title": "Invoices",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/invoices/guide"
+    },
+    {
+      "filename": "api_leads_guide_2.md",
+      "title": "CRM API | Leads",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/leads/guide"
+    },
+    {
+      "filename": "api_line-items_guide_2.md",
+      "title": "CRM API | Line items",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/line-items/guide"
+    },
+    {
+      "filename": "api_marketing-events_guide_2.md",
+      "title": "Marketing events API guide",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/marketing/marketing-events/guide"
+    },
+    {
+      "filename": "api_meetings_guide_2.md",
+      "title": "Activities | Meetings",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/meetings/guide"
+    },
+    {
+      "filename": "api_notes_guide_2.md",
+      "title": "Activities | Notes",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/notes/guide"
+    },
+    {
+      "filename": "api_orders_guide_2.md",
+      "title": "CRM API | Orders",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/orders/guide"
+    },
+    {
+      "filename": "api_commerce-payments_guide_2.md",
+      "title": "Payments API",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/commerce-payments/guide"
+    },
+    {
+      "filename": "api_postal-mail_guide_2.md",
+      "title": "Activities | Postal Mail",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/postal-mail/guide"
+    },
+    {
+      "filename": "api_products_guide_2.md",
+      "title": "CRM API | Products",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/products/guide"
+    },
+    {
+      "filename": "api_quotes_guide_2.md",
+      "title": "Create CPQ quotes",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/quotes/guide"
+    },
+    {
+      "filename": "api_commerce-subscriptions_guide_2.md",
+      "title": "Subscriptions API",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/commerce-subscriptions/guide"
+    },
+    {
+      "filename": "api_tasks_guide_2.md",
+      "title": "Activities | Tasks",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/tasks/guide"
+    },
+    {
+      "filename": "api_taxes_guide_2.md",
+      "title": "CRM API | Taxes",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/taxes/guide"
+    },
+    {
+      "filename": "api_object-library_guide_2.md",
+      "title": "Object library",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/object-library/guide"
+    },
+    {
+      "filename": "api_batch_delete-deals.md",
+      "title": "Archive a batch of deals by ID",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/deals/batch/delete-deals"
+    },
+    {
+      "filename": "api_tickets_delete-ticket.md",
+      "title": "Archive",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/tickets/delete-ticket"
+    },
+    {
+      "filename": "api_define-events_guide_2.md",
+      "title": "Define custom events",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/events/define-events/guide"
+    },
+    {
+      "filename": "api_batch_get-communications.md",
+      "title": "Retrieve communications",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/communications/batch/get-communications"
+    },
+    {
+      "filename": "api_batch_update-communications.md",
+      "title": "Update communciations",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/communications/batch/update-communications"
+    },
+    {
+      "filename": "api_consent-banner_consent-banner-api.md",
+      "title": "Consent banner API",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/account/settings/consent-banner/consent-banner-api"
+    },
+    {
+      "filename": "api_batch_create-emails.md",
+      "title": "Create emails",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/emails/batch/create-emails"
+    },
+    {
+      "filename": "api_batch_get-emails.md",
+      "title": "Retrieve emails",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/emails/batch/get-emails"
+    },
+    {
+      "filename": "api_batch_update-emails.md",
+      "title": "Update emails",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/emails/batch/update-emails"
+    },
+    {
+      "filename": "api_emails_delete-email.md",
+      "title": "Delete an email",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/emails/delete-email"
+    },
+    {
+      "filename": "api_taxes_create-tax.md",
+      "title": "Create",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/taxes/create-tax"
+    },
+    {
+      "filename": "api_batch_delete-invoices.md",
+      "title": "Archive a batch of invoices by ID",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/invoices/batch/delete-invoices"
+    },
+    {
+      "filename": "api_leads_delete-lead.md",
+      "title": "Archive",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/objects/leads/delete-lead"
+    },
+    {
+      "filename": "api_batch_create-meetings.md",
+      "title": "Create meetings",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/meetings/batch/create-meetings"
+    },
+    {
+      "filename": "api_batch_get-meetings.md",
+      "title": "Retrieve meetings",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/meetings/batch/get-meetings"
+    },
+    {
+      "filename": "api_batch_update-meetings.md",
+      "title": "Update meetings",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/meetings/batch/update-meetings"
+    },
+    {
+      "filename": "api_meetings_delete-meeting.md",
+      "title": "Delete meeting",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/meetings/delete-meeting"
+    },
+    {
+      "filename": "api_pipelines_guide_2.md",
+      "title": "CRM API | Pipelines",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/pipelines/guide"
+    },
+    {
+      "filename": "api_batch_create-tasks.md",
+      "title": "Create tasks",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/tasks/batch/create-tasks"
+    },
+    {
+      "filename": "api_batch_get-tasks.md",
+      "title": "Retrieve tasks",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/tasks/batch/get-tasks"
+    },
+    {
+      "filename": "api_batch_update-tasks.md",
+      "title": "Update tasks",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/tasks/batch/update-tasks"
+    },
+    {
+      "filename": "api_tasks_delete-task.md",
+      "title": "Delete a task",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/activities/tasks/delete-task"
+    },
+    {
+      "filename": "api_property-validations_guide_2.md",
+      "title": "CRM API | Property validations",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/crm/property-validations/guide"
+    },
+    {
+      "filename": "api_send-event-data_guide_2.md",
+      "title": "Send custom event occurrences",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/events/send-event-data/guide"
+    },
+    {
+      "filename": "api_retrieve-events_get-events.md",
+      "title": "Retrieve event occurrences",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/events/retrieve-events/get-events"
+    },
+    {
+      "filename": "api_retrieve-events_get-event-types.md",
+      "title": "Retrieve event types",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/events/retrieve-events/get-event-types"
+    },
+    {
+      "filename": "api_send-event-data_batch-send-occurrences.md",
+      "title": "Send a batch of event occurrences",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/events/send-event-data/batch-send-occurrences"
+    },
+    {
+      "filename": "api_media-bridge_guide_2.md",
+      "title": "CMS API | Media Bridge",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/cms/media-bridge/guide"
+    },
+    {
+      "filename": "api_source-code_guide_2.md",
+      "title": "Source Code API",
+      "url": "https://developers.hubspot.com/docs/api-reference/latest/cms/source-code/guide"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+# Freebusy: query
+
+*Source: https://developers.google.com/calendar/api/v3/reference/freebusy/query*
+
+---
+
+# Freebusy: query
+
+
+**Note:**
+Authorization optional.
+
+
+Returns free/busy information for a set of calendars.
+Try it now.
+
+
+## Request
+
+
+### HTTP request
+
+
+```
+POST https://www.googleapis.com/calendar/v3/freeBusy
+```
+
+
+### Authorization
+
+
+This request allows authorization with at least one of the following scopes:
+
+
+| Scope |
+|---|
+| https://www.googleapis.com/auth/calendar.readonly |
+| https://www.googleapis.com/auth/calendar |
+| https://www.googleapis.com/auth/calendar.events.freebusy |
+| https://www.googleapis.com/auth/calendar.freebusy |
+
+
+For more information, see the [authentication and authorization](/workspace/guides/configure-oauth-consent) page.
+
+
+### Request body
+
+
+In the request body, supply data with the following structure:
+
+
+```
+{
+  "timeMin": datetime,
+  "timeMax": datetime,
+  "timeZone": string,
+  "groupExpansionMax": integer,
+  "calendarExpansionMax": integer,
+  "items": [
+    {
+      "id": string
+    }
+  ]
+}
+```
+
+
+| Property name | Value | Description | Notes |
+|---|---|---|---|
+| timeMin | datetime | The start of the interval for the query formatted as per RFC3339 . |  |
+| timeMax | datetime | The end of the interval for the query formatted as per RFC3339 . |  |
+| timeZone | string | Time zone used in the response. Optional. The default is UTC. |  |
+| groupExpansionMax | integer | Maximal number of calendar identifiers to be provided for a single group. Optional. An error is returned for a group with more members than this value. Maximum value is 100. |  |
+| calendarExpansionMax | integer | Maximal number of calendars for which FreeBusy information is to be provided. Optional. Maximum value is 50. |  |
+| items[] | list | List of calendars and/or groups to query. |  |
+| items[]. id | string | The identifier of a calendar or a group. |  |
+
+
+## Response
+
+
+If successful, this method returns a response body with the following structure:
+
+
+```
+{
+  "kind": "calendar#freeBusy",
+  "timeMin": datetime,
+  "timeMax": datetime,
+  "groups": {
+    (key): {
+      "errors": [
+        {
+          "domain": string,
+          "reason": string
+        }
+      ],
+      "calendars": [
+        string
+      ]
+    }
+  },
+  "calendars": {
+    (key): {
+      "errors": [
+        {
+          "domain": string,
+          "reason": string
+        }
+      ],
+      "busy": [
+        {
+          "start": datetime,
+          "end": datetime
+        }
+      ]
+    }
+  }
+}
+```
+
+
+| Property name | Value | Description | Notes |
+|---|---|---|---|
+| kind | string | Type of the resource ("calendar#freeBusy"). |  |
+| timeMin | datetime | The start of the interval. |  |
+| timeMax | datetime | The end of the interval. |  |
+| groups | object | Expansion of groups. |  |
+| groups. (key) | nested object | List of calendars that are members of this group. |  |
+| groups.(key). errors[] | list | Optional error(s) (if computation for the group failed). |  |
+| groups.(key).errors[]. domain | string | Domain, or broad category, of the error. |  |
+| groups.(key).errors[]. reason | string | Specific reason for the error. Some of the possible values are: " groupTooBig " - The group of users requested is too large for a single query. " tooManyCalendarsRequested " - The number of calendars requested is too large for a single query. " notFound " - The requested resource was not found. " internalError " - The API service has encountered an internal error. Additional error types may be added in the future, so clients should gracefully handle additional error statuses not included in this list. |  |
+| groups.(key). calendars[] | list | List of calendars' identifiers within a group. |  |
+| calendars | object | List of free/busy information for calendars. |  |
+| calendars. (key) | nested object | Free/busy expansions for a single calendar. |  |
+| calendars.(key). errors[] | list | Optional error(s) (if computation for the calendar failed). |  |
+| calendars.(key).errors[]. domain | string | Domain, or broad category, of the error. |  |
+| calendars.(key).errors[]. reason | string | Specific reason for the error. Some of the possible values are: " groupTooBig " - The group of users requested is too large for a single query. " tooManyCalendarsRequested " - The number of calendars requested is too large for a single query. " notFound " - The requested resource was not found. " internalError " - The API service has encountered an internal error. Additional error types may be added in the future, so clients should gracefully handle additional error statuses not included in this list. |  |
+| calendars.(key). busy[] | list | List of time ranges during which this calendar should be regarded as busy. |  |
+| calendars.(key).busy[]. start | datetime | The (inclusive) start of the time period. |  |
+| calendars.(key).busy[]. end | datetime | The (exclusive) end of the time period. |  |
+
+
+## Try it!
+
+
+Use the APIs Explorer below to call this method on live data and see the response.
+
+
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2025-04-03 UTC."],[],[]]

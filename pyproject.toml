@@ -1,0 +1,56 @@
+[project]
+name = "agent-tooling"
+version = "0.1.0"
+description = "Tool synthesis benchmark for evaluating automatic MCP tool generation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # Anthropic API (for some synthesizers)
+    "anthropic>=0.40.0",
+    # OpenAI client (for vLLM self-hosted synthesis)
+    "openai>=1.0.0",
+    # Langchain (for message formatting in agentic synthesizers)
+    "langchain-core>=0.3.0,<1.0",
+    "langchain>=0.3.23,<1.0",
+    # HTTP clients
+    "httpx>=0.28.0",
+    "requests>=2.32.0",
+    "beautifulsoup4>=4.12.0",
+    # MCP client (agent harness)
+    "mcp>=1.0.0",
+    "pyyaml>=6.0.0",
+    # Testing
+    "pytest>=9.0.0",
+    "pytest-json-report>=1.5.0",
+    # Optional utilities
+    "python-dotenv>=1.0.0",
+    "torch>=2.12.0",
+    "transformers>=5.10.1",
+    "accelerate>=1.13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.8.0",  # Linting/formatting
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["benchmark"]
+
+[tool.uv]
+native-tls = true
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[dependency-groups]
+dev = [
+    "beautifulsoup4>=4.14.3",
+    "html2text>=2025.4.15",
+]

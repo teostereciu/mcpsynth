@@ -1,0 +1,14 @@
+{
+  "dataset": "notion",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "docs",
+  "synthesis_time": 344.3717441558838,
+  "token_usage": {
+    "input_tokens": 5692873,
+    "output_tokens": 17241
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1425",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 100
+}

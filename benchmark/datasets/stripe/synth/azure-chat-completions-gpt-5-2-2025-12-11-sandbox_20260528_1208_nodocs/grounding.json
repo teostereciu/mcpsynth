@@ -1,0 +1,290 @@
+{
+  "stripe_healthcheck": {
+    "doc": "TASK.md",
+    "endpoint": "N/A"
+  },
+  "customers_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/customers"
+  },
+  "customers_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/customers/{customer_id}"
+  },
+  "customers_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/customers/{customer_id}"
+  },
+  "customers_delete": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /v1/customers/{customer_id}"
+  },
+  "customers_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/customers"
+  },
+  "payment_intents_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "payment_intents_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/payment_intents/{payment_intent_id}"
+  },
+  "payment_intents_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}"
+  },
+  "payment_intents_confirm": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/confirm"
+  },
+  "payment_intents_capture": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/capture"
+  },
+  "payment_intents_cancel": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payment_intents/{payment_intent_id}/cancel"
+  },
+  "payment_intents_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/payment_intents"
+  },
+  "charges_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/charges/{charge_id}"
+  },
+  "charges_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/charges/{charge_id}"
+  },
+  "charges_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/charges"
+  },
+  "refunds_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/refunds"
+  },
+  "refunds_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/refunds/{refund_id}"
+  },
+  "refunds_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/refunds/{refund_id}"
+  },
+  "refunds_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/refunds"
+  },
+  "products_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/products"
+  },
+  "products_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/products/{product_id}"
+  },
+  "products_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/products/{product_id}"
+  },
+  "products_delete": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /v1/products/{product_id}"
+  },
+  "products_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/products"
+  },
+  "prices_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/prices"
+  },
+  "prices_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/prices/{price_id}"
+  },
+  "prices_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/prices/{price_id}"
+  },
+  "prices_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/prices"
+  },
+  "subscriptions_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/subscriptions"
+  },
+  "subscriptions_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/subscriptions/{subscription_id}"
+  },
+  "subscriptions_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/subscriptions/{subscription_id}"
+  },
+  "subscriptions_cancel": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /v1/subscriptions/{subscription_id}"
+  },
+  "subscriptions_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/subscriptions"
+  },
+  "invoices_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/invoices"
+  },
+  "invoices_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/invoices/{invoice_id}"
+  },
+  "invoices_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}"
+  },
+  "invoices_finalize": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/finalize"
+  },
+  "invoices_pay": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/pay"
+  },
+  "invoices_void": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/invoices/{invoice_id}/void"
+  },
+  "invoices_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/invoices"
+  },
+  "checkout_sessions_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/checkout/sessions"
+  },
+  "checkout_sessions_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/checkout/sessions/{session_id}"
+  },
+  "checkout_sessions_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/checkout/sessions"
+  },
+  "payment_links_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payment_links"
+  },
+  "payment_links_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/payment_links/{payment_link_id}"
+  },
+  "payment_links_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payment_links/{payment_link_id}"
+  },
+  "payment_links_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/payment_links"
+  },
+  "setup_intents_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/setup_intents"
+  },
+  "setup_intents_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/setup_intents/{setup_intent_id}"
+  },
+  "setup_intents_confirm": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}/confirm"
+  },
+  "setup_intents_cancel": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/setup_intents/{setup_intent_id}/cancel"
+  },
+  "setup_intents_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/setup_intents"
+  },
+  "coupons_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/coupons"
+  },
+  "coupons_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/coupons/{coupon_id}"
+  },
+  "coupons_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/coupons/{coupon_id}"
+  },
+  "coupons_delete": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /v1/coupons/{coupon_id}"
+  },
+  "coupons_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/coupons"
+  },
+  "promotion_codes_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/promotion_codes"
+  },
+  "promotion_codes_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/promotion_codes/{promotion_code_id}"
+  },
+  "promotion_codes_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/promotion_codes/{promotion_code_id}"
+  },
+  "promotion_codes_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/promotion_codes"
+  },
+  "accounts_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/accounts"
+  },
+  "accounts_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/accounts/{account_id}"
+  },
+  "accounts_update": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/accounts/{account_id}"
+  },
+  "accounts_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/accounts"
+  },
+  "transfers_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/transfers"
+  },
+  "transfers_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/transfers/{transfer_id}"
+  },
+  "transfers_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/transfers"
+  },
+  "payouts_create": {
+    "doc": "TASK.md",
+    "endpoint": "POST /v1/payouts"
+  },
+  "payouts_retrieve": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/payouts/{payout_id}"
+  },
+  "payouts_list": {
+    "doc": "TASK.md",
+    "endpoint": "GET /v1/payouts"
+  }
+}

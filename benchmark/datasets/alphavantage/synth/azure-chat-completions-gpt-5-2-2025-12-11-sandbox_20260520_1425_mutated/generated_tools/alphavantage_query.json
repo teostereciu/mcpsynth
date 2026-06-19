@@ -1,0 +1,13 @@
+{
+  "name": "alphavantage_query",
+  "description": "Generic Alpha Vantage query tool. Pass `function` and any additional query parameters.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "function": {"type": "string", "description": "Alpha Vantage function name, e.g. TIME_SERIES_DAILY, SMA, NEWS_SENTIMENT, OVERVIEW"},
+      "params": {"type": "object", "additionalProperties": true, "description": "Additional query parameters excluding apikey"},
+      "apikey": {"type": "string", "description": "Optional API key override"}
+    },
+    "required": ["function"]
+  }
+}

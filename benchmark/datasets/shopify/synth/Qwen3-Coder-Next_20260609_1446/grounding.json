@@ -1,0 +1,280 @@
+{
+  "grounding": {
+    "get_products": {
+      "doc": "docs/api_product.md",
+      "endpoint": "GET /products"
+    },
+    "get_product": {
+      "doc": "docs/api_product.md",
+      "endpoint": "GET /products/{product_id}"
+    },
+    "create_product": {
+      "doc": "docs/api_product.md",
+      "endpoint": "POST /products"
+    },
+    "update_product": {
+      "doc": "docs/api_product.md",
+      "endpoint": "PUT /products/{product_id}"
+    },
+    "delete_product": {
+      "doc": "docs/api_product.md",
+      "endpoint": "DELETE /products/{product_id}"
+    },
+    "get_product_count": {
+      "doc": "docs/api_product.md",
+      "endpoint": "GET /products/count"
+    },
+    "get_product_variants": {
+      "doc": "docs/api_product-variant.md",
+      "endpoint": "GET /products/{product_id}/variants"
+    },
+    "update_product_variant": {
+      "doc": "docs/api_product-variant.md",
+      "endpoint": "PUT /product_variants/{variant_id}"
+    },
+    "delete_product_variant": {
+      "doc": "docs/api_product-variant.md",
+      "endpoint": "DELETE /variants/{variant_id}"
+    },
+    "get_product_images": {
+      "doc": "docs/api_product-image.md",
+      "endpoint": "GET /products/{product_id}/images"
+    },
+    "create_product_image": {
+      "doc": "docs/api_product-image.md",
+      "endpoint": "POST /products/{product_id}/images"
+    },
+    "delete_product_image": {
+      "doc": "docs/api_product-image.md",
+      "endpoint": "DELETE /products/{product_id}/images/{image_id}"
+    },
+    "get_customers": {
+      "doc": "docs/api_customer.md",
+      "endpoint": "GET /customers"
+    },
+    "get_customer": {
+      "doc": "docs/api_customer.md",
+      "endpoint": "GET /customers/{customer_id}"
+    },
+    "create_customer": {
+      "doc": "docs/api_customer.md",
+      "endpoint": "POST /customers"
+    },
+    "update_customer": {
+      "doc": "docs/api_customer.md",
+      "endpoint": "PUT /customers/{customer_id}"
+    },
+    "delete_customer": {
+      "doc": "docs/api_customer.md",
+      "endpoint": "DELETE /customers/{customer_id}"
+    },
+    "get_customer_count": {
+      "doc": "docs/api_customer.md",
+      "endpoint": "GET /customers/count"
+    },
+    "search_customers": {
+      "doc": "docs/api_customer.md",
+      "endpoint": "GET /customers/search"
+    },
+    "get_orders": {
+      "doc": "docs/api_order.md",
+      "endpoint": "GET /orders"
+    },
+    "get_order": {
+      "doc": "docs/api_order.md",
+      "endpoint": "GET /orders/{order_id}"
+    },
+    "create_order": {
+      "doc": "docs/api_order.md",
+      "endpoint": "POST /orders"
+    },
+    "update_order": {
+      "doc": "docs/api_order.md",
+      "endpoint": "PUT /orders/{order_id}"
+    },
+    "cancel_order": {
+      "doc": "docs/api_order.md",
+      "endpoint": "POST /orders/{order_id}/cancel"
+    },
+    "close_order": {
+      "doc": "docs/api_order.md",
+      "endpoint": "POST /orders/{order_id}/close"
+    },
+    "open_order": {
+      "doc": "docs/api_order.md",
+      "endpoint": "POST /orders/{order_id}/open"
+    },
+    "delete_order": {
+      "doc": "docs/api_order.md",
+      "endpoint": "DELETE /orders/{order_id}"
+    },
+    "get_order_count": {
+      "doc": "docs/api_order.md",
+      "endpoint": "GET /orders/count"
+    },
+    "create_fulfillment": {
+      "doc": "docs/api_fulfillment.md",
+      "endpoint": "POST /orders/{order_id}/fulfillments"
+    },
+    "get_fulfillment": {
+      "doc": "docs/api_fulfillment.md",
+      "endpoint": "GET /orders/{order_id}/fulfillments/{fulfillment_id}"
+    },
+    "update_fulfillment": {
+      "doc": "docs/api_fulfillment.md",
+      "endpoint": "PUT /orders/{order_id}/fulfillments/{fulfillment_id}"
+    },
+    "get_fulfillments": {
+      "doc": "docs/api_fulfillment.md",
+      "endpoint": "GET /orders/{order_id}/fulfillments"
+    },
+    "get_inventory_items": {
+      "doc": "docs/api_inventoryitem.md",
+      "endpoint": "GET /inventory_items"
+    },
+    "get_inventory_levels": {
+      "doc": "docs/api_inventorylevel.md",
+      "endpoint": "GET /inventory_levels"
+    },
+    "adjust_inventory_level": {
+      "doc": "docs/api_inventorylevel.md",
+      "endpoint": "POST /inventory_levels/adjust"
+    },
+    "set_inventory_level": {
+      "doc": "docs/api_inventorylevel.md",
+      "endpoint": "POST /inventory_levels/set"
+    },
+    "get_price_rules": {
+      "doc": "docs/api_pricerule.md",
+      "endpoint": "GET /price_rules"
+    },
+    "get_price_rule": {
+      "doc": "docs/api_pricerule.md",
+      "endpoint": "GET /price_rules/{price_rule_id}"
+    },
+    "create_price_rule": {
+      "doc": "docs/api_pricerule.md",
+      "endpoint": "POST /price_rules"
+    },
+    "update_price_rule": {
+      "doc": "docs/api_pricerule.md",
+      "endpoint": "PUT /price_rules/{price_rule_id}"
+    },
+    "delete_price_rule": {
+      "doc": "docs/api_pricerule.md",
+      "endpoint": "DELETE /price_rules/{price_rule_id}"
+    },
+    "get_discount_codes": {
+      "doc": "docs/api_discountcode.md",
+      "endpoint": "GET /price_rules/{price_rule_id}/discount_codes"
+    },
+    "create_discount_code": {
+      "doc": "docs/api_discountcode.md",
+      "endpoint": "POST /price_rules/{price_rule_id}/discount_codes"
+    },
+    "get_custom_collections": {
+      "doc": "docs/api_customcollection.md",
+      "endpoint": "GET /custom_collections"
+    },
+    "get_custom_collection": {
+      "doc": "docs/api_customcollection.md",
+      "endpoint": "GET /custom_collections/{collection_id}"
+    },
+    "create_custom_collection": {
+      "doc": "docs/api_customcollection.md",
+      "endpoint": "POST /custom_collections"
+    },
+    "update_custom_collection": {
+      "doc": "docs/api_customcollection.md",
+      "endpoint": "PUT /custom_collections/{collection_id}"
+    },
+    "delete_custom_collection": {
+      "doc": "docs/api_customcollection.md",
+      "endpoint": "DELETE /custom_collections/{collection_id}"
+    },
+    "add_product_to_collection": {
+      "doc": "docs/api_collect.md",
+      "endpoint": "POST /collects"
+    },
+    "remove_product_from_collection": {
+      "doc": "docs/api_collect.md",
+      "endpoint": "DELETE /collects/{collect_id}"
+    },
+    "get_shop": {
+      "doc": "docs/api_shop.md",
+      "endpoint": "GET /shop"
+    },
+    "get_metafields": {
+      "doc": "docs/api_metafield.md",
+      "endpoint": "GET /metafields"
+    },
+    "get_metafield": {
+      "doc": "docs/api_metafield.md",
+      "endpoint": "GET /metafields/{metafield_id}"
+    },
+    "create_metafield": {
+      "doc": "docs/api_metafield.md",
+      "endpoint": "POST /metafields"
+    },
+    "update_metafield": {
+      "doc": "docs/api_metafield.md",
+      "endpoint": "PUT /metafields/{metafield_id}"
+    },
+    "delete_metafield": {
+      "doc": "docs/api_metafield.md",
+      "endpoint": "DELETE /metafields/{metafield_id}"
+    },
+    "get_webhooks": {
+      "doc": "docs/api_webhook.md",
+      "endpoint": "GET /webhooks"
+    },
+    "get_webhook": {
+      "doc": "docs/api_webhook.md",
+      "endpoint": "GET /webhooks/{webhook_id}"
+    },
+    "create_webhook": {
+      "doc": "docs/api_webhook.md",
+      "endpoint": "POST /webhooks"
+    },
+    "update_webhook": {
+      "doc": "docs/api_webhook.md",
+      "endpoint": "PUT /webhooks/{webhook_id}"
+    },
+    "delete_webhook": {
+      "doc": "docs/api_webhook.md",
+      "endpoint": "DELETE /webhooks/{webhook_id}"
+    },
+    "get_transactions": {
+      "doc": "docs/api_transaction.md",
+      "endpoint": "GET /orders/{order_id}/transactions"
+    },
+    "create_transaction": {
+      "doc": "docs/api_transaction.md",
+      "endpoint": "POST /orders/{order_id}/transactions"
+    },
+    "create_refund": {
+      "doc": "docs/api_refund.md",
+      "endpoint": "POST /orders/{order_id}/refunds"
+    },
+    "get_draft_orders": {
+      "doc": "docs/api_draftorder.md",
+      "endpoint": "GET /draft_orders"
+    },
+    "create_draft_order": {
+      "doc": "docs/api_draftorder.md",
+      "endpoint": "POST /draft_orders"
+    },
+    "complete_draft_order": {
+      "doc": "docs/api_draftorder.md",
+      "endpoint": "POST /draft_orders/{draft_order_id}/complete"
+    },
+    "get_locations": {
+      "doc": "docs/api_location.md",
+      "endpoint": "GET /locations"
+    },
+    "get_location": {
+      "doc": "docs/api_location.md",
+      "endpoint": "GET /locations/{location_id}"
+    }
+  }
+}

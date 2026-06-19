@@ -1,0 +1,123 @@
+# Deliverables Checklist
+
+✅ Created `server.py` - Entry point for the MCP server with FastMCP
+  - Contains 80+ tools for Zulip REST API operations
+  - Covers messages, streams, users, reactions, drafts, scheduled messages, user groups, topics, notifications, etc.
+  - Uses HTTP Basic Auth with email and API key
+  - Proper error handling returning JSON error dicts
+  - No generic passthrough tools
+
+✅ Created `requirements.txt` - Pinned dependencies
+  - fastmcp==3.2.4
+  - requests==2.32.3
+
+✅ Created `grounding.json` - Maps every tool to its source documentation
+  - 81 tool entries mapping to 35+ documentation files
+  - Each entry includes doc path and endpoint
+
+# Coverage Areas
+
+## Messages
+- ✅ Send message (direct and channel)
+- ✅ Get messages with filtering and pagination
+- ✅ Update message (content, topic, channel)
+- ✅ Delete message
+- ✅ Add/remove emoji reactions
+- ✅ Update message flags
+- ✅ Get message edit history
+- ✅ Scheduled messages (create, get, update, delete)
+
+## Streams/Channels
+- ✅ Get all streams
+- ✅ Subscribe to streams
+- ✅ Unsubscribe from streams
+- ✅ Create streams
+- ✅ Update streams
+- ✅ Archive streams
+- ✅ Get stream details by ID
+- ✅ Get stream topics
+- ✅ Get subscribers
+- ✅ Update subscription properties
+
+## Users
+- ✅ Get all users
+- ✅ Get user by ID
+- ✅ Get user by email
+- ✅ Get own user
+- ✅ Update user
+- ✅ Update user by email
+- ✅ Deactivate/reactivate user
+- ✅ Get user presence
+- ✅ Update presence
+- ✅ Set typing status
+- ✅ Get user subscriptions
+
+## Drafts
+- ✅ Get drafts
+- ✅ Create drafts
+- ✅ Edit drafts
+- ✅ Delete drafts
+
+## File Operations
+- ✅ Upload file
+- ✅ Get temporary URL for attachment
+- ✅ Delete attachment
+- ✅ Get all attachments
+
+## User Groups
+- ✅ Get user groups
+- ✅ Create user group
+- ✅ Update user group
+- ✅ Deactivate user group
+- ✅ Get/update user group members
+- ✅ Get/update user group subgroups
+
+## Topics
+- ✅ Delete topic
+- ✅ Rename topic
+- ✅ Update user topic preferences
+- ✅ Mute/unmute topic
+
+## Reminders
+- ✅ Create message reminder
+- ✅ Get reminders
+- ✅ Delete reminder
+
+## Notifications
+- ✅ Mark all as read
+- ✅ Mark stream as read
+- ✅ Mark topic as read
+- ✅ Update status
+- ✅ Update status for user
+- ✅ Get user status
+
+## Navigation
+- ✅ Get navigation views
+- ✅ Add navigation view
+- ✅ Update navigation view
+- ✅ Remove navigation view
+- ✅ Channel folders (create, get, update, patch)
+
+## Reporting
+- ✅ Report message
+
+## Server
+- ✅ Get server settings
+- ✅ Get linkifiers
+- ✅ Add linkifier
+- ✅ Update linkifier
+- ✅ Remove linkifier
+- ✅ Get alert words
+- ✅ Add alert words
+- ✅ Remove alert words
+- ✅ Get presence
+
+# Technical Requirements Met
+
+✅ Server runs over stdio
+✅ All tools accessible via list_tools()
+✅ Return format: JSON-serializable results
+✅ Error handling: returns errors as dicts
+✅ No generic passthrough tools
+✅ Proper authentication via environment variables
+✅ Base URL: {ZULIP_SITE}/api/v1

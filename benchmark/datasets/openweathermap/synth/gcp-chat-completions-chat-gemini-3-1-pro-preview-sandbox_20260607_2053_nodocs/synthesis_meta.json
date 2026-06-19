@@ -1,0 +1,12 @@
+{
+  "dataset": "openweathermap",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "nodocs",
+  "synthesis_time": 267.9060778617859,
+  "token_usage": {
+    "input_tokens": 21978,
+    "output_tokens": 1889
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_2053"
+}

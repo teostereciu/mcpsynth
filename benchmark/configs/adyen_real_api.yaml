@@ -1,0 +1,199 @@
+# Adyen Real API Testing Configuration
+#
+# This config defines what's needed to test the Adyen MCP server against
+# the real Adyen API (test environment).
+
+api_name: "Adyen"
+api_version: "Checkout API v71 / Payment API v68 / Management API v3"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  ADYEN_API_KEY:
+    description: "Adyen API key for test environment"
+    how_to_get:
+      url: "https://ca-test.adyen.com/ca/ca/config/api-credentials.shtml"
+      steps:
+        - "Log in to the Adyen Customer Area (test)"
+        - "Navigate to Developers > API credentials"
+        - "Select your web service user or create a new one"
+        - "Under 'Authentication', find or generate your API key"
+        - "Copy the API key value"
+      notes:
+        - "Use test environment credentials (ca-test.adyen.com), NOT production"
+        - "API key is shown only once at generation time - save it securely"
+        - "Ensure the credential has the required roles (see permissions section)"
+    validation: "^AQE.+$"
+    example: "AQEqhmfxK....VF9-MH9-XRo="
+
+  ADYEN_MERCHANT_ACCOUNT:
+    description: "Adyen merchant account name"
+    how_to_get:
+      url: "https://ca-test.adyen.com/ca/ca/config/accountdetails.shtml"
+      steps:
+        - "Log in to Adyen Customer Area (test)"
+        - "Navigate to Account > Merchant accounts"
+        - "Copy your merchant account name (e.g., 'YourCompanyECOM')"
+      notes:
+        - "Merchant account name is case-sensitive"
+        - "Use the test merchant account, not production"
+    validation: "^[A-Za-z0-9_-]{3,}$"
+    example: "YourCompanyECOM"
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS (for extended testing)
+# ==============================================================================
+
+optional_credentials:
+  ADYEN_COMPANY_ACCOUNT:
+    description: "Adyen company account name (for company-level API calls)"
+    required_for: "Scenarios 5, 24 (company webhooks)"
+    how_to_get:
+      notes:
+        - "Found in Customer Area under Account > Company accounts"
+        - "Parent account that contains merchant accounts"
+    example: "YourCompany"
+
+  ADYEN_BALANCE_PLATFORM:
+    description: "Balance platform ID (for Balance Platform API)"
+    required_for: "Balance platform scenarios (not in current test suite)"
+    how_to_get:
+      notes:
+        - "Only needed if using Adyen Balance Platform"
+        - "Contact Adyen to enable Balance Platform"
+
+  ADYEN_ENVIRONMENT:
+    description: "Environment to use (test or live)"
+    how_to_get:
+      notes:
+        - "'test' recommended for all testing"
+        - "'live' uses real payment infrastructure"
+    validation: "^(test|live)$"
+    default: "test"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_url: "https://checkout-test.adyen.com/v71"
+sandbox_notes: |
+  Adyen provides a test environment with full API parity:
+    ✅ Test card numbers available (no real charges)
+    ✅ Full API coverage in test mode
+    ✅ Webhook simulation via Customer Area
+    ✅ Same API structure as production
+
+  Test Card Numbers:
+    - 4111 1111 1111 1111 (Visa, success)
+    - 5500 0000 0000 0004 (Mastercard, success)
+    - 4000 0000 0000 0002 (Visa, declined)
+
+  Base URLs (test):
+    - Checkout API: https://checkout-test.adyen.com/v71
+    - Payment API:  https://pal-test.adyen.com/pal/servlet/Payment/v68
+    - Management:   https://management-test.adyen.com/v3
+
+mock_mode:
+  available: true
+  activate: "pytest --mock  OR  ADYEN_MOCK=1 pytest"
+  how_it_works: |
+    Intercepts all HTTP calls to Adyen test endpoints at the requests library
+    level. The full MCP server and tool code run for real (API key headers,
+    request body construction, response parsing). Only the network hop is
+    replaced with realistic pre-defined responses from tests/mock_api.py.
+  what_is_tested: |
+    - Correct API key header (X-API-Key) is sent
+    - Request bodies contain required fields (merchantAccount, amount, etc.)
+    - Responses are parsed correctly and returned by tools
+    - Error responses (invalid merchant, bad currency) are handled gracefully
+  what_is_not_tested: |
+    - Actual Adyen validation of field values
+    - Real payment processing or webhook delivery
+    - Rate limits or quota enforcement
+  credentials_needed: "None — fake values are injected automatically"
+
+rate_limits:
+  default: "No strict published limit for test environment"
+  notes: |
+    - Test environment is more lenient than production
+    - Recommended: add small delays between bulk API calls
+    - Production limits vary by contract
+
+cleanup_notes: |
+  Test environment:
+    - Payment sessions expire automatically (no cleanup needed)
+    - Webhooks and stores created during tests should be deleted
+    - cleanup_tracker fixture handles webhook/store deletion automatically
+    - No real financial impact in test mode
+
+# ==============================================================================
+# API PERMISSIONS REQUIRED
+# ==============================================================================
+
+permissions:
+  roles:
+    - "Checkout webservice role" — for Checkout API (sessions, payment methods)
+    - "Merchant PAL Webservice role" — for Payment API
+    - "Management API - Accounts read and write" — for Management API
+    - "Management API - Webhooks read and write" — for webhook scenarios
+
+  scopes: "Adyen uses API key authentication, not OAuth scopes"
+
+# ==============================================================================
+# TEST COVERAGE BY API
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 591
+
+  by_api:
+    checkout:
+      description: "Payment sessions, payment methods, payment links"
+      priority: "critical"
+      scenarios: [1, 6, 8, 9, 11, 12, 14, 15, 16, 17, 19, 20, 21, 22, 23, 25, 26, 27]
+
+    management:
+      description: "Merchant accounts, stores, webhooks, API credentials"
+      priority: "critical"
+      scenarios: [2, 3, 4, 5, 7, 10, 13, 18, 24, 28]
+
+    payments:
+      description: "Classic payment processing (authorize, capture, refund)"
+      priority: "high"
+      scenarios: []
+
+    balance_platform:
+      description: "Balance accounts, transfers, financial operations"
+      priority: "medium"
+      scenarios: []
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  credential_storage: |
+    - Store API key in .env file (gitignored)
+    - Never commit API keys to version control
+    - Use test environment keys only for testing
+    - Rotate API keys if compromised
+
+  safe_testing: |
+    - Always use test environment (ca-test.adyen.com)
+    - Test API keys cannot process real payments
+    - Production keys start with a different prefix than test keys
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  developer_portal: "https://docs.adyen.com/"
+  checkout_api: "https://docs.adyen.com/api-explorer/Checkout/71/overview"
+  management_api: "https://docs.adyen.com/api-explorer/Management/3/overview"
+  test_cards: "https://docs.adyen.com/development-resources/testing/test-card-numbers/"
+  api_credentials: "https://docs.adyen.com/development-resources/api-credentials/"

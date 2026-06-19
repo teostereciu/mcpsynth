@@ -1,0 +1,66 @@
+{
+  "recipes_complex_search_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "recipes_find_by_ingredients_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/findByIngredients"
+  },
+  "recipes_get_information_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "recipes_get_analyzed_instructions_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/{id}/analyzedInstructions"
+  },
+  "recipes_get_similar_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/{id}/similar"
+  },
+  "recipes_autocomplete_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/autocomplete"
+  },
+  "ingredients_search_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "ingredients_get_information_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "ingredients_autocomplete_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  },
+  "ingredients_parse_tool": {
+    "doc": "docs/",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "mealplan_generate_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "recipes_get_nutrition_widget_json_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "recipes_get_nutrition_widget_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /recipes/{id}/nutritionWidget"
+  },
+  "wine_pairing_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "wine_description_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /food/wine/description"
+  },
+  "wine_recommendation_tool": {
+    "doc": "docs/",
+    "endpoint": "GET /food/wine/recommendation"
+  }
+}

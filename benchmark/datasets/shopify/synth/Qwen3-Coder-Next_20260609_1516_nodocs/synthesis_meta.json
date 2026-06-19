@@ -1,0 +1,14 @@
+{
+  "dataset": "shopify",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "nodocs",
+  "synthesis_time": 349.79924297332764,
+  "token_usage": {
+    "input_tokens": 59760,
+    "output_tokens": 9348
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1516",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 8
+}

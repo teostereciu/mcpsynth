@@ -1,0 +1,226 @@
+{
+  "post_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "get_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id"
+  },
+  "delete_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "DELETE /api/v1/statuses/:id"
+  },
+  "get_status_context": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id/context"
+  },
+  "get_statuses": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses"
+  },
+  "reblog_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/reblog"
+  },
+  "favourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unfavourite"
+  },
+  "bookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unbookmark"
+  },
+  "get_home_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/tag/:hashtag"
+  },
+  "get_list_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/list/:list_id"
+  },
+  "get_link_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/link?url=:url"
+  },
+  "get_current_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "update_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "PATCH /api/v1/accounts/update_credentials"
+  },
+  "get_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id"
+  },
+  "follow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unfollow"
+  },
+  "block_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/block"
+  },
+  "unblock_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unblock"
+  },
+  "mute_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/mute"
+  },
+  "unmute_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unmute"
+  },
+  "get_account_followers": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/followers"
+  },
+  "get_account_following": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/following"
+  },
+  "get_account_status": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/statuses/:id"
+  },
+  "get_account_statuses": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/statuses"
+  },
+  "get_account_lists": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/lists"
+  },
+  "get_account_identity_proofs": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/identity_proofs"
+  },
+  "get_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "get_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications/:id"
+  },
+  "clear_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "dismiss_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/:id/dismiss"
+  },
+  "get_unread_count": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications/unread_count"
+  },
+  "get_lists": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "get_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id"
+  },
+  "create_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "update_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "PUT /api/v1/lists/:id"
+  },
+  "delete_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id"
+  },
+  "get_list_accounts": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id/accounts"
+  },
+  "add_accounts_to_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists/:id/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id/accounts"
+  },
+  "get_bookmarks": {
+    "doc": "docs/api_bookmarks.md",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "get_favourites": {
+    "doc": "docs/api_favourites.md",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "upload_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "POST /api/v2/media"
+  },
+  "get_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "GET /api/v1/media/:id"
+  },
+  "update_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "PUT /api/v1/media/:id"
+  },
+  "delete_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "DELETE /api/v1/media/:id"
+  },
+  "get_instance_info": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v2/instance"
+  },
+  "search": {
+    "doc": "docs/api_search.md",
+    "endpoint": "GET /api/v2/search"
+  },
+  "get_blocked_accounts": {
+    "doc": "docs/api_blocks.md",
+    "endpoint": "GET /api/v1/blocks"
+  },
+  "get_muted_accounts": {
+    "doc": "docs/api_mutes.md",
+    "endpoint": "GET /api/v1/mutes"
+  },
+  "get_follow_requests": {
+    "doc": "docs/api_follow_requests.md",
+    "endpoint": "GET /api/v1/follow_requests"
+  },
+  "authorize_follow_request": {
+    "doc": "docs/api_follow_requests.md",
+    "endpoint": "POST /api/v1/follow_requests/:account_id/authorize"
+  },
+  "reject_follow_request": {
+    "doc": "docs/api_follow_requests.md",
+    "endpoint": "POST /api/v1/follow_requests/:account_id/reject"
+  }
+}

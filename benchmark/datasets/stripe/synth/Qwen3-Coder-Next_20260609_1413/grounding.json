@@ -1,0 +1,226 @@
+{
+  "create_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents"
+  },
+  "retrieve_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents/{id}"
+  },
+  "update_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{id}"
+  },
+  "confirm_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{id}/confirm"
+  },
+  "capture_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{id}"
+  },
+  "cancel_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /v1/payment_intents/{id}/cancel"
+  },
+  "list_payment_intents": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /v1/payment_intents"
+  },
+  "create_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges"
+  },
+  "retrieve_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /v1/charges/{id}"
+  },
+  "update_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /v1/charges/{id}"
+  },
+  "list_charges": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /v1/charges"
+  },
+  "create_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers"
+  },
+  "retrieve_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers/{id}"
+  },
+  "update_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /v1/customers/{id}"
+  },
+  "delete_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "DELETE /v1/customers/{id}"
+  },
+  "list_customers": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /v1/customers"
+  },
+  "create_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds"
+  },
+  "retrieve_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /v1/refunds/{id}"
+  },
+  "update_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /v1/refunds/{id}"
+  },
+  "list_refunds": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /v1/refunds"
+  },
+  "create_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products"
+  },
+  "retrieve_product": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /v1/products/{id}"
+  },
+  "update_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /v1/products/{id}"
+  },
+  "delete_product": {
+    "doc": "docs/products.md",
+    "endpoint": "DELETE /v1/products/{id}"
+  },
+  "list_products": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /v1/products"
+  },
+  "create_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "POST /v1/payment_methods"
+  },
+  "retrieve_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "GET /v1/payment_methods/{id}"
+  },
+  "update_payment_method": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "POST /v1/payment_methods/{id}"
+  },
+  "list_payment_methods": {
+    "doc": "docs/payment_methods.md",
+    "endpoint": "GET /v1/payment_methods"
+  },
+  "create_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions"
+  },
+  "retrieve_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "GET /v1/subscriptions/{id}"
+  },
+  "update_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions/{id}"
+  },
+  "cancel_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /v1/subscriptions/{id}/cancel"
+  },
+  "list_subscriptions": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "GET /v1/subscriptions"
+  },
+  "create_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices"
+  },
+  "retrieve_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "GET /v1/invoices/{id}"
+  },
+  "update_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{id}"
+  },
+  "finalize_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{id}/finalize"
+  },
+  "pay_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /v1/invoices/{id}/pay"
+  },
+  "list_invoices": {
+    "doc": "docs/invoices.md",
+    "endpoint": "GET /v1/invoices"
+  },
+  "create_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts"
+  },
+  "retrieve_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /v1/accounts/{id}"
+  },
+  "update_account": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/accounts/{id}"
+  },
+  "list_accounts": {
+    "doc": "docs/accounts.md",
+    "endpoint": "GET /v1/accounts"
+  },
+  "create_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers"
+  },
+  "retrieve_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "GET /v1/transfers/{id}"
+  },
+  "update_transfer": {
+    "doc": "docs/transfers.md",
+    "endpoint": "POST /v1/transfers/{id}"
+  },
+  "list_transfers": {
+    "doc": "docs/transfers.md",
+    "endpoint": "GET /v1/transfers"
+  },
+  "create_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents"
+  },
+  "retrieve_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "GET /v1/setup_intents/{id}"
+  },
+  "confirm_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{id}/confirm"
+  },
+  "cancel_setup_intent": {
+    "doc": "docs/setup_intents.md",
+    "endpoint": "POST /v1/setup_intents/{id}/cancel"
+  },
+  "retrieve_balance": {
+    "doc": "docs/balance.md",
+    "endpoint": "GET /v1/balance"
+  },
+  "retrieve_balance_transaction": {
+    "doc": "docs/balance_transactions.md",
+    "endpoint": "GET /v1/balance_transactions/{id}"
+  },
+  "list_balance_transactions": {
+    "doc": "docs/balance_transactions.md",
+    "endpoint": "GET /v1/balance_transactions"
+  },
+  "create_referral": {
+    "doc": "docs/accounts.md",
+    "endpoint": "POST /v1/referrals"
+  }
+}

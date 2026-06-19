@@ -1,0 +1,1030 @@
+{
+  "dataset": "confluence",
+  "impl": "gcp-chat-completions-anthropic-claude-haiku-4-5-sandbox_20260615_1343_nodocs",
+  "mode": "mcp",
+  "model": "gcp-chat-completions-chat-gemini-2.5-pro-sandbox",
+  "judge_model": "gcp-chat-completions-chat-gemini-3-flash-preview-sandbox",
+  "summary": {
+    "total": 21,
+    "pass": 2,
+    "fail": 4,
+    "undefined": 15,
+    "scoreable": 6,
+    "pass_rate": 0.3333,
+    "synthesis_pass_rate": 0.15,
+    "n_server_sufficient": 3,
+    "n_server_insufficient": 17,
+    "n_server_sufficient_unknown": 1,
+    "failure_reasons": {
+      "ENVIRONMENT": 14,
+      "TOOL_IMPLEMENTATION": 4
+    }
+  },
+  "tasks": [
+    {
+      "id": "get_current_user",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I cannot fulfill your request. The `get_current_user()` and `list_spaces()` tools are both returning \"Not found\" errors, which prevents me from finding the display name and account ID of the Atlassian account.",
+      "judge_reasoning": "The agent correctly identified and used the `get_current_user` tool, but it returned a 404 error, preventing the task from being completed.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "list_spaces",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "I am sorry, but I was unable to list the spaces in this Confluence instance. The `list_spaces` tool returned a \"Not found\" error.",
+      "judge_reasoning": "The list_spaces tool returned a 404 error when called, which prevented the agent from retrieving the space information required to complete the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "get_space_and_homepage",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am unable to find the Confluence space with the key \"SYNTH\". I attempted to retrieve the space directly, list all available spaces, and search for content within the space, but all of these actions resulted in a \"Not found\" error. This suggests that the space either does not exist or is not accessible. Consequently, I cannot provide the requested space name, homepage page ID, and homepage page title.",
+      "judge_reasoning": "The agent attempted to use the correct tools to find the space, but the tools (including list_spaces) returned 404 errors, preventing the agent from retrieving any information.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "get_space",
+          "arguments": {
+            "space_id": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "search_content",
+          "arguments": {
+            "cql": "space = \"SYNTH\""
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "list_pages_in_space",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I was unable to find a Confluence space with the key \"SYNTH\". My attempts to list the spaces and search for content within that space both resulted in \"Not Found\" errors. Therefore, I cannot provide you with the number of pages or their titles.",
+      "judge_reasoning": "The agent attempted to locate the space using valid tool calls, but the server returned 404 errors for standard discovery endpoints, indicating the environment was not properly configured.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "search_content",
+          "arguments": {
+            "cql": "space = \"SYNTH\""
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "search_content_cql",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am sorry, but I was unable to find any content in the \"SYNTH\" space. I tried to search for the content, but I received a \"Not found\" error. I then tried to list all the available spaces to see if the \"SYNTH\" space exists, but that also resulted in a \"Not found\" error.",
+      "judge_reasoning": "The agent used the correct tool and CQL query, but the server returned 404 errors for both the search and the space listing, preventing the agent from retrieving any data.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "search_content",
+          "arguments": {
+            "cql": "space = \"SYNTH\""
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "",
+      "server_sufficient": null,
+      "judge_reliable": false,
+      "num_turns": 6,
+      "num_tool_calls": 5,
+      "num_errors": 5,
+      "final_answer": "I am sorry, but I was unable to create the page. Every attempt to communicate with the Confluence server resulted in a \"Not Found\" error. This suggests a problem with the server or the connection itself, which I was unable to resolve.",
+      "judge_reasoning": "Judge failed (HTTPSConnectionPool(host='chomskygw.vip.qa.ebay.com', port=443): Max retries exceeded with url: /api/v1/genai (Caused by ConnectTimeoutError(<HTTPSConnection(host='chomskygw.vip.qa.ebay.com', port=443) at 0x10387b410>, 'Connection to chomskygw.vip.qa.ebay.com timed out. (connect timeout=5)'))); heuristic: 0 successful calls.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "This page was created by the MCP agent evaluation harness.",
+            "space_key": "SYNTH",
+            "title": "Agent eval test page"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_space",
+          "arguments": {
+            "key": "SYNTH",
+            "name": "Synth"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent eval test page",
+            "body": "This page was created by the MCP agent evaluation harness."
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_page_with_storage_format",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am unable to create the page. All of my attempts to create the page, list spaces, or create a new space have resulted in a 404 Not Found error. This could be due to a number of factors, including the \"SYNTH\" space not existing, or a lack of permissions to perform these actions.",
+      "judge_reasoning": "Every tool call made by the agent, including basic ones like listing spaces, resulted in a 404 Not Found error, indicating a server-side or configuration issue.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "space_key": "SYNTH",
+            "body": "<p>Hello from the agent harness.</p><ul><li>Item one</li><li>Item two</li></ul>",
+            "title": "Agent eval formatted page"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_space",
+          "arguments": {
+            "key": "SYNTH",
+            "name": "SYNTH",
+            "description": "Synthetic space for agent evaluation"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent eval formatted page",
+            "body": "<p>Hello from the agent harness.</p><ul><li>Item one</li><li>Item two</li></ul>"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "update_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am unable to complete your request. I tried to create a page in space \"SYNTH\" but received an error indicating that the space was not found. I was also unable to list the available spaces. Therefore, I cannot create or update the page as requested.",
+      "judge_reasoning": "The agent's attempts to create a page and list spaces both resulted in 404 errors, indicating the environment was not properly set up or the space \"SYNTH\" did not exist.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent eval update test",
+            "body": "Initial content.",
+            "space_key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "Initial content.",
+            "title": "Agent eval update test",
+            "space_key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_and_get_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am unable to create a page in the \"SYNTH\" space because the space was not found. I was also unable to retrieve a list of available spaces.",
+      "judge_reasoning": "The tools returned 404 errors for standard API calls like list_spaces and create_page, indicating the environment was not properly configured.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "space_key": "SYNTH",
+            "title": "Agent eval round-trip test",
+            "body": "Round-trip content."
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "delete_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I was unable to create the page in the \"SYNTH\" space as requested. My attempt to create the page, as well as follow-up attempts to list spaces, create the space, and get the current user, all resulted in a \"Not found\" error. This indicates a problem with accessing the Confluence instance, which prevented me from completing the requested actions of creating, deleting, and confirming the deletion of the page.",
+      "judge_reasoning": "Every tool call returned a 404 error, indicating a connectivity or configuration issue with the underlying Confluence instance that prevented the agent from performing the task.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "To be deleted.",
+            "space_key": "SYNTH",
+            "title": "Agent eval delete test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_space",
+          "arguments": {
+            "name": "SYNTH",
+            "key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "add_label_to_page",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am unable to create a page in the \"SYNTH\" space because the space could not be found. My attempt to list the available spaces also failed with a \"Not found\" error. Therefore, I cannot proceed with adding a label to the page or reporting on the labels.",
+      "judge_reasoning": "The agent was unable to complete the task because the tools for creating a page and listing spaces both returned 404 errors, indicating a failure in the underlying environment or tool implementation.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "space_key": "SYNTH",
+            "title": "Agent eval label test",
+            "body": "Label test."
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_footer_comment",
+      "verdict": "fail",
+      "success": false,
+      "failure_reason": "TOOL_IMPLEMENTATION",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I was unable to create the page as requested. The server returned a \"Not found\" error when I attempted to create the page in space \"SYNTH\", and again when I attempted to create it in the default space. As a result, I am unable to add a comment to the page.",
+      "judge_reasoning": "The create_page tool returned a 404 error when the agent attempted to use it, suggesting the tool's underlying implementation or endpoint configuration is broken.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "Comment target.",
+            "space_key": "SYNTH",
+            "title": "Agent eval comment test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "Comment target.",
+            "title": "Agent eval comment test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "list_page_versions",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 6,
+      "num_tool_calls": 5,
+      "num_errors": 5,
+      "final_answer": "I am unable to complete your request. After multiple attempts to create a page and a space, and to list the available spaces, every request to the Confluence API has resulted in a \"404 Not found\" error. This indicates a fundamental issue with accessing the Confluence instance, preventing me from creating, updating, or retrieving any information.",
+      "judge_reasoning": "Every tool call returned a 404 error, indicating the server was unable to communicate with the Confluence instance.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent eval version test",
+            "body": "Version 1.",
+            "space_key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_space",
+          "arguments": {
+            "key": "SYNTH",
+            "name": "Agent eval version test space"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "space_key": "SYNTH",
+            "body": "Version 1.",
+            "title": "Agent eval version test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "Version 1.",
+            "space_key": "SYNTH",
+            "title": "Agent eval version test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_blog_post",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 3,
+      "num_tool_calls": 2,
+      "num_errors": 2,
+      "final_answer": "I am unable to create the blog post. The Confluence space \"SYNTH\" was not found, and I was also unable to list the available spaces. Please ensure that the space exists and that I have the necessary permissions to access it.",
+      "judge_reasoning": "The tools returned 404 errors for both creating a blog post and listing spaces, indicating the environment or tool configuration was broken.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_blog_post",
+          "arguments": {
+            "space_key": "SYNTH",
+            "body": "This blog post was created by the agent harness.",
+            "title": "Agent eval blog post"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "upload_attachment",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I am sorry, but I was unable to create the page. All of my attempts to communicate with the Confluence server are resulting in a \"Not Found\" error. This suggests there may be a problem with the Confluence service itself.",
+      "judge_reasoning": "The agent encountered 404 errors for all tool calls, and the server lacked a tool to upload attachments.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "space_key": "SYNTH",
+            "body": "Attachment target.",
+            "title": "Agent eval attachment test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_space",
+          "arguments": {
+            "name": "SYNTH",
+            "key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "set_content_property",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 6,
+      "num_tool_calls": 5,
+      "num_errors": 5,
+      "final_answer": "I am unable to complete your request. I was unable to create the page in the \"SYNTH\" space, or any other space, as all my attempts to create a page or even list the available spaces failed with a \"Not found\" error. Without a page, I cannot set or get a content property.",
+      "judge_reasoning": "Every tool call made by the agent resulted in a 404 error, indicating the server was not correctly connected to a functional Confluence instance.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "Property target.",
+            "space_key": "SYNTH",
+            "title": "Agent eval property test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "space_key": "CONFLUENCE_SPACE_KEY",
+            "body": "Property target.",
+            "title": "Agent eval property test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "body": "Property target.",
+            "title": "Agent eval property test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "search_content",
+          "arguments": {
+            "cql": "title = \"Agent eval property test\""
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "full_page_lifecycle",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am unable to complete your request. After numerous attempts to use the Confluence API, every single command has failed with a \"Not found\" error. This includes trying to create a page, list spaces, create a space, and even get the current user. This consistent failure indicates that the Confluence API is unavailable or not configured correctly. Therefore, I cannot perform any of the actions you have requested.",
+      "judge_reasoning": "Every tool call resulted in a 404 error, indicating a fundamental configuration or connectivity issue with the Confluence environment.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "space_key": "SYNTH",
+            "body": "Lifecycle test page.",
+            "title": "Agent eval lifecycle test"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_space",
+          "arguments": {
+            "name": "SYNTH",
+            "key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "get_current_user",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_page_hierarchy",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 5,
+      "num_tool_calls": 4,
+      "num_errors": 4,
+      "final_answer": "I am unable to complete your request. My attempts to create a page in the \"SYNTH\" space, list available spaces, create a page in the default space, and search for the page have all resulted in \"404 Not Found\" errors. This indicates a problem with the Confluence environment that is preventing me from creating or accessing content. Therefore, I cannot provide the parent page ID, child page ID, or child page title as requested.",
+      "judge_reasoning": "Every tool call made by the agent resulted in a 404 Not Found error, indicating the underlying environment or API connection was not functional.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent eval parent page",
+            "body": "Parent page.",
+            "space_key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "list_spaces",
+          "arguments": {},
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent eval parent page",
+            "body": "Parent page."
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "search_content",
+          "arguments": {
+            "cql": "title=\"Agent eval parent page\""
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "get_nonexistent_page",
+      "verdict": "pass",
+      "success": true,
+      "failure_reason": "",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "I received a 404 Not Found error, indicating that a Confluence page with the ID \"999999999\" does not exist.",
+      "judge_reasoning": "The agent successfully used the get_page tool to attempt to retrieve the non-existent page and correctly reported the resulting 404 error.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "get_page",
+          "arguments": {
+            "page_id": "999999999"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "create_page_missing_space",
+      "verdict": "pass",
+      "success": true,
+      "failure_reason": "",
+      "server_sufficient": true,
+      "judge_reliable": true,
+      "num_turns": 2,
+      "num_tool_calls": 1,
+      "num_errors": 1,
+      "final_answer": "I received a 404 error with the message \"Not found\" when I tried to create a page in the \"DOESNOTEXIST\" space.",
+      "judge_reasoning": "The agent successfully used the create_page tool, received a 404 error as expected, and reported it.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Test Page",
+            "space_key": "DOESNOTEXIST"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    },
+    {
+      "id": "cql_create_and_search",
+      "verdict": "undefined",
+      "success": false,
+      "failure_reason": "ENVIRONMENT",
+      "server_sufficient": false,
+      "judge_reliable": true,
+      "num_turns": 4,
+      "num_tool_calls": 3,
+      "num_errors": 3,
+      "final_answer": "I was unable to create the page in space \"SYNTH\" with the title \"Agent CQL Verify Test\". The creation failed, and a subsequent search for the page also came up empty. Therefore, I could not proceed with the request to report on the search results and delete the page.",
+      "judge_reasoning": "The agent attempted to use the correct tools with the correct parameters, but the server returned 404 errors for both page creation and content searching, indicating an environment or implementation issue.",
+      "error": "",
+      "tool_calls": [
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent CQL Verify Test",
+            "body": "CQL verification page.",
+            "space_key": "SYNTH"
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "search_content",
+          "arguments": {
+            "cql": "title = \"Agent CQL Verify Test\" AND space = \"SYNTH\""
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        },
+        {
+          "name": "create_page",
+          "arguments": {
+            "title": "Agent CQL Verify Test",
+            "space_key": "SYNTH",
+            "body": "CQL verification page."
+          },
+          "result": {
+            "error": "Not found",
+            "status": 404
+          },
+          "error": true
+        }
+      ]
+    }
+  ]
+}

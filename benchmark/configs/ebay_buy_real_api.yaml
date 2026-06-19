@@ -1,0 +1,150 @@
+# eBay Buy API Real API Testing Configuration
+#
+# This config defines what's needed to test the eBay Buy MCP server against
+# the real eBay API (sandbox environment).
+
+api_name: "eBay Buy"
+api_version: "REST API v1"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  EBAY_APP_ID:
+    description: "eBay Application ID (Client ID)"
+    how_to_get:
+      url: "https://developer.ebay.com/my/keys"
+      steps:
+        - "Sign in to eBay Developers Program"
+        - "Navigate to 'My Account' > 'Application Keys'"
+        - "Create new application or use existing one"
+        - "Select 'Sandbox' keyset for testing"
+        - "Copy the 'App ID (Client ID)'"
+      notes:
+        - "Sandbox keys recommended for testing"
+        - "Buy APIs use application token (Client Credentials flow)"
+        - "No user token or refresh token needed"
+    validation: "^[a-zA-Z0-9_-]{20,}$"
+    example: "MyAppNam-MCPBench-SBX-1a2b3c4d5"
+
+  EBAY_CERT_ID:
+    description: "eBay Cert ID (Client Secret)"
+    how_to_get:
+      url: "https://developer.ebay.com/my/keys"
+      notes:
+        - "Found on the Application Keys page under your selected keyset"
+        - "Click 'Show' or the copy icon to reveal the value"
+        - "Keep this secret — never commit to version control"
+    validation: "^[a-zA-Z0-9_-]{20,}$"
+
+  EBAY_ENVIRONMENT:
+    description: "Environment to use (SANDBOX or PRODUCTION)"
+    how_to_get:
+      notes:
+        - "SANDBOX: Recommended for testing"
+        - "PRODUCTION: Real eBay listings"
+    validation: "^(SANDBOX|PRODUCTION)$"
+    default: "SANDBOX"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_url: "https://api.sandbox.ebay.com"
+sandbox_notes: |
+  eBay Sandbox for Buy APIs:
+    ✅ Application token (no user login required)
+    ✅ Browse, Deal, Feed, Marketing, Offer APIs available
+    ⚠️  Sandbox may have limited item data vs production
+    ⚠️  Deal events and feeds may be sparse in sandbox
+
+  Authentication:
+    Buy APIs use Client Credentials OAuth flow:
+    POST https://api.sandbox.ebay.com/identity/v1/oauth2/token
+    Scope: https://api.ebay.com/oauth/api_scope
+
+rate_limits:
+  default: "5,000 calls/day per application"
+  notes: |
+    - Sandbox and Production have separate quotas
+    - Feed API has lower limits (1,000/day)
+    - Monitor usage in eBay Developer Dashboard
+
+cleanup_notes: |
+  Buy APIs are read-only (search, browse, deals):
+    - No cleanup needed — no resources are created
+    - Safe to run repeatedly without side effects
+
+# ==============================================================================
+# TEST COVERAGE BY API
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 28
+
+  by_api:
+    browse:
+      endpoints: 7
+      description: "Search, get item, item groups, image search"
+      priority: "critical"
+      scenarios: [1, 2, 3, 4, 5, 10]
+
+    deal:
+      endpoints: 4
+      description: "Daily deals, deal events"
+      priority: "high"
+      scenarios: [6, 7]
+
+    feed:
+      endpoints: 4
+      description: "Item feeds and snapshots"
+      priority: "medium"
+      scenarios: [8]
+
+    marketing:
+      endpoints: 1
+      description: "Merchandised product recommendations"
+      priority: "medium"
+      scenarios: [9]
+
+    offer:
+      endpoints: 2
+      description: "Bidding, proxy bids"
+      priority: "low"
+      scenarios: []
+
+    order:
+      endpoints: 8
+      description: "Guest checkout flow"
+      priority: "low"
+      scenarios: []
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  credential_storage: |
+    - Store App ID and Cert ID in .env file (gitignored)
+    - Never commit credentials to version control
+    - Use sandbox credentials for testing
+
+  safe_testing: |
+    - Buy APIs are read-only (no writes, no transactions)
+    - Safe to test in both sandbox and production
+    - Sandbox recommended to avoid rate limit sharing
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  developer_program: "https://developer.ebay.com/"
+  app_keys: "https://developer.ebay.com/my/keys"
+  oauth_guide: "https://developer.ebay.com/api-docs/static/oauth-tokens.html"
+  buy_apis: "https://developer.ebay.com/develop/guides/shopping-experience"
+  browse_api: "https://developer.ebay.com/api-docs/buy/browse/overview.html"
+  deal_api: "https://developer.ebay.com/api-docs/buy/deal/overview.html"

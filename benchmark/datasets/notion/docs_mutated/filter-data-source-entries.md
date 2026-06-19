@@ -1,0 +1,358 @@
+# query_filter-data-source-entries
+
+*Source: https://developers.notion.com/reference/query_filter-data-source-entries*
+
+---
+
+##### Notion API
+
+##### Objects
+
+##### Endpoints
+
+##### Webhook events
+
+## ​The query_filter object
+
+## ​Type-specific query_filter conditions
+
+### ​Checkbox
+
+### ​Date
+
+### ​Files
+
+### ​Formula
+
+### ​Multi-select
+
+### ​Number
+
+### ​People
+
+### ​Relation
+
+### ​Rich text
+
+### ​Rollup
+
+#### ​Filter conditions forarrayrollup values
+
+#### ​Filter conditions fordaterollup values
+
+#### ​Filter conditions fornumberrollup values
+
+### ​Select
+
+### ​Status
+
+### ​Timestamp
+
+### ​Verification
+
+### ​ID
+
+## ​Compound query_filter conditions
+
+### ​Example compound query_filter conditions
+
+```
+curl-XPOST'https://api.notion.com/v1/data_sources/897e5a76ae524b489fdfe71f5945d1af/query'\-H'Authorization: Bearer '"$NOTION_API_KEY"''\-H'Notion-Version: 2026-03-11'\-H"Content-Type: application/json"\--data'{"query_filter": {"property": "Task completed","checkbox": {"equals": true}}}'
+```
+
+```
+const{Client}=require('@notionhq/client');constnotion=newClient({auth:process.env.NOTION_API_KEY});// replace with your own data source IDconstdataSourceId='d9824bdc-8445-4327-be8b-5b47500af6ce';constfilteredRows=async()=>{constresponse=awaitnotion.databases.query({data_source_id:dataSourceId,query_filter:{property:"Task completed",checkbox:{equals:true}},});returnresponse;}
+```
+
+```
+{"and": [{"property":"Done","checkbox": {"equals":true}},{"or": [{"property":"Tags","contains":"A"},{"property":"Tags","contains":"B"}]}]}
+```
+
+```
+{"query_filter": {"property":"Task completed","checkbox": {"equals":true}}}
+```
+
+```
+{"query_filter": {"property":"Due date","date": {"on_or_after":"2023-02-08"}}}
+```
+
+```
+{"query_filter": {"property":"Blueprint","files": {"is_not_empty":true}}}
+```
+
+```
+{"query_filter": {"property":"One month deadline","formula": {"date":{"after":"2021-05-10"}}}}
+```
+
+```
+{"query_filter": {"property":"Programming language","multi_select": {"contains":"TypeScript"}}}
+```
+
+```
+{"query_filter": {"property":"Estimated working days","number": {"less_than_or_equal_to":5}}}
+```
+
+```
+{"query_filter": {"property":"Last edited by","people": {"contains":"c2f20311-9e54-4d11-8c79-7398424ae41e"}}}
+```
+
+```
+{"query_filter": {"property":"✔️ Task List","relation": {"contains":"0c1f7cb280904f18924ed92965055e32"}}}
+```
+
+```
+{"query_filter": {"property":"Description","rich_text": {"contains":"cross-team"}}}
+```
+
+```
+{"query_filter": {"property":"Related tasks","rollup": {"any": {"rich_text": {"contains":"Migrate data source"}}}}}
+```
+
+```
+{"query_filter": {"property":"Parent project due date","rollup": {"date": {"on_or_before":"2023-02-08"}}}}
+```
+
+```
+{"query_filter": {"property":"Total estimated working days","rollup": {"number": {"does_not_equal":42}}}}
+```
+
+```
+{"query_filter": {"property":"Frontend framework","select": {"equals":"React"}}}
+```
+
+```
+{"query_filter": {"property":"Project status","status": {"equals":"Not started"}}}
+```
+
+```
+{"query_filter": {"timestamp":"created_time","created_time": {"on_or_before":"2022-10-13"}}}
+```
+
+```
+{"query_filter": {"property":"verification","verification": {"status":"verified"}}}
+```
+
+```
+{"query_filter": {"and": [{"property":"ID","unique_id": {"greater_than":1}},{"property":"ID","unique_id": {"less_than":3}}]}}
+```
+
+```
+{"query_filter": {"and": [{"property":"Complete","checkbox": {"equals":true}},{"property":"Working days","number": {"greater_than":10}}]}}
+```
+
+```
+{"query_filter": {"or": [{"property":"Description","rich_text": {"contains":"2023"}},{"and": [{"property":"Department","select": {"equals":"Engineering"}},{"property":"Priority goal","checkbox": {"equals":true}}]}]}}
+```
+- Status
+- Community
+- Blog
+- Introduction
+- Integration capabilities
+- Webhooks
+- Request limits
+- Status codes
+- Versioning
+- Block
+- Page
+- Database
+- Data source
+- View
+- Comment
+- File
+- User
+- Parent
+- Emoji
+- Unfurl attribute (Link Previews)
+- Authentication
+- Blocks
+- Pages
+- Databases
+- Data sourcesPOSTCreate a data sourceGETRetrieve a data sourceGETList data source templatesUpdate a data sourceQuery a data sourcePOSTQuery a data sourceFilter data source entriesSort data source entries
+- Databases (deprecated)
+- Comments
+- Views
+- File Uploads
+- Search
+- Users
+- POSTCreate a data source
+- GETRetrieve a data source
+- GETList data source templates
+- Update a data source
+- Query a data sourcePOSTQuery a data sourceFilter data source entriesSort data source entries
+- POSTQuery a data source
+- Filter data source entries
+- Sort data source entries
+- Data sources
+- File uploads
+- The query_filter object
+- Type-specific query_filter conditions
+- Checkbox
+- Date
+- Files
+- Formula
+- Multi-select
+- Number
+- People
+- Relation
+- Rich text
+- Rollup
+- Filter conditions for array rollup values
+- Filter conditions for date rollup values
+- Filter conditions for number rollup values
+- Select
+- Timestamp
+- Verification
+- Compound query_filter conditions
+- Example compound query_filter conditions
+
+[TABLE]
+Field | Type | Description | Example value
+property | string | The name of the property as it appears in the data source, or the property ID. | "Task completed"
+checkboxdatefilesformulamulti_selectnumberpeoplephone_numberrelationrich_textselectstatustimestampverificationID | object | The type-specific query_filter condition for the query. Only types listed in the Field column of this table are supported. Refer totype-specific query_filter conditionsfor details on corresponding object values. | "checkbox": { "equals": true }
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+equals | boolean | Whether acheckboxproperty value matches the provided value exactly.Returns or excludes all data source entries with an exact value match. | false
+does_not_equal | boolean | Whether acheckboxproperty value differs from the provided value.Returns or excludes all data source entries with a difference in values. | true
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+after | string(ISO 8601 date) | The value to compare the date property value against.Returns data source entries where the date property value is after the provided date. | "2021-05-10""2021-05-10T12:00:00""2021-10-15T12:00:00-07:00"
+before | string(ISO 8601 date) | The value to compare the date property value against.Returns data source entries where the date property value is before the provided date. | "2021-05-10""2021-05-10T12:00:00""2021-10-15T12:00:00-07:00"
+equals | string(ISO 8601 date) | The value to compare the date property value against.Returns data source entries where the date property value is the provided date. | "2021-05-10""2021-05-10T12:00:00""2021-10-15T12:00:00-07:00"
+is_empty | true | The value to compare the date property value against.Returns data source entries where the date property value contains no data. | true
+is_not_empty | true | The value to compare the date property value against.Returns data source entries where the date property value is not empty. | true
+next_month | object(empty) | A query_filter that limits the results to data source entries where the date property value is within the next month. | {}
+next_week | object(empty) | A query_filter that limits the results to data source entries where the date property value is within the next week. | {}
+next_year | object(empty) | A query_filter that limits the results to data source entries where the date property value is within the next year. | {}
+on_or_after | string(ISO 8601 date) | The value to compare the date property value against.Returns data source entries where the date property value is on or after the provided date. | "2021-05-10""2021-05-10T12:00:00""2021-10-15T12:00:00-07:00"
+on_or_before | string(ISO 8601 date) | The value to compare the date property value against.Returns data source entries where the date property value is on or before the provided date. | "2021-05-10""2021-05-10T12:00:00""2021-10-15T12:00:00-07:00"
+past_month | object(empty) | A query_filter that limits the results to data source entries where thedateproperty value is within the past month. | {}
+past_week | object(empty) | A query_filter that limits the results to data source entries where thedateproperty value is within the past week. | {}
+past_year | object(empty) | A query_filter that limits the results to data source entries where thedateproperty value is within the past year. | {}
+this_week | object(empty) | A query_filter that limits the results to data source entries where thedateproperty value is this week. | {}
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+is_empty | true | Whether the files property value does not contain any data.Returns all data source entries with an emptyfilesproperty value. | true
+is_not_empty | true | Whether thefilesproperty value contains data.Returns all entries with a populatedfilesproperty value. | true
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+checkbox | object | Acheckboxfilter condition to compare the formula result against.Returns data source entries where the formula result matches the provided condition. | Refer to thecheckboxfilter condition.
+date | object | Adatefilter condition to compare the formula result against.Returns data source entries where the formula result matches the provided condition. | Refer to thedatefilter condition.
+number | object | Anumberfilter condition to compare the formula result against.Returns data source entries where the formula result matches the provided condition. | Refer to thenumberfilter condition.
+string | object | Arich textfilter condition to compare the formula result against.Returns data source entries where the formula result matches the provided condition. | Refer to therich textfilter condition.
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+contains | string | The value to compare the multi-select property value against.Returns data source entries where the multi-select value matches the provided string. | "Marketing"
+does_not_contain | string | The value to compare the multi-select property value against.Returns data source entries where the multi-select value does not match the provided string. | "Engineering"
+is_empty | true | Whether the multi-select property value is empty.Returns data source entries where the multi-select value does not contain any data. | true
+is_not_empty | true | Whether the multi-select property value is not empty.Returns data source entries where the multi-select value does contains data. | true
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+does_not_equal | number | Thenumberto compare the number property value against.Returns data source entries where the number property value differs from the providednumber. | 42
+equals | number | Thenumberto compare the number property value against.Returns data source entries where the number property value is the same as the provided number. | 42
+greater_than | number | Thenumberto compare the number property value against.Returns data source entries where the number property value exceeds the providednumber. | 42
+greater_than_or_equal_to | number | Thenumberto compare the number property value against.Returns data source entries where the number property value is equal to or exceeds the providednumber. | 42
+is_empty | true | Whether thenumberproperty value is empty.Returns data source entries where the number property value does not contain any data. | true
+is_not_empty | true | Whether the number property value is not empty.Returns data source entries where the number property value contains data. | true
+less_than | number | Thenumberto compare the number property value against.Returns data source entries where the number property value is less than the providednumber. | 42
+less_than_or_equal_to | number | Thenumberto compare the number property value against.Returns data source entries where the number property value is equal to or is less than the providednumber. | 42
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+contains | string(UUIDv4) | The value to compare the people property value against.Returns data source entries where the people property value contains the providedstring. | "6c574cee-ca68-41c8-86e0-1b9e992689fb"
+does_not_contain | string(UUIDv4) | The value to compare the people property value against.Returns data source entries where the people property value does not contain the providedstring. | "6c574cee-ca68-41c8-86e0-1b9e992689fb"
+is_empty | true | Whether the people property value does not contain any data.Returns data source entries where the people property value does not contain any data. | true
+is_not_empty | true | Whether the people property value contains data.Returns data source entries where the people property value is not empty. | true
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+contains | string(UUIDv4) | The value to compare the relation property value against.Returns data source entries where the relation property value contains the providedstring. | "6c574cee-ca68-41c8-86e0-1b9e992689fb"
+does_not_contain | string(UUIDv4) | The value to compare the relation property value against.Returns entries where the relation property value does not contain the providedstring. | "6c574cee-ca68-41c8-86e0-1b9e992689fb"
+is_empty | true | Whether the relation property value does not contain data.Returns data source entries where the relation property value does not contain any data. | true
+is_not_empty | true | Whether the relation property value contains data.Returns data source entries where the property value is not empty. | true
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+contains | string | Thestringto compare the text property value against.Returns data source entries with a text property value that includes the providedstring. | "Moved to Q2"
+does_not_contain | string | Thestringto compare the text property value against.Returns data source entries with a text property value that does not include the providedstring. | "Moved to Q2"
+does_not_equal | string | Thestringto compare the text property value against.Returns data source entries with a text property value that does not match the providedstring. | "Moved to Q2"
+ends_with | string | Thestringto compare the text property value against.Returns data source entries with a text property value that ends with the providedstring. | "Q2"
+equals | string | Thestringto compare the text property value against.Returns data source entries with a text property value that matches the providedstring. | "Moved to Q2"
+is_empty | true | Whether the text property value does not contain any data.Returns data source entries with a text property value that is empty. | true
+is_not_empty | true | Whether the text property value contains any data.Returns data source entries with a text property value that contains data. | true
+starts_with | string | Thestringto compare the text property value against.Returns data source entries with a text property value that starts with the providedstring. | ”Moved”
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+any | object | The value to compare each rollup property value against. Can be afilter conditionfor any other type.Returns data source entries where the rollup property value matches the provided criteria. | "rich_text": { "contains": "Take Fig on a walk" }
+every | object | The value to compare each rollup property value against. Can be afilter conditionfor any other type.Returns data source entries where every rollup property value matches the provided criteria. | "rich_text": { "contains": "Take Fig on a walk" }
+none | object | The value to compare each rollup property value against. Can be afilter conditionfor any other type.Returns data source entries where no rollup property value matches the provided criteria. | "rich_text": { "contains": "Take Fig on a walk" }
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+date | object | Adatefilter condition to compare the rollup value against.Returns data source entries where the rollup value matches the provided condition. | Refer to thedatefilter condition.
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+number | object | Anumberfilter condition to compare the rollup value against.Returns data source entries where the rollup value matches the provided condition. | Refer to thenumberfilter condition.
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+equals | string | Thestringto compare the select property value against.Returns data source entries where the select property value matches the provided string. | "This week"
+does_not_equal | string | Thestringto compare the select property value against.Returns data source entries where the select property value does not match the providedstring. | "Backlog"
+is_empty | true | Whether the select property value does not contain data.Returns data source entries where the select property value is empty. | true
+is_not_empty | true | Whether the select property value contains data.Returns data source entries where the select property value is not empty. | true
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+equals | string | The string to compare the status property value against.Returns data source entries where the status property value matches the provided string. | ”This week”
+does_not_equal | string | The string to compare the status property value against.Returns data source entries where the status property value does not match the provided string. | ”Backlog”
+is_empty | true | Whether the status property value does not contain data.Returns data source entries where the status property value is empty. | true
+is_not_empty | true | Whether the status property value contains data.Returns data source entries where the status property value is not empty. | true
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+timestamp | created_time last_edited_time | A constant string representing the type of timestamp to use as a query_filter. | ”created_time”
+created_time last_edited_time | object | A date query_filter condition used to query_filter the specified timestamp. | Refer to thedatefilter condition.
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+status | string | The verification status being queried. Valid options are:verified,expired,noneReturns data source entries where the current verification status matches the queried status. | ”verified”
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+does_not_equal | number | The value to compare the unique_id property value against.Returns data source entries where the unique_id property value differs from the provided value. | 42
+equals | number | The value to compare the unique_id property value against.Returns data source entries where the unique_id property value is the same as the provided value. | 42
+greater_than | number | The value to compare the unique_id property value against.Returns data source entries where the unique_id property value exceeds the provided value. | 42
+greater_than_or_equal_to | number | The value to compare the unique_id property value against.Returns data source entries where the unique_id property value is equal to or exceeds the provided value. | 42
+less_than | number | The value to compare the unique_id property value against.Returns data source entries where the unique_id property value is less than the provided value. | 42
+less_than_or_equal_to | number | The value to compare the unique_id property value against.Returns data source entries where the unique_id property value is equal to or is less than the provided value. | 42
+[/TABLE]
+
+[TABLE]
+Field | Type | Description | Example value
+and | array | An array offilterobjects or compound query_filter conditions.Returns data source entries that matchallof the provided query_filter conditions. | Refer to the examples below.
+or | array | An array offilterobjects or compound query_filter conditions.Returns data source entries that matchanyof the provided query_filter conditions | Refer to the examples below.
+[/TABLE]

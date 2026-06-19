@@ -1,0 +1,242 @@
+{
+  "get_authenticated_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/verify_credentials"
+  },
+  "update_account_profile": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "PATCH /api/v1/accounts/update_credentials"
+  },
+  "get_account_by_id": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id"
+  },
+  "get_account_statuses": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/statuses"
+  },
+  "follow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/follow"
+  },
+  "unfollow_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unfollow"
+  },
+  "get_followers": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/followers"
+  },
+  "get_following": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "GET /api/v1/accounts/:id/following"
+  },
+  "block_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/block"
+  },
+  "unblock_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unblock"
+  },
+  "mute_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/mute"
+  },
+  "unmute_account": {
+    "doc": "docs/api_accounts.md",
+    "endpoint": "POST /api/v1/accounts/:id/unmute"
+  },
+  "post_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses"
+  },
+  "get_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id"
+  },
+  "get_statuses": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses"
+  },
+  "delete_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "DELETE /api/v1/statuses/:id"
+  },
+  "get_status_context": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "GET /api/v1/statuses/:id/context"
+  },
+  "boost_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/reblog"
+  },
+  "unboost_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unreblog"
+  },
+  "favourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/favourite"
+  },
+  "unfavourite_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unfavourite"
+  },
+  "bookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/bookmark"
+  },
+  "unbookmark_status": {
+    "doc": "docs/api_statuses.md",
+    "endpoint": "POST /api/v1/statuses/:id/unbookmark"
+  },
+  "list_favourites": {
+    "doc": "docs/api_favourites.md",
+    "endpoint": "GET /api/v1/favourites"
+  },
+  "list_bookmarks": {
+    "doc": "docs/api_bookmarks.md",
+    "endpoint": "GET /api/v1/bookmarks"
+  },
+  "get_home_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/home"
+  },
+  "get_public_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/public"
+  },
+  "get_hashtag_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/tag/:hashtag"
+  },
+  "get_list_timeline": {
+    "doc": "docs/api_timelines.md",
+    "endpoint": "GET /api/v1/timelines/list/:list_id"
+  },
+  "list_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications"
+  },
+  "get_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "GET /api/v1/notifications/:id"
+  },
+  "dismiss_notification": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/:id/dismiss"
+  },
+  "clear_all_notifications": {
+    "doc": "docs/api_notifications.md",
+    "endpoint": "POST /api/v1/notifications/clear"
+  },
+  "search_accounts": {
+    "doc": "docs/api_search.md",
+    "endpoint": "GET /api/v1/search"
+  },
+  "search_statuses": {
+    "doc": "docs/api_search.md",
+    "endpoint": "GET /api/v1/search"
+  },
+  "search_hashtags": {
+    "doc": "docs/api_search.md",
+    "endpoint": "GET /api/v1/search"
+  },
+  "create_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists"
+  },
+  "get_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id"
+  },
+  "update_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "PUT /api/v1/lists/:id"
+  },
+  "delete_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id"
+  },
+  "list_lists": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists"
+  },
+  "get_accounts_in_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "GET /api/v1/lists/:id/accounts"
+  },
+  "add_accounts_to_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "POST /api/v1/lists/:id/accounts"
+  },
+  "remove_accounts_from_list": {
+    "doc": "docs/api_lists.md",
+    "endpoint": "DELETE /api/v1/lists/:id/accounts"
+  },
+  "upload_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "POST /api/v1/media"
+  },
+  "update_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "PUT /api/v1/media/:id"
+  },
+  "get_media": {
+    "doc": "docs/api_media.md",
+    "endpoint": "GET /api/v1/media/:id"
+  },
+  "get_instance_info": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance"
+  },
+  "get_instance_peers": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance/peers"
+  },
+  "get_instance_activity": {
+    "doc": "docs/api_instance.md",
+    "endpoint": "GET /api/v1/instance/activity"
+  },
+  "list_scheduled_statuses": {
+    "doc": "docs/api_scheduled_statuses.md",
+    "endpoint": "GET /api/v1/scheduled_statuses"
+  },
+  "get_scheduled_status": {
+    "doc": "docs/api_scheduled_statuses.md",
+    "endpoint": "GET /api/v1/scheduled_statuses/:id"
+  },
+  "update_scheduled_status": {
+    "doc": "docs/api_scheduled_statuses.md",
+    "endpoint": "PUT /api/v1/scheduled_statuses/:id"
+  },
+  "cancel_scheduled_status": {
+    "doc": "docs/api_scheduled_statuses.md",
+    "endpoint": "DELETE /api/v1/scheduled_statuses/:id"
+  },
+  "get_push_subscription": {
+    "doc": "docs/api_push.md",
+    "endpoint": "GET /api/v1/push/subscription"
+  },
+  "update_push_subscription": {
+    "doc": "docs/api_push.md",
+    "endpoint": "PUT /api/v1/push/subscription"
+  },
+  "delete_push_subscription": {
+    "doc": "docs/api_push.md",
+    "endpoint": "DELETE /api/v1/push/subscription"
+  },
+  "get_poll": {
+    "doc": "docs/api_polls.md",
+    "endpoint": "GET /api/v1/polls/:id"
+  },
+  "vote_on_poll": {
+    "doc": "docs/api_polls.md",
+    "endpoint": "POST /api/v1/polls/:id/votes"
+  },
+  "create_report": {
+    "doc": "docs/api_reports.md",
+    "endpoint": "POST /api/v1/reports"
+  }
+}

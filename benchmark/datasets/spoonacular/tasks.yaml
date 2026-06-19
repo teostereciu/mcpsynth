@@ -1,0 +1,195 @@
+# Agent evaluation tasks for Spoonacular Food API MCP server.
+#
+# Required env vars: SPOONACULAR_API_KEY
+#
+# All tasks are read-only (recipe data). No test account state needed.
+
+tasks:
+  # ---------- RECIPE SEARCH ----------
+
+  - id: search_recipes_by_query
+    prompt: >
+      Search for recipes matching the query "pasta carbonara".
+      Report the titles and IDs of the top 3 results.
+    expected: id
+    tags: [read]
+    # Tests: complexSearch with query parameter; "id" appears in correctly
+    # parsed recipe result objects.
+
+  - id: search_recipes_by_ingredient
+    prompt: >
+      Search for recipes that use "chicken" and "lemon" as ingredients.
+      Report the titles of the top 3 results.
+    expected: title
+    tags: [read]
+    # Tests: search by ingredients (includeIngredients parameter).
+
+  - id: search_vegetarian_recipes
+    prompt: >
+      Search for vegetarian pasta recipes.
+      Report the titles and IDs of the top 3 results.
+    expected: id
+    tags: [read]
+    # Tests: complexSearch with diet filter parameter.
+
+  # ---------- RECIPE INFORMATION ----------
+
+  - id: get_recipe_information
+    prompt: >
+      Get detailed information about the recipe with ID 716429 (a classic pasta dish).
+      Report the title, number of servings, and preparation time in minutes.
+    expected: readyInMinutes
+    tags: [read]
+    # Tests: GET /recipes/{id}/information; "readyInMinutes" is a specific field
+    # that only appears in a correctly parsed recipe response.
+
+  - id: get_recipe_ingredients
+    prompt: >
+      Get the ingredient list for the recipe with ID 716429.
+      Report the name and amount of each ingredient.
+    expected: amount
+    tags: [read]
+    # Tests: ingredient-focused endpoint (information with includeNutrition=false
+    # or ingredientWidget endpoint); "amount" appears in ingredient objects.
+
+  - id: get_recipe_instructions
+    prompt: >
+      Get the step-by-step cooking instructions for recipe ID 716429.
+      Report how many steps there are and summarize the first step.
+    expected: step
+    tags: [read]
+    # Tests: GET /recipes/{id}/analyzedInstructions; "step" appears in instruction objects.
+
+  - id: get_similar_recipes
+    prompt: >
+      Get recipes similar to recipe ID 716429.
+      Report the titles and IDs of the top 3 similar recipes.
+    expected: id
+    tags: [read]
+    # Tests: GET /recipes/{id}/similar endpoint.
+
+  # ---------- INGREDIENTS ----------
+
+  - id: search_ingredients
+    prompt: >
+      Search for ingredients matching the query "apple".
+      Report the names and IDs of the top 5 results.
+    expected: id
+    tags: [read]
+    # Tests: ingredient search endpoint.
+
+  - id: get_ingredient_information
+    prompt: >
+      Get nutritional information for the ingredient with ID 9003 (apple) per 100g.
+      Report the name and calorie count.
+    expected: calories
+    tags: [read]
+    # Tests: GET /food/ingredients/{id}/information with amount parameter.
+
+  # ---------- MEAL PLANNING ----------
+
+  - id: generate_meal_plan
+    prompt: >
+      Generate a daily meal plan targeting 2000 calories with a vegetarian diet.
+      Report the meals suggested and the total calories.
+    expected: calories
+    tags: [read]
+    # Tests: GET /mealplanner/generate with targetCalories and diet parameters.
+
+  # ---------- WINE ----------
+
+  - id: get_wine_pairing
+    prompt: >
+      Get wine pairing suggestions for "steak".
+      Report the recommended wine types and a brief description.
+    expected: pairedWines
+    tags: [read]
+    # Tests: wine pairing endpoint; "pairedWines" only appears in a correctly
+    # parsed pairing response.
+
+  # ---------- MULTI-STEP ----------
+
+  # Discriminates: does the agent chain search → get full info and surface
+  # fields that only appear in the detailed endpoint, not the search result?
+  - id: search_then_get_info
+    prompt: >
+      Search for recipes matching "chicken tikka masala". Take the ID of the
+      top result. Retrieve the full recipe information for that ID. Report the
+      recipe title, ready-in time, number of servings, and whether it is
+      gluten free.
+    expected: glutenFree
+    tags: [read, multi-step]
+    # Tests: complexSearch → GET /recipes/{id}/information.
+    # "glutenFree" only appears in the full information response, not search results.
+    # Discriminates agents that make both calls vs. returning only search metadata.
+
+  # Discriminates: does the agent get analyzed instructions (not just info)
+  # and correctly count and surface steps from the instructions array?
+  - id: recipe_info_then_instructions
+    prompt: >
+      Get detailed information for recipe ID 715538 (chicken stir fry).
+      Report the title and ready-in time. Then get the analyzed step-by-step
+      instructions for that recipe. Report the total number of steps and the
+      equipment listed in step 1.
+    expected: equipment
+    tags: [read, multi-step]
+    # Tests: GET /recipes/{id}/information → GET /recipes/{id}/analyzedInstructions.
+    # "equipment" only appears in the analyzedInstructions response objects,
+    # not in the recipe information endpoint.
+
+  # Discriminates: does the agent search, then fetch similar recipes, then
+  # surface IDs from the similar endpoint rather than the original search?
+  - id: search_then_similar
+    prompt: >
+      Search for recipes matching "beef stew". Take the top result's ID and
+      title. Then fetch up to 3 recipes similar to that result. Report the
+      original recipe's title, then list the titles and IDs of the similar
+      recipes returned.
+    expected: sourceUrl
+    tags: [read, multi-step]
+    # Tests: complexSearch → GET /recipes/{id}/similar.
+    # "sourceUrl" only appears in similar-recipes response objects (not search results).
+    # Discriminates agents that call the similar endpoint vs. doing a second search.
+
+  # ---------- HARDER ----------
+
+  # Discriminates: must chain search → get info → get nutrition summary and
+  # extract per-nutrient data from the nutrition endpoint, not the info response.
+  - id: search_recipe_nutrition_chain
+    prompt: >
+      Search for "avocado toast" recipes. Take the top result's ID. Retrieve
+      the full recipe information including nutrition (includeNutrition=true).
+      From the nutrition data, report the amount of calories, protein, and fat
+      per serving. Also get the ingredient list and report how many ingredients
+      are in the recipe.
+    expected: nutrients
+    tags: [read, multi-step, harder]
+    # Tests: complexSearch → GET /recipes/{id}/information?includeNutrition=true.
+    # "nutrients" is nested inside the nutrition object in the full info response;
+    # the agent must set includeNutrition=true and parse the nested structure.
+    # Discriminates agents that call the correct parameter variant.
+
+  # Discriminates: must search with a nutrient constraint, get similar to one
+  # result, then compare prep times — threading IDs across 3 endpoint calls.
+  - id: nutrient_search_then_compare
+    prompt: >
+      Search for recipes with a maximum of 500 calories that include "salmon".
+      Take the top 2 results. For each, get the full recipe information and
+      note the ready-in time and number of servings. Report both recipes'
+      titles, ready-in times, and which takes less time to prepare.
+    expected: readyInMinutes
+    tags: [read, multi-step, harder]
+    # Tests: complexSearch (with maxCalories + query params) → GET /recipes/{id}/information
+    # called twice, once per result ID.
+    # "readyInMinutes" must appear in both retrieved info responses.
+    # Discriminates agents that thread two IDs and make three total API calls.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: get_nonexistent_recipe
+    prompt: >
+      Try to get information about recipe ID 999999999 (which does not exist).
+      Report what error or response you receive.
+    expected: error
+    tags: [read, error-handling]
+    # Tests: 404/error handling for a nonexistent recipe ID.

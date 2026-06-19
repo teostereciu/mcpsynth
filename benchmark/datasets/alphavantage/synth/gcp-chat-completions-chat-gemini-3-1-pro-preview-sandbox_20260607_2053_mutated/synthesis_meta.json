@@ -1,0 +1,12 @@
+{
+  "dataset": "alphavantage",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 325.10297894477844,
+  "token_usage": {
+    "input_tokens": 1067012,
+    "output_tokens": 3970
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_2053"
+}

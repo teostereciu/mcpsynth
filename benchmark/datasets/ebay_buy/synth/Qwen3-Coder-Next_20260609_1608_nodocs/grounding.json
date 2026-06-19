@@ -1,0 +1,126 @@
+{
+  "get_item": {
+    "doc": "docs/category/get-item.md",
+    "endpoint": "GET /buy/browse/v1/item/{id}"
+  },
+  "search_items": {
+    "doc": "docs/category/search-items.md",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "get_categories": {
+    "doc": "docs/category/get-categories.md",
+    "endpoint": "GET /buy/browse/v1/category"
+  },
+  "get_category_tree": {
+    "doc": "docs/category/get-category-tree.md",
+    "endpoint": "GET /buy/browse/v1/category_tree"
+  },
+  "get_deals": {
+    "doc": "docs/deal/get-deals.md",
+    "endpoint": "GET /buy/deal/v1/deal"
+  },
+  "get_deal_items": {
+    "doc": "docs/deal/get-deal-items.md",
+    "endpoint": "GET /buy/deal/v1/deal/{deal_id}/item"
+  },
+  "get_events": {
+    "doc": "docs/deal/get-events.md",
+    "endpoint": "GET /buy/deal/v1/event"
+  },
+  "get_event_items": {
+    "doc": "docs/deal/get-event-items.md",
+    "endpoint": "GET /buy/deal/v1/event/{event_id}/item"
+  },
+  "get_feed_list": {
+    "doc": "docs/feed/get-feed-list.md",
+    "endpoint": "GET /sell/feed/v1/feed"
+  },
+  "get_feed_status": {
+    "doc": "docs/feed/get-feed-status.md",
+    "endpoint": "GET /sell/feed/v1/feed/{feed_id}"
+  },
+  "get_feed_result": {
+    "doc": "docs/feed/get-feed-result.md",
+    "endpoint": "GET /sell/feed/v1/feed/{feed_id}/result"
+  },
+  "get_snapshot_list": {
+    "doc": "docs/feed/get-snapshot-list.md",
+    "endpoint": "GET /sell/feed/v1/snapshot"
+  },
+  "get_snapshot_status": {
+    "doc": "docs/feed/get-snapshot-status.md",
+    "endpoint": "GET /sell/feed/v1/snapshot/{snapshot_id}"
+  },
+  "get_snapshot_result": {
+    "doc": "docs/feed/get-snapshot-result.md",
+    "endpoint": "GET /sell/feed/v1/snapshot/{snapshot_id}/result"
+  },
+  "create_order": {
+    "doc": "docs/order/create-order.md",
+    "endpoint": "POST /buy/order/v1/order"
+  },
+  "get_order": {
+    "doc": "docs/order/get-order.md",
+    "endpoint": "GET /buy/order/v1/order/{id}"
+  },
+  "update_order": {
+    "doc": "docs/order/update-order.md",
+    "endpoint": "PUT /buy/order/v1/order/{id}"
+  },
+  "cancel_order": {
+    "doc": "docs/order/cancel-order.md",
+    "endpoint": "POST /buy/order/v1/order/{id}/cancel"
+  },
+  "get_order_list": {
+    "doc": "docs/order/get-order-list.md",
+    "endpoint": "GET /buy/order/v1/order"
+  },
+  "create_guest_checkout_session": {
+    "doc": "docs/order/create-guest-checkout-session.md",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session"
+  },
+  "get_guest_checkout_session": {
+    "doc": "docs/order/get-guest-checkout-session.md",
+    "endpoint": "GET /buy/order/v1/guest_checkout_session/{id}"
+  },
+  "get_item_summary": {
+    "doc": "docs/browse/get-item-summary.md",
+    "endpoint": "GET /buy/browse/v1/item/{id}/summary"
+  },
+  "get_item_relationships": {
+    "doc": "docs/browse/get-item-relationships.md",
+    "endpoint": "GET /buy/browse/v1/item/{id}/relationships"
+  },
+  "get_item_seller_info": {
+    "doc": "docs/browse/get-item-seller-info.md",
+    "endpoint": "GET /buy/browse/v1/item/{id}/seller_info"
+  },
+  "get_item_variations": {
+    "doc": "docs/browse/get-item-variations.md",
+    "endpoint": "GET /buy/browse/v1/item/{id}/variations"
+  },
+  "get_user_reviews": {
+    "doc": "docs/browse/get-user-reviews.md",
+    "endpoint": "GET /buy/browse/v1/user/{user_id}/review"
+  },
+  "get_item_reviews": {
+    "doc": "docs/browse/get-item-reviews.md",
+    "endpoint": "GET /buy/browse/v1/item/{id}/review"
+  },
+  "search_item_groups": {
+    "doc": "docs/browse/search-item-groups.md",
+    "endpoint": "GET /buy/browse/v1/item_group/search"
+  },
+  "get_item_group": {
+    "doc": "docs/browse/get-item-group.md",
+    "endpoint": "GET /buy/browse/v1/item_group/{id}"
+  },
+  "get_item_group_items": {
+    "doc": "docs/browse/get-item-group-items.md",
+    "endpoint": "GET /buy/browse/v1/item_group/{id}/item"
+  },
+  "get_inventory_items": {
+    "doc": "docs/browse/get-inventory-items.md",
+    "endpoint": "GET /buy/inventory/v1/inventory_item"
+  }
+}

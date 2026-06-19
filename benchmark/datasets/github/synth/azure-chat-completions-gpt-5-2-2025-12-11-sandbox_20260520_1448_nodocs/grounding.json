@@ -1,0 +1,210 @@
+{
+  "github_list_issues": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues"
+  },
+  "github_get_issue": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "github_create_issue": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues"
+  },
+  "github_update_issue": {
+    "doc": "TASK.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"
+  },
+  "github_lock_issue": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/issues/{issue_number}/lock"
+  },
+  "github_unlock_issue": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/lock"
+  },
+  "github_list_issue_comments": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "github_create_issue_comment": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/comments"
+  },
+  "github_update_issue_comment": {
+    "doc": "TASK.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "github_delete_issue_comment": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/comments/{comment_id}"
+  },
+  "github_add_labels": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/labels"
+  },
+  "github_remove_label": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/issues/{issue_number}/labels/{name}"
+  },
+  "github_list_pull_requests": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls"
+  },
+  "github_get_pull_request": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "github_create_pull_request": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls"
+  },
+  "github_update_pull_request": {
+    "doc": "TASK.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/pulls/{pull_number}"
+  },
+  "github_list_pull_reviews": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}/reviews"
+  },
+  "github_create_pull_review": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/pulls/{pull_number}/reviews"
+  },
+  "github_merge_pull_request": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"
+  },
+  "github_get_repository": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}"
+  },
+  "github_create_repository": {
+    "doc": "TASK.md",
+    "endpoint": "POST /user/repos"
+  },
+  "github_fork_repository": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/forks"
+  },
+  "github_list_branches": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches"
+  },
+  "github_get_branch": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}"
+  },
+  "github_list_commits": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/commits"
+  },
+  "github_get_commit": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/commits/{ref}"
+  },
+  "github_get_content": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/contents/{path}"
+  },
+  "github_put_content": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/contents/{path}"
+  },
+  "github_delete_content": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/contents/{path}"
+  },
+  "github_get_branch_protection": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/branches/{branch}/protection"
+  },
+  "github_update_branch_protection": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /repos/{owner}/{repo}/branches/{branch}/protection"
+  },
+  "github_list_releases": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/releases"
+  },
+  "github_get_release": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "github_create_release": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/releases"
+  },
+  "github_update_release": {
+    "doc": "TASK.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "github_delete_release": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/releases/{release_id}"
+  },
+  "github_list_workflows": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows"
+  },
+  "github_get_workflow": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}"
+  },
+  "github_list_workflow_runs": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/runs OR GET /repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs"
+  },
+  "github_get_workflow_run": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/actions/runs/{run_id}"
+  },
+  "github_rerun_workflow_run": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/actions/runs/{run_id}/rerun"
+  },
+  "github_cancel_workflow_run": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/actions/runs/{run_id}/cancel"
+  },
+  "github_dispatch_workflow": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches"
+  },
+  "github_search_code": {
+    "doc": "TASK.md",
+    "endpoint": "GET /search/code"
+  },
+  "github_search_issues": {
+    "doc": "TASK.md",
+    "endpoint": "GET /search/issues"
+  },
+  "github_search_repositories": {
+    "doc": "TASK.md",
+    "endpoint": "GET /search/repositories"
+  },
+  "github_list_repo_webhooks": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/hooks"
+  },
+  "github_get_repo_webhook": {
+    "doc": "TASK.md",
+    "endpoint": "GET /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "github_create_repo_webhook": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/hooks"
+  },
+  "github_update_repo_webhook": {
+    "doc": "TASK.md",
+    "endpoint": "PATCH /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "github_delete_repo_webhook": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /repos/{owner}/{repo}/hooks/{hook_id}"
+  },
+  "github_ping_repo_webhook": {
+    "doc": "TASK.md",
+    "endpoint": "POST /repos/{owner}/{repo}/hooks/{hook_id}/pings"
+  }
+}

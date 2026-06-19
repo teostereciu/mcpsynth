@@ -1,0 +1,260 @@
+# Agent evaluation tasks for OpenWeatherMap MCP server.
+#
+# Required env vars: OPENWEATHER_API_KEY
+#
+# See benchmark/TASK_CREATION_GUIDE.md for prompt writing principles,
+# difficulty calibration, and the full checklist.
+#
+# Dataset note: tasks ask for temperatures in Celsius without mentioning a
+# `units` parameter. The agent must discover from tool docs that metric units
+# must be requested explicitly (default is Kelvin). This is the primary
+# difficulty driver for this dataset.
+
+tasks:
+  # ---------- CURRENT WEATHER ----------
+
+  - id: current_weather_london
+    prompt: >
+      What is the current weather in London, UK? Report the temperature in
+      Celsius, weather description, and humidity percentage.
+    expected: humidity
+    tags: [read]
+    # Tests: current weather tool + units parameter. No "metric" or "units"
+    # hint given; the agent must find this from tool docs.
+
+  - id: weather_feels_like
+    prompt: >
+      Get the current weather for Tokyo, Japan. Report both the actual
+      temperature and the "feels like" temperature in Celsius.
+    expected: feels_like
+    tags: [read]
+    # Tests: feels_like field extraction. Only present in correctly structured
+    # weather responses; verifies the agent can navigate the response object.
+
+  - id: wind_conditions
+    prompt: >
+      Get the current wind conditions in Chicago, USA. Report the wind speed
+      and wind direction in degrees.
+    expected: wind
+    tags: [read]
+    # Tests: wind sub-object parsing from the weather response.
+
+  - id: cloud_and_visibility
+    prompt: >
+      Get the current weather for Dubai, UAE. Report the cloud coverage
+      percentage and visibility in metres.
+    expected: clouds
+    tags: [read]
+    # Tests: clouds and visibility field extraction. Less commonly surfaced,
+    # tests response completeness and field coverage.
+
+  - id: pressure_and_humidity
+    prompt: >
+      Get the current weather for Mumbai, India. Report the atmospheric
+      pressure (hPa) and humidity percentage.
+    expected: pressure
+    tags: [read]
+    # Tests: pressure field; tests that the server surfaces the full main
+    # weather object and not just temp/description.
+
+  - id: sunrise_sunset
+    prompt: >
+      Get the current weather for Helsinki, Finland. Report the sunrise and
+      sunset times (convert from Unix timestamps to a human-readable time,
+      including the UTC offset from the timezone field).
+    expected: sunrise
+    tags: [read]
+    # Tests: sys.sunrise and sys.sunset field extraction + Unix timestamp
+    # conversion. These fields are inside the nested "sys" object and are
+    # commonly skipped by agents that only surface temp/description.
+    # The timezone offset (sys.timezone, seconds east of UTC) is required to
+    # convert to local time correctly.
+
+  # ---------- FORECAST ----------
+
+  - id: forecast_timestamps
+    prompt: >
+      Get the weather forecast for Berlin, Germany. Report the timestamp and
+      temperature for each of the next 5 forecast slots.
+    expected: dt_txt
+    tags: [read]
+    # Tests: forecast tool; dt_txt only appears in 5-day/3-hour forecast
+    # responses, verifying the correct endpoint was called.
+
+  - id: forecast_precipitation
+    prompt: >
+      Get the weather forecast for Amsterdam, Netherlands. For each of the
+      first 8 forecast slots, report the timestamp, temperature in Celsius,
+      and the weather description. Also report the pop (probability of
+      precipitation) value for each slot.
+    expected: pop
+    tags: [read]
+    # Tests: pop field extraction across multiple forecast slots.
+    # "pop" (probability of precipitation) is always present in forecast
+    # slot objects regardless of current conditions — avoids the live-weather
+    # dependency of checking for actual rain. Discriminates agents that read
+    # the full slot object vs. only extracting temp/description.
+
+  - id: forecast_temperature_range
+    prompt: >
+      Get the weather forecast for Sydney, Australia. Report the highest and
+      lowest temperatures in Celsius forecast over the next 5 days.
+    expected: temp
+    tags: [read]
+    # Tests: forecast aggregation across all slots to find min/max. Fails if
+    # the agent only reads the first entry.
+
+  # ---------- AIR QUALITY ----------
+
+  - id: air_quality_paris
+    prompt: >
+      Get the current air pollution data for Paris, France. Report the AQI
+      value and PM2.5 concentration.
+    expected: aqi
+    tags: [read]
+    # Tests: air quality endpoint; separate from weather. aqi only appears
+    # in pollution responses, verifying the correct tool was used.
+
+  - id: air_quality_level
+    prompt: >
+      Get the current air quality for Beijing, China. Report the numeric AQI
+      and what level it corresponds to: Good (1), Fair (2), Moderate (3),
+      Poor (4), or Very Poor (5).
+    expected: aqi
+    tags: [read]
+    # Tests: AQI interpretation. The numeric-to-label mapping is domain
+    # knowledge; well-documented tools surface it in the response or description.
+
+  # ---------- GEOCODING ----------
+
+  - id: geocode_city
+    prompt: >
+      Find the geographic coordinates for Cairo, Egypt. Report the latitude
+      and longitude.
+    expected: lat
+    tags: [read]
+    # Tests: forward geocoding tool discovery without specifying the endpoint.
+
+  - id: reverse_geocode
+    prompt: >
+      What city and country is at latitude 35.6762, longitude 139.6503?
+    expected: Tokyo
+    tags: [read]
+    # Tests: reverse geocoding. "Tokyo" verifies the correct location was
+    # returned and the agent interpreted the response.
+
+  # ---------- MULTI-STEP / SYNTHESIS ----------
+
+  - id: geocode_then_weather
+    prompt: >
+      Use the geocoding API to find the coordinates for Reykjavik, Iceland.
+      Then use those coordinates directly to get the current weather. Report
+      the latitude and longitude used, the temperature in Celsius, and the
+      humidity.
+    expected: humidity
+    tags: [read, multi-step]
+    # Tests: explicit geocode_direct → current weather (by lat/lon) chain.
+    # Agent must make two separate calls and thread lat/lon from the first
+    # into the second. Servers that only expose city-name lookup will fail
+    # the coordinates step.
+
+  - id: humidity_comparison
+    prompt: >
+      Get the current humidity in Singapore and in Phoenix, USA. Report the
+      humidity percentage for each city and which is currently more humid.
+    expected: humidity
+    tags: [read, multi-step]
+    # Tests: two weather calls + comparison synthesis. Fails if the agent
+    # cannot call the same tool twice and compare numeric results.
+
+  - id: temperature_ranking
+    prompt: >
+      Get the current temperature in Celsius for Oslo, Mexico City, and
+      Bangkok. Rank the three cities from warmest to coldest.
+    expected: temp
+    tags: [read, multi-step]
+    # Tests: three weather calls + ranking synthesis. Primary difficulty task;
+    # requires correct units on all three calls and result comparison.
+
+  - id: weather_and_air_quality
+    prompt: >
+      For London, UK: get the current temperature in Celsius and the current
+      AQI. Report both values.
+    expected: aqi
+    tags: [read, multi-step]
+    # Tests: two different endpoints for the same city (weather + air quality).
+    # Requires the agent to recognize these are distinct tools/endpoints.
+
+  # ---------- HARDER ----------
+
+  - id: geocode_then_air_pollution_forecast
+    prompt: >
+      Geocode "São Paulo, Brazil" to get its coordinates. Use those coordinates
+      to retrieve the air pollution forecast. Report the coordinates used and
+      the AQI value for the first forecast slot.
+    expected: aqi
+    tags: [read, multi-step, harder]
+    # Tests: geocode_direct → air_pollution_forecast chain using coordinates.
+    # Agent must pass lat/lon from the first call into the second call.
+
+  - id: zip_weather_vs_city_weather
+    prompt: >
+      Get the current weather for ZIP code 10001 in the US (country code "us")
+      and also for the city "New York, US". Report the temperature in Celsius
+      from each call. Are the temperatures similar?
+    expected: temp
+    tags: [read, multi-step, harder]
+    # Tests: two different lookup methods (zip vs city name) + cross-comparison.
+    # Agent must discover the zip-based weather tool alongside the city tool.
+
+  - id: five_city_temperature_ranking
+    prompt: >
+      Get the current temperature in Celsius for each of these five cities:
+      Cairo, Egypt; Reykjavik, Iceland; Singapore; Buenos Aires, Argentina;
+      and Toronto, Canada. Rank them from hottest to coldest and report each
+      city's temperature.
+    expected: temp
+    tags: [read, multi-step, harder]
+    # Tests: 5 weather lookups + ranking. Stresses the agent's ability to make
+    # multiple tool calls and compare numeric results across them without losing
+    # track of which value belongs to which city.
+
+  - id: forecast_hottest_slot
+    prompt: >
+      Get the 5-day weather forecast for Madrid, Spain. Find the single
+      forecast slot with the highest temperature in Celsius. Report its
+      timestamp, temperature, and weather description.
+    expected: dt_txt
+    tags: [read, multi-step, harder]
+    # Tests: forecast retrieval + max extraction across all slots.
+    # Agent must iterate over all returned forecast slots (up to 40) and
+    # identify the maximum rather than reporting the first slot.
+
+  - id: air_quality_history_vs_forecast
+    prompt: >
+      For Berlin, Germany: geocode the city to get coordinates. Retrieve the
+      current air pollution data and the air pollution forecast. Report the
+      current AQI, the AQI for the next forecast slot, and whether air quality
+      is expected to improve, worsen, or stay the same.
+    expected: aqi
+    tags: [read, multi-step, harder]
+    # Tests: geocode → current air pollution + forecast air pollution, then
+    # comparison. Exercises three distinct tool calls chained through coordinates.
+
+  - id: full_city_conditions
+    prompt: >
+      Geocode "Nairobi, Kenya" to get its coordinates. Using those coordinates,
+      retrieve: (1) the current weather, (2) the 5-day forecast, and (3) the
+      current air pollution data. Report the current temperature in Celsius,
+      the highest forecast temperature over the next 5 days, and the current
+      AQI. All three data fetches must use the coordinates from the geocode
+      call.
+    expected: aqi
+    tags: [read, multi-step, harder]
+    # Tests: geocode → current weather (by coords) + forecast (by coords) +
+    # air pollution (by coords) — four chained calls across three distinct
+    # endpoint categories, all threaded through a single lat/lon pair.
+    # "aqi" only appears if the air pollution call is made with valid coords.
+    # The forecast max requires iterating all slots, not just reading slot 0.
+    # Discriminates servers/agents that correctly expose all three coordinate-
+    # based endpoints and thread them from a single geocoding call.

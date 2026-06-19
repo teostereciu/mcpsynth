@@ -1,0 +1,12 @@
+{
+  "dataset": "alphavantage",
+  "model": "azure-chat-completions-gpt-5-4-mini-2026-03-17-sandbox",
+  "condition": "docs",
+  "synthesis_time": 35.51126313209534,
+  "token_usage": {
+    "input_tokens": 195927,
+    "output_tokens": 1985
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1547"
+}

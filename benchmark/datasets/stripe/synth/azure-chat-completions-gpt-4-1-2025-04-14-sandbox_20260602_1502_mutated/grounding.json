@@ -1,0 +1,115 @@
+{
+  "create_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /payment_intents"
+  },
+  "retrieve_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "GET /payment_intents/{id}"
+  },
+  "update_payment_intent": {
+    "doc": "docs/payment_intents.md",
+    "endpoint": "POST /payment_intents/{id}"
+  ,
+  "retrieve_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "GET /charges/{id}"
+  },
+  "update_charge": {
+    "doc": "docs/charges.md",
+    "endpoint": "POST /charges/{id}"
+  ,
+  "create_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /refunds"
+  },
+  "retrieve_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "GET /refunds/{id}"
+  },
+  "update_refund": {
+    "doc": "docs/refunds.md",
+    "endpoint": "POST /refunds/{id}"
+  ,
+  "create_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /customers"
+  },
+  "retrieve_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "GET /customers/{id}"
+  },
+  "update_customer": {
+    "doc": "docs/customers.md",
+    "endpoint": "POST /customers/{id}"
+  ,
+  "create_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /products"
+  },
+  "retrieve_product": {
+    "doc": "docs/products.md",
+    "endpoint": "GET /products/{id}"
+  },
+  "update_product": {
+    "doc": "docs/products.md",
+    "endpoint": "POST /products/{id}"
+  ,
+  "create_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /prices"
+  },
+  "retrieve_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "GET /prices/{id}"
+  },
+  "update_price": {
+    "doc": "docs/prices.md",
+    "endpoint": "POST /prices/{id}"
+  ,
+  "create_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /subscriptions"
+  },
+  "retrieve_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "GET /subscriptions/{id}"
+  },
+  "update_subscription": {
+    "doc": "docs/subscriptions.md",
+    "endpoint": "POST /subscriptions/{id}"
+  ,
+  "retrieve_invoice": {
+    "doc": "docs/invoices.md",
+    "endpoint": "GET /invoices/{id}"
+  },
+  "create_invoice_preview": {
+    "doc": "docs/invoices.md",
+    "endpoint": "POST /invoices/create_preview"
+  ,
+  "create_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "POST /checkout/sessions"
+  },
+  "retrieve_checkout_session": {
+    "doc": "docs/checkout_sessions.md",
+    "endpoint": "GET /checkout/sessions/{id}"
+  ,
+  "create_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "POST /payment_links"
+  },
+  "retrieve_payment_link": {
+    "doc": "docs/payment-link.md",
+    "endpoint": "GET /payment_links/{id}"
+  }
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

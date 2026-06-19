@@ -1,0 +1,50 @@
+{
+    "get_repository": {
+        "doc": null,
+        "endpoint": "GET /repos/{owner}/{repo}"
+    },
+    "list_user_repositories": {
+        "doc": null,
+        "endpoint": "GET /users/{username}/repos"
+    },
+    "create_issue": {
+        "doc": null,
+        "endpoint": "POST /repos/{owner}/{repo}/issues"
+    },
+    "get_issue": {
+        "doc": null,
+        "endpoint": "GET /repos/{owner}/{repo}/issues/{issue_number}"
+    },
+    "update_issue": {
+        "doc": null,
+        "endpoint": "PATCH /repos/{owner}/{repo}/issues/{issue_number}"
+    },
+    "create_pull_request": {
+        "doc": null,
+        "endpoint": "POST /repos/{owner}/{repo}/pulls"
+    },
+    "get_pull_request": {
+        "doc": null,
+        "endpoint": "GET /repos/{owner}/{repo}/pulls/{pull_number}"
+    },
+    "merge_pull_request": {
+        "doc": null,
+        "endpoint": "PUT /repos/{owner}/{repo}/pulls/{pull_number}/merge"
+    },
+    "get_repository_contents": {
+        "doc": null,
+        "endpoint": "GET /repos/{owner}/{repo}/contents/{path}"
+    }    },
+    "search_code": {
+        "doc": null,
+        "endpoint": "GET /search/code"
+    },
+    "create_repository": {
+        "doc": null,
+        "endpoint": "POST /user/repos"
+    },
+    "create_comment": {
+        "doc": null,
+        "endpoint": "POST /repos/{owner}/{repo}/issues/{issue_number}/comments"
+    }
+}

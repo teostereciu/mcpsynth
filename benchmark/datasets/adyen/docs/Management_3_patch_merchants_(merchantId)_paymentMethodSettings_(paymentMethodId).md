@@ -1,0 +1,427 @@
+# Management/3/patch/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)
+
+*Source: https://docs.adyen.com/api-explorer/Management/3/patch/merchants/(merchantId)/paymentMethodSettings/(paymentMethodId)*
+
+---
+
+# Update a payment method
+Updates payment method details for the merchant account and the payment method identified in the path.
+Depending the payment methodtype, you may need to send an additional object required for the payment method.
+To make this request, your API credential must have the followingrole:
+- Management API—Payment methods read and write
+The unique identifier of the payment method.
+The unique identifier of the merchant account.
+Details to provide iftypeisaccel.
+The type of transactions processed over this payment method.
+Allowed values:
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeisbcmc(Bancontact).
+Indicates ifBancontact mobileis enabled.
+Details to provide iftypeiscartebancaire.
+Cartes Bancaires SIRET. Format: 14 digits.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+The list of countries where a payment method is available. By default, all countries supported by the payment method.
+Details to provide iftypeiscup(China Union Pay).
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+The list of currencies that a payment method supports. By default, all currencies supported by the payment method.
+Custom routing flags for acquirer routing.
+Details to provide iftypeisdiners.
+For merchants operating in Japan, Diners payments are processed through the JCB network. This means that you must includeJCB-specific fieldsin this object.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeisdiscover.
+For merchants operating in Japan, requestDinerspayment method instead. Discover is automatically requested, together with Diners.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeiseft_directdebit_CA(EFT PAD).
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeiseftpos_australia.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Indicates whether the payment method is enabled (true) or disabled (false).
+Details to provide iftypeisgirocard.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeisideal.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeisinterac_card.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeisjcb.
+For merchants operating in Japan,midNumber,reuseMidNumber, andserviceLevelfields are required.
+For merchants operating outside of Japan, these fields are not required.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeismaestro.
+In the US,maestrois not supported; usemaestro_usainstead.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeismaestro_usa.
+Only for Maestro USA, otherwise usemaestro.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeismc.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeisnyce.
+The type of transactions processed over this payment method.
+Allowed values:
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeispaybybank_plaid.
+Merchant logo (max. size 150kB). Format: Base64-encoded string.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeispulse.
+The type of transactions processed over this payment method.
+Allowed values:
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeissepadirectdebit.
+Creditor id
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+Details to provide iftypeisstar.
+The type of transactions processed over this payment method.
+Allowed values:
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+The store for this payment method
+UsestoreIdinstead. Only one store per payment method is allowed.
+The list of stores for this payment method
+Details to provide iftypeisvisa.
+Information regarding the transaction description.
+You cannot configure the transaction description in the test environment.
+The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.
+The type of transaction description you want to use:
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+After submitting a call, you receive a response message to inform you that your request was received and processed.
+Depending on the HTTP status code of the response message, it is helpful to build some logic to handle any errors that a request or the system may return.
+
+### HTTP Responses
+- 200 - OKThe request has succeeded.Show moreShow lessaccelobjectDetails to provide iftypeisaccel.Show childrenHide childrenprocessingTypestringThe type of transactions processed over this payment method.
+Allowed values:posfor in-person payments.billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.affirmobjectDetails to provide iftypeisaffirm.Show childrenHide childrenpricePlanstringMerchant price plansupportEmailstringMerchant support emailafterpayTouchobjectDetails to provide iftypeisafterpaytouch.Show childrenHide childrensupportEmailstringSupport EmailsupportUrlstringSupport UrlalipayPlusobjectDetails to provide iftypeisalipay_plus.Show childrenHide childrensettlementCurrencyCodestringThe currency used for settlement. Defaults to USD.allowedbooleanIndicates whether receiving payments is allowed. This value is set totrueby Adyen after screening your merchant account.amexobjectDetails to provide iftypeisamex.Show childrenHide childrenmidNumberstringMax length:10Merchant ID (MID) number. Format: 10 numeric characters.
+You must provide this field when you requestgatewayContractorpaymentDesignatorContractservice levels.reuseMidNumberbooleanIndicates whether the Amex Merchant ID is reused from a previously setup Amex payment method.
+This is only applicable forgatewayContractandpaymentDesignatorContractservice levels.
+The default value isfalse.serviceLevelstringSpecifies the service level (settlement type) of this payment method. Possible values:noContract: Adyen holds the contract with American Express.gatewayContract: American Express receives the settlement and handles disputes, then pays out to you or your sub-merchant directly.paymentDesignatorContract: Adyen receives the settlement, and handles disputes and payouts.applePayobjectDetails to provide iftypeisapplepay.Show childrenHide childrendomainsarray[string]The list of merchant domains. Maximum: 99 domains per request.For more information, seeApple Pay documentation.bcmcobjectDetails to provide iftypeisbcmc(Bancontact).Show childrenHide childrenenableBcmcMobilebooleanIndicates ifBancontact mobileis enabled.businessLineIdstringThe unique identifier of the business line. Required if you are aplatform model.cartesBancairesobjectDetails to provide iftypeiscartebancaire.Show childrenHide childrensiretstringCartes Bancaires SIRET. Format: 14 digits.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.clearpayobjectDetails to provide iftypeisclearpay.Show childrenHide childrensupportUrlstringSupport Urlcountriesarray[string]The list of countries where a payment method is available. By default, all countries supported by the payment method.cupobjectDetails to provide iftypeiscup(China Union Pay).Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.currenciesarray[string]The list of currencies that a payment method supports. By default, all currencies supported by the payment method.customRoutingFlagsarray[string]The list of custom routing flags to route payment to the intended acquirer.dinersobjectDetails to provide iftypeisdiners.
+For merchants operating in Japan, Diners payments are processed through the JCB network. This means that you must includeJCB-specific fieldsin this object.Show childrenHide childrenmidNumberstringMax length:14MID (Merchant ID) number. Required for merchants operating in Japan.
+Format: 14 numeric characters.reuseMidNumberbooleanIndicates whether the JCB Merchant ID is reused from a previously configured JCB payment method.
+The default value isfalse.
+For merchants operating in Japan, this field is required and must be set totrue.serviceLevelstringSpecifies the service level (settlement type) of this payment method. Required for merchants operating in Japan. Possible values:noContract: Adyen holds the contract with JCB.gatewayContract: JCB receives the settlement and handles disputes, then pays out to you or your sub-merchant directly.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.discoverobjectDetails to provide iftypeisdiscover.
+For merchants operating in Japan, requestDinerspayment method instead. Discover is automatically requested, together with Diners.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.eft_directdebit_CAobjectDetails to provide iftypeiseft_directdebit_CA(EFT PAD).Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.eftpos_australiaobjectDetails to provide iftypeiseftpos_australia.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.enabledbooleanIndicates whether the payment method is enabled (true) or disabled (false).girocardobjectDetails to provide iftypeisgirocard.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.givexobjectDetails to provide iftypeisgivex.Show childrenHide childrencurrencyCodestringThe three-character ISO currency code, such asEUR.passwordstringThe password provided by the acquirer.paymentFlowstringThe sales channel used for the payment.usernamestringThe username provided by the acquirer.googlePayobjectDetails to provide iftypeisgooglepay.Show childrenHide childrenmerchantIdstringMin length:16Max length:20Google PayMerchant ID. Character length and limitations: 16 alphanumeric characters or 20 numeric characters.reuseMerchantIdbooleanIndicates whether the Google Pay Merchant ID is used for several merchant accounts. Default value:false.idstringThe identifier of the resource.idealobjectDetails to provide iftypeisideal.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.interac_cardobjectDetails to provide iftypeisinterac_card.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.jcbobjectDetails to provide iftypeisjcb.
+For merchants operating in Japan,midNumber,reuseMidNumber, andserviceLevelfields are required.
+For merchants operating outside of Japan, these fields are not required.Show childrenHide childrenmidNumberstringMax length:14MID (Merchant ID) number. Required for merchants operating in Japan or merchants operating in Canada, Australia and New Zealand when requestinggatewayContractorpaymentDesignatorContractservice levels.Format: 14 numeric characters for Japan, 10 numeric characters for Canada, Australia and New Zealand.reuseMidNumberbooleanIndicates whether the JCB Merchant ID is reused from a previously setup JCB payment method.
+The default value isfalse.For merchants operating in Japan, this field is required and must be set totrue.serviceLevelstringSpecifies the service level (settlement type) of this payment method. Required for merchants operating in Japan.
+Possible values:noContract: Adyen holds the contract with JCB for merchants operating in Japan or American Express for merchants operating in Canada, Australia and New Zealand.gatewayContract: JCB or American Express receives the settlement and handles disputes, then pays out to you or your sub-merchant directly.paymentDesignatorContract: Available only for merchants operating in Canada, Australia and New Zealand. Adyen receives the settlement, and handles disputes and payouts.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.klarnaobjectDetails to provide iftypeisklarnaor its variant.You can use the following payment methodtypevalues for Klarna:klarna: Klarna Pay Laterklarna_account: Klarna Pay over timeklarna_paynow: Klarna Pay nowklarna_b2b:Billie via KlarnaShow childrenHide childrenautoCapturebooleanIndicates the status ofAutomatic capture. Default value:false.disputeEmailstringThe email address for disputes.regionstringMin length:2Max length:2The region of operation. For example,NA,EU,CH,AU.supportEmailstringThe email address of merchant support.maestroobjectDetails to provide iftypeismaestro.
+In the US,maestrois not supported; usemaestro_usainstead.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.maestro_usaobjectDetails to provide iftypeismaestro_usa.
+Only for Maestro USA, otherwise usemaestro.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.mcobjectDetails to provide iftypeismc.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.mealVoucher_FRobjectDetails to provide iftypeismealVoucher_FR.Show childrenHide childrenconecsIdstringMeal Voucher conecsId. Format: digits onlysiretstringMin length:14Max length:14Meal Voucher siret. Format: 14 digits.subTypesarray[string]The list of additional payment methods. Allowed values:mealVoucher_FR_edenred,mealVoucher_FR_groupeup,mealVoucher_FR_natixis,mealVoucher_FR_sodexo.nyceobjectDetails to provide iftypeisnyce.Show childrenHide childrenprocessingTypestringThe type of transactions processed over this payment method.
+Allowed values:posfor in-person payments.billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.paybybank_plaidobjectDetails to provide iftypeispaybybank_plaid.Show childrenHide childrenlogostringMerchant logo (max. size 150kB). Format: Base64-encoded string.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.paymeobjectDetails to provide iftypeispayme.Show childrenHide childrendisplayNamestringMerchant display namelogostringMerchant logo. Format: Base64-encoded string.supportEmailstringThe email address of merchant support.paypalobjectDetails to provide iftypeispaypal.Show childrenHide childrendirectCapturebooleanIndicates if direct (immediate) capture for PayPal is enabled. If set totrue, this setting overrides thecapturesettings of your merchant account. Default value:true.payerIdstringMin length:13Max length:13PayPal Merchant ID. Character length and limitations: 13 single-byte alphanumeric characters.subjectstringYour business email address.paytoobjectDetails to provide iftypeispayto.Show childrenHide childrenmerchantNamestringMerchant name displayed to the shopper in the AgreementspayToPurposestringRepresents the purpose of the Agreements created, it relates to the business typeAllowed values: mortgage, utility, loan, gambling, retail, salary, personal, government, pension, tax, otherpulseobjectDetails to provide iftypeispulse.Show childrenHide childrenprocessingTypestringThe type of transactions processed over this payment method.
+Allowed values:posfor in-person payments.billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.referencestringMax length:150Your reference for the payment method. Supported characters a-z, A-Z, 0-9.sepadirectdebitobjectDetails to provide iftypeissepadirectdebit.Show childrenHide childrencreditorIdstringCreditor idtransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.shopperInteractionstringThe sales channel.sodexoobjectDetails to provide iftypeissodexo.Show childrenHide childrenmerchantContactPhonestringSodexo merchantContactPhonesofortobjectDeprecated in version 1Sofort details.Show childrenHide childrencurrencyCodestringSofort currency code. For example,EUR.logostringSofort logo. Format: Base64-encoded string.starobjectDetails to provide iftypeisstar.Show childrenHide childrenprocessingTypestringThe type of transactions processed over this payment method.
+Allowed values:posfor in-person payments.billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.transactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.storeIdsarray[string]The unique identifier of the store for which to configure the payment method, if any.svsobjectDetails to provide iftypeissvs.Show childrenHide childrenauthorisationMidstringThe merchant ID (MID) that the acquirer recognizes you by.currencyCodestringThe three-character ISO currency code, exampleUSDswishobjectDetails to provide iftypeisswish.This field is required only if you have a contract with Swish. Swish handles settlement directly with you (not through Adyen).If not specified then it's assumed that you are using Adyen's contract with Swish.You don't have a direct relationship with Swish.Show childrenHide childrenswishNumberstringMin length:10Max length:10Swish number. Format: 10 digits without spaces. For example,1231111111.ticketobjectDetails to provide iftypeisticket(Edenred Brazil).Show childrenHide childrenrequestorIdstringTicket requestorIdtwintobjectDetails to provide iftypeistwint.Show childrenHide childrenlogostringTwint logo. Format: Base64-encoded string.typestringPayment methodvariant.valuelinkobjectDetails to provide iftypeisvaluelink.Show childrenHide childrenauthorisationMidstringAuthorisation MidpinSupportstringPIN Support. For ecommerce, PIN is required.submitterIdstringSubmitter IDterminalIdstringTerminal IDverificationStatusstringPayment method status. Possible values:validpendinginvalidrejectedvippsobjectDetails to provide iftypeisvipps.Show childrenHide childrenlogostringVipps logo. Format: Base64-encoded string.subscriptionCancelUrlstringVipps subscription cancel url (required in case ofrecurring payments)visaobjectDetails to provide iftypeisvisa.Show childrenHide childrentransactionDescriptionobjectInformation regarding the transaction description.You cannot configure the transaction description in the test environment.Show childrenHide childrendoingBusinessAsNamestringMax length:22The text to be shown on the shopper's bank statement.
+We recommend sending a maximum of 22 characters, otherwise banks might truncate the string.
+Allowed characters:a-z,A-Z,0-9, spaces, and special characters. , ' _ - ? + * /.typestringThe type of transaction description you want to use:fixed: The transaction description set in this request is used for all payments with this payment method.append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.wechatpayobjectDetails to provide iftypeiswechatpay.Show childrenHide childrencontactPersonNamestringThe name of the contact person from merchant support.emailstringThe email address of merchant support.wechatpay_posobjectDetails to provide iftypeiswechatpay_pos.Show childrenHide childrencontactPersonNamestringThe name of the contact person from merchant support.emailstringThe email address of merchant support.
+- 204 - No ContentThe request has been successfully processed, but there is no additional content.
+- 400 - Bad RequestA problem reading or understanding the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 401 - UnauthorizedAuthentication required.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 403 - ForbiddenInsufficient permissions to process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 422 - Unprocessable EntityA request validation error.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 429Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+- 500 - Internal Server ErrorThe server could not process the request.Show moreShow lessdetailstringA human-readable explanation specific to this occurrence of the problem.errorCodestringA code that identifies the problem type.instancestringA unique URI that identifies the specific occurrence of the problem.invalidFieldsarray[object]Detailed explanation of each validation error, when applicable.Show childrenHide childrenmessagestringDescription of the validation error.namestringThe field that has an invalid value.valuestringThe invalid value.requestIdstringA unique reference for the request, essentially the same aspspReference.responseobjectJSON response payload.statusintegerThe HTTP status code.titlestringA short, human-readable summary of the problem type.typestringA URI that identifies the problem type, pointing to human-readable documentation on this problem type.
+
+#### 200 - OK
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- noContract: Adyen holds the contract with American Express.
+- gatewayContract: American Express receives the settlement and handles disputes, then pays out to you or your sub-merchant directly.
+- paymentDesignatorContract: Adyen receives the settlement, and handles disputes and payouts.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- noContract: Adyen holds the contract with JCB.
+- gatewayContract: JCB receives the settlement and handles disputes, then pays out to you or your sub-merchant directly.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- noContract: Adyen holds the contract with JCB for merchants operating in Japan or American Express for merchants operating in Canada, Australia and New Zealand.
+- gatewayContract: JCB or American Express receives the settlement and handles disputes, then pays out to you or your sub-merchant directly.
+- paymentDesignatorContract: Available only for merchants operating in Canada, Australia and New Zealand. Adyen receives the settlement, and handles disputes and payouts.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- klarna: Klarna Pay Later
+- klarna_account: Klarna Pay over time
+- klarna_paynow: Klarna Pay now
+- klarna_b2b:Billie via Klarna
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- posfor in-person payments.
+- billpayfor subscription payments, both the initial payment and the later recurring payments. These transactions haverecurringProcessingModelSubscription.
+- ecomfor all other card not present transactions. This includes non-recurring transactions and transactions withrecurringProcessingModelCardOnFileorUnscheduledCardOnFile.
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+- This field is required only if you have a contract with Swish. Swish handles settlement directly with you (not through Adyen).
+- If not specified then it's assumed that you are using Adyen's contract with Swish.You don't have a direct relationship with Swish.
+- valid
+- pending
+- invalid
+- rejected
+- fixed: The transaction description set in this request is used for all payments with this payment method.
+- append: The transaction description set in this request is used as a base for all payments with this payment method. Thetransaction description set in the request to process the paymentis appended to this base description. Note that if the combined length exceeds 22 characters, banks may truncate the string.
+- dynamic: Only thetransaction description set in the request to process the paymentis used for payments with this payment method.
+
+#### 204 - No Content
+
+#### 400 - Bad Request
+
+#### 401 - Unauthorized
+
+#### 403 - Forbidden
+
+#### 422 - Unprocessable Entity
+
+#### 429
+
+#### 500 - Internal Server Error

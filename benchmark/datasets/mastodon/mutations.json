@@ -1,0 +1,10 @@
+{
+  "description": "Parameter name mutations for the Mastodon social API, covering common query/form params used in statuses, search, and timelines endpoints.",
+  "mutations": [
+    {"original": "visibility", "mutated": "post_visibility"},
+    {"original": "spoiler_text", "mutated": "content_warning"},
+    {"original": "sensitive", "mutated": "is_sensitive"},
+    {"original": "in_reply_to_id", "mutated": "reply_to_id"},
+    {"original": "language", "mutated": "lang"}
+  ]
+}

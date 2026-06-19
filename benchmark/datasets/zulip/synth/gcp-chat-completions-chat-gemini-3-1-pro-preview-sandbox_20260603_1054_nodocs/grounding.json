@@ -1,0 +1,126 @@
+{
+  "send_message": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /messages"
+  },
+  "edit_message": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "get_messages": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /messages"
+  },
+  "update_message_flags": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /messages/flags"
+  },
+  "get_message_history": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /messages/{message_id}/history"
+  },
+  "get_streams": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /streams"
+  },
+  "get_stream_id": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /get_stream_id"
+  },
+  "subscribe_streams": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "unsubscribe_streams": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /users/me/subscriptions"
+  },
+  "get_subscriptions": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users/me/subscriptions"
+  },
+  "update_stream": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "archive_stream": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "get_stream_topics": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users/me/{stream_id}/topics"
+  },
+  "mute_topic": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /users/me/subscriptions/muted_topics"
+  },
+  "get_users": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users"
+  },
+  "get_own_user": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users/me"
+  },
+  "get_user_by_id": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "get_user_by_email": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users/{email}"
+  },
+  "get_user_presence": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /users/{user_id_or_email}/presence"
+  },
+  "add_reaction": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "get_scheduled_messages": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /scheduled_messages"
+  },
+  "create_scheduled_message": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "edit_scheduled_message": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /scheduled_messages/{scheduled_message_id}"
+  },
+  "delete_scheduled_message": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"
+  },
+  "get_drafts": {
+    "doc": "docs/none.md",
+    "endpoint": "GET /drafts"
+  },
+  "create_drafts": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /drafts"
+  },
+  "edit_draft": {
+    "doc": "docs/none.md",
+    "endpoint": "PATCH /drafts/{draft_id}"
+  },
+  "delete_draft": {
+    "doc": "docs/none.md",
+    "endpoint": "DELETE /drafts/{draft_id}"
+  },
+  "upload_file": {
+    "doc": "docs/none.md",
+    "endpoint": "POST /user_uploads"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "source": "Clockify API (docs.clockify.me)",
+  "scraped_from": "https://docs.clockify.me",
+  "scrape_date": "2026-05-12T13:19:40.596780",
+  "total_pages": 16,
+  "files": [
+    {
+      "filename": "api_user.md",
+      "title": "User",
+      "url": "https://docs.clockify.me/#tag/User"
+    },
+    {
+      "filename": "api_workspace.md",
+      "title": "Workspace",
+      "url": "https://docs.clockify.me/#tag/Workspace"
+    },
+    {
+      "filename": "api_client.md",
+      "title": "Client",
+      "url": "https://docs.clockify.me/#tag/Client"
+    },
+    {
+      "filename": "api_project.md",
+      "title": "Project",
+      "url": "https://docs.clockify.me/#tag/Project"
+    },
+    {
+      "filename": "api_task.md",
+      "title": "Task",
+      "url": "https://docs.clockify.me/#tag/Task"
+    },
+    {
+      "filename": "api_tag.md",
+      "title": "Tag",
+      "url": "https://docs.clockify.me/#tag/Tag"
+    },
+    {
+      "filename": "api_time_entry.md",
+      "title": "Time entry",
+      "url": "https://docs.clockify.me/#tag/Time%20entry"
+    },
+    {
+      "filename": "api_approval.md",
+      "title": "Approval",
+      "url": "https://docs.clockify.me/#tag/Approval"
+    },
+    {
+      "filename": "api_expense.md",
+      "title": "Expense",
+      "url": "https://docs.clockify.me/#tag/Expense"
+    },
+    {
+      "filename": "api_invoice.md",
+      "title": "Invoice",
+      "url": "https://docs.clockify.me/#tag/Invoice"
+    },
+    {
+      "filename": "api_group.md",
+      "title": "Group",
+      "url": "https://docs.clockify.me/#tag/Group"
+    },
+    {
+      "filename": "api_time_off.md",
+      "title": "Time Off",
+      "url": "https://docs.clockify.me/#tag/Time%20Off"
+    },
+    {
+      "filename": "api_balance.md",
+      "title": "Balance",
+      "url": "https://docs.clockify.me/#tag/Balance"
+    },
+    {
+      "filename": "api_policy.md",
+      "title": "Policy",
+      "url": "https://docs.clockify.me/#tag/Policy"
+    },
+    {
+      "filename": "api_scheduling.md",
+      "title": "Scheduling",
+      "url": "https://docs.clockify.me/#tag/Scheduling"
+    },
+    {
+      "filename": "api_webhooks.md",
+      "title": "Webhooks",
+      "url": "https://docs.clockify.me/#tag/Webhooks"
+    }
+  ]
+}

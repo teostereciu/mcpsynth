@@ -1,0 +1,12 @@
+{
+  "dataset": "github",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 20302.349947929382,
+  "token_usage": {
+    "input_tokens": 128544,
+    "output_tokens": 2244
+  },
+  "cost_estimate": null,
+  "timestamp": "20260602_1612"
+}

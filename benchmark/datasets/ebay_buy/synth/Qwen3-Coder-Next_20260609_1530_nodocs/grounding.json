@@ -1,0 +1,86 @@
+{
+  "search_items": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "get_item": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/browse/v1/item/{id}"
+  },
+  "get_item_variations": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/browse/v1/item/{id}/variations"
+  },
+  "get_categories": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/browse/v1/category_tree"
+  },
+  "get_category_tree": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/browse/v1/category_tree/{category_id}"
+  },
+  "get_item_summaries_by_category": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "get_deals": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/deal/v1beta/deals"
+  },
+  "get_deal": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/deal/v1beta/deals/{dealId}"
+  },
+  "get_events": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/deal/v1beta/events"
+  },
+  "get_event": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/deal/v1beta/events/{eventId}"
+  },
+  "get_deal_items": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/deal/v1beta/deals/{dealId}/items"
+  },
+  "get_event_items": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/deal/v1beta/events/{eventId}/items"
+  },
+  "get_item_feed": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/feed/v1beta/item"
+  },
+  "get_item_snapshot": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/feed/v1beta/item/{itemId}/snapshot"
+  },
+  "get_guest_checkout_session": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/order/v1/guest_checkout/sessions/{sessionId}"
+  },
+  "create_guest_checkout_session": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "POST /buy/order/v1/guest_checkout/sessions"
+  },
+  "update_guest_checkout_session": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "PUT /buy/order/v1/guest_checkout/sessions/{sessionId}"
+  },
+  "cancel_guest_checkout_session": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "DELETE /buy/order/v1/guest_checkout/sessions/{sessionId}"
+  },
+  "get_order_items": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/order/v1/order_item"
+  },
+  "get_order": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/order/v1/order/{orderId}"
+  },
+  "get_order_transactions": {
+    "doc": "N/A - General eBay Buy API knowledge",
+    "endpoint": "GET /buy/order/v1/order/{orderId}/transaction"
+  }
+}

@@ -1,0 +1,193 @@
+# suggestions API methods
+
+*Source: https://docs.joinmastodon.org/methods/suggestions/*
+
+---
+
+# suggestions API methods
+
+Server-generated suggestions on who to follow, based on previous positive interactions.
+
+## View follow suggestions (v2)
+
+
+    GET /api/v2/suggestions HTTP/1.1
+
+
+Accounts that are promoted by staff, or that the user has had past positive interactions with, but is not yet following.
+
+**Returns:** Array of [Suggestion](/entities/Suggestion/)
+**OAuth:** User token + `read`
+**Version history:**
+3.4.0 - added
+
+#### Request
+
+##### Headers
+
+Authorization
+    required Provide this header with `Bearer <user_token>` to gain authorized access to this API method.
+
+##### Query parameters
+
+limit
+    Integer. Maximum number of results to return. Defaults to 40 accounts. Max 80 accounts.
+
+#### Response
+
+##### 200: OK
+
+
+    [
+      {
+        "source": "past_interactions",
+        "account": {
+          "id": "784058",
+          "username": "katie",
+          "acct": "katie@pleroma.voidlurker.net"
+          // ...
+        }
+      },
+      // ...
+      {
+        "source": "global",
+        "account": {
+          "id": "108194863260762493",
+          "username": "thunderbird",
+          "acct": "thunderbird@mastodon.online"
+          // ...
+        }
+      }
+    ]
+
+
+##### 401: Unauthorized
+
+Invalid or missing Authorization header.
+
+
+    {
+      "error": "The access token is invalid"
+    }
+
+
+* * *
+
+## Remove a suggestion
+
+
+    DELETE /api/v1/suggestions/:account_id HTTP/1.1
+
+
+Remove an account from follow suggestions.
+
+**Returns:** Empty
+**OAuth:** User token + `read`
+**Version history:**
+2.4.3 - added
+
+#### Request
+
+##### Path parameters
+
+:account_id
+    required String. The ID of the Account in the database.
+
+##### Headers
+
+Authorization
+    required Provide this header with `Bearer <user_token>` to gain authorized access to this API method.
+
+#### Response
+
+##### 200: OK
+
+A successful call will return an empty object. Note the call will be successful even if the account id provided is invalid or is not a suggested account.
+
+
+    {}
+
+
+##### 401: Unauthorized
+
+Invalid or missing Authorization header.
+
+
+    {
+      "error": "The access token is invalid"
+    }
+
+
+* * *
+
+## View follow suggestions (v1) deprecated
+
+
+    GET /api/v1/suggestions HTTP/1.1
+
+
+Accounts the user has had past positive interactions with, but is not yet following.
+
+**Returns:** Array of [Account](/entities/Account/)
+**OAuth:** User token + `read`
+**Version history:**
+2.4.3 - added
+3.4.0 - deprecated
+
+#### Request
+
+##### Headers
+
+Authorization
+    required Provide this header with `Bearer <user_token>` to gain authorized access to this API method.
+
+##### Query parameters
+
+limit
+    Integer. Maximum number of results to return. Defaults to 40 accounts. Max 80 accounts.
+
+#### Response
+
+##### 200: OK
+
+
+    [
+      {
+        "id": "332766",
+        "username": "kaniini",
+        "acct": "kaniini@pleroma.site",
+        // ...
+      },
+      {
+        "id": "689455",
+        "username": "interneteh",
+        "acct": "interneteh@sunbeam.city",
+        // ...
+      },
+      {
+        "id": "764276",
+        "username": "Dee",
+        "acct": "Dee@fedi.underscore.world",
+        // ...
+      },
+      // ...
+    ]
+
+
+##### 401: Unauthorized
+
+Invalid or missing Authorization header.
+
+
+    {
+      "error": "The access token is invalid"
+    }
+
+
+* * *
+
+## See also
+
+[POST /api/v1/accounts/:id/follow ](/methods/accounts/#follow)[app/controllers/api/v2/suggestions_controller.rb ](https://github.com/mastodon/mastodon/blob/main/app/controllers/api/v2/suggestions_controller.rb)[app/controllers/api/v1/suggestions_controller.rb](https://github.com/mastodon/mastodon/blob/main/app/controllers/api/v1/suggestions_controller.rb)
+
+Last updated May 1, 2026 · [Improve this page](https://github.com/mastodon/documentation/tree/main/content/en/methods/suggestions.md)

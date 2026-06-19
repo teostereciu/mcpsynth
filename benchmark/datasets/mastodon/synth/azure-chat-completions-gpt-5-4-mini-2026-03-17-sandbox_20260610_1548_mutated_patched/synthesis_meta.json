@@ -1,0 +1,12 @@
+{
+  "dataset": "mastodon",
+  "model": "azure-chat-completions-gpt-5-4-mini-2026-03-17-sandbox",
+  "condition": "mutated",
+  "synthesis_time": 73.35098695755005,
+  "token_usage": {
+    "input_tokens": 105885,
+    "output_tokens": 2872
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1548"
+}

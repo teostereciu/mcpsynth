@@ -1,0 +1,362 @@
+{
+  "dataset": "notion",
+  "impl": "azure-chat-completions-gpt-5-2-2025-12-11-sandbox_20260518_1558_mutated",
+  "tool_count": null,
+  "coverage": null,
+  "entries": [
+    {
+      "tool": "users_me",
+      "doc": "docs/get-self.md",
+      "endpoint": "GET /users/me",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the \"Retrieve your token's bot user\" operation, which corresponds to the GET /users/me endpoint and the users_me tool."
+    },
+    {
+      "tool": "users_list",
+      "doc": "docs/get-users.md",
+      "endpoint": "GET /users",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"List all users\" operation, including a code snippet for listing users and a response schema containing a results array."
+    },
+    {
+      "tool": "users_retrieve",
+      "doc": "docs/get-user.md",
+      "endpoint": "GET /users/{user_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a user\" operation, including the user ID path parameter and the corresponding SDK method for retrieving a user."
+    },
+    {
+      "tool": "search",
+      "doc": "docs/post-search.md",
+      "endpoint": "POST /search",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the POST /search endpoint for the Notion API, including request parameters and response structures."
+    },
+    {
+      "tool": "pages_create",
+      "doc": "docs/post-page.md",
+      "endpoint": "POST /pages",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"POST Create a page\" operation and provides a code example for the notion.pages.create method."
+    },
+    {
+      "tool": "pages_retrieve",
+      "doc": "docs/retrieve-a-page.md",
+      "endpoint": "GET /pages/{page_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a page\" operation, including the required page ID path parameter and the corresponding GET request method."
+    },
+    {
+      "tool": "pages_update",
+      "doc": "docs/patch-page.md",
+      "endpoint": "PATCH /pages/{page_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"patch-page\" operation and the PATCH /pages/{page_id} endpoint, which matches the tool's name and claimed endpoint."
+    },
+    {
+      "tool": "pages_archive",
+      "doc": "docs/archive-a-page.md",
+      "endpoint": "PATCH /pages/{page_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes how to archive or trash a page using a PATCH request to the pages endpoint, which directly corresponds to the tool's name and endpoint."
+    },
+    {
+      "tool": "pages_restore",
+      "doc": "docs/trash-page.md",
+      "endpoint": "PATCH /pages/{page_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes how to restore a page using a PATCH request to the pages endpoint with the in_trash parameter."
+    },
+    {
+      "tool": "pages_retrieve_property_item",
+      "doc": "docs/retrieve-a-page-property.md",
+      "endpoint": "GET /pages/{page_id}/properties/{property_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a page property item\" operation, which corresponds to the tool's name and endpoint."
+    },
+    {
+      "tool": "pages_move",
+      "doc": "docs/move-page.md",
+      "endpoint": "POST /pages/{page_id}/move",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Move a page\" operation and confirms the endpoint is POST /pages/{page_id}/move."
+    },
+    {
+      "tool": "pages_retrieve_markdown",
+      "doc": "docs/retrieve-page-markdown.md",
+      "endpoint": "GET /pages/{page_id}/markdown",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a page as markdown\" operation, including the GET endpoint and the page_id path parameter."
+    },
+    {
+      "tool": "pages_update_markdown",
+      "doc": "docs/update-page-markdown.md",
+      "endpoint": "PATCH /pages/{page_id}/markdown",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the PATCH operation for updating a page's markdown content, which matches the tool's name and claimed endpoint."
+    },
+    {
+      "tool": "databases_create",
+      "doc": "docs/create-a-database.md",
+      "endpoint": "POST /databases",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Create a database\" operation, which matches the tool name and the POST endpoint."
+    },
+    {
+      "tool": "databases_retrieve",
+      "doc": "docs/retrieve-a-database.md",
+      "endpoint": "GET /databases/{database_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a database\" operation, which matches the tool name and the GET endpoint for a specific database ID."
+    },
+    {
+      "tool": "databases_update",
+      "doc": "docs/update-a-database.md",
+      "endpoint": "PATCH /databases/{database_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Update a database\" operation using the PATCH method for the database resource, matching the tool's name and endpoint."
+    },
+    {
+      "tool": "databases_list",
+      "doc": "docs/get-databases.md",
+      "endpoint": "GET /databases",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly lists the \"GET Get databases\" operation, which corresponds to the tool's name and endpoint."
+    },
+    {
+      "tool": "databases_query",
+      "doc": "docs/post-database-query.md",
+      "endpoint": "POST /databases/{database_id}/query",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Query a database\" operation using the POST method and the specified endpoint structure."
+    },
+    {
+      "tool": "blocks_retrieve",
+      "doc": "docs/retrieve-a-block.md",
+      "endpoint": "GET /blocks/{block_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a block\" operation, which matches the tool name and endpoint."
+    },
+    {
+      "tool": "blocks_children_list",
+      "doc": "docs/get-block-children.md",
+      "endpoint": "GET /blocks/{block_id}/children",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation describes the \"Retrieve block children\" operation, which matches the tool's name and the specified GET /blocks/{block_id}/children endpoint."
+    },
+    {
+      "tool": "blocks_children_append",
+      "doc": "docs/patch-block-children.md",
+      "endpoint": "PATCH /blocks/{block_id}/children",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Append block children\" operation using the PATCH method for the /blocks/{block_id}/children endpoint."
+    },
+    {
+      "tool": "blocks_update",
+      "doc": "docs/update-a-block.md",
+      "endpoint": "PATCH /blocks/{block_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Update a block\" operation, which matches the tool name and the PATCH /blocks/{block_id} endpoint."
+    },
+    {
+      "tool": "blocks_delete",
+      "doc": "docs/delete-a-block.md",
+      "endpoint": "DELETE /blocks/{block_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Delete a block\" operation, including the endpoint and the block_id parameter."
+    },
+    {
+      "tool": "comments_create",
+      "doc": "docs/create-a-comment.md",
+      "endpoint": "POST /comments",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Create comment\" operation using the POST method, which aligns with the tool name and claimed endpoint."
+    },
+    {
+      "tool": "comments_retrieve",
+      "doc": "docs/retrieve-comment.md",
+      "endpoint": "GET /comments/{comment_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a comment\" operation, including the path parameter for the comment ID and the corresponding SDK method."
+    },
+    {
+      "tool": "comments_list",
+      "doc": "docs/list-comments.md",
+      "endpoint": "GET /comments",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"List comments\" operation and the corresponding GET endpoint for retrieving a list of comments."
+    },
+    {
+      "tool": "data_sources_create",
+      "doc": "docs/create-a-data-source.md",
+      "endpoint": "POST /data_sources",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Create a data source\" operation, which corresponds to the tool's name and the POST method for the data sources resource."
+    },
+    {
+      "tool": "data_sources_retrieve",
+      "doc": "docs/retrieve-a-data-source.md",
+      "endpoint": "GET /data_sources/{data_source_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a data source\" operation, including the path parameter for the data source ID and a corresponding code example."
+    },
+    {
+      "tool": "data_sources_update",
+      "doc": "docs/update-a-data-source.md",
+      "endpoint": "PATCH /data_sources/{data_source_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Update a data source\" operation using the PATCH method, which matches the tool's name and endpoint."
+    },
+    {
+      "tool": "data_sources_list_templates",
+      "doc": "docs/list-data-source-templates.md",
+      "endpoint": "GET /data_sources/{data_source_id}/templates",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"List data source templates\" operation, matching the tool name and the specified endpoint structure."
+    },
+    {
+      "tool": "data_sources_query",
+      "doc": "docs/query-a-data-source.md",
+      "endpoint": "POST /data_sources/{data_source_id}/query",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Query a data source\" operation, including the POST method and the endpoint structure matching the tool's claimed endpoint."
+    },
+    {
+      "tool": "file_uploads_create",
+      "doc": "docs/create-a-file-upload.md",
+      "endpoint": "POST /file_uploads",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Create a file upload\" operation and the corresponding POST endpoint for the file_uploads resource."
+    },
+    {
+      "tool": "file_uploads_send",
+      "doc": "docs/send-a-file-upload.md",
+      "endpoint": "POST /file_uploads/{file_upload_id}/send",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Send a file upload\" operation, including the endpoint path parameter and the POST method corresponding to the tool."
+    },
+    {
+      "tool": "file_uploads_complete",
+      "doc": "docs/complete-a-file-upload.md",
+      "endpoint": "POST /file_uploads/{file_upload_id}/complete",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Complete a file upload\" operation, including the endpoint and path parameters corresponding to the tool."
+    },
+    {
+      "tool": "file_uploads_retrieve",
+      "doc": "docs/retrieve-a-file-upload.md",
+      "endpoint": "GET /file_uploads/{file_upload_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a file upload\" operation, including the path parameter for the file upload ID and the expected response structure."
+    },
+    {
+      "tool": "file_uploads_list",
+      "doc": "docs/list-file-uploads.md",
+      "endpoint": "GET /file_uploads",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"List file uploads\" operation and confirms the endpoint is GET /file_uploads."
+    },
+    {
+      "tool": "views_create",
+      "doc": "docs/create-view.md",
+      "endpoint": "POST /views",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Create a view\" operation using the POST method, which matches the tool name and claimed endpoint."
+    },
+    {
+      "tool": "views_retrieve",
+      "doc": "docs/retrieve-a-view.md",
+      "endpoint": "GET /views/{view_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Retrieve a view\" operation, including the endpoint, path parameters, and a code example for the views.retrieve method."
+    },
+    {
+      "tool": "views_update",
+      "doc": "docs/update-a-view.md",
+      "endpoint": "PATCH /views/{view_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Update a view\" operation, including the PATCH method and the view ID path parameter, which aligns with the tool's name and endpoint."
+    },
+    {
+      "tool": "views_delete",
+      "doc": "docs/delete-view.md",
+      "endpoint": "DELETE /views/{view_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Delete a view\" operation, including the path parameter for the view ID and the corresponding SDK method."
+    },
+    {
+      "tool": "views_list",
+      "doc": "docs/list-views.md",
+      "endpoint": "GET /views",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"List views\" operation and provides details for the GET request to list views for a database or data source."
+    },
+    {
+      "tool": "view_queries_create",
+      "doc": "docs/create-view-query.md",
+      "endpoint": "POST /views/{view_id}/query",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Create a view query\" operation, including the POST method and the view_id path parameter, which matches the tool's name and endpoint."
+    },
+    {
+      "tool": "view_queries_delete",
+      "doc": "docs/delete-view-query.md",
+      "endpoint": "DELETE /views/{view_id}/query/{query_id}",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Delete a view query\" operation, including the required path parameters for view_id and query_id which match the tool's endpoint."
+    },
+    {
+      "tool": "view_queries_results",
+      "doc": "docs/get-view-query-results.md",
+      "endpoint": "GET /views/{view_id}/query/{query_id}/results",
+      "doc_exists": true,
+      "accurate": true,
+      "judge_reason": "The documentation explicitly describes the \"Get view query results\" operation and includes the corresponding path parameters and code examples for the claimed endpoint."
+    }
+  ],
+  "doc_exists_rate": 1.0,
+  "accuracy_rate": 1.0
+}

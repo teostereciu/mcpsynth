@@ -1,0 +1,12 @@
+{
+  "dataset": "jira",
+  "model": "gcp-chat-completions-chat-gemini-3.1-pro-preview-sandbox",
+  "condition": "docs",
+  "synthesis_time": 240.71373081207275,
+  "token_usage": {
+    "input_tokens": 93423,
+    "output_tokens": 1127
+  },
+  "cost_estimate": null,
+  "timestamp": "20260607_2053"
+}

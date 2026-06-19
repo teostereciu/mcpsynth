@@ -1,0 +1,110 @@
+{
+  "create_page": {
+    "doc": "docs/pages/create-page.md",
+    "endpoint": "POST /pages"
+  },
+  "get_page": {
+    "doc": "docs/pages/get-page.md",
+    "endpoint": "GET /pages/{page_id}"
+  },
+  "update_page": {
+    "doc": "docs/pages/update-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "archive_page": {
+    "doc": "docs/pages/archive-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "restore_page": {
+    "doc": "docs/pages/restore-page.md",
+    "endpoint": "PATCH /pages/{page_id}"
+  },
+  "get_page_property": {
+    "doc": "docs/pages/get-page-property.md",
+    "endpoint": "GET /pages/{page_id}/properties/{property_id}"
+  },
+  "create_database": {
+    "doc": "docs/databases/create-database.md",
+    "endpoint": "POST /databases"
+  },
+  "get_database": {
+    "doc": "docs/databases/get-database.md",
+    "endpoint": "GET /databases/{database_id}"
+  },
+  "update_database": {
+    "doc": "docs/databases/update-database.md",
+    "endpoint": "PATCH /databases/{database_id}"
+  },
+  "query_database": {
+    "doc": "docs/databases/query-database.md",
+    "endpoint": "POST /databases/{database_id}/query"
+  },
+  "get_block": {
+    "doc": "docs/blocks/get-block.md",
+    "endpoint": "GET /blocks/{block_id}"
+  },
+  "get_block_children": {
+    "doc": "docs/blocks/get-block-children.md",
+    "endpoint": "GET /blocks/{block_id}/children"
+  },
+  "append_block_children": {
+    "doc": "docs/blocks/append-block-children.md",
+    "endpoint": "PATCH /blocks/{block_id}/children"
+  },
+  "update_block": {
+    "doc": "docs/blocks/update-block.md",
+    "endpoint": "PATCH /blocks/{block_id}"
+  },
+  "delete_block": {
+    "doc": "docs/blocks/delete-block.md",
+    "endpoint": "DELETE /blocks/{block_id}"
+  },
+  "create_comment": {
+    "doc": "docs/comments/create-comment.md",
+    "endpoint": "POST /comments"
+  },
+  "get_comments": {
+    "doc": "docs/comments/get-comments.md",
+    "endpoint": "GET /comments"
+  },
+  "get_user": {
+    "doc": "docs/users/get-user.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "list_users": {
+    "doc": "docs/users/list-users.md",
+    "endpoint": "GET /users"
+  },
+  "get_current_user": {
+    "doc": "docs/users/get-current-user.md",
+    "endpoint": "GET /users/me"
+  },
+  "search": {
+    "doc": "docs/search/search.md",
+    "endpoint": "POST /search"
+  },
+  "create_paragraph_block": {
+    "doc": "docs/blocks/block-objects.md",
+    "endpoint": "N/A (utility function)"
+  },
+  "create_heading_block": {
+    "doc": "docs/blocks/block-objects.md",
+    "endpoint": "N/A (utility function)"
+  },
+  "create_bullet_list_block": {
+    "doc": "docs/blocks/block-objects.md",
+    "endpoint": "N/A (utility function)"
+  },
+  "create_numbered_list_block": {
+    "doc": "docs/blocks/block-objects.md",
+    "endpoint": "N/A (utility function)"
+  },
+  "create_code_block": {
+    "doc": "docs/blocks/block-objects.md",
+    "endpoint": "N/A (utility function)"
+  },
+  "create_divider_block": {
+    "doc": "docs/blocks/block-objects.md",
+    "endpoint": "N/A (utility function)"
+  }
+}

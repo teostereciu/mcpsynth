@@ -1,0 +1,94 @@
+{
+  "search_recipes": {
+    "doc": "Spoonacular API - Recipe Search",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "search_recipes_by_ingredients": {
+    "doc": "Spoonacular API - Find by Ingredients",
+    "endpoint": "GET /recipes/findByIngredients"
+  },
+  "search_recipes_by_nutrients": {
+    "doc": "Spoonacular API - Find by Nutrients",
+    "endpoint": "GET /recipes/findByNutrients"
+  },
+  "autocomplete_recipe_search": {
+    "doc": "Spoonacular API - Recipe Autocomplete",
+    "endpoint": "GET /recipes/autocomplete"
+  },
+  "get_recipe_information": {
+    "doc": "Spoonacular API - Recipe Information",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "get_recipe_instructions": {
+    "doc": "Spoonacular API - Recipe Instructions",
+    "endpoint": "GET /recipes/{id}/analyzedInstructions"
+  },
+  "get_similar_recipes": {
+    "doc": "Spoonacular API - Similar Recipes",
+    "endpoint": "GET /recipes/{id}/similar"
+  },
+  "get_recipe_summary": {
+    "doc": "Spoonacular API - Recipe Summary",
+    "endpoint": "GET /recipes/{id}/summary"
+  },
+  "search_ingredients": {
+    "doc": "Spoonacular API - Ingredient Search",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "get_ingredient_information": {
+    "doc": "Spoonacular API - Ingredient Information",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "autocomplete_ingredient_search": {
+    "doc": "Spoonacular API - Ingredient Autocomplete",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  },
+  "parse_ingredients": {
+    "doc": "Spoonacular API - Parse Ingredients",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "generate_meal_plan": {
+    "doc": "Spoonacular API - Generate Meal Plan",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "get_meal_plan_day": {
+    "doc": "Spoonacular API - Get Meal Plan Day",
+    "endpoint": "GET /mealplanner/day"
+  },
+  "get_meal_plan_week": {
+    "doc": "Spoonacular API - Get Meal Plan Week",
+    "endpoint": "GET /mealplanner/week"
+  },
+  "get_nutrition_by_id": {
+    "doc": "Spoonacular API - Nutrition by ID",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "get_nutrition_by_ingredients": {
+    "doc": "Spoonacular API - Nutrition by Ingredients",
+    "endpoint": "POST /recipes/nutritionByIngredients"
+  },
+  "visualize_nutrition": {
+    "doc": "Spoonacular API - Visualize Nutrition",
+    "endpoint": "GET /recipes/{id}/nutritionLabel.json"
+  },
+  "get_wine_pairing": {
+    "doc": "Spoonacular API - Wine Pairing",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "get_wine_description": {
+    "doc": "Spoonacular API - Wine Description",
+    "endpoint": "GET /food/wine/description"
+  },
+  "get_random_recipes": {
+    "doc": "Spoonacular API - Random Recipes",
+    "endpoint": "GET /recipes/random"
+  },
+  "get_recipe_taste": {
+    "doc": "Spoonacular API - Recipe Taste",
+    "endpoint": "GET /recipes/{id}/tasteWidget.json"
+  },
+  "classify_cuisine": {
+    "doc": "Spoonacular API - Classify Cuisine",
+    "endpoint": "POST /recipes/cuisine"
+  }
+}

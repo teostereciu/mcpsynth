@@ -1,0 +1,13 @@
+{
+  "name": "economic_indicator",
+  "description": "Economic indicators wrapper (REAL_GDP, CPI, INFLATION, UNEMPLOYMENT, TREASURY_YIELD, etc.).",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "function": {"type": "string"},
+      "params": {"type": "object", "additionalProperties": true},
+      "apikey": {"type": "string"}
+    },
+    "required": ["function"]
+  }
+}

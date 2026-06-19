@@ -1,0 +1,22 @@
+{
+  "get_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products/{product_id}.json"
+  },
+  "list_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products.json"
+  },
+  "create_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "POST /products.json"
+  },
+  "update_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "PUT /products/{product_id}.json"
+  },
+  "delete_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "DELETE /products/{product_id}.json"
+  }
+}

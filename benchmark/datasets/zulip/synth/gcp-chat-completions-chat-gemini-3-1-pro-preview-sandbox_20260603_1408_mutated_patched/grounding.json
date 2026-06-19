@@ -1,0 +1,106 @@
+{
+  "send_message": {
+    "doc": "docs/api_send-message.md",
+    "endpoint": "POST /messages"
+  },
+  "edit_message": {
+    "doc": "docs/api_update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "docs/api_delete-message.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "get_messages": {
+    "doc": "docs/api_get-messages.md",
+    "endpoint": "GET /messages"
+  },
+  "update_message_flags": {
+    "doc": "docs/api_update-message-flags.md",
+    "endpoint": "POST /messages/flags"
+  },
+  "get_streams": {
+    "doc": "docs/api_get-streams.md",
+    "endpoint": "GET /streams"
+  },
+  "get_stream_id": {
+    "doc": "docs/api_get-stream-id.md",
+    "endpoint": "GET /get_stream_id"
+  },
+  "subscribe_streams": {
+    "doc": "docs/api_subscribe.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "unsubscribe_streams": {
+    "doc": "docs/api_unsubscribe.md",
+    "endpoint": "DELETE /users/me/subscriptions"
+  },
+  "archive_stream": {
+    "doc": "docs/api_archive-stream.md",
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "update_stream": {
+    "doc": "docs/api_update-stream.md",
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "get_stream_topics": {
+    "doc": "docs/api_get-stream-topics.md",
+    "endpoint": "GET /users/me/{stream_id}/topics"
+  },
+  "mute_topic": {
+    "doc": "docs/api_mute-topic.md",
+    "endpoint": "PATCH /users/me/subscriptions/muted_topics"
+  },
+  "get_users": {
+    "doc": "docs/api_get-users.md",
+    "endpoint": "GET /users"
+  },
+  "get_own_user": {
+    "doc": "docs/api_get-own-user.md",
+    "endpoint": "GET /users/me"
+  },
+  "get_user_presence": {
+    "doc": "docs/api_get-user-presence.md",
+    "endpoint": "GET /users/{user_id_or_email}/presence"
+  },
+  "update_status": {
+    "doc": "docs/api_update-status.md",
+    "endpoint": "POST /users/me/status"
+  },
+  "add_reaction": {
+    "doc": "docs/api_add-reaction.md",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "docs/api_remove-reaction.md",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "get_scheduled_messages": {
+    "doc": "docs/api_get-scheduled-messages.md",
+    "endpoint": "GET /scheduled_messages"
+  },
+  "create_scheduled_message": {
+    "doc": "docs/api_create-scheduled-message.md",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "delete_scheduled_message": {
+    "doc": "docs/api_delete-scheduled-message.md",
+    "endpoint": "DELETE /scheduled_messages/{scheduled_message_id}"
+  },
+  "get_drafts": {
+    "doc": "docs/api_get-drafts.md",
+    "endpoint": "GET /drafts"
+  },
+  "create_drafts": {
+    "doc": "docs/api_create-drafts.md",
+    "endpoint": "POST /drafts"
+  },
+  "delete_draft": {
+    "doc": "docs/api_delete-draft.md",
+    "endpoint": "DELETE /drafts/{draft_id}"
+  },
+  "upload_file": {
+    "doc": "docs/api_upload-file.md",
+    "endpoint": "POST /user_uploads"
+  }
+}

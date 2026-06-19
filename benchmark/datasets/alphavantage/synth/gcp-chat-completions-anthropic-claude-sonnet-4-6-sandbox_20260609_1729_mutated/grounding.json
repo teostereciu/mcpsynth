@@ -1,0 +1,306 @@
+{
+  "get_stock_intraday": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY"
+  },
+  "get_stock_daily": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_DAILY"
+  },
+  "get_stock_daily_adjusted": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED"
+  },
+  "get_stock_weekly": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY"
+  },
+  "get_stock_weekly_adjusted": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED"
+  },
+  "get_stock_monthly": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY"
+  },
+  "get_stock_monthly_adjusted": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED"
+  },
+  "get_stock_quote": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=GLOBAL_QUOTE"
+  },
+  "search_ticker": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=SYMBOL_SEARCH"
+  },
+  "get_market_status": {
+    "doc": "docs/api_time_series_data.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=MARKET_STATUS"
+  },
+  "get_fx_exchange_rate": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "get_fx_intraday": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_INTRADAY"
+  },
+  "get_fx_daily": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_DAILY"
+  },
+  "get_fx_weekly": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_WEEKLY"
+  },
+  "get_fx_monthly": {
+    "doc": "docs/api_fx.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FX_MONTHLY"
+  },
+  "get_crypto_exchange_rate": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "get_crypto_intraday": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CRYPTO_INTRADAY"
+  },
+  "get_crypto_daily": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY"
+  },
+  "get_crypto_weekly": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_WEEKLY"
+  },
+  "get_crypto_monthly": {
+    "doc": "docs/api_digital_currency.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_MONTHLY"
+  },
+  "get_sma": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=SMA"
+  },
+  "get_ema": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=EMA"
+  },
+  "get_wma": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=WMA"
+  },
+  "get_rsi": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=RSI"
+  },
+  "get_macd": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=MACD"
+  },
+  "get_bbands": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=BBANDS"
+  },
+  "get_stoch": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=STOCH"
+  },
+  "get_adx": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ADX"
+  },
+  "get_cci": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CCI"
+  },
+  "get_aroon": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=AROON"
+  },
+  "get_atr": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ATR"
+  },
+  "get_obv": {
+    "doc": "docs/api_technical_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=OBV"
+  },
+  "get_company_overview": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=OVERVIEW"
+  },
+  "get_etf_profile": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ETF_PROFILE"
+  },
+  "get_dividends": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DIVIDENDS"
+  },
+  "get_splits": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=SPLITS"
+  },
+  "get_income_statement": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=INCOME_STATEMENT"
+  },
+  "get_balance_sheet": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=BALANCE_SHEET"
+  },
+  "get_cash_flow": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CASH_FLOW"
+  },
+  "get_earnings": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=EARNINGS"
+  },
+  "get_listing_status": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=LISTING_STATUS"
+  },
+  "get_earnings_calendar": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=EARNINGS_CALENDAR"
+  },
+  "get_ipo_calendar": {
+    "doc": "docs/api_fundamentals.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=IPO_CALENDAR"
+  },
+  "get_real_gdp": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=REAL_GDP"
+  },
+  "get_real_gdp_per_capita": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=REAL_GDP_PER_CAPITA"
+  },
+  "get_treasury_yield": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TREASURY_YIELD"
+  },
+  "get_federal_funds_rate": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=FEDERAL_FUNDS_RATE"
+  },
+  "get_cpi": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CPI"
+  },
+  "get_inflation": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=INFLATION"
+  },
+  "get_retail_sales": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=RETAIL_SALES"
+  },
+  "get_durables": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=DURABLES"
+  },
+  "get_unemployment": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=UNEMPLOYMENT"
+  },
+  "get_nonfarm_payroll": {
+    "doc": "docs/api_economic_indicators.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=NONFARM_PAYROLL"
+  },
+  "get_gold_silver_spot": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=GOLD_SILVER_SPOT"
+  },
+  "get_gold_silver_history": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=GOLD_SILVER_HISTORY"
+  },
+  "get_wti_crude_oil": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=WTI"
+  },
+  "get_brent_crude_oil": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=BRENT"
+  },
+  "get_natural_gas": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=NATURAL_GAS"
+  },
+  "get_copper": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=COPPER"
+  },
+  "get_aluminum": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ALUMINUM"
+  },
+  "get_wheat": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=WHEAT"
+  },
+  "get_corn": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=CORN"
+  },
+  "get_cotton": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=COTTON"
+  },
+  "get_sugar": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=SUGAR"
+  },
+  "get_coffee": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=COFFEE"
+  },
+  "get_all_commodities": {
+    "doc": "docs/api_commodities.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ALL_COMMODITIES"
+  },
+  "get_news_sentiment": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=NEWS_SENTIMENT"
+  },
+  "get_earnings_call_transcript": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=EARNINGS_CALL_TRANSCRIPT"
+  },
+  "get_top_gainers_losers": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=TOP_GAINERS_LOSERS"
+  },
+  "get_insider_transactions": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=INSIDER_TRANSACTIONS"
+  },
+  "get_analytics_fixed_window": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ANALYTICS_FIXED_WINDOW"
+  },
+  "get_analytics_sliding_window": {
+    "doc": "docs/api_intelligence.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=ANALYTICS_SLIDING_WINDOW"
+  },
+  "get_realtime_options": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=REALTIME_OPTIONS"
+  },
+  "get_historical_options": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=HISTORICAL_OPTIONS"
+  },
+  "get_realtime_put_call_ratio": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=REALTIME_PUT_CALL_RATIO"
+  },
+  "get_realtime_volume_open_interest_ratio": {
+    "doc": "docs/api_options.md",
+    "endpoint": "GET https://www.alphavantage.co/query?function=REALTIME_VOLUME_OPEN_INTEREST_RATIO"
+  }
+}

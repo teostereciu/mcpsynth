@@ -1,0 +1,12 @@
+{
+  "dataset": "openweathermap",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "docs",
+  "synthesis_time": 434.7408769130707,
+  "token_usage": {
+    "input_tokens": 278463,
+    "output_tokens": 12237
+  },
+  "cost_estimate": null,
+  "timestamp": "20260608_1332"
+}

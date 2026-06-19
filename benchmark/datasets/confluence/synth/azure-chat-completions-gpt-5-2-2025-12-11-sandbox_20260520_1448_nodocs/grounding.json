@@ -1,0 +1,138 @@
+{
+  "list_pages": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/pages"
+  },
+  "get_page": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/pages/{pageId}"
+  },
+  "create_page": {
+    "doc": "TASK.md",
+    "endpoint": "POST /api/v2/pages (or POST /rest/api/content)"
+  },
+  "update_page": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /rest/api/content/{id}"
+  },
+  "delete_page": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /api/v2/pages/{pageId}"
+  },
+  "get_page_children": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/pages/{pageId}/children"
+  },
+  "get_page_ancestors": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/pages/{pageId}/ancestors"
+  },
+  "move_page": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /rest/api/content/{id}/move"
+  },
+  "list_spaces": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/spaces"
+  },
+  "get_space": {
+    "doc": "TASK.md",
+    "endpoint": "GET /api/v2/spaces/{spaceId} (or GET /rest/api/space/{spaceKey})"
+  },
+  "create_space": {
+    "doc": "TASK.md",
+    "endpoint": "POST /rest/api/space"
+  },
+  "delete_space": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /api/v2/spaces/{spaceId}"
+  },
+  "cql_search": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/search"
+  },
+  "list_labels": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}/label"
+  },
+  "add_labels": {
+    "doc": "TASK.md",
+    "endpoint": "POST /rest/api/content/{id}/label"
+  },
+  "remove_label": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /rest/api/content/{id}/label/{label}"
+  },
+  "list_attachments": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}/child/attachment"
+  },
+  "upload_attachment": {
+    "doc": "TASK.md",
+    "endpoint": "POST /rest/api/content/{id}/child/attachment"
+  },
+  "get_attachment": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}"
+  },
+  "download_attachment": {
+    "doc": "TASK.md",
+    "endpoint": "GET {downloadUrl}"
+  },
+  "list_comments": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}/child/comment"
+  },
+  "create_footer_comment": {
+    "doc": "TASK.md",
+    "endpoint": "POST /rest/api/content"
+  },
+  "create_inline_comment": {
+    "doc": "TASK.md",
+    "endpoint": "POST /rest/api/content"
+  },
+  "list_page_versions": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}/version"
+  },
+  "get_page_version": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}/version/{versionNumber}"
+  },
+  "restore_page_version": {
+    "doc": "TASK.md",
+    "endpoint": "POST /rest/api/content/{id}/version/{versionNumber}/restore"
+  },
+  "get_content_property": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}/property/{key}"
+  },
+  "set_content_property": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /rest/api/content/{id}/property/{key}"
+  },
+  "get_blog_post": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/content/{id}"
+  },
+  "create_blog_post": {
+    "doc": "TASK.md",
+    "endpoint": "POST /rest/api/content"
+  },
+  "update_blog_post": {
+    "doc": "TASK.md",
+    "endpoint": "PUT /rest/api/content/{id}"
+  },
+  "delete_blog_post": {
+    "doc": "TASK.md",
+    "endpoint": "DELETE /rest/api/content/{id}"
+  },
+  "get_current_user": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/user/current"
+  },
+  "get_user": {
+    "doc": "TASK.md",
+    "endpoint": "GET /rest/api/user?accountId={accountId}"
+  }
+}

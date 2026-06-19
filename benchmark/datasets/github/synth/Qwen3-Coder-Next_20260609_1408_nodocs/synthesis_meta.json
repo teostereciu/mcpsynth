@@ -1,0 +1,14 @@
+{
+  "dataset": "github",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "nodocs",
+  "synthesis_time": 173.25340604782104,
+  "token_usage": {
+    "input_tokens": 158072,
+    "output_tokens": 16677
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1408",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 14
+}

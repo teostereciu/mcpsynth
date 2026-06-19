@@ -1,0 +1,12 @@
+{
+  "dataset": "shopify",
+  "model": "gcp-chat-completions-anthropic-claude-sonnet-4.6-sandbox",
+  "condition": "docs",
+  "synthesis_time": 1165.4389109611511,
+  "token_usage": {
+    "input_tokens": 4388927,
+    "output_tokens": 37292
+  },
+  "cost_estimate": null,
+  "timestamp": "20260608_1140"
+}

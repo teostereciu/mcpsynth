@@ -1,0 +1,154 @@
+{
+  "send_message": {
+    "doc": "docs/messages/send-message.md",
+    "endpoint": "POST /messages"
+  },
+  "get_messages": {
+    "doc": "docs/messages/get-messages.md",
+    "endpoint": "GET /messages"
+  },
+  "get_message": {
+    "doc": "docs/messages/get-message.md",
+    "endpoint": "GET /messages/{message_id}"
+  },
+  "update_message": {
+    "doc": "docs/messages/update-message.md",
+    "endpoint": "PATCH /messages/{message_id}"
+  },
+  "delete_message": {
+    "doc": "docs/messages/delete-message.md",
+    "endpoint": "DELETE /messages/{message_id}"
+  },
+  "mark_stream_topic_as_read": {
+    "doc": "docs/messages/mark-topic-as-read.md",
+    "endpoint": "POST /mark_topic_as_read"
+  },
+  "add_reaction": {
+    "doc": "docs/reactions/add-reaction.md",
+    "endpoint": "POST /messages/{message_id}/reactions"
+  },
+  "remove_reaction": {
+    "doc": "docs/reactions/remove-reaction.md",
+    "endpoint": "DELETE /messages/{message_id}/reactions"
+  },
+  "update_message_flags": {
+    "doc": "docs/messages/update-message-flags.md",
+    "endpoint": "POST /messages/flags"
+  },
+  "get_message_history": {
+    "doc": "docs/messages/get-message-history.md",
+    "endpoint": "GET /messages/{message_id}/history"
+  },
+  "get_streams": {
+    "doc": "docs/streams/get-streams.md",
+    "endpoint": "GET /streams"
+  },
+  "create_streams": {
+    "doc": "docs/streams/create-streams.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "subscribe_streams": {
+    "doc": "docs/streams/subscribe-streams.md",
+    "endpoint": "POST /users/me/subscriptions"
+  },
+  "unsubscribe_streams": {
+    "doc": "docs/streams/unsubscribe-streams.md",
+    "endpoint": "DELETE /users/me/subscriptions"
+  },
+  "get_stream_id": {
+    "doc": "docs/streams/get-stream-id.md",
+    "endpoint": "GET /get_stream_id"
+  },
+  "archive_stream": {
+    "doc": "docs/streams/archive-stream.md",
+    "endpoint": "DELETE /streams/{stream_id}"
+  },
+  "update_stream": {
+    "doc": "docs/streams/update-stream.md",
+    "endpoint": "PATCH /streams/{stream_id}"
+  },
+  "get_topics": {
+    "doc": "docs/topics/get-stream-topics.md",
+    "endpoint": "GET /users/me/{stream_id}/topics"
+  },
+  "rename_topic": {
+    "doc": "docs/topics/rename-topic.md",
+    "endpoint": "POST /messages/topic"
+  },
+  "resolve_topic": {
+    "doc": "docs/topics/resolve-topic.md",
+    "endpoint": "POST /messages/topic"
+  },
+  "unresolve_topic": {
+    "doc": "docs/topics/unresolve-topic.md",
+    "endpoint": "POST /messages/topic"
+  },
+  "delete_topic": {
+    "doc": "docs/topics/delete-topic.md",
+    "endpoint": "DELETE /messages/topic"
+  },
+  "get_topic_history": {
+    "doc": "docs/topics/get-topic-history.md",
+    "endpoint": "GET /users/me/topics"
+  },
+  "get_own_user": {
+    "doc": "docs/users/get-own-user.md",
+    "endpoint": "GET /users/me"
+  },
+  "get_user_by_id": {
+    "doc": "docs/users/get-user-by-id.md",
+    "endpoint": "GET /users/{user_id}"
+  },
+  "get_user_by_email": {
+    "doc": "docs/users/get-user-by-email.md",
+    "endpoint": "GET /users/{email}"
+  },
+  "get_users": {
+    "doc": "docs/users/get-users.md",
+    "endpoint": "GET /users"
+  },
+  "get_presence": {
+    "doc": "docs/users/get-presence.md",
+    "endpoint": "GET /users/{user_id_or_email}/presence"
+  },
+  "update_status_text": {
+    "doc": "docs/users/update-status.md",
+    "endpoint": "POST /users/me/status"
+  },
+  "get_drafts": {
+    "doc": "docs/drafts/get-drafts.md",
+    "endpoint": "GET /drafts"
+  },
+  "create_draft": {
+    "doc": "docs/drafts/create-draft.md",
+    "endpoint": "POST /drafts"
+  },
+  "edit_draft": {
+    "doc": "docs/drafts/edit-draft.md",
+    "endpoint": "PATCH /drafts/{draft_id}"
+  },
+  "delete_draft": {
+    "doc": "docs/drafts/delete-draft.md",
+    "endpoint": "DELETE /drafts/{draft_id}"
+  },
+  "get_scheduled_messages": {
+    "doc": "docs/scheduled-messages/get-scheduled-messages.md",
+    "endpoint": "GET /scheduled_messages"
+  },
+  "create_scheduled_message": {
+    "doc": "docs/scheduled-messages/create-scheduled-message.md",
+    "endpoint": "POST /scheduled_messages"
+  },
+  "update_scheduled_message": {
+    "doc": "docs/scheduled-messages/update-scheduled-message.md",
+    "endpoint": "PATCH /scheduled_messages/{message_id}"
+  },
+  "delete_scheduled_message": {
+    "doc": "docs/scheduled-messages/delete-scheduled-message.md",
+    "endpoint": "DELETE /scheduled_messages/{message_id}"
+  },
+  "upload_file": {
+    "doc": "docs/files/upload-file.md",
+    "endpoint": "POST /user_uploads"
+  }
+}

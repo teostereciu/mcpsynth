@@ -1,0 +1,50 @@
+{
+  "search_items": {
+    "doc": "docs/browse.md",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "get_item": {
+    "doc": "docs/browse.md",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}"
+  },
+  "get_item_by_legacy_id": {
+    "doc": "docs/browse.md",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_legacy_id"
+  },
+  "get_items_by_item_group": {
+    "doc": "docs/browse.md",
+    "endpoint": "GET /buy/browse/v1/item/get_items_by_item_group"
+  },
+  "get_deals": {
+    "doc": "docs/deal.md",
+    "endpoint": "GET /buy/deal/v1/deal_item"
+  },
+  "get_events": {
+    "doc": "docs/deal.md",
+    "endpoint": "GET /buy/deal/v1/event"
+  },
+  "get_event": {
+    "doc": "docs/deal.md",
+    "endpoint": "GET /buy/deal/v1/event/{event_id}"
+  },
+  "initiate_guest_checkout_session": {
+    "doc": "docs/order.md",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/initiate"
+  },
+  "get_guest_checkout_session": {
+    "doc": "docs/order.md",
+    "endpoint": "GET /buy/order/v1/guest_checkout_session/{checkoutSessionId}"
+  },
+  "place_guest_order": {
+    "doc": "docs/order.md",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/{checkoutSessionId}/place_order"
+  },
+  "get_item_feed": {
+    "doc": "docs/feed.md",
+    "endpoint": "GET /buy/feed/v1/item"
+  },
+  "get_item_priority_feed": {
+    "doc": "docs/feed.md",
+    "endpoint": "GET /buy/feed/v1/item_priority"
+  }
+}

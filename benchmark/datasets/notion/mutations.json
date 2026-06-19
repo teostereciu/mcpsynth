@@ -1,0 +1,10 @@
+{
+  "description": "Notion API parameter mutations for parametric contamination testing. Renames Notion-specific request parameters to plausible-but-wrong alternatives.",
+  "mutations": [
+    {"original": "filter",       "mutated": "query_filter"},
+    {"original": "sorts",        "mutated": "sort_rules"},
+    {"original": "page_size",    "mutated": "results_per_page"},
+    {"original": "start_cursor", "mutated": "page_cursor"},
+    {"original": "archived",     "mutated": "is_archived"}
+  ]
+}

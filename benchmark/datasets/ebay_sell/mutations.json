@@ -1,0 +1,10 @@
+{
+  "description": "Parameter name mutations for the eBay Sell API, covering common query/body params used in inventory, fulfillment, marketing, and finances endpoints.",
+  "mutations": [
+    {"original": "marketplace_id", "mutated": "market_id"},
+    {"original": "compliance_type", "mutated": "violation_type"},
+    {"original": "campaign_name", "mutated": "campaign_title"},
+    {"original": "sort", "mutated": "sort_by"},
+    {"original": "sku", "mutated": "seller_sku"}
+  ]
+}

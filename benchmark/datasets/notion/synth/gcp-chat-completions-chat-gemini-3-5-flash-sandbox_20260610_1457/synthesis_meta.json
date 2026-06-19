@@ -1,0 +1,12 @@
+{
+  "dataset": "notion",
+  "model": "gcp-chat-completions-chat-gemini-3.5-flash-sandbox",
+  "condition": "docs",
+  "synthesis_time": 214.30667686462402,
+  "token_usage": {
+    "input_tokens": 33546,
+    "output_tokens": 97
+  },
+  "cost_estimate": null,
+  "timestamp": "20260610_1457"
+}

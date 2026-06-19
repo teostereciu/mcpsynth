@@ -1,0 +1,354 @@
+{
+  "shopify_create_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "POST /products.json"
+  },
+  "shopify_list_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products.json"
+  },
+  "shopify_get_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products/{product_id}.json"
+  },
+  "shopify_count_products": {
+    "doc": "docs/api_product.md",
+    "endpoint": "GET /products/count.json"
+  },
+  "shopify_update_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "PUT /products/{product_id}.json"
+  },
+  "shopify_delete_product": {
+    "doc": "docs/api_product.md",
+    "endpoint": "DELETE /products/{product_id}.json"
+  },
+  "shopify_create_product_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "POST /products/{product_id}/variants.json"
+  },
+  "shopify_list_product_variants": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /products/{product_id}/variants.json"
+  },
+  "shopify_get_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "GET /variants/{variant_id}.json"
+  },
+  "shopify_update_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "PUT /variants/{variant_id}.json"
+  },
+  "shopify_delete_variant": {
+    "doc": "docs/api_product-variant.md",
+    "endpoint": "DELETE /products/{product_id}/variants/{variant_id}.json"
+  },
+  "shopify_create_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "POST /products/{product_id}/images.json"
+  },
+  "shopify_list_product_images": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "GET /products/{product_id}/images.json"
+  },
+  "shopify_get_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "GET /products/{product_id}/images/{image_id}.json"
+  },
+  "shopify_update_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "PUT /products/{product_id}/images/{image_id}.json"
+  },
+  "shopify_delete_product_image": {
+    "doc": "docs/api_product-image.md",
+    "endpoint": "DELETE /products/{product_id}/images/{image_id}.json"
+  },
+  "shopify_create_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders.json"
+  },
+  "shopify_list_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /orders.json"
+  },
+  "shopify_get_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /orders/{order_id}.json"
+  },
+  "shopify_count_orders": {
+    "doc": "docs/api_order.md",
+    "endpoint": "GET /orders/count.json"
+  },
+  "shopify_update_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "PUT /orders/{order_id}.json"
+  },
+  "shopify_delete_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "DELETE /orders/{order_id}.json"
+  },
+  "shopify_cancel_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders/{order_id}/cancel.json"
+  },
+  "shopify_close_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders/{order_id}/close.json"
+  },
+  "shopify_open_order": {
+    "doc": "docs/api_order.md",
+    "endpoint": "POST /orders/{order_id}/open.json"
+  },
+  "shopify_create_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "POST /draft_orders.json"
+  },
+  "shopify_list_draft_orders": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "GET /draft_orders.json"
+  },
+  "shopify_get_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "GET /draft_orders/{draft_order_id}.json"
+  },
+  "shopify_count_draft_orders": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "GET /draft_orders/count.json"
+  },
+  "shopify_update_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "PUT /draft_orders/{draft_order_id}.json"
+  },
+  "shopify_complete_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "PUT /draft_orders/{draft_order_id}/complete.json"
+  },
+  "shopify_send_draft_order_invoice": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "POST /draft_orders/{draft_order_id}/send_invoice.json"
+  },
+  "shopify_delete_draft_order": {
+    "doc": "docs/api_draftorder.md",
+    "endpoint": "DELETE /draft_orders/{draft_order_id}.json"
+  },
+  "shopify_create_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /customers.json"
+  },
+  "shopify_list_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers.json"
+  },
+  "shopify_search_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers/search.json"
+  },
+  "shopify_count_customers": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers/count.json"
+  },
+  "shopify_update_customer": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "PUT /customers/{customer_id}.json"
+  },
+  "shopify_get_customer_orders": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "GET /customers/{customer_id}/orders.json"
+  },
+  "shopify_create_customer_account_activation_url": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /customers/{customer_id}/account_activation_url.json"
+  },
+  "shopify_send_customer_invite": {
+    "doc": "docs/api_customer.md",
+    "endpoint": "POST /customers/{customer_id}/send_invite.json"
+  },
+  "shopify_create_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "POST /customers/{customer_id}/addresses.json"
+  },
+  "shopify_list_customer_addresses": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "GET /customers/{customer_id}/addresses.json"
+  },
+  "shopify_get_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "GET /customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "shopify_update_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "PUT /customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "shopify_set_default_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "PUT /customers/{customer_id}/addresses/{address_id}/default.json"
+  },
+  "shopify_bulk_customer_addresses_set": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "PUT /customers/{customer_id}/addresses/set.json"
+  },
+  "shopify_delete_customer_address": {
+    "doc": "docs/api_customer-address.md",
+    "endpoint": "DELETE /customers/{customer_id}/addresses/{address_id}.json"
+  },
+  "shopify_list_inventory_items": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "GET /inventory_items.json"
+  },
+  "shopify_get_inventory_item": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "GET /inventory_items/{inventory_item_id}.json"
+  },
+  "shopify_update_inventory_item": {
+    "doc": "docs/api_inventoryitem.md",
+    "endpoint": "PUT /inventory_items/{inventory_item_id}.json"
+  },
+  "shopify_list_inventory_levels": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "GET /inventory_levels.json"
+  },
+  "shopify_adjust_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /inventory_levels/adjust.json"
+  },
+  "shopify_connect_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /inventory_levels/connect.json"
+  },
+  "shopify_set_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "POST /inventory_levels/set.json"
+  },
+  "shopify_delete_inventory_level": {
+    "doc": "docs/api_inventorylevel.md",
+    "endpoint": "DELETE /inventory_levels.json"
+  },
+  "shopify_list_locations": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations.json"
+  },
+  "shopify_get_location": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations/{location_id}.json"
+  },
+  "shopify_count_locations": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations/count.json"
+  },
+  "shopify_list_location_inventory_levels": {
+    "doc": "docs/api_location.md",
+    "endpoint": "GET /locations/{location_id}/inventory_levels.json"
+  },
+  "shopify_create_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "POST /price_rules.json"
+  },
+  "shopify_list_price_rules": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /price_rules.json"
+  },
+  "shopify_get_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /price_rules/{price_rule_id}.json"
+  },
+  "shopify_count_price_rules": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "GET /price_rules/count.json"
+  },
+  "shopify_update_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "PUT /price_rules/{price_rule_id}.json"
+  },
+  "shopify_delete_price_rule": {
+    "doc": "docs/api_pricerule.md",
+    "endpoint": "DELETE /price_rules/{price_rule_id}.json"
+  },
+  "shopify_create_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "POST /price_rules/{price_rule_id}/discount_codes.json"
+  },
+  "shopify_list_discount_codes": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /price_rules/{price_rule_id}/discount_codes.json"
+  },
+  "shopify_get_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json"
+  },
+  "shopify_update_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "PUT /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json"
+  },
+  "shopify_delete_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "DELETE /price_rules/{price_rule_id}/discount_codes/{discount_code_id}.json"
+  },
+  "shopify_create_discount_code_batch": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "POST /price_rules/{price_rule_id}/batch.json"
+  },
+  "shopify_get_discount_code_batch": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /price_rules/{price_rule_id}/batch/{batch_id}.json"
+  },
+  "shopify_list_discount_codes_for_batch": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /price_rules/{price_rule_id}/batch/{batch_id}/discount_codes.json"
+  },
+  "shopify_count_discount_codes": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /discount_codes/count.json"
+  },
+  "shopify_lookup_discount_code": {
+    "doc": "docs/api_discountcode.md",
+    "endpoint": "GET /discount_codes/lookup.json"
+  },
+  "shopify_create_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "POST /webhooks.json"
+  },
+  "shopify_list_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /webhooks.json"
+  },
+  "shopify_get_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /webhooks/{webhook_id}.json"
+  },
+  "shopify_count_webhooks": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "GET /webhooks/count.json"
+  },
+  "shopify_update_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "PUT /webhooks/{webhook_id}.json"
+  },
+  "shopify_delete_webhook": {
+    "doc": "docs/api_webhook.md",
+    "endpoint": "DELETE /webhooks/{webhook_id}.json"
+  },
+  "shopify_create_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "POST /{resource}/{id}/metafields.json"
+  },
+  "shopify_list_metafields": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /{resource}/{id}/metafields.json"
+  },
+  "shopify_get_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /{resource}/{id}/metafields/{metafield_id}.json"
+  },
+  "shopify_count_metafields": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "GET /{resource}/{id}/metafields/count.json"
+  },
+  "shopify_update_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "PUT /{resource}/{id}/metafields/{metafield_id}.json"
+  },
+  "shopify_delete_metafield": {
+    "doc": "docs/api_metafield.md",
+    "endpoint": "DELETE /{resource}/{id}/metafields/{metafield_id}.json"
+  }
+}

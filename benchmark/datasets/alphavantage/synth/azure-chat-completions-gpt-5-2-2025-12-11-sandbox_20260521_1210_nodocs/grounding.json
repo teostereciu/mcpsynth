@@ -1,0 +1,130 @@
+{
+  "stock_intraday": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TIME_SERIES_INTRADAY"
+  },
+  "stock_daily": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY"
+  },
+  "stock_daily_adjusted": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TIME_SERIES_DAILY_ADJUSTED"
+  },
+  "stock_weekly": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TIME_SERIES_WEEKLY"
+  },
+  "stock_weekly_adjusted": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TIME_SERIES_WEEKLY_ADJUSTED"
+  },
+  "stock_monthly": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TIME_SERIES_MONTHLY"
+  },
+  "stock_monthly_adjusted": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TIME_SERIES_MONTHLY_ADJUSTED"
+  },
+  "global_quote": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=GLOBAL_QUOTE"
+  },
+  "symbol_search": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=SYMBOL_SEARCH"
+  },
+  "fx_exchange_rate": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "fx_daily": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=FX_DAILY"
+  },
+  "fx_weekly": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=FX_WEEKLY"
+  },
+  "fx_monthly": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=FX_MONTHLY"
+  },
+  "crypto_exchange_rate": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=CURRENCY_EXCHANGE_RATE"
+  },
+  "crypto_daily": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=DIGITAL_CURRENCY_DAILY"
+  },
+  "crypto_weekly": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=DIGITAL_CURRENCY_WEEKLY"
+  },
+  "crypto_monthly": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=DIGITAL_CURRENCY_MONTHLY"
+  },
+  "sma": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=SMA"
+  },
+  "ema": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=EMA"
+  },
+  "rsi": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=RSI"
+  },
+  "macd": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=MACD"
+  },
+  "bbands": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=BBANDS"
+  },
+  "company_overview": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=OVERVIEW"
+  },
+  "income_statement": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=INCOME_STATEMENT"
+  },
+  "balance_sheet": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=BALANCE_SHEET"
+  },
+  "earnings": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=EARNINGS"
+  },
+  "cpi": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=CPI"
+  },
+  "inflation": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=INFLATION"
+  },
+  "gdp": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=REAL_GDP"
+  },
+  "unemployment": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=UNEMPLOYMENT"
+  },
+  "treasury_yield": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=TREASURY_YIELD"
+  },
+  "sector_performance": {
+    "doc": "docs/",
+    "endpoint": "GET /query?function=SECTOR"
+  }
+}

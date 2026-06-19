@@ -1,0 +1,186 @@
+{
+  "get_product": {
+    "doc": "docs/api_commerce_catalog_resources_product_methods_getProduct.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product/{epid}"
+  },
+  "search_products": {
+    "doc": "docs/api_commerce_catalog_resources_product_summary_methods_search.md",
+    "endpoint": "GET /commerce/catalog/v1_beta/product_summary/search"
+  },
+  "get_charity_org": {
+    "doc": "docs/api_commerce_charity_resources_charity_org_methods_getCharityOrg.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org/{charity_org_id}"
+  },
+  "get_charity_orgs": {
+    "doc": "docs/api_commerce_charity_resources_charity_org_methods_getCharityOrgs.md",
+    "endpoint": "GET /commerce/charity/v1/charity_org"
+  },
+  "get_user": {
+    "doc": "docs/api_commerce_identity_resources_user_methods_getUser.md",
+    "endpoint": "GET /commerce/identity/v1/user/"
+  },
+  "get_public_key": {
+    "doc": "docs/api_commerce_notification_resources_public_key_methods_getPublicKey.md",
+    "endpoint": "GET /commerce/notification/v1/public_key/{public_key_id}"
+  },
+  "get_config": {
+    "doc": "docs/api_commerce_notification_resources_config_methods_getConfig.md",
+    "endpoint": "GET /commerce/notification/v1/config"
+  },
+  "get_image": {
+    "doc": "docs/api_commerce_media_resources_image_methods_getImage.md",
+    "endpoint": "GET /commerce/media/v1_beta/image/{image_id}"
+  },
+  "create_image_from_url": {
+    "doc": "docs/api_commerce_media_resources_image_methods_createImageFromUrl.md",
+    "endpoint": "POST /commerce/media/v1_beta/image/create_image_from_url"
+  },
+  "create_image_from_file": {
+    "doc": "docs/api_commerce_media_resources_image_methods_createImageFromFile.md",
+    "endpoint": "POST /commerce/media/v1_beta/image/create_image_from_file"
+  },
+  "get_video": {
+    "doc": "docs/api_commerce_media_resources_video_methods_getVideo.md",
+    "endpoint": "GET /commerce/media/v1_beta/video/{video_id}"
+  },
+  "create_video": {
+    "doc": "docs/api_commerce_media_resources_video_methods_createVideo.md",
+    "endpoint": "POST /commerce/media/v1_beta/video"
+  },
+  "upload_video": {
+    "doc": "docs/api_commerce_media_resources_video_methods_uploadVideo.md",
+    "endpoint": "POST /commerce/media/v1_beta/video/{video_id}/upload"
+  },
+  "get_document": {
+    "doc": "docs/api_commerce_media_resources_document_methods_getDocument.md",
+    "endpoint": "GET /commerce/media/v1_beta/document/{document_id}"
+  },
+  "create_document": {
+    "doc": "docs/api_commerce_media_resources_document_methods_createDocument.md",
+    "endpoint": "POST /commerce/media/v1_beta/document"
+  },
+  "upload_document": {
+    "doc": "docs/api_commerce_media_resources_document_methods_uploadDocument.md",
+    "endpoint": "POST /commerce/media/v1_beta/document/{document_id}/upload"
+  },
+  "create_document_from_url": {
+    "doc": "docs/api_commerce_media_resources_document_methods_createDocumentFromUrl.md",
+    "endpoint": "POST /commerce/media/v1_beta/document/create_document_from_url"
+  },
+  "create_destination": {
+    "doc": "docs/api_commerce_notification_resources_destination_methods_createDestination.md",
+    "endpoint": "POST /commerce/notification/v1/destination"
+  },
+  "get_destination": {
+    "doc": "docs/api_commerce_notification_resources_destination_methods_getDestination.md",
+    "endpoint": "GET /commerce/notification/v1/destination/{destination_id}"
+  },
+  "update_destination": {
+    "doc": "docs/api_commerce_notification_resources_destination_methods_updateDestination.md",
+    "endpoint": "PUT /commerce/notification/v1/destination/{destination_id}"
+  },
+  "delete_destination": {
+    "doc": "docs/api_commerce_notification_resources_destination_methods_deleteDestination.md",
+    "endpoint": "DELETE /commerce/notification/v1/destination/{destination_id}"
+  },
+  "get_destinations": {
+    "doc": "docs/api_commerce_notification_resources_destination_methods_getDestinations.md",
+    "endpoint": "GET /commerce/notification/v1/destination"
+  },
+  "get_subscriptions": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_getSubscriptions.md",
+    "endpoint": "GET /commerce/notification/v1/subscription"
+  },
+  "create_subscription_filter": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_createSubscriptionFilter.md",
+    "endpoint": "POST /commerce/notification/v1/subscription/{subscription_id}/filter"
+  },
+  "get_subscription_filter": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_getSubscriptionFilter.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscription_id}/filter/{filter_id}"
+  },
+  "delete_subscription_filter": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_deleteSubscriptionFilter.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}/filter/{filter_id}"
+  },
+  "update_config": {
+    "doc": "docs/api_commerce_notification_resources_config_methods_updateConfig.md",
+    "endpoint": "PUT /commerce/notification/v1/config"
+  },
+  "create_subscription": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_createSubscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription"
+  },
+  "get_subscription": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_getSubscription.md",
+    "endpoint": "GET /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "update_subscription": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_updateSubscription.md",
+    "endpoint": "PUT /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "delete_subscription": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_deleteSubscription.md",
+    "endpoint": "DELETE /commerce/notification/v1/subscription/{subscription_id}"
+  },
+  "enable_subscription": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_enableSubscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription/{subscription_id}/enable"
+  },
+  "disable_subscription": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_disableSubscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription/{subscription_id}/disable"
+  },
+  "test_subscription": {
+    "doc": "docs/api_commerce_notification_resources_subscription_methods_testSubscription.md",
+    "endpoint": "POST /commerce/notification/v1/subscription/{subscription_id}/test"
+  },
+  "get_topics": {
+    "doc": "docs/api_commerce_notification_resources_topic_methods_getTopics.md",
+    "endpoint": "GET /commerce/notification/v1/topic"
+  },
+  "get_topic": {
+    "doc": "docs/api_commerce_notification_resources_topic_methods_getTopic.md",
+    "endpoint": "GET /commerce/notification/v1/topic/{topic_id}"
+  },
+  "get_expired_categories": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getExpiredCategories.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_expired_categories"
+  },
+  "get_category_tree": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getCategoryTree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}"
+  },
+  "get_category_subtree": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getCategorySubtree.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/category/{category_id}"
+  },
+  "get_category_suggestions": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getCategorySuggestions.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/get_category_suggestions"
+  },
+  "get_default_category_tree_id": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getDefaultCategoryTreeId.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/get_default_category_tree_id"
+  },
+  "get_item_aspects_for_category": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getItemAspectsForCategory.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/category/{category_id}/item_aspects"
+  },
+  "get_compatibility_properties": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getCompatibilityProperties.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/category/{category_id}/compatibility_properties"
+  },
+  "get_compatibility_property_values": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_getCompatibilityPropertyValues.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/category/{category_id}/compatibility_properties/{property_name}/values"
+  },
+  "fetch_item_aspects": {
+    "doc": "docs/api_commerce_taxonomy_resources_category_tree_methods_fetchItemAspects.md",
+    "endpoint": "GET /commerce/taxonomy/v1/category_tree/{category_tree_id}/product/{epid}/item_aspects"
+  },
+  "translate": {
+    "doc": "docs/api_commerce_translation_resources_language_methods_translate.md",
+    "endpoint": "POST /commerce/translation/v1_beta/translate"
+  }
+}

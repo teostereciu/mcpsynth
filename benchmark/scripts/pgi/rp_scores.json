@@ -1,0 +1,231 @@
+{
+  "description": "Protocol Rigidity Score (R_p) \u2014 composite of three sub-signals: idiosyncrasy (0.50), camelCase fraction (0.30), enum density (0.20). All sub-signals normalized to [0,1] before weighting; composite re-normalized.",
+  "weights": {
+    "idiosyncrasy": 0.5,
+    "camelcase_fraction": 0.3,
+    "enum_density": 0.2
+  },
+  "standard_vocab_size": 148,
+  "raw": {
+    "stripe": {
+      "n_docs": 120,
+      "n_params_extracted": 1015,
+      "n_standard": 35,
+      "n_non_standard": 980,
+      "n_camelcase": 3,
+      "n_enum_values": 54,
+      "idiosyncrasy": 0.9655,
+      "camelcase_fraction": 0.003,
+      "enum_density": 0.0532
+    },
+    "github": {
+      "n_docs": 180,
+      "n_params_extracted": 314,
+      "n_standard": 44,
+      "n_non_standard": 270,
+      "n_camelcase": 7,
+      "n_enum_values": 378,
+      "idiosyncrasy": 0.8599,
+      "camelcase_fraction": 0.0223,
+      "enum_density": 1.2038
+    },
+    "zulip": {
+      "n_docs": 164,
+      "n_params_extracted": 127,
+      "n_standard": 18,
+      "n_non_standard": 109,
+      "n_camelcase": 0,
+      "n_enum_values": 55,
+      "idiosyncrasy": 0.8583,
+      "camelcase_fraction": 0.0,
+      "enum_density": 0.4331
+    },
+    "notion": {
+      "n_docs": 93,
+      "n_params_extracted": 16,
+      "n_standard": 8,
+      "n_non_standard": 8,
+      "n_camelcase": 1,
+      "n_enum_values": 59,
+      "idiosyncrasy": 0.5,
+      "camelcase_fraction": 0.0625,
+      "enum_density": 3.6875
+    },
+    "confluence": {
+      "n_docs": 47,
+      "n_params_extracted": 124,
+      "n_standard": 29,
+      "n_non_standard": 95,
+      "n_camelcase": 63,
+      "n_enum_values": 4,
+      "idiosyncrasy": 0.7661,
+      "camelcase_fraction": 0.5081,
+      "enum_density": 0.0323
+    },
+    "jira": {
+      "n_docs": 100,
+      "n_params_extracted": 360,
+      "n_standard": 38,
+      "n_non_standard": 322,
+      "n_camelcase": 263,
+      "n_enum_values": 25,
+      "idiosyncrasy": 0.8944,
+      "camelcase_fraction": 0.7306,
+      "enum_density": 0.0694
+    },
+    "shopify": {
+      "n_docs": 57,
+      "n_params_extracted": 93,
+      "n_standard": 6,
+      "n_non_standard": 87,
+      "n_camelcase": 0,
+      "n_enum_values": 80,
+      "idiosyncrasy": 0.9355,
+      "camelcase_fraction": 0.0,
+      "enum_density": 0.8602
+    },
+    "mastodon": {
+      "n_docs": 35,
+      "n_params_extracted": 150,
+      "n_standard": 28,
+      "n_non_standard": 122,
+      "n_camelcase": 0,
+      "n_enum_values": 31,
+      "idiosyncrasy": 0.8133,
+      "camelcase_fraction": 0.0,
+      "enum_density": 0.2067
+    },
+    "openweathermap": {
+      "n_docs": 4,
+      "n_params_extracted": 12,
+      "n_standard": 4,
+      "n_non_standard": 8,
+      "n_camelcase": 0,
+      "n_enum_values": 12,
+      "idiosyncrasy": 0.6667,
+      "camelcase_fraction": 0.0,
+      "enum_density": 1.0
+    },
+    "alphavantage": {
+      "n_docs": 9,
+      "n_params_extracted": 61,
+      "n_standard": 5,
+      "n_non_standard": 56,
+      "n_camelcase": 0,
+      "n_enum_values": 12,
+      "idiosyncrasy": 0.918,
+      "camelcase_fraction": 0.0,
+      "enum_density": 0.1967
+    },
+    "spoonacular": {
+      "n_docs": 7,
+      "n_params_extracted": 148,
+      "n_standard": 14,
+      "n_non_standard": 134,
+      "n_camelcase": 119,
+      "n_enum_values": 0,
+      "idiosyncrasy": 0.9054,
+      "camelcase_fraction": 0.8041,
+      "enum_density": 0.0
+    },
+    "ebay_buy": {
+      "n_docs": 27,
+      "n_params_extracted": 109,
+      "n_standard": 7,
+      "n_non_standard": 102,
+      "n_camelcase": 74,
+      "n_enum_values": 34,
+      "idiosyncrasy": 0.9358,
+      "camelcase_fraction": 0.6789,
+      "enum_density": 0.3119
+    },
+    "ebay_sell": {
+      "n_docs": 190,
+      "n_params_extracted": 47,
+      "n_standard": 0,
+      "n_non_standard": 47,
+      "n_camelcase": 9,
+      "n_enum_values": 8,
+      "idiosyncrasy": 1.0,
+      "camelcase_fraction": 0.1915,
+      "enum_density": 0.1702
+    },
+    "ebay_commerce": {
+      "n_docs": 47,
+      "n_params_extracted": 46,
+      "n_standard": 6,
+      "n_non_standard": 40,
+      "n_camelcase": 14,
+      "n_enum_values": 9,
+      "idiosyncrasy": 0.8696,
+      "camelcase_fraction": 0.3043,
+      "enum_density": 0.1957
+    }
+  },
+  "normalized_components": {
+    "idiosync_norm": {
+      "stripe": 0.931,
+      "github": 0.7198,
+      "zulip": 0.7166,
+      "notion": 0.0,
+      "confluence": 0.5322,
+      "jira": 0.7888,
+      "shopify": 0.871,
+      "mastodon": 0.6266,
+      "openweathermap": 0.3334,
+      "alphavantage": 0.836,
+      "spoonacular": 0.8108,
+      "ebay_buy": 0.8716,
+      "ebay_sell": 1.0,
+      "ebay_commerce": 0.7392
+    },
+    "camel_norm": {
+      "stripe": 0.0037,
+      "github": 0.0277,
+      "zulip": 0.0,
+      "notion": 0.0777,
+      "confluence": 0.6319,
+      "jira": 0.9086,
+      "shopify": 0.0,
+      "mastodon": 0.0,
+      "openweathermap": 0.0,
+      "alphavantage": 0.0,
+      "spoonacular": 1.0,
+      "ebay_buy": 0.8443,
+      "ebay_sell": 0.2382,
+      "ebay_commerce": 0.3784
+    },
+    "enum_norm": {
+      "stripe": 0.0144,
+      "github": 0.3265,
+      "zulip": 0.1175,
+      "notion": 1.0,
+      "confluence": 0.0088,
+      "jira": 0.0188,
+      "shopify": 0.2333,
+      "mastodon": 0.0561,
+      "openweathermap": 0.2712,
+      "alphavantage": 0.0533,
+      "spoonacular": 0.0,
+      "ebay_buy": 0.0846,
+      "ebay_sell": 0.0462,
+      "ebay_commerce": 0.0531
+    }
+  },
+  "rp_scores": {
+    "stripe": 0.5124,
+    "github": 0.4382,
+    "zulip": 0.3316,
+    "notion": 0.0049,
+    "confluence": 0.4875,
+    "jira": 0.9273,
+    "shopify": 0.5385,
+    "mastodon": 0.2135,
+    "openweathermap": 0.0,
+    "alphavantage": 0.4283,
+    "spoonacular": 0.9988,
+    "ebay_buy": 1.0,
+    "ebay_sell": 0.7416,
+    "ebay_commerce": 0.5624
+  }
+}

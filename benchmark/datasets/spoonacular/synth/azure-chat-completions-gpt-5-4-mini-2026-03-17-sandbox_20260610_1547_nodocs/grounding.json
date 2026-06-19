@@ -1,0 +1,74 @@
+{
+  "search_recipes": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "search_recipes_by_ingredients": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/findByIngredients"
+  },
+  "search_recipes_by_nutrients": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/findByNutrients"
+  },
+  "get_recipe_information": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "get_recipe_ingredients": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/{id}/ingredientWidget.json"
+  },
+  "get_recipe_nutrition": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "get_recipe_instructions": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/{id}/analyzedInstructions"
+  },
+  "get_similar_recipes": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/{id}/similar"
+  },
+  "search_ingredients": {
+    "doc": "TASK.md",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "get_ingredient_information": {
+    "doc": "TASK.md",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "parse_ingredients": {
+    "doc": "TASK.md",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "generate_meal_plan": {
+    "doc": "TASK.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "get_meal_plan": {
+    "doc": "TASK.md",
+    "endpoint": "GET /mealplanner/{id}"
+  },
+  "get_nutrition_by_id": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "visualize_nutrition": {
+    "doc": "TASK.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "get_wine_pairing": {
+    "doc": "TASK.md",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "get_wine_description": {
+    "doc": "TASK.md",
+    "endpoint": "GET /food/wine/description"
+  },
+  "autocomplete": {
+    "doc": "TASK.md",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  }
+}

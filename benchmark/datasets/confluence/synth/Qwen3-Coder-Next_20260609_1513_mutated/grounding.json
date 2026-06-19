@@ -1,0 +1,158 @@
+{
+  "confluence_create_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "POST /wiki/api/v2/pages"
+  },
+  "confluence_get_page_by_id": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}"
+  },
+  "confluence_update_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "PUT /wiki/api/v2/pages/{id}"
+  },
+  "confluence_delete_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "DELETE /wiki/api/v2/pages/{id}"
+  },
+  "confluence_get_pages": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /wiki/api/v2/pages"
+  },
+  "confluence_get_page_children": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/children"
+  },
+  "confluence_move_page": {
+    "doc": "docs/api_v2_page.md",
+    "endpoint": "PUT /wiki/api/v2/pages/{id}"
+  },
+  "confluence_get_spaces": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /wiki/api/v2/spaces"
+  },
+  "confluence_get_space_by_id": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "GET /wiki/api/v2/spaces/{id}"
+  },
+  "confluence_create_space": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "POST /wiki/api/v2/spaces"
+  },
+  "confluence_update_space": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "PUT /wiki/api/v2/spaces/{id}"
+  },
+  "confluence_delete_space": {
+    "doc": "docs/api_v2_space.md",
+    "endpoint": "DELETE /wiki/api/v2/spaces/{id}"
+  },
+  "confluence_search": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search"
+  },
+  "confluence_search_users": {
+    "doc": "docs/api_v1_search.md",
+    "endpoint": "GET /wiki/rest/api/search/user"
+  },
+  "confluence_add_labels_to_page": {
+    "doc": "docs/api_v1_content-labels.md",
+    "endpoint": "POST /wiki/rest/api/content/{id}/label"
+  },
+  "confluence_remove_label_from_page": {
+    "doc": "docs/api_v1_content-labels.md",
+    "endpoint": "DELETE /wiki/rest/api/content/{id}/label/{label}"
+  },
+  "confluence_get_labels_for_page": {
+    "doc": "docs/api_v2_label.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/labels"
+  },
+  "confluence_get_attachments": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/attachments"
+  },
+  "confluence_get_attachment_by_id": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "GET /wiki/api/v2/attachments/{id}"
+  },
+  "confluence_delete_attachment": {
+    "doc": "docs/api_v2_attachment.md",
+    "endpoint": "DELETE /wiki/api/v2/attachments/{id}"
+  },
+  "confluence_get_page_footer_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/footer-comments"
+  },
+  "confluence_create_page_footer_comment": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "POST /wiki/api/v2/footer-comments"
+  },
+  "confluence_get_inline_comments": {
+    "doc": "docs/api_v2_comment.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/inline-comments"
+  },
+  "confluence_get_page_versions": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/versions"
+  },
+  "confluence_get_version_details": {
+    "doc": "docs/api_v2_version.md",
+    "endpoint": "GET /wiki/api/v2/pages/{page-id}/versions/{version-number}"
+  },
+  "confluence_restore_page_version": {
+    "doc": "docs/api_v1_content-versions.md",
+    "endpoint": "POST /wiki/rest/api/content/{id}/version"
+  },
+  "confluence_get_page_properties": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "GET /wiki/api/v2/pages/{page-id}/properties"
+  },
+  "confluence_create_page_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "POST /wiki/api/v2/pages/{page-id}/properties"
+  },
+  "confluence_update_page_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "PUT /wiki/api/v2/pages/{page-id}/properties/{property-id}"
+  },
+  "confluence_delete_page_property": {
+    "doc": "docs/api_v2_content-properties.md",
+    "endpoint": "DELETE /wiki/api/v2/pages/{page-id}/properties/{property-id}"
+  },
+  "confluence_create_blog_post": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "POST /wiki/api/v2/blogposts"
+  },
+  "confluence_get_blog_post_by_id": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "GET /wiki/api/v2/blogposts/{id}"
+  },
+  "confluence_update_blog_post": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "PUT /wiki/api/v2/blogposts/{id}"
+  },
+  "confluence_delete_blog_post": {
+    "doc": "docs/api_v2_blog-post.md",
+    "endpoint": "DELETE /wiki/api/v2/blogposts/{id}"
+  },
+  "confluence_get_current_user": {
+    "doc": "docs/api_v1_users.md",
+    "endpoint": "GET /wiki/rest/api/user/current"
+  },
+  "confluence_get_user_by_account_id": {
+    "doc": "docs/api_v1_users.md",
+    "endpoint": "GET /wiki/rest/api/user"
+  },
+  "confluence_get_ancestors": {
+    "doc": "docs/api_v2_ancestor.md",
+    "endpoint": "GET /wiki/api/v2/pages/{id}/ancestors"
+  },
+  "confluence_get_space_by_key": {
+    "doc": "docs/api_v1_space.md",
+    "endpoint": "GET /wiki/rest/api/space/{spaceKey}"
+  },
+  "confluence_get_page_by_title": {
+    "doc": "docs/api_v1_content.md",
+    "endpoint": "GET /wiki/rest/api/content/search"
+  }
+}

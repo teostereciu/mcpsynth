@@ -1,0 +1,143 @@
+from typing import Any, Dict, Optional, List
+
+from .http_client import ConfluenceClient
+
+
+def list_blog_posts(
+    *,
+    ids: Optional[List[int]] = None,
+    space_ids: Optional[List[int]] = None,
+    sort: Optional[str] = None,
+    status: Optional[List[str]] = None,
+    title: Optional[str] = None,
+    body_format: Optional[str] = None,
+    cursor: Optional[str] = None,
+    limit: Optional[int] = 25,
+) -> Dict[str, Any]:
+    """GET /wiki/api/v2/blogposts"""
+    params: Dict[str, Any] = {}
+    if ids:
+        params["id"] = ids
+    if space_ids:
+        params["space-id"] = space_ids
+    if sort is not None:
+        params["sort"] = sort
+    if status:
+        params["status"] = status
+    if title is not None:
+        params["title"] = title
+    if body_format is not None:
+        params["body-format"] = body_format
+    if cursor is not None:
+        params["cursor"] = cursor
+    if limit is not None:
+        params["limit"] = limit
+
+    return ConfluenceClient().request("GET", "/api/v2/blogposts", params=params)  # type: ignore[return-value]
+
+
+def get_blog_post(
+    *,
+    blog_post_id: int,
+    body_format: Optional[str] = None,
+    get_draft: Optional[bool] = None,
+    status: Optional[List[str]] = None,
+    version: Optional[int] = None,
+    include_labels: Optional[bool] = None,
+    include_properties: Optional[bool] = None,
+    include_operations: Optional[bool] = None,
+    include_likes: Optional[bool] = None,
+    include_versions: Optional[bool] = None,
+    include_version: Optional[bool] = None,
+) -> Dict[str, Any]:
+    """GET /wiki/api/v2/blogposts/{id}"""
+    params: Dict[str, Any] = {}
+    if body_format is not None:
+        params["body-format"] = body_format
+    if get_draft is not None:
+        params["get-draft"] = get_draft
+    if status:
+        params["status"] = status
+    if version is not None:
+        params["version"] = version
+    if include_labels is not None:
+        params["include-labels"] = include_labels
+    if include_properties is not None:
+        params["include-properties"] = include_properties
+    if include_operations is not None:
+        params["include-operations"] = include_operations
+    if include_likes is not None:
+        params["include-likes"] = include_likes
+    if include_versions is not None:
+        params["include-versions"] = include_versions
+    if include_version is not None:
+        params["include-version"] = include_version
+
+    return ConfluenceClient().request("GET", f"/api/v2/blogposts/{blog_post_id}", params=params)  # type: ignore[return-value]
+
+
+def create_blog_post(
+    *,
+    space_id: str,
+    title: str,
+    body_value: str,
+    status: str = "current",
+    body_representation: str = "storage",
+    created_at: Optional[str] = None,
+    private: Optional[bool] = None,
+) -> Dict[str, Any]:
+    """POST /wiki/api/v2/blogposts"""
+    params: Dict[str, Any] = {}
+    if private is not None:
+        params["private"] = private
+
+    payload: Dict[str, Any] = {
+        "spaceId": space_id,
+        "status": status,
+        "title": title,
+        "body": {"representation": body_representation, "value": body_value},
+    }
+    if created_at is not None:
+        payload["createdAt"] = created_at
+
+    return ConfluenceClient().request("POST", "/api/v2/blogposts", params=params, json=payload)  # type: ignore[return-value]
+
+
+def update_blog_post(
+    *,
+    blog_post_id: int,
+    space_id: str,
+    status: str,
+    title: str,
+    body_value: str,
+    version_number: int,
+    body_representation: str = "storage",
+    version_message: Optional[str] = None,
+    created_at: Optional[str] = None,
+) -> Dict[str, Any]:
+    """PUT /wiki/api/v2/blogposts/{id}"""
+    payload: Dict[str, Any] = {
+        "id": str(blog_post_id),
+        "spaceId": space_id,
+        "status": status,
+        "title": title,
+        "body": {"representation": body_representation, "value": body_value},
+        "version": {"number": version_number},
+    }
+    if version_message is not None:
+        payload["version"]["message"] = version_message
+    if created_at is not None:
+        payload["createdAt"] = created_at
+
+    return ConfluenceClient().request("PUT", f"/api/v2/blogposts/{blog_post_id}", json=payload)  # type: ignore[return-value]
+
+
+def delete_blog_post(*, blog_post_id: int, purge: Optional[bool] = None, draft: Optional[bool] = None) -> Dict[str, Any]:
+    """DELETE /wiki/api/v2/blogposts/{id}"""
+    params: Dict[str, Any] = {}
+    if purge is not None:
+        params["purge"] = purge
+    if draft is not None:
+        params["draft"] = draft
+
+    return ConfluenceClient().request("DELETE", f"/api/v2/blogposts/{blog_post_id}", params=params)  # type: ignore[return-value]

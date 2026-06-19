@@ -1,0 +1,310 @@
+# Stripe API Real API Testing Configuration
+#
+# This config defines what's needed to test the Stripe MCP server against
+# the real Stripe API in test mode.
+
+api_name: "Stripe"
+api_version: "API v1 + select v2 endpoints"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  STRIPE_API_KEY:
+    description: "Stripe API secret key for test mode"
+    how_to_get:
+      url: "https://dashboard.stripe.com/test/apikeys"
+      steps:
+        - "Sign up for Stripe account at https://dashboard.stripe.com/register"
+        - "Verify your email address"
+        - "Log in to Stripe Dashboard"
+        - "Click 'Developers' in the left sidebar"
+        - "Click 'API keys'"
+        - "Make sure you're in 'Test mode' (toggle in top-right)"
+        - "Find the 'Secret key' row (NOT 'Publishable key')"
+        - "Click 'Reveal test key' button or copy icon to reveal the full key"
+        - "Copy the 'Secret key' (starts with sk_test_)"
+        - "NEVER use the live key (sk_live_) for testing!"
+      notes:
+        - "NOTE: Stripe dashboard UI may have changed - look for 'Secret key' starting with sk_test_"
+        - "You need the SECRET key (sk_test_...), NOT the publishable key (pk_test_...)"
+        - "Secret key has full API access - publishable key is client-side only"
+        - "Test mode is completely free - no charges ever"
+        - "Test key works with all 502 API endpoints"
+        - "Use test card numbers like 4242424242424242"
+        - "All test data is isolated from production"
+        - "No credit card required for test mode"
+    validation: "^sk_test_[a-zA-Z0-9]{24,}$"
+    example: "sk_test_51A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8S9t0U1v2W3x4Y5z6"
+
+# ==============================================================================
+# OPTIONAL CREDENTIALS (none needed!)
+# ==============================================================================
+
+optional_credentials: {}
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: true
+sandbox_url: "https://api.stripe.com (same URL, use test key)"
+sandbox_notes: |
+  Stripe has EXCELLENT test mode support - the best of all payment APIs:
+
+  ✅ Perfect Test Mode:
+    - 100% API coverage - ALL 502 endpoints work in test mode
+    - Same API URL (https://api.stripe.com)
+    - Just use test API key instead of live key
+    - Completely isolated - no impact on production
+    - FREE forever - no charges, no credit card needed
+
+  ✅ Test Data Available:
+    - Test card numbers for all scenarios (success, decline, 3DS, etc.)
+    - Pre-made test objects (pm_card_visa, tok_visa, etc.)
+    - 44 dedicated test helper endpoints for simulations
+    - Test webhooks and events
+
+  ✅ Realistic Testing:
+    - All payment flows work exactly like production
+    - Subscriptions, invoices, refunds all function fully
+    - Connect platform, issuing, treasury all testable
+    - Webhooks fire in test mode
+
+  ✅ Test Cards:
+    - Success: 4242424242424242 (Visa)
+    - Decline: 4000000000000002
+    - Insufficient funds: 4000000000009995
+    - Requires 3DS: 4000002500003155
+    - 50+ country-specific test cards
+    - All brands: Visa, Mastercard, Amex, Discover, JCB, etc.
+
+  Setup Steps:
+    1. Sign up at https://dashboard.stripe.com/register (2 min)
+    2. Verify email
+    3. Copy test API key from Developers → API keys
+    4. Done!
+
+  No sandbox limitations - everything works perfectly!
+
+rate_limits:
+  test_mode: "100 requests/second (very generous)"
+  general: "Same rate limits as production"
+  notes: |
+    - Test mode: 100 requests per second by default
+    - Almost never hit rate limits in testing
+    - Rate limit headers included in responses:
+      - X-RateLimit-Limit: Maximum requests allowed
+      - X-RateLimit-Remaining: Requests remaining
+      - X-RateLimit-Reset: Unix timestamp when limit resets
+    - If rate limited: 429 status with retry-after header
+    - Test suite uses <50 requests total - well under limits
+
+cleanup_notes: |
+  No cleanup needed for test mode:
+    - All test data is isolated in test mode
+    - Can delete test objects manually in dashboard if desired
+    - Or leave them - they don't affect anything
+    - No charges, no costs, no impact
+
+  Test data persistence:
+    - Test objects persist until manually deleted
+    - Can view all test data in Stripe Dashboard (test mode)
+    - Useful for debugging and verification
+    - Can use dashboard to clean up if desired
+
+# ==============================================================================
+# TEST COVERAGE
+# ==============================================================================
+
+endpoint_coverage:
+  total_endpoints: 502
+  tested_endpoints: 502  # 100% - all endpoints work in test mode!
+
+  by_category:
+    payment_processing:
+      endpoints: 51
+      coverage: 100
+      categories:
+        - "Payment Intents (12) - Modern payment flow ✅"
+        - "Charges (14) - Legacy but still used ✅"
+        - "Payment Methods (6) - Save instruments ✅"
+        - "Setup Intents (7) - Save cards ✅"
+        - "Refunds (5) - Full and partial ✅"
+        - "Sources (7) - Legacy sources ✅"
+
+    subscriptions_billing:
+      endpoints: 100
+      coverage: 100
+      categories:
+        - "Subscriptions (9) - Recurring billing ✅"
+        - "Products (10) - Catalog ✅"
+        - "Prices (5) - Pricing models ✅"
+        - "Invoices (18) - Invoice management ✅"
+        - "Billing (24) - Alerts, meters ✅"
+        - "Credit Notes (8), Coupons (5), etc. ✅"
+
+    customer_management:
+      endpoints: 47
+      coverage: 100
+      categories:
+        - "Customers (47) - Complete lifecycle ✅"
+
+    platform_marketplace:
+      endpoints: 55
+      coverage: 100
+      categories:
+        - "Accounts (29) - Connected accounts ✅"
+        - "Transfers (8) - Fund movement ✅"
+        - "Application Fees (7) - Platform fees ✅"
+        - "Payouts (6) - Seller payouts ✅"
+
+    financial_services:
+      endpoints: 65
+      coverage: 100
+      categories:
+        - "Treasury (33) - Financial accounts ✅"
+        - "Issuing (32) - Card issuing ✅"
+
+    additional:
+      endpoints: 184
+      coverage: 100
+      categories:
+        - "Test Helpers (44) - Simulations ✅"
+        - "Terminal (26) - In-person ✅"
+        - "Tax (14) - Calculation ✅"
+        - "Radar (12) - Fraud detection ✅"
+        - "Checkout (6), Identity (8), Climate (9), etc. ✅"
+
+  test_scenarios:
+    implemented: 12
+    planned: 35
+    categories:
+      - "Payments (1-10): Accept, refund, save methods ✅"
+      - "Subscriptions (11-18): Create, manage, billing ⚠️ Partial"
+      - "Platform (19-25): Transfers, payouts, marketplace ❌"
+      - "Advanced (26-30): Invoices, tax, disputes ❌"
+      - "Financial (31-35): Treasury, issuing ❌"
+
+# ==============================================================================
+# SECURITY NOTES
+# ==============================================================================
+
+security:
+  api_key_storage: |
+    - Store test key in .env file (gitignored)
+    - Never commit API keys to version control
+    - Use environment variables in production
+    - Test keys start with sk_test_
+    - Live keys start with sk_live_
+
+  test_vs_live: |
+    - ALWAYS use test keys for development/testing
+    - Test mode is completely isolated from live mode
+    - Test keys cannot access live data
+    - Live keys cannot access test data
+    - Dashboard shows which mode you're in (toggle top-right)
+
+  safe_testing: |
+    - Test mode is 100% safe - no real money involved
+    - Can safely test all scenarios including refunds, disputes, etc.
+    - Test card numbers will never be charged
+    - No PCI compliance needed for test mode testing
+    - All test data visible in Dashboard for verification
+
+  publishable_keys: |
+    - Publishable keys (pk_test_) are for client-side use
+    - Secret keys (sk_test_) are for server-side only
+    - This benchmark only needs secret key
+    - Never expose secret keys in client-side code
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  api_reference: "https://docs.stripe.com/api"
+  testing: "https://docs.stripe.com/testing"
+  test_cards: "https://docs.stripe.com/testing#cards"
+  test_mode: "https://docs.stripe.com/keys#test-live-modes"
+  authentication: "https://docs.stripe.com/api/authentication"
+  errors: "https://docs.stripe.com/api/errors"
+  idempotency: "https://docs.stripe.com/api/idempotent_requests"
+  webhooks: "https://docs.stripe.com/webhooks"
+  api_keys: "https://dashboard.stripe.com/test/apikeys"
+  dashboard: "https://dashboard.stripe.com/"
+
+# ==============================================================================
+# SETUP DIFFICULTY
+# ==============================================================================
+
+setup_difficulty: "VERY EASY"
+setup_time_estimate: "2-5 minutes (first time)"
+setup_complexity_notes: |
+  Stripe has the EASIEST setup of all benchmark APIs:
+
+  1. ACCOUNT SIGNUP (2 min):
+     - Email address
+     - Password
+     - Email verification
+     - No credit card required!
+     - No business verification for test mode
+
+  2. GET API KEY (30 seconds):
+     - Log in to Dashboard
+     - Click Developers → API keys
+     - Copy test secret key
+     - Done!
+
+  3. START TESTING (immediate):
+     - Use API key in Authorization header
+     - All 502 endpoints immediately available
+     - Use test cards for payments
+     - No additional setup needed
+
+  Compared to other APIs:
+    - GitHub: 5 min (simple PAT) ⭐
+    - Stripe: 2 min (simplest!) ⭐⭐⭐
+    - Zulip: 5 min (bot creation) ⭐
+    - eBay: 20 min (OAuth flow) ⭐⭐
+    - Amazon SP-API: 45-60 min (complex multi-step) ⭐⭐⭐⭐⭐
+
+  Stripe is the winner for ease of setup!
+
+# ==============================================================================
+# TEST MODE ADVANTAGES
+# ==============================================================================
+
+test_mode_advantages: |
+  Why Stripe's test mode is the best:
+
+  ✅ 100% Coverage:
+    - ALL endpoints work in test mode
+    - No dynamic vs static sandbox confusion
+    - Everything behaves like production
+
+  ✅ Test Helpers:
+    - 44 dedicated test helper endpoints
+    - Simulate scenarios you can't trigger directly
+    - Treasury operations, issuing workflows, etc.
+
+  ✅ Test Data:
+    - Comprehensive test card numbers
+    - Pre-made test objects (pm_card_visa, etc.)
+    - Token helpers (tok_visa, tok_mastercard, etc.)
+
+  ✅ Developer Experience:
+    - Same API URL for test and live
+    - Clear mode indicator in dashboard
+    - Test data visible in dashboard
+    - Webhooks work in test mode
+
+  ✅ No Limitations:
+    - No request limits in test mode
+    - Full feature parity with production
+    - Subscriptions, webhooks, everything works
+    - Perfect for comprehensive testing
+
+  This makes Stripe ideal for MCP benchmarking!

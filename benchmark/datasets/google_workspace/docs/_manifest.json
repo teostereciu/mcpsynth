@@ -1,0 +1,400 @@
+{
+  "source": "Google Workspace APIs (developers.google.com)",
+  "scraped_from": "https://developers.google.com",
+  "scrape_date": "2026-04-13T11:02:27.619238",
+  "total_pages": 77,
+  "apis": {
+    "google_docs": "https://developers.google.com/docs/api/reference/rest",
+    "google_slides": "https://developers.google.com/slides/api/reference/rest",
+    "google_drive": "https://developers.google.com/drive/api/reference/rest/v3",
+    "google_calendar": "https://developers.google.com/calendar/api/v3/reference",
+    "google_gmail": "https://developers.google.com/gmail/api/reference/rest"
+  },
+  "files": [
+    {
+      "filename": "api_documents_batchUpdate.md",
+      "title": "Method: documents.batchUpdate",
+      "url": "https://developers.google.com/docs/api/reference/rest/v1/documents/batchUpdate"
+    },
+    {
+      "filename": "api_documents_create.md",
+      "title": "Method: documents.create",
+      "url": "https://developers.google.com/docs/api/reference/rest/v1/documents/create"
+    },
+    {
+      "filename": "api_documents_get.md",
+      "title": "Method: documents.get",
+      "url": "https://developers.google.com/docs/api/reference/rest/v1/documents/get"
+    },
+    {
+      "filename": "api_presentations.pages_get.md",
+      "title": "Method: presentations.pages.get",
+      "url": "https://developers.google.com/slides/api/reference/rest/v1/presentations.pages/get"
+    },
+    {
+      "filename": "api_presentations.pages_getThumbnail.md",
+      "title": "Method: presentations.pages.getThumbnail",
+      "url": "https://developers.google.com/slides/api/reference/rest/v1/presentations.pages/getThumbnail"
+    },
+    {
+      "filename": "api_presentations_batchUpdate.md",
+      "title": "Method: presentations.batchUpdate",
+      "url": "https://developers.google.com/slides/api/reference/rest/v1/presentations/batchUpdate"
+    },
+    {
+      "filename": "api_presentations_create.md",
+      "title": "Method: presentations.create",
+      "url": "https://developers.google.com/slides/api/reference/rest/v1/presentations/create"
+    },
+    {
+      "filename": "api_presentations_get.md",
+      "title": "Method: presentations.get",
+      "url": "https://developers.google.com/slides/api/reference/rest/v1/presentations/get"
+    },
+    {
+      "filename": "api_index.md",
+      "title": "Google Drive API",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3"
+    },
+    {
+      "filename": "api_comments_list.md",
+      "title": "Method: comments.list",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/comments/list"
+    },
+    {
+      "filename": "api_drives_get.md",
+      "title": "Method: drives.get",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/drives/get"
+    },
+    {
+      "filename": "api_drives_list.md",
+      "title": "Method: drives.list",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/drives/list"
+    },
+    {
+      "filename": "api_files_copy.md",
+      "title": "Method: files.copy",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/files/copy"
+    },
+    {
+      "filename": "api_files_create.md",
+      "title": "Method: files.create",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/files/create"
+    },
+    {
+      "filename": "api_files_delete.md",
+      "title": "Method: files.delete",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/files/delete"
+    },
+    {
+      "filename": "api_files_export.md",
+      "title": "Method: files.export",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/files/export"
+    },
+    {
+      "filename": "api_files_get.md",
+      "title": "Method: files.get",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/files/get"
+    },
+    {
+      "filename": "api_files_list.md",
+      "title": "Method: files.list",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/files/list"
+    },
+    {
+      "filename": "api_files_update.md",
+      "title": "Method: files.update",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/files/update"
+    },
+    {
+      "filename": "api_permissions_create.md",
+      "title": "Method: permissions.create",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/permissions/create"
+    },
+    {
+      "filename": "api_permissions_delete.md",
+      "title": "Method: permissions.delete",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/permissions/delete"
+    },
+    {
+      "filename": "api_permissions_list.md",
+      "title": "Method: permissions.list",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/permissions/list"
+    },
+    {
+      "filename": "api_replies_list.md",
+      "title": "Method: replies.list",
+      "url": "https://developers.google.com/drive/api/reference/rest/v3/replies/list"
+    },
+    {
+      "filename": "api_acl_delete.md",
+      "title": "Acl: delete",
+      "url": "https://developers.google.com/calendar/api/v3/reference/acl/delete"
+    },
+    {
+      "filename": "api_acl_insert.md",
+      "title": "Acl: insert",
+      "url": "https://developers.google.com/calendar/api/v3/reference/acl/insert"
+    },
+    {
+      "filename": "api_acl_list.md",
+      "title": "Acl: list",
+      "url": "https://developers.google.com/calendar/api/v3/reference/acl/list"
+    },
+    {
+      "filename": "api_calendarList_get.md",
+      "title": "CalendarList: get",
+      "url": "https://developers.google.com/calendar/api/v3/reference/calendarList/get"
+    },
+    {
+      "filename": "api_calendarList_insert.md",
+      "title": "CalendarList: insert",
+      "url": "https://developers.google.com/calendar/api/v3/reference/calendarList/insert"
+    },
+    {
+      "filename": "api_calendarList_list.md",
+      "title": "CalendarList: list",
+      "url": "https://developers.google.com/calendar/api/v3/reference/calendarList/list"
+    },
+    {
+      "filename": "api_calendars_delete.md",
+      "title": "Calendars: delete",
+      "url": "https://developers.google.com/calendar/api/v3/reference/calendars/delete"
+    },
+    {
+      "filename": "api_calendars_get.md",
+      "title": "Calendars: get",
+      "url": "https://developers.google.com/calendar/api/v3/reference/calendars/get"
+    },
+    {
+      "filename": "api_calendars_insert.md",
+      "title": "Calendars: insert",
+      "url": "https://developers.google.com/calendar/api/v3/reference/calendars/insert"
+    },
+    {
+      "filename": "api_calendars_update.md",
+      "title": "Calendars: update",
+      "url": "https://developers.google.com/calendar/api/v3/reference/calendars/update"
+    },
+    {
+      "filename": "api_events_delete.md",
+      "title": "Events: delete",
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/delete"
+    },
+    {
+      "filename": "api_events_get.md",
+      "title": "Events: get",
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/get"
+    },
+    {
+      "filename": "api_events_insert.md",
+      "title": "Events: insert",
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/insert"
+    },
+    {
+      "filename": "api_events_list.md",
+      "title": "Events: list",
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/list"
+    },
+    {
+      "filename": "api_events_move.md",
+      "title": "Events: move",
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/move"
+    },
+    {
+      "filename": "api_events_patch.md",
+      "title": "Events: patch",
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/patch"
+    },
+    {
+      "filename": "api_events_update.md",
+      "title": "Events: update",
+      "url": "https://developers.google.com/calendar/api/v3/reference/events/update"
+    },
+    {
+      "filename": "api_freebusy_query.md",
+      "title": "Freebusy: query",
+      "url": "https://developers.google.com/calendar/api/v3/reference/freebusy/query"
+    },
+    {
+      "filename": "api_settings_get.md",
+      "title": "Settings: get",
+      "url": "https://developers.google.com/calendar/api/v3/reference/settings/get"
+    },
+    {
+      "filename": "api_settings_list.md",
+      "title": "Settings: list",
+      "url": "https://developers.google.com/calendar/api/v3/reference/settings/list"
+    },
+    {
+      "filename": "api_users.drafts_create.md",
+      "title": "Method: users.drafts.create",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/create"
+    },
+    {
+      "filename": "api_users.drafts_delete.md",
+      "title": "Method: users.drafts.delete",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/delete"
+    },
+    {
+      "filename": "api_users.drafts_get.md",
+      "title": "Method: users.drafts.get",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/get"
+    },
+    {
+      "filename": "api_users.drafts_list.md",
+      "title": "Method: users.drafts.list",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/list"
+    },
+    {
+      "filename": "api_users.drafts_send.md",
+      "title": "Method: users.drafts.send",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/send"
+    },
+    {
+      "filename": "api_users.drafts_update.md",
+      "title": "Method: users.drafts.update",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.drafts/update"
+    },
+    {
+      "filename": "api_users.history_list.md",
+      "title": "Method: users.history.list",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.history/list"
+    },
+    {
+      "filename": "api_users.labels_create.md",
+      "title": "Method: users.labels.create",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/create"
+    },
+    {
+      "filename": "api_users.labels_delete.md",
+      "title": "Method: users.labels.delete",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/delete"
+    },
+    {
+      "filename": "api_users.labels_get.md",
+      "title": "Method: users.labels.get",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/get"
+    },
+    {
+      "filename": "api_users.labels_list.md",
+      "title": "Method: users.labels.list",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/list"
+    },
+    {
+      "filename": "api_users.labels_update.md",
+      "title": "Method: users.labels.update",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.labels/update"
+    },
+    {
+      "filename": "api_users.messages.attachments_get.md",
+      "title": "Method: users.messages.attachments.get",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages.attachments/get"
+    },
+    {
+      "filename": "api_users.messages_batchDelete.md",
+      "title": "Method: users.messages.batchDelete",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/batchDelete"
+    },
+    {
+      "filename": "api_users.messages_batchModify.md",
+      "title": "Method: users.messages.batchModify",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/batchModify"
+    },
+    {
+      "filename": "api_users.messages_delete.md",
+      "title": "Method: users.messages.delete",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/delete"
+    },
+    {
+      "filename": "api_users.messages_get.md",
+      "title": "Method: users.messages.get",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/get"
+    },
+    {
+      "filename": "api_users.messages_insert.md",
+      "title": "Method: users.messages.insert",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/insert"
+    },
+    {
+      "filename": "api_users.messages_list.md",
+      "title": "Method: users.messages.list",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/list"
+    },
+    {
+      "filename": "api_users.messages_modify.md",
+      "title": "Method: users.messages.modify",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/modify"
+    },
+    {
+      "filename": "api_users.messages_send.md",
+      "title": "Method: users.messages.send",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send"
+    },
+    {
+      "filename": "api_users.messages_trash.md",
+      "title": "Method: users.messages.trash",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/trash"
+    },
+    {
+      "filename": "api_users.messages_untrash.md",
+      "title": "Method: users.messages.untrash",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.messages/untrash"
+    },
+    {
+      "filename": "api_users.settings_getAutoForwarding.md",
+      "title": "Method: users.settings.getAutoForwarding",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getAutoForwarding"
+    },
+    {
+      "filename": "api_users.settings_getImap.md",
+      "title": "Method: users.settings.getImap",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getImap"
+    },
+    {
+      "filename": "api_users.settings_getPop.md",
+      "title": "Method: users.settings.getPop",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getPop"
+    },
+    {
+      "filename": "api_users.settings_getVacation.md",
+      "title": "Method: users.settings.getVacation",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/getVacation"
+    },
+    {
+      "filename": "api_users.settings_updateVacation.md",
+      "title": "Method: users.settings.updateVacation",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.settings/updateVacation"
+    },
+    {
+      "filename": "api_users.threads_delete.md",
+      "title": "Method: users.threads.delete",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/delete"
+    },
+    {
+      "filename": "api_users.threads_get.md",
+      "title": "Method: users.threads.get",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/get"
+    },
+    {
+      "filename": "api_users.threads_list.md",
+      "title": "Method: users.threads.list",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/list"
+    },
+    {
+      "filename": "api_users.threads_modify.md",
+      "title": "Method: users.threads.modify",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/modify"
+    },
+    {
+      "filename": "api_users.threads_trash.md",
+      "title": "Method: users.threads.trash",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users.threads/trash"
+    },
+    {
+      "filename": "api_users_getProfile.md",
+      "title": "Method: users.getProfile",
+      "url": "https://developers.google.com/gmail/api/reference/rest/v1/users/getProfile"
+    }
+  ]
+}

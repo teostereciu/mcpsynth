@@ -1,0 +1,124 @@
+# Google Workspace Real API Testing Configuration
+#
+# This config defines what's needed to test the Google Workspace MCP server against
+# the real Google Workspace REST APIs (Gmail, Calendar, Drive, Docs, Slides).
+
+api_name: "Google Workspace"
+api_version: "Gmail v1 / Calendar v3 / Drive v3 / Docs v1 / Slides v1"
+test_suite: "tests/test_scenarios.py"
+
+# ==============================================================================
+# REQUIRED CREDENTIALS
+# ==============================================================================
+
+required_credentials:
+  GOOGLE_ACCESS_TOKEN:
+    description: "OAuth2 access token with all required Workspace scopes"
+    how_to_get:
+      url: "https://developers.google.com/oauthplayground"
+      steps:
+        - "Go to https://developers.google.com/oauthplayground"
+        - "Click the gear icon (OAuth 2.0 configuration) and optionally use your own client ID"
+        - "In Step 1, select the following scopes:"
+        - "  - https://www.googleapis.com/auth/gmail.modify"
+        - "  - https://www.googleapis.com/auth/gmail.compose"
+        - "  - https://www.googleapis.com/auth/calendar"
+        - "  - https://www.googleapis.com/auth/drive"
+        - "  - https://www.googleapis.com/auth/documents"
+        - "  - https://www.googleapis.com/auth/presentations"
+        - "Click 'Authorize APIs' and complete the OAuth flow"
+        - "In Step 2, click 'Exchange authorization code for tokens'"
+        - "Copy the 'Access token' value"
+      notes:
+        - "Access tokens expire after ~1 hour — regenerate if tests start failing with 401"
+        - "For longer-lived credentials, use a service account (GOOGLE_WORKSPACE_CREDENTIALS)"
+        - "The token must belong to a real Google account with Google Workspace or personal Gmail"
+
+  GOOGLE_WORKSPACE_CREDENTIALS:
+    description: "Path to a Google service account JSON key file (alternative to access token)"
+    how_to_get:
+      url: "https://console.cloud.google.com/iam-admin/serviceaccounts"
+      steps:
+        - "Create or select a project in Google Cloud Console"
+        - "Enable the following APIs: Gmail, Calendar, Drive, Docs, Slides"
+        - "Go to IAM & Admin → Service Accounts → Create Service Account"
+        - "Download the JSON key file"
+        - "For Gmail/Calendar: domain-wide delegation is required for service accounts"
+        - "Set GOOGLE_WORKSPACE_CREDENTIALS to the path of the downloaded JSON key file"
+      notes:
+        - "Service accounts work natively for Drive, Docs, and Slides"
+        - "For Gmail and Calendar, the service account needs domain-wide delegation"
+        - "For personal accounts, GOOGLE_ACCESS_TOKEN is simpler"
+
+# ==============================================================================
+# API CHARACTERISTICS
+# ==============================================================================
+
+sandbox_available: false
+sandbox_notes: |
+  Google Workspace does not have a formal sandbox environment.
+  Use a personal Gmail/Google account for testing — avoid production Workspace accounts.
+  Test data created (events, files, labels) will persist until manually deleted.
+
+mock_mode:
+  available: false
+
+rate_limits:
+  notes: |
+    Each API has its own quota — all are generous for testing:
+      - Gmail: 250 quota units/second (most operations are 1-5 units)
+      - Calendar: 1,000,000 requests/day
+      - Drive: 12,000 requests/minute per user
+      - Docs/Slides: 300 requests/minute per project
+  cleanup_recommendation: |
+    After testing, clean up:
+      - Gmail labels named "MCP Test Label"
+      - Gmail drafts with subject "MCP Draft Test"
+      - Calendar events with summary "MCP Test Event" or "MCP Get Event Test"
+      - Drive folders named "MCP Test Folder" or "MCP Share Test"
+      - Google Docs titled "MCP Test Document" or "MCP Doc Write Test"
+      - Presentations titled "MCP Test Presentation" or "MCP Slides Test"
+
+# ==============================================================================
+# API PERMISSIONS REQUIRED
+# ==============================================================================
+
+permissions:
+  required_scopes:
+    - "https://www.googleapis.com/auth/gmail.modify — read/write Gmail (scenarios 1-4, 15)"
+    - "https://www.googleapis.com/auth/gmail.compose — create drafts (scenario 4)"
+    - "https://www.googleapis.com/auth/calendar — read/write Calendar (scenarios 5-7)"
+    - "https://www.googleapis.com/auth/drive — read/write Drive (scenarios 8-10)"
+    - "https://www.googleapis.com/auth/documents — read/write Docs (scenarios 11-12)"
+    - "https://www.googleapis.com/auth/presentations — read/write Slides (scenarios 13-14)"
+
+# ==============================================================================
+# AUTHENTICATION
+# ==============================================================================
+
+authentication:
+  type: "Bearer token (OAuth2)"
+  header: "Authorization: Bearer {GOOGLE_ACCESS_TOKEN}"
+  notes: |
+    All five Google Workspace APIs use the same OAuth2 Bearer token pattern.
+    The token must have all the required scopes listed above.
+
+base_urls:
+  gmail: "https://gmail.googleapis.com/gmail/v1/users/me"
+  calendar: "https://www.googleapis.com/calendar/v3"
+  drive: "https://www.googleapis.com/drive/v3"
+  docs: "https://docs.googleapis.com/v1/documents"
+  slides: "https://slides.googleapis.com/v1/presentations"
+
+# ==============================================================================
+# DOCUMENTATION LINKS
+# ==============================================================================
+
+documentation:
+  gmail: "https://developers.google.com/gmail/api/reference/rest"
+  calendar: "https://developers.google.com/calendar/api/v3/reference"
+  drive: "https://developers.google.com/drive/api/reference/rest/v3"
+  docs: "https://developers.google.com/docs/api/reference/rest"
+  slides: "https://developers.google.com/slides/api/reference/rest"
+  oauth_playground: "https://developers.google.com/oauthplayground"
+  service_accounts: "https://developers.google.com/identity/protocols/oauth2/service-account"

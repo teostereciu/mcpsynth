@@ -1,0 +1,78 @@
+{
+  "search_recipes": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/complexSearch"
+  },
+  "search_recipes_by_ingredients": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/findByIngredients"
+  },
+  "search_recipes_by_nutrients": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/findByNutrients"
+  },
+  "get_recipe_information": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/information"
+  },
+  "get_recipe_ingredients": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/ingredientWidget.json"
+  },
+  "get_recipe_instructions": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/analyzedInstructions"
+  },
+  "get_similar_recipes": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/similar"
+  },
+  "search_ingredients": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/search"
+  },
+  "get_ingredient_information": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/{id}/information"
+  },
+  "parse_ingredients": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "POST /recipes/parseIngredients"
+  },
+  "generate_meal_plan": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/generate"
+  },
+  "get_meal_plan_week": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/week/{start-date}"
+  },
+  "get_meal_plan_day": {
+    "doc": "docs/api_meal_planning.md",
+    "endpoint": "GET /mealplanner/{username}/day/{date}"
+  },
+  "get_recipe_nutrition": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget.json"
+  },
+  "visualize_recipe_nutrition": {
+    "doc": "docs/api_misc.md",
+    "endpoint": "GET /recipes/{id}/nutritionWidget"
+  },
+  "get_wine_pairing": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/pairing"
+  },
+  "get_wine_description": {
+    "doc": "docs/api_wine.md",
+    "endpoint": "GET /food/wine/description"
+  },
+  "autocomplete_recipe_search": {
+    "doc": "docs/api_recipes.md",
+    "endpoint": "GET /recipes/autocomplete"
+  },
+  "autocomplete_ingredient_search": {
+    "doc": "docs/api_ingredients.md",
+    "endpoint": "GET /food/ingredients/autocomplete"
+  }
+}

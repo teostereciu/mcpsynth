@@ -1,0 +1,489 @@
+{
+  "tools": {
+    "get_account_credentials": {
+      "description": "Get the authenticated user's account credentials",
+      "endpoint": "GET /api/v1/accounts/verify_credentials",
+      "source": "docs/api_accounts.md"
+    },
+    "update_account_credentials": {
+      "description": "Update the authenticated user's account credentials",
+      "endpoint": "PATCH /api/v1/accounts/update_credentials",
+      "source": "docs/api_accounts.md"
+    },
+    "get_account": {
+      "description": "Get information about a specific account",
+      "endpoint": "GET /api/v1/accounts/{account_id}",
+      "source": "docs/api_accounts.md"
+    },
+    "get_account_statuses": {
+      "description": "Get statuses from a specific account",
+      "endpoint": "GET /api/v1/accounts/{account_id}/statuses",
+      "source": "docs/api_accounts.md"
+    },
+    "get_account_followers": {
+      "description": "Get followers of a specific account",
+      "endpoint": "GET /api/v1/accounts/{account_id}/followers",
+      "source": "docs/api_accounts.md"
+    },
+    "get_account_following": {
+      "description": "Get accounts that a specific account is following",
+      "endpoint": "GET /api/v1/accounts/{account_id}/following",
+      "source": "docs/api_accounts.md"
+    },
+    "follow_account": {
+      "description": "Follow an account",
+      "endpoint": "POST /api/v1/accounts/{account_id}/follow",
+      "source": "docs/api_accounts.md"
+    },
+    "unfollow_account": {
+      "description": "Unfollow an account",
+      "endpoint": "POST /api/v1/accounts/{account_id}/unfollow",
+      "source": "docs/api_accounts.md"
+    },
+    "block_account": {
+      "description": "Block an account",
+      "endpoint": "POST /api/v1/accounts/{account_id}/block",
+      "source": "docs/api_accounts.md"
+    },
+    "unblock_account": {
+      "description": "Unblock an account",
+      "endpoint": "POST /api/v1/accounts/{account_id}/unblock",
+      "source": "docs/api_accounts.md"
+    },
+    "mute_account": {
+      "description": "Mute an account",
+      "endpoint": "POST /api/v1/accounts/{account_id}/mute",
+      "source": "docs/api_accounts.md"
+    },
+    "unmute_account": {
+      "description": "Unmute an account",
+      "endpoint": "POST /api/v1/accounts/{account_id}/unmute",
+      "source": "docs/api_accounts.md"
+    },
+    "get_account_relationships": {
+      "description": "Check relationships to other accounts",
+      "endpoint": "GET /api/v1/accounts/relationships",
+      "source": "docs/api_accounts.md"
+    },
+    "search_accounts": {
+      "description": "Search for accounts",
+      "endpoint": "GET /api/v1/accounts/search",
+      "source": "docs/api_accounts.md"
+    },
+    "post_status": {
+      "description": "Post a new status",
+      "endpoint": "POST /api/v1/statuses",
+      "source": "docs/api_statuses.md"
+    },
+    "get_status": {
+      "description": "Get a single status",
+      "endpoint": "GET /api/v1/statuses/{status_id}",
+      "source": "docs/api_statuses.md"
+    },
+    "delete_status": {
+      "description": "Delete a status",
+      "endpoint": "DELETE /api/v1/statuses/{status_id}",
+      "source": "docs/api_statuses.md"
+    },
+    "get_status_context": {
+      "description": "Get parent and child statuses in context",
+      "endpoint": "GET /api/v1/statuses/{status_id}/context",
+      "source": "docs/api_statuses.md"
+    },
+    "favourite_status": {
+      "description": "Favourite a status",
+      "endpoint": "POST /api/v1/statuses/{status_id}/favourite",
+      "source": "docs/api_statuses.md"
+    },
+    "unfavourite_status": {
+      "description": "Undo favourite of a status",
+      "endpoint": "POST /api/v1/statuses/{status_id}/unfavourite",
+      "source": "docs/api_statuses.md"
+    },
+    "boost_status": {
+      "description": "Boost (reblog) a status",
+      "endpoint": "POST /api/v1/statuses/{status_id}/reblog",
+      "source": "docs/api_statuses.md"
+    },
+    "unboost_status": {
+      "description": "Undo boost of a status",
+      "endpoint": "POST /api/v1/statuses/{status_id}/unreblog",
+      "source": "docs/api_statuses.md"
+    },
+    "bookmark_status": {
+      "description": "Bookmark a status",
+      "endpoint": "POST /api/v1/statuses/{status_id}/bookmark",
+      "source": "docs/api_statuses.md"
+    },
+    "unbookmark_status": {
+      "description": "Undo bookmark of a status",
+      "endpoint": "POST /api/v1/statuses/{status_id}/unbookmark",
+      "source": "docs/api_statuses.md"
+    },
+    "pin_status": {
+      "description": "Pin status to profile",
+      "endpoint": "POST /api/v1/statuses/{status_id}/pin",
+      "source": "docs/api_statuses.md"
+    },
+    "unpin_status": {
+      "description": "Unpin status from profile",
+      "endpoint": "POST /api/v1/statuses/{status_id}/unpin",
+      "source": "docs/api_statuses.md"
+    },
+    "edit_status": {
+      "description": "Edit a status",
+      "endpoint": "PUT /api/v1/statuses/{status_id}",
+      "source": "docs/api_statuses.md"
+    },
+    "get_home_timeline": {
+      "description": "Get the home timeline",
+      "endpoint": "GET /api/v1/timelines/home",
+      "source": "docs/api_timelines.md"
+    },
+    "get_public_timeline": {
+      "description": "Get the public timeline",
+      "endpoint": "GET /api/v1/timelines/public",
+      "source": "docs/api_timelines.md"
+    },
+    "get_hashtag_timeline": {
+      "description": "Get timeline for a specific hashtag",
+      "endpoint": "GET /api/v1/timelines/tag/{hashtag}",
+      "source": "docs/api_timelines.md"
+    },
+    "get_list_timeline": {
+      "description": "Get timeline for a specific list",
+      "endpoint": "GET /api/v1/timelines/list/{list_id}",
+      "source": "docs/api_timelines.md"
+    },
+    "get_notifications": {
+      "description": "Get all notifications",
+      "endpoint": "GET /api/v1/notifications",
+      "source": "docs/api_notifications.md"
+    },
+    "get_notification": {
+      "description": "Get a single notification",
+      "endpoint": "GET /api/v1/notifications/{notification_id}",
+      "source": "docs/api_notifications.md"
+    },
+    "dismiss_notification": {
+      "description": "Dismiss a single notification",
+      "endpoint": "POST /api/v1/notifications/{notification_id}/dismiss",
+      "source": "docs/api_notifications.md"
+    },
+    "clear_notifications": {
+      "description": "Clear all notifications",
+      "endpoint": "POST /api/v1/notifications/clear",
+      "source": "docs/api_notifications.md"
+    },
+    "get_unread_notification_count": {
+      "description": "Get the number of unread notifications",
+      "endpoint": "GET /api/v1/notifications/unread_count",
+      "source": "docs/api_notifications.md"
+    },
+    "search": {
+      "description": "Perform a search",
+      "endpoint": "GET /api/v2/search",
+      "source": "docs/api_search.md"
+    },
+    "get_lists": {
+      "description": "Get all lists",
+      "endpoint": "GET /api/v1/lists",
+      "source": "docs/api_lists.md"
+    },
+    "get_list": {
+      "description": "Get a single list",
+      "endpoint": "GET /api/v1/lists/{list_id}",
+      "source": "docs/api_lists.md"
+    },
+    "create_list": {
+      "description": "Create a new list",
+      "endpoint": "POST /api/v1/lists",
+      "source": "docs/api_lists.md"
+    },
+    "update_list": {
+      "description": "Update a list",
+      "endpoint": "PUT /api/v1/lists/{list_id}",
+      "source": "docs/api_lists.md"
+    },
+    "delete_list": {
+      "description": "Delete a list",
+      "endpoint": "DELETE /api/v1/lists/{list_id}",
+      "source": "docs/api_lists.md"
+    },
+    "get_list_accounts": {
+      "description": "Get accounts in a list",
+      "endpoint": "GET /api/v1/lists/{list_id}/accounts",
+      "source": "docs/api_lists.md"
+    },
+    "add_accounts_to_list": {
+      "description": "Add accounts to a list",
+      "endpoint": "POST /api/v1/lists/{list_id}/accounts",
+      "source": "docs/api_lists.md"
+    },
+    "remove_accounts_from_list": {
+      "description": "Remove accounts from a list",
+      "endpoint": "DELETE /api/v1/lists/{list_id}/accounts",
+      "source": "docs/api_lists.md"
+    },
+    "get_bookmarks": {
+      "description": "Get bookmarked statuses",
+      "endpoint": "GET /api/v1/bookmarks",
+      "source": "docs/api_bookmarks.md"
+    },
+    "get_favourites": {
+      "description": "Get favourited statuses",
+      "endpoint": "GET /api/v1/favourites",
+      "source": "docs/api_favourites.md"
+    },
+    "upload_media": {
+      "description": "Upload media as an attachment",
+      "endpoint": "POST /api/v2/media",
+      "source": "docs/api_media.md"
+    },
+    "get_media": {
+      "description": "Get media attachment",
+      "endpoint": "GET /api/v1/media/{media_id}",
+      "source": "docs/api_media.md"
+    },
+    "update_media": {
+      "description": "Update media attachment",
+      "endpoint": "PUT /api/v1/media/{media_id}",
+      "source": "docs/api_media.md"
+    },
+    "delete_media": {
+      "description": "Delete media attachment",
+      "endpoint": "DELETE /api/v1/media/{media_id}",
+      "source": "docs/api_media.md"
+    },
+    "get_instance_info": {
+      "description": "Get instance information",
+      "endpoint": "GET /api/v2/instance",
+      "source": "docs/api_instance.md"
+    },
+    "get_instance_peers": {
+      "description": "Get list of connected domains",
+      "endpoint": "GET /api/v1/instance/peers",
+      "source": "docs/api_instance.md"
+    },
+    "get_instance_activity": {
+      "description": "Get weekly activity statistics",
+      "endpoint": "GET /api/v1/instance/activity",
+      "source": "docs/api_instance.md"
+    },
+    "get_tag": {
+      "description": "Get information about a tag",
+      "endpoint": "GET /api/v1/tags/{tag_name}",
+      "source": "docs/api_tags.md"
+    },
+    "follow_tag": {
+      "description": "Follow a hashtag",
+      "endpoint": "POST /api/v1/tags/{tag_name}/follow",
+      "source": "docs/api_tags.md"
+    },
+    "unfollow_tag": {
+      "description": "Unfollow a hashtag",
+      "endpoint": "POST /api/v1/tags/{tag_name}/unfollow",
+      "source": "docs/api_tags.md"
+    },
+    "get_poll": {
+      "description": "Get a poll",
+      "endpoint": "GET /api/v1/polls/{poll_id}",
+      "source": "docs/api_polls.md"
+    },
+    "vote_on_poll": {
+      "description": "Vote on a poll",
+      "endpoint": "POST /api/v1/polls/{poll_id}/votes",
+      "source": "docs/api_polls.md"
+    },
+    "get_conversations": {
+      "description": "Get all conversations",
+      "endpoint": "GET /api/v1/conversations",
+      "source": "docs/api_conversations.md"
+    },
+    "delete_conversation": {
+      "description": "Delete a conversation",
+      "endpoint": "DELETE /api/v1/conversations/{conversation_id}",
+      "source": "docs/api_conversations.md"
+    },
+    "mark_conversation_as_read": {
+      "description": "Mark a conversation as read",
+      "endpoint": "POST /api/v1/conversations/{conversation_id}/read",
+      "source": "docs/api_conversations.md"
+    },
+    "get_follow_requests": {
+      "description": "Get pending follow requests",
+      "endpoint": "GET /api/v1/follow_requests",
+      "source": "docs/api_follow_requests.md"
+    },
+    "accept_follow_request": {
+      "description": "Accept a follow request",
+      "endpoint": "POST /api/v1/follow_requests/{account_id}/authorize",
+      "source": "docs/api_follow_requests.md"
+    },
+    "reject_follow_request": {
+      "description": "Reject a follow request",
+      "endpoint": "POST /api/v1/follow_requests/{account_id}/reject",
+      "source": "docs/api_follow_requests.md"
+    },
+    "get_blocks": {
+      "description": "Get blocked accounts",
+      "endpoint": "GET /api/v1/blocks",
+      "source": "docs/api_blocks.md"
+    },
+    "get_mutes": {
+      "description": "Get muted accounts",
+      "endpoint": "GET /api/v1/mutes",
+      "source": "docs/api_mutes.md"
+    },
+    "get_domain_blocks": {
+      "description": "Get domain blocks",
+      "endpoint": "GET /api/v1/domain_blocks",
+      "source": "docs/api_domain_blocks.md"
+    },
+    "block_domain": {
+      "description": "Block a domain",
+      "endpoint": "POST /api/v1/domain_blocks",
+      "source": "docs/api_domain_blocks.md"
+    },
+    "unblock_domain": {
+      "description": "Unblock a domain",
+      "endpoint": "DELETE /api/v1/domain_blocks",
+      "source": "docs/api_domain_blocks.md"
+    },
+    "get_filters": {
+      "description": "Get all filters",
+      "endpoint": "GET /api/v2/filters",
+      "source": "docs/api_filters.md"
+    },
+    "get_filter": {
+      "description": "Get a single filter",
+      "endpoint": "GET /api/v2/filters/{filter_id}",
+      "source": "docs/api_filters.md"
+    },
+    "create_filter": {
+      "description": "Create a filter",
+      "endpoint": "POST /api/v2/filters",
+      "source": "docs/api_filters.md"
+    },
+    "update_filter": {
+      "description": "Update a filter",
+      "endpoint": "PUT /api/v2/filters/{filter_id}",
+      "source": "docs/api_filters.md"
+    },
+    "delete_filter": {
+      "description": "Delete a filter",
+      "endpoint": "DELETE /api/v2/filters/{filter_id}",
+      "source": "docs/api_filters.md"
+    },
+    "get_preferences": {
+      "description": "Get user preferences",
+      "endpoint": "GET /api/v1/preferences",
+      "source": "docs/api_preferences.md"
+    },
+    "get_endorsements": {
+      "description": "Get currently featured profiles",
+      "endpoint": "GET /api/v1/endorsements",
+      "source": "docs/api_endorsements.md"
+    },
+    "feature_account": {
+      "description": "Feature an account on your profile",
+      "endpoint": "POST /api/v1/accounts/{account_id}/pin",
+      "source": "docs/api_endorsements.md"
+    },
+    "unfeature_account": {
+      "description": "Unfeature an account from your profile",
+      "endpoint": "POST /api/v1/accounts/{account_id}/unpin",
+      "source": "docs/api_endorsements.md"
+    },
+    "get_announcements": {
+      "description": "Get all announcements",
+      "endpoint": "GET /api/v1/announcements",
+      "source": "docs/api_announcements.md"
+    },
+    "dismiss_announcement": {
+      "description": "Dismiss an announcement",
+      "endpoint": "POST /api/v1/announcements/{announcement_id}/dismiss",
+      "source": "docs/api_announcements.md"
+    },
+    "file_report": {
+      "description": "File a report",
+      "endpoint": "POST /api/v1/reports",
+      "source": "docs/api_reports.md"
+    },
+    "get_scheduled_statuses": {
+      "description": "Get scheduled statuses",
+      "endpoint": "GET /api/v1/scheduled_statuses",
+      "source": "docs/api_scheduled_statuses.md"
+    },
+    "get_scheduled_status": {
+      "description": "Get a single scheduled status",
+      "endpoint": "GET /api/v1/scheduled_statuses/{scheduled_status_id}",
+      "source": "docs/api_scheduled_statuses.md"
+    },
+    "update_scheduled_status": {
+      "description": "Update a scheduled status's publishing date",
+      "endpoint": "PUT /api/v1/scheduled_statuses/{scheduled_status_id}",
+      "source": "docs/api_scheduled_statuses.md"
+    },
+    "cancel_scheduled_status": {
+      "description": "Cancel a scheduled status",
+      "endpoint": "DELETE /api/v1/scheduled_statuses/{scheduled_status_id}",
+      "source": "docs/api_scheduled_statuses.md"
+    },
+    "get_custom_emojis": {
+      "description": "Get all custom emojis",
+      "endpoint": "GET /api/v1/custom_emojis",
+      "source": "docs/api_custom_emojis.md"
+    },
+    "get_directory": {
+      "description": "Get profile directory",
+      "endpoint": "GET /api/v1/directory",
+      "source": "docs/api_directory.md"
+    },
+    "get_followed_tags": {
+      "description": "Get all followed tags",
+      "endpoint": "GET /api/v1/followed_tags",
+      "source": "docs/api_followed_tags.md"
+    },
+    "get_featured_tags": {
+      "description": "Get your featured tags",
+      "endpoint": "GET /api/v1/featured_tags",
+      "source": "docs/api_featured_tags.md"
+    },
+    "feature_tag": {
+      "description": "Feature a tag",
+      "endpoint": "POST /api/v1/featured_tags",
+      "source": "docs/api_featured_tags.md"
+    },
+    "unfeature_tag": {
+      "description": "Unfeature a tag",
+      "endpoint": "DELETE /api/v1/featured_tags/{featured_tag_id}",
+      "source": "docs/api_featured_tags.md"
+    },
+    "get_trending_tags": {
+      "description": "Get trending tags",
+      "endpoint": "GET /api/v1/trends/tags",
+      "source": "docs/api_trends.md"
+    },
+    "get_trending_statuses": {
+      "description": "Get trending statuses",
+      "endpoint": "GET /api/v1/trends/statuses",
+      "source": "docs/api_trends.md"
+    },
+    "get_trending_links": {
+      "description": "Get trending links",
+      "endpoint": "GET /api/v1/trends/links",
+      "source": "docs/api_trends.md"
+    },
+    "get_suggestions": {
+      "description": "Get follow suggestions",
+      "endpoint": "GET /api/v2/suggestions",
+      "source": "docs/api_suggestions.md"
+    },
+    "remove_suggestion": {
+      "description": "Remove a suggestion",
+      "endpoint": "DELETE /api/v1/suggestions/{account_id}",
+      "source": "docs/api_suggestions.md"
+    }
+  }
+}

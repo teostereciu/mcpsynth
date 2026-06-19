@@ -1,0 +1,191 @@
+# Agent evaluation tasks for Slack Web API MCP server.
+# See benchmark/TASK_CREATION_GUIDE.md for authoring principles.
+#
+# Dataset note: Tasks assume the bot token (xoxb-...) is a member of at least
+# one public channel. Write tasks post content identifiable as "agent harness"
+# test artifacts. search.messages is excluded — it requires a user token
+# (xoxp-...) and always returns scope_not_met with a bot token.
+# Required env vars: SLACK_BOT_TOKEN
+
+tasks:
+  # ---------- READ ----------
+
+  - id: verify_bot_identity
+    prompt: >
+      Verify the bot's identity and confirm the connection is working.
+      Report the bot's user ID, team name, and bot username.
+    expected: bot_id
+    tags: [read]
+    # Smoke test for auth.test. bot_id is a field specific to the auth
+    # response and cannot be confused with a general success response.
+    # Stronger than checking "team" which is a common word.
+
+  - id: list_channels
+    prompt: >
+      List the public channels in the Slack workspace. Report the names
+      and IDs of the first 5 channels.
+    expected: general
+    tags: [read]
+    # "general" is the default channel present in every Slack workspace.
+    # Its presence confirms the list call succeeded and data is real.
+
+  - id: list_users
+    prompt: >
+      List the users in the Slack workspace. Report the display names and
+      real names of the first 5 non-bot users.
+    expected: real_name
+    tags: [read]
+    # real_name is a field in the user profile object. It only appears if the
+    # users.list endpoint was called and the profile sub-object was parsed.
+    # Stronger than checking for a generic "id" field.
+
+  - id: get_channel_info
+    prompt: >
+      List the public channels in the workspace. Pick the first channel and
+      retrieve its full details. Report the channel name, its purpose, and
+      how many members it has.
+    expected: num_members
+    tags: [read, multi-step]
+    # Two-step: list then detail. num_members is a field only present in the
+    # channels.info response, not in the abbreviated list response. Tests
+    # that the agent passes the channel ID correctly between calls.
+
+  - id: list_workspace_info
+    prompt: >
+      Retrieve information about the Slack workspace (team). Report the
+      workspace name, domain, and plan.
+    expected: domain
+    tags: [read]
+    # Tests the team.info endpoint. domain is a field specific to this
+    # endpoint's response and is distinct from any messaging payload.
+
+  - id: get_channel_history
+    prompt: >
+      List the public channels, pick the first one the bot can access, and
+      retrieve its recent message history (last 5 messages). Report the
+      channel name and the text of the messages found.
+    expected: text
+    tags: [read, multi-step]
+    # Two-step: list channels then fetch history. text is the primary content
+    # field in each message object. Confirms the history endpoint is covered.
+
+  - id: get_user_info
+    prompt: >
+      List users in the workspace and retrieve the full profile of the first
+      non-bot user. Report their display name, real name, and whether they
+      are an admin.
+    expected: real_name
+    tags: [read, multi-step]
+    # Two-step: list users then fetch detailed profile. Checks that the agent
+    # can extract user ID from the list and pass it into the profile lookup.
+    # real_name in the detailed profile confirms both calls succeeded.
+
+  # ---------- WRITE ----------
+
+  - id: post_message
+    prompt: >
+      Find a public channel the bot is a member of (or the "general" channel).
+      Post this exact message to it:
+      "Hello from the MCP agent harness! This is an automated test message."
+      Report the channel name and message timestamp.
+    expected: ts
+    tags: [write, multi-step]
+    # Smoke test for chat.postMessage. ts is the unique message timestamp
+    # returned by Slack and is only present in a successful post response.
+
+  - id: post_threaded_reply
+    prompt: >
+      Find a channel the bot can post to. Post a parent message:
+      "Thread test parent message from agent harness."
+      Then reply to that message in a thread:
+      "Thread reply from the agent harness."
+      Report the parent message timestamp and the reply timestamp.
+    expected: Thread reply from the agent harness
+    tags: [write, multi-step, workflow]
+    # Tests threaded replies, which require the thread_ts parameter populated
+    # from the parent response. The exact reply text only appears if the thread
+    # parameter was passed correctly and the reply was posted successfully.
+
+  - id: add_reaction
+    prompt: >
+      Find a channel the bot can post to. Post a message:
+      "Reaction test from agent harness."
+      Then add the "white_check_mark" reaction to that message.
+      Report the message timestamp and confirm the reaction was added.
+    expected: white_check_mark
+    tags: [write, multi-step, workflow]
+    # Two-step: post then react. white_check_mark only appears if the reaction
+    # name was reported correctly, confirming the add-reaction call succeeded.
+
+  - id: update_message
+    prompt: >
+      Find a channel the bot can post to. Post a message:
+      "Original message - will be updated."
+      Then update that message to say exactly:
+      "Updated message - edited by agent harness."
+      Report the channel and the updated message text.
+    expected: Updated message - edited by agent harness
+    tags: [write, multi-step, workflow]
+    # Tests chat.update. The expected value is the exact updated text which
+    # only appears if the update call was made with the correct ts and text.
+    # Stronger than checking the generic ts field.
+
+  - id: upload_and_share_file
+    prompt: >
+      Find a channel the bot can post to. Upload a text file snippet with
+      content "Agent eval test file" and share it to that channel.
+      Report the file ID.
+    expected: file_id
+    tags: [write, multi-step, workflow]
+    # Tests files.upload or files.getUploadURLExternal depending on API version.
+    # file_id is returned only on a successful file upload and cannot be
+    # confused with a message timestamp or channel ID.
+
+  - id: set_channel_topic
+    prompt: >
+      Find a public channel the bot is a member of. Set the topic of that
+      channel to "Agent eval test topic". Report the channel name and the
+      new topic that was set.
+    expected: Agent eval test topic
+    tags: [write, multi-step, workflow]
+    # Tests conversations.setTopic. The exact topic string only appears in the
+    # response or the agent's report if the topic was set correctly.
+
+  # ---------- MULTI-STEP / WORKFLOW ----------
+
+  - id: post_and_get_reactions
+    prompt: >
+      Find a channel the bot can post to. Post a message:
+      "Getting reactions test from agent harness."
+      Add reactions "thumbsup" and "tada" to it. Then retrieve the reactions
+      on that message. Report the reaction names found.
+    expected: thumbsup
+    tags: [write, multi-step, workflow]
+    # Three-step: post, react twice, then read reactions back. thumbsup only
+    # appears if the reactions.get call succeeded and was correctly parsed.
+
+  - id: pin_and_list_pins
+    prompt: >
+      Find a channel the bot can post to. Post a message:
+      "Pinned test message from agent harness."
+      Pin that message to the channel. Then list the pinned items in that
+      channel and confirm the message appears. Report the pinned message text.
+    expected: Pinned test message from agent harness
+    tags: [write, multi-step, workflow]
+    # Three-step: post, pin, list pins. The exact pinned message text only
+    # appears if pin listing succeeded and the correct message was returned.
+
+  # ---------- ERROR HANDLING ----------
+
+  - id: error_handling_invalid_channel
+    prompt: >
+      Try to post a message to a channel with ID "CINVALID00000". Report
+      the error response received from Slack.
+    expected: channel_not_found
+    tags: [write, error-handling]
+    # Tests that the MCP server surfaces Slack error codes rather than
+    # swallowing them. channel_not_found is the specific Slack error code
+    # for this scenario — stronger than the generic word "error".
+
+  # search.messages excluded: requires user token (xoxp-), not bot token
+  # (xoxb-). Always returns scope_not_met with bot credentials.

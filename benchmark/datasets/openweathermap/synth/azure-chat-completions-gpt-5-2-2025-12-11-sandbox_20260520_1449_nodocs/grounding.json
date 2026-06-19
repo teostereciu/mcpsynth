@@ -1,0 +1,54 @@
+{
+  "owm_geocode_direct": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/direct"
+  },
+  "owm_geocode_reverse": {
+    "doc": "docs/geocoding.md",
+    "endpoint": "GET /geo/1.0/reverse"
+  },
+  "owm_current_weather_by_city": {
+    "doc": "docs/current_weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "owm_current_weather_by_coords": {
+    "doc": "docs/current_weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "owm_current_weather_by_zip": {
+    "doc": "docs/current_weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "owm_current_weather_by_city_id": {
+    "doc": "docs/current_weather.md",
+    "endpoint": "GET /data/2.5/weather"
+  },
+  "owm_forecast_5day_by_city": {
+    "doc": "docs/forecast_5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "owm_forecast_5day_by_coords": {
+    "doc": "docs/forecast_5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "owm_forecast_5day_by_zip": {
+    "doc": "docs/forecast_5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "owm_forecast_5day_by_city_id": {
+    "doc": "docs/forecast_5day.md",
+    "endpoint": "GET /data/2.5/forecast"
+  },
+  "owm_air_pollution_current": {
+    "doc": "docs/air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution"
+  },
+  "owm_air_pollution_forecast": {
+    "doc": "docs/air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/forecast"
+  },
+  "owm_air_pollution_history": {
+    "doc": "docs/air_pollution.md",
+    "endpoint": "GET /data/2.5/air_pollution/history"
+  }
+}

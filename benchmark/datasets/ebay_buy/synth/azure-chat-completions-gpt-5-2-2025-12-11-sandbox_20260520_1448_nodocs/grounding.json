@@ -1,0 +1,138 @@
+{
+  "browse_search_items": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item_summary/search"
+  },
+  "browse_get_item": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}"
+  },
+  "browse_get_item_group": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item_group/{item_group_id}"
+  },
+  "browse_get_items_by_item_group": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item_group/{item_group_id}/get_items"
+  },
+  "browse_get_item_by_legacy_id": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_legacy_id"
+  },
+  "browse_get_item_by_epid": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_epid"
+  },
+  "browse_get_item_by_gtin": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_gtin"
+  },
+  "browse_get_item_by_isbn": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_isbn"
+  },
+  "browse_get_item_by_upc": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_upc"
+  },
+  "browse_get_item_by_product": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_item_by_product"
+  },
+  "browse_check_item_compatibility": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}/check_compatibility"
+  },
+  "browse_get_item_compatibility": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/{item_id}/get_compatibility"
+  },
+  "browse_get_item_compatibility_properties": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_compatibility_properties"
+  },
+  "browse_get_merchandised_products": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/item/get_merchandised_products"
+  },
+  "browse_get_category_tree": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/category_tree/{category_tree_id}"
+  },
+  "browse_get_category_subtree": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/category_tree/{category_tree_id}/get_category_subtree"
+  },
+  "browse_get_category_suggestions": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/category_tree/{category_tree_id}/get_category_suggestions"
+  },
+  "browse_get_default_category_tree_id": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/get_default_category_tree_id"
+  },
+  "browse_get_item_aspects_for_category": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/browse/v1/category_tree/{category_tree_id}/get_item_aspects_for_category"
+  },
+  "deal_get_deals": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/deal/v1/deal_item"
+  },
+  "deal_get_deal_item": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/deal/v1/deal_item/{deal_id}"
+  },
+  "deal_get_deal_events": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/deal/v1/deal_event"
+  },
+  "deal_get_deal_event": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/deal/v1/deal_event/{event_id}"
+  },
+  "feed_get_item_snapshot_feed": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/feed/v1/item_snapshot_feed"
+  },
+  "feed_get_item_snapshot_feed_file": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/feed/v1/item_snapshot_feed/{file_id}"
+  },
+  "feed_get_item_feed": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/feed/v1/item_feed"
+  },
+  "feed_get_item_feed_file": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/feed/v1/item_feed/{file_id}"
+  },
+  "order_initiate_checkout_session": {
+    "doc": "docs/",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/initiate"
+  },
+  "order_get_checkout_session": {
+    "doc": "docs/",
+    "endpoint": "GET /buy/order/v1/guest_checkout_session/{checkout_session_id}"
+  },
+  "order_update_shipping_address": {
+    "doc": "docs/",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/{checkout_session_id}/update_shipping_address"
+  },
+  "order_update_quantity": {
+    "doc": "docs/",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/{checkout_session_id}/update_quantity"
+  },
+  "order_apply_coupon": {
+    "doc": "docs/",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/{checkout_session_id}/apply_coupon"
+  },
+  "order_remove_coupon": {
+    "doc": "docs/",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/{checkout_session_id}/remove_coupon"
+  },
+  "order_place_order": {
+    "doc": "docs/",
+    "endpoint": "POST /buy/order/v1/guest_checkout_session/{checkout_session_id}/place_order"
+  }
+}

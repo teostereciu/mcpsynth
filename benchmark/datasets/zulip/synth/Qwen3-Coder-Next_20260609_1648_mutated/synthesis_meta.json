@@ -1,0 +1,14 @@
+{
+  "dataset": "zulip",
+  "model": "Qwen/Qwen3-Coder-Next",
+  "condition": "mutated",
+  "synthesis_time": 246.9513237476349,
+  "token_usage": {
+    "input_tokens": 724487,
+    "output_tokens": 20043
+  },
+  "cost_estimate": null,
+  "timestamp": "20260609_1648",
+  "vllm_url": "http://localhost:8001/v1",
+  "turns": 14
+}

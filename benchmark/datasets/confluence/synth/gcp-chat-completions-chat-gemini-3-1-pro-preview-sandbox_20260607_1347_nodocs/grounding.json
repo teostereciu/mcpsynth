@@ -1,0 +1,130 @@
+{
+  "get_page": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}"
+  },
+  "create_page": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /api/v2/pages"
+  },
+  "update_page": {
+    "doc": "general_knowledge",
+    "endpoint": "PUT /api/v2/pages/{id}"
+  },
+  "delete_page": {
+    "doc": "general_knowledge",
+    "endpoint": "DELETE /api/v2/pages/{id}"
+  },
+  "get_page_children": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}/children"
+  },
+  "get_page_ancestors": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /rest/api/content/{id}?expand=ancestors"
+  },
+  "move_page": {
+    "doc": "general_knowledge",
+    "endpoint": "PUT /api/v2/pages/{id}"
+  },
+  "list_spaces": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/spaces"
+  },
+  "get_space": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/spaces/{id}"
+  },
+  "create_space": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /rest/api/space"
+  },
+  "delete_space": {
+    "doc": "general_knowledge",
+    "endpoint": "DELETE /rest/api/space/{space_key}"
+  },
+  "search_content": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /rest/api/search"
+  },
+  "get_labels": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}/labels"
+  },
+  "add_label": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /rest/api/content/{id}/label"
+  },
+  "remove_label": {
+    "doc": "general_knowledge",
+    "endpoint": "DELETE /rest/api/content/{id}/label/{label}"
+  },
+  "list_attachments": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}/attachments"
+  },
+  "upload_attachment": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /rest/api/content/{id}/child/attachment"
+  },
+  "download_attachment": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/attachments/{id}"
+  },
+  "get_comments": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}/footer-comments"
+  },
+  "create_footer_comment": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /api/v2/footer-comments"
+  },
+  "create_comment": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /rest/api/content"
+  },
+  "get_page_versions": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}/versions"
+  },
+  "get_page_version": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}/versions/{version_number}"
+  },
+  "restore_page_version": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /rest/api/content/{id}/version"
+  },
+  "get_content_properties": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/pages/{id}/properties"
+  },
+  "set_content_property": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /api/v2/pages/{id}/properties"
+  },
+  "get_blog_post": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /api/v2/blogposts/{id}"
+  },
+  "create_blog_post": {
+    "doc": "general_knowledge",
+    "endpoint": "POST /api/v2/blogposts"
+  },
+  "update_blog_post": {
+    "doc": "general_knowledge",
+    "endpoint": "PUT /api/v2/blogposts/{id}"
+  },
+  "delete_blog_post": {
+    "doc": "general_knowledge",
+    "endpoint": "DELETE /api/v2/blogposts/{id}"
+  },
+  "get_current_user": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /rest/api/user/current"
+  },
+  "get_user": {
+    "doc": "general_knowledge",
+    "endpoint": "GET /rest/api/user"
+  }
+}
